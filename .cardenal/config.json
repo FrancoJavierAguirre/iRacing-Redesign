@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "docs": {
+    "public": "docs/public",
+    "tech": "docs/tech",
+    "private": "docs/private"
+  },
+  "privateDocsTracked": false,
+  "specs": "specs",
+  "roles": {
+    "analyst": "analyst",
+    "front": "front",
+    "back": "back",
+    "testing": "testing"
+  },
+  "generateAgents": true,
+  "qualityGates": []
+}

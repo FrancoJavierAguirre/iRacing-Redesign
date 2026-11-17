@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "qa": {
+    "mode": "manual",
+    "browser": false
+  },
+  "runtime": {
+    "mode": "host",
+    "docker": "explicit_only"
+  },
+  "agents": {
+    "mode": "cardenal_only",
+    "maxConcurrent": 1,
+    "lowerTierRoles": [
+      "forge",
+      "front",
+      "back"
+    ]
+  },
+  "context": {
+    "reload": "changed_only"
+  },
+  "workflow": {
+    "resume": "first_incomplete"
+  },
+  "verification": {
+    "scope": "affected_only",
+    "repeat": "relevant_change_or_failure"
+  },
+  "retry": {
+    "sameFailure": 1
+  },
+  "scope": {
+    "newFindings": "record_and_classify"
+  },
+  "completion": {
+    "stop": "acceptance_met"
+  },
+  "registry": {
+    "forge": ".cardenal/agents/forge.md",
+    "front": ".cardenal/agents/front.md",
+    "back": ".cardenal/agents/back.md",
+    "analyst": ".cardenal/agents/analyst.md",
+    "testing": ".cardenal/agents/testing.md"
+  },
+  "providers": {
+    "anthropic": {
+      "reference": "Usuario en chat 2026-11-17 eligió 'Declarar catálogo': proveedor Anthropic, niveles Opus 5.5 > Sonnet 5.5 > Haiku 5.5; forge y front corren con Sonnet 5.5. IDs según el entorno del runtime de Claude Code.",
+      "models": [
+        { "id": "claude-opus-5-5", "tier": 2, "roles": ["coordinator", "analyst"] },
+        { "id": "claude-sonnet-5-5", "tier": 1, "roles": ["forge", "front", "back", "analyst", "testing"] },
+        { "id": "claude-haiku-5-5", "tier": 0, "roles": ["testing"] }
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Cardenal: estado local y documentación privada
+/.local/sdd/
+/user-memory/
+/.cardenal/code-map.json
+/docs/private/
