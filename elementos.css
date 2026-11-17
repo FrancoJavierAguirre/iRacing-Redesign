@@ -1,0 +1,127 @@
+/* ==========================================================
+   Pantalla "5 Elementos UX de James Garret"
+   Valores en px de Figma @1920 -> clamp(min, px/19.2 vw, px)
+   ========================================================== */
+body.page-elementos { background-color: #070e20; --gold-t: #bca447; }
+.page-elementos .gold { color: #bca447; }
+
+/* ----- Barra superior ----- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  height: clamp(56px, 4.6875vw, 90px);
+  background: linear-gradient(180deg, #2b2b2d 0%, #121214 100%);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 var(--side-pad);
+}
+.topbar-title {
+  font-family: "Poppins", sans-serif; font-weight: 600;
+  font-size: clamp(16px, 1.25vw, 24px); color: #fff; margin: 0; text-align: center;
+}
+.breadcrumb {
+  position: absolute; left: var(--side-pad); top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; gap: 12px;
+  font-family: "Poppins", sans-serif; font-size: 14px; color: #b9bcc4;
+}
+.breadcrumb a { color: inherit; display: flex; align-items: center; gap: 12px; }
+.breadcrumb a:hover { color: #fff; }
+.breadcrumb .current { color: #fff; font-weight: 600; }
+.breadcrumb svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ----- Intro ----- */
+.intro { padding: clamp(40px, 4.1667vw, 80px) 0 0; }
+.intro-grid { display: flex; gap: clamp(24px, 3.3333vw, 64px); align-items: flex-start; justify-content: space-between; }
+.intro-copy { flex: 1; min-width: 0; }
+.intro-copy .sec-title { margin-bottom: 24px; }
+.intro-body { margin-top: clamp(40px, 5vw, 96px); }
+.intro-body p {
+  font-family: "Poppins", sans-serif; font-weight: 300;
+  font-size: clamp(15px, 1.0417vw, 20px); line-height: 1.6; color: #fff;
+  max-width: clamp(320px, 74vw, 1420px); margin: 0 0 clamp(20px, 1.6667vw, 32px);
+}
+.intro-body .gold { font-weight: 400; }
+.person-photo { width: clamp(140px, 13.6vw, 262px); aspect-ratio: 262 / 377; flex-shrink: 0; border-radius: 12px; object-fit: cover; display: block; }
+
+/* ----- Etiquetas "Producto como ..." ----- */
+.pc { text-align: center; }
+.pc small { display: block; font-family: var(--font-display); font-weight: 300; font-size: clamp(18px, 1.4583vw, 28px); color: #fff; margin-bottom: 12px; }
+.pc strong { display: block; font-family: var(--font-display); font-weight: 500; font-size: clamp(22px, 1.875vw, 36px); color: #bca447; }
+
+/* ----- Círculos ----- */
+.circles-block { margin-top: clamp(64px, 6.6667vw, 128px); display: flex; flex-direction: column; align-items: center; gap: clamp(32px, 3.3333vw, 64px); }
+.circles { --d: clamp(150px, 15vw, 289px); display: flex; justify-content: center; }
+.circle {
+  width: var(--d); height: var(--d); border-radius: 50%; background: #02040a;
+  margin-left: calc(var(--d) * -0.107);
+  display: flex; flex-direction: column; text-align: center;
+  font-family: var(--font-display); font-weight: 300; font-size: clamp(14px, 1.4583vw, 28px); color: #fff;
+}
+.circle:first-child { margin-left: 0; }
+.circle span { flex: 1; display: flex; align-items: center; justify-content: center; }
+.circle span + span { border-top: 1px dashed rgba(255,255,255,0.28); margin: 0 12%; }
+.circle.c-top span:first-child { padding-top: 6%; }
+
+/* ----- Diagrama de capas ----- */
+.layers { margin-top: clamp(80px, 8.3333vw, 160px); display: flex; gap: clamp(16px, 2.6vw, 50px); }
+.axis { width: clamp(60px, 5vw, 96px); display: flex; flex-direction: column; align-items: center; flex-shrink: 0; font-family: var(--font-display); font-weight: 300; font-size: clamp(13px, 1.0417vw, 20px); color: #fff; }
+.axis .line { position: relative; flex: 1; width: 2px; background: #9aa0ad; margin: 12px 0; }
+.axis .line::before, .axis .line::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); border: 5px solid transparent; }
+.axis .line::before { top: -2px; border-bottom: 8px solid #9aa0ad; border-top: 0; }
+.axis .line::after { bottom: -2px; border-top: 8px solid #9aa0ad; border-bottom: 0; }
+.axis-spacer { height: clamp(90px, 8.5vw, 163px); }
+.layers-main { flex: 1; min-width: 0; }
+.layers-head, .layer-row { display: grid; grid-template-columns: clamp(140px, 16.8vw, 322px) 1fr 1fr; column-gap: clamp(10px, 0.9vw, 17px); }
+.layers-head { margin-bottom: clamp(16px, 1.25vw, 24px); }
+.layers-head .pc:first-child { grid-column: 2; }
+.layers-head .pc small { font-size: clamp(14px, 1.0417vw, 20px); margin-bottom: 8px; }
+.layers-head .pc strong { font-size: clamp(20px, 1.875vw, 36px); }
+.layer-rows { display: flex; flex-direction: column; gap: clamp(24px, 2.5vw, 48px); }
+.layer-row { background: var(--card-bg); border-radius: 16px; padding: clamp(10px, 0.9vw, 17px); align-items: stretch; }
+.layer-label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-display); font-weight: 400; font-size: clamp(18px, 1.6667vw, 32px); color: #fff; }
+.layer-label img { width: clamp(24px, 2.0833vw, 40px); height: auto; }
+.layer-boxes { grid-column: 2 / 4; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 0.9vw, 17px); }
+.lbox {
+  border: 2px dashed #1f55b8; border-radius: 12px; min-height: clamp(44px, 3.4vw, 66px); padding: 8px 12px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font-family: var(--font-display); font-weight: 300; font-size: clamp(13px, 1.0417vw, 20px); color: #fff;
+}
+.lbox.full { grid-column: 1 / -1; }
+.lbox.tall { min-height: clamp(70px, 6vw, 115px); }
+
+/* ----- Secciones de cada capa ----- */
+.layer-sec { padding: clamp(64px, 6.6667vw, 128px) 0 0; }
+.sec-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.sec-header .sec-title { margin-bottom: 24px; }
+.sec-nav { display: flex; gap: 16px; flex-shrink: 0; margin-top: 12px; }
+.sec-nav .btn--md { height: 48px; }
+.tagline { text-align: center; font-family: var(--font-display); font-weight: 300; font-size: clamp(22px, 2.0833vw, 40px); line-height: 1.3; color: #fff; margin: clamp(40px, 5vw, 96px) 0; }
+.tagline .gold { font-weight: 400; }
+.how { text-align: center; font-family: var(--font-display); font-weight: 300; font-size: clamp(20px, 1.875vw, 36px); color: #fff; margin: clamp(40px, 5vw, 96px) 0; }
+.info-card { background: var(--card-bg); border-radius: 16px; padding: clamp(20px, 1.6667vw, 32px); }
+.info-card h3 { display: flex; align-items: center; gap: 16px; margin: 0 0 clamp(14px, 1.25vw, 24px); font-family: var(--font-display); font-weight: 400; font-size: clamp(18px, 1.4583vw, 28px); color: #fff; }
+.info-card h3 img { width: clamp(28px, 2.0833vw, 40px); height: auto; flex-shrink: 0; }
+.info-card p { margin: 0; font-family: "Poppins", sans-serif; font-weight: 300; font-size: clamp(14px, 1.0417vw, 20px); line-height: 1.6; color: #fff; }
+.info-card .gold { font-weight: 400; }
+.sec-cta { display: flex; justify-content: center; margin-top: clamp(40px, 5vw, 96px); }
+
+/* ----- Proceso (final) ----- */
+.final-process { padding: clamp(80px, 8.3333vw, 160px) 0 clamp(64px, 6.6667vw, 128px); }
+.final-process .sec-title { text-align: center; margin-bottom: clamp(40px, 5vw, 96px); }
+a.proceso-card { text-decoration: none; }
+
+/* ----- Responsive ----- */
+@media (max-width: 900px) {
+  .breadcrumb .crumb-parent, .breadcrumb .sep { display: none; }
+  .topbar-title { font-size: 14px; }
+  .intro-grid { flex-direction: column-reverse; }
+  .person-photo { width: 160px; }
+  .circles { flex-wrap: wrap; --d: 140px; gap: 12px; }
+  .circle, .circle:first-child { margin-left: 0; font-size: 16px; }
+  .axis { display: none; }
+  .layers-head { display: none; }
+  .layer-row { grid-template-columns: 1fr; row-gap: 12px; }
+  .layer-boxes { grid-column: 1; grid-template-columns: 1fr; }
+  .lbox.full { grid-column: 1; }
+  .cards.cols-2, .cards.cols-3 { grid-template-columns: 1fr; }
+  .sec-header { flex-direction: column; }
+  .sec-nav { margin-top: 0; flex-wrap: wrap; }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estrategia — Rediseño iRacing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:wght@200;300;400;500;600&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="elementos.css">
+<link rel="stylesheet" href="estrategia.css">
+</head>
+<body class="page-elementos page-estrategia">
+
+<header class="topbar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="crumb-parent">Rediseño UX/UI</span></a>
+    <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="current">Estrategia</span>
+  </nav>
+  <h1 class="topbar-title">Estrategia</h1>
+  <a href="#" class="btn btn--sm btn-blue topbar-action"><img class="btn-icon" src="assets/ico-alcance-white.svg" alt="">Ver Alcance</a>
+</header>
+
+<main>
+  <section class="layer-sec" id="heuristicas">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title">Evaluaciones Heurísticas</h2><p class="sec-sub">Empezando barato</p></div>
+        <div class="sec-nav"><a href="#encuestas" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Encuestas</a></div>
+      </div>      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-back.svg" alt=""><span>Libertad y control por parte del usuario</span></span></h3>
+      <div class="finding">
+        <div class="media-placeholder " data-label="Imagen — heuristica-libertad.png"></div>
+        <div class="notes"><p><img class="ln-ico" src="assets/ico-lupa.svg" alt=""><span>El usuario no puede arrepentirse de ejecutar el simulador. Una vez confirmado la acción no le queda otra que esperar a que cargue y luego cerrarlo.</span></p><p><img class="ln-ico" src="assets/ico-lampara.svg" alt=""><span><span class="hl">Debería</span> incluirse o reemplazar el botón de “close” por uno de “cancel”.</span></p></div>
+      </div>
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-consistencia.svg" alt=""><span>Consistencia y Estándares</span></span></h3>
+      <div class="finding">
+        <div class="media-placeholder " data-label="Imagen — heuristica-consistencia.png"></div>
+        <div class="notes"><p><img class="ln-ico" src="assets/ico-lupa.svg" alt=""><span>Las compras y el carrito se gestionan desde una web externa.</span></p><p><img class="ln-ico" src="assets/ico-lampara.svg" alt=""><span><span class="hl">Debería existir</span> el icon button del carrito en la esquina superior derecha de la pantalla con un badge numérico al agregar productos.</span></p></div>
+      </div>
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-pincel.svg" alt=""><span>Estética y diseño minimalista</span></span></h3>
+      <div class="finding">
+        <div class="media-placeholder ar-tall" data-label="Imagen — heuristica-estetica.png"></div>
+        <div class="notes"><p><img class="ln-ico" src="assets/ico-lupa.svg" alt=""><span>Los detalles de una competencia puede resultar abrumador. La información mostrada compite constantemente entre ella.</span></p><p><img class="ln-ico" src="assets/ico-lampara.svg" alt=""><span><span class="hl">Removería</span> las tablas de “Races” y “Currently racing” y rediseñaría los controles o la forma de elegir/mostrar los autos disponibles. Mudaría la sección de “driver briefing” a otra tab de “Rules and Format”.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="encuestas">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title">Encuestas</h2><p class="sec-sub">Conociendo al usuario</p></div>
+        <div class="sec-nav"><a href="#heuristicas" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Evaluaciones Heurísticas</a><a href="#trayectoria" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Mapa de Trayectoria</a></div>
+      </div>      <h3 class="center-title">Objetivos</h3>
+      <div class="obj-row"><div><small>Conocer</small><strong>Motivaciones</strong></div><div><small>Comprender</small><strong>Flujo</strong></div><div><small>Descubrir</small><strong>Problemas</strong></div><div><small>Validar</small><strong>Hipótesis</strong></div></div>
+      <h3 class="users-title">11 usuarios</h3>
+      <img class="helmet" src="assets/ico-helmet.svg" alt="">
+      <div class="flags">
+        <img class="flag-img" src="assets/flag-spain.svg" alt="España"><img class="flag-img" src="assets/flag-argentina.svg" alt="Argentina"><img class="flag-img" src="assets/flag-eeuu.svg" alt="EEUU"><img class="flag-img" src="assets/flag-canada.svg" alt="Canadá"><img class="flag-img" src="assets/flag-chile.svg" alt="Chile">
+        <span class="flag-num">8</span><span class="flag-num">1</span><span class="flag-num">1</span><span class="flag-num">1</span><span class="flag-num">1</span>
+        <div class="links-row"><span class="l-line l-es"></span><span class="bracket"></span><span class="l-line l-cl"></span></div>
+      </div>
+      <div class="contact">
+        <div class="icon-slot"><img src="assets/ico-twitch.svg" alt="Twitch"></div><h4>¿Por dónde los contacté?</h4><div class="icon-slot" style="grid-column:5"><img src="assets/ico-discord.svg" alt="Discord"></div>
+        <a class="who" href="https://www.twitch.tv/stradi" target="_blank" rel="noopener">Stradi</a><a style="grid-column:5" class="who" href="https://globalracingleague.com/" target="_blank" rel="noopener">GRL</a>
+        <a class="avatar-link" href="https://www.twitch.tv/stradi" target="_blank" rel="noopener"><img src="assets/stradi.png" alt="Stradi"></a><a style="grid-column:5" class="avatar-link" href="https://globalracingleague.com/" target="_blank" rel="noopener"><img src="assets/grl.png" alt="Global Racing League"></a>
+      </div>
+      <h3 class="center-title">Resultados</h3>
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-lupa.svg" alt=""><span>Búsqueda y registro a una carrera</span></span></h3>
+      <div class="finding">
+        <div class="media-placeholder ar-short" data-label="Imagen — resultados-busqueda.png"></div>
+        <div class="quotes"><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“It’s <span class="hl">hard to sort</span> series by different disciplines and having to add tags so you only see what you CAN race and not EVERYTHING <span class="hl">is not intuitive</span> for a new user”</span></p><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Pondría énfasis en remarcar al usuario <span class="hl">qué series le sirven</span> para subir de licencia”</span></p><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Estaría bien que a los rookies solo se les mostrase por defecto las <span class="hl">carreras en las que pueden participar</span>”</span></p></div>
+      </div>
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-detalles-serie.svg" alt=""><span>Detalles de una serie</span></span></h3>
+      <div class="finding">
+        <div class="media-placeholder " data-label="Imagen — resultados-detalles-serie.png"></div>
+        <div class="quotes"><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Demasiados <span class="hl">datos innecesarios</span> par el usuario promedio”</span></p><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Quitaría casi toda la <span class="hl">información que no es relevante</span> para la carrera o practica a la que te vas a unir”</span></p><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“A popular complaint I see, but <span class="hl">the way the car images are laid out</span> in multiclass or multi manufacturer races”</span></p></div>
+      </div>
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-cart.svg" alt=""><span>El carrito de compra</span></span></h3>
+      <div class="finding">
+        <div class="media-placeholder ar-cart" data-label="Imagen — resultados-carrito.png"></div>
+        <div class="quotes"><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Debería de haber <span class="hl">más información</span> sobre los distintos <span class="hl">descuentos</span>”</span></p><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Hacerlo mas moderno y poder realizarlo desde dentro de la app que corres, <span class="hl">no tener que ir a la web.</span>”</span></p></div>
+      </div>
+      <div class="sec-cta"><a href="#" class="btn btn-primary">Ver respuestas</a></div>
+      <h3 class="center-title">Hipótesis Validadas</h3>
+      <div class="text-cards">
+        <div class="t-card"><h3 class="has-ico"><img class="t-ico" src="assets/ico-detalles-serie.svg" alt="">Detalles de una serie</h3><p>Esta sección resulta abrumadora. A pesar de que hay información importante, se puede reacomodar para disminuir la carga cognitiva.</p></div>
+        <div class="t-card"><h3 class="has-ico"><img class="t-ico" src="assets/ico-cart.svg" alt="">El carrito de compra</h3><p>El carrito de compra debería estar dentro de la plataforma y no en una web externa.</p></div>
+        <div class="t-card"><h3 class="has-ico"><img class="t-ico" src="assets/ico-lista.svg" alt="">La lista de carreras</h3><p>Mejorar los filtros y la información de las carreras disminuiría la frustración y abandono de nuevos usuarios.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="trayectoria">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title">Mapa de Trayectoria</h2><p class="sec-sub">El viaje del simracer</p></div>
+        <div class="sec-nav"><a href="#encuestas" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Encuestas</a><a href="#lean" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Lean UX Canvas</a></div>
+      </div>      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-user.svg" alt=""><span>Foco</span></span></h3>
+      <div class="focus-row">
+        <div class="t-card persona">
+          <img class="persona-bg" src="assets/card-sergio.png" alt="">
+          <h3><img class="flag-sm" src="assets/flag-spain.svg" alt="España">Sergio Barrientos</h3>
+          <p>33 años</p><p>Analista de Sistemas</p><p>PC y Celular</p>
+        </div>
+        <div class="t-card"><h3>Qué quiere hacer en la plataforma</h3><ul><li><span class="hl">Comprar</span> un auto</li><li><span class="hl">Entrar</span> a una carrera</li></ul></div>
+        <div class="t-card"><h3>Cómo le gustaría lograrlo</h3><ul><li>Que la compra sea <span class="hl">ágil</span> y <span class="hl">fácil</span></li><li>Encontrar <span class="hl">fácilmente</span> la próxima carrera en la que pueda participar.</li></ul></div>
+      </div>
+      <h3 class="center-title">Escenario Hipotético</h3>
+      <div class="steps">
+        <div class=""><h4 class="step-title"><span class="numbox">1</span><span>Sergio quiere entrar al mundo del simracing y <span class="hl">se registra</span> a iRacing.</span></h4><div class="media-placeholder " data-label="Imagen — escenario-1-login.png"></div></div>
+        <div class=""><h4 class="step-title"><span class="numbox">2</span><span><span class="hl">Descarga y entra</span> a la plataforma de iRacing para buscar una carrera.</span></h4><div class="media-placeholder " data-label="Imagen — escenario-2-entrar.png"></div></div>
+        <div class="wide"><h4 class="step-title"><span class="numbox">3</span><span>Luego de <span class="hl">buscar</span> en el menú de carreras utilizando <span class="hl">filtros</span> y <span class="hl">tags</span> se da cuenta de que necesita <span class="hl">comprar un auto</span>.</span></h4><div class="media-placeholder " data-label="Imagen — escenario-3-buscar.png"></div></div>
+        <div class=""><h4 class="step-title"><span class="numbox">4</span><span><span class="hl">Compra</span> un auto por fuera de la plataforma</span></h4><div class="media-placeholder " data-label="Imagen — escenario-4-comprar.png"></div></div>
+        <div class=""><h4 class="step-title"><span class="numbox">5</span><span>Marca el auto como <span class="hl">favorito, busca la carrera</span> de nuevo y <span class="hl">se registra.</span></span></h4><div class="media-placeholder " data-label="Imagen — escenario-5-registrar.png"></div></div>
+      </div>
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-flow.svg" alt=""><span>Experiencia</span></span></h3>
+      <div class="exp-step"><h4><span class="numbox">1</span>Entrar a la UI y loguearse</h4>
+        <div class="exp-body"><div class="media-placeholder " data-label="Imagen — exp-1.png"></div><div class="exp-lines"><p>1. Entra a la UI y se loguea.<img class="react" src="assets/ico-thumb-up.svg" alt=""></p><p>2. Navega a la <span class="hl">lista de carreras</span> para registrarse a una carrera.<img class="react" src="assets/ico-thumb-down.svg" alt=""></p><p class="pain">Se marea con el bombardeo visual de la lista de carreras y se confunde por no poder encontrar una carrera que esté por empezar, que pueda correr y le sirva para progresar.</p></div></div></div>
+      <div class="exp-step"><h4><span class="numbox">2</span>Buscar una carrera</h4>
+        <div class="exp-body"><div class="media-placeholder " data-label="Imagen — exp-2.png"></div><div class="exp-lines"><p>3. Va a la tabla de carreras para utilizar los filtros para refinar la búsqueda.<img class="react" src="assets/ico-warning.svg" alt=""></p><p>4. Mira los resultados obtenidos.<img class="react" src="assets/ico-thumb-up.svg" alt=""></p><p>5. Selecciona una carrera para ver sus detalles.<img class="react" src="assets/ico-warning.svg" alt=""></p></div></div></div>
+      <div class="exp-step"><h4><span class="numbox">3</span>Comprar el auto</h4>
+        <div class="exp-body"><div class="media-placeholder " data-label="Imagen — exp-3.png"></div><div class="exp-lines"><p>6. Inicia proceso de compra del auto requerido.<img class="react" src="assets/ico-warning.svg" alt=""></p><p>7. Abre el navegador web y añade el auto al <span class="hl">carrito</span>.<img class="react" src="assets/ico-thumb-down.svg" alt=""></p><p class="pain">Se frustra al ver que el carrito está en el navegador web antiguo de iRacing.</p><p>8. Verifica el resumen de detalles de su compra previo al pago.<img class="react" src="assets/ico-thumb-up.svg" alt=""></p><p>9. Ingresa datos de su tarjeta y presiona aceptar.<img class="react" src="assets/ico-thumb-up.svg" alt=""></p><p>10. Recibe mail con la confirmación<img class="react" src="assets/ico-thumb-up.svg" alt=""></p><p>11. Descarga el contenido<img class="react" src="assets/ico-thumb-up.svg" alt=""></p></div></div></div>
+      <div class="exp-step"><h4><span class="numbox">4</span>Registrarse a la carrera</h4>
+        <div class="exp-body"><div class="media-placeholder " data-label="Imagen — exp-4.png"></div><div class="exp-lines"><p>12. Busca la misma carrera y abre los detalles<img class="react" src="assets/ico-thumb-up.svg" alt=""></p><p>13. Revisa el horario y <span class="hl">elige el auto</span> comprado para correr<img class="react" src="assets/ico-thumb-down.svg" alt=""></p><p class="pain">Marca como favorito el auto comprado. Le hace click a “Registrarse” y le pide elegir un auto para correr. Le molesta que tenga que volver a elegir el mismo auto que ya seleccionó como favorito.</p><p>14. Luego de registrarse, ejecuta el simulador.<img class="react" src="assets/ico-thumb-up.svg" alt=""></p></div></div></div>
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-lampara.svg" alt=""><span>Descubrimientos y soluciones</span></span></h3>
+      <h3 class="center-title md">La primera vez</h3>
+      <div class="dx"><div class="media-placeholder " data-label="Imagen — dx-primera-vez.png"></div><div><h4>Un usuario nuevo no tiene idea:</h4><ul><li>Por dónde empezar</li><li>Por qué hay tantas carreras</li><li>Por qué no puede participar en todas</li><li>Cómo funciona el horario fijo</li></ul><h4>Solución</h4><p>Nueva vista <span class="hl">License Progress</span> para ayudar a los novatos a <span class="hl">progresar</span> sus cuentas y acceder a más contenido.</p></div></div>
+      <h3 class="center-title md">Detalles de carreras</h3>
+      <div class="dx"><div class="media-placeholder " data-label="Imagen — dx-detalles-carreras.png"></div><div><h4>Problemas</h4><ul><li>Dificultad para ver los autos para elegir</li><li>Demasiada información (reglas, formatos, 3 tablas, todo de golpe)</li></ul><h4>Soluciones</h4><ul><li>Nueva tab para la sección “Cars”</li><li>Reordenamiento y <span class="hl">resumen de información</span> en 2 tablas</li></ul></div></div>
+      <h3 class="center-title md">Lista de carreras</h3>
+      <div class="dx"><div class="media-placeholder " data-label="Imagen — dx-lista-carreras.png"></div><div><h4>Problema</h4><ul><li>El usuario no sabe a simple vista qué debe comprar para participar</li></ul><h4>Solución</h4><ul><li>Nombre del auto y/o pista en color <span class="hl">Naranja Carrito</span></li></ul></div></div>
+      <h3 class="center-title md">Carrito de compras</h3>
+      <div class="dx"><div class="media-placeholder " data-label="Imagen — dx-carrito.png"></div><div><h4>Problema</h4><ul><li>El carrito está por fuera de la plataforma, en la web</li></ul><h4>Solución</h4><ul><li><span class="hl">Rediseñar el carrito</span> dentro de la plataforma.</li></ul></div></div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="lean">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title">Lean UX Canvas</h2><p class="sec-sub">Pensando en el negocio</p></div>
+        <div class="sec-nav"><a href="#trayectoria" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Mapa de Trayectoria</a></div>
+      </div>      <div class="canvas-meta"><span>Nombre del producto/ servicio: iRacing UI</span><span>Fecha: 02/06/2025</span><span>Iteración: VI</span></div>
+      <div class="canvas">
+        <div class="col">
+          <div class="t-card"><h3>Problema del Negocio</h3><p>iRacing ofrece un servicio de simracing muy envidiado por la competencia la cual se basa en la cantidad de participación de la comunidad. La clave para mantener esa participación es que el usuario no abandone el servicio por diferentes causas.</p></div>
+          <div class="t-card grow"><h3>Arquetipos de Usuario</h3><p>Usuarios entre 20 y 50 años con suficiente poder adquisitivo que disfruten del automovilismo y quieran entrar al mundo del simracing.</p><p class="it">Sergio tiene 37 años. Es una persona muy apasionada por el automovilismo. En su tiempo libre, le encanta ver los findes de F1, ver películas y series, escuchar música, y correr en los diferentes simuladores del mercado.</p><p class="it">Utiliza iRacing para competir y plantearse a sí mismo un desafío más grande. Mejorar su irating de piloto y aumentar su licencia para poder competir con mejores autos y en las mejores pistas.</p></div>
+        </div>
+        <div class="t-card solutions"><h3>Soluciones</h3><ul><li>Nueva vista License Progress para ayudar a los novatos a progresar sus cuentas y acceder a más contenido.</li><li>Nueva sección de “Cars” y reordenamiento de la información</li><li>Añadir en la esquina superior derecha al lado del perfil un icon button de carrito para poder acceder al carrito luego de añadir productos.</li><li>Procesar los pagos dentro de la plataforma y rediseñar los mismos pasos de la web.</li><li>Remover algunas columnas innecesarias de la tabla de carreras para añadir el auto favorito seleccionado.</li><li>Colorear el nombre de los autos y pistas que necesitan comprarse, como indicador para el usuario de qué NO tiene.</li><li>Cambiar el botón de “registro” por un botón menú para dar más opciones solo disponibles ahora en los detalles.</li></ul></div>
+        <div class="col">
+          <div class="t-card"><h3>Resultados para el Negocio</h3><ul><li>Aumentar un 20% la permanencia de nuevos usuarios en el servicio en un rango de 3 meses</li><li>Aumentar el Average Order Value 40% del carrito de compras</li></ul></div>
+          <div class="t-card"><h3>Resultados para el Usuario</h3><ul><li>Aumentar un 20% la permanencia de nuevos usuarios en el servicio en un rango de 3 meses</li><li>Aumentar el Average Order Value 40% del carrito de compras</li></ul></div>
+          <div class="t-card grow"><h3>Hipótesis</h3><p>Creemos que se logrará aumentar la permanencia de usuarios nuevos si se dejan activados los filtros y tags más importantes y mejorando su visibilidad en la pantalla.</p><p>Podemos aumentar el Average Order Value incorporando el carrito y el flujo de la web del proceso de compra en la UI.</p><p>Podemos mejorar la experiencia del usuario promedio ajustando la información mostrada en los detalles de serie y permitiendo registrarse con el auto favorito seleccionado a las carreras.</p></div>
+        </div>
+      </div>
+      <div class="mintrabajo"><span>Mínimo trabajo para aprender la siguiente cosa más importante:</span><div class="chips"><span>Desktop Research</span><span>Evaluaciones Heurísticas</span><span>Encuestas</span><span>A/B Testing</span><span>Prototipos</span><span>Pruebas de Usabilidad</span></div></div>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="container">
+      <h2 class="center-title">Siguiente elemento UX</h2>
+      <div class="next-row">
+        <div class="next-col"><p class="lbl">Estamos acá</p><a href="estrategia.html" class="proceso-card" style="--img:url(assets/card-estrategia.png)"><span class="pc-title"><img src="assets/icon-estrategia.svg" alt=""><span>Estrategia</span></span><p class="pc-desc">Entendiendo las necesidades de los usuarios y los objetivos del negocio.</p></a></div>
+        <div class="next-col"><p class="lbl">Sigue acá</p><a href="#" class="proceso-card" style="--img:url(assets/card-alcance.png)"><span class="pc-title"><img src="assets/icon-alcance.svg" alt=""><span>Alcance</span></span><p class="pc-desc">Definiendo los requerimientos de las funcionalidades específicas y los contenidos del producto digital.</p></a></div>
+      </div>
+      <p class="also">Pero también están...</p>
+      <div class="proceso-grid"><a href="#" class="proceso-card" style="--img:url(assets/card-estructura.png)"><span class="pc-title"><img src="assets/icon-estructura.svg" alt=""><span>Estructura</span></span><p class="pc-desc">Definiendo la arquitectura de información y la interacción de la interfaz.</p></a><a href="#" class="proceso-card" style="--img:url(assets/card-esqueleto.png)"><span class="pc-title"><img src="assets/icon-esqueleto.svg" alt=""><span>Esqueleto</span></span><p class="pc-desc">Organizando los distintos elementos de información de la interfaz y creando los wireframes en media fidelidad.</p></a><a href="#" class="proceso-card" style="--img:url(assets/card-superficie.png)"><span class="pc-title"><img src="assets/icon-superficie.svg" alt=""><span>Superficie</span></span><p class="pc-desc">Definiendo el sistema de diseño y los wireframes en alta fidelidad. Prototipo con animaciones y pruebas de usabilidad.</p></a></div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
