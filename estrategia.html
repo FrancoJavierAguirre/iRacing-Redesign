@@ -4,9 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estrategia — Rediseño iRacing</title>
+<meta name="description" content="Estrategia del rediseño de iRacing: evaluaciones heurísticas, encuestas a 11 usuarios, mapa de trayectoria y Lean UX Canvas. Case study de Franco Aguirre.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Estrategia — Rediseño iRacing">
+<meta property="og:description" content="Estrategia del rediseño de iRacing: evaluaciones heurísticas, encuestas a 11 usuarios, mapa de trayectoria y Lean UX Canvas. Case study de Franco Aguirre.">
+<meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Estrategia — Rediseño iRacing">
+<meta name="twitter:description" content="Estrategia del rediseño de iRacing: evaluaciones heurísticas, encuestas a 11 usuarios, mapa de trayectoria y Lean UX Canvas. Case study de Franco Aguirre.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Estrategia — Rediseño iRacing",
+  "description": "Estrategia del rediseño de iRacing: evaluaciones heurísticas, encuestas a 11 usuarios, mapa de trayectoria y Lean UX Canvas. Case study de Franco Aguirre.",
+  "inLanguage": "es",
+  "dateCreated": "2025",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "Diseño UX/UI" } ],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "iRacing — Rediseño UX/UI",
+    "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Rediseño UX/UI", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Estrategia" }
+    ]
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:wght@200;300;400;500;600&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:wght@200;300;400;500;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="elementos.css">
 <link rel="stylesheet" href="estrategia.css">
@@ -17,7 +51,21 @@
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="crumb-parent">Rediseño UX/UI</span></a>
     <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <span class="current">Estrategia</span>
+    <div class="topbar-capas breadcrumb-capas" data-capas>
+      <button type="button" class="capas-trigger current" aria-current="page" aria-expanded="false" aria-controls="capas-menu" data-capas-trigger>
+        <span>Estrategia</span>
+        <img class="capas-chevron capas-chevron--down" src="assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="capas-menu" role="group" aria-label="Capas del proceso UX" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-alcance.svg" alt="" width="16" height="16"><span>Alcance</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-estructura.svg" alt="" width="16" height="16"><span>Estructura</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-esqueleto.svg" alt="" width="16" height="16"><span>Esqueleto</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-superficie.svg" alt="" width="16" height="16"><span>Superficie</span></a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
   <h1 class="topbar-title">Estrategia</h1>
   <a href="#" class="btn btn--sm btn-blue topbar-action"><img class="btn-icon" src="assets/ico-alcance-white.svg" alt="">Ver Alcance</a>
@@ -82,7 +130,7 @@
         <div class="media-placeholder ar-cart" data-label="Imagen — resultados-carrito.png"></div>
         <div class="quotes"><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Debería de haber <span class="hl">más información</span> sobre los distintos <span class="hl">descuentos</span>”</span></p><p><img class="ln-ico" src="assets/ico-exclamacion.svg" alt=""><span>“Hacerlo mas moderno y poder realizarlo desde dentro de la app que corres, <span class="hl">no tener que ir a la web.</span>”</span></p></div>
       </div>
-      <div class="sec-cta"><a href="#" class="btn btn-primary">Ver respuestas</a></div>
+      <div class="sec-cta"><a href="https://docs.google.com/spreadsheets/d/1PSs_GEPbFZEOwT5oAiEQkvclF1DfmOjBHSV1Y4nSWa4/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">Ver respuestas</a></div>
       <h3 class="center-title">Hipótesis Validadas</h3>
       <div class="text-cards">
         <div class="t-card"><h3 class="has-ico"><img class="t-ico" src="assets/ico-detalles-serie.svg" alt="">Detalles de una serie</h3><p>Esta sección resulta abrumadora. A pesar de que hay información importante, se puede reacomodar para disminuir la carga cognitiva.</p></div>
@@ -150,7 +198,7 @@
         <div class="t-card solutions"><h3>Soluciones</h3><ul><li>Nueva vista License Progress para ayudar a los novatos a progresar sus cuentas y acceder a más contenido.</li><li>Nueva sección de “Cars” y reordenamiento de la información</li><li>Añadir en la esquina superior derecha al lado del perfil un icon button de carrito para poder acceder al carrito luego de añadir productos.</li><li>Procesar los pagos dentro de la plataforma y rediseñar los mismos pasos de la web.</li><li>Remover algunas columnas innecesarias de la tabla de carreras para añadir el auto favorito seleccionado.</li><li>Colorear el nombre de los autos y pistas que necesitan comprarse, como indicador para el usuario de qué NO tiene.</li><li>Cambiar el botón de “registro” por un botón menú para dar más opciones solo disponibles ahora en los detalles.</li></ul></div>
         <div class="col">
           <div class="t-card"><h3>Resultados para el Negocio</h3><ul><li>Aumentar un 20% la permanencia de nuevos usuarios en el servicio en un rango de 3 meses</li><li>Aumentar el Average Order Value 40% del carrito de compras</li></ul></div>
-          <div class="t-card"><h3>Resultados para el Usuario</h3><ul><li>Aumentar un 20% la permanencia de nuevos usuarios en el servicio en un rango de 3 meses</li><li>Aumentar el Average Order Value 40% del carrito de compras</li></ul></div>
+          <div class="t-card"><h3>Resultados para el Usuario</h3><ul><li>Realizar compras sin abandonar la plataforma.</li><li>Buscar y encontrar carreras más rápidamente.</li><li>Acelerar el registro a una carrera.</li><li>Guía práctica para subir de licencias.</li></ul></div>
           <div class="t-card grow"><h3>Hipótesis</h3><p>Creemos que se logrará aumentar la permanencia de usuarios nuevos si se dejan activados los filtros y tags más importantes y mejorando su visibilidad en la pantalla.</p><p>Podemos aumentar el Average Order Value incorporando el carrito y el flujo de la web del proceso de compra en la UI.</p><p>Podemos mejorar la experiencia del usuario promedio ajustando la información mostrada en los detalles de serie y permitiendo registrarse con el auto favorito seleccionado a las carreras.</p></div>
         </div>
       </div>
@@ -171,5 +219,6 @@
   </section>
 </main>
 
+<script src="menu-capas.js" defer></script>
 </body>
 </html>

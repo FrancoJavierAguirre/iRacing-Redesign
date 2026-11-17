@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-seo-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-17: agregar SEO para posicionamiento web y optimizaciones para búsqueda por agentes y motores de búsqueda; el portfolio debe estar optimizado para presentaciones con futuros clientes" },
+    { "id": "u-seo-answers", "kind": "user", "reference": "Respuestas del usuario en chat 2026-11-17 (AskUserQuestion): dominio = dejarlo para después; rendimiento = nada de rendimiento; idioma = a futuro switch español/inglés al terminar el proyecto" },
+    { "id": "u-seo-answers-2", "kind": "user", "reference": "Respuestas del usuario en chat 2026-11-17 (AskUserQuestion, 2.ª ronda): declarar catálogo de modelos; crawlers de IA = ver más adelante con el SEO del dominio; perfiles públicos = ninguno por ahora" },
+    { "id": "s-index", "kind": "file", "reference": "index.html", "sha256": "0508f3900e341c239d933c7d61a49e6ec5fe4cff8bf9c3e7a39b93667550d121" },
+    { "id": "s-estrategia", "kind": "file", "reference": "estrategia.html", "sha256": "b4d99737780253ecdf760b12c908b78ee58d014013d621e841ec51bacc45aeb1" },
+    { "id": "s-elementos", "kind": "file", "reference": "5-elementos.html", "sha256": "9bb7161f9042be436646edbc2d9100f8d02d99e3892760bc23052c97c9dce1aa" },
+    { "id": "s-readme", "kind": "file", "reference": "README.md", "sha256": "257e3d765fd47df62ff2441a079fdb7afd4346879450a410c759b06ec45a9437" }
+  ],
+  "facts": [
+    { "id": "o-no-meta", "area": "technical", "statement": "Las 3 páginas solo tienen charset, viewport y title: no hay meta description, Open Graph, Twitter Card, datos estructurados, favicon, robots.txt, sitemap ni llms.txt.", "status": "superseded", "replacedBy": "o-meta-implemented", "source": "s-index" },
+    { "id": "o-meta-implemented", "area": "technical", "statement": "Tras la implementación de 0001, las 3 páginas tienen description, robots, Open Graph, Twitter Card y JSON-LD válido sin URLs absolutas, y existe llms.txt en la raíz; siguen sin canonical, og:image, favicon, robots.txt ni sitemap.", "status": "observed", "source": "s-index" },
+    { "id": "o-pages", "area": "product", "statement": "Páginas publicables: index.html, 5-elementos.html y estrategia.html, todas en español (lang=es).", "status": "observed", "source": "s-estrategia" },
+    { "id": "o-author", "area": "product", "statement": "El autor visible del case study es Franco Aguirre (2025); no hay enlaces a perfiles personales (LinkedIn, Behance, email) en el sitio.", "status": "observed", "source": "s-index" },
+    { "id": "o-video-content", "area": "product", "statement": "Las comparativas Antes/Después del Home son videos sin texto alternativo más allá de aria-label: el contenido del rediseño no es legible para buscadores ni agentes.", "status": "observed", "source": "s-index" },
+    { "id": "o-title-typo", "area": "product", "statement": "El title y el h1 de 5-elementos.html dicen 'James Garret' (el nombre correcto es Jesse James Garrett, como figura en el cuerpo).", "status": "observed", "source": "s-elementos" },
+    { "id": "d-goal", "area": "product", "statement": "Objetivo: que el portfolio se pueda descubrir y entender en motores de búsqueda y agentes de IA para presentaciones con futuros clientes.", "status": "confirmed", "source": "u-seo-request" },
+    { "id": "d-no-domain", "area": "technical", "statement": "No hay dominio todavía: se implementa solo lo que no depende de URLs absolutas. Canonical, og:image/og:url absolutos, la línea Sitemap de robots.txt y sitemap.xml quedan pendientes hasta definir el hosting.", "status": "confirmed", "source": "u-seo-answers" },
+    { "id": "d-no-perf", "area": "technical", "statement": "Sin optimizaciones de rendimiento en esta feature (sin lazy-loading, posters, preload ni compresión de media); no se tocan assets.", "status": "confirmed", "source": "u-seo-answers" },
+    { "id": "d-lang-future", "area": "product", "statement": "Contenido en español por ahora; al terminar el proyecto se quiere un switch español/inglés. Esta feature no traduce, pero no debe impedir agregar hreflang/versiones EN después.", "status": "confirmed", "source": "u-seo-answers" },
+    { "id": "d-crawlers-deferred", "area": "technical", "statement": "La política de crawlers de IA se decide junto con el dominio: esta feature NO crea robots.txt (sin robots.txt, todo crawler puede indexar por defecto). Sin perfiles de contacto por ahora: solo el nombre del autor.", "status": "confirmed", "source": "u-seo-answers-2" },
+    { "id": "p-no-visual-change", "area": "product", "statement": "Propuesta: la feature no cambia el diseño visible; los cambios van en <head>, en archivos nuevos en la raíz (robots.txt, llms.txt) y en marcado semántico sin efecto visual.", "status": "proposed" }
+  ],
+  "questions": [
+    { "id": "q-favicon", "question": "No hay favicon propio (Google lo muestra en los resultados). ¿Hay un ícono o logo personal para usar? Usar el logo de iRacing no corresponde porque es de una marca ajena.", "blocking": false, "status": "open" },
+    { "id": "q-profiles", "question": "¿Qué perfiles públicos (LinkedIn, Behance, email de contacto) se pueden incluir en los datos estructurados (sameAs) y en llms.txt?", "blocking": false, "status": "resolved", "resolution": "d-crawlers-deferred" },
+    { "id": "q-ai-crawlers", "question": "¿Se permite a los crawlers de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) indexar el sitio? Se decide junto con el dominio.", "blocking": false, "status": "deferred" }
+  ],
+  "change": {
+    "actor": "Franco Aguirre, autor del portfolio, y sus futuros clientes/reclutadores, que lo encuentran mediante buscadores o asistentes de IA",
+    "problem": "Las páginas no tienen metadatos, datos estructurados ni archivos de descubrimiento, y el contenido clave está en videos: los buscadores y los agentes de IA no pueden indexar ni resumir bien el case study.",
+    "outcome": "Las 3 páginas exponen títulos y descripciones únicas, metadatos sociales, datos estructurados schema.org y un archivo llms.txt, de forma que un buscador o un agente pueda describir el proyecto, su autor y su proceso sin ver los videos.",
+    "scope": "Incluye: title y meta description por página; meta robots (index, follow); Open Graph y Twitter Card sin URLs absolutas; JSON-LD (CreativeWork/WebPage + Person + BreadcrumbList) sin URLs absolutas ni sameAs; llms.txt con resumen y descripción textual de las 6 comparativas; corrección de 'Garret' por 'Garrett' en title/h1 de 5-elementos.html; documentación de pendientes por dominio. Excluye: dominio, canonical, sitemap.xml, robots.txt y política de crawlers de IA, og:image absoluta, favicon, perfiles de contacto, rendimiento, compresión o borrado de assets, traducción y switch ES/EN, corrección del copy del Lean Canvas.",
+    "acceptance": "1) Cada página tiene un title único y una meta description única de hasta ~160 caracteres. 2) Cada página tiene JSON-LD válido (schema.org) con el autor y el idioma es. 3) Existe llms.txt en la raíz, con rutas relativas y la descripción textual de las comparativas. 4) El diseño visible no cambia y la consola sigue sin errores al abrir las páginas desde el archivo. 5) docs/public y docs/tech describen lo implementado y listan lo pendiente por falta de dominio.",
+    "valueSignal": "Cuando haya dominio: las páginas indexadas en Google Search Console con su descripción, vista previa correcta al compartir en LinkedIn/WhatsApp y un asistente de IA que resume el case study correctamente a partir de llms.txt.",
+    "evidence": ["o-meta-implemented", "o-pages", "o-author", "o-video-content", "d-goal", "d-no-domain", "d-no-perf", "d-lang-future"]
+  }
+}

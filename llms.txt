@@ -1,0 +1,46 @@
+# iRacing — Rediseño UX/UI
+
+> Case study de diseño UX/UI de Franco Aguirre (2025): rediseño no oficial de la plataforma de iRacing, el lugar donde se buscan carreras (el simulador, donde se corre, no se rediseñó). Se apoya en el modelo de los 5 elementos de la experiencia de usuario de Jesse James Garrett. Herramientas: Figma, Make, Photoshop y UX Tweak. Sitio en español.
+
+## Problema
+
+- Los usuarios consideran que la plataforma es confusa: citan datos innecesarios, una lista de carreras compleja para un usuario nuevo y una experiencia poco intuitiva y lenta (testimonios en `index.html`, sección «¿Por qué el rediseño?»).
+- Experiencia de un usuario nuevo (mapa de trayectoria en `estrategia.html`): se marea con la lista de carreras, tiene que comprar el auto en una web externa y, al registrarse, debe volver a elegir el auto que ya marcó como favorito.
+- Problema de negocio: la falta de un flujo constante de usuarios degrada la disponibilidad de carreras competitivas y eleva el riesgo de frustración y abandono (churn rate).
+
+## Objetivos
+
+- Negocio: mantener y aumentar la cantidad de usuarios en la comunidad; aumentar la cantidad de compras en la plataforma.
+- Usuario: encontrar y entrar de forma simple a una carrera online acorde a su nivel, licencia y contenido; realizar compras en la plataforma de manera fácil e intuitiva.
+- Objetivos planteados en el Lean UX Canvas (son metas, no resultados medidos): aumentar 20 % la permanencia de nuevos usuarios en 3 meses y aumentar 40 % el Average Order Value del carrito de compras.
+- Resultados esperados para el usuario en el Lean UX Canvas: realizar compras sin abandonar la plataforma, buscar y encontrar carreras más rápidamente, acelerar el registro a una carrera y contar con una guía práctica para subir de licencias.
+
+## Proceso
+
+- [5 Elementos UX de James Garrett](5-elementos.html): explica las 5 capas, de lo abstracto a lo concreto: Estrategia, Alcance, Estructura, Esqueleto y Superficie.
+- [Estrategia](estrategia.html): primera capa del proceso. Incluye evaluaciones heurísticas, encuestas a 11 usuarios (8 de España y 1 de Argentina, EE. UU., Canadá y Chile), mapa de trayectoria con la persona Sergio Barrientos (escenario hipotético y experiencia paso a paso) y un Lean UX Canvas.
+
+## Las 6 comparativas Antes/Después
+
+Cada comparativa de `index.html` muestra en video la plataforma antes y después del rediseño. Lo que sigue es lo que el sitio dice sobre cada una.
+
+- Lista de carreras: se propone sacar las tablas «Races» y «Currently racing» por exceso de información, mejorar los filtros y la información de las carreras, mostrar el nombre del auto y/o la pista en color naranja carrito cuando hay que comprarlos, quitar columnas innecesarias de la tabla y sumar el auto favorito seleccionado.
+- Registro a la carrera: el Lean UX Canvas propone cambiar el botón de «registro» por un botón menú con más opciones y permitir registrarse con el auto favorito ya seleccionado, porque hoy el usuario debe volver a elegirlo.
+- Detalles de la carrera: se propone una nueva tab «Cars» y reordenar y resumir la información en 2 tablas, para reducir la carga cognitiva de una pantalla con demasiada información (reglas, formatos y 3 tablas a la vez).
+- Calendario: es una de las 6 comparativas (video antes/después del calendario). El sitio no incluye texto que explique qué cambió.
+- Detalles de autos y pistas: es una de las 6 comparativas. El sitio no la trata por separado; lo relacionado es la tab «Cars» de los detalles de carrera y la propuesta de colorear los autos y pistas que hay que comprar.
+- Carrito de compras: hoy se gestiona desde una web externa; se propone llevar el carrito dentro de la plataforma y rediseñar el flujo de pago, con un ícono de carrito en la esquina superior derecha con un badge numérico al agregar productos.
+
+## Estado de las páginas
+
+- `index.html`: completa.
+- `5-elementos.html`: completa en su contenido; los botones para ir a las capas Alcance, Estructura, Esqueleto y Superficie todavía no llevan a ninguna página.
+- `estrategia.html`: el texto está completo; las imágenes de hallazgos y escenarios son todavía recuadros de reemplazo, y el botón «Ver Alcance» todavía no lleva a ninguna parte; «Ver respuestas» abre la planilla de respuestas de la encuesta.
+- Las páginas de Alcance, Estructura, Esqueleto y Superficie todavía no existen.
+
+## Enlaces
+
+- [Home del case study](index.html)
+- [5 Elementos UX de James Garrett](5-elementos.html)
+- [Estrategia](estrategia.html)
+- [Prototipo en Figma](https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1)

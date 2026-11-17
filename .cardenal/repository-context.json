@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "src-readme", "kind": "file", "reference": "README.md", "sha256": "257e3d765fd47df62ff2441a079fdb7afd4346879450a410c759b06ec45a9437" },
+    { "id": "src-index", "kind": "file", "reference": "index.html", "sha256": "0508f3900e341c239d933c7d61a49e6ec5fe4cff8bf9c3e7a39b93667550d121" },
+    { "id": "src-estrategia", "kind": "file", "reference": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" },
+    { "id": "src-elementos", "kind": "file", "reference": "5-elementos.html", "sha256": "9bb7161f9042be436646edbc2d9100f8d02d99e3892760bc23052c97c9dce1aa" },
+    { "id": "src-styles", "kind": "file", "reference": "styles.css", "sha256": "29a3aeb09370bd20de01ccde1b457864e5544d9070540e640ce6b338f7f33180" },
+    { "id": "src-elementos-css", "kind": "file", "reference": "elementos.css", "sha256": "68a9ff0ae875c3c893ada42bb730c6e94a8814478627a9d839f50e72cdbfd97a" },
+    { "id": "src-estrategia-css", "kind": "file", "reference": "estrategia.css", "sha256": "657e7532ad6ede76d4f3d28d9d9bb5a5aa34b48c7b80299321970510fd97e244" },
+    { "id": "src-script", "kind": "file", "reference": "script.js", "sha256": "f9f65751f9b0ff6c227fa79b56ddbce441ab2324386bd4834462170a65e37f4a" },
+    { "id": "src-user-2026-11-17", "kind": "user", "reference": "Respuestas del usuario en chat 2026-11-17 a las preguntas q-hosting, q-canvas-duplicado, q-unused-assets y q-special-deps del relevamiento inicial" }
+  ],
+  "facts": [
+    { "id": "f-prod-purpose", "area": "product", "statement": "El repositorio es un case study de portfolio (Franco Aguirre, 2025) que presenta un rediseño UX/UI no oficial de la plataforma de iRacing (búsqueda de carreras, registro, detalles, calendario, autos/pistas y carrito).", "status": "observed", "source": "src-index" },
+    { "id": "f-prod-audience", "area": "product", "statement": "El público son lectores del portfolio (reclutadores, equipos de diseño); el sitio no tiene login, formularios ni datos de usuario.", "status": "observed", "source": "src-index" },
+    { "id": "f-prod-home", "area": "product", "statement": "El Home (index.html) tiene secciones Hero, Contexto, ¿Por qué el rediseño? (4 testimonios + enlace a fuente en Google Sheets), Plataforma actual (6 comparativas Antes/Después en video + CTA al prototipo de Figma), Objetivos (negocio/usuario + 3 videos de stats) y Proceso de Diseño (5 tarjetas).", "status": "observed", "source": "src-index" },
+    { "id": "f-prod-proceso-nav", "area": "product", "statement": "De las 5 tarjetas de Proceso de Diseño del Home solo Estrategia navega (a estrategia.html); Alcance, Estructura, Esqueleto y Superficie no tienen página y solo registran en consola.", "status": "observed", "source": "src-script" },
+    { "id": "f-prod-elementos", "area": "product", "statement": "5-elementos.html explica el modelo de 5 capas de Jesse James Garrett y enlaza a Estrategia; los CTA de Alcance, Estructura, Esqueleto y Superficie apuntan a href=\"#\".", "status": "observed", "source": "src-elementos" },
+    { "id": "f-prod-estrategia", "area": "product", "statement": "estrategia.html documenta Evaluaciones Heurísticas, Encuestas (11 usuarios), Mapa de Trayectoria (persona Sergio) y Lean UX Canvas; contiene 19 placeholders de imagen (media-placeholder) y enlaces pendientes ('Ver Alcance', 'Ver respuestas', siguientes elementos).", "status": "observed", "source": "src-estrategia" },
+    { "id": "f-prod-pending", "area": "product", "statement": "Pendientes declarados: páginas de Alcance, Estructura, Esqueleto y Superficie; navegación general del portfolio hacia otros case studies.", "status": "observed", "source": "src-readme" },
+    { "id": "f-tech-stack", "area": "technical", "statement": "Sitio estático sin build: HTML + CSS + JavaScript vanilla, sin package.json, dependencias npm, tests ni CI. Se abre con doble click en index.html.", "status": "observed", "source": "src-readme" },
+    { "id": "f-tech-design-tokens", "area": "technical", "statement": "Tokens de diseño en :root de styles.css (--bg, --panel, --card-bg, --orange, --gold, --blue, textos, fuentes). Diseño a 1920px con margen 80px escalado con clamp(); breakpoints 1300/900/640px y hover:none.", "status": "observed", "source": "src-styles" },
+    { "id": "f-tech-fonts", "area": "technical", "statement": "Tipografías Exo 2 (títulos), Poppins (cuerpo) e Inter (botones) cargadas desde Google Fonts en cada HTML.", "status": "observed", "source": "src-index" },
+    { "id": "f-tech-css-layers", "area": "technical", "statement": "styles.css es la base común; elementos.css estiliza las páginas internas (body.page-elementos, topbar/breadcrumb); estrategia.css agrega estilos específicos de body.page-estrategia.", "status": "observed", "source": "src-estrategia" },
+    { "id": "f-tech-videos", "area": "technical", "statement": "script.js reproduce/pausa con IntersectionObserver (threshold 0.25) los videos video.screenshot y video.stat-video (preload=none); fallback a autoplay si no hay IntersectionObserver. Solo se carga en index.html.", "status": "observed", "source": "src-script" },
+    { "id": "f-tech-external-links", "area": "technical", "statement": "Integraciones solo por enlace saliente: Google Fonts, Google Sheets (fuente de testimonios), prototipo de Figma, Twitch (Stradi) y globalracingleague.com. No hay llamadas a APIs.", "status": "observed", "source": "src-index" },
+    { "id": "f-tech-readme-outdated", "area": "technical", "statement": "README.md está desactualizado respecto del código: dice que las comparativas y los stats son placeholders y que assets/ está vacío, pero index.html ya usa videos .mp4 para ambos y assets/ tiene ~85 archivos.", "status": "observed", "source": "src-readme" },
+    { "id": "f-tech-unused-assets", "area": "technical", "statement": "Assets no referenciados por ningún HTML/CSS/JS: 'iRacing logo.png', Make.png, Photoshop.png, 'UX Tweak.png' (duplicados de icon-*/iracing-logo.png) y lista-carreras-antes/despues.gif (~21 MB, reemplazados por .mp4).", "status": "observed", "source": "src-index" },
+    { "id": "d-hosting-local", "area": "technical", "statement": "Por ahora el sitio corre solo en local; el hosting de producción todavía no está decidido y se retoma más adelante.", "status": "confirmed", "source": "src-user-2026-11-17" },
+    { "id": "d-canvas-error", "area": "product", "statement": "El texto repetido en 'Resultados para el Usuario' del Lean UX Canvas es un error de copia; el usuario lo corregirá más adelante (no forma parte de cambios automáticos).", "status": "confirmed", "source": "src-user-2026-11-17" },
+    { "id": "d-keep-assets", "area": "technical", "statement": "No borrar los assets no referenciados (GIFs y PNG duplicados): el usuario todavía no decidió entre GIF y video por el peso de los archivos.", "status": "confirmed", "source": "src-user-2026-11-17" },
+    { "id": "d-no-custom-libs", "area": "technical", "statement": "No hay bibliotecas propias ni dependencias que requieran consideración especial.", "status": "confirmed", "source": "src-user-2026-11-17" },
+    { "id": "d-portfolio-goal", "area": "product", "statement": "El sitio es un portfolio para presentar a futuros clientes y debe estar optimizado para eso.", "status": "confirmed", "source": "src-user-2026-11-17" }
+  ],
+  "questions": [
+    { "id": "q-hosting", "question": "¿Dónde se publica el sitio (GitHub Pages, Netlify, otro) y hay alguna restricción de tamaño para assets pesados como hero-background.mp4 (~19 MB)?", "blocking": false, "status": "deferred" },
+    { "id": "q-canvas-duplicado", "question": "En el Lean UX Canvas, 'Resultados para el Usuario' repite el texto de 'Resultados para el Negocio'. ¿Es un error de copia pendiente?", "blocking": false, "status": "resolved", "resolution": "d-canvas-error" },
+    { "id": "q-unused-assets", "question": "¿Se pueden eliminar los assets duplicados/no usados (GIFs de lista de carreras y PNG duplicados) o se conservan como respaldo?", "blocking": false, "status": "resolved", "resolution": "d-keep-assets" },
+    { "id": "q-special-deps", "question": "¿Hay alguna biblioteca propia o dependencia que requiera consideración especial? (No se observó ninguna en el código.)", "blocking": false, "status": "resolved", "resolution": "d-no-custom-libs" }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "agreements": {},
+  "workflow": {
+    "mode": "light",
+    "roles": ["front"],
+    "reason": "Cambios localizados en páginas estáticas y llms.txt; sin backend ni datos. T1 (0001) y T2 (0002) comparten estrategia.html y llms.txt: por decisión del usuario se revisan juntas al terminar T2.",
+    "questions": [],
+    "qa": { "mode": "manual", "browser": false }
+  },
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "SEO y descubrimiento por agentes (sin dominio)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Las 3 páginas tienen title y meta description únicos, meta robots, Open Graph/Twitter sin URLs absolutas y JSON-LD válido con el autor e inLanguage es; existe llms.txt con rutas relativas y la descripción de las 6 comparativas; 'Garrett' corregido en 5-elementos.html; sin cambios visuales ni errores de consola.",
+      "dependsOn": [],
+      "files": ["index.html", "5-elementos.html", "estrategia.html", "llms.txt"],
+      "questions": [],
+      "evidence": [
+        { "path": "llms.txt", "sha256": "569bed28814fb4478834747d1664bc008787587465142ea83e8e85eef0b6379a" },
+        { "path": "index.html", "sha256": "0508f3900e341c239d933c7d61a49e6ec5fe4cff8bf9c3e7a39b93667550d121" },
+        { "path": "5-elementos.html", "sha256": "9bb7161f9042be436646edbc2d9100f8d02d99e3892760bc23052c97c9dce1aa" },
+        { "path": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" }
+      ],
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
+    },
+    {
+      "id": "T2",
+      "title": "Lean UX Canvas: resultados para el usuario y enlace 'Ver respuestas'",
+      "role": "front",
+      "state": "done",
+      "acceptance": "La card 'Resultados para el Usuario' muestra los 4 bullets indicados por el usuario en orden; 'Ver respuestas' abre la planilla de Google Sheets en pestaña nueva (target=_blank rel=noopener); sin otros cambios visibles; llms.txt y docs actualizados.",
+      "dependsOn": [],
+      "files": ["estrategia.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "questions": [],
+      "evidence": [
+        { "path": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" },
+        { "path": "llms.txt", "sha256": "569bed28814fb4478834747d1664bc008787587465142ea83e8e85eef0b6379a" },
+        { "path": "docs/public/funcionalidades.md", "sha256": "33d50af36f9ca14f27cfaea069b077fd4f3a94ca4210c2357a69a4311f6bd897" },
+        { "path": "docs/tech/sistema.md", "sha256": "5b3612055080a7973e017ce1f21e9bd0ca1c28347b7b0250b8ee81cd4c4a5ada" }
+      ],
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
+    },
+    {
+      "id": "T3",
+      "title": "Menú desplegable de capas UX en la topbar de Estrategia",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Disparador en la palabra 'Estrategia' del breadcrumb (corrección d-trigger-breadcrumb). Criterios 1-6 de change.acceptance en .cardenal/context.json (0003): chevron down/up, apertura y cierre, valores visuales, opción actual oculta y opciones sin página deshabilitadas, sin regresiones ni errores de consola, docs actualizadas.",
+      "dependsOn": [],
+      "files": ["estrategia.html", "elementos.css", "menu-capas.js", "specs/0003-menu-capas-topbar/plan.md", "assets/ico-chevron-down.svg", "assets/ico-chevron-up.svg", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "questions": [],
+      "evidence": [
+        { "path": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" },
+        { "path": "elementos.css", "sha256": "68a9ff0ae875c3c893ada42bb730c6e94a8814478627a9d839f50e72cdbfd97a" },
+        { "path": "menu-capas.js", "sha256": "77e6c14b5ac12f9210164c9afce6a83fedc4cb878715dabe206f07f9de1a4f9f" },
+        { "path": "docs/public/funcionalidades.md", "sha256": "33d50af36f9ca14f27cfaea069b077fd4f3a94ca4210c2357a69a4311f6bd897" },
+        { "path": "docs/tech/sistema.md", "sha256": "5b3612055080a7973e017ce1f21e9bd0ca1c28347b7b0250b8ee81cd4c4a5ada" }
+      ],
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
+    }
+  ]
+}

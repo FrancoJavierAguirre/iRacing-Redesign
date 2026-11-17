@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0003-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-17 (/feature) con captura del menú y los SVG 'Chevron up'/'chevron down': menú desplegable desde 'Estrategia' en la topbar de estrategia.html; chevron down a 8 px que cambia a chevron up al abrir; menú debajo de la palabra; 5 opciones (Estrategia, Alcance, Estructura, Esqueleto, Superficie) con ícono; radio 8 px, gap ícono-texto 8 px, padding 8 px horizontal y 12 px vertical; texto #FFFFFF, íconos #B7B7BA, fondo #212121; ancho mínimo 102 px que se adapta al contenido; la opción de la página actual no aparece" },
+    { "id": "u-0003-answers", "kind": "user", "reference": "Respuestas del usuario en chat 2026-11-17 (AskUserQuestion): opciones sin página = visibles pero deshabilitadas; texto Inter 12 px regular; íconos 16x16 px" },
+    { "id": "u-0003-fix", "kind": "user", "reference": "Corrección del usuario en chat 2026-11-17 tras probar 0003: el chevron y el menú no deben salir del título central de la topbar sino de la palabra 'Estrategia' del breadcrumb, arriba a la izquierda; todo lo pedido aplica a esa palabra" },
+    { "id": "s-estrategia", "kind": "file", "reference": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" },
+    { "id": "s-elementos-css", "kind": "file", "reference": "elementos.css", "sha256": "68a9ff0ae875c3c893ada42bb730c6e94a8814478627a9d839f50e72cdbfd97a" },
+    { "id": "s-chevron-down", "kind": "file", "reference": "assets/ico-chevron-down.svg", "sha256": "b487f6b3ed09f7db48cf18b32e043deccc7e9af4bd8d6e75418af122c8bfb71b" },
+    { "id": "s-chevron-up", "kind": "file", "reference": "assets/ico-chevron-up.svg", "sha256": "1638c419c24e9eba066b7600b6acf6bafff51716bc2a0487e164412d72260d95" },
+    { "id": "s-icon-estrategia", "kind": "file", "reference": "assets/icon-estrategia.svg", "sha256": "badd0df44cf621171cf24d97a835a98e5268fcf4372b1e3f2608808dc8343eeb" }
+  ],
+  "facts": [
+    { "id": "o-topbar", "area": "technical", "statement": "La topbar de estrategia.html (header.topbar, línea 50) tiene breadcrumb a la izquierda, h1.topbar-title 'Estrategia' centrado (Poppins 600, línea 56) y el botón 'Ver Alcance' a la derecha. Es sticky con z-index 20 (elementos.css:9-19).", "status": "observed", "source": "s-elementos-css" },
+    { "id": "o-icons", "area": "technical", "statement": "Los íconos de las 5 capas existen en assets/icon-{estrategia,alcance,estructura,esqueleto,superficie}.svg, ya en #B7B7BA. Los chevrons del usuario se copiaron a assets/ico-chevron-down.svg y assets/ico-chevron-up.svg (12x12, fill blanco).", "status": "observed", "source": "s-icon-estrategia" },
+    { "id": "o-inter-weights", "area": "technical", "statement": "El link de Google Fonts de estrategia.html carga Inter solo en los pesos 300 y 600; falta el 400 (regular) que pide el menú.", "status": "observed", "source": "s-estrategia" },
+    { "id": "o-no-js-internal", "area": "technical", "statement": "estrategia.html no carga ningún JS (script.js solo se usa en index.html).", "status": "observed", "source": "s-estrategia" },
+    { "id": "d-menu-visual", "area": "product", "statement": "Menú: debajo de la palabra 'Estrategia'; chevron down 8 px a la derecha del texto, que pasa a chevron up al abrir; radio 8 px; cada opción con ícono 16x16 #B7B7BA, gap 8 px, texto Inter 12 px regular #FFFFFF, padding 12 px vertical y 8 px horizontal; fondo #212121; ancho mínimo 102 px, adaptable al contenido.", "status": "confirmed", "source": "u-0003-request" },
+    { "id": "d-menu-behavior", "area": "product", "statement": "Se abre con click en 'Estrategia'. Cada opción navega a la página de su capa. La opción de la página actual no aparece.", "status": "confirmed", "source": "u-0003-request" },
+    { "id": "d-trigger-breadcrumb", "area": "product", "statement": "El disparador del menú (con el chevron a 8 px) es la palabra 'Estrategia' del breadcrumb, arriba a la izquierda (span.current), y el menú se despliega debajo de esa palabra. El título central (h1.topbar-title) vuelve a ser texto plano, como antes de 0003.", "status": "confirmed", "source": "u-0003-fix" },
+    { "id": "d-disabled", "area": "product", "statement": "Las opciones cuya página todavía no existe (Alcance, Estructura, Esqueleto, Superficie) se muestran deshabilitadas: visibles, atenuadas y sin click.", "status": "confirmed", "source": "u-0003-answers" },
+    { "id": "d-sizes", "area": "product", "statement": "Texto de las opciones en Inter 12 px regular (400); íconos de 16x16 px.", "status": "confirmed", "source": "u-0003-answers" },
+    { "id": "p-close-a11y", "area": "technical", "statement": "Propuesta (patrón estándar): el menú también se cierra al volver a hacer click en 'Estrategia', al hacer click afuera, al elegir una opción y con Escape; el disparador es un button dentro del h1, con aria-expanded y aria-controls; las opciones deshabilitadas llevan aria-disabled y opacidad reducida.", "status": "proposed" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que está en la página de Estrategia y quiere saltar a otra capa del proceso UX",
+    "problem": "Desde una página de capa no hay forma directa de ir a las otras capas: solo están el breadcrumb al Home y el botón 'Ver Alcance'.",
+    "outcome": "Al hacer click en 'Estrategia' en la topbar se despliega, debajo de la palabra, un menú con las otras capas. Las que tienen página navegan y las que no, se ven deshabilitadas.",
+    "scope": "Incluye: disparador con chevron en la topbar de estrategia.html, menú con las capas excepto la actual (Alcance, Estructura, Esqueleto y Superficie, deshabilitadas por ahora), estilos en elementos.css para que lo reusen las páginas de capa futuras, JS mínimo sin dependencias para abrir y cerrar, Inter 400 en el link de fuentes de estrategia.html, assets de chevron y documentación. Excluye: crear las páginas de Alcance a Superficie, el menú en index.html o 5-elementos.html, y cambios en el botón 'Ver Alcance' o el breadcrumb.",
+    "acceptance": "1) 'Estrategia' muestra un chevron down 8 px a su derecha. 2) Click: el menú aparece debajo de la palabra y el chevron pasa a up; un segundo click, un click afuera o Escape lo cierran y el chevron vuelve a down. 3) El menú cumple los valores visuales indicados (radio 8 px, fondo #212121, texto Inter 12 px #FFFFFF, íconos 16 px #B7B7BA, gap 8 px, padding 12/8 px, ancho mínimo 102 px adaptable). 4) No aparece la opción Estrategia; Alcance, Estructura, Esqueleto y Superficie se ven atenuadas y no navegan. 5) Funciona desde file://, en escritorio y mobile, sin errores en consola ni otros cambios visibles en la página. 6) docs/public y docs/tech describen el menú.",
+    "valueSignal": "El lector puede moverse entre las capas del proceso desde la topbar cuando existan las demás páginas, sin volver al Home.",
+    "evidence": ["o-topbar", "o-icons", "o-inter-weights", "o-no-js-internal", "d-trigger-breadcrumb", "d-menu-visual", "d-menu-behavior", "d-disabled", "d-sizes"]
+  }
+}

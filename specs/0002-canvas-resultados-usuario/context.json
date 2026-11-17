@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0002-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-17 (/feature): reemplazar el texto de la card 'Resultados para el Usuario' del Lean UX Canvas por 4 bullets dados, y que 'Ver respuestas' abra en pestaña nueva la planilla de Google Sheets indicada" },
+    { "id": "s-estrategia", "kind": "file", "reference": "estrategia.html", "sha256": "3021cbe00f4234b36bd2f94ca8439e3d33cdaeb00c3072454878d6a25cb2427f" },
+    { "id": "s-llms", "kind": "file", "reference": "llms.txt", "sha256": "569bed28814fb4478834747d1664bc008787587465142ea83e8e85eef0b6379a" },
+    { "id": "s-funcionalidades", "kind": "file", "reference": "docs/public/funcionalidades.md", "sha256": "e76170a2509264398a2aa66619cd99a2d068cd44814a3b14073171468bdc3be8" },
+    { "id": "s-index", "kind": "file", "reference": "index.html", "sha256": "0508f3900e341c239d933c7d61a49e6ec5fe4cff8bf9c3e7a39b93667550d121" }
+  ],
+  "facts": [
+    { "id": "o-card-duplicada", "area": "product", "statement": "En estrategia.html:187 la card 'Resultados para el Usuario' repite los dos bullets de 'Resultados para el Negocio' (+20 % de permanencia, +40 % de AOV).", "status": "superseded", "replacedBy": "o-0002-implemented", "source": "s-estrategia" },
+    { "id": "o-ver-respuestas", "area": "product", "statement": "En estrategia.html:119 el botón 'Ver respuestas' (a.btn.btn-primary dentro de .sec-cta) tiene href=\"#\" y no lleva a ninguna parte.", "status": "superseded", "replacedBy": "o-0002-implemented", "source": "s-estrategia" },
+    { "id": "o-0002-implemented", "area": "product", "statement": "Tras 0002, la card 'Resultados para el Usuario' de estrategia.html muestra los 4 bullets indicados y 'Ver respuestas' abre la planilla de Google Sheets con target=_blank rel=noopener; llms.txt y docs lo reflejan.", "status": "observed", "source": "s-estrategia" },
+    { "id": "o-link-pattern", "area": "technical", "statement": "Los enlaces externos del sitio usan target=\"_blank\" rel=\"noopener\"; index.html ya enlaza la misma planilla de Google Sheets en el botón 'Ver fuente'.", "status": "observed", "source": "s-index" },
+    { "id": "o-docs-mention", "area": "product", "statement": "llms.txt y docs/public/funcionalidades.md dicen que 'Ver respuestas' todavía no lleva a ninguna parte; funcionalidades.md también menciona el texto repetido del canvas.", "status": "superseded", "replacedBy": "o-0002-implemented", "source": "s-llms" },
+    { "id": "d-user-results", "area": "product", "statement": "Nuevos bullets de 'Resultados para el Usuario', en este orden: 'Realizar compras sin abandonar la plataforma.', 'Buscar y encontrar carreras más rápidamente.', 'Acelerar el registro a una carrera.', 'Guía práctica para subir de licencias.'", "status": "confirmed", "source": "u-0002-request" },
+    { "id": "d-ver-respuestas", "area": "product", "statement": "'Ver respuestas' abre en una pestaña nueva https://docs.google.com/spreadsheets/d/1PSs_GEPbFZEOwT5oAiEQkvclF1DfmOjBHSV1Y4nSWa4/edit?usp=sharing", "status": "confirmed", "source": "u-0002-request" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio (cliente potencial o reclutador) que revisa la página Estrategia",
+    "problem": "La card 'Resultados para el Usuario' del Lean UX Canvas repite por error los resultados de negocio, y el botón 'Ver respuestas' de Encuestas no lleva a ninguna parte.",
+    "outcome": "La card muestra los 4 resultados para el usuario indicados y 'Ver respuestas' abre las respuestas de la encuesta en Google Sheets, en una pestaña nueva.",
+    "scope": "Incluye: reemplazar los bullets de la card 'Resultados para el Usuario' en estrategia.html; href y target=_blank rel=noopener en 'Ver respuestas'; actualizar llms.txt, docs/public/funcionalidades.md y docs/tech/sistema.md donde mencionan estos dos puntos. Excluye: estilos, otras cards y botones, otros typos.",
+    "acceptance": "1) La card 'Resultados para el Usuario' muestra exactamente los 4 bullets indicados, en ese orden, con el mismo estilo de lista que las demás cards. 2) Al hacer click en 'Ver respuestas' se abre la planilla indicada en una pestaña nueva y la página Estrategia sigue abierta. 3) Ningún otro elemento visible cambia y la consola sigue limpia. 4) llms.txt y docs reflejan el cambio.",
+    "valueSignal": "El canvas deja de tener contenido duplicado y el lector puede ver la evidencia de la encuesta desde la propia página.",
+    "evidence": ["o-0002-implemented", "o-link-pattern", "d-user-results", "d-ver-respuestas"]
+  }
+}
