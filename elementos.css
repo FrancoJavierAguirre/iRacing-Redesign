@@ -142,7 +142,8 @@ a.capas-item[href]:hover, a.capas-item[href]:focus-visible { background: rgba(25
 a.proceso-card { text-decoration: none; }
 
 /* ----- Compartido por las páginas de capa (Estrategia y Alcance) ----- */
-.page-estrategia, .page-alcance { --fs-body: clamp(14px, 1.0417vw, 20px); --fs-h3: clamp(20px, 1.6667vw, 32px); --gap-s: clamp(16px, 1.6667vw, 32px); --card: var(--card-bg); }
+.page-estrategia, .page-alcance, .page-estructura { --fs-body: clamp(14px, 1.0417vw, 20px); --fs-h3: clamp(20px, 1.6667vw, 32px); --gap-s: clamp(16px, 1.6667vw, 32px); --card: var(--card-bg); }
+.page-elementos .hl { color: #bca447; font-weight: 600; }
 .page-elementos .topbar-action { position: absolute; right: var(--side-pad); top: 50%; transform: translateY(-50%); }
 .page-elementos .topbar-action.btn:hover { transform: translateY(-50%); }
 .page-elementos .btn-blue { background: #0a5bd6; color: #fff; }
@@ -159,6 +160,48 @@ a.proceso-card { text-decoration: none; }
 .next .proceso-card { width: 100%; }
 .next .proceso-grid { margin-top: 0; }
 
+/* título secundario con línea */
+.rule-head { display: flex; align-items: center; gap: var(--gap-s); margin: clamp(48px, 5vw, 96px) 0 clamp(24px, 2.5vw, 48px); font-family: var(--font-display); font-weight: 400; font-size: clamp(20px, 1.6667vw, 32px); color: #fff; }
+.rule-head .rh { display: flex; align-items: center; gap: 16px; }
+.rh-ico { width: clamp(28px, 2.0833vw, 40px); height: auto; flex-shrink: 0; display: block; }
+.rule-head::after { content: ""; flex: 1; height: 2px; background: #c9ccd4; opacity: .85; }
+
+/* cards de texto */
+.t-card { background: var(--card); border-radius: 16px; padding: clamp(20px, 1.6667vw, 32px); }
+.t-card h3.has-ico { display: flex; align-items: center; gap: 16px; }
+.t-ico { width: clamp(28px, 2.0833vw, 40px); height: auto; flex-shrink: 0; display: block; }
+.t-card h3 { margin: 0 0 clamp(12px, 1.25vw, 24px); font-family: var(--font-display); font-weight: 400; font-size: clamp(18px, 1.4583vw, 28px); color: #fff; }
+.t-card p, .t-card li { font-family: "Poppins", sans-serif; font-weight: 300; font-size: var(--fs-body); line-height: 1.6; color: #fff; margin: 0; }
+.t-card ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: clamp(10px, 1.1vw, 21px); }
+.t-card p + p { margin-top: clamp(12px, 1.25vw, 24px); }
+.t-card p.it { font-style: italic; }
+.t-card .hl { font-weight: 500; }
+
+/* Mapa de trayectoria */
+.focus-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-s); }
+.persona { position: relative; overflow: hidden; min-height: clamp(160px, 11.4vw, 220px); display: flex; flex-direction: column; justify-content: center; }
+.persona > .persona-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.persona > *:not(.persona-bg) { position: relative; z-index: 1; }
+.persona .flag-sm { width: clamp(28px, 2.0833vw, 40px); height: auto; margin-right: 12px; flex-shrink: 0; display: block; }
+.persona h3 { display: flex; align-items: center; font-size: clamp(20px, 1.6667vw, 32px); }
+.persona p { margin: 0 0 8px; }
+.numbox { display: inline-flex; align-items: center; justify-content: center; width: 1.1em; height: 1.1em; border: 2px solid #fff; border-radius: 5px; font-size: .62em; font-weight: 600; line-height: 1; flex-shrink: 0; }
+
+/* Mapa de trayectoria: las 3 cards de "Foco" miden 192px de alto (@1920)
+   y su contenido se reparte en partes iguales en vertical */
+.focus-row .t-card, .focus-row .persona {
+  height: clamp(150px, 10vw, 192px);
+  min-height: 0;
+  padding-top: 0; padding-bottom: 0;
+  display: flex; flex-direction: column; justify-content: space-evenly;
+}
+.focus-row .t-card h3 { margin: 0; }
+.focus-row .persona p { margin: 0; }
+.focus-row .t-card ul { gap: clamp(6px, 0.6vw, 12px); }
+@media (max-width: 1300px) {
+  .focus-row .t-card, .focus-row .persona { height: auto; min-height: 150px; padding-top: 20px; padding-bottom: 20px; gap: 12px; }
+}
+
 /* ----- Responsive ----- */
 @media (max-width: 900px) {
   .breadcrumb .crumb-parent, .breadcrumb .sep { display: none; }
@@ -173,6 +216,7 @@ a.proceso-card { text-decoration: none; }
   .layer-boxes { grid-column: 1; grid-template-columns: 1fr; }
   .lbox.full { grid-column: 1; }
   .cards.cols-2, .cards.cols-3 { grid-template-columns: 1fr; }
+  .focus-row { grid-template-columns: 1fr; }
   .sec-header { flex-direction: column; }
   .sec-nav { margin-top: 0; flex-wrap: wrap; }
   .page-elementos .topbar-action { display: none; }

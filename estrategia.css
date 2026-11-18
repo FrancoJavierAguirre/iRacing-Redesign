@@ -2,14 +2,8 @@
    Pantalla "Estrategia" — valores Figma @1920 -> clamp()
    (reutiliza topbar / sec-header / sec-nav de elementos.css)
    ========================================================== */
-.page-estrategia .hl { color: #bca447; font-weight: 600; }
 .page-estrategia main > section { scroll-margin-top: 90px; }
 
-/* título secundario con línea */
-.rule-head { display: flex; align-items: center; gap: var(--gap-s); margin: clamp(48px, 5vw, 96px) 0 clamp(24px, 2.5vw, 48px); font-family: var(--font-display); font-weight: 400; font-size: clamp(20px, 1.6667vw, 32px); color: #fff; }
-.rule-head .rh { display: flex; align-items: center; gap: 16px; }
-.rh-ico { width: clamp(28px, 2.0833vw, 40px); height: auto; flex-shrink: 0; display: block; }
-.rule-head::after { content: ""; flex: 1; height: 2px; background: #c9ccd4; opacity: .85; }
 .center-title.md { font-weight: 500; font-size: clamp(20px, 1.6667vw, 32px); }
 
 /* hallazgo: imagen + notas */
@@ -62,29 +56,12 @@
 
 /* cards de texto */
 .text-cards { display: flex; flex-direction: column; gap: var(--gap-s); }
-.t-card { background: var(--card); border-radius: 16px; padding: clamp(20px, 1.6667vw, 32px); }
-.t-card h3.has-ico { display: flex; align-items: center; gap: 16px; }
-.t-ico { width: clamp(28px, 2.0833vw, 40px); height: auto; flex-shrink: 0; display: block; }
-.t-card h3 { margin: 0 0 clamp(12px, 1.25vw, 24px); font-family: var(--font-display); font-weight: 400; font-size: clamp(18px, 1.4583vw, 28px); color: #fff; }
-.t-card p, .t-card li { font-family: "Poppins", sans-serif; font-weight: 300; font-size: var(--fs-body); line-height: 1.6; color: #fff; margin: 0; }
-.t-card ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: clamp(10px, 1.1vw, 21px); }
-.t-card p + p { margin-top: clamp(12px, 1.25vw, 24px); }
-.t-card p.it { font-style: italic; }
-.t-card .hl { font-weight: 500; }
 
-/* Mapa de trayectoria */
-.focus-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-s); }
-.persona { position: relative; overflow: hidden; min-height: clamp(160px, 11.4vw, 220px); display: flex; flex-direction: column; justify-content: center; }
-.persona > .persona-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.persona > *:not(.persona-bg) { position: relative; z-index: 1; }
-.persona .flag-sm { width: clamp(28px, 2.0833vw, 40px); height: auto; margin-right: 12px; flex-shrink: 0; display: block; }
+/* Mapa de trayectoria (el resto de .persona vive en elementos.css) */
 .persona .flag-ph { width: clamp(24px, 1.7vw, 33px); margin-right: 10px; display: inline-block; vertical-align: middle; }
-.persona h3 { display: flex; align-items: center; font-size: clamp(20px, 1.6667vw, 32px); }
-.persona p { margin: 0 0 8px; }
 .steps { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gap-s); row-gap: clamp(32px, 3.3vw, 64px); }
 .steps .wide { grid-column: 1 / -1; }
 .step-title { display: flex; align-items: center; gap: 12px; justify-content: center; font-family: var(--font-display); font-weight: 300; font-size: clamp(16px, 1.25vw, 24px); color: #fff; margin-bottom: var(--gap-s); text-align: center; }
-.numbox { display: inline-flex; align-items: center; justify-content: center; width: 1.1em; height: 1.1em; border: 2px solid #fff; border-radius: 5px; font-size: .62em; font-weight: 600; line-height: 1; flex-shrink: 0; }
 .steps .media-placeholder { width: 100%; aspect-ratio: 864 / 450; min-height: 0; border-radius: 12px; }
 .steps .wide .media-placeholder { width: clamp(300px, 70vw, 1340px); margin: 0 auto; aspect-ratio: 1340 / 470; }
 .exp-step { margin-bottom: clamp(32px, 3.3vw, 64px); }
@@ -120,24 +97,9 @@
   .finding { width: 100%; }
   .obj-row { flex-wrap: wrap; }
   .obj-row div { flex: 1 1 45%; }
-  .focus-row, .steps, .exp-body, .dx, .canvas { grid-template-columns: 1fr; }
+  .steps, .exp-body, .dx, .canvas { grid-template-columns: 1fr; }
   .steps .wide .media-placeholder { width: 100%; }
 }
 
 /* ícono de reacción al final de cada texto numerado */
 .react { display: inline-block; width: clamp(24px, 2.0833vw, 40px); height: auto; vertical-align: middle; margin-left: 12px; margin-top: -4px; }
-
-/* Mapa de trayectoria: las 3 cards de "Foco" miden 192px de alto (@1920)
-   y su contenido se reparte en partes iguales en vertical */
-.focus-row .t-card, .focus-row .persona {
-  height: clamp(150px, 10vw, 192px);
-  min-height: 0;
-  padding-top: 0; padding-bottom: 0;
-  display: flex; flex-direction: column; justify-content: space-evenly;
-}
-.focus-row .t-card h3 { margin: 0; }
-.focus-row .persona p { margin: 0; }
-.focus-row .t-card ul { gap: clamp(6px, 0.6vw, 12px); }
-@media (max-width: 1300px) {
-  .focus-row .t-card, .focus-row .persona { height: auto; min-height: 150px; padding-top: 20px; padding-bottom: 20px; gap: 12px; }
-}

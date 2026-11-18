@@ -68,19 +68,33 @@
       "files": ["alcance.html", "alcance.css", "elementos.css", "estrategia.css", "estrategia.html", "index.html", "5-elementos.html", "llms.txt", "assets/ico-star.svg", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
       "questions": [],
       "evidence": [
-        { "path": "alcance.html", "sha256": "80bc563e290572eb28b926e78dab65a5034196dd1e9338ff53ede6f54e2c328c" },
-        { "path": "alcance.css", "sha256": "10dcf9c5e2fd0b17f70f90436e830bd6e9b15270820348a42cfa51fba69112bc" },
-        { "path": "elementos.css", "sha256": "0ad3bd590737e9b8640db7e221890a17fb4be21ce23352d611f1c72f5da55652" },
-        { "path": "estrategia.css", "sha256": "a4feb811f767f1f3d354a62dcd6d8e720f90a3e1ea13231b1fb9fa0bbc855fc4" },
-        { "path": "estrategia.html", "sha256": "a3fba3e4ba74e104bf59f214ce18ef395e8b31fd671b706ab9eee2cc7db1a9c6" },
-        { "path": "index.html", "sha256": "b2b2ada1cb8205e1426ac650a6113eaef5d7b5b06acd253bcd46519a6413590a" },
-        { "path": "5-elementos.html", "sha256": "643b33d4da66bbc40ac867139a72b53f946d73634d4a1d9a678ba1e58f791c8e" },
-        { "path": "llms.txt", "sha256": "e86ae07e7409a86504f66c22fbeeb7ec863b6eb884c4da269e3d24228283821f" },
-        { "path": "assets/ico-estructura-white.svg", "sha256": "8570d7483c7acffe9113781584602e1d6741d9b21658773a069ba4954169f2ba" },
-        { "path": "docs/public/funcionalidades.md", "sha256": "6b7e1b8a9fa45440cee6ea81276fdfb227297bcf12f293168fdbe1e324b26e1a" },
-        { "path": "docs/tech/sistema.md", "sha256": "2b9be9e84d0cdffc8e938941d18ec97ff6bad1694fb1ee56b961e6531b701c10" }
+        { "path": "specs/0004-pagina-alcance/spec.md", "sha256": "9ce22178779ba5146602cfa6537f6fffc0b05d5de7df6f78efd454bf74408bde" },
+        { "path": "specs/0004-pagina-alcance/tasks.md", "sha256": "53ab830fb3e458e52c06b5276e7f96463a2b4c954c89b36232a7ae73900cff28" }
       ],
+      "evidenceNote": "El código aprobado está en el commit 7cab85c; los archivos fuente cambiaron después por T5 (0005).",
       "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras la corrección de los números en Inter 128)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0004.md", "sha256": "2efc945563a264eb64689ea2f2d465d07bd89ddeabeda5e9763dff599224ef9d" } }]
+    },
+    {
+      "id": "T5",
+      "title": "Página de Estructura (tree testing, tooltips, arquitectura nueva, taskflow) y links a Estructura",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-7 de change.acceptance en .cardenal/context.json (0005) y spec specs/0005-pagina-estructura/spec.md.",
+      "dependsOn": ["T4"],
+      "files": ["estructura.html", "estructura.css", "estructura.js", "elementos.css", "estrategia.css", "estrategia.html", "alcance.html", "index.html", "5-elementos.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "questions": [],
+      "evidence": [
+        { "path": "estructura.html", "sha256": "5aa9c8234f7fc15bfc0740336d140ddf703c64afee03dd4cd0253bedf42b3722" },
+        { "path": "estructura.css", "sha256": "a09dd2aafa48b6432f5aa16ddb1a42eb862f16dfd6fb3f7ca69fd30ef1f4b7fe" },
+        { "path": "estructura.js", "sha256": "597913125ca5dc18628a95a735f6e5acfd8a57369814ef2c73b1d25c5db1fa40" },
+        { "path": "elementos.css", "sha256": "337d211088d1d7bddfa1a3780ba33d33fa8f6d28c0362aeac2b5884192f9f900" },
+        { "path": "estrategia.css", "sha256": "e2978118ef215ec420a4fdf387615b5d8bd437b489db71a3081f09f6453dfae9" },
+        { "path": "styles.css", "sha256": "2ee5a88d771673f4c05291ae3d5de967a5660918efc0e64487cf1ff4dcdd4405" },
+        { "path": "llms.txt", "sha256": "49156db45ca801d1b5f2da466df0ad7c589339d05f0d6e34408a828eec4d454f" },
+        { "path": "specs/0005-pagina-estructura/spec.md", "sha256": "44a44f288c4a6dc0a345975ecfe885cd4871dce07fc42f9624a8e27ce837e711" },
+        { "path": "specs/0005-pagina-estructura/tasks.md", "sha256": "997304f86d069999a379aa88393fe0f0378a33dd3663179135280c575a30d5b8" }
+      ],
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras las correcciones de contadores y diagramas SVG)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0005.md", "sha256": "bddcb961a8019ea134d0f600edcaf5e62849e5d0215e2224694c827f8ab67fda" } }]
     }
   ]
 }

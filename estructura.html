@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estructura — Rediseño iRacing</title>
+<meta name="description" content="Estructura del rediseño de iRacing: tree testing con 10 usuarios, conclusiones, nueva arquitectura de información y taskflow. Case study de Franco Aguirre.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Estructura — Rediseño iRacing">
+<meta property="og:description" content="Estructura del rediseño de iRacing: tree testing con 10 usuarios, conclusiones, nueva arquitectura de información y taskflow. Case study de Franco Aguirre.">
+<meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Estructura — Rediseño iRacing">
+<meta name="twitter:description" content="Estructura del rediseño de iRacing: tree testing con 10 usuarios, conclusiones, nueva arquitectura de información y taskflow. Case study de Franco Aguirre.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Estructura — Rediseño iRacing",
+  "description": "Estructura del rediseño de iRacing: tree testing con 10 usuarios, conclusiones, nueva arquitectura de información y taskflow. Case study de Franco Aguirre.",
+  "inLanguage": "es",
+  "dateCreated": "2025",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "Diseño UX/UI" } ],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "iRacing — Rediseño UX/UI",
+    "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Rediseño UX/UI", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Estructura" }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="elementos.css">
+<link rel="stylesheet" href="estructura.css">
+</head>
+<body class="page-elementos page-estructura">
+
+<header class="topbar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="crumb-parent">Rediseño UX/UI</span></a>
+    <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="topbar-capas breadcrumb-capas" data-capas>
+      <button type="button" class="capas-trigger current" aria-current="page" aria-expanded="false" aria-controls="capas-menu" data-capas-trigger>
+        <span>Estructura</span>
+        <img class="capas-chevron capas-chevron--down" src="assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="capas-menu" role="group" aria-label="Capas del proceso UX" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" href="estrategia.html"><img src="assets/icon-estrategia.svg" alt="" width="16" height="16"><span>Estrategia</span></a></li>
+          <li><a class="capas-item" href="alcance.html"><img src="assets/icon-alcance.svg" alt="" width="16" height="16"><span>Alcance</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-esqueleto.svg" alt="" width="16" height="16"><span>Esqueleto</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-superficie.svg" alt="" width="16" height="16"><span>Superficie</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1 class="topbar-title">Estructura</h1>
+  <a href="#" class="btn btn--sm btn-blue topbar-action" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-esqueleto-white.svg" alt="">Ver Esqueleto</a>
+</header>
+
+<main>
+  <section class="layer-sec" id="arquitectura-actual" aria-labelledby="arquitectura-actual-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="arquitectura-actual-titulo">Arquitectura Actual</h2><p class="sec-sub">Encontrando las carreras</p></div>
+        <div class="sec-nav"><a href="#tree-testing" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Tree Testing</a></div>
+      </div>
+      <div class="arch-stage" data-navegable="arquitectura-actual">
+        <div class="media-placeholder" role="img" aria-label="Captura de la arquitectura actual de iRacing (pendiente)" data-label="Imagen — arquitectura-actual (navegable)"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="tree-testing" aria-labelledby="tree-testing-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="tree-testing-titulo">Tree Testing</h2><p class="sec-sub">Dónde deberían estar las carreras</p></div>
+        <div class="sec-nav"><a href="#arquitectura-actual" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Arquitectura Actual</a><a href="#arquitectura-nueva" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Arquitectura Nueva</a></div>
+      </div>
+
+      <div class="tt-meta">
+        <img class="logo-uxtweak" src="assets/logo-uxtweak.png" alt="UXtweak" width="200" height="50">
+        <span class="tt-item"><img src="assets/ico-usuario-gold.svg" alt="" width="32" height="32"><span>10 usuarios</span></span>
+        <span class="tt-item"><img src="assets/ico-circulo-check.svg" alt="" width="32" height="32"><span>2 tareas</span></span>
+      </div>
+
+      <article class="t-card task-card">
+        <h3 class="has-ico"><img class="t-ico" src="assets/ico-circulo-check.svg" alt="">Tarea 1</h3>
+        <button type="button" class="help" aria-label="Más información sobre la Tarea 1" aria-expanded="false" aria-controls="tip-tarea-1"><img src="assets/ico-help.svg" alt="" width="24" height="24"></button>
+        <div class="tip" id="tip-tarea-1" hidden><strong>NOTA:</strong> hay muchas formas de empezar una carrera y desde diferentes lugares. Además, en algunos casos, es necesario <span class="hl">cumplir ciertos requisitos</span>. Por ejemplo: en una liga primero deben aceptarte una solicitud de ingreso.</div>
+        <p class="task-q">“Eres nuevo en iRacing. Te registras y logueas a la UI. Quieres <span class="hl">encontrar tu primera carrera</span> para correr. ¿A dónde irías para lograrlo?”</p>
+      </article>
+
+      <div class="tree-wrap">
+        <p class="score score--ok"><img class="score-ico" src="assets/ico-check-green.svg" alt="" width="32" height="32"><span class="score-lbl">Respuestas correctas:</span><span class="score-n">7</span></p>
+        <p class="score score--bad"><img class="score-ico" src="assets/ico-cross-red.svg" alt="" width="32" height="32"><span class="score-lbl">Respuestas incorrectas:</span><span class="score-n">3</span></p>
+        <img class="tree-img" src="assets/tree-tarea-1.svg" alt="" width="1760" height="840">
+        <ul class="tree tree--orig" aria-label="Árbol de navegación de iRacing, Tarea 1">
+          <li class="tn tn-0"><span class="tn-label">Log In</span>
+            <ul class="tn-kids tn-brace">
+              <li class="tn tn-1 tn-racing"><span class="tn-label">Racing</span>
+                <ul class="tn-kids tn-brace">
+                  <li class="tn tn-2"><span class="tn-label">Multiplayer</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">Spectate</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Teams</span></li>
+                      <li class="tn tn-3 is-ok"><span class="tn-label">Hosted<span class="sr-only"> (respuesta correcta)</span></span></li>
+                      <li class="tn tn-3 is-ok"><span class="tn-label">Leagues<span class="sr-only"> (respuesta correcta)</span></span></li>
+                      <li class="tn tn-3 is-ok"><span class="tn-label">Official<span class="sr-only"> (respuesta correcta)</span></span></li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">Racing</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3 is-bad"><span class="tn-label">Home<span class="sr-only"> (respuesta incorrecta)</span></span></li>
+                      <li class="tn tn-3"><span class="tn-label">Profile</span></li>
+                      <li class="tn tn-3"><span class="tn-label">My Content</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-4"><span class="tn-label">Cars</span></li>
+                          <li class="tn tn-4"><span class="tn-label">Tracks</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">Single Player</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3 is-bad"><span class="tn-label">Time Attack<span class="sr-only"> (respuesta incorrecta)</span></span></li>
+                      <li class="tn tn-3 is-ok"><span class="tn-label">AI Single Player<span class="sr-only"> (respuesta correcta)</span></span></li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">More</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">Results &amp; Stats</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Replays</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="tn tn-1 tn-shop"><span class="tn-label">Shop</span>
+                <ul class="tn-kids tn-brace">
+                  <li class="tn tn-2"><span class="tn-label">Content</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">Cars</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Tracks</span></li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">More</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">March</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Gift Cards</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" class="btn btn--md btn-outline-info tree-more" data-sin-destino aria-disabled="true">Ver más detalles</a>
+      </div>
+
+      <article class="t-card task-card">
+        <h3 class="has-ico"><img class="t-ico" src="assets/ico-circulo-check.svg" alt="">Tarea 2</h3>
+        <button type="button" class="help" aria-label="Más información sobre la Tarea 2" aria-expanded="false" aria-controls="tip-tarea-2"><img src="assets/ico-help.svg" alt="" width="24" height="24"></button>
+        <div class="tip" id="tip-tarea-2" hidden><strong>NOTA:</strong> hay tantas respuestas correctas porque en el mismo lugar donde se empieza una carrera, si no se tiene el contenido requerido, te permite comprarlo desde ahí. Aunque a veces <span class="hl">es un poco confuso</span> saber qué estas comprando hasta que no empiezas el proceso.</div>
+        <p class="task-q">“Te das cuenta que para correr la carrera que elegiste y te gusta tienes que <span class="hl">comprar el auto</span> para participar. ¿A dónde irías para comprar el auto? ”</p>
+      </article>
+
+      <div class="tree-wrap">
+        <p class="score score--ok"><img class="score-ico" src="assets/ico-check-green.svg" alt="" width="32" height="32"><span class="score-lbl">Respuestas correctas:</span><span class="score-n">10</span></p>
+        <img class="tree-img" src="assets/tree-tarea-2.svg" alt="" width="1760" height="840">
+        <ul class="tree tree--orig" aria-label="Árbol de navegación de iRacing, Tarea 2">
+          <li class="tn tn-0"><span class="tn-label">Log In</span>
+            <ul class="tn-kids tn-brace">
+              <li class="tn tn-1 tn-racing"><span class="tn-label">Racing</span>
+                <ul class="tn-kids tn-brace">
+                  <li class="tn tn-2"><span class="tn-label">Multiplayer</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">Spectate</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Teams</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Hosted</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Leagues</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Official</span></li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">Racing</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">Home</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Profile</span></li>
+                      <li class="tn tn-3"><span class="tn-label">My Content</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-4"><span class="tn-label">Cars</span></li>
+                          <li class="tn tn-4"><span class="tn-label">Tracks</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">Single Player</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">Time Attack</span></li>
+                      <li class="tn tn-3"><span class="tn-label">AI Single Player</span></li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">More</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">Results &amp; Stats</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Replays</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="tn tn-1 tn-shop"><span class="tn-label">Shop</span>
+                <ul class="tn-kids tn-brace">
+                  <li class="tn tn-2"><span class="tn-label">Content</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3 is-ok"><span class="tn-label">Cars<span class="sr-only"> (respuesta correcta)</span></span></li>
+                      <li class="tn tn-3"><span class="tn-label">Tracks</span></li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-2"><span class="tn-label">More</span>
+                    <ul class="tn-kids tn-drop">
+                      <li class="tn tn-3"><span class="tn-label">March</span></li>
+                      <li class="tn tn-3"><span class="tn-label">Gift Cards</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" class="btn btn--md btn-outline-info tree-more" data-sin-destino aria-disabled="true">Ver más detalles</a>
+      </div>
+
+      <h3 class="center-title">Conclusiones</h3>
+      <div class="conclusions">
+        <article class="t-card conclusion">
+          <h3 class="has-ico"><span class="numbox numbox--gold">1</span>Nomenclatura confusa</h3>
+          <p>La mayoría de usuarios tuvieron mucha vacilación a la hora de hacer la elección final.</p>
+        </article>
+        <article class="t-card conclusion">
+          <h3 class="has-ico"><span class="numbox numbox--gold">2</span>Arquitectura ambigua</h3>
+          <p>Las subcategorías “Teams”, “Spectate” y “More” (results and replays), que pertenecen a “Racing” (carreras), son ambiguas a dicho término.</p>
+        </article>
+        <article class="t-card conclusion">
+          <h3 class="has-ico"><span class="numbox numbox--gold">3</span>Categorías mal contenidas</h3>
+          <p>”Home”, ”Profile” y “My Content” no deberían estar dentro de la categoría “Racing” porque no contienen nada referido a la acción CORRER.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="arquitectura-nueva" aria-labelledby="arquitectura-nueva-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="arquitectura-nueva-titulo">Arquitectura Nueva</h2><p class="sec-sub">Encontrando las carreras</p></div>
+        <div class="sec-nav"><a href="#tree-testing" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Tree Testing</a><a href="#taskflow" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Taskflow</a></div>
+      </div>
+
+      <div class="seg" role="group" aria-label="Versión de la arquitectura">
+        <button type="button" class="seg-btn" aria-pressed="false" aria-controls="arq-antes">Antes</button>
+        <button type="button" class="seg-btn" aria-pressed="true" aria-controls="arq-despues">Después</button>
+      </div>
+      <div class="arch-stage">
+        <div class="arch-panel" id="arq-despues">
+          <img class="tree-img" src="assets/arquitectura-nueva.svg" alt="" width="1464" height="767">
+          <ul class="tree tree--new" aria-label="Árbol de navegación propuesto para iRacing">
+            <li class="tn tn-0"><span class="tn-label">Log In</span>
+              <ul class="tn-kids tn-brace">
+                <li class="tn tn-1 tn-racing"><span class="tn-label">Racing</span>
+                  <ul class="tn-kids tn-drop">
+                    <li class="tn tn-2"><span class="tn-label">Official</span></li>
+                    <li class="tn tn-2"><span class="tn-label">Hosted</span></li>
+                    <li class="tn tn-2"><span class="tn-label">Leagues</span></li>
+                    <li class="tn tn-2"><span class="tn-label">Time Attack</span></li>
+                    <li class="tn tn-2"><span class="tn-label">AI Single Player</span></li>
+                    <li class="tn tn-2"><span class="tn-label">Results &amp; Stats</span></li>
+                    <li class="tn tn-2"><span class="tn-label">Replays</span></li>
+                  </ul>
+                </li>
+                <li class="tn tn-1"><span class="tn-label">Teams</span></li>
+                <li class="tn tn-1"><span class="tn-label">Spectate</span></li>
+                <li class="tn tn-1"><span class="tn-label">My Content</span></li>
+                <li class="tn tn-1"><span class="tn-label">Home</span></li>
+                <li class="tn tn-1 tn-shop"><span class="tn-label">Shop</span>
+                  <ul class="tn-kids tn-brace">
+                    <li class="tn tn-2"><span class="tn-label">Content</span>
+                      <ul class="tn-kids tn-drop">
+                        <li class="tn tn-3"><span class="tn-label">Cars</span></li>
+                        <li class="tn tn-3"><span class="tn-label">Tracks</span></li>
+                      </ul>
+                    </li>
+                    <li class="tn tn-2"><span class="tn-label">More</span>
+                      <ul class="tn-kids tn-drop">
+                        <li class="tn tn-3"><span class="tn-label">March</span></li>
+                        <li class="tn tn-3"><span class="tn-label">Gift Cards</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tn tn-1 tn-profile"><span class="tn-label">Profile</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="arch-panel" id="arq-antes" hidden>
+          <img class="tree-img" src="assets/arquitectura-vieja.svg" alt="" width="1475" height="686">
+      <ul class="tree tree--orig" aria-label="Árbol de navegación anterior de iRacing">
+              <li class="tn tn-0"><span class="tn-label">Log In</span>
+                <ul class="tn-kids tn-brace">
+                  <li class="tn tn-1 tn-racing"><span class="tn-label">Racing</span>
+                    <ul class="tn-kids tn-brace">
+                      <li class="tn tn-2"><span class="tn-label">Multiplayer</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-3"><span class="tn-label">Spectate</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Teams</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Hosted</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Leagues</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Official</span></li>
+                        </ul>
+                      </li>
+                      <li class="tn tn-2"><span class="tn-label">Racing</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-3"><span class="tn-label">Home</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Profile</span></li>
+                          <li class="tn tn-3"><span class="tn-label">My Content</span>
+                            <ul class="tn-kids tn-drop">
+                              <li class="tn tn-4"><span class="tn-label">Cars</span></li>
+                              <li class="tn tn-4"><span class="tn-label">Tracks</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="tn tn-2"><span class="tn-label">Single Player</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-3"><span class="tn-label">Time Attack</span></li>
+                          <li class="tn tn-3"><span class="tn-label">AI Single Player</span></li>
+                        </ul>
+                      </li>
+                      <li class="tn tn-2"><span class="tn-label">More</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-3"><span class="tn-label">Results &amp; Stats</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Replays</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tn tn-1 tn-shop"><span class="tn-label">Shop</span>
+                    <ul class="tn-kids tn-brace">
+                      <li class="tn tn-2"><span class="tn-label">Content</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-3"><span class="tn-label">Cars</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Tracks</span></li>
+                        </ul>
+                      </li>
+                      <li class="tn tn-2"><span class="tn-label">More</span>
+                        <ul class="tn-kids tn-drop">
+                          <li class="tn tn-3"><span class="tn-label">March</span></li>
+                          <li class="tn tn-3"><span class="tn-label">Gift Cards</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="taskflow" aria-labelledby="taskflow-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="taskflow-titulo">Taskflow</h2><p class="sec-sub">Necesidades del piloto</p></div>
+        <div class="sec-nav"><a href="#arquitectura-nueva" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Arquitectura Nueva</a></div>
+      </div>
+
+      <div class="focus-row">
+        <div class="t-card persona">
+          <img class="persona-bg" src="assets/card-sergio.png" alt="">
+          <h3><img class="flag-sm" src="assets/flag-spain.svg" alt="España">Sergio Barrientos</h3>
+          <p>33 años</p><p>Analista de Sistemas</p><p>PC y Celular</p>
+        </div>
+        <div class="t-card"><h3>Qué quiere hacer en la plataforma</h3><ul><li><span class="hl">Comprar</span> un auto</li><li><span class="hl">Entrar</span> a una carrera</li></ul></div>
+        <div class="t-card"><h3>Cómo le gustaría lograrlo</h3><ul><li>Que la compra sea <span class="hl">ágil</span> y <span class="hl">fácil</span></li><li>Encontrar <span class="hl">fácilmente</span> la próxima carrera en la que pueda participar.</li></ul></div>
+      </div>
+
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-circulo-check.svg" alt=""><span>Tarea 1</span></span></h3>
+      <h3 class="center-title">Registrarse a una carrera de “licencia D” y de “sport cars”</h3>
+      <ol class="flow" aria-label="Pasos de la Tarea 1">
+        <li class="t-card flow-card flow-card--start"><span class="flow-title"><img src="assets/ico-flag-green.svg" alt="">Inicio</span><p>El usuario <span class="hl">navega</span> a “Racing”.</p></li>
+        <li class="t-card flow-card"><p><span class="hl">Filtra</span> por “sport cars” y “licencia D”.</p></li>
+        <li class="t-card flow-card"><p><span class="hl">Abre</span> los detalles de la carrera.</p></li>
+        <li class="t-card flow-card"><p><span class="hl">Selecciona</span> un auto como favorito.</p></li>
+        <li class="t-card flow-card flow-card--end"><span class="flow-title"><img src="assets/ico-flag-checkered.svg" alt="">Fin</span><p>El usuario <span class="hl">entra</span> a la carrera.</p></li>
+      </ol>
+
+      <h3 class="rule-head"><span class="rh"><img class="rh-ico" src="assets/ico-circulo-check.svg" alt=""><span>Tarea 2</span></span></h3>
+      <h3 class="center-title">Comprar el auto necesario para entrar a otra carrera</h3>
+      <ol class="flow" aria-label="Pasos de la Tarea 2">
+        <li class="t-card flow-card flow-card--start"><span class="flow-title"><img src="assets/ico-flag-green.svg" alt="">Inicio</span><p><span class="hl">Abre</span> los detalles de la carrera</p></li>
+        <li class="t-card flow-card"><p><span class="hl">Añade</span> el auto al carrito de compras</p></li>
+        <li class="t-card flow-card"><p><span class="hl">Abre</span> el carrito de compras</p></li>
+        <li class="t-card flow-card"><p><span class="hl">Revisa</span> los detalles antes de la compra</p></li>
+        <li class="t-card flow-card flow-card--end"><span class="flow-title"><img src="assets/ico-flag-checkered.svg" alt="">Fin</span><p><span class="hl">Compra</span> el auto</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="container">
+      <h2 class="center-title">Siguiente elemento UX</h2>
+      <div class="next-row">
+        <div class="next-col"><p class="lbl">Estamos acá</p><a href="estructura.html" class="proceso-card" style="--img:url(assets/card-estructura.png)"><span class="pc-title"><img src="assets/icon-estructura.svg" alt=""><span>Estructura</span></span><p class="pc-desc">Definiendo la arquitectura de información y la interacción de la interfaz.</p></a></div>
+        <div class="next-col"><p class="lbl">Sigue acá</p><a href="#" class="proceso-card" style="--img:url(assets/card-esqueleto.png)"><span class="pc-title"><img src="assets/icon-esqueleto.svg" alt=""><span>Esqueleto</span></span><p class="pc-desc">Organizando los distintos elementos de información de la interfaz y creando los wireframes en media fidelidad.</p></a></div>
+      </div>
+      <p class="also">Pero también están...</p>
+      <div class="proceso-grid"><a href="estrategia.html" class="proceso-card" style="--img:url(assets/card-estrategia.png)"><span class="pc-title"><img src="assets/icon-estrategia.svg" alt=""><span>Estrategia</span></span><p class="pc-desc">Entendiendo las necesidades de los usuarios y los objetivos del negocio.</p></a><a href="alcance.html" class="proceso-card" style="--img:url(assets/card-alcance.png)"><span class="pc-title"><img src="assets/icon-alcance.svg" alt=""><span>Alcance</span></span><p class="pc-desc">Definiendo los requerimientos de las funcionalidades específicas y los contenidos del producto digital.</p></a><a href="#" class="proceso-card" style="--img:url(assets/card-superficie.png)"><span class="pc-title"><img src="assets/icon-superficie.svg" alt=""><span>Superficie</span></span><p class="pc-desc">Definiendo el sistema de diseño y los wireframes en alta fidelidad. Prototipo con animaciones y pruebas de usabilidad.</p></a></div>
+    </div>
+  </section>
+</main>
+
+<script src="menu-capas.js" defer></script>
+<script src="estructura.js" defer></script>
+</body>
+</html>

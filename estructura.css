@@ -1,0 +1,105 @@
+/* ==========================================================
+   Pantalla "Estructura" — valores Figma @1920 -> clamp()
+   (reutiliza topbar / sec-header / sec-nav / .t-card / .focus-row de elementos.css)
+   Mobile-first para los árboles: la base es una lista indentada y el layout
+   horizontal con llaves y flechas se activa desde 641px.
+   ========================================================== */
+
+/* Tokens locales: colores literales del diseño sin token en :root */
+.page-estructura {
+  --ok: #5cd633; --bad: #e75149; --info: #679be2; --flow-end: #0a5bd6;
+  --tree-line: #9aa0ad; --tip-bg: #212121; --txt: #fff;
+  --task-pad: clamp(16px, 1.25vw, 24px);
+}
+.page-estructura main > section { scroll-margin-top: 90px; }
+.page-estructura .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ----- Estadio (Arquitectura Actual / Nueva) ----- */
+.page-estructura .arch-stage { position: relative; width: clamp(280px, 76.1458vw, 1462px); margin: clamp(40px, 5vw, 96px) auto 0; }
+.page-estructura .arch-stage .media-placeholder { width: 100%; aspect-ratio: 1462 / 760; min-height: 0; }
+.page-estructura .arch-panel[hidden] { display: none; }
+
+/* ----- Fila UXtweak ----- */
+.page-estructura .tt-meta { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: clamp(16px, 5vw, 96px); margin: clamp(48px, 5vw, 96px) 0 clamp(24px, 2.5vw, 48px); font: 400 clamp(22px, 2.0833vw, 40px)/1.2 var(--font-display); color: var(--txt); }
+.page-estructura .tt-meta .logo-uxtweak { width: clamp(120px, 10.4167vw, 200px); height: auto; display: block; }
+.page-estructura .tt-item { display: inline-flex; align-items: center; gap: 16px; }
+.page-estructura .tt-item img { width: clamp(24px, 1.6667vw, 32px); height: auto; display: block; }
+
+/* ----- Card de tarea con help y tooltip ----- */
+.page-estructura .task-card { --help-top: clamp(16px, 1.6667vw, 32px); position: relative; padding: var(--task-pad); }
+.page-estructura .task-card h3 { margin-bottom: clamp(16px, 1.6667vw, 32px); }
+.page-estructura .task-q { margin: 0; font: italic 300 clamp(15px, 1.25vw, 24px)/1.5 "Poppins", sans-serif; }
+.page-estructura .task-q .hl { font-weight: inherit; }
+.page-estructura .help { position: absolute; top: var(--help-top); right: var(--task-pad); width: 24px; height: 24px; padding: 0; border: 0; border-radius: 50%; background: none; cursor: pointer; display: block; }
+.page-estructura .help img { width: 24px; height: 24px; display: block; }
+.page-estructura .help:focus-visible { outline: 2px solid var(--txt); outline-offset: 2px; }
+.page-estructura .tip { position: absolute; z-index: 10; top: calc(var(--help-top) + 24px + 16px); right: clamp(0px, calc(100% - 536px), var(--task-pad)); box-sizing: border-box; width: min(536px, calc(100vw - 2 * var(--side-pad))); background: var(--tip-bg); border-radius: 16px; padding: 16px; color: var(--txt); font: 400 16px/1.5 "Poppins", sans-serif; }
+.page-estructura .tip[hidden] { display: none; }
+.page-estructura .tip strong { font-weight: 600; }
+
+/* ----- Árbol + contadores + «Ver más detalles» ----- */
+.page-estructura .tree-wrap { position: relative; margin-top: clamp(40px, 3.75vw, 72px); }
+.page-estructura .task-card + .tree-wrap + .task-card { margin-top: clamp(32px, 3.3333vw, 64px); }
+.page-estructura .score { display: flex; align-items: center; gap: clamp(8px, .8333vw, 16px); margin: 0 0 8px; font: 300 clamp(14px, 1.25vw, 24px)/1.2 var(--font-display); }
+.page-estructura .score-ico { width: clamp(20px, 1.6667vw, 32px); height: auto; flex-shrink: 0; display: block; }
+.page-estructura .score-n { font-size: clamp(18px, 1.6667vw, 32px); }
+.page-estructura .score--ok { color: var(--ok); }
+.page-estructura .score--bad { color: var(--bad); }
+.page-estructura .tree-more { display: flex; width: fit-content; margin: 16px 0 0 auto; }
+
+/* ----- Conclusiones ----- */
+.page-estructura .conclusions { display: flex; flex-direction: column; gap: clamp(24px, 2.5vw, 48px); }
+.page-estructura .conclusion { padding: var(--task-pad); }
+.page-estructura .conclusion h3 { margin-bottom: clamp(16px, 1.6667vw, 32px); }
+.page-estructura .conclusion p { font-size: clamp(15px, 1.25vw, 24px); line-height: 1.5; }
+.page-estructura .numbox--gold { width: clamp(28px, 2.1875vw, 42px); height: clamp(28px, 2.1875vw, 42px); font-family: var(--font-display); font-size: clamp(16px, 1.25vw, 24px); font-weight: 400; color: var(--gold-t); border-color: var(--gold-t); border-radius: 8px; }
+.page-estructura .tree-wrap + .center-title { margin-top: clamp(32px, 3.3333vw, 64px); }
+
+/* ----- Switch Antes / Después ----- */
+.page-estructura .seg { display: flex; justify-content: flex-end; gap: 16px; width: clamp(280px, 76.1458vw, 1462px); margin: clamp(24px, 2.5vw, 48px) auto clamp(6px, .5729vw, 11px); }
+.page-estructura .seg + .arch-stage { margin-top: 0; }
+.page-estructura .seg-btn { padding: 6px 16px; border: 0; border-radius: 8px; background: transparent; color: var(--info); font: 400 20px/26px var(--font-display); cursor: pointer; transition: background .15s ease; }
+.page-estructura .seg-btn:hover { background: rgba(1, 89, 207, .15); }
+.page-estructura .seg-btn[aria-pressed="true"] { background: rgba(1, 89, 207, .15); }
+.page-estructura .seg-btn:focus-visible { outline: 2px solid var(--info); outline-offset: 2px; }
+
+/* ----- Árboles: lista indentada (forma visible en <= 640px) ----- */
+.page-estructura .tree, .page-estructura .tn-kids { list-style: none; margin: 0; padding: 0; }
+.page-estructura .tn-kids { margin-left: .6em; padding-left: 1.1em; border-left: 2px solid var(--tree-line); }
+.page-estructura .tn-label { position: relative; display: block; padding: .35em 0; font: 400 16px/1.3 var(--font-display); color: var(--txt); overflow-wrap: anywhere; }
+.page-estructura .is-ok > .tn-label { color: var(--ok); }
+.page-estructura .is-bad > .tn-label { color: var(--bad); }
+
+/* ----- Árboles desde 641px: SVG exportado de Figma; la lista queda para lectores de pantalla ----- */
+.page-estructura .tree-img { display: none; width: 100%; height: auto; }
+@media (min-width: 641px) {
+  /* contadores arriba, por fuera del diagrama (pedido del usuario en QA); botón abajo a la derecha */
+  .page-estructura .score { margin: 0 0 clamp(8px, .8333vw, 16px); }
+  .page-estructura .score + .tree-img { margin-top: clamp(24px, 2.5vw, 48px); }
+  .page-estructura .tree-img { display: block; }
+  .page-estructura .tree { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .page-estructura .tree-more { position: absolute; right: 0; bottom: 0; margin: 0; }
+}
+
+/* ----- Taskflow ----- */
+.page-estructura .rule-head + .center-title { margin: clamp(32px, 3.3333vw, 64px) 0; }
+.page-estructura .flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--gap-s); }
+.page-estructura .flow-card { height: clamp(150px, 10vw, 192px); padding: 0 16px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; text-align: center; border: 2px solid transparent; }
+.page-estructura .flow-card p { font: 300 clamp(15px, 1.25vw, 24px)/1.5 "Poppins", sans-serif; }
+.page-estructura .flow-card--start { border-color: var(--ok); }
+.page-estructura .flow-card--end { border-color: var(--flow-end); }
+.page-estructura .flow-title { display: inline-flex; align-items: center; gap: 16px; font: 400 clamp(18px, 1.4583vw, 28px) var(--font-display); color: var(--txt); }
+.page-estructura .flow-title img { width: clamp(28px, 2.0833vw, 40px); height: auto; display: block; }
+
+/* ----- Responsive ----- */
+@media (max-width: 1300px) {
+  .page-estructura .flow-card { height: auto; min-height: 150px; padding: 16px; }
+}
+@media (max-width: 900px) {
+  .page-estructura .arch-stage, .page-estructura .seg { width: 100%; }
+  .page-estructura .flow { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .page-estructura .flow { grid-template-columns: 1fr; }
+  .page-estructura .tip { right: 0; }
+}
