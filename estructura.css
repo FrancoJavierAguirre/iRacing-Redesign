@@ -16,7 +16,15 @@
 
 /* ----- Estadio (Arquitectura Actual / Nueva) ----- */
 .page-estructura .arch-stage { position: relative; width: clamp(280px, 76.1458vw, 1462px); margin: clamp(40px, 5vw, 96px) auto 0; }
-.page-estructura .arch-stage .media-placeholder { width: 100%; aspect-ratio: 1462 / 760; min-height: 0; }
+/* Arquitectura Actual navegable (spec 0006): captura 1920x998 + zonas invisibles en % */
+.page-estructura .nav-shot-img { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 998; border-radius: 8px; }
+.page-estructura .nav-hotspots { position: absolute; inset: 0; }
+.page-estructura .nav-hotspots[hidden] { display: none; }
+.page-estructura .hotspot { position: absolute; left: var(--x); top: var(--y); width: var(--w); height: var(--h); margin: 0; padding: 0; border: 0; border-radius: 8px; background: transparent; cursor: pointer; }
+.page-estructura .hotspot:focus { outline: none; }
+.page-estructura .hotspot:focus-visible { outline: 2px solid var(--info); outline-offset: 2px; }
+.page-estructura .nav-hint { position: absolute; right: calc(100% + 8px); top: 17.6%; transform: translateY(-50%); margin: 0; display: flex; align-items: center; gap: 8px; white-space: nowrap; font: 300 clamp(12px, .8333vw, 16px)/1 "Poppins", sans-serif; color: var(--txt); }
+.page-estructura .nav-hint-hand { font-size: 1.1em; }
 .page-estructura .arch-panel[hidden] { display: none; }
 
 /* ----- Fila UXtweak ----- */
@@ -97,6 +105,7 @@
 }
 @media (max-width: 900px) {
   .page-estructura .arch-stage, .page-estructura .seg { width: 100%; }
+  .page-estructura .nav-hint { display: none; }
   .page-estructura .flow { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) {

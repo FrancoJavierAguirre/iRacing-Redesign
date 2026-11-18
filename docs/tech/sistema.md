@@ -68,7 +68,14 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 
 ### Página de Estructura (`estructura.html` + `estructura.css` + `estructura.js`, spec 0005)
 
-- Secciones `.layer-sec` con `id` `arquitectura-actual`, `tree-testing`, `arquitectura-nueva`, `taskflow` y `.next`. El único placeholder (`.media-placeholder`) es la captura navegable de Arquitectura Actual.
+- Secciones `.layer-sec` con `id` `arquitectura-actual`, `tree-testing`, `arquitectura-nueva`, `taskflow` y `.next`. La página no tiene placeholders.
+- **Arquitectura Actual navegable (spec 0006):**
+  - `div.arch-stage.nav-shot[data-nav-shot]` contiene la captura `img[data-nav-shot-img]` (1920 × 998) y dos grupos `.nav-hotspots[data-layout="racing"|"shop"]`.
+  - Las zonas son `button.hotspot[data-shot]` transparentes, ubicadas con `--x/--y/--w/--h` en % de la captura, con `aria-label` y foco visible solo con teclado.
+  - `estructura.js` tiene un mapa `id → [nombre, menú]`. Al hacer click cambia `src`/`alt`, muestra el grupo del menú correspondiente, marca `aria-current` y, si cambió de menú, pasa el foco a la zona equivalente.
+  - **Capturas:** `assets/arquitectura-actual/*.jpg`, 14 archivos de 1920 × 998 a calidad 85 (~3,2 MB en total), recortados de las capturas del usuario (sin la barra de título ni la barra de tareas de Windows).
+  - **Para sumar una sección:** agregar el JPG, la entrada del mapa y su botón.
+  - **Indicación:** `.nav-hint` («Click aquí 👉») va a la izquierda de la captura y se oculta en ≤ 900 px.
 - **Árboles (corrección del QA):** en ≥ 641 px se muestran los SVG exportados de Figma con el texto convertido en curvas: `assets/tree-tarea-1.svg`, `assets/tree-tarea-2.svg` (1760 × 840), `assets/arquitectura-nueva.svg` y `assets/arquitectura-vieja.svg`. A los dos de arquitectura se les recortó el `viewBox` (`0 46 …`) para quitar el selector Antes/Después que traían dibujado. Son `img.tree-img` con `alt=""`. El contenido accesible y la vista ≤ 640 px son las listas `<ul>` anidadas (`.tree`, `tn-*`, `is-ok`/`is-bad` + `.sr-only`), visualmente ocultas en ≥ 641 px. Los contadores de respuestas van arriba del diagrama y «Ver más detalles» queda absoluto abajo a la derecha.
 - **Tooltips (HU3):** patrón disclosure. `button.help[aria-expanded][aria-controls]` abre un `div.tip[hidden]` posicionado en absoluto respecto de la card (16 px bajo el ícono, borde derecho alineado). Medidas: `#212121`, radio 16, padding 16, ancho `min(536px, …)`, Poppins 16. Se cierra con otro click, abriendo el otro, con un click afuera o con Escape (el foco vuelve al botón).
 - **Switch Antes/Después:** dos `button.seg-btn[aria-pressed][aria-controls]` alternan `hidden` en los paneles `#arq-antes` / `#arq-despues`. «Después» es el panel por defecto; cada panel tiene su SVG y su lista.
@@ -104,7 +111,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Páginas de Esqueleto y Superficie; imagen navegable de Arquitectura Actual, pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Esqueleto y Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html` (más «Ver más detalles» ×2 en Estructura); recontar con `Grep 'href="#"'`.
+- Páginas de Esqueleto y Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Esqueleto y Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html` (más «Ver más detalles» ×2 en Estructura); recontar con `Grep 'href="#"'`.
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 

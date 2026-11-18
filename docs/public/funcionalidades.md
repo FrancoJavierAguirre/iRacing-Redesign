@@ -70,7 +70,7 @@ Una sola sección, la **Matriz FVD** (factibilidad, viabilidad y deseabilidad), 
 
 Cuatro bloques con navegación interna («Ir a…»):
 
-1. **Arquitectura Actual** («Encontrando las carreras»): por ahora un recuadro punteado en lugar de la captura de la UI original de iRacing. Más adelante será una imagen navegable: zonas invisibles sobre los textos del menú que cambian la imagen por la de otra sección.
+1. **Arquitectura Actual** («Encontrando las carreras»): una captura de la UI original de iRacing que se puede recorrer. Al hacer click en el menú lateral (Home, Profile, My Content, Official, Leagues, Hosted, Teams, Spectate, Time Attack, AI Single Player, Results & Stats, Replays; Racing y Shop en el riel; Cars y Tracks dentro de Shop) la captura cambia a esa sección. Las zonas de click son invisibles; la indicación «Click aquí» señala dónde empezar. Merch, Gift Cards y los botones dentro de cada pantalla no hacen nada.
 2. **Tree Testing** («Dónde deberían estar las carreras»): estudio en UXtweak con 10 usuarios y 2 tareas. Cada tarea tiene:
    - una tarjeta con el enunciado;
    - un ícono de ayuda (?) que abre una nota. La nota se cierra con un click afuera, con otro click en el ícono o con Escape;

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0006-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-18 (/feature): imágenes de Arquitectura Actual con zonas invisibles que cambian de imagen; botones invisibles encima de donde está el botón en la imagen; las imágenes están nombradas según su sección (14 PNG en Descargas)" },
+    { "id": "u-0005-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-17 (/feature 0005): a futuro, la imagen de Arquitectura Actual será navegable con botones invisibles sobre los textos de navegación" },
+    { "id": "s-capturas", "kind": "file", "reference": "assets/arquitectura-actual/home.jpg", "sha256": "f515b9c30788c8ff214f22f116250be4a8cbca76b00753433195bc3759647f98" },
+    { "id": "s-estructura-js", "kind": "file", "reference": "estructura.js", "sha256": "e183b0c733ad2a50687c809c3bef2a4197b08e39402c0683fcdfc5f2e6d2ac6a" }
+  ],
+  "facts": [
+    { "id": "d-navegable", "area": "product", "statement": "La sección Arquitectura Actual de estructura.html muestra capturas de la UI original de iRacing con botones invisibles sobre los ítems del menú lateral; al hacer click la captura cambia a la de esa sección.", "status": "confirmed", "source": "u-0006-request" },
+    { "id": "o-capturas", "area": "product", "statement": "Hay 14 capturas (1919x1079): Home, Profile, My content, Official Racing, League Racing, Hosted Racing, Teams, Spectate, Time Attack, Ai single player, Results, Replays, Shop Cars y Shop tracks. Las de Racing comparten el menú lateral; las de Shop tienen su propio menú (Cars, Tracks, Merch, Gift Cards). Recortadas en assets/arquitectura-actual/.", "status": "observed", "source": "s-capturas" },
+    { "id": "o-tecnico", "area": "technical", "statement": "estructura.html (0005) tenía en #arquitectura-actual un .arch-stage[data-navegable] con un .media-placeholder; estructura.js ya maneja tooltips, switch y botones sin destino, así que la lógica del visor se suma ahí sin dependencias.", "status": "observed", "source": "s-estructura-js" },
+    { "id": "p-recorte-jpg", "area": "technical", "statement": "Supuesto: se recorta la barra de título y la barra de tareas de Windows (1920x998, igual proporción que el placeholder del diseño) y se guardan como JPG calidad 85 en assets/arquitectura-actual/.", "status": "proposed" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio en la sección Arquitectura Actual de estructura.html",
+    "problem": "La sección tiene un placeholder y no permite recorrer la navegación original de iRacing.",
+    "outcome": "El lector hace click sobre el menú de la captura y la captura cambia a esa sección, como en la UI real.",
+    "scope": "Incluye: 14 capturas recortadas, zonas invisibles del menú Racing (12 ítems + riel Racing/Shop) y del menú Shop (Cars, Tracks + riel), indicación 'Click aquí', accesibilidad, docs y llms.txt. Excluye: zonas dentro del contenido de las capturas y animaciones.",
+    "acceptance": "1) La captura reemplaza al placeholder con el ancho y la proporción del diseño, empezando en Home. 2) Cada ítem del menú con captura cambia la imagen a su sección, en ambos menús. 3) Las zonas no se ven, coinciden con los ítems en todos los anchos y se pueden usar con teclado. 4) Sin cambios en el resto de la página, consola limpia, docs actualizadas.",
+    "valueSignal": "El lector experimenta la arquitectura original antes de leer el tree testing.",
+    "evidence": ["d-navegable", "o-capturas", "o-tecnico"]
+  }
+}
