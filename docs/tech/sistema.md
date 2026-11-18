@@ -20,6 +20,8 @@ elementos.css       Páginas internas (body.page-elementos): topbar, breadcrumb,
 estrategia.css      Específico de body.page-estrategia
 alcance.css         Específico de body.page-alcance (matriz, ejes, cuadrantes)
 estructura.css      Específico de body.page-estructura (árboles, tooltips, switch, taskflow)
+estructura-tarea-1.html  Detalle de la Tarea 1 del tree testing
+estructura-tarea.css     Específico de body.page-tarea (detalles de tareas)
 script.js           Comportamiento del Home
 menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
 estructura.js       Tooltips de ayuda, switch Antes/Después y botones sin destino de estructura.html
@@ -81,6 +83,16 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - **Switch Antes/Después:** dos `button.seg-btn[aria-pressed][aria-controls]` alternan `hidden` en los paneles `#arq-antes` / `#arq-despues`. «Después» es el panel por defecto; cada panel tiene su SVG y su lista.
 - **Sin destino:** «Ver más detalles» y «Ver Esqueleto» son `<a href="#" data-sin-destino aria-disabled="true">`; `estructura.js` hace `preventDefault` para que no salten al tope.
 - Fuente de las medidas: `specs/0005-pagina-estructura/referencia-figma.jpg` (1920 × 8437, escala 1:1).
+### Detalle de la Tarea 1 (`estructura-tarea-1.html` + `estructura-tarea.css`, spec 0007)
+
+- `body.page-elementos.page-tarea`. Carga `menu-capas.js` y `estructura.js`, que está protegido ante nodos ausentes; aquí solo actúa su manejador de `[data-sin-destino]`.
+- **Breadcrumb de 3 niveles:** el disparador del menú de capas («Estructura») no lleva `current` ni `aria-current`, y `.page-tarea` lo muestra gris y en 400. El menú incluye Estructura habilitada. La página actual es `span.current[aria-current=page]` «Tarea 1», precedida por `.sep.sep--tarea`, que no se oculta en mobile. La flecha y «Rediseño UX/UI» son dos enlaces separados (corrección del usuario): la flecha (`a.crumb-back`, `aria-label` «Volver a Estructura») vuelve a la página padre, `estructura.html#tree-testing`, y el texto (`a.crumb-home`) va al Home. En ≤ 900 px `a.crumb-home` se oculta. En las páginas de capa la flecha sigue yendo al Home, que es su padre.
+- **Grillas** `.tarea-grid--stats` (850fr / 878fr) y `.tarea-grid--pietree` (1fr / 565px). En ≤ 900 px pasan a una columna; en ≤ 640 px las capturas de estadísticas también.
+- **Capturas** de UXtweak del usuario en `assets/tarea-1/`: `success.png`, `directness.png`, `torta-resultados.png`, `tabla-resultados.png` y `pietree.png`. Tienen `alt` con los datos.
+- **Íconos:**
+  - `ico-exito-directo.svg`, `ico-exito-indirecto.svg`, `ico-fallo-directo.svg` e `ico-fallo-indirecto.svg`, del usuario;
+  - `ico-pietree-*.svg`: el ícono de leyenda del usuario, recoloreado con los colores medidos en la referencia (`#C2DFA0`, `#F44336`, `#FF9800`, `#2962FF`, `#FDD835`, `#9E9E9E`).
+- En `estructura.html`, «Ver más detalles» de la Tarea 1 apunta a esta página.
 ## Integraciones externas (solo enlaces)
 
 | Servicio | Uso | Dónde |
@@ -111,7 +123,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Páginas de Esqueleto y Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Esqueleto y Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html` (más «Ver más detalles» ×2 en Estructura); recontar con `Grep 'href="#"'`.
+- Páginas de Esqueleto y Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Esqueleto y Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html` (más «Ver más detalles» de la Tarea 2 en Estructura); recontar con `Grep 'href="#"'`.
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
@@ -128,6 +140,7 @@ Metadatos no visibles en el `<head>` de las 3 páginas y un `llms.txt` en la ra�
 | `estrategia.html` | `Estrategia — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `alcance.html` | `Alcance — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `estructura.html` | `Estructura — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
+| `estructura-tarea-1.html` | `Tarea 1: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 
 Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCreated: "2025"`, `author` (Person Franco Aguirre, Diseñador UX/UI) y `about` (iRacing, Diseño UX/UI). Sin `url`, `image` ni `sameAs`.
 

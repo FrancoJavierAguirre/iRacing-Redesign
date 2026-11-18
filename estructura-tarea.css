@@ -1,0 +1,53 @@
+/* Detalle de tareas del Tree Testing (body.page-tarea) — spec 0007.
+   Medidas de specs/0007-detalle-tarea-1/referencia-figma.jpg (1920 px, escala 1:1). */
+
+/* Breadcrumb de 3 niveles: «Estructura» es el disparador del menú, no la página actual */
+.page-tarea .breadcrumb .capas-trigger { color: inherit; font-weight: 400; }
+.page-tarea .breadcrumb .capas-trigger:hover,
+.page-tarea .breadcrumb .capas-trigger[aria-expanded="true"] { color: #fff; }
+.page-tarea .breadcrumb .sep.sep--tarea { display: block; }
+
+/* Enunciado */
+.page-tarea .tarea-q { margin: 0; padding-top: clamp(48px, 5.2083vw, 100px); text-align: center; font: italic 300 clamp(18px, 1.875vw, 36px)/1.55 "Poppins", sans-serif; color: #fff; }
+.page-tarea .tarea-q .hl { font-weight: inherit; }
+
+.page-tarea main { padding-bottom: clamp(64px, 6.6667vw, 128px); }
+
+/* Grillas de dos columnas */
+.page-tarea .tarea-grid { display: grid; align-items: center; margin-top: clamp(32px, 4.1667vw, 80px); }
+.page-tarea .tarea-grid--stats { grid-template-columns: minmax(0, 850fr) minmax(0, 878fr); gap: clamp(24px, 1.9271vw, 37px); }
+.page-tarea .tarea-grid--pietree { grid-template-columns: minmax(0, 1fr) minmax(0, 565px); gap: clamp(24px, 4.1667vw, 80px); }
+
+/* Leyendas */
+.page-tarea .leyenda { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.page-tarea .leyenda li { display: flex; align-items: center; gap: clamp(16px, 1.25vw, 24px); }
+.page-tarea .leyenda img { flex-shrink: 0; display: block; height: auto; }
+.page-tarea .leyenda p { margin: 0; font: 300 clamp(16px, 1.25vw, 24px)/1.25 var(--font-display); color: #fff; }
+.page-tarea .leyenda--stats { gap: clamp(32px, 3.4375vw, 66px); }
+.page-tarea .leyenda--stats img { width: clamp(28px, 2.0833vw, 40px); }
+.page-tarea .leyenda--stats strong { display: block; font-weight: 600; }
+.page-tarea .leyenda--pietree { gap: clamp(24px, 2.8125vw, 54px); }
+.page-tarea .leyenda--pietree img { width: clamp(32px, 2.3438vw, 45px); }
+
+.page-tarea .c-exito-directo { color: #bee45f; }
+.page-tarea .c-exito-indirecto { color: #90be21; }
+.page-tarea .c-fallo-directo { color: #da1f47; }
+.page-tarea .c-fallo-indirecto { color: #f56200; }
+
+/* Capturas de UXtweak (las imágenes traen su propia tarjeta blanca) */
+.page-tarea .stats { display: grid; grid-template-columns: 290fr 278fr 294fr; align-items: center; gap: clamp(8px, .8333vw, 16px); }
+.page-tarea .stat { display: block; width: 100%; height: auto; }
+.page-tarea .stat--tabla { grid-column: 1 / -1; }
+.page-tarea .pietree-img { display: block; width: 100%; height: auto; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-tarea .breadcrumb .crumb-home { display: none; }
+  .page-tarea .tarea-grid--stats, .page-tarea .tarea-grid--pietree { grid-template-columns: minmax(0, 1fr); }
+  .page-tarea .pietree-img { max-width: 565px; margin: 0 auto; }
+}
+@media (max-width: 640px) {
+  .page-tarea .stats { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .page-tarea .stat { max-width: 300px; }
+  .page-tarea .stat--tabla { max-width: none; }
+}

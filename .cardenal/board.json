@@ -100,17 +100,33 @@
       "files": ["estructura.html", "estructura.css", "estructura.js", "assets/arquitectura-actual/home.jpg", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
       "questions": [],
       "evidence": [
-        { "path": "estructura.html", "sha256": "e888113fe5da1b15d3378f76929b29faa8e3757fbc590bc0d3791dfce1df53c9" },
-        { "path": "estructura.css", "sha256": "0c0a51f547109b89c5614ba941cef07faf62c19ab48fea9392be24e5bb45862c" },
-        { "path": "estructura.js", "sha256": "e183b0c733ad2a50687c809c3bef2a4197b08e39402c0683fcdfc5f2e6d2ac6a" },
-        { "path": "llms.txt", "sha256": "806110c32c3ab2db34bc3dec02f5b972fdc7e23cd314610bfc7cb9b70796ebb6" },
-        { "path": "docs/public/funcionalidades.md", "sha256": "37e208932718157cdfe88abf77fca20ce4aefa28d6898747a8407db630744e80" },
-        { "path": "docs/tech/sistema.md", "sha256": "36a9dce10aa2e3aadcf3849e67e2c1e1220cf30eed51ab2d630cbc802168e4b2" },
         { "path": "specs/0006-arquitectura-actual-navegable/spec.md", "sha256": "ceafab72ce542f106c1fb87224401f72cffea6875c6d69dc1de711c3d64371e5" },
         { "path": "specs/0006-arquitectura-actual-navegable/tasks.md", "sha256": "6800d217620c9c926434c13511de564baddda0dee78664caefe85fcf2bc5d72f" }
       ],
-      "evidenceNote": "Implementado por el coordinador (cambio chico); no se usó un subagente front.",
+      "evidenceNote": "El código aprobado está en el commit 67d03b5; estructura.html, llms.txt y docs cambiaron después por T7 (0007).",
       "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-18: Lo apruebo", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0006.md", "sha256": "f0f76e650c4e53d8a42351c1cba4ad25b993a538436f1c8aff9c232bdddca1e6" } }]
+    },
+    {
+      "id": "T7",
+      "title": "Detalle de la Tarea 1 del tree testing",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0007) y specs/0007-detalle-tarea-1/spec.md.",
+      "dependsOn": ["T6"],
+      "files": ["estructura-tarea-1.html", "estructura-tarea.css", "estructura.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "questions": [],
+      "evidence": [
+        { "path": "estructura-tarea-1.html", "sha256": "53e2c2e3f68a79cc87bd3f6481ea0b63f6770a7164e64c7953dae0d8aee343f6" },
+        { "path": "estructura-tarea.css", "sha256": "bd6fd9d51031e625a45c4aca86f8a7303b25c114147bcc56b8c05092ce51c8f9" },
+        { "path": "estructura.html", "sha256": "057762991b1527c5b902584fc2fbde1e089d7256a0be66f87ee732e96de58d71" },
+        { "path": "llms.txt", "sha256": "b06d2cbaa4bfe53050b48aec207fb88cb523cbb2b035ba145aaae1fea77c9698" },
+        { "path": "docs/public/funcionalidades.md", "sha256": "4e374c15f872830ea34b958fe311dca1127ba4e485d4df35c0b65ad1ea90a037" },
+        { "path": "docs/tech/sistema.md", "sha256": "becf3a44cc0acba1d89b059243efbf3f1957c1788bff96c7fdd9a6eb505440c4" },
+        { "path": "specs/0007-detalle-tarea-1/spec.md", "sha256": "8cca2ea4e01c5077db2f490f8497a19622f8a55c57d95d149d837e84eb585c2c" },
+        { "path": "specs/0007-detalle-tarea-1/tasks.md", "sha256": "af9d80f42820a841bcffc7a713d5a3a4a30b9b30e8ac9a2639e6664965f9660c" }
+      ],
+      "evidenceNote": "Implementado por el coordinador (cambio chico); no se usó un subagente front.",
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-18: Lo apruebo (tras la corrección de la flecha del breadcrumb)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0007.md", "sha256": "0e9638de0ac50e17779d489242ff4bcb9122238115eac587c7af7947ac19f025" } }]
     }
   ]
 }
