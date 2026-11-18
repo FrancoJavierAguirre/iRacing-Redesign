@@ -19,6 +19,7 @@
 
 - [5 Elementos UX de James Garrett](5-elementos.html): explica las 5 capas, de lo abstracto a lo concreto: Estrategia, Alcance, Estructura, Esqueleto y Superficie.
 - [Estrategia](estrategia.html): primera capa del proceso. Incluye evaluaciones heurísticas, encuestas a 11 usuarios (8 de España y 1 de Argentina, EE. UU., Canadá y Chile), mapa de trayectoria con la persona Sergio Barrientos (escenario hipotético y experiencia paso a paso) y un Lean UX Canvas.
+- [Alcance](alcance.html): segunda capa del proceso. Presenta la Matriz FVD (factibilidad, viabilidad y deseabilidad), que ordena 12 soluciones en 4 cuadrantes según qué tan deseables y factibles son. El cuadrante 1 (muy deseable y muy factible, máxima prioridad) reúne 5: ícono de carrito junto al perfil, pagos dentro de la UI, nueva vista License Progress, colorear autos y pistas que hay que comprar, y botón de registro convertido en menú. Cuadrante 2: nueva sección “Cars” y mensajes de error con solución práctica. Cuadrante 3: quitar columnas de la tabla de carreras para sumar el auto favorito, botón de registro como menú con más opciones y rediseño de la arquitectura de información para usuarios nuevos. Cuadrante 4: botón para abortar la carga del simulador y breadcrumb en lugar de modales.
 
 ## Las 6 comparativas Antes/Después
 
@@ -34,13 +35,15 @@ Cada comparativa de `index.html` muestra en video la plataforma antes y después
 ## Estado de las páginas
 
 - `index.html`: completa.
-- `5-elementos.html`: completa en su contenido; los botones para ir a las capas Alcance, Estructura, Esqueleto y Superficie todavía no llevan a ninguna página.
-- `estrategia.html`: el texto está completo; las imágenes de hallazgos y escenarios son todavía recuadros de reemplazo, y el botón «Ver Alcance» todavía no lleva a ninguna parte; «Ver respuestas» abre la planilla de respuestas de la encuesta.
-- Las páginas de Alcance, Estructura, Esqueleto y Superficie todavía no existen.
+- `5-elementos.html`: completa en su contenido; los botones para ir a las capas Estructura, Esqueleto y Superficie todavía no llevan a ninguna página.
+- `estrategia.html`: el texto está completo; las imágenes de hallazgos y escenarios son todavía recuadros de reemplazo; «Ver respuestas» abre la planilla de respuestas de la encuesta.
+- `alcance.html`: completa; el botón «Ver Estructura» todavía no lleva a ninguna página.
+- Las páginas de Estructura, Esqueleto y Superficie todavía no existen.
 
 ## Enlaces
 
 - [Home del case study](index.html)
 - [5 Elementos UX de James Garrett](5-elementos.html)
 - [Estrategia](estrategia.html)
+- [Alcance](alcance.html)
 - [Prototipo en Figma](https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1)

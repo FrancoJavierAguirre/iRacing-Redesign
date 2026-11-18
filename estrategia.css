@@ -2,12 +2,7 @@
    Pantalla "Estrategia" — valores Figma @1920 -> clamp()
    (reutiliza topbar / sec-header / sec-nav de elementos.css)
    ========================================================== */
-.page-estrategia { --fs-body: clamp(14px, 1.0417vw, 20px); --fs-h3: clamp(20px, 1.6667vw, 32px); --gap-s: clamp(16px, 1.6667vw, 32px); --card: var(--card-bg); }
 .page-estrategia .hl { color: #bca447; font-weight: 600; }
-.page-estrategia .topbar-action { position: absolute; right: var(--side-pad); top: 50%; transform: translateY(-50%); }
-.page-estrategia .topbar-action.btn:hover { transform: translateY(-50%); }
-.page-estrategia .btn-blue { background: #0a5bd6; color: #fff; }
-.page-estrategia .btn-blue:hover { background: #0b4fb8; }
 .page-estrategia main > section { scroll-margin-top: 90px; }
 
 /* título secundario con línea */
@@ -15,7 +10,6 @@
 .rule-head .rh { display: flex; align-items: center; gap: 16px; }
 .rh-ico { width: clamp(28px, 2.0833vw, 40px); height: auto; flex-shrink: 0; display: block; }
 .rule-head::after { content: ""; flex: 1; height: 2px; background: #c9ccd4; opacity: .85; }
-.center-title { text-align: center; font-family: var(--font-display); font-weight: 300; font-size: clamp(24px, 2.0833vw, 40px); color: #fff; margin: clamp(40px, 5vw, 96px) 0 clamp(24px, 2.5vw, 48px); }
 .center-title.md { font-weight: 500; font-size: clamp(20px, 1.6667vw, 32px); }
 
 /* hallazgo: imagen + notas */
@@ -122,25 +116,12 @@
 .chips { display: flex; gap: 12px; flex-wrap: wrap; }
 .chips span { background: #d9d9db; color: #1a1a1c; border-radius: 4px; padding: 4px 10px; font-family: "Poppins", sans-serif; font-weight: 500; font-size: clamp(10px, .75vw, 14px); }
 
-/* Siguiente elemento UX */
-.next { padding: clamp(80px, 8.3333vw, 160px) 0 clamp(64px, 6.6667vw, 128px); text-align: center; }
-.next .center-title { margin-top: 0; }
-.next-row { display: flex; justify-content: center; gap: clamp(24px, 17.7vw, 340px); margin-top: clamp(40px, 5vw, 96px); }
-.next-col { display: flex; flex-direction: column; align-items: center; gap: var(--gap-s); width: 100%; max-width: 565px; }
-.next-col .lbl, .next .also { font-family: "Poppins", sans-serif; font-weight: 300; font-size: var(--fs-body); color: #fff; margin: 0; }
-.next .also { margin: clamp(40px, 5vw, 96px) 0 var(--gap-s); }
-.next .proceso-card { width: 100%; }
-.next .proceso-grid { margin-top: 0; }
-
 @media (max-width: 900px) {
-  .page-estrategia .topbar-action { display: none; }
   .finding { width: 100%; }
   .obj-row { flex-wrap: wrap; }
   .obj-row div { flex: 1 1 45%; }
   .focus-row, .steps, .exp-body, .dx, .canvas { grid-template-columns: 1fr; }
   .steps .wide .media-placeholder { width: 100%; }
-  .next-row { flex-direction: column; align-items: center; }
-  .next .proceso-card { width: 100%; }
 }
 
 /* ícono de reacción al final de cada texto numerado */

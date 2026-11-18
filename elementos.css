@@ -141,6 +141,24 @@ a.capas-item[href]:hover, a.capas-item[href]:focus-visible { background: rgba(25
 .final-process .sec-title { text-align: center; margin-bottom: clamp(40px, 5vw, 96px); }
 a.proceso-card { text-decoration: none; }
 
+/* ----- Compartido por las páginas de capa (Estrategia y Alcance) ----- */
+.page-estrategia, .page-alcance { --fs-body: clamp(14px, 1.0417vw, 20px); --fs-h3: clamp(20px, 1.6667vw, 32px); --gap-s: clamp(16px, 1.6667vw, 32px); --card: var(--card-bg); }
+.page-elementos .topbar-action { position: absolute; right: var(--side-pad); top: 50%; transform: translateY(-50%); }
+.page-elementos .topbar-action.btn:hover { transform: translateY(-50%); }
+.page-elementos .btn-blue { background: #0a5bd6; color: #fff; }
+.page-elementos .btn-blue:hover { background: #0b4fb8; }
+.center-title { text-align: center; font-family: var(--font-display); font-weight: 300; font-size: clamp(24px, 2.0833vw, 40px); color: #fff; margin: clamp(40px, 5vw, 96px) 0 clamp(24px, 2.5vw, 48px); }
+
+/* Siguiente elemento UX */
+.next { padding: clamp(80px, 8.3333vw, 160px) 0 clamp(64px, 6.6667vw, 128px); text-align: center; }
+.next .center-title { margin-top: 0; }
+.next-row { display: flex; justify-content: center; gap: clamp(24px, 17.7vw, 340px); margin-top: clamp(40px, 5vw, 96px); }
+.next-col { display: flex; flex-direction: column; align-items: center; gap: var(--gap-s); width: 100%; max-width: 565px; }
+.next-col .lbl, .next .also { font-family: "Poppins", sans-serif; font-weight: 300; font-size: var(--fs-body); color: #fff; margin: 0; }
+.next .also { margin: clamp(40px, 5vw, 96px) 0 var(--gap-s); }
+.next .proceso-card { width: 100%; }
+.next .proceso-grid { margin-top: 0; }
+
 /* ----- Responsive ----- */
 @media (max-width: 900px) {
   .breadcrumb .crumb-parent, .breadcrumb .sep { display: none; }
@@ -157,4 +175,7 @@ a.proceso-card { text-decoration: none; }
   .cards.cols-2, .cards.cols-3 { grid-template-columns: 1fr; }
   .sec-header { flex-direction: column; }
   .sec-nav { margin-top: 0; flex-wrap: wrap; }
+  .page-elementos .topbar-action { display: none; }
+  .next-row { flex-direction: column; align-items: center; }
+  .next .proceso-card { width: 100%; }
 }

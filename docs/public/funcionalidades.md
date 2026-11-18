@@ -12,9 +12,10 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Página | Archivo | Estado |
 |---|---|---|
 | Home del case study | `index.html` | Implementado |
-| 5 Elementos UX (Jesse James Garrett) | `5-elementos.html` | Implementado; los CTA a las capas 2–5 todavía no llevan a ninguna parte |
+| 5 Elementos UX (Jesse James Garrett) | `5-elementos.html` | Implementado; los CTA a las capas 3–5 todavía no llevan a ninguna parte |
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
-| Alcance, Estructura, Esqueleto, Superficie | — | Pendiente (no existen) |
+| Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD); «Ver Estructura» todavía no lleva a ninguna parte |
+| Estructura, Esqueleto, Superficie | — | Pendiente (no existen) |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -28,13 +29,13 @@ No hay cuentas, login, formularios ni datos de usuario.
    Los videos se reproducen solos, sin sonido y en bucle, solo mientras se ven en pantalla.
    CTA **«Probar prototipo»** → prototipo de Figma (pestaña nueva).
 5. **Objetivos**: objetivos de negocio (retener usuarios, aumentar compras) y de usuario (encontrar una carrera adecuada a su nivel, comprar fácil), la frase del problema (flujo de usuarios → frustración → churn) y 3 videos que lo ilustran.
-6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas. **Solo «Estrategia» navega**; las otras 4 todavía no hacen nada visible.
+6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas. **«Estrategia» y «Alcance» navegan**; las otras 3 todavía no hacen nada visible.
 
 ## 5 Elementos UX (`5-elementos.html`)
 
 - Presenta a Jesse James Garrett y el modelo de 5 capas (de abstracto a concreto: Estrategia, Alcance, Estructura, Esqueleto, Superficie), con un diagrama de círculos y uno de capas.
 - Una sección por capa con su propósito y técnicas. Botones «Ir a…» para moverse entre secciones.
-- Solo «Ver Estrategia» lleva a una página; «Ver Alcance», «Ver Estructura», «Ver Esqueleto» e «Ir a Superficie» están pendientes.
+- «Ver Estrategia» y «Ver Alcance» llevan a su página (también la tarjeta Alcance del final); «Ver Estructura», «Ver Esqueleto» e «Ir a Superficie» están pendientes.
 - Breadcrumb para volver al Home.
 
 ## Estrategia (`estrategia.html`)
@@ -46,11 +47,24 @@ Cuatro bloques con navegación interna:
 3. **Mapa de Trayectoria**: persona «Sergio Barrientos», escenario hipotético de 5 pasos, experiencia en 14 pasos con reacciones, y descubrimientos con sus soluciones (License Progress, tab Cars, nombres en naranja para lo que hay que comprar, carrito dentro de la plataforma).
 4. **Lean UX Canvas**: problema de negocio, arquetipos, soluciones, resultados esperados (+20 % de permanencia de usuarios nuevos en 3 meses, +40 % de AOV) e hipótesis.
 
-**Menú de capas:** en la barra superior, la palabra «Estrategia» del breadcrumb (arriba a la izquierda) es un botón con una flecha; el título central no cambia. Al hacer click se despliega debajo de esa palabra un menú con las otras capas del proceso (Alcance, Estructura, Esqueleto y Superficie) y la flecha apunta hacia arriba. Esas opciones todavía no llevan a ninguna parte: se ven atenuadas y no se pueden abrir. El menú se cierra con un segundo click en la palabra, un click fuera del menú o la tecla Escape (que devuelve el foco al botón). Se maneja también con teclado (Tab, Enter o Espacio).
+**Menú de capas:** en la barra superior, la palabra «Estrategia» del breadcrumb (arriba a la izquierda) es un botón con una flecha; el título central no cambia. Al hacer click se despliega debajo de esa palabra un menú con las otras capas del proceso (Alcance, Estructura, Esqueleto y Superficie) y la flecha apunta hacia arriba. Alcance lleva a `alcance.html`; Estructura, Esqueleto y Superficie todavía no llevan a ninguna parte: se ven atenuadas y no se pueden abrir. El menú se cierra con un segundo click en la palabra, un click fuera del menú o la tecla Escape (que devuelve el foco al botón). Se maneja también con teclado (Tab, Enter o Espacio).
 
-Cierre: «Siguiente elemento UX», que debería llevar a Alcance (pendiente).
+«Ver Alcance» (arriba a la derecha) lleva a Alcance. Cierre: «Siguiente elemento UX», cuya tarjeta «Sigue acá» lleva a Alcance.
 
-**Partes incompletas:** las imágenes de hallazgos y escenarios son recuadros punteados con el nombre del archivo esperado; «Ver Alcance» todavía no lleva a ninguna parte. «Ver respuestas» abre en una pestaña nueva la planilla de respuestas de la encuesta.
+**Partes incompletas:** las imágenes de hallazgos y escenarios son recuadros punteados con el nombre del archivo esperado. «Ver respuestas» abre en una pestaña nueva la planilla de respuestas de la encuesta.
+
+## Alcance (`alcance.html`)
+
+Una sola sección, la **Matriz FVD** (factibilidad, viabilidad y deseabilidad), que ordena 12 soluciones en 4 cuadrantes.
+
+- **Encabezado:** título «Matriz FVD», subtítulo «Factibilidad, viabilidad y deseabilidad» y la leyenda centrada «★ Máxima prioridad».
+- **Ejes:** eje vertical dorado con flecha y la etiqueta «Muy deseable»; eje horizontal dorado con flecha y la etiqueta «Muy factible»; «Poco deseable y factible» en el origen. Divisiones punteadas entre cuadrantes y un número grande por cuadrante.
+- **Cuadrante 1** (arriba a la derecha, número dorado con estrella, máxima prioridad), 5 tarjetas con borde dorado y texto más grande: ícono de carrito junto al perfil, pagos dentro de la UI, nueva vista License Progress, colorear autos y pistas que hay que comprar, botón de registro convertido en menú.
+- **Cuadrante 2** (abajo a la derecha), 2 tarjetas: nueva sección «Cars» y mensajes de error con solución práctica.
+- **Cuadrante 3** (arriba a la izquierda), 3 tarjetas: quitar columnas de la tabla de carreras para sumar el auto favorito, botón de registro como menú con más opciones y rediseño de la arquitectura de información para usuarios nuevos.
+- **Cuadrante 4** (abajo a la izquierda), 2 tarjetas: botón para abortar la carga del simulador y breadcrumb en lugar de modales.
+- **Mobile (640 px o menos):** los cuadrantes se apilan en orden 1, 2, 3, 4, cada uno con su número y una leyenda de texto que explica qué significa; los ejes se ocultan.
+- **Navegación:** breadcrumb con el menú de capas (Estrategia habilitada; Estructura, Esqueleto y Superficie atenuadas; Alcance no figura), botón azul «Ver Estructura» que todavía no lleva a ninguna parte y cierre «Siguiente elemento UX» (Estamos acá: Alcance; Sigue acá: Estructura; también: Estrategia, Esqueleto y Superficie).
 
 ## Descubrimiento por buscadores y asistentes de IA
 

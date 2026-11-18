@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0004-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-17 (/feature): crear la página de Alcance según la captura de Figma (copiada en specs/0004-pagina-alcance/referencia-figma.webp) y el ícono Star.svg (24x24, #BCA447) a la izquierda de 'Máxima prioridad', separado 24 px" },
+    { "id": "u-0004-answers", "kind": "user", "reference": "Respuestas del usuario en chat 2026-11-17 (AskUserQuestion): activar todos los links a Alcance; la tarjeta License Progress duplicada en el cuadrante 3 es un error y se saca del 3; en mobile, cuadrantes apilados" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0004-pagina-alcance/referencia-figma.webp", "sha256": "fdb6de962e300a7dea20c8211a707e7cc162166f017831953c5ae03b9d5a8d79" },
+    { "id": "s-star", "kind": "file", "reference": "assets/ico-star.svg", "sha256": "ad15cd41878f5df1c24cf5f23cc0ff0cf5c1c77c9bc740e08a3cb747dd09c9b7" },
+    { "id": "s-estrategia", "kind": "file", "reference": "estrategia.html", "sha256": "a3fba3e4ba74e104bf59f214ce18ef395e8b31fd671b706ab9eee2cc7db1a9c6" },
+    { "id": "s-estrategia-css", "kind": "file", "reference": "estrategia.css", "sha256": "a4feb811f767f1f3d354a62dcd6d8e720f90a3e1ea13231b1fb9fa0bbc855fc4" },
+    { "id": "s-index", "kind": "file", "reference": "index.html", "sha256": "b2b2ada1cb8205e1426ac650a6113eaef5d7b5b06acd253bcd46519a6413590a" },
+    { "id": "s-elementos", "kind": "file", "reference": "5-elementos.html", "sha256": "643b33d4da66bbc40ac867139a72b53f946d73634d4a1d9a678ba1e58f791c8e" }
+  ],
+  "facts": [
+    { "id": "o-design", "area": "product", "statement": "La captura de Figma muestra alcance.html con: topbar (breadcrumb '← Rediseño UX/UI > Alcance ⌄' con menú de capas, título 'Alcance', botón azul 'Ver Estructura' con ícono de estructura); sección 'Matriz FVD' / 'Factibilidad, viabilidad y deseabilidad'; leyenda '★ Máxima prioridad'; matriz 2x2 con eje Y dorado 'Muy deseable', eje X dorado 'Muy factible', origen 'Poco deseable y factible', divisores punteados; cuadrante 1 (arriba a la derecha) con número '1.' dorado y estrella, y tarjetas con borde dorado y texto grande; cuadrantes 2, 3 y 4 con número gris y tarjetas sin borde y texto chico; sección 'Siguiente elemento UX' (Estamos acá: Alcance; Sigue acá: Estructura; Pero también están: Estrategia, Esqueleto, Superficie).", "status": "observed", "source": "s-referencia" },
+    { "id": "o-patterns", "area": "technical", "statement": "estrategia.html ya resuelve la topbar (breadcrumb con menú de capas, menu-capas.js, botón topbar-action) y la sección .next 'Siguiente elemento UX' (estilos en estrategia.css:126-143, tarjetas .proceso-card de styles.css con descripción en hover).", "status": "observed", "source": "s-estrategia-css" },
+    { "id": "o-alcance-links", "area": "technical", "statement": "Links a Alcance hoy sin destino: index.html:317 (tarjeta button data-step=alcance, sin onclick); 5-elementos.html:167 ('Ver Alcance' href=#) y :252 (tarjeta href=#alcance); estrategia.html:71 ('Ver Alcance' href=#), :214 (tarjeta 'Sigue acá' href=#) y la opción Alcance del menú de capas (aria-disabled).", "status": "observed", "source": "s-estrategia" },
+    { "id": "d-star", "area": "product", "statement": "El ícono star (assets/ico-star.svg, 24x24, #BCA447) va a la izquierda de 'Máxima prioridad', separado 24 px; también se usa junto al número '1.' del cuadrante 1.", "status": "confirmed", "source": "u-0004-request" },
+    { "id": "d-links", "area": "product", "statement": "Se activan todos los links a Alcance (menú de Estrategia, 'Ver Alcance' de Estrategia y de 5-elementos, tarjeta 'Sigue acá' de Estrategia, tarjeta Alcance del Home y tarjeta Alcance final de 5-elementos) hacia alcance.html. 'Ver Estructura' en Alcance queda sin destino hasta que exista esa página.", "status": "confirmed", "source": "u-0004-answers" },
+    { "id": "d-no-dup", "area": "product", "statement": "La tarjeta 'Nueva vista License Progress…' va solo en el cuadrante 1; su aparición en el cuadrante 3 de la captura es un error.", "status": "confirmed", "source": "u-0004-answers" },
+    { "id": "d-mobile", "area": "product", "statement": "En mobile (≤ 640 px) los cuadrantes se apilan en orden 1, 2, 3, 4, cada uno con su número; los ejes se ocultan y se reemplazan por una leyenda de texto.", "status": "confirmed", "source": "u-0004-answers" },
+    { "id": "p-seo-alcance", "area": "technical", "statement": "Propuesta, siguiendo 0001: alcance.html lleva title, meta description, OG/Twitter y JSON-LD WebPage con breadcrumb e isPartOf, y llms.txt suma la página.", "status": "proposed" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre el proceso UX y llega a la capa Alcance",
+    "problem": "La capa Alcance no tiene página: todos los links a Alcance quedan sin destino y la priorización de soluciones (Matriz FVD) no se puede ver.",
+    "outcome": "Existe alcance.html, fiel a la captura de Figma, con la Matriz FVD y la navegación entre capas, y todo el sitio enlaza a ella.",
+    "scope": "Incluye: alcance.html (topbar con breadcrumb, menú de capas y 'Ver Estructura' sin destino; Matriz FVD con 4 cuadrantes, ejes, leyenda ★ y textos transcriptos de la captura sin el duplicado del cuadrante 3; sección Siguiente elemento UX); estilos (CSS de página y, si conviene, mover los estilos compartidos de .next a elementos.css sin cambiar el aspecto de Estrategia); versión mobile apilada; ícono star; activación de los links a Alcance en index.html, 5-elementos.html y estrategia.html; SEO de la página nueva y llms.txt; documentación. Excluye: páginas de Estructura, Esqueleto y Superficie; contenido nuevo no presente en la captura.",
+    "acceptance": "1) alcance.html se ve como la captura a 1920 px (estructura, textos, colores y jerarquía), con la estrella de 24x24 a 24 px de 'Máxima prioridad'. 2) El cuadrante 1 tiene 5 tarjetas con borde dorado; el 2 tiene 2, el 3 tiene 3 (sin License Progress) y el 4 tiene 2. 3) En ≤ 640 px los cuadrantes se apilan en orden 1-4 sin scroll horizontal. 4) El menú de capas de Alcance muestra Estrategia (navega) y Estructura, Esqueleto y Superficie deshabilitadas; Estrategia muestra Alcance habilitada. 5) Todos los links listados en d-links llevan a alcance.html. 6) Estrategia y el resto del sitio no cambian de aspecto, y no hay errores en consola. 7) Head SEO válido, llms.txt y docs actualizados.",
+    "valueSignal": "El lector puede seguir el proceso de Estrategia a Alcance sin callejones sin salida y ver cómo se priorizaron las soluciones.",
+    "evidence": ["o-design", "o-patterns", "o-alcance-links", "d-star", "d-links", "d-no-dup", "d-mobile"]
+  }
+}

@@ -19,11 +19,10 @@
       "files": ["index.html", "5-elementos.html", "estrategia.html", "llms.txt"],
       "questions": [],
       "evidence": [
-        { "path": "llms.txt", "sha256": "569bed28814fb4478834747d1664bc008787587465142ea83e8e85eef0b6379a" },
-        { "path": "index.html", "sha256": "0508f3900e341c239d933c7d61a49e6ec5fe4cff8bf9c3e7a39b93667550d121" },
-        { "path": "5-elementos.html", "sha256": "9bb7161f9042be436646edbc2d9100f8d02d99e3892760bc23052c97c9dce1aa" },
-        { "path": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" }
+        { "path": "specs/0001-seo-descubrimiento/spec.md", "sha256": "0e1c548b4f5c19c600a7842139fd05ce9ab9742ec992d704f2e6c6e7935953b2" },
+        { "path": "specs/0001-seo-descubrimiento/tasks.md", "sha256": "392b074ae6c809de5bae8abdac7b31a5d2df9c19c0ce59be97fc8881c72a3dff" }
       ],
+      "evidenceNote": "El código aprobado está en el commit 6e8e8fa; los archivos fuente cambiaron después por T4 (0004).",
       "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
     },
     {
@@ -36,11 +35,10 @@
       "files": ["estrategia.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
       "questions": [],
       "evidence": [
-        { "path": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" },
-        { "path": "llms.txt", "sha256": "569bed28814fb4478834747d1664bc008787587465142ea83e8e85eef0b6379a" },
-        { "path": "docs/public/funcionalidades.md", "sha256": "33d50af36f9ca14f27cfaea069b077fd4f3a94ca4210c2357a69a4311f6bd897" },
-        { "path": "docs/tech/sistema.md", "sha256": "5b3612055080a7973e017ce1f21e9bd0ca1c28347b7b0250b8ee81cd4c4a5ada" }
+        { "path": "specs/0002-canvas-resultados-usuario/spec.md", "sha256": "f4059091538e8235737519171c6ed006cf9cb8c0c2675fbebeec8e91e53a7586" },
+        { "path": "specs/0002-canvas-resultados-usuario/tasks.md", "sha256": "22588d0d24e9fc5d3a7d193750b79c31ac8a70e6054d6caf1eb1ed76c9c68784" }
       ],
+      "evidenceNote": "El código aprobado está en el commit 6e8e8fa; los archivos fuente cambiaron después por T4 (0004).",
       "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
     },
     {
@@ -53,13 +51,36 @@
       "files": ["estrategia.html", "elementos.css", "menu-capas.js", "specs/0003-menu-capas-topbar/plan.md", "assets/ico-chevron-down.svg", "assets/ico-chevron-up.svg", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
       "questions": [],
       "evidence": [
-        { "path": "estrategia.html", "sha256": "5095faf0ed9ccfc5390ccd8e24ceb3bcdb572ac24067388379e9c4c855f7805b" },
-        { "path": "elementos.css", "sha256": "68a9ff0ae875c3c893ada42bb730c6e94a8814478627a9d839f50e72cdbfd97a" },
-        { "path": "menu-capas.js", "sha256": "77e6c14b5ac12f9210164c9afce6a83fedc4cb878715dabe206f07f9de1a4f9f" },
-        { "path": "docs/public/funcionalidades.md", "sha256": "33d50af36f9ca14f27cfaea069b077fd4f3a94ca4210c2357a69a4311f6bd897" },
-        { "path": "docs/tech/sistema.md", "sha256": "5b3612055080a7973e017ce1f21e9bd0ca1c28347b7b0250b8ee81cd4c4a5ada" }
+        { "path": "specs/0003-menu-capas-topbar/spec.md", "sha256": "76e5b17792ec6fe5fb57d12dc0d0d5a6ae96d05508c9809ade9917a6d8ffae5a" },
+        { "path": "specs/0003-menu-capas-topbar/tasks.md", "sha256": "ba5562899386e6272fae1b4a1d1c561a036d6fe67d7255d68c90514c28ab62fb" },
+        { "path": "menu-capas.js", "sha256": "77e6c14b5ac12f9210164c9afce6a83fedc4cb878715dabe206f07f9de1a4f9f" }
       ],
+      "evidenceNote": "El código aprobado está en el commit 6e8e8fa; estrategia.html, elementos.css y docs cambiaron después por T4 (0004).",
       "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
+    },
+    {
+      "id": "T4",
+      "title": "Página de Alcance (Matriz FVD) y links a Alcance",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-7 de change.acceptance en .cardenal/context.json (0004). Corrección del QA: números de cuadrante en Inter 400, 128 px @1920.",
+      "dependsOn": [],
+      "files": ["alcance.html", "alcance.css", "elementos.css", "estrategia.css", "estrategia.html", "index.html", "5-elementos.html", "llms.txt", "assets/ico-star.svg", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "questions": [],
+      "evidence": [
+        { "path": "alcance.html", "sha256": "80bc563e290572eb28b926e78dab65a5034196dd1e9338ff53ede6f54e2c328c" },
+        { "path": "alcance.css", "sha256": "10dcf9c5e2fd0b17f70f90436e830bd6e9b15270820348a42cfa51fba69112bc" },
+        { "path": "elementos.css", "sha256": "0ad3bd590737e9b8640db7e221890a17fb4be21ce23352d611f1c72f5da55652" },
+        { "path": "estrategia.css", "sha256": "a4feb811f767f1f3d354a62dcd6d8e720f90a3e1ea13231b1fb9fa0bbc855fc4" },
+        { "path": "estrategia.html", "sha256": "a3fba3e4ba74e104bf59f214ce18ef395e8b31fd671b706ab9eee2cc7db1a9c6" },
+        { "path": "index.html", "sha256": "b2b2ada1cb8205e1426ac650a6113eaef5d7b5b06acd253bcd46519a6413590a" },
+        { "path": "5-elementos.html", "sha256": "643b33d4da66bbc40ac867139a72b53f946d73634d4a1d9a678ba1e58f791c8e" },
+        { "path": "llms.txt", "sha256": "e86ae07e7409a86504f66c22fbeeb7ec863b6eb884c4da269e3d24228283821f" },
+        { "path": "assets/ico-estructura-white.svg", "sha256": "8570d7483c7acffe9113781584602e1d6741d9b21658773a069ba4954169f2ba" },
+        { "path": "docs/public/funcionalidades.md", "sha256": "6b7e1b8a9fa45440cee6ea81276fdfb227297bcf12f293168fdbe1e324b26e1a" },
+        { "path": "docs/tech/sistema.md", "sha256": "2b9be9e84d0cdffc8e938941d18ec97ff6bad1694fb1ee56b961e6531b701c10" }
+      ],
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras la corrección de los números en Inter 128)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0004.md", "sha256": "2efc945563a264eb64689ea2f2d465d07bd89ddeabeda5e9763dff599224ef9d" } }]
     }
   ]
 }

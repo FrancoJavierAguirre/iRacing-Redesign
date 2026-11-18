@@ -6,7 +6,7 @@ Dependencias externas en tiempo de ejecución:
 
 | Dependencia | Propósito en este proyecto | Versión | Uso | Límites |
 |---|---|---|---|---|
-| Google Fonts (CSS2 API) | Tipografías Exo 2 (títulos), Poppins (cuerpo), Inter (botones) | Sin versión (servicio) | `<link>` en `index.html`, `5-elementos.html` y `estrategia.html` | Sin conexión, el navegador usa la fuente `sans-serif` de respaldo |
+| Google Fonts (CSS2 API) | Tipografías Exo 2 (títulos), Poppins (cuerpo), Inter (botones) | Sin versión (servicio) | `<link>` en `index.html`, `5-elementos.html`, `estrategia.html` y `alcance.html` | Sin conexión, el navegador usa la fuente `sans-serif` de respaldo |
 
 Herramientas de diseño mencionadas en el contenido (Figma, Make, Photoshop, UX Tweak): no son dependencias del código.
 
