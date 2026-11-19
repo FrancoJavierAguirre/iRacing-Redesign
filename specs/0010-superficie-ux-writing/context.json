@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0010-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): empezar Superficie por la parte de UX Writing (referencia Superficie - ux writing.png); vectores de la Matriz de Tono; 'Saltar a Sistema de Diseño' hará scroll a una sección futura; ícono play en 'Ver prototipo', que abre en otra pestaña el link de Figma dado" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0010-superficie-ux-writing/referencia-figma.jpg", "sha256": "2ca6155e7ba5170f2b91d5fda63b3a0c7434fdbcd0b7dd468b1b6e5c53bf81dc" },
+    { "id": "s-esqueleto", "kind": "file", "reference": "esqueleto.html", "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386" }
+  ],
+  "facts": [
+    { "id": "o-design", "area": "product", "statement": "La referencia muestra la parte UX Writing de superficie.html: topbar con 'Ver Prototipo'; título 'UX Writing' y link 'Saltar a Sistema de Diseño'; Círculo de Oro en 3 bloques; Matriz de Voz (tabla 3×6); Matriz de Tono con ejes y 4 cajas; Guía de Estilo (tabla 4 columnas × 5 filas) con 'Ir a Valores'.", "status": "observed", "source": "s-referencia" },
+    { "id": "o-plantilla", "area": "technical", "statement": "Las páginas de capa comparten topbar con menú de capas, sec-header con botones 'Ir a' y variables en elementos.css; esqueleto.html sirve de plantilla.", "status": "observed", "source": "s-esqueleto" },
+    { "id": "d-prototipo", "area": "product", "statement": "'Ver Prototipo' lleva el ícono play y abre el prototipo de Figma en una pestaña nueva.", "status": "confirmed", "source": "u-0010-request" },
+    { "id": "d-saltar", "area": "product", "statement": "'Saltar a Sistema de Diseño' hará scroll a la sección Sistema de Diseño, que se construye después; hasta entonces no tiene destino.", "status": "confirmed", "source": "u-0010-request" },
+    { "id": "p-valores-links", "area": "product", "statement": "Supuesto: 'Ir a Valores' también queda sin destino (sección futura) y se activan todos los links a Superficie del sitio, como con las capas anteriores.", "status": "proposed" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que llega a la capa Superficie",
+    "problem": "La capa Superficie no tiene página y sus links no llevan a ninguna parte.",
+    "outcome": "Existe superficie.html con la parte de UX Writing y el sitio enlaza a ella.",
+    "scope": "Incluye: superficie.html y superficie.css con UX Writing (Círculo de Oro, Matriz de Voz, Matriz de Tono, Guía de Estilo), 'Ver Prototipo', links a Superficie, SEO, llms.txt y docs. Excluye: Sistema de Diseño, Valores y el resto de la página.",
+    "acceptance": "1) La parte UX Writing se ve como la referencia a 1920 px. 2) 'Ver Prototipo' abre Figma en pestaña nueva. 3) 'Saltar a Sistema de Diseño' e 'Ir a Valores' no saltan al tope. 4) Responsive sin scroll horizontal. 5) Links a Superficie activos; SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector ve cómo se definió la voz y el tono del producto.",
+    "evidence": ["o-design", "o-plantilla", "d-prototipo", "d-saltar"]
+  }
+}

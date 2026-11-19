@@ -1,0 +1,97 @@
+/* Superficie (body.page-superficie) — spec 0010, parte UX Writing.
+   Medidas de specs/0010-superficie-ux-writing/referencia-figma.jpg (1920 px, escala 1:1). */
+
+.page-superficie {
+  --oro-on: rgba(0, 87, 208, .15);  /* círculo activo (PNG del usuario: #0057D0 al 15 %) */
+  --oro-off: rgba(0, 0, 0, .6);     /* círculos inactivos (PNG del usuario: negro al 60 %) */
+  --line: #2b3446;        /* separadores de filas */
+  --tono-line: #505057;   /* borde de las cajas de la Matriz de Tono (mismo gris que los vectores) */
+  --ok: #5cd633; --bad: #e75149; --info: #679be2;
+}
+.page-superficie .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.page-superficie main { padding-bottom: clamp(64px, 6.6667vw, 128px); }
+
+/* ----- Encabezado «UX Writing» ----- */
+.page-superficie .ux-hero { padding-top: clamp(56px, 5.8333vw, 112px); text-align: center; }
+.page-superficie .ux-hero-title { margin: 0; font: 400 clamp(48px, 5.8333vw, 112px)/1.2 "Poppins", sans-serif; color: #fff; }
+.page-superficie .ux-hero-skip { margin-top: clamp(12px, 2.2917vw, 44px); }
+
+/* ----- Círculo de Oro ----- */
+.page-superficie .oro-row { display: grid; grid-template-columns: minmax(0, 565px) minmax(0, 1fr); align-items: center; gap: clamp(24px, 1.7188vw, 33px); margin-top: clamp(40px, 5.2083vw, 100px); }
+.page-superficie .oro-row--rev { grid-template-columns: minmax(0, 1fr) minmax(0, 565px); }
+.page-superficie .oro-row--rev .oro { order: 2; }
+.page-superficie .oro-row--rev .oro-text { order: 1; }
+.page-superficie .oro { position: relative; width: 100%; aspect-ratio: 1; }
+.page-superficie .oro-ring { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: var(--oro-off); }
+.page-superficie .oro-ring--que { width: 100%; height: 100%; }
+.page-superficie .oro-ring--como { width: 74.34%; height: 74.34%; }
+.page-superficie .oro-ring--porque { width: 44.07%; height: 44.07%; }
+.page-superficie .oro[data-activo="que"] .oro-ring--que,
+.page-superficie .oro[data-activo="como"] .oro-ring--como,
+.page-superficie .oro[data-activo="porque"] .oro-ring--porque { background: var(--oro-on); }
+.page-superficie .oro-lbl { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; font: 600 clamp(13px, 1.0417vw, 20px)/1 "Poppins", sans-serif; color: #fff; }
+.page-superficie .oro-ring--que > .oro-lbl { top: 5.2%; }
+.page-superficie .oro-ring--como > .oro-lbl { top: 8.1%; }
+.page-superficie .oro-ring--porque > .oro-lbl { top: 50%; transform: translate(-50%, -50%); }
+.page-superficie .oro[data-activo="que"] .oro-ring--que > .oro-lbl,
+.page-superficie .oro[data-activo="como"] .oro-ring--como > .oro-lbl,
+.page-superficie .oro[data-activo="porque"] .oro-ring--porque > .oro-lbl { color: var(--gold-t, #bca447); }
+.page-superficie .oro-text h3 { margin: 0 0 clamp(16px, 1.6667vw, 32px); font: 600 clamp(22px, 1.6667vw, 32px)/1.2 "Poppins", sans-serif; color: #bca447; }
+.page-superficie .oro-text p { margin: 0; font: italic 300 clamp(15px, 1.25vw, 24px)/1.5 "Poppins", sans-serif; color: #fff; }
+.page-superficie .oro-text p + p { margin-top: 1.5em; }
+.page-superficie .oro-text .hl { font-style: italic; font-weight: 600; }
+
+/* ----- Matrices (Voz y Guía de Estilo): tablas semánticas ----- */
+.page-superficie .mtx { width: 100%; margin-top: clamp(40px, 5.2083vw, 100px); border-collapse: collapse; table-layout: fixed; }
+.page-superficie .mtx th, .page-superficie .mtx td { padding: 0 clamp(8px, .8333vw, 16px); vertical-align: middle; font: 300 clamp(14px, 1.25vw, 24px)/1.5 "Poppins", sans-serif; color: #fff; }
+.page-superficie .mtx tr > :first-child { padding-left: 0; }
+.page-superficie .mtx tr > :last-child { padding-right: 0; }
+.page-superficie .mtx thead th, .page-superficie .mtx thead td { padding-bottom: clamp(24px, 3.125vw, 60px); }
+.page-superficie .mtx tbody tr { border-bottom: 1px solid var(--line); }
+.page-superficie .mtx tbody tr:last-child { border-bottom: 0; }
+.page-superficie .mtx tbody th, .page-superficie .mtx tbody td { padding-top: clamp(24px, 2.5vw, 48px); padding-bottom: clamp(24px, 2.5vw, 48px); }
+.page-superficie .mtx-card { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 1.25vw, 24px); min-height: clamp(52px, 4.4792vw, 86px); padding: 8px 16px; border-radius: 12px; background: var(--card-bg); text-align: center; font: 400 clamp(17px, 1.6667vw, 32px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .mtx-card img { width: clamp(20px, 1.6667vw, 32px); height: auto; flex-shrink: 0; }
+.page-superficie .mtx-card--ok { color: var(--ok); }
+.page-superficie .mtx-card--bad { color: var(--bad); }
+.page-superficie .mtx--voz td { text-align: center; }
+.page-superficie .mtx--guia .mtx-card { min-height: clamp(60px, 5.4167vw, 104px); }
+.page-superficie .mtx--guia tbody th { padding-left: clamp(16px, 1.6667vw, 32px); text-align: left; }
+.page-superficie .mtx--guia ul { margin: 0; padding-left: 1.1em; }
+.page-superficie .mtx--guia p { margin: 0; }
+
+/* ----- Matriz de Tono: vectores del usuario + cajas en % del lienzo 1666 × 640 ----- */
+.page-superficie .tono { margin-top: clamp(40px, 5.2083vw, 100px); }
+.page-superficie .tono-eje { margin: 0; font: 400 clamp(14px, 1.25vw, 24px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .tono-eje--arriba { margin: 0 0 clamp(16px, 1.875vw, 36px) clamp(0px, .7292vw, 14px); }
+.page-superficie .tono-eje--abajo { margin-top: clamp(16px, 1.875vw, 36px); }
+.page-superficie .tono-stage { position: relative; margin-left: 5.341%; }
+.page-superficie .tono-vectores { display: block; width: 100%; height: auto; }
+.page-superficie .tono-eje--x { position: absolute; right: 0; top: 42.5%; transform: translateY(-100%); }
+.page-superficie .tono-pasos { list-style: none; margin: 0; padding: 0; }
+.page-superficie .tono-paso { position: absolute; left: var(--x); top: var(--y); display: flex; align-items: center; gap: clamp(10px, 1.25vw, 24px); padding: .8em 1em; border: 2px solid var(--tono-line); border-radius: 12px; background: #010812; white-space: nowrap; font: 400 clamp(11px, 1.25vw, 24px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .tono-paso img { width: clamp(16px, 1.6667vw, 32px); height: auto; flex-shrink: 0; }
+.page-superficie .tono-nivel { display: none; }
+
+/* ----- Responsive ----- */
+@media (max-width: 900px) {
+  .page-superficie .oro-row, .page-superficie .oro-row--rev { grid-template-columns: minmax(0, 1fr); }
+  .page-superficie .oro-row--rev .oro, .page-superficie .oro-row--rev .oro-text { order: 0; }
+  .page-superficie .oro { max-width: 360px; margin: 0 auto; }
+
+  /* Tablas en bloques: cada fila es una tarjeta con su encabezado */
+  .page-superficie .mtx, .page-superficie .mtx tbody, .page-superficie .mtx tr, .page-superficie .mtx th, .page-superficie .mtx td { display: block; width: 100%; }
+  .page-superficie .mtx thead { display: none; }
+  .page-superficie .mtx tbody th, .page-superficie .mtx tbody td { padding: 8px 0; text-align: left; }
+  .page-superficie .mtx tbody tr { padding: 24px 0; }
+  .page-superficie .mtx tbody th .mtx-card { justify-content: flex-start; }
+  .page-superficie .mtx--guia tbody th { padding-left: 0; font-weight: 600; }
+  .page-superficie .mtx td[data-col]::before { content: attr(data-col); display: block; margin-bottom: 4px; font: 600 13px/1.3 "Inter", sans-serif; color: #b9bcc4; }
+}
+@media (max-width: 640px) {
+  .page-superficie .tono-vectores, .page-superficie .tono-eje { display: none; }
+  .page-superficie .tono-stage { margin-left: 0; }
+  .page-superficie .tono-pasos { display: flex; flex-direction: column; gap: 12px; }
+  .page-superficie .tono-paso { position: static; flex-wrap: wrap; white-space: normal; font-size: 16px; }
+  .page-superficie .tono-nivel { display: block; flex-basis: 100%; padding-left: calc(16px + 10px); font-size: 13px; color: #bca447; }
+}

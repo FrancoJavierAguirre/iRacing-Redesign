@@ -148,24 +148,42 @@
       "files": ["esqueleto.html", "esqueleto.css", "elementos.css", "estrategia.html", "alcance.html", "estructura.html", "estructura-tarea-1.html", "estructura-tarea-2.html", "5-elementos.html", "index.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
       "questions": [],
       "evidence": [
-        { "path": "esqueleto.html", "sha256": "d2691e3925412c566b0eda13d7c2e9e1fcd86ea705ee16394f9e19b117ce27e6" },
-        { "path": "esqueleto.css", "sha256": "5607760947fefbd2cd92a2ffae42278c11810bac191e344d406b09546aab7964" },
-        { "path": "elementos.css", "sha256": "9332e08e9fb03a9abcce4878c7953878dc0ee233ef85157e07591300c6e50ad2" },
-        { "path": "estrategia.html", "sha256": "06ca898e30dc80adf91e1e81bb7f5e61703bf17ca1ef4aaedc2bfcc990e497c8" },
-        { "path": "alcance.html", "sha256": "105024cc77aab8a3ee8adb6a325c11fee70fe9698ee52dc04be339ebc41c1d9c" },
-        { "path": "estructura.html", "sha256": "d3b13f1f14b4a97c87703b73968bf01d81e8d71744c4f34e09d34463ab7d2643" },
-        { "path": "estructura-tarea-1.html", "sha256": "69c9b3e871099bbb1c3c9c9e915d3f500714a89d056efe966e5a14e15e6a3981" },
-        { "path": "estructura-tarea-2.html", "sha256": "a4a4869f251e01f77c61814e45aa0a22e25d1d11c7fc38188df9f16c435ca442" },
-        { "path": "5-elementos.html", "sha256": "6846fcd19a26741cf92b110c8c6424dc0f88aad1d3bb491733098fffe34a26db" },
-        { "path": "index.html", "sha256": "395251d1ee087892c84909c676461a21c69948d8e8c5532dfccbe5092e90cbc7" },
-        { "path": "llms.txt", "sha256": "ee53c9964383c28079b2f4c8ec6de97e14279e597b3716d8848526bcc53a83bc" },
-        { "path": "docs/public/funcionalidades.md", "sha256": "f277bc04ec36dd978d4d589427010b46c583bd5bbb112f000876d45d600cbf08" },
-        { "path": "docs/tech/sistema.md", "sha256": "3c5d9953f064cc84273680c6abd184215a8554f8c7abe3015e32414f53a75a06" },
         { "path": "specs/0009-pagina-esqueleto/spec.md", "sha256": "faabeff2d0b9f51e897e1a30d829c9dcf52e98cbeb64a3cf312f1a2ab18db29d" },
         { "path": "specs/0009-pagina-esqueleto/tasks.md", "sha256": "b8b4dd432be431edf25de1e3ea259ebc18e068b4ec515e86b3fb655cf30896dc" }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front.",
+      "evidenceNote": "El código aprobado está en el commit 271af87; los archivos fuente cambiaron después por T10 (0010).",
       "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0009.md", "sha256": "59df8c62a06c3d071f7845e4bff093b591c181f2fc9271b2f5c3815b44be3608" } }]
+    },
+    {
+      "id": "T10",
+      "title": "Superficie, parte 1: UX Writing y links a Superficie",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0010) y specs/0010-superficie-ux-writing/spec.md.",
+      "dependsOn": ["T9"],
+      "files": ["superficie.html", "superficie.css", "styles.css", "elementos.css", "estrategia.html", "alcance.html", "estructura.html", "estructura-tarea-1.html", "estructura-tarea-2.html", "esqueleto.html", "5-elementos.html", "index.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "questions": [],
+      "evidence": [
+        { "path": "superficie.html", "sha256": "9bfbd3a40a3184ed549f8b23c4aafdd0ea98b73ec8dd5db507950f3daac1c58e" },
+        { "path": "superficie.css", "sha256": "e58398018f622b9d5da940c4583db7cd6f01f8f73f85b2d2ffe5b65c5a60c5ce" },
+        { "path": "elementos.css", "sha256": "bf155c291f26564884fc9e38b93324742adbc29a645b65b2354d7ac0631427cd" },
+        { "path": "estrategia.html", "sha256": "36432692e4a16b9138e4756ab6c8d5c9a12d1b7887da68b19f2e1258372857ec" },
+        { "path": "alcance.html", "sha256": "05ac7d638252b4bea9cfddf4eae88f27e39ff6b7b27f4e34a650afac1e2c985b" },
+        { "path": "estructura.html", "sha256": "aadc4f7589cfa913c7a2466c6b1c6f3bd12f02026cabd458013df9799b208d1c" },
+        { "path": "estructura-tarea-1.html", "sha256": "6e7f2c9839267f9611d05f870aec87bf471bed3550b6f584381eb0c30854f48d" },
+        { "path": "estructura-tarea-2.html", "sha256": "fa1c92a4d637b69360b449e165bb790af1f92b7671652c1295ed041d46ad1e6e" },
+        { "path": "esqueleto.html", "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386" },
+        { "path": "5-elementos.html", "sha256": "03a666fcd607f6e4ee2e2e1059b0443624f2ff6cbd812c60d03a8d3b781bc08e" },
+        { "path": "index.html", "sha256": "87b111edbaee330c87648bfa87606ed6bc13087738c5fef0aa73b5a0792d5792" },
+        { "path": "llms.txt", "sha256": "4704fb3e55a7daeab9c93ee051899a92477333824c412d022f4af9ad2e4366aa" },
+        { "path": "docs/public/funcionalidades.md", "sha256": "a377c0bc7dcb5ac037e466cc78fec7fcb1594d3ebbd992f0f37a357be3cf6acc" },
+        { "path": "docs/tech/sistema.md", "sha256": "b9083d99940d1610508913c107e7e76cf7dc3d51d8f74a257d65a12801023ef3" },
+        { "path": "specs/0010-superficie-ux-writing/spec.md", "sha256": "fcade7600f8a2cb38e89ea020ebcc45d81f7727079e8afd185e2ec3e9a4d818d" },
+        { "path": "specs/0010-superficie-ux-writing/tasks.md", "sha256": "c151f140b46b4485cef01006223da455bba345225760959e87653f81661dc06e" },
+        { "path": "styles.css", "sha256": "31fd8cc862dbf9214f8718348926c6dcc636aca5d6e7465e6fa651fa325070f8" }
+      ],
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front.",
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo (tras las correcciones del botón y del Círculo de Oro)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0010.md", "sha256": "90363487a70eac5f2016cd455555cb23a17c02c6e2cf1a4692c17df31280e7b0" } }]
     }
   ]
 }

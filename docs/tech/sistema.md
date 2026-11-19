@@ -25,6 +25,8 @@ estructura-tarea-2.html  Detalle de la Tarea 2 (misma plantilla, assets en asset
 estructura-tarea.css     Específico de body.page-tarea (detalles de tareas)
 esqueleto.html      Capa 4: Esqueleto (wireframes en media)
 esqueleto.css       Específico de body.page-esqueleto
+superficie.html     Capa 5: Superficie (por ahora, UX Writing)
+superficie.css      Específico de body.page-superficie
 script.js           Comportamiento del Home
 menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
 estructura.js       Tooltips de ayuda, switch Antes/Después y botones sin destino de estructura.html
@@ -41,12 +43,12 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 - **Escalado**: las medidas salen de un diseño a 1920 px y se convierten con `clamp(min, Xvw, max)`.
 - **Fondo fijo**: una capa con `position: fixed` en lugar de `background-attachment: fixed`, para que funcione en iOS (comentario en `styles.css`).
 - **Breakpoints**: `max-width: 1300px` (estrategia), `900px` (styles, elementos y estrategia), `640px` (styles, alcance: apila la matriz; estructura: árboles en lista indentada, que pasan a SVG con `@media (min-width: 641px)`) y `hover: none` (tarjetas en táctil).
-- **Botones**: clases `btn`, `btn--sm`, `btn--md`, `btn-primary` (naranja), `btn-info`, `btn-outline-info` (sin fondo, borde 2 px `#679be2`; «Ver más detalles»), `btn-blue`, `btn-source`; las medidas están en el README.
+- **Botones**: clases `btn`, `btn--sm`, `btn--md`, `btn-primary` (naranja), `btn-info`, `btn-outline-info` (sin fondo, borde 2 px `#679be2`; «Ver más detalles»), `btn-ghost-info` (igual, sin borde; «Saltar a Sistema de Diseño»), `btn-blue`, `btn-source`; las medidas están en el README.
 - **Placeholders**: `.media-placeholder[data-label]` dibuja un recuadro punteado con el nombre del asset esperado. Variantes de proporción: `ar-tall`, `ar-short`, `ar-cart`.
 
 ## Comportamiento (`script.js`)
 
-1. **Tarjetas de Proceso** (`.proceso-card`): el listener solo hace `console.log` con `data-step`. La navegación a Estrategia, Alcance, Estructura y Esqueleto sale de `onclick="location.href='…'"` inline en `index.html`. La tarjeta de Superficie no navega.
+1. **Tarjetas de Proceso** (`.proceso-card`): el listener solo hace `console.log` con `data-step`. La navegación a las 5 capas sale de `onclick="location.href='…'"` inline en `index.html`.
 2. **Videos bajo demanda**: un `IntersectionObserver` (threshold 0.25) reproduce `video.screenshot` y `video.stat-video` al entrar en pantalla y los pausa al salir. Esos videos usan `muted loop playsinline preload="none"`. Si no hay `IntersectionObserver`, se activa autoplay. El video del hero usa `autoplay` directamente.
 
 `5-elementos.html` no carga JS y `estrategia.html` y `alcance.html` solo cargan `menu-capas.js` (`estructura.html` suma `estructura.js`): la navegación es por anclas (`#estrategia`, `#encuestas`, …) con `scroll-margin-top`.
@@ -84,7 +86,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - **Árboles (corrección del QA):** en ≥ 641 px se muestran los SVG exportados de Figma con el texto convertido en curvas: `assets/tree-tarea-1.svg`, `assets/tree-tarea-2.svg` (1760 × 840), `assets/arquitectura-nueva.svg` y `assets/arquitectura-vieja.svg`. A los dos de arquitectura se les recortó el `viewBox` (`0 46 …`) para quitar el selector Antes/Después que traían dibujado. Son `img.tree-img` con `alt=""`. El contenido accesible y la vista ≤ 640 px son las listas `<ul>` anidadas (`.tree`, `tn-*`, `is-ok`/`is-bad` + `.sr-only`), visualmente ocultas en ≥ 641 px. Los contadores de respuestas van arriba del diagrama y «Ver más detalles» queda absoluto abajo a la derecha.
 - **Tooltips (HU3):** patrón disclosure. `button.help[aria-expanded][aria-controls]` abre un `div.tip[hidden]` posicionado en absoluto respecto de la card (16 px bajo el ícono, borde derecho alineado). Medidas: `#212121`, radio 16, padding 16, ancho `min(536px, …)`, Poppins 16. Se cierra con otro click, abriendo el otro, con un click afuera o con Escape (el foco vuelve al botón).
 - **Switch Antes/Después:** dos `button.seg-btn[aria-pressed][aria-controls]` alternan `hidden` en los paneles `#arq-antes` / `#arq-despues`. «Después» es el panel por defecto; cada panel tiene su SVG y su lista.
-- **Sin destino:** «Ver más detalles» y «Ver Esqueleto» son `<a href="#" data-sin-destino aria-disabled="true">`; `estructura.js` hace `preventDefault` para que no salten al tope.
+- **Sin destino (patrón):** los botones sin página usan `<a href="#…" data-sin-destino aria-disabled="true">` y `estructura.js` hace `preventDefault` para que no salten al tope. En 0005 eran «Ver más detalles» y «Ver Esqueleto»; hoy ya tienen destino.
 - Fuente de las medidas: `specs/0005-pagina-estructura/referencia-figma.jpg` (1920 × 8437, escala 1:1).
 ### Detalle de la Tarea 1 (`estructura-tarea-1.html` + `estructura-tarea.css`, spec 0007)
 
@@ -107,13 +109,21 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
   - se reutilizan `ico-lista.svg` e `ico-detalles-serie.svg`;
   - `ico-superficie-white.svg` es `icon-superficie.svg` en blanco.
 - **Links activados:** la opción Esqueleto del menú de capas de todas las páginas, «Ver Esqueleto» (Estructura y detalles de tareas), las tarjetas Esqueleto de «Siguiente elemento UX» (Estrategia, Alcance y Estructura), la tarjeta del Home (`onclick`) y, en 5-elementos, «Ver Esqueleto» y su tarjeta.
+### Página de Superficie (`superficie.html` + `superficie.css`, spec 0010, parte UX Writing)
+
+- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que cubre «Saltar a Sistema de Diseño» (`#sistema-de-diseno`, `a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» (`#valores`), dos secciones futuras.
+- **«Ver Prototipo»:** `a.topbar-action` con `target="_blank" rel="noopener"` hacia el prototipo de Figma, `assets/ico-play.svg` y texto `.sr-only` que avisa que se abre en una pestaña nueva.
+- **Círculo de Oro:** `.oro[data-activo]` con 3 `span.oro-ring` concéntricos de CSS (565, 420 y 249 px a 1920), apilados con ¿Por qué? arriba, ¿Cómo? en el medio y ¿Qué? abajo. Usan los colores de los PNG del usuario: activo `rgba(0, 87, 208, .15)` e inactivo `rgba(0, 0, 0, .6)`. Como son semitransparentes, el círculo de abajo se ve a través del de arriba. La etiqueta activa va en dorado. Los párrafos son Poppins 300 itálica de 24 px, y las frases doradas, Poppins 600 itálica (cargada en el link de fuentes). Es `aria-hidden`, porque el texto lo explica.
+- **Matriz de Voz y Guía de Estilo:** `table.mtx` semánticas (`th scope`) con encabezados de tarjeta (`.mtx-card`). En ≤ 900 px pasan a bloques y cada celda muestra `data-col` con `::before`.
+- **Matriz de Tono:** `assets/matriz-tono.svg` son los vectores del usuario (lienzo de 1666 × 640). Las cajas son `ol.tono-pasos > li` en orden de la trayectoria, posicionadas con `--x/--y` en % del lienzo. En ≤ 640 px se ocultan los vectores y aparece `.tono-nivel` con el tono de cada paso.
+- **Links activados:** la opción Superficie del menú de capas de todas las páginas, «Ver Superficie» de Esqueleto, las tarjetas de Superficie, la tarjeta del Home (`onclick`) y, en 5-elementos, «Ir a Superficie» y su tarjeta. Ya no quedan `href="#"` sueltos en el sitio.
 ## Integraciones externas (solo enlaces)
 
 | Servicio | Uso | Dónde |
 |---|---|---|
 | Google Fonts | Exo 2, Poppins, Inter | `<head>` de cada HTML |
 | Google Sheets | Fuente de los testimonios («Ver fuente») | `index.html` |
-| Figma | Prototipo («Probar prototipo») | `index.html` |
+| Figma | Prototipo («Probar prototipo», «Ver Prototipo») | `index.html`, `superficie.html` |
 | Twitch / globalracingleague.com | Canales de contacto de las encuestas | `estrategia.html` |
 
 No hay llamadas a APIs, autenticación, almacenamiento ni analítica.
@@ -137,7 +147,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Página de Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html`; recontar con `Grep 'href="#"'`.
+- Superficie: Sistema de Diseño (`#sistema-de-diseno`), Valores (`#valores`) y el resto de la página, incluido «Siguiente elemento UX».
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
@@ -157,6 +167,7 @@ Metadatos no visibles en el `<head>` de las 3 páginas y un `llms.txt` en la ra�
 | `estructura-tarea-1.html` | `Tarea 1: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 | `estructura-tarea-2.html` | `Tarea 2: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 | `esqueleto.html` | `Esqueleto — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
+| `superficie.html` | `Superficie — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 
 Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCreated: "2025"`, `author` (Person Franco Aguirre, Diseñador UX/UI) y `about` (iRacing, Diseño UX/UI). Sin `url`, `image` ni `sameAs`.
 

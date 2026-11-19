@@ -12,11 +12,11 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Página | Archivo | Estado |
 |---|---|---|
 | Home del case study | `index.html` | Implementado |
-| 5 Elementos UX (Jesse James Garrett) | `5-elementos.html` | Implementado; el CTA a Superficie todavía no lleva a ninguna parte |
+| 5 Elementos UX (Jesse James Garrett) | `5-elementos.html` | Implementado |
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
-| Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media); «Ver Superficie» todavía no lleva a ninguna parte |
-| Superficie | — | Pendiente (no existe) |
+| Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing implementado; Sistema de Diseño, Valores y el resto de la página pendientes |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -30,13 +30,13 @@ No hay cuentas, login, formularios ni datos de usuario.
    Los videos se reproducen solos, sin sonido y en bucle, solo mientras se ven en pantalla.
    CTA **«Probar prototipo»** → prototipo de Figma (pestaña nueva).
 5. **Objetivos**: objetivos de negocio (retener usuarios, aumentar compras) y de usuario (encontrar una carrera adecuada a su nivel, comprar fácil), la frase del problema (flujo de usuarios → frustración → churn) y 3 videos que lo ilustran.
-6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas. **«Estrategia», «Alcance», «Estructura» y «Esqueleto» navegan**; la otra todavía no hacen nada visible.
+6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas. **las 5 tarjetas navegan**; antes todavía no hacen nada visible.
 
 ## 5 Elementos UX (`5-elementos.html`)
 
 - Presenta a Jesse James Garrett y el modelo de 5 capas (de abstracto a concreto: Estrategia, Alcance, Estructura, Esqueleto, Superficie), con un diagrama de círculos y uno de capas.
 - Una sección por capa con su propósito y técnicas. Botones «Ir a…» para moverse entre secciones.
-- «Ver Estrategia», «Ver Alcance», «Ver Estructura» y «Ver Esqueleto» llevan a su página (también las tarjetas del final); lo de Superficie está pendiente.
+- «Ver Estrategia», «Ver Alcance», «Ver Estructura» y «Ver Esqueleto» llevan a su página (también las tarjetas del final); «Ir a Superficie» y su tarjeta llevan a Superficie.
 - Breadcrumb para volver al Home.
 
 ## Estrategia (`estrategia.html`)
@@ -65,7 +65,7 @@ Una sola sección, la **Matriz FVD** (factibilidad, viabilidad y deseabilidad), 
 - **Cuadrante 3** (arriba a la izquierda), 3 tarjetas: quitar columnas de la tabla de carreras para sumar el auto favorito, botón de registro como menú con más opciones y rediseño de la arquitectura de información para usuarios nuevos.
 - **Cuadrante 4** (abajo a la izquierda), 2 tarjetas: botón para abortar la carga del simulador y breadcrumb en lugar de modales.
 - **Mobile (640 px o menos):** los cuadrantes se apilan en orden 1, 2, 3, 4, cada uno con su número y una leyenda de texto que explica qué significa; los ejes se ocultan.
-- **Navegación:** breadcrumb con el menú de capas (Estrategia, Estructura y Esqueleto habilitadas; Superficie atenuada; Alcance no figura), botón azul «Ver Estructura» que lleva a `estructura.html` y cierre «Siguiente elemento UX» (Estamos acá: Alcance; Sigue acá: Estructura; también: Estrategia, Esqueleto y Superficie).
+- **Navegación:** breadcrumb con el menú de capas (Estrategia, Estructura, Esqueleto y Superficie habilitadas; Alcance no figura), botón azul «Ver Estructura» que lleva a `estructura.html` y cierre «Siguiente elemento UX» (Estamos acá: Alcance; Sigue acá: Estructura; también: Estrategia, Esqueleto y Superficie).
 
 ## Estructura (`estructura.html`)
 
@@ -87,7 +87,7 @@ Cuatro bloques con navegación interna («Ir a…»):
 **Mobile (640 px o menos):** los árboles se ven como listas con sangría por nivel, sin scroll horizontal.
 
 **Navegación:**
-- Breadcrumb con el menú de capas: Estrategia, Alcance y Esqueleto habilitadas; Superficie atenuada.
+- Breadcrumb con el menú de capas: todas las demás capas habilitadas.
 - Botón azul «Ver Esqueleto», que lleva a `esqueleto.html`.
 - Cierre «Siguiente elemento UX»: Estamos acá Estructura, Sigue acá Esqueleto, y también Estrategia, Alcance y Superficie.
 ## Detalle de la Tarea 1 (`estructura-tarea-1.html`)
@@ -123,11 +123,21 @@ Una sección, **Wireframes en Media** («Empezando el rediseño»), con 4 wirefr
 4. **Sección de autos:** nueva sección con los autos que compiten y la opción de elegir el favorito.
 
 **Navegación:**
-- Breadcrumb con el menú de capas: Estrategia, Alcance y Estructura habilitadas; Superficie atenuada.
-- Botón azul «Ver Superficie», que todavía no lleva a ninguna parte.
-- Cierre «Siguiente elemento UX»: Estamos acá Esqueleto, Sigue acá Superficie, y también Estrategia, Alcance y Estructura.
+- Breadcrumb con el menú de capas: todas las demás capas habilitadas.
+- Botón azul «Ver Superficie», que lleva a `superficie.html`.
+- Cierre «Siguiente elemento UX»: Estamos acá Esqueleto, Sigue acá Superficie (lleva a `superficie.html`), y también Estrategia, Alcance y Estructura.
 
 El menú de capas de las demás páginas, sus tarjetas, el Home y 5-elementos ya enlazan a Esqueleto.
+## Superficie (`superficie.html`) — parte UX Writing
+
+Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que todavía no hace nada porque esa sección no existe. Arriba a la derecha, «Ver Prototipo» abre el prototipo de Figma en una pestaña nueva.
+
+1. **Círculo de Oro** («Identidad de la marca»): tres bloques, ¿Por qué?, ¿Cómo? y ¿Qué?. Cada uno tiene el diagrama de círculos con su anillo resaltado y el texto que lo explica.
+2. **Matriz de Voz** («Definiendo la personalidad»): tabla con Autenticidad, Claridad y Conciso aplicados a concepto, verbosidad, vocabulario, gramática, puntuación y uso de mayúsculas.
+3. **Matriz de Tono** («Cómo se le habla al piloto»): sobre la trayectoria del usuario, Log in y Carrito de compras van en tono informativo y serio, y Lista de carreras y Detalles de carrera en tono casual y directo.
+4. **Guía de Estilo** («Cómo se le habla al piloto»): reglas y buenas y malas prácticas para títulos de columnas, filtros y tags, numeración, títulos y subtítulos, y botones. «Ir a Valores» todavía no hace nada.
+
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Todavía no tiene «Siguiente elemento UX».
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.

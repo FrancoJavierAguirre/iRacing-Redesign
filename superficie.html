@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superficie — Rediseño iRacing</title>
+<meta name="description" content="Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Superficie — Rediseño iRacing">
+<meta property="og:description" content="Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.">
+<meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Superficie — Rediseño iRacing">
+<meta name="twitter:description" content="Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Superficie — Rediseño iRacing",
+  "description": "Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.",
+  "inLanguage": "es",
+  "dateCreated": "2025",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "Diseño UX/UI" } ],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "iRacing — Rediseño UX/UI",
+    "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Rediseño UX/UI", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Superficie" }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="elementos.css">
+<link rel="stylesheet" href="superficie.css">
+</head>
+<body class="page-elementos page-superficie">
+
+<header class="topbar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="crumb-parent">Rediseño UX/UI</span></a>
+    <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="topbar-capas breadcrumb-capas" data-capas>
+      <button type="button" class="capas-trigger current" aria-current="page" aria-expanded="false" aria-controls="capas-menu" data-capas-trigger>
+        <span>Superficie</span>
+        <img class="capas-chevron capas-chevron--down" src="assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="capas-menu" role="group" aria-label="Capas del proceso UX" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" href="estrategia.html"><img src="assets/icon-estrategia.svg" alt="" width="16" height="16"><span>Estrategia</span></a></li>
+          <li><a class="capas-item" href="alcance.html"><img src="assets/icon-alcance.svg" alt="" width="16" height="16"><span>Alcance</span></a></li>
+          <li><a class="capas-item" href="estructura.html"><img src="assets/icon-estructura.svg" alt="" width="16" height="16"><span>Estructura</span></a></li>
+          <li><a class="capas-item" href="esqueleto.html"><img src="assets/icon-esqueleto.svg" alt="" width="16" height="16"><span>Esqueleto</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1 class="topbar-title">Superficie</h1>
+  <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&amp;viewport=-144%2C-445%2C0.3&amp;t=RPpY4J93c7m8Cpl7-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=8618%3A232773&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn--sm btn-blue topbar-action"><img class="btn-icon" src="assets/ico-play.svg" alt="">Ver Prototipo<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+</header>
+
+<main>
+  <section class="ux-hero" aria-labelledby="ux-writing-titulo">
+    <div class="container">
+      <h2 class="ux-hero-title" id="ux-writing-titulo">UX Writing</h2>
+      <a href="#sistema-de-diseno" class="btn btn--md btn-ghost-info ux-hero-skip" data-sin-destino>Saltar a Sistema de Diseño</a>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="circulo-de-oro" aria-labelledby="circulo-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="circulo-titulo">Círculo de Oro</h2><p class="sec-sub">Identidad de la marca</p></div>
+        <div class="sec-nav"><a href="#matriz-de-voz" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Matriz de Voz</a></div>
+      </div>
+
+      <div class="oro-row">
+        <div class="oro" data-activo="porque" aria-hidden="true">
+          <span class="oro-ring oro-ring--que"><span class="oro-lbl">¿Qué?</span></span>
+          <span class="oro-ring oro-ring--como"><span class="oro-lbl">¿Cómo?</span></span>
+          <span class="oro-ring oro-ring--porque"><span class="oro-lbl">¿Por qué?</span></span>
+        </div>
+        <div class="oro-text">
+          <h3>¿Por qué?</h3>
+          <p>Inspiramos a las personas a experimentar la emoción y la exigencia del automovilismo competitivo, sin importar su nivel o ubicación, porque creemos que la pasión por correr debe ser accesible para todos.</p>
+          <p>iRacing existe para democratizar el acceso a las carreras reales a través del poder de la simulación. Su propósito es <span class="hl">recrear la experiencia automovilística</span> con tal fidelidad y profesionalismo que tanto amateurs como profesionales puedan competir, crecer y conectarse en un entorno justo, desafiante y global.</p>
+        </div>
+      </div>
+
+      <div class="oro-row oro-row--rev">
+        <div class="oro" data-activo="como" aria-hidden="true">
+          <span class="oro-ring oro-ring--que"><span class="oro-lbl">¿Qué?</span></span>
+          <span class="oro-ring oro-ring--como"><span class="oro-lbl">¿Cómo?</span></span>
+          <span class="oro-ring oro-ring--porque"><span class="oro-lbl">¿Por qué?</span></span>
+        </div>
+        <div class="oro-text">
+          <h3>¿Cómo?</h3>
+          <p>Recreamos el automovilismo con precisión extrema mediante tecnología de simulación avanzada, reglas deportivas reales, una comunidad global organizada y un equipo con experiencia en el automovilismo profesional.</p>
+          <p>Organizamos y gestionamos series oficiales en tiempo real empleando un <span class="hl">sistema de licencias</span> y <span class="hl">emparejamiento</span> por habilidad-seguridad. Además, utilizamos datos reales de pista y telemetría para replicar el comportamiento de los autos.</p>
+        </div>
+      </div>
+
+      <div class="oro-row">
+        <div class="oro" data-activo="que" aria-hidden="true">
+          <span class="oro-ring oro-ring--que"><span class="oro-lbl">¿Qué?</span></span>
+          <span class="oro-ring oro-ring--como"><span class="oro-lbl">¿Cómo?</span></span>
+          <span class="oro-ring oro-ring--porque"><span class="oro-lbl">¿Por qué?</span></span>
+        </div>
+        <div class="oro-text">
+          <h3>¿Qué?</h3>
+          <p>Ofrecemos una plataforma de <span class="hl">simulación de carreras</span> online que permite competir en más de 80 series oficiales y miles de ligas privadas con autos, circuitos y físicas que replican el automovilismo real.</p>
+          <p>Brindamos una plataforma integral de series oficiales, ligas privadas y eventos personalizados accesible con un PC, conexión a internet y un controlador compatible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="matriz-de-voz" aria-labelledby="voz-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="voz-titulo">Matriz de Voz</h2><p class="sec-sub">Definiendo la personalidad</p></div>
+        <div class="sec-nav"><a href="#circulo-de-oro" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Círculo de Oro</a><a href="#matriz-de-tono" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Matriz de Tono</a></div>
+      </div>
+      <table class="mtx mtx--voz">
+        <thead>
+          <tr><td></td><th scope="col"><span class="mtx-card">Autenticidad</span></th><th scope="col"><span class="mtx-card">Claridad</span></th><th scope="col"><span class="mtx-card">Conciso</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><span class="mtx-card">Concepto</span></th><td data-col="Autenticidad">Servicio y productos fieles a la realidad.</td><td data-col="Claridad">Que el usuario entienda cada detalle del servicio y producto.</td><td data-col="Conciso">El mensaje debe ser corto dada la gran cantidad de información disponible.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Verbosidad</span></th><td data-col="Autenticidad">Cuánto más mejor referido a circuitos y autos.</td><td data-col="Claridad">Las frases correctas.</td><td data-col="Conciso">Las palabras justas.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Vocabulario</span></th><td data-col="Autenticidad">Casual y elocuente.</td><td data-col="Claridad">Simple y empático.</td><td data-col="Conciso">Informativo y serio.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Gramática</span></th><td data-col="Autenticidad">Técnico y con jerga automovilística.</td><td data-col="Claridad">Palabras simples.</td><td data-col="Conciso">Palabras cortas.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Puntuación</span></th><td data-col="Autenticidad">Se aplican todos los signos de puntuación.</td><td data-col="Claridad">Todos menos “¿ ? ”</td><td data-col="Conciso">Todos menos “¿ ? ”</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Uso de mayúsculas</span></th><td data-col="Autenticidad">Se usan al inicio de las frases, nombres propios.</td><td colspan="2" data-col="Claridad y Conciso">Se usan al inicio de las frases, nombres propios y términos importantes.<br>Se utilizan para remarcar tiempo y formato PM/AM</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="matriz-de-tono" aria-labelledby="tono-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="tono-titulo">Matriz de Tono</h2><p class="sec-sub">Cómo se le habla al piloto</p></div>
+        <div class="sec-nav"><a href="#matriz-de-voz" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Matriz de Voz</a><a href="#guia-de-estilo" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Guía de Estilo</a></div>
+      </div>
+      <div class="tono">
+        <p class="tono-eje tono-eje--arriba">Casual / Directo</p>
+        <div class="tono-stage">
+          <img class="tono-vectores" src="assets/matriz-tono.svg" alt="" width="1666" height="640">
+          <p class="tono-eje tono-eje--x">Trayectoria del usuario</p>
+          <ol class="tono-pasos" aria-label="Tono en cada paso de la trayectoria del usuario">
+            <li class="tono-paso" style="--x:11.82%;--y:66.41%"><img src="assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Log in</span><span class="tono-nivel">Informativo / Serio</span></li>
+            <li class="tono-paso" style="--x:17.59%;--y:21.09%"><img src="assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Lista de carreras</span><span class="tono-nivel">Casual / Directo</span></li>
+            <li class="tono-paso" style="--x:47.24%;--y:21.09%"><img src="assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Detalles de carrera</span><span class="tono-nivel">Casual / Directo</span></li>
+            <li class="tono-paso" style="--x:58.88%;--y:66.41%"><img src="assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Carrito de compras</span><span class="tono-nivel">Informativo / Serio</span></li>
+          </ol>
+        </div>
+        <p class="tono-eje tono-eje--abajo">Informativo / Serio</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="guia-de-estilo" aria-labelledby="guia-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="guia-titulo">Guía de Estilo</h2><p class="sec-sub">Cómo se le habla al piloto</p></div>
+        <div class="sec-nav"><a href="#matriz-de-tono" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Matriz de Tono</a><a href="#valores" class="btn btn--md btn-info" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Valores</a></div>
+      </div>
+      <table class="mtx mtx--guia">
+        <thead>
+          <tr><th scope="col"><span class="mtx-card">Contexto</span></th><th scope="col"><span class="mtx-card">Reglas</span></th><th scope="col"><span class="mtx-card mtx-card--ok"><img src="assets/ico-check-green.svg" alt="" width="32" height="32">Buenas prácticas</span></th><th scope="col"><span class="mtx-card mtx-card--bad"><img src="assets/ico-cross-red.svg" alt="" width="32" height="32">Malas prácticas</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Títulos de columnas</th><td data-col="Reglas">1 palabra o iniciales de términos.</td><td data-col="Buenas prácticas"><ul><li>Cars</li><li>Track</li><li>MPR</li></ul></td><td data-col="Malas prácticas"><ul><li>“Minimum Race Participation”</li><li>“Logo and Serie”</li><li>“Event Start”</li></ul></td></tr>
+          <tr><th scope="row">Filtros y tags</th><td data-col="Reglas">Máximo 2 palabras. Se puede usar abreviaciones e íconos.</td><td data-col="Buenas prácticas"><ul><li>“Class A”</li><li>“Sport Cars”</li><li>“Ranked”</li></ul></td><td data-col="Malas prácticas"><ul><li>“Race open soon”</li><li>“Fixed setup race”</li><li>“Open wheel car”</li></ul></td></tr>
+          <tr><th scope="row">Numeración</th><td data-col="Reglas">Ningún número con palabras</td><td data-col="Buenas prácticas"><ul><li>10:45 PM</li><li>4 Cars</li><li>25 Drivers</li></ul></td><td data-col="Malas prácticas"><ul><li>“Four Cars”</li><li>“Ten percent of rain”</li><li>“Eleven drivers”</li></ul></td></tr>
+          <tr><th scope="row">Títulos y subtítulos</th><td data-col="Reglas">Titulos cortos y claros sobre la sección.</td><td data-col="Buenas prácticas"><ul><li>“Available Sessions”</li><li>“Schedule”</li></ul></td><td data-col="Malas prácticas"><p>“You are eligible to compete, but you need to license Shell V-Power Motorsport Park at The Bend”</p></td></tr>
+          <tr><th scope="row">Botones</th><td data-col="Reglas">3 palabras máximo. Deben tener un verbo.</td><td data-col="Buenas prácticas"><ul><li>“Add to Cart”</li><li>“Register”</li><li>“Select Car”</li></ul></td><td data-col="Malas prácticas"><ul><li>“Register for the next race”</li><li>“More ways to race”</li><li>“Create a hosted session”</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="menu-capas.js" defer></script>
+<script src="estructura.js" defer></script>
+</body>
+</html>
