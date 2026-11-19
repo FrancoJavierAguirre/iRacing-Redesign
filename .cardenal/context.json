@@ -1,24 +1,23 @@
 {
   "schemaVersion": 1,
   "sources": [
-    { "id": "u-0007-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-18 (/feature): detalles de la Tarea 1 según la imagen de referencia (Tarea 1.png), con los íconos de estadísticas (Éxito/Fallo directo/indirecto), las imágenes de estadísticas, el ícono de la leyenda del pietree recoloreado como en la imagen y la imagen del pietree" },
-    { "id": "s-referencia", "kind": "file", "reference": "specs/0007-detalle-tarea-1/referencia-figma.jpg", "sha256": "372939ebb202190c5e297bbc639ab33ceed7166b6a466e4f7fc022662054097a" },
-    { "id": "s-estructura-js", "kind": "file", "reference": "estructura.js", "sha256": "e183b0c733ad2a50687c809c3bef2a4197b08e39402c0683fcdfc5f2e6d2ac6a" }
+    { "id": "u-0008-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): página de la Tarea 2 según la imagen de referencia (Tarea 2.png), con las imágenes de estadísticas y el árbol del pietree" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0008-detalle-tarea-2/referencia-figma.jpg", "sha256": "7be6a224851560922a7553a8b3f9ca64c6a6ef8fbfab06ad7e57bc992ad1131e" },
+    { "id": "s-tarea-1", "kind": "file", "reference": "estructura-tarea-1.html", "sha256": "53e2c2e3f68a79cc87bd3f6481ea0b63f6770a7164e64c7953dae0d8aee343f6" }
   ],
   "facts": [
-    { "id": "o-design", "area": "product", "statement": "La referencia muestra la página Tarea 1: breadcrumb 'Rediseño UX/UI > Estructura ⌄ > Tarea 1', título 'Tarea 1', 'Ver Esqueleto'; enunciado centrado; sección Estadísticas con leyenda de 4 ítems a la izquierda y capturas Success, Directness, torta y tabla a la derecha; sección Pietree con leyenda de 6 ítems y la imagen del pietree. No tiene 'Siguiente elemento UX'.", "status": "observed", "source": "s-referencia" },
-    { "id": "o-tecnico", "area": "technical", "statement": "estructura.js está protegido ante nodos ausentes y su manejador [data-sin-destino] se puede reutilizar en la página de detalle junto con menu-capas.js.", "status": "observed", "source": "s-estructura-js" },
-    { "id": "d-assets", "area": "product", "statement": "Los íconos de estadísticas van a la izquierda de cada texto; el ícono del pietree se recolorea según la referencia; las capturas de UXtweak son las imágenes del usuario.", "status": "confirmed", "source": "u-0007-request" },
-    { "id": "p-pagina", "area": "technical", "statement": "Supuesto: archivo estructura-tarea-1.html con estilos en estructura-tarea.css (reutilizable para la Tarea 2); 'Ver más detalles' de la Tarea 1 apunta a ella.", "status": "proposed" }
+    { "id": "o-design", "area": "product", "statement": "La referencia de la Tarea 2 tiene la misma estructura que la de la Tarea 1 (breadcrumb de 3 niveles, enunciado, Estadísticas con 4 ítems y 4 capturas, Pietree con 6 ítems e imagen), con los datos y el enunciado de la Tarea 2.", "status": "observed", "source": "s-referencia" },
+    { "id": "d-assets", "area": "product", "statement": "Las capturas de estadísticas y el pietree de la Tarea 2 son las imágenes del usuario; el diseño es el de la referencia de la Tarea 2.", "status": "confirmed", "source": "u-0008-request" },
+    { "id": "o-plantilla", "area": "technical", "statement": "estructura-tarea-1.html y estructura-tarea.css (0007) sirven de plantilla: solo cambian textos, alt, SEO y la carpeta de assets.", "status": "observed", "source": "s-tarea-1" }
   ],
   "questions": [],
   "change": {
-    "actor": "Lector del portfolio que quiere ver los resultados completos de la Tarea 1 del tree testing",
-    "problem": "'Ver más detalles' de la Tarea 1 no lleva a ninguna parte y las estadísticas y el pietree no se pueden ver.",
-    "outcome": "Existe la página de detalle de la Tarea 1, fiel a la referencia, enlazada desde Estructura.",
-    "scope": "Incluye: estructura-tarea-1.html, estructura-tarea.css, íconos y capturas, link desde Estructura, SEO, llms.txt y docs. Excluye: detalle de la Tarea 2 y gráficos interactivos.",
-    "acceptance": "1) La página se ve como la referencia a 1920 px. 2) Íconos y colores de las leyendas como en la referencia. 3) 'Ver más detalles' de la Tarea 1 lleva a la página; menú de capas y breadcrumb funcionan. 4) Columnas apiladas en ≤ 900 px sin scroll horizontal. 5) SEO, llms.txt y docs actualizados; consola limpia.",
-    "valueSignal": "El lector ve la evidencia cuantitativa detrás de las conclusiones del tree testing.",
-    "evidence": ["o-design", "o-tecnico", "d-assets"]
+    "actor": "Lector del portfolio que quiere ver los resultados completos de la Tarea 2 del tree testing",
+    "problem": "'Ver más detalles' de la Tarea 2 no lleva a ninguna parte.",
+    "outcome": "Existe estructura-tarea-2.html, fiel a la referencia y enlazada desde Estructura.",
+    "scope": "Incluye: estructura-tarea-2.html, capturas en assets/tarea-2/, link desde Estructura, SEO, llms.txt y docs. Excluye: cambios a la plantilla.",
+    "acceptance": "1) La página se ve como la referencia a 1920 px. 2) 'Ver más detalles' de la Tarea 2 lleva a la página y la flecha vuelve a Estructura. 3) Responsive como la Tarea 1. 4) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector compara los resultados de las dos tareas.",
+    "evidence": ["o-design", "o-plantilla", "d-assets"]
   }
 }

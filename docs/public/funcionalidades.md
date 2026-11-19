@@ -75,7 +75,7 @@ Cuatro bloques con navegación interna («Ir a…»):
    - una tarjeta con el enunciado;
    - un ícono de ayuda (?) que abre una nota. La nota se cierra con un click afuera, con otro click en el ícono o con Escape;
    - el árbol de navegación original de iRacing, con las respuestas correctas en verde y las incorrectas en rojo. Tarea 1: 7 correctas y 3 incorrectas. Tarea 2: 10 correctas;
-   - un botón «Ver más detalles». En la Tarea 1 abre su página de detalle; en la Tarea 2 todavía no lleva a ninguna parte.
+   - un botón «Ver más detalles» que abre la página de detalle de esa tarea.
 
    Cierra con 3 **Conclusiones**: nomenclatura confusa, arquitectura ambigua y categorías mal contenidas.
 3. **Arquitectura Nueva**: árbol propuesto con 7 categorías principales; Racing agrupa Official, Hosted, Leagues, Time Attack, AI Single Player, Results & Stats y Replays. Un selector «Antes / Después» alterna entre ese árbol («Después», por defecto) y el árbol original de iRacing («Antes»).
@@ -100,6 +100,14 @@ Se abre desde «Ver más detalles» de la Tarea 1 en Estructura. El breadcrumb e
 3. **Pietree** («Representación visual del trayecto del usuario»): la leyenda de los 6 colores (dirección correcta, incorrecta, duda, se volvió, nominó la respuesta y se saltó la tarea) y la imagen del pietree.
 
 Los gráficos son imágenes con su texto alternativo. En pantallas de 900 px o menos, las columnas se apilan.
+## Detalle de la Tarea 2 (`estructura-tarea-2.html`)
+
+Tiene la misma estructura y navegación que el detalle de la Tarea 1, con los datos de la Tarea 2 (comprar el auto):
+- éxito 100 % (5 directos y 5 indirectos), sin fallos;
+- directness 50 %;
+- pietree del camino Shop › Content › Cars › Car Info.
+
+La flecha del breadcrumb vuelve a Estructura.
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.

@@ -22,6 +22,7 @@
 - [Alcance](alcance.html): segunda capa del proceso. Presenta la Matriz FVD (factibilidad, viabilidad y deseabilidad), que ordena 12 soluciones en 4 cuadrantes según qué tan deseables y factibles son. El cuadrante 1 (muy deseable y muy factible, máxima prioridad) reúne 5: ícono de carrito junto al perfil, pagos dentro de la UI, nueva vista License Progress, colorear autos y pistas que hay que comprar, y botón de registro convertido en menú. Cuadrante 2: nueva sección “Cars” y mensajes de error con solución práctica. Cuadrante 3: quitar columnas de la tabla de carreras para sumar el auto favorito, botón de registro como menú con más opciones y rediseño de la arquitectura de información para usuarios nuevos. Cuadrante 4: botón para abortar la carga del simulador y breadcrumb en lugar de modales.
 - [Estructura](estructura.html): tercera capa del proceso. Muestra la arquitectura de información actual de iRacing (capturas de la UI original que se recorren haciendo click en su menú lateral), un tree testing con UXtweak a 10 usuarios y 2 tareas (Tarea 1, encontrar la primera carrera: 7 respuestas correctas y 3 incorrectas; Tarea 2, comprar el auto: 10 correctas), 3 conclusiones (nomenclatura confusa, arquitectura ambigua, categorías mal contenidas), la arquitectura nueva con un switch Antes/Después (Racing agrupa Official, Hosted, Leagues, Time Attack, AI Single Player, Results & Stats y Replays; Teams, Spectate, My Content, Home, Shop y Profile pasan al primer nivel) y el taskflow del piloto Sergio Barrientos para las dos tareas.
 - [Detalle de la Tarea 1](estructura-tarea-1.html): resultados de la Tarea 1 del tree testing. Éxito 70 % (7 de 10: 1 directo y 6 indirectos), fallo 30 % (1 directo y 2 indirectos) y directness 20 %. Incluye el pietree con el trayecto de los usuarios: la mayoría entra por Racing y se reparte entre Multiplayer y Single Player.
+- [Detalle de la Tarea 2](estructura-tarea-2.html): resultados de la Tarea 2 del tree testing (comprar el auto). Éxito 100 % (10 de 10: 5 directos y 5 indirectos), sin fallos, y directness 50 %. Incluye el pietree: todos van por Shop › Content › Cars hasta Car Info, con algunos desvíos por More y Tracks.
 
 ## Las 6 comparativas Antes/Después
 
@@ -40,8 +41,8 @@ Cada comparativa de `index.html` muestra en video la plataforma antes y después
 - `5-elementos.html`: completa en su contenido; los botones para ir a las capas Esqueleto y Superficie todavía no llevan a ninguna página.
 - `estrategia.html`: el texto está completo; las imágenes de hallazgos y escenarios son todavía recuadros de reemplazo; «Ver respuestas» abre la planilla de respuestas de la encuesta.
 - `alcance.html`: completa.
-- `estructura.html`: completa; «Ver más detalles» de la Tarea 1 lleva a `estructura-tarea-1.html`. El de la Tarea 2 y «Ver Esqueleto» todavía no llevan a ninguna página.
-- `estructura-tarea-1.html`: completa; los gráficos son capturas de UXtweak.
+- `estructura.html`: completa; «Ver más detalles» lleva al detalle de cada tarea. «Ver Esqueleto» todavía no lleva a ninguna página.
+- `estructura-tarea-1.html` y `estructura-tarea-2.html`: completas; los gráficos son capturas de UXtweak.
 - Las páginas de Esqueleto y Superficie todavía no existen.
 
 ## Enlaces
@@ -52,4 +53,5 @@ Cada comparativa de `index.html` muestra en video la plataforma antes y después
 - [Alcance](alcance.html)
 - [Estructura](estructura.html)
 - [Detalle de la Tarea 1](estructura-tarea-1.html)
+- [Detalle de la Tarea 2](estructura-tarea-2.html)
 - [Prototipo en Figma](https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1)

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarea 2: resultados del tree testing — Rediseño iRacing</title>
+<meta name="description" content="Resultados de la Tarea 2 del tree testing de iRacing: 100 % de éxito, 50 % de directness y el pietree del camino hasta el auto. Case study de Franco Aguirre.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tarea 2: resultados del tree testing — Rediseño iRacing">
+<meta property="og:description" content="Resultados de la Tarea 2 del tree testing de iRacing: 100 % de éxito, 50 % de directness y el pietree del camino hasta el auto. Case study de Franco Aguirre.">
+<meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tarea 2: resultados del tree testing — Rediseño iRacing">
+<meta name="twitter:description" content="Resultados de la Tarea 2 del tree testing de iRacing: 100 % de éxito, 50 % de directness y el pietree del camino hasta el auto. Case study de Franco Aguirre.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Tarea 2: resultados del tree testing — Rediseño iRacing",
+  "description": "Resultados de la Tarea 2 del tree testing de iRacing: 100 % de éxito, 50 % de directness y el pietree del camino hasta el auto. Case study de Franco Aguirre.",
+  "inLanguage": "es",
+  "dateCreated": "2025",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "Tree testing" } ],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "iRacing — Rediseño UX/UI",
+    "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Rediseño UX/UI", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Estructura", "item": "estructura.html" },
+      { "@type": "ListItem", "position": 3, "name": "Tarea 2" }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="elementos.css">
+<link rel="stylesheet" href="estructura-tarea.css">
+</head>
+<body class="page-elementos page-tarea">
+
+<header class="topbar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="estructura.html#tree-testing" class="crumb-back" aria-label="Volver a Estructura"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="index.html" class="crumb-home"><span class="crumb-parent">Rediseño UX/UI</span></a>
+    <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="topbar-capas breadcrumb-capas" data-capas>
+      <button type="button" class="capas-trigger" aria-expanded="false" aria-controls="capas-menu" data-capas-trigger>
+        <span>Estructura</span>
+        <img class="capas-chevron capas-chevron--down" src="assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="capas-menu" role="group" aria-label="Capas del proceso UX" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" href="estrategia.html"><img src="assets/icon-estrategia.svg" alt="" width="16" height="16"><span>Estrategia</span></a></li>
+          <li><a class="capas-item" href="alcance.html"><img src="assets/icon-alcance.svg" alt="" width="16" height="16"><span>Alcance</span></a></li>
+          <li><a class="capas-item" href="estructura.html"><img src="assets/icon-estructura.svg" alt="" width="16" height="16"><span>Estructura</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-esqueleto.svg" alt="" width="16" height="16"><span>Esqueleto</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-superficie.svg" alt="" width="16" height="16"><span>Superficie</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <svg class="sep sep--tarea" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="current" aria-current="page">Tarea 2</span>
+  </nav>
+  <h1 class="topbar-title">Tarea 2</h1>
+  <a href="#" class="btn btn--sm btn-blue topbar-action" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-esqueleto-white.svg" alt="">Ver Esqueleto</a>
+</header>
+
+<main>
+  <div class="container">
+    <p class="tarea-q">“Te das cuenta que para correr la carrera que elegiste y te gusta tienes que <span class="hl">comprar el auto</span> para participar. ¿A dónde irías para comprar el auto? ”</p>
+  </div>
+
+  <section class="layer-sec" id="estadisticas" aria-labelledby="estadisticas-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="estadisticas-titulo">Estadísticas</h2><p class="sec-sub">Resumen del éxito en la tarea</p></div>
+        <div class="sec-nav"><a href="#pietree" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Pietree</a></div>
+      </div>
+      <div class="tarea-grid tarea-grid--stats">
+        <ul class="leyenda leyenda--stats">
+          <li><img src="assets/ico-exito-directo.svg" alt="" width="40" height="40"><p><strong class="c-exito-directo">Éxito directo.</strong> El usuario fue directo a la respuesta correcta.</p></li>
+          <li><img src="assets/ico-exito-indirecto.svg" alt="" width="40" height="40"><p><strong class="c-exito-indirecto">Éxito indirecto.</strong> El usuario tomó un camino diferente y se volvió antes de ir a la respuesta correcta.</p></li>
+          <li><img src="assets/ico-fallo-directo.svg" alt="" width="40" height="40"><p><strong class="c-fallo-directo">Fallo directo.</strong> El usuario fue directo a una respuesta incorrecta.</p></li>
+          <li><img src="assets/ico-fallo-indirecto.svg" alt="" width="40" height="40"><p><strong class="c-fallo-indirecto">Fallo indirecto.</strong> El usuario tomó un camino diferente y se volvió antes de ir a una respuesta incorrecta.</p></li>
+        </ul>
+        <div class="stats">
+          <img class="stat stat--success" src="assets/tarea-2/success.png" alt="Gráfico de éxito de UXtweak: 100 % de éxito, con límite inferior de 75,1 % y superior de 100 %." width="290" height="286">
+          <img class="stat stat--directness" src="assets/tarea-2/directness.png" alt="Gráfico de directness de UXtweak: 50 %, con límite inferior de 23,7 % y superior de 76,3 %." width="278" height="274">
+          <img class="stat stat--torta" src="assets/tarea-2/torta-resultados.png" alt="Gráfico de torta: éxito directo 50 % y éxito indirecto 50 %; sin fallos." width="294" height="282">
+          <img class="stat stat--tabla" src="assets/tarea-2/tabla-resultados.png" alt="Tabla de resultados: éxito 10 usuarios (100 %), 5 directos (50 %) y 5 indirectos (50 %); fallo 0 usuarios (0 %)." width="886" height="246">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="pietree" aria-labelledby="pietree-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="pietree-titulo">Pietree</h2><p class="sec-sub">Representación visual del trayecto del usuario</p></div>
+        <div class="sec-nav"><a href="#estadisticas" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Estadísticas</a></div>
+      </div>
+      <div class="tarea-grid tarea-grid--pietree">
+        <ul class="leyenda leyenda--pietree">
+          <li><img src="assets/ico-pietree-correcta.svg" alt="" width="45" height="40"><p>El usuario fue por la dirección correcta.</p></li>
+          <li><img src="assets/ico-pietree-incorrecta.svg" alt="" width="45" height="40"><p>El usuario fue por la dirección incorrecta.</p></li>
+          <li><img src="assets/ico-pietree-duda.svg" alt="" width="45" height="40"><p>El usuario interactuó con un nodo nuevamente (cerrado o abierto de nuevo). Un signo de duda.</p></li>
+          <li><img src="assets/ico-pietree-volvio.svg" alt="" width="45" height="40"><p>El usuario se volvió. Un signo de que el usuario no encontró lo que buscaba.</p></li>
+          <li><img src="assets/ico-pietree-nomino.svg" alt="" width="45" height="40"><p>El usuario nominó este nodo como respuesta correcta.</p></li>
+          <li><img src="assets/ico-pietree-salto.svg" alt="" width="45" height="40"><p>El usuario se saltó esta tarea en este nodo.</p></li>
+        </ul>
+        <img class="pietree-img" src="assets/tarea-2/pietree.png" alt="Pietree de UXtweak de la Tarea 2: desde Root todos entran en Shop y siguen por Content y Cars hasta Car Info, donde nominan la respuesta; algunos pasan antes por More o por Tracks y Track Info y vuelven atrás." width="565" height="835">
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="menu-capas.js" defer></script>
+<script src="estructura.js" defer></script>
+</body>
+</html>

@@ -21,6 +21,7 @@ estrategia.css      Específico de body.page-estrategia
 alcance.css         Específico de body.page-alcance (matriz, ejes, cuadrantes)
 estructura.css      Específico de body.page-estructura (árboles, tooltips, switch, taskflow)
 estructura-tarea-1.html  Detalle de la Tarea 1 del tree testing
+estructura-tarea-2.html  Detalle de la Tarea 2 (misma plantilla, assets en assets/tarea-2/)
 estructura-tarea.css     Específico de body.page-tarea (detalles de tareas)
 script.js           Comportamiento del Home
 menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
@@ -93,6 +94,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
   - `ico-exito-directo.svg`, `ico-exito-indirecto.svg`, `ico-fallo-directo.svg` e `ico-fallo-indirecto.svg`, del usuario;
   - `ico-pietree-*.svg`: el ícono de leyenda del usuario, recoloreado con los colores medidos en la referencia (`#C2DFA0`, `#F44336`, `#FF9800`, `#2962FF`, `#FDD835`, `#9E9E9E`).
 - En `estructura.html`, «Ver más detalles» de la Tarea 1 apunta a esta página.
+- **Tarea 2 (spec 0008):** `estructura-tarea-2.html` es la misma plantilla con los textos, los `alt` y el SEO de la Tarea 2, y sus capturas en `assets/tarea-2/`. Si cambia la plantilla, hay que replicar el cambio a mano en las dos páginas.
 ## Integraciones externas (solo enlaces)
 
 | Servicio | Uso | Dónde |
@@ -123,7 +125,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Páginas de Esqueleto y Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Esqueleto y Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html` (más «Ver más detalles» de la Tarea 2 en Estructura); recontar con `Grep 'href="#"'`.
+- Páginas de Esqueleto y Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Esqueleto y Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html`; recontar con `Grep 'href="#"'`.
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
@@ -141,6 +143,7 @@ Metadatos no visibles en el `<head>` de las 3 páginas y un `llms.txt` en la ra�
 | `alcance.html` | `Alcance — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `estructura.html` | `Estructura — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `estructura-tarea-1.html` | `Tarea 1: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
+| `estructura-tarea-2.html` | `Tarea 2: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 
 Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCreated: "2025"`, `author` (Person Franco Aguirre, Diseñador UX/UI) y `about` (iRacing, Diseño UX/UI). Sin `url`, `image` ni `sameAs`.
 

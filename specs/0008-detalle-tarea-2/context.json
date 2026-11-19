@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0008-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): página de la Tarea 2 según la imagen de referencia (Tarea 2.png), con las imágenes de estadísticas y el árbol del pietree" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0008-detalle-tarea-2/referencia-figma.jpg", "sha256": "7be6a224851560922a7553a8b3f9ca64c6a6ef8fbfab06ad7e57bc992ad1131e" },
+    { "id": "s-tarea-1", "kind": "file", "reference": "estructura-tarea-1.html", "sha256": "53e2c2e3f68a79cc87bd3f6481ea0b63f6770a7164e64c7953dae0d8aee343f6" }
+  ],
+  "facts": [
+    { "id": "o-design", "area": "product", "statement": "La referencia de la Tarea 2 tiene la misma estructura que la de la Tarea 1 (breadcrumb de 3 niveles, enunciado, Estadísticas con 4 ítems y 4 capturas, Pietree con 6 ítems e imagen), con los datos y el enunciado de la Tarea 2.", "status": "observed", "source": "s-referencia" },
+    { "id": "d-assets", "area": "product", "statement": "Las capturas de estadísticas y el pietree de la Tarea 2 son las imágenes del usuario; el diseño es el de la referencia de la Tarea 2.", "status": "confirmed", "source": "u-0008-request" },
+    { "id": "o-plantilla", "area": "technical", "statement": "estructura-tarea-1.html y estructura-tarea.css (0007) sirven de plantilla: solo cambian textos, alt, SEO y la carpeta de assets.", "status": "observed", "source": "s-tarea-1" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que quiere ver los resultados completos de la Tarea 2 del tree testing",
+    "problem": "'Ver más detalles' de la Tarea 2 no lleva a ninguna parte.",
+    "outcome": "Existe estructura-tarea-2.html, fiel a la referencia y enlazada desde Estructura.",
+    "scope": "Incluye: estructura-tarea-2.html, capturas en assets/tarea-2/, link desde Estructura, SEO, llms.txt y docs. Excluye: cambios a la plantilla.",
+    "acceptance": "1) La página se ve como la referencia a 1920 px. 2) 'Ver más detalles' de la Tarea 2 lleva a la página y la flecha vuelve a Estructura. 3) Responsive como la Tarea 1. 4) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector compara los resultados de las dos tareas.",
+    "evidence": ["o-design", "o-plantilla", "d-assets"]
+  }
+}
