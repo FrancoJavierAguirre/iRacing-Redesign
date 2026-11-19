@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esqueleto — Rediseño iRacing</title>
+<meta name="description" content="Esqueleto del rediseño de iRacing: wireframes en media de la lista de series, detalles, calendario y autos de una serie. Case study de Franco Aguirre.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Esqueleto — Rediseño iRacing">
+<meta property="og:description" content="Esqueleto del rediseño de iRacing: wireframes en media de la lista de series, detalles, calendario y autos de una serie. Case study de Franco Aguirre.">
+<meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Esqueleto — Rediseño iRacing">
+<meta name="twitter:description" content="Esqueleto del rediseño de iRacing: wireframes en media de la lista de series, detalles, calendario y autos de una serie. Case study de Franco Aguirre.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Esqueleto — Rediseño iRacing",
+  "description": "Esqueleto del rediseño de iRacing: wireframes en media de la lista de series, detalles, calendario y autos de una serie. Case study de Franco Aguirre.",
+  "inLanguage": "es",
+  "dateCreated": "2025",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "Diseño UX/UI" } ],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "iRacing — Rediseño UX/UI",
+    "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Rediseño UX/UI", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Esqueleto" }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="elementos.css">
+<link rel="stylesheet" href="esqueleto.css">
+</head>
+<body class="page-elementos page-esqueleto">
+
+<header class="topbar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="crumb-parent">Rediseño UX/UI</span></a>
+    <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="topbar-capas breadcrumb-capas" data-capas>
+      <button type="button" class="capas-trigger current" aria-current="page" aria-expanded="false" aria-controls="capas-menu" data-capas-trigger>
+        <span>Esqueleto</span>
+        <img class="capas-chevron capas-chevron--down" src="assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="capas-menu" role="group" aria-label="Capas del proceso UX" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" href="estrategia.html"><img src="assets/icon-estrategia.svg" alt="" width="16" height="16"><span>Estrategia</span></a></li>
+          <li><a class="capas-item" href="alcance.html"><img src="assets/icon-alcance.svg" alt="" width="16" height="16"><span>Alcance</span></a></li>
+          <li><a class="capas-item" href="estructura.html"><img src="assets/icon-estructura.svg" alt="" width="16" height="16"><span>Estructura</span></a></li>
+          <li><a class="capas-item" role="link" aria-disabled="true"><img src="assets/icon-superficie.svg" alt="" width="16" height="16"><span>Superficie</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1 class="topbar-title">Esqueleto</h1>
+  <a href="#" class="btn btn--sm btn-blue topbar-action" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-superficie-white.svg" alt="">Ver Superficie</a>
+</header>
+
+<main>
+  <section class="layer-sec" id="wireframes" aria-labelledby="wireframes-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="wireframes-titulo">Wireframes en Media</h2><p class="sec-sub">Empezando el rediseño</p></div>
+      </div>
+      <h3 class="rule-head" id="lista-series"><span class="rh"><img class="rh-ico" src="assets/ico-lista.svg" alt=""><span>Lista de series</span></span></h3>
+      <figure class="wf">
+        <img class="wf-img" src="assets/esqueleto/lista-series.png" alt="Wireframe en media fidelidad de la lista de series (Official Racing): tabla con hora, pilotos, licencia, serie, autos, pista y acciones Add to cart y Register." width="1162" height="621" loading="lazy">
+        <figcaption><ul class="wf-notes">
+          <li>Arquitectura nueva, carrito de compras agregado y ajuste en la información en las columnas.</li>
+        </ul></figcaption>
+      </figure>      <h3 class="rule-head" id="detalles-serie"><span class="rh"><img class="rh-ico" src="assets/ico-detalles-serie.svg" alt=""><span>Detalles de serie</span></span></h3>
+      <figure class="wf">
+        <img class="wf-img" src="assets/esqueleto/detalles-serie.png" alt="Wireframe en media fidelidad de los detalles de una serie: indicador MPR, dropdown Rules &amp; Format, datos de la carrera, cards de auto, pista y clima, y tablas de carreras y prácticas." width="1162" height="735" loading="lazy">
+        <figcaption><ul class="wf-notes">
+          <li>Añadido feedback visual “MPR” que significa que participar en esta serie aumenta la licencia del usuario.</li>
+          <li>“Rules &amp; Format” colapsado en un dropdown.</li>
+          <li>Rediseñado la disposición de información del tiempo, pilotos, y CTA.</li>
+          <li>Rediseñado las tablas de prácticas y carreras con sus horarios.</li>
+          <li>Rediseñado en 3 columnas las cards de autos, pistas y clima.</li>
+        </ul></figcaption>
+      </figure>      <h3 class="rule-head" id="calendario-serie"><span class="rh"><img class="rh-ico" src="assets/ico-calendario.svg" alt=""><span>Calendario de la serie</span></span></h3>
+      <figure class="wf">
+        <img class="wf-img" src="assets/esqueleto/calendario-serie.png" alt="Wireframe en media fidelidad del calendario de una serie: card de evento con duración, clima, pista y autos, y dropdown Content Manager." width="1162" height="764" loading="lazy">
+        <figcaption><ul class="wf-notes">
+          <li>Rediseñado las cards de eventos pasados, actuales y futuros.</li>
+          <li>“Content Manager” colapsado en un dropdown.</li>
+        </ul></figcaption>
+      </figure>      <h3 class="rule-head" id="seccion-autos"><span class="rh"><img class="rh-ico" src="assets/ico-auto.svg" alt=""><span>Sección de autos</span></span></h3>
+      <figure class="wf">
+        <img class="wf-img" src="assets/esqueleto/seccion-autos.png" alt="Wireframe en media fidelidad de la sección de autos de una serie: cards de los autos de la clase GTP y selector de auto favorito." width="1162" height="661" loading="lazy">
+        <figcaption><ul class="wf-notes">
+          <li>Se añade esta sección para visualizar los autos que compiten.</li>
+          <li>Se agrega aquí también la opción de elegir el auto como favorito.</li>
+        </ul></figcaption>
+      </figure>    </div>
+  </section>
+
+  <section class="next">
+    <div class="container">
+      <h2 class="center-title">Siguiente elemento UX</h2>
+      <div class="next-row">
+        <div class="next-col"><p class="lbl">Estamos acá</p><a href="esqueleto.html" class="proceso-card" style="--img:url(assets/card-esqueleto.png)"><span class="pc-title"><img src="assets/icon-esqueleto.svg" alt=""><span>Esqueleto</span></span><p class="pc-desc">Organizando los distintos elementos de información de la interfaz y creando los wireframes en media fidelidad.</p></a></div>
+        <div class="next-col"><p class="lbl">Sigue acá</p><a href="#" class="proceso-card" style="--img:url(assets/card-superficie.png)"><span class="pc-title"><img src="assets/icon-superficie.svg" alt=""><span>Superficie</span></span><p class="pc-desc">Definiendo el sistema de diseño y los wireframes en alta fidelidad. Prototipo con animaciones y pruebas de usabilidad.</p></a></div>
+      </div>
+      <p class="also">Pero también están...</p>
+      <div class="proceso-grid"><a href="estrategia.html" class="proceso-card" style="--img:url(assets/card-estrategia.png)"><span class="pc-title"><img src="assets/icon-estrategia.svg" alt=""><span>Estrategia</span></span><p class="pc-desc">Entendiendo las necesidades de los usuarios y los objetivos del negocio.</p></a><a href="alcance.html" class="proceso-card" style="--img:url(assets/card-alcance.png)"><span class="pc-title"><img src="assets/icon-alcance.svg" alt=""><span>Alcance</span></span><p class="pc-desc">Definiendo los requerimientos de las funcionalidades específicas y los contenidos del producto digital.</p></a><a href="estructura.html" class="proceso-card" style="--img:url(assets/card-estructura.png)"><span class="pc-title"><img src="assets/icon-estructura.svg" alt=""><span>Estructura</span></span><p class="pc-desc">Definiendo la arquitectura de información y la interacción de la interfaz.</p></a></div>
+    </div>
+  </section>
+</main>
+
+<script src="menu-capas.js" defer></script>
+<script src="estructura.js" defer></script>
+</body>
+</html>

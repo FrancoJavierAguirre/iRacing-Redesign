@@ -1,23 +1,24 @@
 {
   "schemaVersion": 1,
   "sources": [
-    { "id": "u-0008-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): página de la Tarea 2 según la imagen de referencia (Tarea 2.png), con las imágenes de estadísticas y el árbol del pietree" },
-    { "id": "s-referencia", "kind": "file", "reference": "specs/0008-detalle-tarea-2/referencia-figma.jpg", "sha256": "7be6a224851560922a7553a8b3f9ca64c6a6ef8fbfab06ad7e57bc992ad1131e" },
-    { "id": "s-tarea-1", "kind": "file", "reference": "estructura-tarea-1.html", "sha256": "53e2c2e3f68a79cc87bd3f6481ea0b63f6770a7164e64c7953dae0d8aee343f6" }
+    { "id": "u-0009-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): pantalla de Esqueleto con las imágenes de cada subsección (Esqueleto.png de referencia y 4 wireframes) y los íconos calendario.svg y Auto.svg para los títulos; los demás íconos ya están en assets" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0009-pagina-esqueleto/referencia-figma.jpg", "sha256": "0e385e1a7e29ee8d4a6640da6df8707eafe74afb3ba7bcb8f133716e5deb9c73" },
+    { "id": "s-estructura", "kind": "file", "reference": "estructura.html", "sha256": "d3b13f1f14b4a97c87703b73968bf01d81e8d71744c4f34e09d34463ab7d2643" }
   ],
   "facts": [
-    { "id": "o-design", "area": "product", "statement": "La referencia de la Tarea 2 tiene la misma estructura que la de la Tarea 1 (breadcrumb de 3 niveles, enunciado, Estadísticas con 4 ítems y 4 capturas, Pietree con 6 ítems e imagen), con los datos y el enunciado de la Tarea 2.", "status": "observed", "source": "s-referencia" },
-    { "id": "d-assets", "area": "product", "statement": "Las capturas de estadísticas y el pietree de la Tarea 2 son las imágenes del usuario; el diseño es el de la referencia de la Tarea 2.", "status": "confirmed", "source": "u-0008-request" },
-    { "id": "o-plantilla", "area": "technical", "statement": "estructura-tarea-1.html y estructura-tarea.css (0007) sirven de plantilla: solo cambian textos, alt, SEO y la carpeta de assets.", "status": "observed", "source": "s-tarea-1" }
+    { "id": "o-design", "area": "product", "statement": "La referencia muestra esqueleto.html: topbar (Esqueleto ⌄, 'Ver Superficie'); sección 'Wireframes en Media / Empezando el rediseño' con 4 bloques (Lista de series, Detalles de serie, Calendario de la serie, Sección de autos), cada uno con título e ícono dorado, wireframe y notas en viñetas; y 'Siguiente elemento UX' (Estamos acá Esqueleto, Sigue acá Superficie, también Estrategia, Alcance y Estructura).", "status": "observed", "source": "s-referencia" },
+    { "id": "o-plantilla", "area": "technical", "statement": "Las páginas de capa comparten topbar con menú de capas, .rule-head, .next y variables de página en elementos.css; estructura.html sirve de plantilla.", "status": "observed", "source": "s-estructura" },
+    { "id": "d-assets", "area": "product", "statement": "Las imágenes de cada subsección y los íconos calendario y auto son los del usuario; los íconos de Lista de series y Detalles de serie son los existentes.", "status": "confirmed", "source": "u-0009-request" },
+    { "id": "p-links", "area": "product", "statement": "Siguiendo d-links de 0004/0005, se activan todos los links a Esqueleto; 'Ver Superficie' queda sin destino.", "status": "proposed" }
   ],
   "questions": [],
   "change": {
-    "actor": "Lector del portfolio que quiere ver los resultados completos de la Tarea 2 del tree testing",
-    "problem": "'Ver más detalles' de la Tarea 2 no lleva a ninguna parte.",
-    "outcome": "Existe estructura-tarea-2.html, fiel a la referencia y enlazada desde Estructura.",
-    "scope": "Incluye: estructura-tarea-2.html, capturas en assets/tarea-2/, link desde Estructura, SEO, llms.txt y docs. Excluye: cambios a la plantilla.",
-    "acceptance": "1) La página se ve como la referencia a 1920 px. 2) 'Ver más detalles' de la Tarea 2 lleva a la página y la flecha vuelve a Estructura. 3) Responsive como la Tarea 1. 4) SEO, llms.txt y docs actualizados; consola limpia.",
-    "valueSignal": "El lector compara los resultados de las dos tareas.",
+    "actor": "Lector del portfolio que llega a la capa Esqueleto",
+    "problem": "La capa Esqueleto no tiene página y sus links no llevan a ninguna parte.",
+    "outcome": "Existe esqueleto.html con los wireframes en media y el sitio enlaza a ella.",
+    "scope": "Incluye: esqueleto.html, esqueleto.css, wireframes e íconos, activación de links a Esqueleto, SEO, llms.txt y docs. Excluye: Superficie.",
+    "acceptance": "1) esqueleto.html se ve como la referencia a 1920 px. 2) Los 4 wireframes con sus notas literales. 3) Todos los links a Esqueleto funcionan y el menú de capas es correcto. 4) Responsive sin scroll horizontal. 5) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector sigue el proceso hasta los wireframes.",
     "evidence": ["o-design", "o-plantilla", "d-assets"]
   }
 }

@@ -132,16 +132,40 @@
       "files": ["estructura-tarea-2.html", "estructura.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
       "questions": [],
       "evidence": [
-        { "path": "estructura-tarea-2.html", "sha256": "1e69b4eaa81cd2e9232503915a2e823c1837e9b0e7cfc29e4abedfff638ee52b" },
-        { "path": "estructura.html", "sha256": "41828c1a0eac8777e337a2857a1c3f39699652f5458235535d29355c8c350a26" },
-        { "path": "llms.txt", "sha256": "901f6b32f945eed44fc544025b3349aec5906caf23e637055c2e0b740d65d73a" },
-        { "path": "docs/public/funcionalidades.md", "sha256": "0d054ad9e94eefa90d33dbc8a1d9a6f268b7590f30fc71cef3a905c5b578cfce" },
-        { "path": "docs/tech/sistema.md", "sha256": "c4e421dbf1b4a3431817250ac8eda2ff68a94056f4121a951f979159e7810b6b" },
         { "path": "specs/0008-detalle-tarea-2/spec.md", "sha256": "a5436e5bd4edf0d32f6661775e6a74ca831c122218de0c3bd71ab8024881af00" },
         { "path": "specs/0008-detalle-tarea-2/tasks.md", "sha256": "318fdab3928a8d6ac326ad2035dcb111fa4164c37247990647e7cc27c0a42a86" }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de 0007; no se usó un subagente front.",
+      "evidenceNote": "El código aprobado está en el commit 7a17696; los archivos fuente cambiaron después por T9 (0009).",
       "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0008.md", "sha256": "2a22cae53b5ea36646c82055056772ed1d3befccd2f0f58d14445d263debdb13" } }]
+    },
+    {
+      "id": "T9",
+      "title": "Página de Esqueleto (wireframes en media) y links a Esqueleto",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0009) y specs/0009-pagina-esqueleto/spec.md.",
+      "dependsOn": ["T8"],
+      "files": ["esqueleto.html", "esqueleto.css", "elementos.css", "estrategia.html", "alcance.html", "estructura.html", "estructura-tarea-1.html", "estructura-tarea-2.html", "5-elementos.html", "index.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "questions": [],
+      "evidence": [
+        { "path": "esqueleto.html", "sha256": "d2691e3925412c566b0eda13d7c2e9e1fcd86ea705ee16394f9e19b117ce27e6" },
+        { "path": "esqueleto.css", "sha256": "5607760947fefbd2cd92a2ffae42278c11810bac191e344d406b09546aab7964" },
+        { "path": "elementos.css", "sha256": "9332e08e9fb03a9abcce4878c7953878dc0ee233ef85157e07591300c6e50ad2" },
+        { "path": "estrategia.html", "sha256": "06ca898e30dc80adf91e1e81bb7f5e61703bf17ca1ef4aaedc2bfcc990e497c8" },
+        { "path": "alcance.html", "sha256": "105024cc77aab8a3ee8adb6a325c11fee70fe9698ee52dc04be339ebc41c1d9c" },
+        { "path": "estructura.html", "sha256": "d3b13f1f14b4a97c87703b73968bf01d81e8d71744c4f34e09d34463ab7d2643" },
+        { "path": "estructura-tarea-1.html", "sha256": "69c9b3e871099bbb1c3c9c9e915d3f500714a89d056efe966e5a14e15e6a3981" },
+        { "path": "estructura-tarea-2.html", "sha256": "a4a4869f251e01f77c61814e45aa0a22e25d1d11c7fc38188df9f16c435ca442" },
+        { "path": "5-elementos.html", "sha256": "6846fcd19a26741cf92b110c8c6424dc0f88aad1d3bb491733098fffe34a26db" },
+        { "path": "index.html", "sha256": "395251d1ee087892c84909c676461a21c69948d8e8c5532dfccbe5092e90cbc7" },
+        { "path": "llms.txt", "sha256": "ee53c9964383c28079b2f4c8ec6de97e14279e597b3716d8848526bcc53a83bc" },
+        { "path": "docs/public/funcionalidades.md", "sha256": "f277bc04ec36dd978d4d589427010b46c583bd5bbb112f000876d45d600cbf08" },
+        { "path": "docs/tech/sistema.md", "sha256": "3c5d9953f064cc84273680c6abd184215a8554f8c7abe3015e32414f53a75a06" },
+        { "path": "specs/0009-pagina-esqueleto/spec.md", "sha256": "faabeff2d0b9f51e897e1a30d829c9dcf52e98cbeb64a3cf312f1a2ab18db29d" },
+        { "path": "specs/0009-pagina-esqueleto/tasks.md", "sha256": "b8b4dd432be431edf25de1e3ea259ebc18e068b4ec515e86b3fb655cf30896dc" }
+      ],
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front.",
+      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0009.md", "sha256": "59df8c62a06c3d071f7845e4bff093b591c181f2fc9271b2f5c3815b44be3608" } }]
     }
   ]
 }

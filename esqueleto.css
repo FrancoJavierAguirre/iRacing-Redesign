@@ -1,0 +1,16 @@
+/* Esqueleto (body.page-esqueleto) — spec 0009.
+   Medidas de specs/0009-pagina-esqueleto/referencia-figma.jpg (1920 px, escala 1:1). */
+
+.page-esqueleto main { padding-bottom: 0; }
+.page-esqueleto .sec-header + .rule-head { margin-top: clamp(40px, 5.8333vw, 112px); }
+
+/* Wireframe + notas: imagen de 1162 px centrada, notas alineadas a su borde izquierdo */
+.page-esqueleto .wf { width: clamp(280px, 60.5208vw, 1162px); margin: clamp(24px, 3.125vw, 60px) auto 0; }
+.page-esqueleto .wf-img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.page-esqueleto .wf-notes { margin: clamp(12px, .9375vw, 18px) 0 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: clamp(6px, .6771vw, 13px); }
+.page-esqueleto .wf-notes li { font: 300 clamp(14px, 1.1458vw, 22px)/1.5 "Poppins", sans-serif; color: #fff; }
+.page-esqueleto .wf + .rule-head { margin-top: clamp(56px, 6.25vw, 120px); }
+
+@media (max-width: 900px) {
+  .page-esqueleto .wf { width: 100%; }
+}

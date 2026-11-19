@@ -23,6 +23,8 @@ estructura.css      Específico de body.page-estructura (árboles, tooltips, swi
 estructura-tarea-1.html  Detalle de la Tarea 1 del tree testing
 estructura-tarea-2.html  Detalle de la Tarea 2 (misma plantilla, assets en assets/tarea-2/)
 estructura-tarea.css     Específico de body.page-tarea (detalles de tareas)
+esqueleto.html      Capa 4: Esqueleto (wireframes en media)
+esqueleto.css       Específico de body.page-esqueleto
 script.js           Comportamiento del Home
 menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
 estructura.js       Tooltips de ayuda, switch Antes/Después y botones sin destino de estructura.html
@@ -44,7 +46,7 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 
 ## Comportamiento (`script.js`)
 
-1. **Tarjetas de Proceso** (`.proceso-card`): el listener solo hace `console.log` con `data-step`. La navegación a Estrategia, Alcance y Estructura sale de `onclick="location.href='…'"` inline en `index.html`. Las otras 2 tarjetas no navegan.
+1. **Tarjetas de Proceso** (`.proceso-card`): el listener solo hace `console.log` con `data-step`. La navegación a Estrategia, Alcance, Estructura y Esqueleto sale de `onclick="location.href='…'"` inline en `index.html`. La tarjeta de Superficie no navega.
 2. **Videos bajo demanda**: un `IntersectionObserver` (threshold 0.25) reproduce `video.screenshot` y `video.stat-video` al entrar en pantalla y los pausa al salir. Esos videos usan `muted loop playsinline preload="none"`. Si no hay `IntersectionObserver`, se activa autoplay. El video del hero usa `autoplay` directamente.
 
 `5-elementos.html` no carga JS y `estrategia.html` y `alcance.html` solo cargan `menu-capas.js` (`estructura.html` suma `estructura.js`): la navegación es por anclas (`#estrategia`, `#encuestas`, …) con `scroll-margin-top`.
@@ -95,6 +97,16 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
   - `ico-pietree-*.svg`: el ícono de leyenda del usuario, recoloreado con los colores medidos en la referencia (`#C2DFA0`, `#F44336`, `#FF9800`, `#2962FF`, `#FDD835`, `#9E9E9E`).
 - En `estructura.html`, «Ver más detalles» de la Tarea 1 apunta a esta página.
 - **Tarea 2 (spec 0008):** `estructura-tarea-2.html` es la misma plantilla con los textos, los `alt` y el SEO de la Tarea 2, y sus capturas en `assets/tarea-2/`. Si cambia la plantilla, hay que replicar el cambio a mano en las dos páginas.
+### Página de Esqueleto (`esqueleto.html` + `esqueleto.css`, spec 0009)
+
+- `body.page-elementos.page-esqueleto`. Hereda las variables de página (se sumó `.page-esqueleto` al selector de `elementos.css`), `.rule-head` y `.next`. Carga `menu-capas.js` y `estructura.js`; de este último solo usa el manejador de «Ver Superficie», que no tiene destino.
+- Una sección `#wireframes` con 4 bloques: `h3.rule-head` (con `id`) y `figure.wf`, que contiene `img.wf-img` y `figcaption > ul.wf-notes`. Ancho de 1162 px a 1920 (`clamp`), 100 % en ≤ 900 px. Las imágenes usan `loading="lazy"` y llevan `alt` descriptivo.
+- **Assets:**
+  - wireframes del usuario en `assets/esqueleto/`: `lista-series.png`, `detalles-serie.png`, `calendario-serie.png` y `seccion-autos.png`;
+  - íconos nuevos `ico-calendario.svg` e `ico-auto.svg`;
+  - se reutilizan `ico-lista.svg` e `ico-detalles-serie.svg`;
+  - `ico-superficie-white.svg` es `icon-superficie.svg` en blanco.
+- **Links activados:** la opción Esqueleto del menú de capas de todas las páginas, «Ver Esqueleto» (Estructura y detalles de tareas), las tarjetas Esqueleto de «Siguiente elemento UX» (Estrategia, Alcance y Estructura), la tarjeta del Home (`onclick`) y, en 5-elementos, «Ver Esqueleto» y su tarjeta.
 ## Integraciones externas (solo enlaces)
 
 | Servicio | Uso | Dónde |
@@ -125,7 +137,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Páginas de Esqueleto y Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Esqueleto y Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html`; recontar con `Grep 'href="#"'`.
+- Página de Superficie; pantallas de detalle de las tareas de Estructura; enlaces `href="#"` hacia Superficie en `5-elementos.html`, `estrategia.html`, `alcance.html` y `estructura.html`; recontar con `Grep 'href="#"'`.
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
@@ -144,6 +156,7 @@ Metadatos no visibles en el `<head>` de las 3 páginas y un `llms.txt` en la ra�
 | `estructura.html` | `Estructura — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `estructura-tarea-1.html` | `Tarea 1: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 | `estructura-tarea-2.html` | `Tarea 2: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
+| `esqueleto.html` | `Esqueleto — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 
 Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCreated: "2025"`, `author` (Person Franco Aguirre, Diseñador UX/UI) y `about` (iRacing, Diseño UX/UI). Sin `url`, `image` ni `sameAs`.
 

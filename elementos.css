@@ -142,7 +142,7 @@ a.capas-item[href]:hover, a.capas-item[href]:focus-visible { background: rgba(25
 a.proceso-card { text-decoration: none; }
 
 /* ----- Compartido por las páginas de capa (Estrategia y Alcance) ----- */
-.page-estrategia, .page-alcance, .page-estructura { --fs-body: clamp(14px, 1.0417vw, 20px); --fs-h3: clamp(20px, 1.6667vw, 32px); --gap-s: clamp(16px, 1.6667vw, 32px); --card: var(--card-bg); }
+.page-estrategia, .page-alcance, .page-estructura, .page-esqueleto { --fs-body: clamp(14px, 1.0417vw, 20px); --fs-h3: clamp(20px, 1.6667vw, 32px); --gap-s: clamp(16px, 1.6667vw, 32px); --card: var(--card-bg); }
 .page-elementos .hl { color: #bca447; font-weight: 600; }
 .page-elementos .topbar-action { position: absolute; right: var(--side-pad); top: 50%; transform: translateY(-50%); }
 .page-elementos .topbar-action.btn:hover { transform: translateY(-50%); }

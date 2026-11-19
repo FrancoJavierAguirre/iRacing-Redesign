@@ -12,10 +12,11 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Página | Archivo | Estado |
 |---|---|---|
 | Home del case study | `index.html` | Implementado |
-| 5 Elementos UX (Jesse James Garrett) | `5-elementos.html` | Implementado; los CTA a Esqueleto y Superficie todavía no llevan a ninguna parte |
+| 5 Elementos UX (Jesse James Garrett) | `5-elementos.html` | Implementado; el CTA a Superficie todavía no lleva a ninguna parte |
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
-| Esqueleto, Superficie | — | Pendiente (no existen) |
+| Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media); «Ver Superficie» todavía no lleva a ninguna parte |
+| Superficie | — | Pendiente (no existe) |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -29,13 +30,13 @@ No hay cuentas, login, formularios ni datos de usuario.
    Los videos se reproducen solos, sin sonido y en bucle, solo mientras se ven en pantalla.
    CTA **«Probar prototipo»** → prototipo de Figma (pestaña nueva).
 5. **Objetivos**: objetivos de negocio (retener usuarios, aumentar compras) y de usuario (encontrar una carrera adecuada a su nivel, comprar fácil), la frase del problema (flujo de usuarios → frustración → churn) y 3 videos que lo ilustran.
-6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas. **«Estrategia», «Alcance» y «Estructura» navegan**; las otras 2 todavía no hacen nada visible.
+6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas. **«Estrategia», «Alcance», «Estructura» y «Esqueleto» navegan**; la otra todavía no hacen nada visible.
 
 ## 5 Elementos UX (`5-elementos.html`)
 
 - Presenta a Jesse James Garrett y el modelo de 5 capas (de abstracto a concreto: Estrategia, Alcance, Estructura, Esqueleto, Superficie), con un diagrama de círculos y uno de capas.
 - Una sección por capa con su propósito y técnicas. Botones «Ir a…» para moverse entre secciones.
-- «Ver Estrategia», «Ver Alcance» y «Ver Estructura» llevan a su página (también las tarjetas Alcance y Estructura del final); «Ver Esqueleto» e «Ir a Superficie» están pendientes.
+- «Ver Estrategia», «Ver Alcance», «Ver Estructura» y «Ver Esqueleto» llevan a su página (también las tarjetas del final); lo de Superficie está pendiente.
 - Breadcrumb para volver al Home.
 
 ## Estrategia (`estrategia.html`)
@@ -64,7 +65,7 @@ Una sola sección, la **Matriz FVD** (factibilidad, viabilidad y deseabilidad), 
 - **Cuadrante 3** (arriba a la izquierda), 3 tarjetas: quitar columnas de la tabla de carreras para sumar el auto favorito, botón de registro como menú con más opciones y rediseño de la arquitectura de información para usuarios nuevos.
 - **Cuadrante 4** (abajo a la izquierda), 2 tarjetas: botón para abortar la carga del simulador y breadcrumb en lugar de modales.
 - **Mobile (640 px o menos):** los cuadrantes se apilan en orden 1, 2, 3, 4, cada uno con su número y una leyenda de texto que explica qué significa; los ejes se ocultan.
-- **Navegación:** breadcrumb con el menú de capas (Estrategia y Estructura habilitadas; Esqueleto y Superficie atenuadas; Alcance no figura), botón azul «Ver Estructura» que lleva a `estructura.html` y cierre «Siguiente elemento UX» (Estamos acá: Alcance; Sigue acá: Estructura; también: Estrategia, Esqueleto y Superficie).
+- **Navegación:** breadcrumb con el menú de capas (Estrategia, Estructura y Esqueleto habilitadas; Superficie atenuada; Alcance no figura), botón azul «Ver Estructura» que lleva a `estructura.html` y cierre «Siguiente elemento UX» (Estamos acá: Alcance; Sigue acá: Estructura; también: Estrategia, Esqueleto y Superficie).
 
 ## Estructura (`estructura.html`)
 
@@ -86,12 +87,12 @@ Cuatro bloques con navegación interna («Ir a…»):
 **Mobile (640 px o menos):** los árboles se ven como listas con sangría por nivel, sin scroll horizontal.
 
 **Navegación:**
-- Breadcrumb con el menú de capas: Estrategia y Alcance habilitadas; Esqueleto y Superficie atenuadas.
-- Botón azul «Ver Esqueleto», que todavía no lleva a ninguna parte.
+- Breadcrumb con el menú de capas: Estrategia, Alcance y Esqueleto habilitadas; Superficie atenuada.
+- Botón azul «Ver Esqueleto», que lleva a `esqueleto.html`.
 - Cierre «Siguiente elemento UX»: Estamos acá Estructura, Sigue acá Esqueleto, y también Estrategia, Alcance y Superficie.
 ## Detalle de la Tarea 1 (`estructura-tarea-1.html`)
 
-Se abre desde «Ver más detalles» de la Tarea 1 en Estructura. El breadcrumb es «← Rediseño UX/UI › Estructura ⌄ › Tarea 1». La flecha vuelve a Estructura, a la sección Tree Testing; «Rediseño UX/UI» lleva al Home y «Estructura» abre el menú de capas. «Ver Esqueleto» todavía no lleva a ninguna parte.
+Se abre desde «Ver más detalles» de la Tarea 1 en Estructura. El breadcrumb es «← Rediseño UX/UI › Estructura ⌄ › Tarea 1». La flecha vuelve a Estructura, a la sección Tree Testing; «Rediseño UX/UI» lleva al Home y «Estructura» abre el menú de capas. «Ver Esqueleto» lleva a Esqueleto.
 
 1. **Enunciado** de la tarea, centrado.
 2. **Estadísticas** («Resumen del éxito en la tarea»):
@@ -108,6 +109,25 @@ Tiene la misma estructura y navegación que el detalle de la Tarea 1, con los da
 - pietree del camino Shop › Content › Cars › Car Info.
 
 La flecha del breadcrumb vuelve a Estructura.
+## Esqueleto (`esqueleto.html`)
+
+Una sección, **Wireframes en Media** («Empezando el rediseño»), con 4 wireframes en media fidelidad. Cada uno tiene un título con ícono y debajo los cambios que propone:
+1. **Lista de series:** arquitectura nueva, carrito de compras y columnas ajustadas.
+2. **Detalles de serie:**
+   - indicador «MPR» (participar en la serie sube la licencia);
+   - «Rules & Format» en un dropdown;
+   - nueva disposición de tiempo, pilotos y CTA;
+   - tablas de prácticas y carreras rediseñadas;
+   - cards de autos, pistas y clima en 3 columnas.
+3. **Calendario de la serie:** cards de eventos pasados, actuales y futuros, y «Content Manager» en un dropdown.
+4. **Sección de autos:** nueva sección con los autos que compiten y la opción de elegir el favorito.
+
+**Navegación:**
+- Breadcrumb con el menú de capas: Estrategia, Alcance y Estructura habilitadas; Superficie atenuada.
+- Botón azul «Ver Superficie», que todavía no lleva a ninguna parte.
+- Cierre «Siguiente elemento UX»: Estamos acá Esqueleto, Sigue acá Superficie, y también Estrategia, Alcance y Estructura.
+
+El menú de capas de las demás páginas, sus tarjetas, el Home y 5-elementos ya enlazan a Esqueleto.
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.
