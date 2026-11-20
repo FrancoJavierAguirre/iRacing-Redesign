@@ -1,25 +1,24 @@
 {
   "schemaVersion": 1,
   "sources": [
-    { "id": "u-0010-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): empezar Superficie por la parte de UX Writing (referencia Superficie - ux writing.png); vectores de la Matriz de Tono; 'Saltar a Sistema de Diseño' hará scroll a una sección futura; ícono play en 'Ver prototipo', que abre en otra pestaña el link de Figma dado" },
-    { "id": "s-referencia", "kind": "file", "reference": "specs/0010-superficie-ux-writing/referencia-figma.jpg", "sha256": "2ca6155e7ba5170f2b91d5fda63b3a0c7434fdbcd0b7dd468b1b6e5c53bf81dc" },
-    { "id": "s-esqueleto", "kind": "file", "reference": "esqueleto.html", "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386" }
+    { "id": "u-0011-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): siguiente parte de Superficie, la sección Sistema de Diseño según la imagen de referencia, con las subsecciones Valores, Principios, Colores y Tipografía; íconos 'escalera' y 'chart up' para Principios (el resto ya está en assets); ejemplos de Tipografía en PNG. Respuesta a la pregunta: Imágenes se hace después (Track.svg queda para esa parte)" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0011-superficie-sistema-diseno/referencia-figma.png", "sha256": "1a95e552e8d8d2466d5a122b2b5f86bb872d60b1f47952b84c7dac0f592d9357" },
+    { "id": "s-superficie", "kind": "file", "reference": "specs/0010-superficie-ux-writing/spec.md", "sha256": "fcade7600f8a2cb38e89ea020ebcc45d81f7727079e8afd185e2ec3e9a4d818d" }
   ],
   "facts": [
-    { "id": "o-design", "area": "product", "statement": "La referencia muestra la parte UX Writing de superficie.html: topbar con 'Ver Prototipo'; título 'UX Writing' y link 'Saltar a Sistema de Diseño'; Círculo de Oro en 3 bloques; Matriz de Voz (tabla 3×6); Matriz de Tono con ejes y 4 cajas; Guía de Estilo (tabla 4 columnas × 5 filas) con 'Ir a Valores'.", "status": "observed", "source": "s-referencia" },
-    { "id": "o-plantilla", "area": "technical", "statement": "Las páginas de capa comparten topbar con menú de capas, sec-header con botones 'Ir a' y variables en elementos.css; esqueleto.html sirve de plantilla.", "status": "observed", "source": "s-esqueleto" },
-    { "id": "d-prototipo", "area": "product", "statement": "'Ver Prototipo' lleva el ícono play y abre el prototipo de Figma en una pestaña nueva.", "status": "confirmed", "source": "u-0010-request" },
-    { "id": "d-saltar", "area": "product", "statement": "'Saltar a Sistema de Diseño' hará scroll a la sección Sistema de Diseño, que se construye después; hasta entonces no tiene destino.", "status": "confirmed", "source": "u-0010-request" },
-    { "id": "p-valores-links", "area": "product", "statement": "Supuesto: 'Ir a Valores' también queda sin destino (sección futura) y se activan todos los links a Superficie del sitio, como con las capas anteriores.", "status": "proposed" }
+    { "id": "o-design", "area": "product", "statement": "La referencia muestra 'Sistema de Diseño' con el link 'Volver a UX Writing' y cuatro subsecciones con botones Ir a arriba/abajo: Valores (3 columnas), Principios (4 filas tarjeta con ícono + descripción), Colores (Neutrales, Primario, Secundario, Éxito, Advertencia, Error y Estados, con muestras, tono y hex) y Tipografía (tabla Nombre / Uso / Ejemplo de 10 filas, con 'Ir a Imágenes').", "status": "observed", "source": "s-referencia" },
+    { "id": "o-pagina", "area": "technical", "statement": "Según la spec 0010 (commit c7c4ac0), superficie.html tiene la parte UX Writing; 'Saltar a Sistema de Diseño' (#sistema-de-diseno) e 'Ir a Valores' (#valores) están marcados data-sin-destino a la espera de esta sección.", "status": "observed", "source": "s-superficie" },
+    { "id": "d-subsecciones", "area": "product", "statement": "Esta parte incluye Valores, Principios, Colores y Tipografía; Imágenes se hace después y 'Ir a Imágenes' queda sin destino hasta entonces.", "status": "confirmed", "source": "u-0011-request" },
+    { "id": "d-ejemplos", "area": "product", "statement": "Los ejemplos de Tipografía se muestran con los PNG provistos por el usuario; Principios usa los íconos escalera y chart up provistos.", "status": "confirmed", "source": "u-0011-request" }
   ],
   "questions": [],
   "change": {
-    "actor": "Lector del portfolio que llega a la capa Superficie",
-    "problem": "La capa Superficie no tiene página y sus links no llevan a ninguna parte.",
-    "outcome": "Existe superficie.html con la parte de UX Writing y el sitio enlaza a ella.",
-    "scope": "Incluye: superficie.html y superficie.css con UX Writing (Círculo de Oro, Matriz de Voz, Matriz de Tono, Guía de Estilo), 'Ver Prototipo', links a Superficie, SEO, llms.txt y docs. Excluye: Sistema de Diseño, Valores y el resto de la página.",
-    "acceptance": "1) La parte UX Writing se ve como la referencia a 1920 px. 2) 'Ver Prototipo' abre Figma en pestaña nueva. 3) 'Saltar a Sistema de Diseño' e 'Ir a Valores' no saltan al tope. 4) Responsive sin scroll horizontal. 5) Links a Superficie activos; SEO, llms.txt y docs actualizados; consola limpia.",
-    "valueSignal": "El lector ve cómo se definió la voz y el tono del producto.",
-    "evidence": ["o-design", "o-plantilla", "d-prototipo", "d-saltar"]
+    "actor": "Lector del portfolio que recorre la capa Superficie",
+    "problem": "Superficie solo muestra UX Writing; el sistema de diseño no aparece y sus links no tienen destino.",
+    "outcome": "superficie.html incluye Sistema de Diseño con Valores, Principios, Colores y Tipografía, enlazado desde UX Writing.",
+    "scope": "Incluye: secciones en superficie.html y superficie.css, assets (íconos y ejemplos), activar 'Saltar a Sistema de Diseño' e 'Ir a Valores', SEO, llms.txt y docs. Excluye: Imágenes (Track.svg), 'Siguiente elemento UX' y el resto de Superficie.",
+    "acceptance": "1) Sistema de Diseño se ve como la referencia a 1920 px. 2) 'Saltar a Sistema de Diseño', 'Volver a UX Writing', 'Ir a Valores' y los Ir a internos llevan a su sección. 3) 'Ir a Imágenes' no salta al tope. 4) Responsive sin scroll horizontal. 5) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector ve los valores, principios, paleta y tipografía del rediseño.",
+    "evidence": ["o-design", "o-pagina", "d-subsecciones", "d-ejemplos"]
   }
 }

@@ -1,5 +1,6 @@
 /* Superficie (body.page-superficie) — spec 0010, parte UX Writing.
-   Medidas de specs/0010-superficie-ux-writing/referencia-figma.jpg (1920 px, escala 1:1). */
+   Medidas de specs/0010-superficie-ux-writing/referencia-figma.jpg (1920 px, escala 1:1).
+   Parte 2 (spec 0011): Sistema de Diseño, al final del archivo. */
 
 .page-superficie {
   --oro-on: rgba(0, 87, 208, .15);  /* círculo activo (PNG del usuario: #0057D0 al 15 %) */
@@ -94,4 +95,95 @@
   .page-superficie .tono-pasos { display: flex; flex-direction: column; gap: 12px; }
   .page-superficie .tono-paso { position: static; flex-wrap: wrap; white-space: normal; font-size: 16px; }
   .page-superficie .tono-nivel { display: block; flex-basis: 100%; padding-left: calc(16px + 10px); font-size: 13px; color: #bca447; }
+}
+
+/* ===== Sistema de Diseño — spec 0011. Medidas de specs/0011-superficie-sistema-diseno/referencia-figma.png (573 px = 1920). ===== */
+.page-superficie .sd-hero { padding-top: clamp(80px, 8.3333vw, 160px); }
+
+/* Valores: 3 columnas centradas */
+.page-superficie .sd-valores { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 2.0833vw, 40px); list-style: none; margin: clamp(40px, 5.2083vw, 100px) 0 0; padding: 0; text-align: center; }
+.page-superficie .sd-valores h3 { margin: 0 0 clamp(16px, 1.6667vw, 32px); font: 600 clamp(26px, 2.0833vw, 40px)/1.2 var(--font-display); color: #bca447; }
+.page-superficie .sd-valores p { max-width: 30em; margin: 0 auto; font: 400 clamp(15px, 1.25vw, 24px)/1.4 "Poppins", sans-serif; color: #fff; }
+
+/* Principios: tarjeta (mismo estilo que .mtx-card) + descripción */
+.page-superficie .sd-principios { display: flex; flex-direction: column; gap: clamp(20px, 2.0833vw, 40px); list-style: none; margin: clamp(40px, 5.2083vw, 100px) 0 0; padding: 0; }
+.page-superficie .sd-principios li { display: grid; grid-template-columns: minmax(0, 316px) minmax(0, 1fr); align-items: center; gap: clamp(20px, 2.1354vw, 41px); }
+.page-superficie .sd-principios .mtx-card { margin: 0; min-height: clamp(64px, 5.3646vw, 103px); }
+.page-superficie .sd-principios p { margin: 0; font: 300 clamp(14px, 1.0417vw, 20px)/1.6 "Poppins", sans-serif; color: #fff; }
+
+/* Colores: grupos con título, descripción y muestras */
+.page-superficie .sd-color { margin-top: clamp(56px, 6.7708vw, 130px); }
+.page-superficie .sd-color h3 { margin: 0; text-align: center; font: 500 clamp(18px, 1.25vw, 24px)/1.3 "Poppins", sans-serif; color: #fff; }
+.page-superficie .sd-color > p { max-width: 1500px; margin: clamp(10px, 1.0417vw, 20px) auto 0; text-align: center; font: 300 clamp(13px, .9375vw, 18px)/1.5 "Poppins", sans-serif; color: #dfe3ee; }
+.page-superficie .sd-color--primario h3 { color: #4d8bdd; }
+.page-superficie .sd-color--secundario h3 { color: #ff8533; }
+.page-superficie .sd-color--exito h3 { color: #6cda47; }
+.page-superficie .sd-color--advertencia h3 { color: #f2f556; }
+.page-superficie .sd-color--error h3 { color: #e75149; }
+.page-superficie .sw-grid { display: grid; gap: clamp(16px, 1.5625vw, 30px); list-style: none; margin: clamp(20px, 2.0833vw, 40px) 0 0; padding: 0; }
+.page-superficie .sd-color > p + .sw-grid { margin-top: clamp(28px, 3.4375vw, 66px); }
+.page-superficie .sw-grid--6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.page-superficie .sw-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.page-superficie .sw-grid li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 8px; font: 400 clamp(12px, .9375vw, 18px)/1.2 "Poppins", sans-serif; color: #fff; }
+.page-superficie .sw { flex-basis: 100%; height: clamp(44px, 4.0625vw, 78px); margin-bottom: 4px; border-radius: 6px; background: var(--c); }
+.page-superficie .sw-hex { text-transform: uppercase; }
+
+/* Estados: capa de opacidad sobre el color base (negra sobre gris, blanca sobre azul) */
+.page-superficie .sw-est { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.page-superficie .sw-est::before { content: ""; position: absolute; inset: 0; opacity: calc(var(--op) / 100); }
+.page-superficie .sw-est--gris::before { background: #000; }
+.page-superficie .sw-est--azul::before { background: #fff; }
+.page-superficie .sw-est--pressed::before { inset: 12% 8%; border-radius: 999px; opacity: calc(var(--op) * 2 / 100); }
+.page-superficie .sw-est-lbl { position: relative; font: 400 clamp(12px, .9375vw, 18px)/1.2 "Poppins", sans-serif; }
+.page-superficie .sw-est--gris .sw-est-lbl { color: #3a3a40; }
+.page-superficie .sw-est--azul .sw-est-lbl { color: #fff; }
+
+/* Tipografía: tabla Nombre / Uso / Ejemplo; cada nombre en su propio estilo */
+.page-superficie .sd-tipo { width: 100%; margin-top: clamp(40px, 5.2083vw, 100px); border-collapse: collapse; table-layout: fixed; }
+.page-superficie .sd-tipo th, .page-superficie .sd-tipo td { padding: clamp(16px, 1.6667vw, 32px) 0; vertical-align: middle; text-align: left; color: #fff; }
+.page-superficie .sd-tipo thead th { padding-top: 0; font: 400 clamp(24px, 2.0833vw, 40px)/1.2 var(--font-display); color: #bca447; }
+.page-superficie .sd-tipo thead th:nth-child(1) { width: 40.5%; }
+.page-superficie .sd-tipo thead th:nth-child(2) { width: 29.5%; padding-left: 7.4%; } /* el título «Uso» está corrido a la derecha de la columna en la referencia */
+.page-superficie .sd-tipo thead th:last-child, .page-superficie .sd-tipo td:last-child { text-align: right; }
+.page-superficie .sd-tipo tbody tr { border-top: 1px solid var(--line); }
+.page-superficie .sd-tipo tbody tr:first-child { border-top: 0; }
+.page-superficie .sd-tipo td[data-col="Uso"] { font: 400 clamp(15px, 1.25vw, 24px)/1.3 "Poppins", sans-serif; }
+.page-superficie .tp { font-family: "Inter", sans-serif; line-height: 1.3; }
+.page-superficie .tp--10m { font-size: 10px; font-weight: 500; }
+.page-superficie .tp--12r { font-size: 12px; font-weight: 400; }
+.page-superficie .tp--12l { font-size: 12px; font-weight: 300; }
+.page-superficie .tp--12s { font-size: 12px; font-weight: 600; }
+.page-superficie .tp--14r { font-size: 14px; font-weight: 400; }
+.page-superficie .tp--14m { font-size: 14px; font-weight: 500; }
+.page-superficie .tp--16r { font-size: 16px; font-weight: 400; }
+.page-superficie .tp--16s { font-size: 16px; font-weight: 600; }
+.page-superficie .tp--24 { font: 700 24px/1.2 var(--font-display); }
+.page-superficie .tp--36 { font: 700 36px/1.2 var(--font-display); }
+.page-superficie .tp-ej { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: clamp(8px, .8333vw, 16px); max-width: 100%; margin: 0; vertical-align: middle; }
+.page-superficie .tp-ej img { display: block; max-width: 100%; height: auto; }
+.page-superficie .tp-ej--texto { display: block; max-width: 361px; margin-left: auto; text-align: left; font: 400 16px/1.4 "Inter", sans-serif; color: #fff; }
+.page-superficie .tp-ej--t3 { display: block; font: 700 24px/1.2 var(--font-display); }
+.page-superficie .tp-ej--t1 { display: block; font: 700 36px/1.2 var(--font-display); }
+
+@media (max-width: 900px) {
+  .page-superficie .sd-valores { grid-template-columns: minmax(0, 1fr); }
+  .page-superficie .sd-principios li { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
+  .page-superficie .sw-grid--6, .page-superficie .sw-grid--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* Tipografía en bloques: cada estilo es una tarjeta con «Uso» y «Ejemplo» */
+  .page-superficie .sd-tipo, .page-superficie .sd-tipo tbody, .page-superficie .sd-tipo tr, .page-superficie .sd-tipo th, .page-superficie .sd-tipo td { display: block; width: 100%; }
+  .page-superficie .sd-tipo thead { display: none; }
+  .page-superficie .sd-tipo tbody tr { padding: 24px 0; }
+  .page-superficie .sd-tipo tbody th, .page-superficie .sd-tipo tbody td { padding: 6px 0; text-align: left; }
+  .page-superficie .sd-tipo td:last-child { text-align: left; }
+  .page-superficie .sd-tipo td[data-col]::before { content: attr(data-col); display: block; margin-bottom: 6px; font: 600 13px/1.3 "Inter", sans-serif; color: #b9bcc4; }
+  .page-superficie .tp-ej { justify-content: flex-start; }
+  .page-superficie .tp-ej--texto { margin-left: 0; }
+}
+@media (max-width: 640px) {
+  .page-superficie .sd-principios li { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .page-superficie .sd-principios .mtx-card { justify-content: flex-start; }
+  .page-superficie .sw-grid--6, .page-superficie .sw-grid--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-superficie .tp--36 { font-size: 28px; }
+  .page-superficie .tp-ej--t1 { font-size: 28px; }
 }

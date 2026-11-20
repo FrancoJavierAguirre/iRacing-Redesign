@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Superficie — Rediseño iRacing</title>
-<meta name="description" content="Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.">
+<meta name="description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz, tono y guía de estilo) y sistema de diseño (valores, principios, colores, tipografía).">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Superficie — Rediseño iRacing">
-<meta property="og:description" content="Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.">
+<meta property="og:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz, tono y guía de estilo) y sistema de diseño (valores, principios, colores, tipografía).">
 <meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
 <meta property="og:locale" content="es_AR">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Superficie — Rediseño iRacing">
-<meta name="twitter:description" content="Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.">
+<meta name="twitter:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz, tono y guía de estilo) y sistema de diseño (valores, principios, colores, tipografía).">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Superficie — Rediseño iRacing",
-  "description": "Superficie del rediseño de iRacing: UX writing con el Círculo de Oro, la matriz de voz, la matriz de tono y la guía de estilo. Case study de Franco Aguirre.",
+  "description": "Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz, tono y guía de estilo) y sistema de diseño (valores, principios, colores, tipografía).",
   "inLanguage": "es",
   "dateCreated": "2025",
   "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
@@ -40,7 +40,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="elementos.css">
 <link rel="stylesheet" href="superficie.css">
@@ -72,10 +72,10 @@
 </header>
 
 <main>
-  <section class="ux-hero" aria-labelledby="ux-writing-titulo">
+  <section class="ux-hero" id="ux-writing" aria-labelledby="ux-writing-titulo">
     <div class="container">
       <h2 class="ux-hero-title" id="ux-writing-titulo">UX Writing</h2>
-      <a href="#sistema-de-diseno" class="btn btn--md btn-ghost-info ux-hero-skip" data-sin-destino>Saltar a Sistema de Diseño</a>
+      <a href="#sistema-de-diseno" class="btn btn--md btn-ghost-info ux-hero-skip">Saltar a Sistema de Diseño</a>
     </div>
   </section>
 
@@ -176,7 +176,7 @@
     <div class="container">
       <div class="sec-header">
         <div><h2 class="sec-title" id="guia-titulo">Guía de Estilo</h2><p class="sec-sub">Cómo se le habla al piloto</p></div>
-        <div class="sec-nav"><a href="#matriz-de-tono" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Matriz de Tono</a><a href="#valores" class="btn btn--md btn-info" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Valores</a></div>
+        <div class="sec-nav"><a href="#matriz-de-tono" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Matriz de Tono</a><a href="#valores" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Valores</a></div>
       </div>
       <table class="mtx mtx--guia">
         <thead>
@@ -188,6 +188,177 @@
           <tr><th scope="row">Numeración</th><td data-col="Reglas">Ningún número con palabras</td><td data-col="Buenas prácticas"><ul><li>10:45 PM</li><li>4 Cars</li><li>25 Drivers</li></ul></td><td data-col="Malas prácticas"><ul><li>“Four Cars”</li><li>“Ten percent of rain”</li><li>“Eleven drivers”</li></ul></td></tr>
           <tr><th scope="row">Títulos y subtítulos</th><td data-col="Reglas">Titulos cortos y claros sobre la sección.</td><td data-col="Buenas prácticas"><ul><li>“Available Sessions”</li><li>“Schedule”</li></ul></td><td data-col="Malas prácticas"><p>“You are eligible to compete, but you need to license Shell V-Power Motorsport Park at The Bend”</p></td></tr>
           <tr><th scope="row">Botones</th><td data-col="Reglas">3 palabras máximo. Deben tener un verbo.</td><td data-col="Buenas prácticas"><ul><li>“Add to Cart”</li><li>“Register”</li><li>“Select Car”</li></ul></td><td data-col="Malas prácticas"><ul><li>“Register for the next race”</li><li>“More ways to race”</li><li>“Create a hosted session”</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="ux-hero sd-hero" id="sistema-de-diseno" aria-labelledby="sd-titulo">
+    <div class="container">
+      <h2 class="ux-hero-title" id="sd-titulo">Sistema de Diseño</h2>
+      <a href="#ux-writing" class="btn btn--md btn-ghost-info ux-hero-skip">Volver a UX Writing</a>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="valores" aria-labelledby="valores-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="valores-titulo">Valores</h2><p class="sec-sub">El combustible de la marca</p></div>
+        <div class="sec-nav"><a href="#guia-de-estilo" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Guía de Estilo</a><a href="#principios" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Principios</a></div>
+      </div>
+      <ul class="sd-valores">
+        <li><h3>Autenticidad</h3><p>Servicio y productos fieles a la realidad.</p></li>
+        <li><h3>Claridad</h3><p>Que el usuario entienda cada detalle del servicio y producto.</p></li>
+        <li><h3>Conciso</h3><p>Mensajes cortos dado la gran cantidad de información disponible.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="principios" aria-labelledby="principios-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="principios-titulo">Principios</h2><p class="sec-sub">Las reglas de comunicación</p></div>
+        <div class="sec-nav"><a href="#valores" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Valores</a><a href="#colores" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Colores</a></div>
+      </div>
+      <ul class="sd-principios">
+        <li><h3 class="mtx-card"><img src="assets/ico-check-gold.svg" alt="" width="32" height="32">Simple</h3><p>No debe haber sobresaturación de información para no confundir al usuario.</p></li>
+        <li><h3 class="mtx-card"><img src="assets/ico-lampara.svg" alt="" width="32" height="32">Entendible</h3><p>La información debe ser clara y entendible para todo tipo de usuarios. Adultos, jóvenes, casuales o profesionales.</p></li>
+        <li><h3 class="mtx-card"><img src="assets/ico-escalera.svg" alt="" width="32" height="32">Escalonado</h3><p>La información debe ser mostrada de forma gradual y escalonada a medida que se buscan detalles más precisos sobre alguna temática particular.</p></li>
+        <li><h3 class="mtx-card"><img src="assets/ico-chart-up.svg" alt="" width="32" height="32">Eficiente</h3><p>Las tareas clave (como registrarse a una carrera, buscar resultados o hacer una compra) deben completarse en el menor número de pasos posible.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="colores" aria-labelledby="colores-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="colores-titulo">Colores</h2><p class="sec-sub">Accesibilidad y armonía</p></div>
+        <div class="sec-nav"><a href="#principios" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Principios</a><a href="#tipografia" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Tipografía</a></div>
+      </div>
+      <div class="sd-colores">
+        <div class="sd-color sd-color--neutrales">
+          <h3>Neutrales</h3>
+          <p>Estos colores se utilizan como colores secundarios de apoyo en fondos, de texto, separadores, cuadros de diálogo, etc.</p>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#FFFFFF"></span><span class="sw-tono">0</span><span class="sw-hex">#FFFFFF</span></li>
+            <li><span class="sw" style="--c:#000000"></span><span class="sw-tono">100</span><span class="sw-hex">#000000</span></li>
+          </ul>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#F2F2F3"></span><span class="sw-tono">10</span><span class="sw-hex">#F2F2F3</span></li>
+            <li><span class="sw" style="--c:#EAEAEB"></span><span class="sw-tono">15</span><span class="sw-hex">#EAEAEB</span></li>
+            <li><span class="sw" style="--c:#CDCDCF"></span><span class="sw-tono">20</span><span class="sw-hex">#CDCDCF</span></li>
+            <li><span class="sw" style="--c:#D0D0D3"></span><span class="sw-tono">25</span><span class="sw-hex">#D0D0D3</span></li>
+            <li><span class="sw" style="--c:#C9C9CC"></span><span class="sw-tono">50</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw" style="--c:#C4C4C7"></span><span class="sw-tono">60</span><span class="sw-hex">#C4C4C7</span></li>
+          </ul>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#B7B7BA"></span><span class="sw-tono">75</span><span class="sw-hex">#B7B7BA</span></li>
+            <li><span class="sw" style="--c:#0D6F71"></span><span class="sw-tono">90</span><span class="sw-hex">#0D6F71</span></li>
+            <li><span class="sw" style="--c:#5D5D63"></span><span class="sw-tono">95</span><span class="sw-hex">#5D5D63</span></li>
+            <li><span class="sw" style="--c:#505057"></span><span class="sw-tono">100</span><span class="sw-hex">#505057</span></li>
+            <li><span class="sw" style="--c:#292929"></span><span class="sw-tono">125</span><span class="sw-hex">#292929</span></li>
+            <li><span class="sw" style="--c:#1E1E27"></span><span class="sw-tono">150</span><span class="sw-hex">#1E1E27</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--primario">
+          <h3>Primario | Azul</h3>
+          <p>No había un color primario muy definido así que se le dará un rol primario a este color utilizado originalmente por iRacing</p>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#679BE2"></span><span class="sw-tono">10</span><span class="sw-hex">#679BE2</span></li>
+            <li><span class="sw" style="--c:#4D8BDD"></span><span class="sw-tono">25</span><span class="sw-hex">#4D8BDD</span></li>
+            <li><span class="sw" style="--c:#347AD9"></span><span class="sw-tono">50</span><span class="sw-hex">#347AD9</span></li>
+            <li><span class="sw" style="--c:#1A6AD4"></span><span class="sw-tono">75</span><span class="sw-hex">#1A6AD4</span></li>
+            <li><span class="sw" style="--c:#0159CF"></span><span class="sw-tono">100</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw" style="--c:#02449F"></span><span class="sw-tono">150</span><span class="sw-hex">#02449F</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--secundario">
+          <h3>Secundario | Naranja</h3>
+          <p>Este color se utiliza específicamente para cualquier elemento que empiece el proceso de comprar un producto.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#FFB685"></span><span class="sw-tono">25</span><span class="sw-hex">#FFB685</span></li>
+            <li><span class="sw" style="--c:#FFA366"></span><span class="sw-tono">50</span><span class="sw-hex">#FFA366</span></li>
+            <li><span class="sw" style="--c:#FF8533"></span><span class="sw-tono">75</span><span class="sw-hex">#FF8533</span></li>
+            <li><span class="sw" style="--c:#FF6600"></span><span class="sw-tono">100</span><span class="sw-hex">#FF6600</span></li>
+            <li><span class="sw" style="--c:#CD5303"></span><span class="sw-tono">150</span><span class="sw-hex">#CD5303</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--exito">
+          <h3>Éxito</h3>
+          <p>Se usan en estados de éxito y completado. Utilizado principalmente para acciones que ejecuten el simulador haciendo que el usuario abandone la web.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#8DE270"></span><span class="sw-tono">25</span><span class="sw-hex">#8DE270</span></li>
+            <li><span class="sw" style="--c:#7DDE5C"></span><span class="sw-tono">50</span><span class="sw-hex">#7DDE5C</span></li>
+            <li><span class="sw" style="--c:#6CDA47"></span><span class="sw-tono">75</span><span class="sw-hex">#6CDA47</span></li>
+            <li><span class="sw" style="--c:#5CD633"></span><span class="sw-tono">100</span><span class="sw-hex">#5CD633</span></li>
+            <li><span class="sw" style="--c:#217C06"></span><span class="sw-tono">150</span><span class="sw-hex">#217C06</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--advertencia">
+          <h3>Advertencia</h3>
+          <p>Estos colores representan una emoción de espera. Generalmente se usan en estados de advertencia o espera.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#F7F99E"></span><span class="sw-tono">25</span><span class="sw-hex">#F7F99E</span></li>
+            <li><span class="sw" style="--c:#F2F556"></span><span class="sw-tono">50</span><span class="sw-hex">#F2F556</span></li>
+            <li><span class="sw" style="--c:#ECF000"></span><span class="sw-tono">75</span><span class="sw-hex">#ECF000</span></li>
+            <li><span class="sw" style="--c:#EA8C00"></span><span class="sw-tono">100</span><span class="sw-hex">#EA8C00</span></li>
+            <li><span class="sw" style="--c:#B45309"></span><span class="sw-tono">150</span><span class="sw-hex">#B45309</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--error">
+          <h3>Error</h3>
+          <p>Estos colores representan una emoción negativa. Generalmente se usan en estados de error.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#E75149"></span><span class="sw-tono">25</span><span class="sw-hex">#E75149</span></li>
+            <li><span class="sw" style="--c:#E43B32"></span><span class="sw-tono">50</span><span class="sw-hex">#E43B32</span></li>
+            <li><span class="sw" style="--c:#E1251B"></span><span class="sw-tono">75</span><span class="sw-hex">#E1251B</span></li>
+            <li><span class="sw" style="--c:#CB2118"></span><span class="sw-tono">100</span><span class="sw-hex">#CB2118</span></li>
+            <li><span class="sw" style="--c:#B41E16"></span><span class="sw-tono">150</span><span class="sw-hex">#B41E16</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--estados">
+          <h3>Estados</h3>
+          <p>Son superposiciones que cubren un elemento e indican su estado. Estas proporcionan un enfoque sistemático para visualizar estados mediante el uso de opacidad.</p>
+          <ul class="sw-grid sw-grid--5" aria-label="Estados sobre #C9C9CC">
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:4"><span class="sw-est-lbl">Opacity: 4%</span></span><span class="sw-tono">Hover</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Selected</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Activated</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris sw-est--pressed" style="--c:#C9C9CC;--op:12"><span class="sw-est-lbl">Opacity: 12%</span></span><span class="sw-tono">Pressed</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Dragged</span><span class="sw-hex">#C9C9CC</span></li>
+          </ul>
+          <ul class="sw-grid sw-grid--5" aria-label="Estados sobre #0159CF">
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Hover</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:10"><span class="sw-est-lbl">Opacity: 10%</span></span><span class="sw-tono">Selected</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:10"><span class="sw-est-lbl">Opacity: 10%</span></span><span class="sw-tono">Activated</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul sw-est--pressed" style="--c:#0159CF;--op:12"><span class="sw-est-lbl">Opacity: 12%</span></span><span class="sw-tono">Pressed</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:16"><span class="sw-est-lbl">Opacity: 16%</span></span><span class="sw-tono">Dragged</span><span class="sw-hex">#0159CF</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="tipografia" aria-labelledby="tipografia-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="tipografia-titulo">Tipografía</h2><p class="sec-sub">Transmitiendo los valores y principios</p></div>
+        <div class="sec-nav"><a href="#colores" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Colores</a><a href="#imagenes" class="btn btn--md btn-info" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Imágenes</a></div>
+      </div>
+      <table class="sd-tipo">
+        <thead>
+          <tr><th scope="col">Nombre</th><th scope="col">Uso</th><th scope="col">Ejemplo</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" class="tp tp--10m">10 Inter - label 3 - medium</th><td data-col="Uso">Labels</td><td data-col="Ejemplo"><span class="tp-ej"><img src="assets/sistema-diseno/label-duracion.png" alt="Label «25 min»" width="57" height="24"><img src="assets/sistema-diseno/label-fixed.png" alt="Label «Fixed»" width="50" height="24"><img src="assets/sistema-diseno/label-pilotos.png" alt="Label «103 Drivers»" width="79" height="24"></span></td></tr>
+          <tr><th scope="row" class="tp tp--12r">12 Inter - label 1 - regular</th><td data-col="Uso">Licencias</td><td data-col="Ejemplo"><span class="tp-ej"><img src="assets/sistema-diseno/licencia-d.png" alt="Licencia D" width="49" height="24"><img src="assets/sistema-diseno/licencia-c.png" alt="Licencia C" width="49" height="24"><img src="assets/sistema-diseno/licencia-b.png" alt="Licencia B" width="48" height="24"><img src="assets/sistema-diseno/licencia-a.png" alt="Licencia A" width="49" height="24"></span></td></tr>
+          <tr><th scope="row" class="tp tp--12l">12 Inter - label 1 - light</th><td data-col="Uso">Título de columnas</td><td data-col="Ejemplo"><span class="tp-ej"><img src="assets/sistema-diseno/columna-start.png" alt="Columna «Start»" width="61" height="40"><img src="assets/sistema-diseno/columna-drivers.png" alt="Columna «Drivers»" width="57" height="40"><img src="assets/sistema-diseno/columna-licenses.png" alt="Columna «Licenses»" width="66" height="40"></span></td></tr>
+          <tr><th scope="row" class="tp tp--12s">12 Inter - label 1 - semibold</th><td data-col="Uso">Safety Rating</td><td data-col="Ejemplo"><span class="tp-ej"><img src="assets/sistema-diseno/safety-rating-r-250.png" alt="Licencia R, SR 2.50, iR 1315" width="60" height="87"><img src="assets/sistema-diseno/safety-rating-d.png" alt="Licencia D, SR 3.10, iR 1292" width="60" height="87"><img src="assets/sistema-diseno/safety-rating-r-117.png" alt="Licencia R, SR 1.17, iR 927" width="60" height="87"></span></td></tr>
+          <tr><th scope="row" class="tp tp--14r">14 Inter - body 2 - regular</th><td data-col="Uso">Subtítulos</td><td data-col="Ejemplo"><span class="tp-ej"><img src="assets/sistema-diseno/subtitulo-serie.png" alt="Global Mazda MX-5 Cup, 4 cars competing, con el botón «Change Car»" width="361" height="56"></span></td></tr>
+          <tr><th scope="row" class="tp tp--14m">14 Inter - body 2 - medium</th><td data-col="Uso">Botones segmentados, filtros</td><td data-col="Ejemplo"><span class="tp-ej"><img src="assets/sistema-diseno/filtro-seleccionados.png" alt="Filtro «4 filters selected»" width="361" height="32"></span></td></tr>
+          <tr><th scope="row" class="tp tp--16r">16 Inter - body 1 - regular</th><td data-col="Uso">Texto</td><td data-col="Ejemplo"><p class="tp-ej tp-ej--texto" lang="en">“Circuit de Spa-Francorchamps is one of the motorsport world's most storied venues.”</p></td></tr>
+          <tr><th scope="row" class="tp tp--16s">16 Inter - body 1 - semibold</th><td data-col="Uso">Botones y tabs</td><td data-col="Ejemplo"><span class="tp-ej"><img src="assets/sistema-diseno/boton-race.png" alt="Botón «Race»" width="99" height="48"><img src="assets/sistema-diseno/boton-add-to-cart.png" alt="Botón «Add to Cart»" width="150" height="48"></span></td></tr>
+          <tr><th scope="row" class="tp tp--24">24 Exo 2 - Title 3 - bold</th><td data-col="Uso">Título de sección</td><td data-col="Ejemplo"><p class="tp-ej tp-ej--t3" lang="en">Available Sessions</p></td></tr>
+          <tr><th scope="row" class="tp tp--36">36 Exo 2 - Title 1 - bold</th><td data-col="Uso">Título de pantalla</td><td data-col="Ejemplo"><p class="tp-ej tp-ej--t1" lang="en">Results &amp; Stats</p></td></tr>
         </tbody>
       </table>
     </div>

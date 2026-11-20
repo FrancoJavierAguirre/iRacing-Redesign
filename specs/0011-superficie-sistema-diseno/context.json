@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0011-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): siguiente parte de Superficie, la sección Sistema de Diseño según la imagen de referencia, con las subsecciones Valores, Principios, Colores y Tipografía; íconos 'escalera' y 'chart up' para Principios (el resto ya está en assets); ejemplos de Tipografía en PNG. Respuesta a la pregunta: Imágenes se hace después (Track.svg queda para esa parte)" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0011-superficie-sistema-diseno/referencia-figma.png", "sha256": "1a95e552e8d8d2466d5a122b2b5f86bb872d60b1f47952b84c7dac0f592d9357" },
+    { "id": "s-superficie", "kind": "file", "reference": "specs/0010-superficie-ux-writing/spec.md", "sha256": "fcade7600f8a2cb38e89ea020ebcc45d81f7727079e8afd185e2ec3e9a4d818d" }
+  ],
+  "facts": [
+    { "id": "o-design", "area": "product", "statement": "La referencia muestra 'Sistema de Diseño' con el link 'Volver a UX Writing' y cuatro subsecciones con botones Ir a arriba/abajo: Valores (3 columnas), Principios (4 filas tarjeta con ícono + descripción), Colores (Neutrales, Primario, Secundario, Éxito, Advertencia, Error y Estados, con muestras, tono y hex) y Tipografía (tabla Nombre / Uso / Ejemplo de 10 filas, con 'Ir a Imágenes').", "status": "observed", "source": "s-referencia" },
+    { "id": "o-pagina", "area": "technical", "statement": "Según la spec 0010 (commit c7c4ac0), superficie.html tiene la parte UX Writing; 'Saltar a Sistema de Diseño' (#sistema-de-diseno) e 'Ir a Valores' (#valores) están marcados data-sin-destino a la espera de esta sección.", "status": "observed", "source": "s-superficie" },
+    { "id": "d-subsecciones", "area": "product", "statement": "Esta parte incluye Valores, Principios, Colores y Tipografía; Imágenes se hace después y 'Ir a Imágenes' queda sin destino hasta entonces.", "status": "confirmed", "source": "u-0011-request" },
+    { "id": "d-ejemplos", "area": "product", "statement": "Los ejemplos de Tipografía se muestran con los PNG provistos por el usuario; Principios usa los íconos escalera y chart up provistos.", "status": "confirmed", "source": "u-0011-request" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre la capa Superficie",
+    "problem": "Superficie solo muestra UX Writing; el sistema de diseño no aparece y sus links no tienen destino.",
+    "outcome": "superficie.html incluye Sistema de Diseño con Valores, Principios, Colores y Tipografía, enlazado desde UX Writing.",
+    "scope": "Incluye: secciones en superficie.html y superficie.css, assets (íconos y ejemplos), activar 'Saltar a Sistema de Diseño' e 'Ir a Valores', SEO, llms.txt y docs. Excluye: Imágenes (Track.svg), 'Siguiente elemento UX' y el resto de Superficie.",
+    "acceptance": "1) Sistema de Diseño se ve como la referencia a 1920 px. 2) 'Saltar a Sistema de Diseño', 'Volver a UX Writing', 'Ir a Valores' y los Ir a internos llevan a su sección. 3) 'Ir a Imágenes' no salta al tope. 4) Responsive sin scroll horizontal. 5) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector ve los valores, principios, paleta y tipografía del rediseño.",
+    "evidence": ["o-design", "o-pagina", "d-subsecciones", "d-ejemplos"]
+  }
+}

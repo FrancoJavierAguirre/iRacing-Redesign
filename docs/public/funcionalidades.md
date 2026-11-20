@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing implementado; Sistema de Diseño, Valores y el resto de la página pendientes |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing y Sistema de Diseño (Valores, Principios, Colores y Tipografía) implementados; Imágenes y el resto de la página pendientes |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -128,16 +128,25 @@ Una sección, **Wireframes en Media** («Empezando el rediseño»), con 4 wirefr
 - Cierre «Siguiente elemento UX»: Estamos acá Esqueleto, Sigue acá Superficie (lleva a `superficie.html`), y también Estrategia, Alcance y Estructura.
 
 El menú de capas de las demás páginas, sus tarjetas, el Home y 5-elementos ya enlazan a Esqueleto.
-## Superficie (`superficie.html`) — parte UX Writing
+## Superficie (`superficie.html`) — UX Writing y Sistema de Diseño
 
-Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que todavía no hace nada porque esa sección no existe. Arriba a la derecha, «Ver Prototipo» abre el prototipo de Figma en una pestaña nueva.
+Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja a esa sección. Arriba a la derecha, «Ver Prototipo» abre el prototipo de Figma en una pestaña nueva.
 
 1. **Círculo de Oro** («Identidad de la marca»): tres bloques, ¿Por qué?, ¿Cómo? y ¿Qué?. Cada uno tiene el diagrama de círculos con su anillo resaltado y el texto que lo explica.
 2. **Matriz de Voz** («Definiendo la personalidad»): tabla con Autenticidad, Claridad y Conciso aplicados a concepto, verbosidad, vocabulario, gramática, puntuación y uso de mayúsculas.
 3. **Matriz de Tono** («Cómo se le habla al piloto»): sobre la trayectoria del usuario, Log in y Carrito de compras van en tono informativo y serio, y Lista de carreras y Detalles de carrera en tono casual y directo.
-4. **Guía de Estilo** («Cómo se le habla al piloto»): reglas y buenas y malas prácticas para títulos de columnas, filtros y tags, numeración, títulos y subtítulos, y botones. «Ir a Valores» todavía no hace nada.
+4. **Guía de Estilo** («Cómo se le habla al piloto»): reglas y buenas y malas prácticas para títulos de columnas, filtros y tags, numeración, títulos y subtítulos, y botones. «Ir a Valores» baja al Sistema de Diseño.
 
-**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Todavía no tiene «Siguiente elemento UX».
+**Sistema de Diseño** (título grande con el link «Volver a UX Writing»):
+
+5. **Valores** («El combustible de la marca»): Autenticidad, Claridad y Conciso, cada uno con su descripción.
+6. **Principios** («Las reglas de comunicación»): Simple, Entendible, Escalonado y Eficiente, cada uno con su ícono y lo que exige.
+7. **Colores** («Accesibilidad y armonía»): neutrales, primario azul, secundario naranja, éxito, advertencia y error, con tono y código hex, y para qué se usa cada grupo. Al final, los estados (hover, selected, activated, pressed y dragged) con su opacidad sobre gris y sobre azul.
+8. **Tipografía** («Transmitiendo los valores y principios»): tabla de 10 estilos con nombre, uso y un ejemplo del rediseño. Cada nombre se muestra en su propio estilo, de «10 Inter - label 3 - medium» a «36 Exo 2 - Title 1 - bold». «Ir a Imágenes» todavía no hace nada porque esa parte no existe.
+
+Cada subsección tiene botones para ir a la anterior y a la siguiente.
+
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Todavía no tiene Imágenes ni «Siguiente elemento UX».
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.

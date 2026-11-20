@@ -3,10 +3,15 @@
   "agreements": {},
   "workflow": {
     "mode": "light",
-    "roles": ["front"],
+    "roles": [
+      "front"
+    ],
     "reason": "Cambios localizados en páginas estáticas y llms.txt; sin backend ni datos. T1 (0001) y T2 (0002) comparten estrategia.html y llms.txt: por decisión del usuario se revisan juntas al terminar T2.",
     "questions": [],
-    "qa": { "mode": "manual", "browser": false }
+    "qa": {
+      "mode": "manual",
+      "browser": false
+    }
   },
   "tasks": [
     {
@@ -16,14 +21,36 @@
       "state": "done",
       "acceptance": "Las 3 páginas tienen title y meta description únicos, meta robots, Open Graph/Twitter sin URLs absolutas y JSON-LD válido con el autor e inLanguage es; existe llms.txt con rutas relativas y la descripción de las 6 comparativas; 'Garrett' corregido en 5-elementos.html; sin cambios visuales ni errores de consola.",
       "dependsOn": [],
-      "files": ["index.html", "5-elementos.html", "estrategia.html", "llms.txt"],
+      "files": [
+        "index.html",
+        "5-elementos.html",
+        "estrategia.html",
+        "llms.txt"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0001-seo-descubrimiento/spec.md", "sha256": "0e1c548b4f5c19c600a7842139fd05ce9ab9742ec992d704f2e6c6e7935953b2" },
-        { "path": "specs/0001-seo-descubrimiento/tasks.md", "sha256": "392b074ae6c809de5bae8abdac7b31a5d2df9c19c0ce59be97fc8881c72a3dff" }
+        {
+          "path": "specs/0001-seo-descubrimiento/spec.md",
+          "sha256": "0e1c548b4f5c19c600a7842139fd05ce9ab9742ec992d704f2e6c6e7935953b2"
+        },
+        {
+          "path": "specs/0001-seo-descubrimiento/tasks.md",
+          "sha256": "392b074ae6c809de5bae8abdac7b31a5d2df9c19c0ce59be97fc8881c72a3dff"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit 6e8e8fa; los archivos fuente cambiaron después por T4 (0004).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision.md",
+            "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc"
+          }
+        }
+      ]
     },
     {
       "id": "T2",
@@ -32,14 +59,36 @@
       "state": "done",
       "acceptance": "La card 'Resultados para el Usuario' muestra los 4 bullets indicados por el usuario en orden; 'Ver respuestas' abre la planilla de Google Sheets en pestaña nueva (target=_blank rel=noopener); sin otros cambios visibles; llms.txt y docs actualizados.",
       "dependsOn": [],
-      "files": ["estrategia.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "files": [
+        "estrategia.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0002-canvas-resultados-usuario/spec.md", "sha256": "f4059091538e8235737519171c6ed006cf9cb8c0c2675fbebeec8e91e53a7586" },
-        { "path": "specs/0002-canvas-resultados-usuario/tasks.md", "sha256": "22588d0d24e9fc5d3a7d193750b79c31ac8a70e6054d6caf1eb1ed76c9c68784" }
+        {
+          "path": "specs/0002-canvas-resultados-usuario/spec.md",
+          "sha256": "f4059091538e8235737519171c6ed006cf9cb8c0c2675fbebeec8e91e53a7586"
+        },
+        {
+          "path": "specs/0002-canvas-resultados-usuario/tasks.md",
+          "sha256": "22588d0d24e9fc5d3a7d193750b79c31ac8a70e6054d6caf1eb1ed76c9c68784"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit 6e8e8fa; los archivos fuente cambiaron después por T4 (0004).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision.md",
+            "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc"
+          }
+        }
+      ]
     },
     {
       "id": "T3",
@@ -48,15 +97,44 @@
       "state": "done",
       "acceptance": "Disparador en la palabra 'Estrategia' del breadcrumb (corrección d-trigger-breadcrumb). Criterios 1-6 de change.acceptance en .cardenal/context.json (0003): chevron down/up, apertura y cierre, valores visuales, opción actual oculta y opciones sin página deshabilitadas, sin regresiones ni errores de consola, docs actualizadas.",
       "dependsOn": [],
-      "files": ["estrategia.html", "elementos.css", "menu-capas.js", "specs/0003-menu-capas-topbar/plan.md", "assets/ico-chevron-down.svg", "assets/ico-chevron-up.svg", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "files": [
+        "estrategia.html",
+        "elementos.css",
+        "menu-capas.js",
+        "specs/0003-menu-capas-topbar/plan.md",
+        "assets/ico-chevron-down.svg",
+        "assets/ico-chevron-up.svg",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0003-menu-capas-topbar/spec.md", "sha256": "76e5b17792ec6fe5fb57d12dc0d0d5a6ae96d05508c9809ade9917a6d8ffae5a" },
-        { "path": "specs/0003-menu-capas-topbar/tasks.md", "sha256": "ba5562899386e6272fae1b4a1d1c561a036d6fe67d7255d68c90514c28ab62fb" },
-        { "path": "menu-capas.js", "sha256": "77e6c14b5ac12f9210164c9afce6a83fedc4cb878715dabe206f07f9de1a4f9f" }
+        {
+          "path": "specs/0003-menu-capas-topbar/spec.md",
+          "sha256": "76e5b17792ec6fe5fb57d12dc0d0d5a6ae96d05508c9809ade9917a6d8ffae5a"
+        },
+        {
+          "path": "specs/0003-menu-capas-topbar/tasks.md",
+          "sha256": "ba5562899386e6272fae1b4a1d1c561a036d6fe67d7255d68c90514c28ab62fb"
+        },
+        {
+          "path": "menu-capas.js",
+          "sha256": "77e6c14b5ac12f9210164c9afce6a83fedc4cb878715dabe206f07f9de1a4f9f"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit 6e8e8fa; estrategia.html, elementos.css y docs cambiaron después por T4 (0004).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)", "verdict": "approved", "evidence": { "path": ".cardenal/revision.md", "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras recibir los pasos de QA manual de 0001, 0002 y 0003)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision.md",
+            "sha256": "32b0b0f9600c9aaa443878386b39b6b1c94d99eec82b0c2aabfc04dccf0524dc"
+          }
+        }
+      ]
     },
     {
       "id": "T4",
@@ -65,14 +143,43 @@
       "state": "done",
       "acceptance": "Criterios 1-7 de change.acceptance en .cardenal/context.json (0004). Corrección del QA: números de cuadrante en Inter 400, 128 px @1920.",
       "dependsOn": [],
-      "files": ["alcance.html", "alcance.css", "elementos.css", "estrategia.css", "estrategia.html", "index.html", "5-elementos.html", "llms.txt", "assets/ico-star.svg", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "files": [
+        "alcance.html",
+        "alcance.css",
+        "elementos.css",
+        "estrategia.css",
+        "estrategia.html",
+        "index.html",
+        "5-elementos.html",
+        "llms.txt",
+        "assets/ico-star.svg",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0004-pagina-alcance/spec.md", "sha256": "9ce22178779ba5146602cfa6537f6fffc0b05d5de7df6f78efd454bf74408bde" },
-        { "path": "specs/0004-pagina-alcance/tasks.md", "sha256": "53ab830fb3e458e52c06b5276e7f96463a2b4c954c89b36232a7ae73900cff28" }
+        {
+          "path": "specs/0004-pagina-alcance/spec.md",
+          "sha256": "9ce22178779ba5146602cfa6537f6fffc0b05d5de7df6f78efd454bf74408bde"
+        },
+        {
+          "path": "specs/0004-pagina-alcance/tasks.md",
+          "sha256": "53ab830fb3e458e52c06b5276e7f96463a2b4c954c89b36232a7ae73900cff28"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit 7cab85c; los archivos fuente cambiaron después por T5 (0005).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras la corrección de los números en Inter 128)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0004.md", "sha256": "2efc945563a264eb64689ea2f2d465d07bd89ddeabeda5e9763dff599224ef9d" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras la corrección de los números en Inter 128)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0004.md",
+            "sha256": "2efc945563a264eb64689ea2f2d465d07bd89ddeabeda5e9763dff599224ef9d"
+          }
+        }
+      ]
     },
     {
       "id": "T5",
@@ -80,15 +187,47 @@
       "role": "front",
       "state": "done",
       "acceptance": "Criterios 1-7 de change.acceptance en .cardenal/context.json (0005) y spec specs/0005-pagina-estructura/spec.md.",
-      "dependsOn": ["T4"],
-      "files": ["estructura.html", "estructura.css", "estructura.js", "elementos.css", "estrategia.css", "estrategia.html", "alcance.html", "index.html", "5-elementos.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "dependsOn": [
+        "T4"
+      ],
+      "files": [
+        "estructura.html",
+        "estructura.css",
+        "estructura.js",
+        "elementos.css",
+        "estrategia.css",
+        "estrategia.html",
+        "alcance.html",
+        "index.html",
+        "5-elementos.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0005-pagina-estructura/spec.md", "sha256": "44a44f288c4a6dc0a345975ecfe885cd4871dce07fc42f9624a8e27ce837e711" },
-        { "path": "specs/0005-pagina-estructura/tasks.md", "sha256": "997304f86d069999a379aa88393fe0f0378a33dd3663179135280c575a30d5b8" }
+        {
+          "path": "specs/0005-pagina-estructura/spec.md",
+          "sha256": "44a44f288c4a6dc0a345975ecfe885cd4871dce07fc42f9624a8e27ce837e711"
+        },
+        {
+          "path": "specs/0005-pagina-estructura/tasks.md",
+          "sha256": "997304f86d069999a379aa88393fe0f0378a33dd3663179135280c575a30d5b8"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit ab566a4; los archivos fuente cambiaron después por T6 (0006).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras las correcciones de contadores y diagramas SVG)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0005.md", "sha256": "bddcb961a8019ea134d0f600edcaf5e62849e5d0215e2224694c827f8ab67fda" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-17: Lo apruebo (tras las correcciones de contadores y diagramas SVG)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0005.md",
+            "sha256": "bddcb961a8019ea134d0f600edcaf5e62849e5d0215e2224694c827f8ab67fda"
+          }
+        }
+      ]
     },
     {
       "id": "T6",
@@ -96,15 +235,42 @@
       "role": "front",
       "state": "done",
       "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0006) y specs/0006-arquitectura-actual-navegable/spec.md.",
-      "dependsOn": ["T5"],
-      "files": ["estructura.html", "estructura.css", "estructura.js", "assets/arquitectura-actual/home.jpg", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "dependsOn": [
+        "T5"
+      ],
+      "files": [
+        "estructura.html",
+        "estructura.css",
+        "estructura.js",
+        "assets/arquitectura-actual/home.jpg",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0006-arquitectura-actual-navegable/spec.md", "sha256": "ceafab72ce542f106c1fb87224401f72cffea6875c6d69dc1de711c3d64371e5" },
-        { "path": "specs/0006-arquitectura-actual-navegable/tasks.md", "sha256": "6800d217620c9c926434c13511de564baddda0dee78664caefe85fcf2bc5d72f" }
+        {
+          "path": "specs/0006-arquitectura-actual-navegable/spec.md",
+          "sha256": "ceafab72ce542f106c1fb87224401f72cffea6875c6d69dc1de711c3d64371e5"
+        },
+        {
+          "path": "specs/0006-arquitectura-actual-navegable/tasks.md",
+          "sha256": "6800d217620c9c926434c13511de564baddda0dee78664caefe85fcf2bc5d72f"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit 67d03b5; estructura.html, llms.txt y docs cambiaron después por T7 (0007).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-18: Lo apruebo", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0006.md", "sha256": "f0f76e650c4e53d8a42351c1cba4ad25b993a538436f1c8aff9c232bdddca1e6" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-18: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0006.md",
+            "sha256": "f0f76e650c4e53d8a42351c1cba4ad25b993a538436f1c8aff9c232bdddca1e6"
+          }
+        }
+      ]
     },
     {
       "id": "T7",
@@ -112,15 +278,41 @@
       "role": "front",
       "state": "done",
       "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0007) y specs/0007-detalle-tarea-1/spec.md.",
-      "dependsOn": ["T6"],
-      "files": ["estructura-tarea-1.html", "estructura-tarea.css", "estructura.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "dependsOn": [
+        "T6"
+      ],
+      "files": [
+        "estructura-tarea-1.html",
+        "estructura-tarea.css",
+        "estructura.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0007-detalle-tarea-1/spec.md", "sha256": "8cca2ea4e01c5077db2f490f8497a19622f8a55c57d95d149d837e84eb585c2c" },
-        { "path": "specs/0007-detalle-tarea-1/tasks.md", "sha256": "af9d80f42820a841bcffc7a713d5a3a4a30b9b30e8ac9a2639e6664965f9660c" }
+        {
+          "path": "specs/0007-detalle-tarea-1/spec.md",
+          "sha256": "8cca2ea4e01c5077db2f490f8497a19622f8a55c57d95d149d837e84eb585c2c"
+        },
+        {
+          "path": "specs/0007-detalle-tarea-1/tasks.md",
+          "sha256": "af9d80f42820a841bcffc7a713d5a3a4a30b9b30e8ac9a2639e6664965f9660c"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit d235d4f; estructura.html, llms.txt y docs cambiaron después por T8 (0008).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-18: Lo apruebo (tras la corrección de la flecha del breadcrumb)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0007.md", "sha256": "0e9638de0ac50e17779d489242ff4bcb9122238115eac587c7af7947ac19f025" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-18: Lo apruebo (tras la corrección de la flecha del breadcrumb)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0007.md",
+            "sha256": "0e9638de0ac50e17779d489242ff4bcb9122238115eac587c7af7947ac19f025"
+          }
+        }
+      ]
     },
     {
       "id": "T8",
@@ -128,15 +320,40 @@
       "role": "front",
       "state": "done",
       "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0008) y specs/0008-detalle-tarea-2/spec.md.",
-      "dependsOn": ["T7"],
-      "files": ["estructura-tarea-2.html", "estructura.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "dependsOn": [
+        "T7"
+      ],
+      "files": [
+        "estructura-tarea-2.html",
+        "estructura.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0008-detalle-tarea-2/spec.md", "sha256": "a5436e5bd4edf0d32f6661775e6a74ca831c122218de0c3bd71ab8024881af00" },
-        { "path": "specs/0008-detalle-tarea-2/tasks.md", "sha256": "318fdab3928a8d6ac326ad2035dcb111fa4164c37247990647e7cc27c0a42a86" }
+        {
+          "path": "specs/0008-detalle-tarea-2/spec.md",
+          "sha256": "a5436e5bd4edf0d32f6661775e6a74ca831c122218de0c3bd71ab8024881af00"
+        },
+        {
+          "path": "specs/0008-detalle-tarea-2/tasks.md",
+          "sha256": "318fdab3928a8d6ac326ad2035dcb111fa4164c37247990647e7cc27c0a42a86"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit 7a17696; los archivos fuente cambiaron después por T9 (0009).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0008.md", "sha256": "2a22cae53b5ea36646c82055056772ed1d3befccd2f0f58d14445d263debdb13" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0008.md",
+            "sha256": "2a22cae53b5ea36646c82055056772ed1d3befccd2f0f58d14445d263debdb13"
+          }
+        }
+      ]
     },
     {
       "id": "T9",
@@ -144,15 +361,48 @@
       "role": "front",
       "state": "done",
       "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0009) y specs/0009-pagina-esqueleto/spec.md.",
-      "dependsOn": ["T8"],
-      "files": ["esqueleto.html", "esqueleto.css", "elementos.css", "estrategia.html", "alcance.html", "estructura.html", "estructura-tarea-1.html", "estructura-tarea-2.html", "5-elementos.html", "index.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "dependsOn": [
+        "T8"
+      ],
+      "files": [
+        "esqueleto.html",
+        "esqueleto.css",
+        "elementos.css",
+        "estrategia.html",
+        "alcance.html",
+        "estructura.html",
+        "estructura-tarea-1.html",
+        "estructura-tarea-2.html",
+        "5-elementos.html",
+        "index.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "specs/0009-pagina-esqueleto/spec.md", "sha256": "faabeff2d0b9f51e897e1a30d829c9dcf52e98cbeb64a3cf312f1a2ab18db29d" },
-        { "path": "specs/0009-pagina-esqueleto/tasks.md", "sha256": "b8b4dd432be431edf25de1e3ea259ebc18e068b4ec515e86b3fb655cf30896dc" }
+        {
+          "path": "specs/0009-pagina-esqueleto/spec.md",
+          "sha256": "faabeff2d0b9f51e897e1a30d829c9dcf52e98cbeb64a3cf312f1a2ab18db29d"
+        },
+        {
+          "path": "specs/0009-pagina-esqueleto/tasks.md",
+          "sha256": "b8b4dd432be431edf25de1e3ea259ebc18e068b4ec515e86b3fb655cf30896dc"
+        }
       ],
       "evidenceNote": "El código aprobado está en el commit 271af87; los archivos fuente cambiaron después por T10 (0010).",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0009.md", "sha256": "59df8c62a06c3d071f7845e4bff093b591c181f2fc9271b2f5c3815b44be3608" } }]
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0009.md",
+            "sha256": "59df8c62a06c3d071f7845e4bff093b591c181f2fc9271b2f5c3815b44be3608"
+          }
+        }
+      ]
     },
     {
       "id": "T10",
@@ -160,30 +410,158 @@
       "role": "front",
       "state": "done",
       "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0010) y specs/0010-superficie-ux-writing/spec.md.",
-      "dependsOn": ["T9"],
-      "files": ["superficie.html", "superficie.css", "styles.css", "elementos.css", "estrategia.html", "alcance.html", "estructura.html", "estructura-tarea-1.html", "estructura-tarea-2.html", "esqueleto.html", "5-elementos.html", "index.html", "llms.txt", "docs/public/funcionalidades.md", "docs/tech/sistema.md"],
+      "dependsOn": [
+        "T9"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "styles.css",
+        "elementos.css",
+        "estrategia.html",
+        "alcance.html",
+        "estructura.html",
+        "estructura-tarea-1.html",
+        "estructura-tarea-2.html",
+        "esqueleto.html",
+        "5-elementos.html",
+        "index.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
       "questions": [],
       "evidence": [
-        { "path": "superficie.html", "sha256": "9bfbd3a40a3184ed549f8b23c4aafdd0ea98b73ec8dd5db507950f3daac1c58e" },
-        { "path": "superficie.css", "sha256": "e58398018f622b9d5da940c4583db7cd6f01f8f73f85b2d2ffe5b65c5a60c5ce" },
-        { "path": "elementos.css", "sha256": "bf155c291f26564884fc9e38b93324742adbc29a645b65b2354d7ac0631427cd" },
-        { "path": "estrategia.html", "sha256": "36432692e4a16b9138e4756ab6c8d5c9a12d1b7887da68b19f2e1258372857ec" },
-        { "path": "alcance.html", "sha256": "05ac7d638252b4bea9cfddf4eae88f27e39ff6b7b27f4e34a650afac1e2c985b" },
-        { "path": "estructura.html", "sha256": "aadc4f7589cfa913c7a2466c6b1c6f3bd12f02026cabd458013df9799b208d1c" },
-        { "path": "estructura-tarea-1.html", "sha256": "6e7f2c9839267f9611d05f870aec87bf471bed3550b6f584381eb0c30854f48d" },
-        { "path": "estructura-tarea-2.html", "sha256": "fa1c92a4d637b69360b449e165bb790af1f92b7671652c1295ed041d46ad1e6e" },
-        { "path": "esqueleto.html", "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386" },
-        { "path": "5-elementos.html", "sha256": "03a666fcd607f6e4ee2e2e1059b0443624f2ff6cbd812c60d03a8d3b781bc08e" },
-        { "path": "index.html", "sha256": "87b111edbaee330c87648bfa87606ed6bc13087738c5fef0aa73b5a0792d5792" },
-        { "path": "llms.txt", "sha256": "4704fb3e55a7daeab9c93ee051899a92477333824c412d022f4af9ad2e4366aa" },
-        { "path": "docs/public/funcionalidades.md", "sha256": "a377c0bc7dcb5ac037e466cc78fec7fcb1594d3ebbd992f0f37a357be3cf6acc" },
-        { "path": "docs/tech/sistema.md", "sha256": "b9083d99940d1610508913c107e7e76cf7dc3d51d8f74a257d65a12801023ef3" },
-        { "path": "specs/0010-superficie-ux-writing/spec.md", "sha256": "fcade7600f8a2cb38e89ea020ebcc45d81f7727079e8afd185e2ec3e9a4d818d" },
-        { "path": "specs/0010-superficie-ux-writing/tasks.md", "sha256": "c151f140b46b4485cef01006223da455bba345225760959e87653f81661dc06e" },
-        { "path": "styles.css", "sha256": "31fd8cc862dbf9214f8718348926c6dcc636aca5d6e7465e6fa651fa325070f8" }
+        {
+          "path": "elementos.css",
+          "sha256": "bf155c291f26564884fc9e38b93324742adbc29a645b65b2354d7ac0631427cd"
+        },
+        {
+          "path": "estrategia.html",
+          "sha256": "36432692e4a16b9138e4756ab6c8d5c9a12d1b7887da68b19f2e1258372857ec"
+        },
+        {
+          "path": "alcance.html",
+          "sha256": "05ac7d638252b4bea9cfddf4eae88f27e39ff6b7b27f4e34a650afac1e2c985b"
+        },
+        {
+          "path": "estructura.html",
+          "sha256": "aadc4f7589cfa913c7a2466c6b1c6f3bd12f02026cabd458013df9799b208d1c"
+        },
+        {
+          "path": "estructura-tarea-1.html",
+          "sha256": "6e7f2c9839267f9611d05f870aec87bf471bed3550b6f584381eb0c30854f48d"
+        },
+        {
+          "path": "estructura-tarea-2.html",
+          "sha256": "fa1c92a4d637b69360b449e165bb790af1f92b7671652c1295ed041d46ad1e6e"
+        },
+        {
+          "path": "esqueleto.html",
+          "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386"
+        },
+        {
+          "path": "5-elementos.html",
+          "sha256": "03a666fcd607f6e4ee2e2e1059b0443624f2ff6cbd812c60d03a8d3b781bc08e"
+        },
+        {
+          "path": "index.html",
+          "sha256": "87b111edbaee330c87648bfa87606ed6bc13087738c5fef0aa73b5a0792d5792"
+        },
+        {
+          "path": "specs/0010-superficie-ux-writing/spec.md",
+          "sha256": "fcade7600f8a2cb38e89ea020ebcc45d81f7727079e8afd185e2ec3e9a4d818d"
+        },
+        {
+          "path": "specs/0010-superficie-ux-writing/tasks.md",
+          "sha256": "c151f140b46b4485cef01006223da455bba345225760959e87653f81661dc06e"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "31fd8cc862dbf9214f8718348926c6dcc636aca5d6e7465e6fa651fa325070f8"
+        }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front.",
-      "reviews": [{ "kind": "human", "reviewer": "usuario (team lead)", "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo (tras las correcciones del botón y del Círculo de Oro)", "verdict": "approved", "evidence": { "path": ".cardenal/revision-0010.md", "sha256": "90363487a70eac5f2016cd455555cb23a17c02c6e2cf1a4692c17df31280e7b0" } }]
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo (tras las correcciones del botón y del Círculo de Oro)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0010.md",
+            "sha256": "90363487a70eac5f2016cd455555cb23a17c02c6e2cf1a4692c17df31280e7b0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "title": "Superficie, parte 2: Sistema de Diseño (Valores, Principios, Colores, Tipografía)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0011) y specs/0011-superficie-sistema-diseno/spec.md.",
+      "dependsOn": [
+        "T10"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/ico-escalera.svg",
+        "assets/ico-chart-up.svg",
+        "assets/ico-check-gold.svg"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "4fdf94076abca3d6ceb95fb8d34fb0ed8c7c295d788fe68a9dbae4fd01938c20"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "cb22d44bfaef6a260276d014a8e0d543d8b4cd54eadafd3d7ecfcfaf3c5913df"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "f4b10f4a9926ffe3817b1c0a476985bc1e099930e02ea24bdcc72fddd04c4fa6"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "f65f7101cb4fd3becae5f07db6ea3b54e0cf3f38dea86dfd311e12205a30e643"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "99d1eb2f5c104c955c6553c23973704f970409d91061dd3f3b5ef9af7f8af875"
+        },
+        {
+          "path": "specs/0011-superficie-sistema-diseno/spec.md",
+          "sha256": "66d2a34b46993f12d095645565eba580f39948fa208451d52c2819cb2edba254"
+        },
+        {
+          "path": "specs/0011-superficie-sistema-diseno/tasks.md",
+          "sha256": "db5688568f3577ee1bda8c3587e8d14694472dca095e714232788a2f08f0fb91"
+        },
+        {
+          "path": "specs/0011-superficie-sistema-diseno/context.json",
+          "sha256": "2b4ac88eeded81a72a1bc5906bae3dbcd9ec5f649c6ee989db4250df90c11f2c"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-19: Lo apruebo (tras probarla él mismo, sin correcciones)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0011.md",
+            "sha256": "81e6c6cb9c3bb31f6010ad284b9ec58e49592a2aa8d9d1f1c5d9411a9e398749"
+          }
+        }
+      ]
     }
   ]
 }
