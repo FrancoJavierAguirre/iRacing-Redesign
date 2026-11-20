@@ -737,26 +737,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "be31cc09ee9476824ac9292a9775ac3d104f6964573b698be2e761ff08727cd7"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "7fa103ee4d59d565e997d485fdb742e0920281e57d2d6a15966b38fd44b9899b"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "8af0efa4278fede071c55d2ddec379d4b537b0fbcc2ec44379005a52e8881aa0"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "9b4184eb5362d1247f871c805325f4c23fd72a815d19a2ec44872d94f204c5f3"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "585280f1046a5390626b59044b97293a96642ca8cc54e1a21e1ef81d22b6ca39"
-        },
-        {
           "path": "superficie.js",
           "sha256": "2cd590202cbac142445691294eed5fb81140ab2c3810f8596be0eadf3eecce13"
         },
@@ -773,7 +753,7 @@
           "sha256": "71d00ee63cf099a5c5634ca002fc9358228844067eaf062f254eba7a3b5d1ecf"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. También se corrigieron en docs/tech/sistema.md las líneas de Imágenes, Layout e Iconografía, que habían quedado con caracteres perdidos por el escape de PowerShell al escribirlas en 0012 y 0013.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. También se corrigieron en docs/tech/sistema.md las líneas de Imágenes, Layout e Iconografía, que habían quedado con caracteres perdidos por el escape de PowerShell al escribirlas en 0012 y 0013. Evidencia rotada en 0015: archivos modificados por Dropdowns y Cards; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -783,6 +763,84 @@
           "evidence": {
             "path": ".cardenal/revision-0014.md",
             "sha256": "d7665dba14476bcd4eca69a8c31ca96a68b673bbff30ab9abd4b050d74dc1d11"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T15",
+      "title": "Superficie, parte 6: Componentes (Dropdowns y listas, y Cards)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0015) y specs/0015-superficie-dropdowns-cards/spec.md.",
+      "dependsOn": [
+        "T14"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/ico-tag-dark.svg",
+        "assets/ico-card-gold.svg",
+        "assets/sistema-diseno/dropdown-default.png",
+        "assets/sistema-diseno/dropdown-hover.png",
+        "assets/sistema-diseno/dropdown-presionado.png",
+        "assets/sistema-diseno/dropdown-seleccionado.png",
+        "assets/sistema-diseno/lista-opciones.png",
+        "assets/sistema-diseno/card-mazda.png",
+        "assets/sistema-diseno/card-toyota.png",
+        "assets/sistema-diseno/card-bmw.png",
+        "assets/sistema-diseno/card-clio.png",
+        "assets/sistema-diseno/card-pista.png",
+        "assets/sistema-diseno/card-clima.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "78ec18750de84dcf3e11a1225dca901637aeb43a15a3e9ae758c3823b67fe513"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "701e9f7d404318bc828641217334ebc1038dd8392e5d4df47f51bfe5a4a7a5d8"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "640ba12a529a7e3bf82b4c004acaa09f039a322568e0b529beae4ce8434d3730"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "f4f95533f6042905c821f46ce4324e74be066b7a7b070574f5e9440c5409d071"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "d2820ec250bb8952cce74c0a7789a094dd816b4c7cb1ed30dcb244c9240295ed"
+        },
+        {
+          "path": "specs/0015-superficie-dropdowns-cards/spec.md",
+          "sha256": "f510fa8d482acdd27af6872fc145158e7dbf2666e0660e328a427823661a0741"
+        },
+        {
+          "path": "specs/0015-superficie-dropdowns-cards/tasks.md",
+          "sha256": "d2e316bf20a89a8d569b0efcc714674808402dbf44ee4281a46f65b2275491c9"
+        },
+        {
+          "path": "specs/0015-superficie-dropdowns-cards/context.json",
+          "sha256": "5f5338b2a813f03af0b0778b47c0c0a6e604c5b0112ac495a28783045df9268e"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-20: Lo apruebo (tras probarla él mismo, sin correcciones)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0015.md",
+            "sha256": "772481cf2a0c24e3512f041abc78a985373b0925390152979ae50ef4f7b5b1c8"
           }
         }
       ]

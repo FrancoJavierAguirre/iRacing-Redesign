@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Superficie — Rediseño iRacing</title>
-<meta name="description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, imágenes, layout), iconografía y botones.">
+<meta name="description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Superficie — Rediseño iRacing">
-<meta property="og:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, imágenes, layout), iconografía y botones.">
+<meta property="og:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).">
 <meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
 <meta property="og:locale" content="es_AR">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Superficie — Rediseño iRacing">
-<meta name="twitter:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, imágenes, layout), iconografía y botones.">
+<meta name="twitter:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Superficie — Rediseño iRacing",
-  "description": "Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, imágenes, layout), iconografía y botones.",
+  "description": "Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).",
   "inLanguage": "es",
   "dateCreated": "2025",
   "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
@@ -508,6 +508,45 @@
         <li><span class="sd-bt-alto">32 px</span><button type="button" class="bt bt--32 bt--primario" data-cambiar-estilo><svg class="bt-ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1 1.25V5.25001C1 6.00001 1.5 6.50001 2.25 6.50001H6.25001C7.00001 6.50001 7.50001 6.00001 7.50001 5.25001C7.50001 4.50001 7.00001 4.00001 6.25001 4.00001H5.62501C8.37501 2.37501 12 2.75001 14.3751 5.12501C17.2501 8.00001 17.2501 12.5 14.3751 15.375C11.5 18.25 7 18.25 4.125 15.375C3.625 14.875 2.87505 14.875 2.37505 15.375C1.87505 15.875 1.87505 16.625 2.37505 17.125C4.25005 19 6.75005 20 9.25005 20C11.7501 20 14.2501 19 16.1251 17.125C19.8751 13.375 19.8751 7.12501 16.1251 3.37501C12.7501 -0.124985 7.25 -0.375008 3.5 2.37499V1.25C3.5 0.5 3 0 2.25 0C1.5 0 1 0.5 1 1.25Z"/></svg><span>Cambiar estilo</span></button><span class="sd-bt-ley"><img src="assets/ico-escalar-gold.svg" alt="" width="24" height="24">3 tamaños</span></li>
       </ul>
       <p class="sr-only" id="bt-estado" aria-live="polite"></p>
+      <h3 class="rule-head" id="dropdowns"><span class="rh"><img class="rh-ico" src="assets/ico-lista.svg" alt="" width="40" height="40"><span>Dropdowns y listas</span></span></h3>
+      <div class="sd-dd">
+        <ul class="sd-dd-set">
+          <li><img src="assets/sistema-diseno/dropdown-default.png" alt="Dropdown «Filters» en estado default" width="278" height="32" loading="lazy"></li>
+          <li><img src="assets/sistema-diseno/dropdown-hover.png" alt="Dropdown «Filters» en hover, con borde verde azulado" width="278" height="32" loading="lazy"></li>
+          <li><img src="assets/sistema-diseno/dropdown-presionado.png" alt="Dropdown «Filters» presionado, con fondo gris" width="278" height="32" loading="lazy"></li>
+          <li><img src="assets/sistema-diseno/dropdown-seleccionado.png" alt="Dropdown con «3 filters selected»" width="278" height="32" loading="lazy"></li>
+        </ul>
+        <img class="sd-dd-lista" src="assets/sistema-diseno/lista-opciones.png" alt="Lista de opciones con checkbox en cuatro estados: default, hover, presionado y seleccionado" width="303" height="296" loading="lazy">
+      </div>
+
+      <h3 class="rule-head" id="cards"><span class="rh"><img class="rh-ico" src="assets/ico-card-gold.svg" alt="" width="40" height="40"><span>Cards</span></span></h3>
+      <ul class="sd-cards">
+        <li>
+          <h4 class="sd-card-tit">Elegir auto | After delay y hover</h4>
+          <div class="sd-card sd-card--carrusel" tabindex="0" role="img" aria-label="Card de elección de auto: rota entre Mazda MX-5, Toyota GR86, BMW M2 y Renault Clio cada 3 segundos">
+            <img src="assets/sistema-diseno/card-mazda.png" alt="" width="444" height="281" loading="lazy">
+            <img src="assets/sistema-diseno/card-toyota.png" alt="" width="444" height="281" loading="lazy">
+            <img src="assets/sistema-diseno/card-bmw.png" alt="" width="444" height="281" loading="lazy">
+            <img src="assets/sistema-diseno/card-clio.png" alt="" width="444" height="281" loading="lazy">
+          </div>
+        </li>
+        <li>
+          <h4 class="sd-card-tit">Comprar auto | Hover</h4>
+          <div class="sd-card sd-card--compra" tabindex="0">
+            <img src="assets/sistema-diseno/card-clio.png" alt="Card de compra del Renault Clio, a la venta por $12.95" width="444" height="281" loading="lazy">
+            <span class="sd-card-esquina" aria-hidden="true"><svg viewBox="0 0 20 20" focusable="false"><path fill="#1E1E27" d="M1.25 1.5625C0.732233 1.5625 0.3125 1.98224 0.3125 2.5C0.3125 3.01776 0.732233 3.4375 1.25 3.4375C1.60623 3.4375 1.92439 3.66035 2.04612 3.99513L6.02052 14.9248C6.22604 15.4899 6.56951 15.9765 7.00466 16.352C6.5607 16.5437 6.25 16.9856 6.25 17.5C6.25 18.1904 6.80965 18.75 7.5 18.75C8.19035 18.75 8.75 18.1904 8.75 17.5C8.75 17.3759 8.73193 17.256 8.69825 17.1429C8.879 17.1722 9.06374 17.1875 9.25106 17.1875H15.0394C15.0136 17.2874 15 17.3921 15 17.5C15 18.1904 15.5596 18.75 16.25 18.75C16.9404 18.75 17.5 18.1904 17.5 17.5C17.5 17.1475 17.354 16.829 17.1193 16.6017C17.1632 16.4931 17.1875 16.3744 17.1875 16.25C17.1875 15.7323 16.7677 15.3125 16.25 15.3125H9.25106C8.59402 15.3125 8.00717 14.9015 7.78264 14.284L7.13392 12.5H15.6143C16.7305 12.5 17.7114 11.7601 18.018 10.6868L19.5448 5.3434C19.7729 4.54488 19.1733 3.75 18.3429 3.75H3.9521L3.80824 3.35436C3.41705 2.2786 2.39468 1.5625 1.25 1.5625Z"/></svg></span>
+            <span class="sd-card-tag" aria-hidden="true"><img src="assets/ico-tag-dark.svg" alt="" width="12" height="12">$12.95</span>
+          </div>
+        </li>
+        <li>
+          <h4 class="sd-card-tit">Pista | Hover</h4>
+          <div class="sd-card sd-card--serie" tabindex="0"><img src="assets/sistema-diseno/card-pista.png" alt="Card de pista: mapa del Circuit de Spa-Francorchamps" width="487" height="307" loading="lazy"></div>
+        </li>
+        <li>
+          <h4 class="sd-card-tit">Clima | Hover</h4>
+          <div class="sd-card sd-card--serie" tabindex="0"><img src="assets/sistema-diseno/card-clima.png" alt="Card de clima: nublado, 0 a 60 % de nubes, viento de 8 a 9 kph, 30,1° de aire y 29,9° de pista" width="487" height="307" loading="lazy"></div>
+        </li>
+      </ul>
     </div>
   </section>
 </main>

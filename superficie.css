@@ -275,3 +275,51 @@
   .page-superficie .sd-bt-fila > li:first-child, .page-superficie .sd-bt-fila > li:nth-child(2), .page-superficie .sd-bt-fila > li:last-child { justify-self: center; }
   .page-superficie .sd-bt-ley { margin-top: 24px; }
 }
+
+/* ----- Componentes: Dropdowns y listas, y Cards (spec 0015) ----- */
+.page-superficie .sd-bt-fila--tam + .sr-only + .rule-head { margin-top: clamp(64px, 6.25vw, 120px); }
+.page-superficie .sd-dd { display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 40px clamp(40px, 13.8021vw, 265px); margin-top: clamp(24px, 3.75vw, 72px); }
+.page-superficie .sd-dd-set { display: flex; flex-direction: column; gap: 40px; margin: 0; padding: 24px 24px 24px 23px; list-style: none; border: 1px dashed #9747ff; border-radius: 5px; }
+.page-superficie .sd-dd-set img, .page-superficie .sd-dd-lista { display: block; max-width: 100%; height: auto; }
+.page-superficie #cards { margin-top: clamp(64px, 5.7292vw, 110px); }
+.page-superficie .sd-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin: clamp(32px, 4.1667vw, 80px) 0 0; padding: 0; list-style: none; }
+.page-superficie .sd-card-tit { margin: 0 0 30px; text-align: center; font: 400 clamp(18px, 1.25vw, 24px)/1.25 var(--font-display); color: #fff; }
+
+/* La card visible es 416×235 a 1920. Los PNG traen margen de sombra: la imagen se desborda según --w/--l/--t y el exceso se recorta. */
+.page-superficie .sd-card { --w: 117.46%; --l: -8.73%; --t: -13.58%; --oc: #0159cf;
+  position: relative; aspect-ratio: 416 / 235; overflow: hidden; border-radius: 8px; box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+  outline: none; }
+.page-superficie .sd-card > img { position: absolute; left: var(--l); top: var(--t); display: block; width: var(--w); max-width: none; height: auto; }
+.page-superficie .sd-card--serie { --w: 117.35%; --l: -8.67%; --t: -13.22%; }
+.page-superficie .sd-card--compra { --oc: #ff8533; }
+/* El outline va encima de las imágenes: se dibuja con una capa propia para no quedar tapado */
+.page-superficie .sd-card::after { content: ""; position: absolute; inset: 0; z-index: 3; border-radius: inherit; box-shadow: inset 0 0 0 2px transparent; transition: box-shadow .15s ease; pointer-events: none; }
+.page-superficie .sd-card:hover::after, .page-superficie .sd-card:focus-visible::after { box-shadow: inset 0 0 0 2px var(--oc); }
+
+/* Elegir auto: 4 imágenes, 3 s cada una, en bucle (solo CSS) */
+.page-superficie .sd-card--carrusel > img { opacity: 0; animation: sd-carrusel 12s linear infinite; }
+.page-superficie .sd-card--carrusel > img:nth-child(1) { opacity: 1; }
+.page-superficie .sd-card--carrusel > img:nth-child(2) { animation-delay: 3s; }
+.page-superficie .sd-card--carrusel > img:nth-child(3) { animation-delay: 6s; }
+.page-superficie .sd-card--carrusel > img:nth-child(4) { animation-delay: 9s; }
+@keyframes sd-carrusel { 0% { opacity: 0; } 3.33% { opacity: 1; } 25% { opacity: 1; } 28.33% { opacity: 0; } 100% { opacity: 0; } }
+.page-superficie .sd-card--carrusel > img:nth-child(1) { animation-name: sd-carrusel-1; }
+@keyframes sd-carrusel-1 { 0% { opacity: 1; } 25% { opacity: 1; } 28.33% { opacity: 0; } 96.67% { opacity: 0; } 100% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .page-superficie .sd-card--carrusel > img { animation: none; }
+  .page-superficie .sd-card::after, .page-superficie .sd-card-tag { transition: none; }
+}
+
+/* Comprar auto: triángulo con carrito y tag de precio en hover */
+.page-superficie .sd-card-esquina { position: absolute; top: 0; right: 0; z-index: 2; width: 56px; height: 56px; background: #ff8533; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.page-superficie .sd-card-esquina svg { position: absolute; top: 8px; right: 8px; width: 16px; height: 16px; display: block; }
+.page-superficie .sd-card-tag { position: absolute; top: 16px; left: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 4px; padding: 4px; border-radius: 4px; background: #ffb685; font: 500 12px/1 "Inter", sans-serif; color: #1e1e27; opacity: 0; transition: opacity .15s ease; }
+.page-superficie .sd-card-tag img { display: block; width: 12px; height: 12px; }
+.page-superficie .sd-card--compra:hover .sd-card-tag, .page-superficie .sd-card--compra:focus-visible .sd-card-tag { opacity: 1; }
+
+@media (max-width: 900px) {
+  .page-superficie .sd-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
+}
+@media (max-width: 640px) {
+  .page-superficie .sd-cards { grid-template-columns: minmax(0, 1fr); }
+}

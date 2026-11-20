@@ -130,6 +130,13 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
     - Los nuevos son `button.bt`: el tamaño va en `.bt--48/40/32` y el estilo en `.bt--primario/secundario/compras/borde/texto`. Cada estilo define variables (`--bg`, `--bg-h`, `--bg-p`, `--fg`, `--bd`) para default, `:hover`, `:active` y `:focus-visible`. Los botones no navegan.
     - Los íconos de los botones son SVG en línea con `currentColor`. No se usa `mask-image` porque Chrome lo bloquea desde `file://`.
     - `superficie.js` (nuevo, `defer`) cicla las clases de estilo de los `[data-cambiar-estilo]` y anuncia el estilo nuevo en `#bt-estado` (`aria-live`).
+  - Componentes / Dropdowns y listas (spec 0015): `h3.rule-head#dropdowns` con `ico-lista.svg`. `ul.sd-dd-set` es un recuadro punteado con los 4 PNG de dropdown (`assets/sistema-diseno/dropdown-*.png`, 278 × 32). Al lado va `lista-opciones.png`, que ya trae su propio borde. Los dos van en un flex centrado y se apilan al envolver.
+  - Componentes / Cards (spec 0015): `h3.rule-head#cards` con `ico-card-gold.svg`. Ese ícono es un rectángulo dorado dibujado según la referencia, porque no se pasó archivo.
+    - `ul.sd-cards`: grid de 4 columnas (2 en ≤ 900 px, 1 en ≤ 640 px).
+    - `.sd-card` es la card visible (`aspect-ratio: 416/235`, radio 8, `overflow: hidden`). Cada PNG trae margen de sombra, así que se desborda con `--w`/`--l`/`--t`.
+    - Hover y foco: `tabindex="0"` y un `::after` con `box-shadow` interno de 2 px en `--oc` (#0159CF, o #FF8533 en `.sd-card--compra`). No navegan.
+    - Carrusel: solo CSS, 12 s por vuelta, 3 s por imagen con un fundido de 0,4 s. Usa `animation-delay` de 0, 3, 6 y 9 s; con `prefers-reduced-motion` queda fija la primera imagen.
+    - Compra: el triángulo `.sd-card-esquina` es de 56 px con `clip-path`, y el carrito, un SVG en línea #1E1E27 de 16 px a 8/8 px del borde. `.sd-card-tag` (#FFB685, radio 4, padding 4, gap 4, Inter 12 500) aparece con hover o foco.
   - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.
 
 ## Integraciones externas (solo enlaces)
@@ -162,7 +169,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Superficie: Motion (`#motion`), el resto de Componentes y de la página, incluido «Siguiente elemento UX».
+- Superficie: Detalles de auto (Cards), Motion (`#motion`) y el resto de la página, incluido «Siguiente elemento UX».
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
