@@ -207,3 +207,21 @@
 @media (max-width: 900px) {
   .page-superficie .sd-imgs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* ----- Componentes: Iconografía ----- */
+.page-superficie .sec-header + .rule-head { margin-top: clamp(40px, 5.2083vw, 100px); }
+.page-superficie .sd-iconos { display: grid; grid-template-columns: repeat(34, 20px); justify-content: space-between; row-gap: 24px; margin-top: clamp(8px, 1.3542vw, 26px); padding: 23px 33px 23px 24px; border: 1px dashed #9747ff; border-radius: 5px; }
+.page-superficie .sd-iconos img { display: block; width: 20px; height: 20px; }
+.page-superficie .sd-ico-demo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: clamp(48px, 4.1667vw, 80px); text-align: center; }
+.page-superficie .sd-ico-tit { margin: 0 0 clamp(20px, 1.5625vw, 30px); font: 300 clamp(26px, 2.0833vw, 40px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .sd-ico-bloque > img { display: block; margin: 0 auto; }
+.page-superficie .sd-ico-tam { display: flex; justify-content: center; align-items: flex-end; gap: clamp(36px, 2.9167vw, 56px); list-style: none; margin: 0; padding: 0; }
+.page-superficie .sd-ico-tam li { display: flex; flex-direction: column; align-items: center; gap: 8px; font: 300 14px/1.2 "Inter", sans-serif; color: #dfe3ee; }
+.page-superficie .sd-ico-tam img { display: block; }
+@media (max-width: 1500px) {
+  .page-superficie .sd-iconos { grid-template-columns: repeat(auto-fill, 20px); gap: 24px 28px; justify-content: space-between; padding: 23px 24px; }
+}
+@media (max-width: 640px) {
+  .page-superficie .sd-iconos { gap: 20px 22px; padding: 20px 16px; }
+  .page-superficie .sd-ico-demo { grid-template-columns: minmax(0, 1fr); }
+}

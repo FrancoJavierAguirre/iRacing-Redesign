@@ -569,26 +569,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "7163b62f7d183dc1fde8c765aa1ba8188f9b35ec922890d9162142b0061a8e16"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "9339ecfda5468b92f455813807b09b6f3965b5fa70db8dc5dc82b5e82562b4ec"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "6d4aeef363c78582425440aa9a19b4b3e814cc1ac9551508d6c4266bf8f9b964"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "de3ed890c4940ee41f587c46dc473ccdc7783ac0f625ea9dbb8314d0b7c56673"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "6eff4ebd80b9abe53644ffa121834cdcf9d3a504da43623f523e7eaf82e6d0ae"
-        },
-        {
           "path": "specs/0012-superficie-imagenes-layout/spec.md",
           "sha256": "5b7df792f9cfec0dea676609e034772bc1bb4b0057e9e74dfb04faa9d2e7a446"
         },
@@ -601,7 +581,7 @@
           "sha256": "418ba18d1c6fff0e3d70d73859d90ceee26e5e7c60b7c0f07259c8874050e1d0"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. Evidencia rotada en 0013: archivos modificados por Iconografía; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -611,6 +591,141 @@
           "evidence": {
             "path": ".cardenal/revision-0012.md",
             "sha256": "1f63da3fa900e2895482b75ef765690a73695e166388c48f8143c6dc5ef53c36"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T13",
+      "title": "Superficie, parte 4: Componentes (Iconografía)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0013) y specs/0013-superficie-iconografia/spec.md.",
+      "dependsOn": [
+        "T12"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/ico-flags-gold.svg",
+        "assets/ico-trofeo-gold.svg",
+        "assets/iconografia/iconografia01.svg",
+        "assets/iconografia/iconografia02.svg",
+        "assets/iconografia/iconografia03.svg",
+        "assets/iconografia/iconografia04.svg",
+        "assets/iconografia/iconografia05.svg",
+        "assets/iconografia/iconografia06.svg",
+        "assets/iconografia/iconografia07.svg",
+        "assets/iconografia/iconografia08.svg",
+        "assets/iconografia/iconografia09.svg",
+        "assets/iconografia/iconografia10.svg",
+        "assets/iconografia/iconografia11.svg",
+        "assets/iconografia/iconografia12.svg",
+        "assets/iconografia/iconografia13.svg",
+        "assets/iconografia/iconografia14.svg",
+        "assets/iconografia/iconografia15.svg",
+        "assets/iconografia/iconografia16.svg",
+        "assets/iconografia/iconografia17.svg",
+        "assets/iconografia/iconografia18.svg",
+        "assets/iconografia/iconografia19.svg",
+        "assets/iconografia/iconografia20.svg",
+        "assets/iconografia/iconografia21.svg",
+        "assets/iconografia/iconografia22.svg",
+        "assets/iconografia/iconografia23.svg",
+        "assets/iconografia/iconografia24.svg",
+        "assets/iconografia/iconografia25.svg",
+        "assets/iconografia/iconografia26.svg",
+        "assets/iconografia/iconografia27.svg",
+        "assets/iconografia/iconografia28.svg",
+        "assets/iconografia/iconografia29.svg",
+        "assets/iconografia/iconografia30.svg",
+        "assets/iconografia/iconografia31.svg",
+        "assets/iconografia/iconografia32.svg",
+        "assets/iconografia/iconografia33.svg",
+        "assets/iconografia/iconografia34.svg",
+        "assets/iconografia/iconografia35.svg",
+        "assets/iconografia/iconografia36.svg",
+        "assets/iconografia/iconografia37.svg",
+        "assets/iconografia/iconografia38.svg",
+        "assets/iconografia/iconografia39.svg",
+        "assets/iconografia/iconografia40.svg",
+        "assets/iconografia/iconografia41.svg",
+        "assets/iconografia/iconografia42.svg",
+        "assets/iconografia/iconografia43.svg",
+        "assets/iconografia/iconografia44.svg",
+        "assets/iconografia/iconografia45.svg",
+        "assets/iconografia/iconografia46.svg",
+        "assets/iconografia/iconografia47.svg",
+        "assets/iconografia/iconografia48.svg",
+        "assets/iconografia/iconografia49.svg",
+        "assets/iconografia/iconografia50.svg",
+        "assets/iconografia/iconografia51.svg",
+        "assets/iconografia/iconografia52.svg",
+        "assets/iconografia/iconografia53.svg",
+        "assets/iconografia/iconografia54.svg",
+        "assets/iconografia/iconografia55.svg",
+        "assets/iconografia/iconografia56.svg",
+        "assets/iconografia/iconografia57.svg",
+        "assets/iconografia/iconografia58.svg",
+        "assets/iconografia/iconografia59.svg",
+        "assets/iconografia/iconografia60.svg",
+        "assets/iconografia/iconografia61.svg",
+        "assets/iconografia/iconografia62.svg",
+        "assets/iconografia/iconografia63.svg",
+        "assets/iconografia/iconografia64.svg",
+        "assets/iconografia/iconografia65.svg",
+        "assets/iconografia/iconografia66.svg",
+        "assets/iconografia/iconografia67.svg",
+        "assets/iconografia/iconografia68.svg"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "0bd7954ec1066b01e77343cc1b1c151561335382e5b813d361b98d2658800f62"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "40effe179fae99a2ccf00489551ebe894ad12de4c76c436e1db0205f9b69e24e"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "d15e4be2a448d2941026bd014846168c560e5ff094df1a646d0732f73f8d7e55"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "dac963f5345149c801a634e7588553d996f251d0a97118a0d5b1e602ff59224f"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "2b51a5a6b5d43b101ca0509b6396771b9ad00585f4ec30abe4fd686d2d3e6537"
+        },
+        {
+          "path": "specs/0013-superficie-iconografia/spec.md",
+          "sha256": "c86d7e6df87bc0d84713734672fd350475c30a50200df6bab046c3829a76b067"
+        },
+        {
+          "path": "specs/0013-superficie-iconografia/tasks.md",
+          "sha256": "cb796f86820b792788affb529e90c03fea93ca8caf66ae2e763f7371131dc9a8"
+        },
+        {
+          "path": "specs/0013-superficie-iconografia/context.json",
+          "sha256": "3689a93f3bb81b09b51827ea9dfe9a05271bfd7cf7496ee8867bec72e6d7657a"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-20: Lo apruebo (tras probarla él mismo, sin correcciones)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0013.md",
+            "sha256": "235cafb6f3c53743d3ca14cdd65e90809cddf5cdbd3086690f311950403644d2"
           }
         }
       ]

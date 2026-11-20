@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0013-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-20 (/feature): sección Componentes - Iconografía según la imagen de referencia; ícono 'flags' en el título, ícono 'trofeo' en el subtítulo 'Estilo relleno' y repetido en 16, 20 y 24 px bajo '3 tamaños'; todos los íconos agrupados en la línea punteada 'iconografía', numerados, en cualquier orden" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0013-superficie-iconografia/referencia-figma.png", "sha256": "21ec590d1d3efdf4aebaca06ca654d86434ac1bcee3f04462c4d64319d4c7ed9" },
+    { "id": "s-superficie", "kind": "file", "reference": "specs/0012-superficie-imagenes-layout/spec.md", "sha256": "5b7df792f9cfec0dea676609e034772bc1bb4b0057e9e74dfb04faa9d2e7a446" }
+  ],
+  "facts": [
+    { "id": "o-design", "area": "product", "statement": "La referencia muestra 'Componentes' (subtítulo 'Elementos visuales reutilizables', botones Ir a Layout / Ir a Motion), el encabezado 'Iconografía' con ícono de banderas y línea, un recuadro punteado con 68 íconos en 2 filas, y debajo 'Estilo relleno' (trofeo) y '3 tamaños' (trofeo a 16, 20 y 24 px con su etiqueta).", "status": "observed", "source": "s-referencia" },
+    { "id": "o-pagina", "area": "technical", "statement": "Según la spec 0012 (commit 796a9ef), superficie.html termina en Layout y su botón 'Ir a Componentes' (#componentes) está marcado data-sin-destino a la espera de esta sección.", "status": "observed", "source": "s-superficie" },
+    { "id": "d-iconos", "area": "product", "statement": "Iconografía usa los 68 íconos provistos (orden indistinto), el ícono flags en el título y el trofeo en 'Estilo relleno' y en 16, 20 y 24 px bajo '3 tamaños'.", "status": "confirmed", "source": "u-0013-request" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre la capa Superficie",
+    "problem": "El sistema de diseño termina en Layout; 'Ir a Componentes' no tiene destino y falta la iconografía.",
+    "outcome": "superficie.html incluye Componentes con la parte Iconografía, enlazada desde Layout.",
+    "scope": "Incluye: sección Componentes con Iconografía en superficie.html y superficie.css, íconos provistos, activar 'Ir a Componentes', SEO, llms.txt y docs. Excluye: Motion ('Ir a Motion' queda sin destino), otras partes de Componentes, 'Siguiente elemento UX'.",
+    "acceptance": "1) Componentes - Iconografía se ve como la referencia a 1920 px. 2) 'Ir a Componentes' e 'Ir a Layout' llevan a su sección; 'Ir a Motion' no salta al tope. 3) Los 68 íconos y los trofeos a 16, 20 y 24 px se ven nítidos. 4) Responsive sin scroll horizontal. 5) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector ve el set de íconos del rediseño, su estilo y sus tamaños.",
+    "evidence": ["o-design", "o-pagina", "d-iconos"]
+  }
+}

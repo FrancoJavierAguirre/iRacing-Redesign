@@ -111,7 +111,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - **Links activados:** la opción Esqueleto del menú de capas de todas las páginas, «Ver Esqueleto» (Estructura y detalles de tareas), las tarjetas Esqueleto de «Siguiente elemento UX» (Estrategia, Alcance y Estructura), la tarjeta del Home (`onclick`) y, en 5-elementos, «Ver Esqueleto» y su tarjeta.
 ### Página de Superficie (`superficie.html` + `superficie.css`, spec 0010, parte UX Writing)
 
-- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0012 solo cubre «Ir a Componentes» (`#componentes`, sección futura). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
+- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0013 solo cubre «Ir a Motion» (`#motion`, sección futura). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
 - **«Ver Prototipo»:** `a.topbar-action` con `target="_blank" rel="noopener"` hacia el prototipo de Figma, `assets/ico-play.svg` y texto `.sr-only` que avisa que se abre en una pestaña nueva.
 - **Círculo de Oro:** `.oro[data-activo]` con 3 `span.oro-ring` concéntricos de CSS (565, 420 y 249 px a 1920), apilados con ¿Por qué? arriba, ¿Cómo? en el medio y ¿Qué? abajo. Usan los colores de los PNG del usuario: activo `rgba(0, 87, 208, .15)` e inactivo `rgba(0, 0, 0, .6)`. Como son semitransparentes, el círculo de abajo se ve a través del de arriba. La etiqueta activa va en dorado. Los párrafos son Poppins 300 itálica de 24 px, y las frases doradas, Poppins 600 itálica (cargada en el link de fuentes). Es `aria-hidden`, porque el texto lo explica.
 - **Matriz de Voz y Guía de Estilo:** `table.mtx` semánticas (`th scope`) con encabezados de tarjeta (`.mtx-card`). En ≤ 900 px pasan a bloques y cada celda muestra `data-col` con `::before`.
@@ -124,6 +124,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
   - Tipografía: `table.sd-tipo` (`th scope="row"` con clase `.tp--*` que aplica el estilo real; Inter 500 se sumó al link de fuentes). Los ejemplos son los PNG del usuario en `assets/sistema-diseno/` a tamaño natural, salvo Texto y los dos títulos, que son texto vivo. En ≤ 900 px pasa a bloques con `data-col`.
   - Imágenes (spec 0012): ul.sd-imgs de 4 columnas (2 en ≤ 900 px). Los PNG traen margen transparente de sombra, así que cada li es la tarjeta visible (spect-ratio: 408/230) y la imagen va en absoluto con --w/--l/--t inline calculados de su recuadro opaco. Debajo, img.sd-track (ssets/sistema-diseno/track.svg, 1162 × 443, ≈1,1 MB, loading="lazy").
   - Layout (spec 0012): igure.sd-layout con 	abindex="0" y dos img apiladas en la misma celda de grid; :hover y :focus hacen un fundido de opacidad de .sd-layout-def a .sd-layout-hov (sin transición con prefers-reduced-motion). En táctil, el toque enfoca la figura y muestra el estado hover; tocar fuera lo revierte. No usa JS.
+  - Componentes / Iconografía (spec 0013): h3.rule-head#iconografia (patrón de elementos.css, ícono ssets/ico-flags-gold.svg). div.sd-iconos con ole="img" y un ria-label que describe el set; los 68 img de ssets/iconografia/iconografiaNN.svg son lt=". Grid de 34 columnas de 20 px a 1920 (justify-content: space-between) y uto-fill en ≤ 1500 px; borde punteado #9747ff. .sd-ico-demo en 2 columnas (1 en ≤ 640 px) con ssets/ico-trofeo-gold.svg a 48 px y a 16/20/24 px.
   - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.## Integraciones externas (solo enlaces)
 
 | Servicio | Uso | Dónde |
@@ -154,7 +155,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Superficie: Componentes (`#componentes`) y el resto de la página, incluido «Siguiente elemento UX».
+- Superficie: Motion (`#motion`), el resto de Componentes y de la página, incluido «Siguiente elemento UX».
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
