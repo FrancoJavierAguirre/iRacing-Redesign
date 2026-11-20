@@ -187,3 +187,23 @@
   .page-superficie .tp--36 { font-size: 28px; }
   .page-superficie .tp-ej--t1 { font-size: 28px; }
 }
+
+/* ----- Imágenes ----- */
+.page-superficie .sd-img-intro { margin: clamp(40px, 5.2083vw, 100px) 0 0; text-align: center; font: 300 clamp(17px, 1.4583vw, 28px)/1.4 var(--font-display); color: #fff; }
+.page-superficie .sd-imgs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; gap: clamp(16px, 2.5521vw, 49px); list-style: none; margin: clamp(32px, 3.5417vw, 68px) 0 0; padding: 0; }
+/* Los PNG traen margen transparente para la sombra: el li es la tarjeta visible (408×230 a 1920) y la imagen se desborda según --w/--l/--t */
+.page-superficie .sd-imgs li { position: relative; aspect-ratio: 408 / 230; }
+.page-superficie .sd-imgs img { position: absolute; left: var(--l); top: var(--t); display: block; width: var(--w); max-width: none; height: auto; }
+.page-superficie .sd-track { display: block; width: 100%; max-width: 1162px; height: auto; margin: clamp(32px, 3.9063vw, 75px) auto 0; }
+
+/* ----- Layout: la imagen default pasa a la hover con mouse, foco o toque ----- */
+.page-superficie .sd-layout { display: grid; max-width: 1162px; margin: clamp(40px, 5.2083vw, 100px) auto 0; border-radius: 12px; outline-offset: 6px; cursor: pointer; }
+.page-superficie .sd-layout img { grid-area: 1 / 1; display: block; width: 100%; height: auto; transition: opacity .3s ease; }
+.page-superficie .sd-layout-hov { opacity: 0; }
+.page-superficie .sd-layout:hover .sd-layout-hov, .page-superficie .sd-layout:focus .sd-layout-hov { opacity: 1; }
+.page-superficie .sd-layout:hover .sd-layout-def, .page-superficie .sd-layout:focus .sd-layout-def { opacity: 0; }
+.page-superficie .sd-layout:focus:not(:focus-visible) { outline: none; }
+@media (prefers-reduced-motion: reduce) { .page-superficie .sd-layout img { transition: none; } }
+@media (max-width: 900px) {
+  .page-superficie .sd-imgs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

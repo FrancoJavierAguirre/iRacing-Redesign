@@ -517,26 +517,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "4fdf94076abca3d6ceb95fb8d34fb0ed8c7c295d788fe68a9dbae4fd01938c20"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "cb22d44bfaef6a260276d014a8e0d543d8b4cd54eadafd3d7ecfcfaf3c5913df"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "f4b10f4a9926ffe3817b1c0a476985bc1e099930e02ea24bdcc72fddd04c4fa6"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "f65f7101cb4fd3becae5f07db6ea3b54e0cf3f38dea86dfd311e12205a30e643"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "99d1eb2f5c104c955c6553c23973704f970409d91061dd3f3b5ef9af7f8af875"
-        },
-        {
           "path": "specs/0011-superficie-sistema-diseno/spec.md",
           "sha256": "66d2a34b46993f12d095645565eba580f39948fa208451d52c2819cb2edba254"
         },
@@ -549,7 +529,7 @@
           "sha256": "2b4ac88eeded81a72a1bc5906bae3dbcd9ec5f649c6ee989db4250df90c11f2c"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. Evidencia rotada en 0012: archivos modificados por Imágenes y Layout; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -559,6 +539,78 @@
           "evidence": {
             "path": ".cardenal/revision-0011.md",
             "sha256": "81e6c6cb9c3bb31f6010ad284b9ec58e49592a2aa8d9d1f1c5d9411a9e398749"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T12",
+      "title": "Superficie, parte 3: Sistema de Diseño (Imágenes y Layout)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0012) y specs/0012-superficie-imagenes-layout/spec.md.",
+      "dependsOn": [
+        "T11"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/sistema-diseno/imagen-corvette.png",
+        "assets/sistema-diseno/imagen-bmw.png",
+        "assets/sistema-diseno/logo-imsa.png",
+        "assets/sistema-diseno/logo-formula-a.png",
+        "assets/sistema-diseno/track.svg",
+        "assets/sistema-diseno/layout-default.png",
+        "assets/sistema-diseno/layout-hover.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "7163b62f7d183dc1fde8c765aa1ba8188f9b35ec922890d9162142b0061a8e16"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "9339ecfda5468b92f455813807b09b6f3965b5fa70db8dc5dc82b5e82562b4ec"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "6d4aeef363c78582425440aa9a19b4b3e814cc1ac9551508d6c4266bf8f9b964"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "de3ed890c4940ee41f587c46dc473ccdc7783ac0f625ea9dbb8314d0b7c56673"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "6eff4ebd80b9abe53644ffa121834cdcf9d3a504da43623f523e7eaf82e6d0ae"
+        },
+        {
+          "path": "specs/0012-superficie-imagenes-layout/spec.md",
+          "sha256": "5b7df792f9cfec0dea676609e034772bc1bb4b0057e9e74dfb04faa9d2e7a446"
+        },
+        {
+          "path": "specs/0012-superficie-imagenes-layout/tasks.md",
+          "sha256": "394fd5548139b4577345caa5dd9d49acac26c47aaf8c01c6d0af976e5afc8f64"
+        },
+        {
+          "path": "specs/0012-superficie-imagenes-layout/context.json",
+          "sha256": "418ba18d1c6fff0e3d70d73859d90ceee26e5e7c60b7c0f07259c8874050e1d0"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-20: Lo apruebo (tras probarla él mismo, sin correcciones)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0012.md",
+            "sha256": "1f63da3fa900e2895482b75ef765690a73695e166388c48f8143c6dc5ef53c36"
           }
         }
       ]

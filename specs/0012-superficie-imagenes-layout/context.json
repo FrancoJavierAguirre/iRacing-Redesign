@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0012-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-19 (/feature): sección Imágenes según la imagen de referencia, con 4 imágenes (2 logos de carreras y 2 autos) y debajo el mapa del circuito (Track.svg ya provisto); sección Layout con 2 imágenes, una en estado default y otra que la reemplaza cuando el usuario pasa el mouse por encima (hover)" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0012-superficie-imagenes-layout/referencia-figma.png", "sha256": "756154f44e7035cb83c57a8bff4f67e0b7455714632b8fc4f87468c7f1b42c48" },
+    { "id": "s-superficie", "kind": "file", "reference": "specs/0011-superficie-sistema-diseno/spec.md", "sha256": "66d2a34b46993f12d095645565eba580f39948fa208451d52c2819cb2edba254" }
+  ],
+  "facts": [
+    { "id": "o-design", "area": "product", "statement": "La referencia muestra 'Imágenes' (subtítulo 'Autenticidad... ah ya lo dije?', botones Ir a Tipografía / Ir a Layout, una frase centrada, fila de 4 imágenes Corvette, logo IMSA, logo Formula A, BMW, y el mapa del circuito centrado) y 'Layout' (subtítulo 'Espacio y organización', botones Ir a Imágenes / Ir a Componentes, y el esquema de layout centrado).", "status": "observed", "source": "s-referencia" },
+    { "id": "o-pagina", "area": "technical", "statement": "Según la spec 0011 (commit e88165c), superficie.html termina en Tipografía y su botón 'Ir a Imágenes' (#imagenes) está marcado data-sin-destino a la espera de esta sección.", "status": "observed", "source": "s-superficie" },
+    { "id": "d-imagenes", "area": "product", "statement": "Imágenes muestra 2 autos y 2 logos de carreras con las imágenes provistas y, debajo, el mapa del circuito con Track.svg.", "status": "confirmed", "source": "u-0012-request" },
+    { "id": "d-layout-hover", "area": "product", "statement": "Layout muestra la imagen default y, al pasar el mouse por encima, la reemplaza por la imagen hover provista.", "status": "confirmed", "source": "u-0012-request" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre la capa Superficie",
+    "problem": "El sistema de diseño termina en Tipografía; 'Ir a Imágenes' no tiene destino y faltan Imágenes y Layout.",
+    "outcome": "superficie.html incluye Imágenes (autos, logos y circuito) y Layout (esquema con estado hover) enlazados desde Tipografía.",
+    "scope": "Incluye: secciones Imágenes y Layout en superficie.html y superficie.css, assets provistos, activar 'Ir a Imágenes', SEO, llms.txt y docs. Excluye: Componentes ('Ir a Componentes' queda sin destino), 'Siguiente elemento UX' y el resto de Superficie.",
+    "acceptance": "1) Imágenes y Layout se ven como la referencia a 1920 px. 2) 'Ir a Imágenes', 'Ir a Layout' e 'Ir a Tipografía'/'Ir a Imágenes' internos llevan a su sección; 'Ir a Componentes' no salta al tope. 3) Layout cambia a la imagen hover con el mouse, y también con foco de teclado o toque. 4) Responsive sin scroll horizontal. 5) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector ve el estilo de imágenes y la grilla de layout del rediseño aplicados a una pantalla real.",
+    "evidence": ["o-design", "o-pagina", "d-imagenes", "d-layout-hover"]
+  }
+}

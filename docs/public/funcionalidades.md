@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing y Sistema de Diseño (Valores, Principios, Colores y Tipografía) implementados; Imágenes y el resto de la página pendientes |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing y Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) implementados; Componentes y el resto de la página pendientes |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -142,11 +142,13 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
 5. **Valores** («El combustible de la marca»): Autenticidad, Claridad y Conciso, cada uno con su descripción.
 6. **Principios** («Las reglas de comunicación»): Simple, Entendible, Escalonado y Eficiente, cada uno con su ícono y lo que exige.
 7. **Colores** («Accesibilidad y armonía»): neutrales, primario azul, secundario naranja, éxito, advertencia y error, con tono y código hex, y para qué se usa cada grupo. Al final, los estados (hover, selected, activated, pressed y dragged) con su opacidad sobre gris y sobre azul.
-8. **Tipografía** («Transmitiendo los valores y principios»): tabla de 10 estilos con nombre, uso y un ejemplo del rediseño. Cada nombre se muestra en su propio estilo, de «10 Inter - label 3 - medium» a «36 Exo 2 - Title 1 - bold». «Ir a Imágenes» todavía no hace nada porque esa parte no existe.
+8. **Tipografía** («Transmitiendo los valores y principios»): tabla de 10 estilos con nombre, uso y un ejemplo del rediseño. Cada nombre se muestra en su propio estilo, de «10 Inter - label 3 - medium» a «36 Exo 2 - Title 1 - bold». «Ir a Imágenes» baja a la sección siguiente.
+9. **Imágenes** («Autenticidad... ah ya lo dije?»): una frase sobre autos reales, circuitos y logos oficiales; una fila con dos autos (Corvette y BMW) y dos logos de carreras (IMSA y Formula A); debajo, el mapa de un circuito.
+10. **Layout** («Espacio y organización»): el esquema de la grilla de pantalla (Page nav, Page title, Navigation tabs, Page content, Licenses). Al pasar el mouse, enfocarlo con el teclado o tocarlo en el celular, cambia con un fundido a la pantalla Racing con la grilla aplicada. «Ir a Componentes» todavía no hace nada porque esa parte no existe.
 
 Cada subsección tiene botones para ir a la anterior y a la siguiente.
 
-**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Todavía no tiene Imágenes ni «Siguiente elemento UX».
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Todavía no tiene Componentes ni «Siguiente elemento UX».
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.
