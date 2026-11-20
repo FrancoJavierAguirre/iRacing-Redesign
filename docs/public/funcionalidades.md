@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) y Componentes (Iconografía) implementados; Motion y el resto de la página pendientes |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) y Componentes (Iconografía y Botones) implementados; Motion y el resto de la página pendientes |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -146,10 +146,11 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
 9. **Imágenes** («Autenticidad... ah ya lo dije?»): una frase sobre autos reales, circuitos y logos oficiales; una fila con dos autos (Corvette y BMW) y dos logos de carreras (IMSA y Formula A); debajo, el mapa de un circuito.
 10. **Layout** («Espacio y organización»): el esquema de la grilla de pantalla (Page nav, Page title, Navigation tabs, Page content, Licenses). Al pasar el mouse, enfocarlo con el teclado o tocarlo en el celular, cambia con un fundido a la pantalla Racing con la grilla aplicada. «Ir a Componentes» baja a la sección siguiente.
 11. **Componentes** («Elementos visuales reutilizables»), parte **Iconografía**: un encabezado con banderas doradas y, dentro de un recuadro punteado, los 68 íconos del rediseño. Debajo, «Estilo relleno» con un trofeo dorado y «3 tamaños» con el trofeo a 16, 20 y 24 px. «Ir a Motion» todavía no hace nada porque esa parte no existe.
+12. **Botones** (dentro de Componentes): «Originalmente» muestra los botones viejos (Register, View Series y Add to Cart: primario, secundario y compras). «Ahora» muestra los nuevos (Race, Test Drive y Add to Cart), que reaccionan al pasar el mouse y al presionarlos pero no llevan a ningún lado. El Register verde aparece tachado: el verde queda reservado para estados de «éxito». Al final, tres botones «Cambiar estilo» de 48, 40 y 32 px: cada click los pasa al estilo siguiente (primario, secundario, compras, bordeado y solo texto), también con Enter o Espacio. Leyendas: «5 estilos», «4 estados» y «3 tamaños».
 
 Cada subsección tiene botones para ir a la anterior y a la siguiente.
 
-**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan. Todavía no tiene Motion ni «Siguiente elemento UX».
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones. Todavía no tiene Motion ni «Siguiente elemento UX».
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.

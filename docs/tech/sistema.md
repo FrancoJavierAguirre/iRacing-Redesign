@@ -27,6 +27,7 @@ esqueleto.html      Capa 4: Esqueleto (wireframes en media)
 esqueleto.css       Específico de body.page-esqueleto
 superficie.html     Capa 5: Superficie (UX Writing y Sistema de Diseño)
 superficie.css      Específico de body.page-superficie
+superficie.js       Ciclo de estilos de «Cambiar estilo» (Botones)
 script.js           Comportamiento del Home
 menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
 estructura.js       Tooltips de ayuda, switch Antes/Después y botones sin destino de estructura.html
@@ -122,10 +123,16 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
   - Principios: `ul.sd-principios`; cada `li` es una grilla de tarjeta `h3.mtx-card` (316 px a 1920) más el párrafo. Íconos: `ico-check-gold.svg` (es `ico-check-green.svg` en dorado), `ico-lampara.svg`, `ico-escalera.svg` e `ico-chart-up.svg`.
   - Colores: `.sd-color` por grupo, con `ul.sw-grid--6` o `--5`. Cada muestra toma su color de `style="--c:…"`. Los estados usan `.sw-est` con un `::before` negro (sobre gris) o blanco (sobre azul) a `--op` %; en Pressed la capa es una píldora a doble opacidad.
   - Tipografía: `table.sd-tipo` (`th scope="row"` con clase `.tp--*` que aplica el estilo real; Inter 500 se sumó al link de fuentes). Los ejemplos son los PNG del usuario en `assets/sistema-diseno/` a tamaño natural, salvo Texto y los dos títulos, que son texto vivo. En ≤ 900 px pasa a bloques con `data-col`.
-  - Imágenes (spec 0012): ul.sd-imgs de 4 columnas (2 en ≤ 900 px). Los PNG traen margen transparente de sombra, así que cada li es la tarjeta visible (spect-ratio: 408/230) y la imagen va en absoluto con --w/--l/--t inline calculados de su recuadro opaco. Debajo, img.sd-track (ssets/sistema-diseno/track.svg, 1162 × 443, ≈1,1 MB, loading="lazy").
-  - Layout (spec 0012): igure.sd-layout con 	abindex="0" y dos img apiladas en la misma celda de grid; :hover y :focus hacen un fundido de opacidad de .sd-layout-def a .sd-layout-hov (sin transición con prefers-reduced-motion). En táctil, el toque enfoca la figura y muestra el estado hover; tocar fuera lo revierte. No usa JS.
-  - Componentes / Iconografía (spec 0013): h3.rule-head#iconografia (patrón de elementos.css, ícono ssets/ico-flags-gold.svg). div.sd-iconos con ole="img" y un ria-label que describe el set; los 68 img de ssets/iconografia/iconografiaNN.svg son lt=". Grid de 34 columnas de 20 px a 1920 (justify-content: space-between) y uto-fill en ≤ 1500 px; borde punteado #9747ff. .sd-ico-demo en 2 columnas (1 en ≤ 640 px) con ssets/ico-trofeo-gold.svg a 48 px y a 16/20/24 px.
-  - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.## Integraciones externas (solo enlaces)
+  - Imágenes (spec 0012): `ul.sd-imgs` de 4 columnas (2 en ≤ 900 px). Los PNG traen margen transparente de sombra, así que cada `li` es la tarjeta visible (`aspect-ratio: 408/230`) y la imagen va en absoluto con `--w`/`--l`/`--t` inline, calculados de su recuadro opaco. Debajo, `img.sd-track` (`assets/sistema-diseno/track.svg`, 1162 × 443, ≈1,1 MB, `loading="lazy"`).
+  - Layout (spec 0012): `figure.sd-layout` con `tabindex="0"` y dos `img` apiladas en la misma celda de grid. `:hover` y `:focus` hacen un fundido de opacidad de `.sd-layout-def` a `.sd-layout-hov` (sin transición con `prefers-reduced-motion`). En táctil, el toque enfoca la figura y muestra el estado hover; tocar fuera lo revierte. No usa JS.
+  - Componentes / Iconografía (spec 0013): `h3.rule-head#iconografia` (patrón de `elementos.css`, ícono `assets/ico-flags-gold.svg`). `div.sd-iconos` lleva `role="img"` y un `aria-label` que describe el set; los 68 `img` de `assets/iconografia/iconografiaNN.svg` son `alt=""`. Grid de 34 columnas de 20 px a 1920 (`justify-content: space-between`) y `auto-fill` en ≤ 1500 px; borde punteado `#9747ff`. `.sd-ico-demo` en 2 columnas (1 en ≤ 640 px) con `assets/ico-trofeo-gold.svg` a 48 px y a 16/20/24 px.
+  - Componentes / Botones (spec 0014): `h3.rule-head#botones`. Las filas `ul.sd-bt-fila` tienen 3 columnas (ancho máx. 864 px, celdas a inicio, centro y fin) y pasan a 1 columna en ≤ 640 px. Los botones viejos son PNG en `assets/sistema-diseno/boton-viejo-*.png`.
+    - Los nuevos son `button.bt`: el tamaño va en `.bt--48/40/32` y el estilo en `.bt--primario/secundario/compras/borde/texto`. Cada estilo define variables (`--bg`, `--bg-h`, `--bg-p`, `--fg`, `--bd`) para default, `:hover`, `:active` y `:focus-visible`. Los botones no navegan.
+    - Los íconos de los botones son SVG en línea con `currentColor`. No se usa `mask-image` porque Chrome lo bloquea desde `file://`.
+    - `superficie.js` (nuevo, `defer`) cicla las clases de estilo de los `[data-cambiar-estilo]` y anuncia el estilo nuevo en `#bt-estado` (`aria-live`).
+  - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.
+
+## Integraciones externas (solo enlaces)
 
 | Servicio | Uso | Dónde |
 |---|---|---|

@@ -225,3 +225,53 @@
   .page-superficie .sd-iconos { gap: 20px 22px; padding: 20px 16px; }
   .page-superficie .sd-ico-demo { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ----- Componentes: Botones (spec 0014) ----- */
+.page-superficie .sd-ico-demo + .rule-head { margin-top: clamp(64px, 6.25vw, 120px); }
+.page-superficie .sd-bt-tit { margin: clamp(32px, 3.6458vw, 70px) 0 0; text-align: center; font: 300 clamp(26px, 2.0833vw, 40px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .sd-bt-tit--lineas { display: flex; align-items: center; justify-content: center; gap: 25px; margin-top: clamp(48px, 4.6875vw, 90px); }
+.page-superficie .sd-bt-tit--lineas::before, .page-superficie .sd-bt-tit--lineas::after { content: ""; width: clamp(48px, 10.9375vw, 210px); height: 1px; background: #505057; }
+.page-superficie .sd-bt-fila { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: end; max-width: 864px; margin: clamp(40px, 4.6875vw, 90px) auto 0; padding: 0; list-style: none; }
+.page-superficie .sd-bt-fila > li { display: flex; flex-direction: column; align-items: center; gap: clamp(20px, 1.875vw, 36px); }
+.page-superficie .sd-bt-fila > li:first-child { justify-self: start; }
+.page-superficie .sd-bt-fila > li:nth-child(2) { justify-self: center; }
+.page-superficie .sd-bt-fila > li:last-child { justify-self: end; }
+.page-superficie .sd-bt-fila img { display: block; max-width: 100%; height: auto; }
+.page-superficie .sd-bt-lbl { font: 400 16px/1.2 "Inter", sans-serif; color: #dfe3ee; }
+.page-superficie .sd-bt-exito { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: clamp(48px, 4.6875vw, 90px); text-align: center; }
+.page-superficie .sd-bt-exito img { display: block; max-width: 100%; height: auto; }
+.page-superficie .sd-bt-exito p { margin: 4px 0 0; font: 400 clamp(16px, 1.0417vw, 20px)/1.4 "Inter", sans-serif; color: #fff; }
+.page-superficie .sd-bt-fila--tam { align-items: start; margin-top: clamp(56px, 4.6875vw, 90px); }
+.page-superficie .sd-bt-fila--tam > li { gap: 0; }
+.page-superficie .sd-bt-alto { margin-bottom: 24px; font: 300 clamp(24px, 1.6667vw, 32px)/1.2 var(--font-display); color: #fff; }
+/* Los tres botones apoyan en la misma base, como en la referencia */
+.page-superficie .sd-bt-fila--tam .bt--40 { margin-top: 8px; }
+.page-superficie .sd-bt-fila--tam .bt--32 { margin-top: 16px; }
+.page-superficie .sd-bt-ley { display: inline-flex; align-items: center; gap: 16px; margin-top: 48px; font: 400 clamp(18px, 1.25vw, 24px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .sd-bt-ley img { width: 24px; height: 24px; display: block; }
+
+/* El botón del sistema: 3 tamaños × 5 estilos × 4 estados (default, hover, press, foco) */
+.page-superficie .bt { --bg: transparent; --bg-h: rgba(1, 89, 207, .15); --bg-p: rgba(1, 89, 207, .25); --fg: #679be2; --bd: transparent;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid var(--bd); background: var(--bg); color: var(--fg);
+  font-family: "Inter", sans-serif; font-weight: 600; white-space: nowrap; cursor: pointer; transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
+.page-superficie .bt:hover { background: var(--bg-h); }
+.page-superficie .bt:active { background: var(--bg-p); }
+.page-superficie .bt:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.page-superficie .bt-ico { display: block; flex-shrink: 0; }
+.page-superficie .bt--48 { height: 48px; padding: 0 16px; border-radius: 8px; font-size: 16px; line-height: 20px; }
+.page-superficie .bt--48 .bt-ico { width: 20px; height: 20px; }
+.page-superficie .bt--40 { height: 40px; padding: 0 14px; border-radius: 8px; font-size: 16px; line-height: 20px; }
+.page-superficie .bt--40 .bt-ico { width: 18px; height: 18px; }
+.page-superficie .bt--32 { height: 32px; padding: 0 10px; border-radius: 6px; font-size: 14px; font-weight: 500; line-height: 18px; gap: 6px; }
+.page-superficie .bt--32 .bt-ico { width: 16px; height: 16px; }
+.page-superficie .bt--primario { --bg: #0159cf; --bg-h: #1a6ad4; --bg-p: #02449f; --fg: #fff; }
+.page-superficie .bt--secundario { --bg: rgba(1, 89, 207, .15); --bg-h: rgba(1, 89, 207, .25); --bg-p: rgba(1, 89, 207, .35); }
+.page-superficie .bt--compras { --bg: #ff8533; --bg-h: #ff6600; --bg-p: #cd5303; --fg: #1a0e02; }
+.page-superficie .bt--borde { --bd: #679be2; }
+.page-superficie .bt--texto { --bg-h: rgba(1, 89, 207, .15); }
+@media (prefers-reduced-motion: reduce) { .page-superficie .bt { transition: none; } }
+@media (max-width: 640px) {
+  .page-superficie .sd-bt-fila { grid-template-columns: minmax(0, 1fr); row-gap: 40px; }
+  .page-superficie .sd-bt-fila > li:first-child, .page-superficie .sd-bt-fila > li:nth-child(2), .page-superficie .sd-bt-fila > li:last-child { justify-self: center; }
+  .page-superficie .sd-bt-ley { margin-top: 24px; }
+}

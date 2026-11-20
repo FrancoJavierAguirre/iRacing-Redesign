@@ -684,26 +684,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "0bd7954ec1066b01e77343cc1b1c151561335382e5b813d361b98d2658800f62"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "40effe179fae99a2ccf00489551ebe894ad12de4c76c436e1db0205f9b69e24e"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "d15e4be2a448d2941026bd014846168c560e5ff094df1a646d0732f73f8d7e55"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "dac963f5345149c801a634e7588553d996f251d0a97118a0d5b1e602ff59224f"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "2b51a5a6b5d43b101ca0509b6396771b9ad00585f4ec30abe4fd686d2d3e6537"
-        },
-        {
           "path": "specs/0013-superficie-iconografia/spec.md",
           "sha256": "c86d7e6df87bc0d84713734672fd350475c30a50200df6bab046c3829a76b067"
         },
@@ -716,7 +696,7 @@
           "sha256": "3689a93f3bb81b09b51827ea9dfe9a05271bfd7cf7496ee8867bec72e6d7657a"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. Evidencia rotada en 0014: archivos modificados por Botones; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -726,6 +706,83 @@
           "evidence": {
             "path": ".cardenal/revision-0013.md",
             "sha256": "235cafb6f3c53743d3ca14cdd65e90809cddf5cdbd3086690f311950403644d2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T14",
+      "title": "Superficie, parte 5: Componentes (Botones)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0014) y specs/0014-superficie-botones/spec.md.",
+      "dependsOn": [
+        "T13"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "superficie.js",
+        "assets/ico-botones-gold.svg",
+        "assets/ico-click-gold.svg",
+        "assets/ico-escalar-gold.svg",
+        "assets/sistema-diseno/boton-viejo-register.png",
+        "assets/sistema-diseno/boton-viejo-view-series.png",
+        "assets/sistema-diseno/boton-viejo-add-to-cart.png",
+        "assets/sistema-diseno/boton-viejo-register-tachado.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "be31cc09ee9476824ac9292a9775ac3d104f6964573b698be2e761ff08727cd7"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "7fa103ee4d59d565e997d485fdb742e0920281e57d2d6a15966b38fd44b9899b"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "8af0efa4278fede071c55d2ddec379d4b537b0fbcc2ec44379005a52e8881aa0"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "9b4184eb5362d1247f871c805325f4c23fd72a815d19a2ec44872d94f204c5f3"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "585280f1046a5390626b59044b97293a96642ca8cc54e1a21e1ef81d22b6ca39"
+        },
+        {
+          "path": "superficie.js",
+          "sha256": "2cd590202cbac142445691294eed5fb81140ab2c3810f8596be0eadf3eecce13"
+        },
+        {
+          "path": "specs/0014-superficie-botones/spec.md",
+          "sha256": "639c1dfeb50d84e00d072d996c5549b36ecc04539720945482e5037fee939482"
+        },
+        {
+          "path": "specs/0014-superficie-botones/tasks.md",
+          "sha256": "83b0e2c46fc77265342505bdf1d5617ebf9dc7f77c10008baba954a0fe5243d2"
+        },
+        {
+          "path": "specs/0014-superficie-botones/context.json",
+          "sha256": "71d00ee63cf099a5c5634ca002fc9358228844067eaf062f254eba7a3b5d1ecf"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. También se corrigieron en docs/tech/sistema.md las líneas de Imágenes, Layout e Iconografía, que habían quedado con caracteres perdidos por el escape de PowerShell al escribirlas en 0012 y 0013.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-20: Lo apruebo (tras probarla él mismo, sin correcciones)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0014.md",
+            "sha256": "d7665dba14476bcd4eca69a8c31ca96a68b673bbff30ab9abd4b050d74dc1d11"
           }
         }
       ]

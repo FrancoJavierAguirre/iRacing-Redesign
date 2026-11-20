@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    { "id": "u-0014-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-20 (/feature): subsección Botones de Componentes según la referencia, con los 3 botones viejos en PNG; en 'Ahora', los 3 botones de ejemplo del proyecto interactivos (hover y press) sin destino; botones de 48, 40 y 32 px que al hacer click cambian de estilo (secundario, compras, bordeado y solo texto); íconos click en '4 estados', escalar en '3 tamaños', pincel en '5 estilos' y botones en el título" },
+    { "id": "s-referencia", "kind": "file", "reference": "specs/0014-superficie-botones/referencia-figma.png", "sha256": "ef4ea9a778ae3834fbaec30c518284619a228f05f77e7d435375004e981e8f4f" },
+    { "id": "s-superficie", "kind": "file", "reference": "specs/0013-superficie-iconografia/spec.md", "sha256": "c86d7e6df87bc0d84713734672fd350475c30a50200df6bab046c3829a76b067" }
+  ],
+  "facts": [
+    { "id": "o-design", "area": "product", "statement": "La referencia (PNG transparente con texto blanco, compuesta sobre fondo oscuro para leerla) muestra el encabezado 'Botones', 'Originalmente' con Register / View Series / Add to Cart (Primario, Secundario, Compras), 'Ahora' entre líneas con Race / Test Drive / Add to Cart (Primario, Secundario, Compras), Register tachado con 'Primario' tachado y 'Verde reservado para estados de “éxito”', y tres columnas 48 px / 40 px / 32 px con un botón 'Cambiar estilo' y las leyendas '5 estilos', '4 estados' y '3 tamaños' con ícono.", "status": "observed", "source": "s-referencia" },
+    { "id": "o-pagina", "area": "technical", "statement": "Según la spec 0013 (commit d589c20), superficie.html tiene la sección Componentes con la parte Iconografía; 'Ir a Motion' sigue sin destino.", "status": "observed", "source": "s-superficie" },
+    { "id": "d-ahora", "area": "product", "statement": "Los 3 botones de 'Ahora' son interactivos (hover y press) pero no llevan a ningún lado.", "status": "confirmed", "source": "u-0014-request" },
+    { "id": "d-cambiar-estilo", "area": "product", "statement": "Los botones de 48, 40 y 32 px cambian de estilo con cada click: secundario, compras, bordeado y solo texto (y vuelven al primario).", "status": "confirmed", "source": "u-0014-request" },
+    { "id": "d-iconos", "area": "product", "statement": "Íconos: botones en el título; pincel en '5 estilos'; click en '4 estados'; escalar en '3 tamaños'.", "status": "confirmed", "source": "u-0014-request" }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre la capa Superficie",
+    "problem": "Componentes solo muestra la iconografía; falta mostrar cómo cambiaron los botones y su sistema de estilos, estados y tamaños.",
+    "outcome": "superficie.html incluye la subsección Botones con el antes y el ahora y botones interactivos que muestran estilos, estados y tamaños.",
+    "scope": "Incluye: subsección Botones en superficie.html y superficie.css, un script chico para el cambio de estilo, assets provistos, SEO, llms.txt y docs. Excluye: Motion, el resto de Componentes y 'Siguiente elemento UX'.",
+    "acceptance": "1) Botones se ve como la referencia a 1920 px. 2) Los 3 botones de 'Ahora' tienen hover y press y no navegan. 3) Cada click en 'Cambiar estilo' pasa por primario, secundario, compras, bordeado y solo texto, en los 3 tamaños, también con teclado. 4) Responsive sin scroll horizontal. 5) SEO, llms.txt y docs actualizados; consola limpia.",
+    "valueSignal": "El lector entiende el cambio de los botones y prueba sus estilos y estados.",
+    "evidence": ["o-design", "o-pagina", "d-ahora", "d-cambiar-estilo", "d-iconos"]
+  }
+}
