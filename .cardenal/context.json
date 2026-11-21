@@ -2,92 +2,90 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0018-request",
+      "id": "u-0019-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): cambio de planes, no hay sección Motion; la siguiente es 'Pruebas de usabilidad' (referencia en imagen) y hay que editar el botón 'Ir a Motion'. Íconos nuevos: Hand, filter y objetivos. 'Intentar en prototipo' de Tarea 1 y Tarea 2 abren en otra pestaña prototipos de Figma; 'Ver video' de los usuarios 1, 2 y 3 abren videos de Google Drive; 'Ver cuestionario' lleva a páginas del proyecto que se harán después."
+      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): sección 'Iteraciones' según la referencia; imágenes y gifs como placeholders por ahora. 'Solución para nuevos usuarios' en Exo 2 regular 36 y bullets en Exo 2 regular 24, con 72 px entre bullets, título y botón, y 32 px entre el texto y la imagen de la izquierda. En All Series 32 px entre las 2 imágenes. 'Antes' y 'Después' en Exo 2 36. La imagen con flechas e indicaciones viene como SVG. Enlaces en otra pestaña: 'Probar funcionalidad', 'Probar flow', 'Probar filtros' y un cuarto enlace, también rotulado 'probar filtros' en el pedido."
     },
     {
       "id": "s-referencia",
       "kind": "file",
-      "reference": "specs/0018-superficie-pruebas-usabilidad/referencia-figma.webp",
-      "sha256": "e2f846f94fed765458afa3966ed1be01d9b46256f6b99c2ee1493210de39aa3f"
+      "reference": "specs/0019-superficie-iteraciones/referencia-figma.webp",
+      "sha256": "01b7e5bcd7868507ca0fc208d124100b5f469e6b417840515cf3259b24730532"
+    },
+    {
+      "id": "s-svg",
+      "kind": "file",
+      "reference": "assets/iteraciones/diferencias-all-series.svg",
+      "sha256": "7b60cf5949b6695f2686e754ee50d80bc799472f07871a1bf007614c4fdb0431"
     },
     {
       "id": "s-superficie",
       "kind": "file",
-      "reference": "specs/0017-superficie-logos-licencias/spec.md",
-      "sha256": "7882103cd39a50266b9f4518794149ebcdf1d37ad788e69f4d827b87b1f8320e"
+      "reference": "specs/0018-superficie-pruebas-usabilidad/spec.md",
+      "sha256": "2a1dd912b413e400b0f4e21d151c160437e9b94cefc992d75b2018d352d13168"
     },
     {
-      "id": "u-0018-correccion",
+      "id": "u-0019-correccion",
       "kind": "user",
-      "reference": "Corrección del usuario en chat 2026-11-20: radio de cards 16 px y 32 px entre cards; 'Leer guión completo' lleva a una página del proyecto que se hará después; ítems de Insights y usuarios en Poppins light 24 con íconos de 32 × 32 centrados a la izquierda a 16 px del texto; pulgares de 40 × 40 centrados con el texto; card de Conclusiones en Poppins light 24 con interlineado 40 (texto en color en regular); Tarea 1 y 2, y las dos cards de Insights, con la misma altura."
+      "reference": "Corrección del usuario en chat 2026-11-21: 32 px entre 'Antes/Después' y sus imágenes, 56 px entre las imágenes y el SVG; cambiar 'Ir a Iteraciones' por 'Ir a Prototipo'."
     },
     {
-      "id": "u-0018-correccion-2",
+      "id": "u-0019-correccion-2",
       "kind": "user",
-      "reference": "Segunda corrección del usuario en chat 2026-11-20: la tipografía de las cards 'Lo que sí funcionó' y 'Lo que no funcionó' es Poppins light 20 con line height 40; el pulgar abajo es #E75149."
+      "reference": "Segunda corrección del usuario en chat 2026-11-21: la distancia vertical es siempre 56 px."
     }
   ],
   "facts": [
     {
       "id": "o-design",
       "area": "product",
-      "statement": "La referencia (789 × 2000 px, texto blanco sobre transparente) muestra 'Pruebas de Usabilidad' / 'Validando decisiones de diseño' con 'Ir a Componentes' e 'Ir a Iteraciones'; 'Contexto y tareas para el usuario' con 'Leer guión completo', un párrafo de contexto y las cards Tarea 1 y Tarea 2 con objetivos; 'Insights' con 'Lo que sí funcionó' y 'Lo que no funcionó'; cards de Usuario 1 | Franco, Usuario 2 | Martín y Usuario 3 | Fede con 'Ver cuestionario' y 'Ver video'; y 'Conclusiones' con una frase entre dos manos y la card 'Filtros' con sus causas, donde termina la imagen.",
+      "statement": "La referencia (771 × 2000 px, escala ~1:2,49) muestra 'Iteraciones' / 'Puliendo el producto' con 'Ir a Pruebas de Usabilidad' e 'Ir a Iteraciones'; 'License Progress' con un gif a la izquierda y 'Solución para nuevos usuarios' con 4 bullets y 'Probar funcionalidad'; 'All Series' con 'Probar flow', Antes/Después y la imagen anotada; 'Filtros y búsqueda' con 'Probar filtros' y Antes/Después; y 'Registro a la carrera' con 'Probar registrarse' y Antes/Después.",
       "status": "observed",
       "source": "s-referencia"
     },
     {
+      "id": "o-svg",
+      "area": "technical",
+      "statement": "El SVG anotado (1674 × 805, 624 KB) no usa <text>: los textos son trazos, y la captura es un PNG embebido de 1440 × 992. Se puede usar como <img> sin depender de fuentes.",
+      "status": "observed",
+      "source": "s-svg"
+    },
+    {
       "id": "o-pagina",
       "area": "technical",
-      "statement": "Según la spec 0017, Componentes está completo y su 'Ir a Motion' no tiene destino.",
+      "statement": "Según la spec 0018, Pruebas de Usabilidad tiene 'Ir a Iteraciones' sin destino.",
       "status": "observed",
       "source": "s-superficie"
     },
     {
-      "id": "d-motion",
+      "id": "d-iteraciones",
       "area": "product",
-      "statement": "No hay sección Motion: 'Ir a Motion' pasa a llevar a Pruebas de usabilidad.",
+      "statement": "Iteraciones: placeholders para imágenes y gifs; tipografías y distancias pedidas; 'Probar funcionalidad', 'Probar flow', 'Probar filtros' y el cuarto enlace abren en otra pestaña.",
       "status": "confirmed",
-      "source": "u-0018-request"
-    },
-    {
-      "id": "d-enlaces",
-      "area": "product",
-      "statement": "'Intentar en prototipo' (Tareas 1 y 2) y 'Ver video' (usuarios 1 a 3) abren en otra pestaña los enlaces dados; 'Ver cuestionario' queda sin destino hasta que existan esas páginas.",
-      "status": "confirmed",
-      "source": "u-0018-request"
+      "source": "u-0019-request"
     },
     {
       "id": "d-correccion",
       "area": "product",
-      "statement": "Cards con radio 16 y 32 px entre ellas, de igual altura por par; ítems de Insights y usuarios en Poppins light 24 con íconos de 32 px a 16 px del texto; pulgares de 40 px; card de Conclusiones en Poppins light 24/40 con texto en color regular; 'Leer guión completo' queda sin destino hasta su página.",
+      "statement": "Distancia vertical de 56 px de 'Antes/Después' a su imagen y de las imágenes al SVG; 32 px horizontales entre las dos imágenes; el segundo botón del encabezado es 'Ir a Prototipo'.",
       "status": "confirmed",
-      "source": "u-0018-correccion"
-    },
-    {
-      "id": "d-correccion-2",
-      "area": "product",
-      "statement": "Cards de Insights en Poppins light 20/40; pulgar abajo #E75149.",
-      "status": "confirmed",
-      "source": "u-0018-correccion-2"
+      "source": "u-0019-correccion-2"
     }
   ],
   "questions": [],
   "change": {
     "actor": "Lector del portfolio que recorre la capa Superficie",
-    "problem": "Superficie no muestra las pruebas de usabilidad del rediseño.",
-    "outcome": "superficie.html incluye 'Pruebas de Usabilidad' con contexto, tareas, insights, resultados por usuario y conclusiones, y 'Ir a Motion' lleva a esa sección.",
-    "scope": "Incluye: sección en superficie.html y superficie.css, íconos provistos, SEO, llms.txt y docs. Excluye: páginas de cuestionarios, guión completo e Iteraciones.",
-    "acceptance": "1) Se ve como la referencia a 1920 px. 2) 'Ir a Motion' pasa a 'Ir a Pruebas de Usabilidad' y lleva a la sección. 3) 'Intentar en prototipo' y 'Ver video' abren sus enlaces en otra pestaña; 'Ver cuestionario', 'Leer guión completo' e 'Ir a Iteraciones' quedan sin destino. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector ve cómo se validó el diseño con usuarios y qué se aprendió.",
+    "problem": "Superficie no muestra las iteraciones hechas tras las pruebas de usabilidad.",
+    "outcome": "superficie.html incluye 'Iteraciones' con License Progress, All Series, Filtros y búsqueda, y Registro a la carrera, con placeholders y enlaces a los prototipos; 'Ir a Iteraciones' lleva a la sección.",
+    "scope": "Incluye: sección en superficie.html y superficie.css, el SVG anotado, SEO, llms.txt y docs. Excluye: las imágenes y gifs finales (placeholders).",
+    "acceptance": "1) Se ve como la referencia a 1920 px, con placeholders donde van imágenes y gifs. 2) Tipografías y distancias pedidas. 3) Los 4 botones 'Probar…' abren sus enlaces en otra pestaña; 'Ir a Iteraciones' de Pruebas de Usabilidad lleva a la sección. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector ve qué cambió del diseño después de probarlo con usuarios.",
     "evidence": [
       "o-design",
+      "o-svg",
       "o-pagina",
-      "d-motion",
-      "d-enlaces",
-      "d-correccion",
-      "d-correccion-2"
+      "d-iteraciones",
+      "d-correccion"
     ]
   }
 }

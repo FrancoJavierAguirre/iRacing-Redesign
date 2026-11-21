@@ -390,11 +390,25 @@
 .page-superficie .pu-card--texto .hl { font-weight: 400; }
 .page-superficie .pu-causas { margin: clamp(24px, 2.5vw, 48px) 0 clamp(12px, 1.25vw, 24px); font: 400 clamp(20px, 1.6667vw, 32px)/1.2 var(--font-display); color: #fff; }
 
+/* Iteraciones */
+.page-superficie .it-solucion { display: grid; grid-template-columns: minmax(0, 1163fr) minmax(0, 550fr); gap: 32px; align-items: center; }
+.page-superficie .it-gif { width: 100%; aspect-ratio: 1163 / 797; min-height: 0; }
+.page-superficie .it-texto { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(32px, 3.75vw, 72px); }
+.page-superficie .it-tit { margin: 0; font: 400 clamp(22px, 1.875vw, 36px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .it-bullets { display: flex; flex-direction: column; gap: clamp(32px, 3.75vw, 72px); margin: 0; padding-left: 1.2em; font: 400 clamp(16px, 1.25vw, 24px)/1.4 var(--font-display); color: #fff; }
+.page-superficie .it-comparar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.page-superficie .it-comparar figure { margin: 0; min-width: 0; }
+.page-superficie .it-comparar figcaption { margin-bottom: clamp(32px, 2.9167vw, 56px); text-align: center; font: 400 clamp(22px, 1.875vw, 36px)/1.2 var(--font-display); color: #fff; }
+.page-superficie .it-captura { width: 100%; aspect-ratio: 864 / 605; min-height: 0; }
+.page-superficie .it-anotada { display: block; width: 100%; max-width: 1674px; height: auto; margin: clamp(32px, 2.9167vw, 56px) auto 0; }
+
 @media (max-width: 900px) {
   .page-superficie .sd-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
   .page-superficie .sd-detalles-fila { gap: 16px; }
   .page-superficie .sd-logos { grid-template-columns: repeat(5, minmax(0, 84px)); }
   .page-superficie .pu-par { grid-template-columns: minmax(0, 1fr); }
+  .page-superficie .it-solucion, .page-superficie .it-comparar { grid-template-columns: minmax(0, 1fr); }
+  .page-superficie .it-comparar { row-gap: 48px; }
 }
 @media (max-width: 640px) {
   .page-superficie .sd-cards { grid-template-columns: minmax(0, 1fr); }

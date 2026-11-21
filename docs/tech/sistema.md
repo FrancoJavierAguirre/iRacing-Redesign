@@ -112,7 +112,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - **Links activados:** la opción Esqueleto del menú de capas de todas las páginas, «Ver Esqueleto» (Estructura y detalles de tareas), las tarjetas Esqueleto de «Siguiente elemento UX» (Estrategia, Alcance y Estructura), la tarjeta del Home (`onclick`) y, en 5-elementos, «Ver Esqueleto» y su tarjeta.
 ### Página de Superficie (`superficie.html` + `superficie.css`, spec 0010, parte UX Writing)
 
-- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0018 cubre «Ir a Iteraciones» (`#iteraciones`), «Leer guión completo» (`#guion`, página futura) y los tres «Ver cuestionario» (`#cuestionario-1..3`). «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
+- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0019 cubre «Ir a Prototipo» en el encabezado de Iteraciones (`#prototipo`, sección futura), «Leer guión completo» (`#guion`, página futura) y los tres «Ver cuestionario» (`#cuestionario-1..3`); «Ir a Iteraciones» ya tiene destino. «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
 - **«Ver Prototipo»:** `a.topbar-action` con `target="_blank" rel="noopener"` hacia el prototipo de Figma, `assets/ico-play.svg` y texto `.sr-only` que avisa que se abre en una pestaña nueva.
 - **Círculo de Oro:** `.oro[data-activo]` con 3 `span.oro-ring` concéntricos de CSS (565, 420 y 249 px a 1920), apilados con ¿Por qué? arriba, ¿Cómo? en el medio y ¿Qué? abajo. Usan los colores de los PNG del usuario: activo `rgba(0, 87, 208, .15)` e inactivo `rgba(0, 0, 0, .6)`. Como son semitransparentes, el círculo de abajo se ve a través del de arriba. La etiqueta activa va en dorado. Los párrafos son Poppins 300 itálica de 24 px, y las frases doradas, Poppins 600 itálica (cargada en el link de fuentes). Es `aria-hidden`, porque el texto lo explica.
 - **Matriz de Voz y Guía de Estilo:** `table.mtx` semánticas (`th scope`) con encabezados de tarjeta (`.mtx-card`). En ≤ 900 px pasan a bloques y cada celda muestra `data-col` con `::before`.
@@ -148,6 +148,12 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
     - Botones: `btn btn--md btn-primary` para «Intentar en prototipo» y «Ver video» (`target="_blank" rel="noopener"` con aviso en `.sr-only`) y `btn-outline-info` para «Ver cuestionario».
     - `.pu-items`: cada `li` es un flex centrado con gap 16 y el texto envuelto en un `span` (si no, cada fragmento y cada `.hl` serían columnas). Texto Poppins 300 a 24 px (`clamp(16px, 1,25vw, 24px)`) en las cards de usuario y a 20/40 px en las dos cards de Insights (`.pu-par .pu-items li`). Los íconos de 32 px son `::before` con `background-image` (`ico-check-green`, `ico-cross-red` y `ico-lupa-green`, esta última creada recoloreando `ico-lupa.svg`). El significado se anuncia con texto en `.sr-only` («Funcionó:», «Problema:», «Sugerencia:»).
     - `.pu-conclusion`: frase entre dos `ico-mano-gold.svg`; la segunda va espejada con `scaleX(-1)`. La card «Filtros» (`.pu-card--texto`) usa Poppins 300 24/40 y `.hl` en 400. Los pulgares de `.pu-balance` miden 40 px; el de abajo es `ico-thumb-down-red.svg` (#E75149), una copia recoloreada para no cambiar el original que usa estrategia.html. Íconos nuevos: `ico-mano-gold`, `ico-filtro-gold` e `ico-objetivos-gold`.
+  - Iteraciones (spec 0019): `section#iteraciones` después de Pruebas de Usabilidad, con clases `.it-*`.
+    - `.it-solucion`: grid `1163fr 550fr` con gap 32 y `align-items: center`; el gif es un `.media-placeholder.it-gif` (`aspect-ratio: 1163/797`). `.it-texto` es un flex en columna con gap 72 (`clamp(32px, 3,75vw, 72px)`), igual que `.it-bullets`: título Exo 2 400 36 px y bullets Exo 2 400 24 px.
+    - `.it-comparar`: grid de 2 columnas con gap 32; cada `figure` lleva `figcaption` «Antes»/«Después» (Exo 2 400 36 px, a 56 px de la imagen) y un `.media-placeholder.it-captura` (`aspect-ratio: 864/605`).
+    - `img.it-anotada`: `assets/iteraciones/diferencias-all-series.svg` (1674 × 805, 624 KB) con `alt` que resume sus indicaciones, a 56 px de las imágenes de arriba. Los textos son trazos y la captura es un PNG embebido de 1440 × 992, así que no depende de fuentes.
+    - Los «Probar…» van al final de la línea del encabezado con el patrón `.pu-head` / `.pu-head-link` de Pruebas de Usabilidad y abren en otra pestaña.
+    - En ≤ 900 px, `.it-solucion` y `.it-comparar` pasan a una columna.
   - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.
 
 ## Integraciones externas (solo enlaces)
@@ -180,7 +186,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Superficie: Iteraciones (`#iteraciones`), guión completo, páginas de cuestionarios y el resto de la página, incluido «Siguiente elemento UX».
+- Superficie: imágenes y gif finales de Iteraciones, guión completo, páginas de cuestionarios y el resto de la página, incluido «Siguiente elemento UX».
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 

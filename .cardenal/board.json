@@ -980,26 +980,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "468cc509c9cc5b2d73010f0c260986d1f86213cea3af2cfc7c28e974e1b8adfc"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "c867c8d4bca1c483145b6400557338667c4ed8525f2c58739b82596c42154c5a"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "f9f7534d6fd2bf3e68cf745b6cb1e934d540f5d7e8e4e4f6ec41289e4d8d4d6e"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "b3f5d16d1ddbcca2af37fc0c942378d4def2ddf4903e208dd2f670cb0458dca5"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "b9f670004fae204cf5bac5a554e4891a544e0c4dc02165842df0d151810aaad8"
-        },
-        {
           "path": "specs/0018-superficie-pruebas-usabilidad/spec.md",
           "sha256": "2a1dd912b413e400b0f4e21d151c160437e9b94cefc992d75b2018d352d13168"
         },
@@ -1012,7 +992,7 @@
           "sha256": "b218ed6edfe9d7d7529d0403fd965a73d9e03e9c90cd0696f919a61043cd7b17"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px; 5 enlaces externos con target _blank y 5 sin destino verificados en el DOM. Tras la corrección del usuario: radio 16, cards de igual altura por par (402 y 656 px a 1920), ítems en Poppins 300 24 con íconos de 32 px a 16 px, pulgares de 40 px y card Filtros en 24/40 con texto en color 400 (estilos computados). Segunda corrección: Insights en Poppins 300 20/40 (cards de 584 px, iguales) y pulgar abajo #E75149.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px; 5 enlaces externos con target _blank y 5 sin destino verificados en el DOM. Tras la corrección del usuario: radio 16, cards de igual altura por par (402 y 656 px a 1920), ítems en Poppins 300 24 con íconos de 32 px a 16 px, pulgares de 40 px y card Filtros en 24/40 con texto en color 400 (estilos computados). Segunda corrección: Insights en Poppins 300 20/40 (cards de 584 px, iguales) y pulgar abajo #E75149. Evidencia rotada en 0019: archivos modificados por Iteraciones; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1022,6 +1002,73 @@
           "evidence": {
             "path": ".cardenal/revision-0018.md",
             "sha256": "f5638247d960390e2b3e21211907496be68ba3761f14cf0767dfc69be80b341b"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T19",
+      "title": "Superficie, parte 10: Iteraciones",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0019) y specs/0019-superficie-iteraciones/spec.md.",
+      "dependsOn": [
+        "T18"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/iteraciones/diferencias-all-series.svg",
+        "specs/0019-superficie-iteraciones/referencia-figma.webp"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "2400c95f9d9f074c3e1ca00971eda4db714e9527231449b9128460f0ef7bf688"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "f4a7adc313bf716faf6a7ec586d65a0ed17e6b59a4104ede9fddc002ed28a25e"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "bf5a13bff99f3758c858b86a47f5331328f0d56bd11be1bf6f271702900b23ff"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "433f1214cebf7d3d5f77ffad87460b9587ce289107d7508d7b30ba2dda0f208d"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "008ee156ad099c869696482f92e29461e6ad16738aacb4f18e21ced469d3bef1"
+        },
+        {
+          "path": "specs/0019-superficie-iteraciones/spec.md",
+          "sha256": "aa7e2a051405b40afe1b0272e8ea307fe997f3757d52ba55a999d44d9affe98c"
+        },
+        {
+          "path": "specs/0019-superficie-iteraciones/tasks.md",
+          "sha256": "c732d5292d2326bfcdb718c8d9cff91185cde3f385f1200589ffc4dba33c1faf"
+        },
+        {
+          "path": "specs/0019-superficie-iteraciones/context.json",
+          "sha256": "0d1a4f57301d04651c609addb3128087ca54f850d4a74f4df8b17d9a8a7ac85d"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: gif de 1163 px y texto a 32 px; 72 px entre título, bullets y botón; Antes/Después con 32 px; tipografías Exo 2 36/24 (estilos computados); 4 enlaces externos con target _blank. Tras la corrección del usuario: 56 px de «Antes/Después» a su imagen (segunda corrección) y 56 px de las imágenes al SVG (medidos), e «Ir a Prototipo» sin destino.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-21: Lo apruebo (tras corregir distancias y el botón Ir a Prototipo)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0019.md",
+            "sha256": "27c1a17488ea11caddad459fc665e228065faffe91f669eb0a66ae7f87afdf93"
           }
         }
       ]

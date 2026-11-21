@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) y Pruebas de Usabilidad implementados; Iteraciones y el resto de la página pendientes |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad e Iteraciones implementados (Iteraciones con imágenes provisorias); el resto de la página pendiente |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -164,11 +164,16 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - **Insights:** lo que sí funcionó (ejecución de la tarea 2, feedbacks, CTA y tablas) y lo que no (filtros, elección del auto favorito y el problema del usuario nuevo).
     - **Usuarios:** una card por usuario (Franco, Martín y Fede) con lo que le costó, lo que le resultó fácil y sus sugerencias. «Ver video» abre la grabación de la prueba en Google Drive, en otra pestaña.
     - **Conclusiones:** «Fue muy mala idea dejar filtros previamente activados y muy mal diseñados» y una card «Filtros» con el problema y sus causas.
-    - Todavía no tienen destino: «Leer guión completo» y «Ver cuestionario» (páginas que se harán después) e «Ir a Iteraciones» (sección futura).
+    - Todavía no tienen destino: «Leer guión completo» y «Ver cuestionario» (páginas que se harán después). «Ir a Iteraciones» lleva a la sección siguiente.
+17. **Iteraciones** («Puliendo el producto»): qué cambió después de las pruebas.
+    - **License Progress:** «Solución para nuevos usuarios» con cuatro puntos (separado por disciplinas, barra de progresión de licencia, primero solo lo que puede correr y luego lo que puede comprar) y «Probar funcionalidad», que abre el prototipo de Figma en otra pestaña.
+    - **All Series**, **Filtros y búsqueda** y **Registro a la carrera:** cada una compara «Antes» y «Después» y tiene un botón «Probar…» que abre su prototipo en otra pestaña. All Series suma una imagen de la pantalla nueva con flechas que señalan cada cambio.
+    - Las capturas y el gif todavía son recuadros provisorios con el nombre de la imagen que va.
+    - «Ir a Prototipo» todavía no tiene destino porque esa sección no existe.
 
 Cada subsección tiene botones para ir a la anterior y a la siguiente.
 
-**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular; las imágenes de Detalles de auto se apilan en celular. En Pruebas de Usabilidad, las cards de a dos pasan a una columna en tablet y los botones de cada card bajan debajo del título en celular. Todavía no tiene Iteraciones ni «Siguiente elemento UX».
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular; las imágenes de Detalles de auto se apilan en celular. En Pruebas de Usabilidad, las cards de a dos pasan a una columna en tablet y los botones de cada card bajan debajo del título en celular. En Iteraciones, la imagen y el texto de License Progress se apilan y Antes/Después pasan a una columna en tablet y celular; las indicaciones de la imagen de All Series se ven muy chicas en celular. Todavía no tiene «Siguiente elemento UX».
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.
