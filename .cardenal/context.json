@@ -1,26 +1,59 @@
 {
   "schemaVersion": 1,
   "sources": [
-    { "id": "u-0015-request", "kind": "user", "reference": "Pedido del usuario en chat 2026-11-20 (/feature): subsecciones 'Dropdowns y listas' (ícono ya en assets; dropdowns y lista de opciones en PNG) y 'Cards'. 'Elegir auto': 4 imágenes que cambian cada 3 s en bucle, con hover de outline 2 px #0159CF. 'Comprar auto': imagen 'clio card' fija, triángulo en la esquina superior derecha con el ícono cart #1E1E27 de 16x16 a 8 px del borde superior y derecho; hover con outline #FF8533 y un tag #FFB685 (radius 4, padding 4, gap 4) con el ícono tag y '$12.95' en Inter 12 medium #1E1E27 en la esquina superior izquierda. 'Pista' (track serie details) y 'Clima' (weather serie details) con el mismo hover que 'Elegir auto'. 'Detalles de auto' queda para la próxima instrucción" },
-    { "id": "s-referencia", "kind": "file", "reference": "specs/0015-superficie-dropdowns-cards/referencia-figma.png", "sha256": "3dfa635f93009a71960bc3a96112ce737a9b60ceca043c86853d5afc1d4cf242" },
-    { "id": "s-ref-compra", "kind": "file", "reference": "specs/0015-superficie-dropdowns-cards/referencia-card-compra-hover.png", "sha256": "0b1860272c6e5499843ef0c5b82e729a052f8499bf0bef22914e9b8bfda2e8e6" },
-    { "id": "s-superficie", "kind": "file", "reference": "specs/0014-superficie-botones/spec.md", "sha256": "639c1dfeb50d84e00d072d996c5549b36ecc04539720945482e5037fee939482" }
+    {
+      "id": "u-0016-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): 'Detalles de auto' tiene 2 imágenes, BMW a la izquierda y Ferrari a la derecha. Comportamiento similar a lo anterior pero sin hover: a los 3 segundos cambia a la imagen siguiente, en bucle. Se pasan 5 imágenes de BMW y 4 de Ferrari que rotan cada grupo entre sí. Ambas con corner radius de 8 px."
+    },
+    {
+      "id": "s-referencia",
+      "kind": "file",
+      "reference": "specs/0015-superficie-dropdowns-cards/referencia-figma.png",
+      "sha256": "3dfa635f93009a71960bc3a96112ce737a9b60ceca043c86853d5afc1d4cf242"
+    },
+    {
+      "id": "s-superficie",
+      "kind": "file",
+      "reference": "specs/0015-superficie-dropdowns-cards/spec.md",
+      "sha256": "f510fa8d482acdd27af6872fc145158e7dbf2666e0660e328a427823661a0741"
+    }
   ],
   "facts": [
-    { "id": "o-design", "area": "product", "statement": "La referencia (texto blanco sobre transparente, compuesta sobre fondo oscuro) muestra 'Dropdowns y listas' con un recuadro punteado de 4 dropdowns y la lista de opciones, y 'Cards' con 4 cards tituladas 'Elegir auto | After delay y hover', 'Comprar auto | Hover', 'Pista | Hover' y 'Clima | Hover', más 'Detalles de auto | After delay' debajo.", "status": "observed", "source": "s-referencia" },
-    { "id": "o-compra-hover", "area": "product", "statement": "La card de compra en hover muestra el tag de precio arriba a la izquierda y el borde naranja.", "status": "observed", "source": "s-ref-compra" },
-    { "id": "o-pagina", "area": "technical", "statement": "Según la spec 0014 (commit 6146538), Componentes tiene Iconografía y Botones; 'Ir a Motion' sigue sin destino.", "status": "observed", "source": "s-superficie" },
-    { "id": "d-cards", "area": "product", "statement": "Cards: 'Elegir auto' rota 4 imágenes cada 3 s en bucle y tiene hover con outline 2 px #0159CF; 'Comprar auto' es fija, con triángulo y cart, hover con outline #FF8533 y tag '$12.95'; 'Pista' y 'Clima' tienen el hover azul.", "status": "confirmed", "source": "u-0015-request" },
-    { "id": "d-alcance", "area": "product", "statement": "'Detalles de auto' queda fuera de esta parte.", "status": "confirmed", "source": "u-0015-request" }
+    {
+      "id": "o-design",
+      "area": "product",
+      "statement": "La referencia muestra 'Detalles de auto | After delay' debajo de las cards, con dos imágenes de 580 × 326 px separadas por 32 px y centradas: el BMW M2 de frente a la izquierda y el Ferrari 296 a la derecha.",
+      "status": "observed",
+      "source": "s-referencia"
+    },
+    {
+      "id": "o-pagina",
+      "area": "technical",
+      "statement": "Según la spec 0015, Cards tiene Elegir auto (carrusel CSS de 3 s por imagen), Comprar auto, Pista y Clima; 'Detalles de auto' quedó pendiente.",
+      "status": "observed",
+      "source": "s-superficie"
+    },
+    {
+      "id": "d-detalles",
+      "area": "product",
+      "statement": "'Detalles de auto': BMW (5 imágenes) a la izquierda y Ferrari (4) a la derecha; cada una cambia a la siguiente cada 3 s en bucle, sin hover, con radio de 8 px.",
+      "status": "confirmed",
+      "source": "u-0016-request"
+    }
   ],
   "questions": [],
   "change": {
     "actor": "Lector del portfolio que recorre la capa Superficie",
-    "problem": "Componentes no muestra dropdowns, listas ni cards.",
-    "outcome": "superficie.html incluye 'Dropdowns y listas' y 'Cards' (Elegir auto, Comprar auto, Pista y Clima) con sus animaciones y estados hover.",
-    "scope": "Incluye: dos subsecciones en superficie.html y superficie.css, assets provistos, SEO, llms.txt y docs. Excluye: 'Detalles de auto', Motion y 'Siguiente elemento UX'.",
-    "acceptance": "1) Se ve como la referencia a 1920 px. 2) 'Elegir auto' cambia de imagen cada 3 s en bucle. 3) Hover (y foco) con outline 2 px #0159CF en Elegir auto, Pista y Clima, y #FF8533 con tag en Comprar auto. 4) Triángulo y cart según medidas pedidas. 5) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector ve los componentes de selección y las cards del rediseño con sus estados.",
-    "evidence": ["o-design", "o-compra-hover", "o-pagina", "d-cards", "d-alcance"]
+    "problem": "Cards no muestra la card 'Detalles de auto'.",
+    "outcome": "superficie.html incluye 'Detalles de auto | After delay' con las imágenes de BMW y Ferrari rotando cada 3 s.",
+    "scope": "Incluye: bloque en superficie.html y superficie.css, las 9 imágenes provistas, llms.txt y docs. Excluye: Motion y 'Siguiente elemento UX'.",
+    "acceptance": "1) Se ve como la referencia a 1920 px (dos imágenes de 580 × 326 con 32 px de separación, centradas). 2) Cada imagen pasa a la siguiente de su grupo cada 3 s, en bucle. 3) Sin hover; radio de 8 px. 4) Responsive sin scroll horizontal; llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector ve las imágenes de detalle de auto del rediseño en movimiento.",
+    "evidence": [
+      "o-design",
+      "o-pagina",
+      "d-detalles"
+    ]
   }
 }

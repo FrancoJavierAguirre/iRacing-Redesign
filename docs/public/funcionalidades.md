@@ -153,11 +153,11 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - «Comprar auto» muestra el Clio con un triángulo naranja y un carrito en la esquina.
     - «Pista» muestra el mapa de Spa y «Clima», el clima de la carrera.
     - Al pasar el mouse (o enfocar con el teclado), la card se marca con un borde de 2 px: azul en Elegir auto, Pista y Clima, y naranja en Comprar auto, que además muestra el precio «$12.95» arriba a la izquierda. Las cards no llevan a ningún lado.
-    - «Detalles de auto» todavía no está.
+    - «Detalles de auto», debajo, muestra dos imágenes con bordes redondeados: el BMW M2 a la izquierda (5 vistas) y el Ferrari 296 a la derecha (4 vistas). Cada una pasa a la vista siguiente cada 3 segundos, en bucle. No reaccionan al mouse.
 
 Cada subsección tiene botones para ir a la anterior y a la siguiente.
 
-**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular. Todavía no tiene Motion ni «Siguiente elemento UX».
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular; las imágenes de Detalles de auto se apilan en celular. Todavía no tiene Motion ni «Siguiente elemento UX».
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.

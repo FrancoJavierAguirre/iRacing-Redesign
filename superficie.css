@@ -317,9 +317,31 @@
 .page-superficie .sd-card-tag img { display: block; width: 12px; height: 12px; }
 .page-superficie .sd-card--compra:hover .sd-card-tag, .page-superficie .sd-card--compra:focus-visible .sd-card-tag { opacity: 1; }
 
+/* Detalles de auto: dos imágenes que rotan cada 3 s, sin hover */
+.page-superficie .sd-detalles { margin-top: clamp(48px, 3.75vw, 72px); }
+.page-superficie .sd-detalles-fila { display: grid; grid-template-columns: repeat(2, minmax(0, 580px)); justify-content: center; gap: 32px; margin: 0; padding: 0; list-style: none; }
+.page-superficie .sd-detalle { position: relative; aspect-ratio: 580 / 326; border-radius: 8px; overflow: hidden; }
+.page-superficie .sd-detalle > img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.page-superficie .sd-detalle--4 > img { animation: sd-carrusel 12s linear infinite; }
+.page-superficie .sd-detalle--5 > img { animation: sd-rotar5 15s linear infinite; }
+.page-superficie .sd-detalle > img:nth-child(1) { opacity: 1; }
+.page-superficie .sd-detalle--4 > img:nth-child(1) { animation-name: sd-carrusel-1; }
+.page-superficie .sd-detalle--5 > img:nth-child(1) { animation-name: sd-rotar5-1; }
+.page-superficie .sd-detalle > img:nth-child(2) { animation-delay: 3s; }
+.page-superficie .sd-detalle > img:nth-child(3) { animation-delay: 6s; }
+.page-superficie .sd-detalle > img:nth-child(4) { animation-delay: 9s; }
+.page-superficie .sd-detalle > img:nth-child(5) { animation-delay: 12s; }
+@keyframes sd-rotar5 { 0% { opacity: 0; } 2.67% { opacity: 1; } 20% { opacity: 1; } 22.67% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes sd-rotar5-1 { 0% { opacity: 1; } 20% { opacity: 1; } 22.67% { opacity: 0; } 97.33% { opacity: 0; } 100% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .page-superficie .sd-detalle > img { animation: none; }
+}
+
 @media (max-width: 900px) {
   .page-superficie .sd-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
+  .page-superficie .sd-detalles-fila { gap: 16px; }
 }
 @media (max-width: 640px) {
   .page-superficie .sd-cards { grid-template-columns: minmax(0, 1fr); }
+  .page-superficie .sd-detalles-fila { grid-template-columns: minmax(0, 1fr); gap: 32px; }
 }

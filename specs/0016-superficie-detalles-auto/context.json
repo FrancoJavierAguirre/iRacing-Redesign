@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "u-0016-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): 'Detalles de auto' tiene 2 imágenes, BMW a la izquierda y Ferrari a la derecha. Comportamiento similar a lo anterior pero sin hover: a los 3 segundos cambia a la imagen siguiente, en bucle. Se pasan 5 imágenes de BMW y 4 de Ferrari que rotan cada grupo entre sí. Ambas con corner radius de 8 px."
+    },
+    {
+      "id": "s-referencia",
+      "kind": "file",
+      "reference": "specs/0015-superficie-dropdowns-cards/referencia-figma.png",
+      "sha256": "3dfa635f93009a71960bc3a96112ce737a9b60ceca043c86853d5afc1d4cf242"
+    },
+    {
+      "id": "s-superficie",
+      "kind": "file",
+      "reference": "specs/0015-superficie-dropdowns-cards/spec.md",
+      "sha256": "f510fa8d482acdd27af6872fc145158e7dbf2666e0660e328a427823661a0741"
+    }
+  ],
+  "facts": [
+    {
+      "id": "o-design",
+      "area": "product",
+      "statement": "La referencia muestra 'Detalles de auto | After delay' debajo de las cards, con dos imágenes de 580 × 326 px separadas por 32 px y centradas: el BMW M2 de frente a la izquierda y el Ferrari 296 a la derecha.",
+      "status": "observed",
+      "source": "s-referencia"
+    },
+    {
+      "id": "o-pagina",
+      "area": "technical",
+      "statement": "Según la spec 0015, Cards tiene Elegir auto (carrusel CSS de 3 s por imagen), Comprar auto, Pista y Clima; 'Detalles de auto' quedó pendiente.",
+      "status": "observed",
+      "source": "s-superficie"
+    },
+    {
+      "id": "d-detalles",
+      "area": "product",
+      "statement": "'Detalles de auto': BMW (5 imágenes) a la izquierda y Ferrari (4) a la derecha; cada una cambia a la siguiente cada 3 s en bucle, sin hover, con radio de 8 px.",
+      "status": "confirmed",
+      "source": "u-0016-request"
+    }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre la capa Superficie",
+    "problem": "Cards no muestra la card 'Detalles de auto'.",
+    "outcome": "superficie.html incluye 'Detalles de auto | After delay' con las imágenes de BMW y Ferrari rotando cada 3 s.",
+    "scope": "Incluye: bloque en superficie.html y superficie.css, las 9 imágenes provistas, llms.txt y docs. Excluye: Motion y 'Siguiente elemento UX'.",
+    "acceptance": "1) Se ve como la referencia a 1920 px (dos imágenes de 580 × 326 con 32 px de separación, centradas). 2) Cada imagen pasa a la siguiente de su grupo cada 3 s, en bucle. 3) Sin hover; radio de 8 px. 4) Responsive sin scroll horizontal; llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector ve las imágenes de detalle de auto del rediseño en movimiento.",
+    "evidence": [
+      "o-design",
+      "o-pagina",
+      "d-detalles"
+    ]
+  }
+}

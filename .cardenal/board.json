@@ -799,26 +799,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "78ec18750de84dcf3e11a1225dca901637aeb43a15a3e9ae758c3823b67fe513"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "701e9f7d404318bc828641217334ebc1038dd8392e5d4df47f51bfe5a4a7a5d8"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "640ba12a529a7e3bf82b4c004acaa09f039a322568e0b529beae4ce8434d3730"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "f4f95533f6042905c821f46ce4324e74be066b7a7b070574f5e9440c5409d071"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "d2820ec250bb8952cce74c0a7789a094dd816b4c7cb1ed30dcb244c9240295ed"
-        },
-        {
           "path": "specs/0015-superficie-dropdowns-cards/spec.md",
           "sha256": "f510fa8d482acdd27af6872fc145158e7dbf2666e0660e328a427823661a0741"
         },
@@ -831,7 +811,7 @@
           "sha256": "5f5338b2a813f03af0b0778b47c0c0a6e604c5b0112ac495a28783045df9268e"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. Evidencia rotada en 0016: archivos modificados por Detalles de auto; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -841,6 +821,80 @@
           "evidence": {
             "path": ".cardenal/revision-0015.md",
             "sha256": "772481cf2a0c24e3512f041abc78a985373b0925390152979ae50ef4f7b5b1c8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T16",
+      "title": "Superficie, parte 7: Componentes (Cards, Detalles de auto)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0016) y specs/0016-superficie-detalles-auto/spec.md.",
+      "dependsOn": [
+        "T15"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/sistema-diseno/detalle-bmw-1.png",
+        "assets/sistema-diseno/detalle-bmw-2.png",
+        "assets/sistema-diseno/detalle-bmw-3.png",
+        "assets/sistema-diseno/detalle-bmw-4.png",
+        "assets/sistema-diseno/detalle-bmw-5.png",
+        "assets/sistema-diseno/detalle-ferrari-1.png",
+        "assets/sistema-diseno/detalle-ferrari-2.png",
+        "assets/sistema-diseno/detalle-ferrari-3.png",
+        "assets/sistema-diseno/detalle-ferrari-4.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "eb50fb14f00a1549619130d8b7af4d4315409a0e35b92ebbf094f5b86ede875d"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "04e376f20fee2746fb225d03102751f80e5fdcf70d4f75edbbf1c225bc523b7b"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "138dd38b5f465dc6b8a9a1b6764514e0398509b48c8bce944ff8ac3965be1da8"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "b59661b42943af8775aec2d292580302f11d1ee9eb433c5ff0351699ebbdf09b"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "d835de5fb943677bef3c3acfbf61a6d56a7068e6084a98480ec840ea252c84d3"
+        },
+        {
+          "path": "specs/0016-superficie-detalles-auto/spec.md",
+          "sha256": "a3f88e60350c19208d19890da11c481fa4ce05477e2b0a71d4d6c4618d22b6fd"
+        },
+        {
+          "path": "specs/0016-superficie-detalles-auto/tasks.md",
+          "sha256": "3b939b900e7e05a8c8594a0fb5d6e3616149c4f4524ef289c567a91a0ac0302f"
+        },
+        {
+          "path": "specs/0016-superficie-detalles-auto/context.json",
+          "sha256": "420f6d39b5e89f9745af06a346ee3bf033cda7d7bb859099cb4224c080a548ca"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px, con la rotación de 3 s medida en ambas imágenes.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-20: Lo apruebo (sin correcciones)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0016.md",
+            "sha256": "cd876084d5bedd7d9f21f99bf713125c8bd60df472a59d29240fd8249780891a"
           }
         }
       ]
