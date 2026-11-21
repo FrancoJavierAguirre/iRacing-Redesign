@@ -112,7 +112,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - **Links activados:** la opción Esqueleto del menú de capas de todas las páginas, «Ver Esqueleto» (Estructura y detalles de tareas), las tarjetas Esqueleto de «Siguiente elemento UX» (Estrategia, Alcance y Estructura), la tarjeta del Home (`onclick`) y, en 5-elementos, «Ver Esqueleto» y su tarjeta.
 ### Página de Superficie (`superficie.html` + `superficie.css`, spec 0010, parte UX Writing)
 
-- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0013 solo cubre «Ir a Motion» (`#motion`, sección futura). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
+- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0018 cubre «Ir a Iteraciones» (`#iteraciones`), «Leer guión completo» (`#guion`, página futura) y los tres «Ver cuestionario» (`#cuestionario-1..3`). «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
 - **«Ver Prototipo»:** `a.topbar-action` con `target="_blank" rel="noopener"` hacia el prototipo de Figma, `assets/ico-play.svg` y texto `.sr-only` que avisa que se abre en una pestaña nueva.
 - **Círculo de Oro:** `.oro[data-activo]` con 3 `span.oro-ring` concéntricos de CSS (565, 420 y 249 px a 1920), apilados con ¿Por qué? arriba, ¿Cómo? en el medio y ¿Qué? abajo. Usan los colores de los PNG del usuario: activo `rgba(0, 87, 208, .15)` e inactivo `rgba(0, 0, 0, .6)`. Como son semitransparentes, el círculo de abajo se ve a través del de arriba. La etiqueta activa va en dorado. Los párrafos son Poppins 300 itálica de 24 px, y las frases doradas, Poppins 600 itálica (cargada en el link de fuentes). Es `aria-hidden`, porque el texto lo explica.
 - **Matriz de Voz y Guía de Estilo:** `table.mtx` semánticas (`th scope`) con encabezados de tarjeta (`.mtx-card`). En ≤ 900 px pasan a bloques y cada celda muestra `data-col` con `::before`.
@@ -142,6 +142,12 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
     - Dos `ul.sd-logos`: grid de 10 columnas de hasta 84 px con `justify-content: space-between` (5 columnas en ≤ 900 px; los logos se achican en proporción). El `margin-top` del primero (58 px a 1920) se colapsa con el `margin-bottom` del encabezado; entre filas hay 71 px. Logos en `assets/logos/serie-*.png` (84 × 84, `alt` con el nombre).
     - `ul.sd-marcas`: flex centrado con `flex-wrap`, gap de 101 px a 1920; `assets/logos/marca-*.png` a 48 px de alto y ancho natural.
     - `ul.sd-licencias`: 5 `li.sd-lic` en HTML y CSS, no imágenes. El ícono es `ico-auto.svg` copiado una vez como `<symbol id="ico-auto">` (en un `svg.sr-only`) y usado con `<use>` y `currentColor`, a 32 px. Letra Inter 600 24 px con «Licencia» en `.sr-only` delante. 48 px de alto, padding 8/16, gap 16, radio 8. El borde de 2 px va por fuera, como un stroke «outside» de Figma: es un `box-shadow` externo, así que no cambia el tamaño de la caja. Colores por variables `--fg/--bg/--bd` en `.sd-lic--r/d/c/b/a`.
+  - Pruebas de Usabilidad (spec 0018): `section#pruebas-de-usabilidad` después de Componentes, con clases `.pu-*` en `superficie.css`.
+    - `h3.rule-head.pu-head` lleva el enlace «Leer guión completo» después de la línea: el `::after` y el enlace usan `order`, y el encabezado hace `flex-wrap`.
+    - `.pu-par`: grid de 2 columnas con gap 32 (1 en ≤ 900 px). `.pu-card` usa `var(--card-bg)`, radio 16 y padding 24, y las dos cards de cada par se estiran a la misma altura (`align-items: stretch`); `.pu-card-head` pone título y botones en un flex con `flex-wrap`.
+    - Botones: `btn btn--md btn-primary` para «Intentar en prototipo» y «Ver video» (`target="_blank" rel="noopener"` con aviso en `.sr-only`) y `btn-outline-info` para «Ver cuestionario».
+    - `.pu-items`: cada `li` es un flex centrado con gap 16 y el texto envuelto en un `span` (si no, cada fragmento y cada `.hl` serían columnas). Texto Poppins 300 a 24 px (`clamp(16px, 1,25vw, 24px)`) en las cards de usuario y a 20/40 px en las dos cards de Insights (`.pu-par .pu-items li`). Los íconos de 32 px son `::before` con `background-image` (`ico-check-green`, `ico-cross-red` y `ico-lupa-green`, esta última creada recoloreando `ico-lupa.svg`). El significado se anuncia con texto en `.sr-only` («Funcionó:», «Problema:», «Sugerencia:»).
+    - `.pu-conclusion`: frase entre dos `ico-mano-gold.svg`; la segunda va espejada con `scaleX(-1)`. La card «Filtros» (`.pu-card--texto`) usa Poppins 300 24/40 y `.hl` en 400. Los pulgares de `.pu-balance` miden 40 px; el de abajo es `ico-thumb-down-red.svg` (#E75149), una copia recoloreada para no cambiar el original que usa estrategia.html. Íconos nuevos: `ico-mano-gold`, `ico-filtro-gold` e `ico-objetivos-gold`.
   - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.
 
 ## Integraciones externas (solo enlaces)
@@ -174,7 +180,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Superficie: Motion (`#motion`) y el resto de la página, incluido «Siguiente elemento UX».
+- Superficie: Iteraciones (`#iteraciones`), guión completo, páginas de cuestionarios y el resto de la página, incluido «Siguiente elemento UX».
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 

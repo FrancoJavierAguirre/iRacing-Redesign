@@ -929,26 +929,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "35827cf2620770448b3243015a8be4d29478cf5df0a57412fa92c35b622aacd3"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "10cc1dccb6120a3821cd505c26f2cb88d88a97750c8652a06d7938a5338d226d"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "1174bd270afc8aa101e63de6c18f9e9e9b8411419168e357dba425d26f12d8b9"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "1dda54fe1698ede3ba6a36eacef42889d5e06fa666e2199bcd2cfcd3e7572d0b"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "1b93a4d61bee091759a6b4e5d8672eab64f0b7bce6d75a30f5653a73b799a280"
-        },
-        {
           "path": "specs/0017-superficie-logos-licencias/spec.md",
           "sha256": "7882103cd39a50266b9f4518794149ebcdf1d37ad788e69f4d827b87b1f8320e"
         },
@@ -961,7 +941,7 @@
           "sha256": "06d09083db7876dcac40473ab76e9ef88468396ed149aa88a0440669043283d4"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html en dos instrucciones; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: filas a 111, 266, 421 y 540 px del encabezado; licencias de 96 a 98 × 48 px con los colores pedidos y, tras la corrección del usuario, borde de 2 px por fuera.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html en dos instrucciones; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: filas a 111, 266, 421 y 540 px del encabezado; licencias de 96 a 98 × 48 px con los colores pedidos y, tras la corrección del usuario, borde de 2 px por fuera. Evidencia rotada en 0018: archivos modificados por Pruebas de Usabilidad; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -971,6 +951,77 @@
           "evidence": {
             "path": ".cardenal/revision-0017.md",
             "sha256": "a585574bc168f9014c1cd64e1b165440f9e247f5f2c13e8b11c996eaf982b0a1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T18",
+      "title": "Superficie, parte 9: Pruebas de Usabilidad",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0018) y specs/0018-superficie-pruebas-usabilidad/spec.md.",
+      "dependsOn": [
+        "T17"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/ico-mano-gold.svg",
+        "assets/ico-filtro-gold.svg",
+        "assets/ico-objetivos-gold.svg",
+        "assets/ico-lupa-green.svg",
+        "specs/0018-superficie-pruebas-usabilidad/referencia-figma.webp",
+        "assets/ico-thumb-down-red.svg"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "468cc509c9cc5b2d73010f0c260986d1f86213cea3af2cfc7c28e974e1b8adfc"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "c867c8d4bca1c483145b6400557338667c4ed8525f2c58739b82596c42154c5a"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "f9f7534d6fd2bf3e68cf745b6cb1e934d540f5d7e8e4e4f6ec41289e4d8d4d6e"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "b3f5d16d1ddbcca2af37fc0c942378d4def2ddf4903e208dd2f670cb0458dca5"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "b9f670004fae204cf5bac5a554e4891a544e0c4dc02165842df0d151810aaad8"
+        },
+        {
+          "path": "specs/0018-superficie-pruebas-usabilidad/spec.md",
+          "sha256": "2a1dd912b413e400b0f4e21d151c160437e9b94cefc992d75b2018d352d13168"
+        },
+        {
+          "path": "specs/0018-superficie-pruebas-usabilidad/tasks.md",
+          "sha256": "2809e75c5e561dded70326c4fe4dc3e68b250d06c14cc61978429d0578d6024f"
+        },
+        {
+          "path": "specs/0018-superficie-pruebas-usabilidad/context.json",
+          "sha256": "b218ed6edfe9d7d7529d0403fd965a73d9e03e9c90cd0696f919a61043cd7b17"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px; 5 enlaces externos con target _blank y 5 sin destino verificados en el DOM. Tras la corrección del usuario: radio 16, cards de igual altura por par (402 y 656 px a 1920), ítems en Poppins 300 24 con íconos de 32 px a 16 px, pulgares de 40 px y card Filtros en 24/40 con texto en color 400 (estilos computados). Segunda corrección: Insights en Poppins 300 20/40 (cards de 584 px, iguales) y pulgar abajo #E75149.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-20: Lo apruebo (tras dos rondas de correcciones)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0018.md",
+            "sha256": "f5638247d960390e2b3e21211907496be68ba3761f14cf0767dfc69be80b341b"
           }
         }
       ]

@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Superficie — Rediseño iRacing</title>
-<meta name="description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).">
+<meta name="description" content="Superficie del rediseño de iRacing: UX writing, sistema de diseño (colores, tipografía, componentes) y pruebas de usabilidad con tres usuarios.">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Superficie — Rediseño iRacing">
-<meta property="og:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).">
+<meta property="og:description" content="Superficie del rediseño de iRacing: UX writing, sistema de diseño (colores, tipografía, componentes) y pruebas de usabilidad con tres usuarios.">
 <meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
 <meta property="og:locale" content="es_AR">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Superficie — Rediseño iRacing">
-<meta name="twitter:description" content="Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).">
+<meta name="twitter:description" content="Superficie del rediseño de iRacing: UX writing, sistema de diseño (colores, tipografía, componentes) y pruebas de usabilidad con tres usuarios.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Superficie — Rediseño iRacing",
-  "description": "Superficie del rediseño de iRacing: UX writing (Círculo de Oro, voz y tono), sistema de diseño (colores, tipografía, layout) y componentes (botones, cards).",
+  "description": "Superficie del rediseño de iRacing: UX writing, sistema de diseño (colores, tipografía, componentes) y pruebas de usabilidad con tres usuarios.",
   "inLanguage": "es",
   "dateCreated": "2025",
   "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
@@ -397,7 +397,7 @@
     <div class="container">
       <div class="sec-header">
         <div><h2 class="sec-title" id="componentes-titulo">Componentes</h2><p class="sec-sub">Elementos visuales reutilizables</p></div>
-        <div class="sec-nav"><a href="#layout" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Layout</a><a href="#motion" class="btn btn--md btn-info" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Motion</a></div>
+        <div class="sec-nav"><a href="#layout" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Layout</a><a href="#pruebas-de-usabilidad" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Pruebas de Usabilidad</a></div>
       </div>
       <h3 class="rule-head" id="iconografia"><span class="rh"><img class="rh-ico" src="assets/ico-flags-gold.svg" alt="" width="40" height="40"><span>Iconografía</span></span></h3>
       <div class="sd-iconos" role="img" aria-label="Set de 68 íconos en estilo relleno a 20 px: navegación, carreras, autos, clima, flechas, estados y acciones">
@@ -610,6 +610,123 @@
         <li class="sd-lic sd-lic--b"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#ico-auto"/></svg><span><span class="sr-only">Licencia </span>B</span></li>
         <li class="sd-lic sd-lic--a"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#ico-auto"/></svg><span><span class="sr-only">Licencia </span>A</span></li>
       </ul>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="pruebas-de-usabilidad" aria-labelledby="pruebas-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="pruebas-titulo">Pruebas de Usabilidad</h2><p class="sec-sub">Validando decisiones de diseño</p></div>
+        <div class="sec-nav"><a href="#componentes" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Componentes</a><a href="#iteraciones" class="btn btn--md btn-info" data-sin-destino aria-disabled="true"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Iteraciones</a></div>
+      </div>
+
+      <h3 class="rule-head pu-head" id="contexto-tareas"><span class="rh"><img class="rh-ico" src="assets/ico-check-gold.svg" alt="" width="40" height="40"><span>Contexto y tareas para el usuario</span></span><a href="#guion" class="btn btn--md btn-ghost-info pu-head-link" data-sin-destino aria-disabled="true">Leer guión completo</a></h3>
+      <p class="pu-contexto">“Sos un <span class="hl">usuario nuevo</span> de iRacing. Quisiste entrar al mundo del simracing y para eso te suscribiste a este simulador. Descargas y entras a la UI de iRacing para <span class="hl">buscar una carrera</span>. Pasaste el onboarding en donde te preguntaron qué disciplina te gusta correr (Sport Car, Formula Car, Oval, Dirt Oval, Dirt Road). Elegiste Sport Car y luego de hacer algunas carreras online de licencia Rookie, <span class="hl">lograste subir a la Licencia D de Sport Cars</span>.”</p>
+      <div class="pu-par">
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="assets/ico-circulo-check.svg" alt="" width="40" height="40">Tarea 1</h4>
+            <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=3423%3A94&amp;node-id=4021-24434&amp;viewport=-4446%2C-2288%2C0.69&amp;t=v6bHZlgfxv1jo2fq-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=4021%3A24434" target="_blank" rel="noopener" class="btn btn--md btn-primary">Intentar en prototipo<span class="sr-only"> la Tarea 1 (se abre en una pestaña nueva)</span></a>
+          </div>
+          <p>Registrarse a la serie de Licencia D “Production Car Challenge by Sim-Lab” seleccionando como favorito el “Global Mazda MX-5 Cup”.</p>
+          <h5 class="pu-tit pu-tit--sub"><img src="assets/ico-objetivos-gold.svg" alt="" width="40" height="40">Objetivos</h5>
+          <ul class="pu-vinetas">
+            <li>Elegir el auto Mazda como favorito.</li>
+            <li>Registrarse a la “Production Car Challenge by Sim-Lab”</li>
+            <li>La tarea termina cuando aparece arriba el banner verde.</li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="assets/ico-circulo-check.svg" alt="" width="40" height="40">Tarea 2</h4>
+            <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?node-id=4052-40351&amp;viewport=-4446%2C-2288%2C0.69&amp;t=mr1e7dTRbAVoJIuy-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=4052%3A40351&amp;page-id=3423%3A94&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn--md btn-primary">Intentar en prototipo<span class="sr-only"> la Tarea 2 (se abre en una pestaña nueva)</span></a>
+          </div>
+          <p>Registrarse a una carrera de la serie de Licencia D “Ferrari Challenge”</p>
+          <h5 class="pu-tit pu-tit--sub"><img src="assets/ico-objetivos-gold.svg" alt="" width="40" height="40">Objetivos</h5>
+          <ul class="pu-vinetas">
+            <li>Comprar el auto Ferrari Challenge.</li>
+            <li>La tarea termina cuando aparece arriba el snackbar indicando que se realizó la compra.</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="rule-head" id="insights"><span class="rh"><img class="rh-ico" src="assets/ico-lupa.svg" alt="" width="40" height="40"><span>Insights</span></span></h3>
+      <div class="pu-par">
+        <article class="pu-card">
+          <h4 class="pu-balance pu-balance--ok">Lo que sí funcionó<img src="assets/ico-thumb-up.svg" alt="" width="40" height="40"></h4>
+          <ul class="pu-items">
+            <li class="pu-ok"><span><span class="sr-only">Funcionó: </span>La <span class="hl">ejecución</span> de la tarea 2 fue altamente exitosa tanto en velocidad como en comprensión.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Funcionó: </span>Los <span class="hl">feedbacks</span> de confirmación dejaban muy en claro cuándo terminaba una tarea.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Funcionó: </span>Los <span class="hl">CTA</span> eran muy claros y también ayudaban a entender el contexto de su contenedor.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Funcionó: </span>A pesar del espacio, complejidad y falta de experiencia de los usuarios, las <span class="hl">tablas</span> brindaban la información necesaria para entender el contexto y tomar decisiones.</span></li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <h4 class="pu-balance pu-balance--bad">Lo que no funcionó<img src="assets/ico-thumb-down-red.svg" alt="" width="40" height="40"></h4>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">No funcionó: </span>Principalmente los <span class="hl">filtros</span> en lugar de ayudar, confundían. Ya sea por su diseño o por no dar feedback de qué se está filtrando.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">No funcionó: </span>La elección de un <span class="hl">auto como favorito</span> se logró pero también fue un poco confuso por no tener una mayor jerarquía visual en pantalla para una acción tan importante.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">No funcionó: </span>No se abordó de forma correcta la solución al problema del <span class="hl">usuario nuevo</span> teniendo los filtros necesarios previamente activados.</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="pu-usuarios">
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="assets/ico-usuario-gold.svg" alt="" width="32" height="32">Usuario 1 | Franco</h4>
+            <div class="pu-acciones"><a href="#cuestionario-1" class="btn btn--md btn-outline-info" data-sin-destino aria-disabled="true">Ver cuestionario<span class="sr-only"> del usuario 1</span></a><a href="https://drive.google.com/file/d/1IfW4dSXThfGZ5-ewPDVN2OCvDNC6A_Pr/view" target="_blank" rel="noopener" class="btn btn--md btn-primary">Ver video<span class="sr-only"> del usuario 1 (se abre en una pestaña nueva)</span></a></div>
+          </div>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">Problema: </span>Le costó mucho encontrar finalmente la Serie indicada con los filtros. Usó el buscador y la preconfiguración de filtros no le mostraba resultados.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Problema: </span>No sintió que realmente eligió el auto como favorito. Debería tener mayor jerarquía visual en la pantalla para resaltar. Como poner el banner del carrito pero de favorito.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Funcionó: </span>Comprar le resultó muy rápido y simple.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Sugerencia: </span>Le gustaría hacer click en las licencias para ir directamente a las carreras de esa disciplina y licencia.</span></li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="assets/ico-usuario-gold.svg" alt="" width="32" height="32">Usuario 2 | Martín</h4>
+            <div class="pu-acciones"><a href="#cuestionario-2" class="btn btn--md btn-outline-info" data-sin-destino aria-disabled="true">Ver cuestionario<span class="sr-only"> del usuario 2</span></a><a href="https://drive.google.com/file/d/1myx2RlyUfdb3_4uXCnj1bZbYc-FYeoX7/view" target="_blank" rel="noopener" class="btn btn--md btn-primary">Ver video<span class="sr-only"> del usuario 2 (se abre en una pestaña nueva)</span></a></div>
+          </div>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">Problema: </span>Directamente No pudo completar la tarea de registrarse para correr una carrera. Mucho menos elegir un auto.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Problema: </span>Los filtros no fueron intuitivos, ya sea por su diseño visual y jerarquía o porque no sabía que se estaban aplicando filtros a la lista de carreras.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Funcionó: </span>Comprar le resultó muy rápido y simple.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Sugerencia: </span>Le gustaría que los CTA digan “Race” y no “Register”</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Sugerencia: </span>Identificaría más fácilmente los autos/pistas si tuvieran una imagen o logo.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Sugerencia: </span>Le gustaría que el tiempo atrás que indica el comienzo de la carrera sea verde para resaltar la carrera que empieza pronto</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Sugerencia: </span>Poner SERIES como título de página y en las TABS ayudaría a comprender dónde está parado.</span></li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="assets/ico-usuario-gold.svg" alt="" width="32" height="32">Usuario 3 | Fede</h4>
+            <div class="pu-acciones"><a href="#cuestionario-3" class="btn btn--md btn-outline-info" data-sin-destino aria-disabled="true">Ver cuestionario<span class="sr-only"> del usuario 3</span></a><a href="https://drive.google.com/file/d/1KFT49ICbG0dN2nT1mXpFtUk80ko7imNG/view" target="_blank" rel="noopener" class="btn btn--md btn-primary">Ver video<span class="sr-only"> del usuario 3 (se abre en una pestaña nueva)</span></a></div>
+          </div>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">Problema: </span>No fue muy intuitivo el dropdown para elegir el auto en la sección de cars. Lo ignoró un poco.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Problema: </span>Le confundió tener filtros preseleccionados al buscar la carrera.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Funcionó: </span>Comprar le resultó muy rápido y simple.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Sugerencia: </span>En los botones menú, debería estar la opción para elegir el auto como favorito.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Sugerencia: </span>Debería tener un icono más llamativo para añadirlo como favorito.</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="rule-head" id="conclusiones"><span class="rh"><img class="rh-ico" src="assets/ico-lampara.svg" alt="" width="40" height="40"><span>Conclusiones</span></span></h3>
+      <p class="pu-conclusion"><img src="assets/ico-mano-gold.svg" alt="" width="40" height="40"><span>Fue muy mala idea dejar filtros previamente activados y muy mal diseñados</span><img class="pu-mano-izq" src="assets/ico-mano-gold.svg" alt="" width="40" height="40"></p>
+      <article class="pu-card pu-card--texto">
+        <h4 class="pu-tit"><img src="assets/ico-filtro-gold.svg" alt="" width="40" height="40">Filtros</h4>
+        <p>La problemática de que a un usuario nuevo le gustaría ver las pocas cosas que puede correr en lugar de todo es complicada.</p>
+        <p>La solución de <span class="hl">dejar activados los filtros</span> que permitan esta visualización trae como consecuencia <span class="hl">otro problema</span>; a los usuarios les cuesta <span class="hl">buscar nuevas carreras</span> por culpa de los filtros.</p>
+        <h5 class="pu-causas">Causas</h5>
+        <ul class="pu-vinetas">
+          <li>es confuso no ver <span class="hl">qué filtros se están aplicando</span>.</li>
+          <li>es confuso ver por primera vez la lista de carreras con <span class="hl">filtros previamente aplicados</span>.</li>
+          <li>el <span class="hl">diseño</span> de los filtros no ayuda al usuario.</li>
+        </ul>
+      </article>
     </div>
   </section>
 </main>

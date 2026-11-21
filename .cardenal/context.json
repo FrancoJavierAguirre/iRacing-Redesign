@@ -2,76 +2,92 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0017-request",
+      "id": "u-0018-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): última subsección de Componentes, 'Logos y licencias'. Pasa la referencia, el ícono 'License' del título y solo la primera fila de logos (10), porque no puede adjuntar más imágenes; las demás llegan en la próxima instrucción."
+      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): cambio de planes, no hay sección Motion; la siguiente es 'Pruebas de usabilidad' (referencia en imagen) y hay que editar el botón 'Ir a Motion'. Íconos nuevos: Hand, filter y objetivos. 'Intentar en prototipo' de Tarea 1 y Tarea 2 abren en otra pestaña prototipos de Figma; 'Ver video' de los usuarios 1, 2 y 3 abren videos de Google Drive; 'Ver cuestionario' lleva a páginas del proyecto que se harán después."
     },
     {
       "id": "s-referencia",
       "kind": "file",
-      "reference": "specs/0017-superficie-logos-licencias/referencia-figma.png",
-      "sha256": "7024cbacf37cad59d255ab0ae4ea7df93083c4e7832357d79f3b7ab0a24fd950"
+      "reference": "specs/0018-superficie-pruebas-usabilidad/referencia-figma.webp",
+      "sha256": "e2f846f94fed765458afa3966ed1be01d9b46256f6b99c2ee1493210de39aa3f"
     },
     {
       "id": "s-superficie",
       "kind": "file",
-      "reference": "specs/0016-superficie-detalles-auto/spec.md",
-      "sha256": "a3f88e60350c19208d19890da11c481fa4ce05477e2b0a71d4d6c4618d22b6fd"
+      "reference": "specs/0017-superficie-logos-licencias/spec.md",
+      "sha256": "7882103cd39a50266b9f4518794149ebcdf1d37ad788e69f4d827b87b1f8320e"
     },
     {
-      "id": "u-0017-request-2",
+      "id": "u-0018-correccion",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): pasa los 10 logos de la fila 2 y los 9 de marcas. La última fila son licencias: ícono 'auto' de 32 × 32 y letra Inter semibold 24, 48 px de alto, padding vertical 16 y horizontal 8, gap 16, radio 8, borde de 2 px inside. Colores de texto e ícono / fondo / borde: A 02449F/CCE2FF/006EFF, B 217C06/D6F5CC/33CC00, C 9C7C06/FFF5CC/FFED09, D 9B3F06/FFE0CC/FF6600, R 891828/F9D3D1/FE0708."
+      "reference": "Corrección del usuario en chat 2026-11-20: radio de cards 16 px y 32 px entre cards; 'Leer guión completo' lleva a una página del proyecto que se hará después; ítems de Insights y usuarios en Poppins light 24 con íconos de 32 × 32 centrados a la izquierda a 16 px del texto; pulgares de 40 × 40 centrados con el texto; card de Conclusiones en Poppins light 24 con interlineado 40 (texto en color en regular); Tarea 1 y 2, y las dos cards de Insights, con la misma altura."
     },
     {
-      "id": "u-0017-correccion",
+      "id": "u-0018-correccion-2",
       "kind": "user",
-      "reference": "Corrección del usuario en chat 2026-11-20: el padding de las licencias es 16 px horizontal y 8 px vertical; el borde es outside."
+      "reference": "Segunda corrección del usuario en chat 2026-11-20: la tipografía de las cards 'Lo que sí funcionó' y 'Lo que no funcionó' es Poppins light 20 con line height 40; el pulgar abajo es #E75149."
     }
   ],
   "facts": [
     {
       "id": "o-design",
       "area": "product",
-      "statement": "La referencia (texto blanco sobre transparente, compuesta sobre fondo oscuro) muestra 'Logos y licencias' con 4 filas: 10 logos de series (Legends, GT4, GR Cup, Ferrari, Mustang, Rain Master, TCR Fixed, Clio Cup, Mission R, TCR Open) repartidos a todo el ancho; 10 logos de series más; 9 logos de marcas centrados; y 5 chips de licencia R, D, C, B y A.",
+      "statement": "La referencia (789 × 2000 px, texto blanco sobre transparente) muestra 'Pruebas de Usabilidad' / 'Validando decisiones de diseño' con 'Ir a Componentes' e 'Ir a Iteraciones'; 'Contexto y tareas para el usuario' con 'Leer guión completo', un párrafo de contexto y las cards Tarea 1 y Tarea 2 con objetivos; 'Insights' con 'Lo que sí funcionó' y 'Lo que no funcionó'; cards de Usuario 1 | Franco, Usuario 2 | Martín y Usuario 3 | Fede con 'Ver cuestionario' y 'Ver video'; y 'Conclusiones' con una frase entre dos manos y la card 'Filtros' con sus causas, donde termina la imagen.",
       "status": "observed",
       "source": "s-referencia"
     },
     {
       "id": "o-pagina",
       "area": "technical",
-      "statement": "Según la spec 0016, Cards termina con 'Detalles de auto'; Componentes no tiene 'Logos y licencias'.",
+      "statement": "Según la spec 0017, Componentes está completo y su 'Ir a Motion' no tiene destino.",
       "status": "observed",
       "source": "s-superficie"
     },
     {
-      "id": "d-filas",
+      "id": "d-motion",
       "area": "product",
-      "statement": "La subsección tiene 4 filas: 10 logos de series, 10 más, 9 marcas centradas y las 5 licencias (R, D, C, B, A) armadas en código con el ícono 'auto' y los colores pedidos.",
+      "statement": "No hay sección Motion: 'Ir a Motion' pasa a llevar a Pruebas de usabilidad.",
       "status": "confirmed",
-      "source": "u-0017-request-2"
+      "source": "u-0018-request"
     },
     {
-      "id": "d-licencia-caja",
+      "id": "d-enlaces",
       "area": "product",
-      "statement": "Licencias: padding 8 px vertical y 16 px horizontal; borde de 2 px por fuera.",
+      "statement": "'Intentar en prototipo' (Tareas 1 y 2) y 'Ver video' (usuarios 1 a 3) abren en otra pestaña los enlaces dados; 'Ver cuestionario' queda sin destino hasta que existan esas páginas.",
       "status": "confirmed",
-      "source": "u-0017-correccion"
+      "source": "u-0018-request"
+    },
+    {
+      "id": "d-correccion",
+      "area": "product",
+      "statement": "Cards con radio 16 y 32 px entre ellas, de igual altura por par; ítems de Insights y usuarios en Poppins light 24 con íconos de 32 px a 16 px del texto; pulgares de 40 px; card de Conclusiones en Poppins light 24/40 con texto en color regular; 'Leer guión completo' queda sin destino hasta su página.",
+      "status": "confirmed",
+      "source": "u-0018-correccion"
+    },
+    {
+      "id": "d-correccion-2",
+      "area": "product",
+      "statement": "Cards de Insights en Poppins light 20/40; pulgar abajo #E75149.",
+      "status": "confirmed",
+      "source": "u-0018-correccion-2"
     }
   ],
   "questions": [],
   "change": {
     "actor": "Lector del portfolio que recorre la capa Superficie",
-    "problem": "Componentes no muestra logos ni licencias.",
-    "outcome": "superficie.html incluye 'Logos y licencias' con los logos de series, marcas y las licencias como en la referencia.",
-    "scope": "Incluye: subsección en superficie.html y superficie.css (4 filas), assets provistos, llms.txt y docs. Excluye: Motion y 'Siguiente elemento UX'.",
-    "acceptance": "1) Se ve como la referencia a 1920 px. 2) Encabezado con el ícono 'License'. 3) Filas 1 y 2 con 10 logos repartidos a todo el ancho; fila 3 con 9 marcas centradas. 4) Licencias R, D, C, B y A con las medidas y colores pedidos. 5) Responsive sin scroll horizontal; llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector ve las identidades de series, marcas y licencias del rediseño.",
+    "problem": "Superficie no muestra las pruebas de usabilidad del rediseño.",
+    "outcome": "superficie.html incluye 'Pruebas de Usabilidad' con contexto, tareas, insights, resultados por usuario y conclusiones, y 'Ir a Motion' lleva a esa sección.",
+    "scope": "Incluye: sección en superficie.html y superficie.css, íconos provistos, SEO, llms.txt y docs. Excluye: páginas de cuestionarios, guión completo e Iteraciones.",
+    "acceptance": "1) Se ve como la referencia a 1920 px. 2) 'Ir a Motion' pasa a 'Ir a Pruebas de Usabilidad' y lleva a la sección. 3) 'Intentar en prototipo' y 'Ver video' abren sus enlaces en otra pestaña; 'Ver cuestionario', 'Leer guión completo' e 'Ir a Iteraciones' quedan sin destino. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector ve cómo se validó el diseño con usuarios y qué se aprendió.",
     "evidence": [
       "o-design",
       "o-pagina",
-      "d-filas",
-      "d-licencia-caja"
+      "d-motion",
+      "d-enlaces",
+      "d-correccion",
+      "d-correccion-2"
     ]
   }
 }

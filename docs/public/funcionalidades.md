@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) y Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) implementados; Motion y el resto de la página pendientes |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) y Pruebas de Usabilidad implementados; Iteraciones y el resto de la página pendientes |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -145,7 +145,7 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
 8. **Tipografía** («Transmitiendo los valores y principios»): tabla de 10 estilos con nombre, uso y un ejemplo del rediseño. Cada nombre se muestra en su propio estilo, de «10 Inter - label 3 - medium» a «36 Exo 2 - Title 1 - bold». «Ir a Imágenes» baja a la sección siguiente.
 9. **Imágenes** («Autenticidad... ah ya lo dije?»): una frase sobre autos reales, circuitos y logos oficiales; una fila con dos autos (Corvette y BMW) y dos logos de carreras (IMSA y Formula A); debajo, el mapa de un circuito.
 10. **Layout** («Espacio y organización»): el esquema de la grilla de pantalla (Page nav, Page title, Navigation tabs, Page content, Licenses). Al pasar el mouse, enfocarlo con el teclado o tocarlo en el celular, cambia con un fundido a la pantalla Racing con la grilla aplicada. «Ir a Componentes» baja a la sección siguiente.
-11. **Componentes** («Elementos visuales reutilizables»), parte **Iconografía**: un encabezado con banderas doradas y, dentro de un recuadro punteado, los 68 íconos del rediseño. Debajo, «Estilo relleno» con un trofeo dorado y «3 tamaños» con el trofeo a 16, 20 y 24 px. «Ir a Motion» todavía no hace nada porque esa parte no existe.
+11. **Componentes** («Elementos visuales reutilizables»), parte **Iconografía**: un encabezado con banderas doradas y, dentro de un recuadro punteado, los 68 íconos del rediseño. Debajo, «Estilo relleno» con un trofeo dorado y «3 tamaños» con el trofeo a 16, 20 y 24 px. Su botón «Ir a Pruebas de Usabilidad» lleva a la sección siguiente (antes decía «Ir a Motion»; esa sección se descartó).
 12. **Botones** (dentro de Componentes): «Originalmente» muestra los botones viejos (Register, View Series y Add to Cart: primario, secundario y compras). «Ahora» muestra los nuevos (Race, Test Drive y Add to Cart), que reaccionan al pasar el mouse y al presionarlos pero no llevan a ningún lado. El Register verde aparece tachado: el verde queda reservado para estados de «éxito». Al final, tres botones «Cambiar estilo» de 48, 40 y 32 px: cada click los pasa al estilo siguiente (primario, secundario, compras, bordeado y solo texto), también con Enter o Espacio. Leyendas: «5 estilos», «4 estados» y «3 tamaños».
 13. **Dropdowns y listas:** cuatro dropdowns «Filters» (default, hover, presionado y con 3 filtros seleccionados) dentro de un recuadro punteado, y una lista de opciones con checkbox en sus cuatro estados. Son imágenes.
 14. **Cards:** cuatro cards con su título.
@@ -159,10 +159,16 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - Una fila de 9 marcas centradas: Mazda, Toyota, BMW, Ferrari, Ford, Porsche, Renault, Ray y Formula Vee.
     - Las 5 licencias R, D, C, B y A, cada una con el ícono de auto, la letra y su color (rojo, naranja, amarillo, verde y azul).
     - Las marcas y las licencias se acomodan en varias líneas en pantallas angostas.
+16. **Pruebas de Usabilidad** («Validando decisiones de diseño»):
+    - **Contexto y tareas para el usuario:** el escenario que se le leyó a cada usuario (un usuario nuevo que llegó a la Licencia D de Sport Cars) y las dos tareas con sus objetivos. «Intentar en prototipo» abre en otra pestaña el prototipo de Figma de cada tarea.
+    - **Insights:** lo que sí funcionó (ejecución de la tarea 2, feedbacks, CTA y tablas) y lo que no (filtros, elección del auto favorito y el problema del usuario nuevo).
+    - **Usuarios:** una card por usuario (Franco, Martín y Fede) con lo que le costó, lo que le resultó fácil y sus sugerencias. «Ver video» abre la grabación de la prueba en Google Drive, en otra pestaña.
+    - **Conclusiones:** «Fue muy mala idea dejar filtros previamente activados y muy mal diseñados» y una card «Filtros» con el problema y sus causas.
+    - Todavía no tienen destino: «Leer guión completo» y «Ver cuestionario» (páginas que se harán después) e «Ir a Iteraciones» (sección futura).
 
 Cada subsección tiene botones para ir a la anterior y a la siguiente.
 
-**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular; las imágenes de Detalles de auto se apilan en celular. Todavía no tiene Motion ni «Siguiente elemento UX».
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular; las imágenes de Detalles de auto se apilan en celular. En Pruebas de Usabilidad, las cards de a dos pasan a una columna en tablet y los botones de cada card bajan debajo del título en celular. Todavía no tiene Iteraciones ni «Siguiente elemento UX».
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.
