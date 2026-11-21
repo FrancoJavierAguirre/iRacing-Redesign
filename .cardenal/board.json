@@ -853,26 +853,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "eb50fb14f00a1549619130d8b7af4d4315409a0e35b92ebbf094f5b86ede875d"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "04e376f20fee2746fb225d03102751f80e5fdcf70d4f75edbbf1c225bc523b7b"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "138dd38b5f465dc6b8a9a1b6764514e0398509b48c8bce944ff8ac3965be1da8"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "b59661b42943af8775aec2d292580302f11d1ee9eb433c5ff0351699ebbdf09b"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "d835de5fb943677bef3c3acfbf61a6d56a7068e6084a98480ec840ea252c84d3"
-        },
-        {
           "path": "specs/0016-superficie-detalles-auto/spec.md",
           "sha256": "a3f88e60350c19208d19890da11c481fa4ce05477e2b0a71d4d6c4618d22b6fd"
         },
@@ -885,7 +865,7 @@
           "sha256": "420f6d39b5e89f9745af06a346ee3bf033cda7d7bb859099cb4224c080a548ca"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px, con la rotación de 3 s medida en ambas imágenes.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px, con la rotación de 3 s medida en ambas imágenes. Evidencia rotada en 0017: archivos modificados por Logos y licencias; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -895,6 +875,102 @@
           "evidence": {
             "path": ".cardenal/revision-0016.md",
             "sha256": "cd876084d5bedd7d9f21f99bf713125c8bd60df472a59d29240fd8249780891a"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T17",
+      "title": "Superficie, parte 8: Componentes (Logos y licencias)",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0017) y specs/0017-superficie-logos-licencias/spec.md.",
+      "dependsOn": [
+        "T16"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/ico-license-gold.svg",
+        "specs/0017-superficie-logos-licencias/referencia-figma.png",
+        "assets/logos/serie-legends.png",
+        "assets/logos/serie-gt4.png",
+        "assets/logos/serie-gr-cup.png",
+        "assets/logos/serie-ferrari.png",
+        "assets/logos/serie-mustang.png",
+        "assets/logos/serie-rain-master.png",
+        "assets/logos/serie-tcr-fixed.png",
+        "assets/logos/serie-clio-cup.png",
+        "assets/logos/serie-mission-r.png",
+        "assets/logos/serie-tcr-open.png",
+        "assets/logos/serie-nurburgring.png",
+        "assets/logos/serie-global-challenge.png",
+        "assets/logos/serie-power-challenge.png",
+        "assets/logos/serie-scca.png",
+        "assets/logos/serie-m2-cup.png",
+        "assets/logos/serie-production-car.png",
+        "assets/logos/serie-production-endurance.png",
+        "assets/logos/serie-mx5-cup.png",
+        "assets/logos/serie-formula-vee.png",
+        "assets/logos/serie-formula-1600.png",
+        "assets/logos/marca-mazda.png",
+        "assets/logos/marca-toyota.png",
+        "assets/logos/marca-bmw.png",
+        "assets/logos/marca-ferrari.png",
+        "assets/logos/marca-ford.png",
+        "assets/logos/marca-porsche.png",
+        "assets/logos/marca-renault.png",
+        "assets/logos/marca-ray.png",
+        "assets/logos/marca-formula-vee.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "35827cf2620770448b3243015a8be4d29478cf5df0a57412fa92c35b622aacd3"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "10cc1dccb6120a3821cd505c26f2cb88d88a97750c8652a06d7938a5338d226d"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "1174bd270afc8aa101e63de6c18f9e9e9b8411419168e357dba425d26f12d8b9"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "1dda54fe1698ede3ba6a36eacef42889d5e06fa666e2199bcd2cfcd3e7572d0b"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "1b93a4d61bee091759a6b4e5d8672eab64f0b7bce6d75a30f5653a73b799a280"
+        },
+        {
+          "path": "specs/0017-superficie-logos-licencias/spec.md",
+          "sha256": "7882103cd39a50266b9f4518794149ebcdf1d37ad788e69f4d827b87b1f8320e"
+        },
+        {
+          "path": "specs/0017-superficie-logos-licencias/tasks.md",
+          "sha256": "60e3de3c04f76ab8f3202b48ef367f79dfe62dd0754c11868c1eb5c1da90506f"
+        },
+        {
+          "path": "specs/0017-superficie-logos-licencias/context.json",
+          "sha256": "06d09083db7876dcac40473ab76e9ef88468396ed149aa88a0440669043283d4"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html en dos instrucciones; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: filas a 111, 266, 421 y 540 px del encabezado; licencias de 96 a 98 × 48 px con los colores pedidos y, tras la corrección del usuario, borde de 2 px por fuera.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-20: Lo apruebo (tras corregir padding y borde de las licencias)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0017.md",
+            "sha256": "a585574bc168f9014c1cd64e1b165440f9e247f5f2c13e8b11c996eaf982b0a1"
           }
         }
       ]

@@ -2,58 +2,76 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0016-request",
+      "id": "u-0017-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): 'Detalles de auto' tiene 2 imágenes, BMW a la izquierda y Ferrari a la derecha. Comportamiento similar a lo anterior pero sin hover: a los 3 segundos cambia a la imagen siguiente, en bucle. Se pasan 5 imágenes de BMW y 4 de Ferrari que rotan cada grupo entre sí. Ambas con corner radius de 8 px."
+      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): última subsección de Componentes, 'Logos y licencias'. Pasa la referencia, el ícono 'License' del título y solo la primera fila de logos (10), porque no puede adjuntar más imágenes; las demás llegan en la próxima instrucción."
     },
     {
       "id": "s-referencia",
       "kind": "file",
-      "reference": "specs/0015-superficie-dropdowns-cards/referencia-figma.png",
-      "sha256": "3dfa635f93009a71960bc3a96112ce737a9b60ceca043c86853d5afc1d4cf242"
+      "reference": "specs/0017-superficie-logos-licencias/referencia-figma.png",
+      "sha256": "7024cbacf37cad59d255ab0ae4ea7df93083c4e7832357d79f3b7ab0a24fd950"
     },
     {
       "id": "s-superficie",
       "kind": "file",
-      "reference": "specs/0015-superficie-dropdowns-cards/spec.md",
-      "sha256": "f510fa8d482acdd27af6872fc145158e7dbf2666e0660e328a427823661a0741"
+      "reference": "specs/0016-superficie-detalles-auto/spec.md",
+      "sha256": "a3f88e60350c19208d19890da11c481fa4ce05477e2b0a71d4d6c4618d22b6fd"
+    },
+    {
+      "id": "u-0017-request-2",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): pasa los 10 logos de la fila 2 y los 9 de marcas. La última fila son licencias: ícono 'auto' de 32 × 32 y letra Inter semibold 24, 48 px de alto, padding vertical 16 y horizontal 8, gap 16, radio 8, borde de 2 px inside. Colores de texto e ícono / fondo / borde: A 02449F/CCE2FF/006EFF, B 217C06/D6F5CC/33CC00, C 9C7C06/FFF5CC/FFED09, D 9B3F06/FFE0CC/FF6600, R 891828/F9D3D1/FE0708."
+    },
+    {
+      "id": "u-0017-correccion",
+      "kind": "user",
+      "reference": "Corrección del usuario en chat 2026-11-20: el padding de las licencias es 16 px horizontal y 8 px vertical; el borde es outside."
     }
   ],
   "facts": [
     {
       "id": "o-design",
       "area": "product",
-      "statement": "La referencia muestra 'Detalles de auto | After delay' debajo de las cards, con dos imágenes de 580 × 326 px separadas por 32 px y centradas: el BMW M2 de frente a la izquierda y el Ferrari 296 a la derecha.",
+      "statement": "La referencia (texto blanco sobre transparente, compuesta sobre fondo oscuro) muestra 'Logos y licencias' con 4 filas: 10 logos de series (Legends, GT4, GR Cup, Ferrari, Mustang, Rain Master, TCR Fixed, Clio Cup, Mission R, TCR Open) repartidos a todo el ancho; 10 logos de series más; 9 logos de marcas centrados; y 5 chips de licencia R, D, C, B y A.",
       "status": "observed",
       "source": "s-referencia"
     },
     {
       "id": "o-pagina",
       "area": "technical",
-      "statement": "Según la spec 0015, Cards tiene Elegir auto (carrusel CSS de 3 s por imagen), Comprar auto, Pista y Clima; 'Detalles de auto' quedó pendiente.",
+      "statement": "Según la spec 0016, Cards termina con 'Detalles de auto'; Componentes no tiene 'Logos y licencias'.",
       "status": "observed",
       "source": "s-superficie"
     },
     {
-      "id": "d-detalles",
+      "id": "d-filas",
       "area": "product",
-      "statement": "'Detalles de auto': BMW (5 imágenes) a la izquierda y Ferrari (4) a la derecha; cada una cambia a la siguiente cada 3 s en bucle, sin hover, con radio de 8 px.",
+      "statement": "La subsección tiene 4 filas: 10 logos de series, 10 más, 9 marcas centradas y las 5 licencias (R, D, C, B, A) armadas en código con el ícono 'auto' y los colores pedidos.",
       "status": "confirmed",
-      "source": "u-0016-request"
+      "source": "u-0017-request-2"
+    },
+    {
+      "id": "d-licencia-caja",
+      "area": "product",
+      "statement": "Licencias: padding 8 px vertical y 16 px horizontal; borde de 2 px por fuera.",
+      "status": "confirmed",
+      "source": "u-0017-correccion"
     }
   ],
   "questions": [],
   "change": {
     "actor": "Lector del portfolio que recorre la capa Superficie",
-    "problem": "Cards no muestra la card 'Detalles de auto'.",
-    "outcome": "superficie.html incluye 'Detalles de auto | After delay' con las imágenes de BMW y Ferrari rotando cada 3 s.",
-    "scope": "Incluye: bloque en superficie.html y superficie.css, las 9 imágenes provistas, llms.txt y docs. Excluye: Motion y 'Siguiente elemento UX'.",
-    "acceptance": "1) Se ve como la referencia a 1920 px (dos imágenes de 580 × 326 con 32 px de separación, centradas). 2) Cada imagen pasa a la siguiente de su grupo cada 3 s, en bucle. 3) Sin hover; radio de 8 px. 4) Responsive sin scroll horizontal; llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector ve las imágenes de detalle de auto del rediseño en movimiento.",
+    "problem": "Componentes no muestra logos ni licencias.",
+    "outcome": "superficie.html incluye 'Logos y licencias' con los logos de series, marcas y las licencias como en la referencia.",
+    "scope": "Incluye: subsección en superficie.html y superficie.css (4 filas), assets provistos, llms.txt y docs. Excluye: Motion y 'Siguiente elemento UX'.",
+    "acceptance": "1) Se ve como la referencia a 1920 px. 2) Encabezado con el ícono 'License'. 3) Filas 1 y 2 con 10 logos repartidos a todo el ancho; fila 3 con 9 marcas centradas. 4) Licencias R, D, C, B y A con las medidas y colores pedidos. 5) Responsive sin scroll horizontal; llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector ve las identidades de series, marcas y licencias del rediseño.",
     "evidence": [
       "o-design",
       "o-pagina",
-      "d-detalles"
+      "d-filas",
+      "d-licencia-caja"
     ]
   }
 }

@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) y Componentes (Iconografía, Botones, Dropdowns y listas, y Cards) implementados; Motion y el resto de la página pendientes |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) y Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) implementados; Motion y el resto de la página pendientes |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -154,6 +154,11 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - «Pista» muestra el mapa de Spa y «Clima», el clima de la carrera.
     - Al pasar el mouse (o enfocar con el teclado), la card se marca con un borde de 2 px: azul en Elegir auto, Pista y Clima, y naranja en Comprar auto, que además muestra el precio «$12.95» arriba a la izquierda. Las cards no llevan a ningún lado.
     - «Detalles de auto», debajo, muestra dos imágenes con bordes redondeados: el BMW M2 a la izquierda (5 vistas) y el Ferrari 296 a la derecha (4 vistas). Cada una pasa a la vista siguiente cada 3 segundos, en bucle. No reaccionan al mouse.
+15. **Logos y licencias:** cuatro filas. Son imágenes y no llevan a ningún lado.
+    - Dos filas de 10 logos de series (Legends Road Cup, GT4, GR Cup, Ferrari, Mustang, Rain Master, TCR, Clio Cup, Mission R, Nürburgring, Global Challenge, Power Challenge, SCCA, M2 Cup, Production Car, Production Endurance, MX-5 Cup, Formula Vee y Formula 1600), repartidas a todo el ancho. En tablet y celular cada fila pasa a dos de 5.
+    - Una fila de 9 marcas centradas: Mazda, Toyota, BMW, Ferrari, Ford, Porsche, Renault, Ray y Formula Vee.
+    - Las 5 licencias R, D, C, B y A, cada una con el ícono de auto, la letra y su color (rojo, naranja, amarillo, verde y azul).
+    - Las marcas y las licencias se acomodan en varias líneas en pantallas angostas.
 
 Cada subsección tiene botones para ir a la anterior y a la siguiente.
 

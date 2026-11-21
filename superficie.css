@@ -337,9 +337,26 @@
   .page-superficie .sd-detalle > img { animation: none; }
 }
 
+/* Logos y licencias: filas de 10 logos de 84 px repartidas a todo el ancho */
+.page-superficie .sd-detalles + .rule-head { margin-top: clamp(64px, 6.25vw, 120px); }
+.page-superficie .sd-logos { display: grid; grid-template-columns: repeat(10, minmax(0, 84px)); justify-content: space-between; gap: 32px 8px; margin: clamp(32px, 3.0208vw, 58px) 0 0; padding: 0; list-style: none; }
+.page-superficie .sd-logos img { display: block; width: 100%; height: auto; }
+.page-superficie .sd-logos + .sd-logos, .page-superficie .sd-logos + .sd-marcas, .page-superficie .sd-marcas ~ .sd-licencias { margin-top: clamp(40px, 3.6979vw, 71px); }
+.page-superficie .sd-marcas, .page-superficie .sd-licencias { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 0; padding: 0; list-style: none; }
+.page-superficie .sd-marcas { gap: 32px clamp(32px, 5.2604vw, 101px); }
+.page-superficie .sd-marcas img { display: block; width: auto; height: 48px; }
+.page-superficie .sd-licencias { gap: 24px clamp(24px, 5vw, 96px); }
+.page-superficie .sd-lic { --fg: #02449f; --bg: #cce2ff; --bd: #006eff; box-sizing: border-box; display: inline-flex; align-items: center; gap: 16px; height: 48px; padding: 8px 16px; border-radius: 8px; box-shadow: 0 0 0 2px var(--bd); background: var(--bg); color: var(--fg); font: 600 24px/1 "Inter", sans-serif; }
+.page-superficie .sd-lic svg { display: block; width: 32px; height: 32px; flex: none; }
+.page-superficie .sd-lic--b { --fg: #217c06; --bg: #d6f5cc; --bd: #33cc00; }
+.page-superficie .sd-lic--c { --fg: #9c7c06; --bg: #fff5cc; --bd: #ffed09; }
+.page-superficie .sd-lic--d { --fg: #9b3f06; --bg: #ffe0cc; --bd: #ff6600; }
+.page-superficie .sd-lic--r { --fg: #891828; --bg: #f9d3d1; --bd: #fe0708; }
+
 @media (max-width: 900px) {
   .page-superficie .sd-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
   .page-superficie .sd-detalles-fila { gap: 16px; }
+  .page-superficie .sd-logos { grid-template-columns: repeat(5, minmax(0, 84px)); }
 }
 @media (max-width: 640px) {
   .page-superficie .sd-cards { grid-template-columns: minmax(0, 1fr); }
