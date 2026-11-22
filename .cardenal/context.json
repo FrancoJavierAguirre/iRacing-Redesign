@@ -2,90 +2,71 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0019-request",
+      "id": "u-0020-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-20 (/feature): sección 'Iteraciones' según la referencia; imágenes y gifs como placeholders por ahora. 'Solución para nuevos usuarios' en Exo 2 regular 36 y bullets en Exo 2 regular 24, con 72 px entre bullets, título y botón, y 32 px entre el texto y la imagen de la izquierda. En All Series 32 px entre las 2 imágenes. 'Antes' y 'Después' en Exo 2 36. La imagen con flechas e indicaciones viene como SVG. Enlaces en otra pestaña: 'Probar funcionalidad', 'Probar flow', 'Probar filtros' y un cuarto enlace, también rotulado 'probar filtros' en el pedido."
+      "reference": "Pedido del usuario en chat 2026-11-21 (/feature): la última sección, 'Prototipo', tiene las mismas distancias que Iteraciones; imágenes como placeholders por ahora. El primer, segundo y tercer botón abren cada uno un prototipo de Figma en otra pestaña (enlaces dados en el pedido)."
     },
     {
       "id": "s-referencia",
       "kind": "file",
-      "reference": "specs/0019-superficie-iteraciones/referencia-figma.webp",
-      "sha256": "01b7e5bcd7868507ca0fc208d124100b5f469e6b417840515cf3259b24730532"
-    },
-    {
-      "id": "s-svg",
-      "kind": "file",
-      "reference": "assets/iteraciones/diferencias-all-series.svg",
-      "sha256": "7b60cf5949b6695f2686e754ee50d80bc799472f07871a1bf007614c4fdb0431"
+      "reference": "specs/0020-superficie-prototipo/referencia-figma.webp",
+      "sha256": "3a63ce36573dfe2b3ff7d33b1e0282f3458731a9553df7995abeeb5697cd2b14"
     },
     {
       "id": "s-superficie",
       "kind": "file",
-      "reference": "specs/0018-superficie-pruebas-usabilidad/spec.md",
-      "sha256": "2a1dd912b413e400b0f4e21d151c160437e9b94cefc992d75b2018d352d13168"
+      "reference": "specs/0019-superficie-iteraciones/spec.md",
+      "sha256": "aa7e2a051405b40afe1b0272e8ea307fe997f3757d52ba55a999d44d9affe98c"
     },
     {
-      "id": "u-0019-correccion",
+      "id": "u-0020-qa",
       "kind": "user",
-      "reference": "Corrección del usuario en chat 2026-11-21: 32 px entre 'Antes/Después' y sus imágenes, 56 px entre las imágenes y el SVG; cambiar 'Ir a Iteraciones' por 'Ir a Prototipo'."
-    },
-    {
-      "id": "u-0019-correccion-2",
-      "kind": "user",
-      "reference": "Segunda corrección del usuario en chat 2026-11-21: la distancia vertical es siempre 56 px."
+      "reference": "Corrección del usuario en chat 2026-11-22: texto de cada subsección en Exo 2 Regular 24; subtítulos en Exo 2 Regular 36; subtítulos y «Abrir prototipo» centrados respecto de los bullets."
     }
   ],
   "facts": [
     {
       "id": "o-design",
       "area": "product",
-      "statement": "La referencia (771 × 2000 px, escala ~1:2,49) muestra 'Iteraciones' / 'Puliendo el producto' con 'Ir a Pruebas de Usabilidad' e 'Ir a Iteraciones'; 'License Progress' con un gif a la izquierda y 'Solución para nuevos usuarios' con 4 bullets y 'Probar funcionalidad'; 'All Series' con 'Probar flow', Antes/Después y la imagen anotada; 'Filtros y búsqueda' con 'Probar filtros' y Antes/Después; y 'Registro a la carrera' con 'Probar registrarse' y Antes/Después.",
+      "statement": "La referencia (1160 × 2000 px, escala ~1:1,65) muestra 'Prototipo' / 'Un prototipo vale más que mil imágenes' con solo 'Ir a Iteraciones', y tres bloques imagen + texto con 'Abrir prototipo': 'License Progress' (Solución para nuevos usuarios, 4 puntos), 'Encontrar tu carrera' (Nueva tabla, nuevos detalles, 5 puntos) y 'Carrito de compras' (Compra en un solo lugar, 2 puntos).",
       "status": "observed",
       "source": "s-referencia"
     },
     {
-      "id": "o-svg",
-      "area": "technical",
-      "statement": "El SVG anotado (1674 × 805, 624 KB) no usa <text>: los textos son trazos, y la captura es un PNG embebido de 1440 × 992. Se puede usar como <img> sin depender de fuentes.",
-      "status": "observed",
-      "source": "s-svg"
-    },
-    {
       "id": "o-pagina",
       "area": "technical",
-      "statement": "Según la spec 0018, Pruebas de Usabilidad tiene 'Ir a Iteraciones' sin destino.",
+      "statement": "Según la spec 0019, Iteraciones tiene 'Ir a Prototipo' sin destino y el bloque imagen + texto '.it-solucion' (1163 + 32 + 550, 72 px entre título, bullets y botón).",
       "status": "observed",
       "source": "s-superficie"
     },
     {
-      "id": "d-iteraciones",
+      "id": "d-prototipo",
       "area": "product",
-      "statement": "Iteraciones: placeholders para imágenes y gifs; tipografías y distancias pedidas; 'Probar funcionalidad', 'Probar flow', 'Probar filtros' y el cuarto enlace abren en otra pestaña.",
+      "statement": "Prototipo usa las mismas distancias que Iteraciones, placeholders en las imágenes y tres botones que abren sus prototipos en otra pestaña.",
       "status": "confirmed",
-      "source": "u-0019-request"
+      "source": "u-0020-request"
     },
     {
-      "id": "d-correccion",
+      "id": "d-centrado",
       "area": "product",
-      "statement": "Distancia vertical de 56 px de 'Antes/Después' a su imagen y de las imágenes al SVG; 32 px horizontales entre las dos imágenes; el segundo botón del encabezado es 'Ir a Prototipo'.",
+      "statement": "En Prototipo, el subtítulo (Exo 2 Regular 36) y «Abrir prototipo» van centrados respecto de los bullets (Exo 2 Regular 24).",
       "status": "confirmed",
-      "source": "u-0019-correccion-2"
+      "source": "u-0020-qa"
     }
   ],
   "questions": [],
   "change": {
     "actor": "Lector del portfolio que recorre la capa Superficie",
-    "problem": "Superficie no muestra las iteraciones hechas tras las pruebas de usabilidad.",
-    "outcome": "superficie.html incluye 'Iteraciones' con License Progress, All Series, Filtros y búsqueda, y Registro a la carrera, con placeholders y enlaces a los prototipos; 'Ir a Iteraciones' lleva a la sección.",
-    "scope": "Incluye: sección en superficie.html y superficie.css, el SVG anotado, SEO, llms.txt y docs. Excluye: las imágenes y gifs finales (placeholders).",
-    "acceptance": "1) Se ve como la referencia a 1920 px, con placeholders donde van imágenes y gifs. 2) Tipografías y distancias pedidas. 3) Los 4 botones 'Probar…' abren sus enlaces en otra pestaña; 'Ir a Iteraciones' de Pruebas de Usabilidad lleva a la sección. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector ve qué cambió del diseño después de probarlo con usuarios.",
+    "problem": "Superficie no tiene la sección final para abrir los prototipos.",
+    "outcome": "superficie.html termina con 'Prototipo': tres bloques con imagen provisoria, texto y 'Abrir prototipo'; 'Ir a Prototipo' lleva a la sección.",
+    "scope": "Incluye: sección en superficie.html (reusa los estilos de Iteraciones), SEO, llms.txt y docs. Excluye: imágenes finales.",
+    "acceptance": "1) Se ve como la referencia a 1920 px, con placeholders. 2) Mismas distancias que Iteraciones. 3) Los tres 'Abrir prototipo' abren sus enlaces en otra pestaña; 'Ir a Prototipo' e 'Ir a Iteraciones' navegan entre las secciones. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector puede abrir cada prototipo desde el final del case study.",
     "evidence": [
       "o-design",
-      "o-svg",
       "o-pagina",
-      "d-iteraciones",
-      "d-correccion"
+      "d-prototipo",
+      "d-centrado"
     ]
   }
 }

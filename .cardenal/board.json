@@ -1027,26 +1027,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "2400c95f9d9f074c3e1ca00971eda4db714e9527231449b9128460f0ef7bf688"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "f4a7adc313bf716faf6a7ec586d65a0ed17e6b59a4104ede9fddc002ed28a25e"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "bf5a13bff99f3758c858b86a47f5331328f0d56bd11be1bf6f271702900b23ff"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "433f1214cebf7d3d5f77ffad87460b9587ce289107d7508d7b30ba2dda0f208d"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "008ee156ad099c869696482f92e29461e6ad16738aacb4f18e21ced469d3bef1"
-        },
-        {
           "path": "specs/0019-superficie-iteraciones/spec.md",
           "sha256": "aa7e2a051405b40afe1b0272e8ea307fe997f3757d52ba55a999d44d9affe98c"
         },
@@ -1059,7 +1039,7 @@
           "sha256": "0d1a4f57301d04651c609addb3128087ca54f850d4a74f4df8b17d9a8a7ac85d"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: gif de 1163 px y texto a 32 px; 72 px entre título, bullets y botón; Antes/Después con 32 px; tipografías Exo 2 36/24 (estilos computados); 4 enlaces externos con target _blank. Tras la corrección del usuario: 56 px de «Antes/Después» a su imagen (segunda corrección) y 56 px de las imágenes al SVG (medidos), e «Ir a Prototipo» sin destino.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: gif de 1163 px y texto a 32 px; 72 px entre título, bullets y botón; Antes/Después con 32 px; tipografías Exo 2 36/24 (estilos computados); 4 enlaces externos con target _blank. Tras la corrección del usuario: 56 px de «Antes/Después» a su imagen (segunda corrección) y 56 px de las imágenes al SVG (medidos), e «Ir a Prototipo» sin destino. Evidencia rotada en 0020: archivos modificados por Prototipo; la versión aprobada está en su commit. Evidencia rotada en 0020: superficie.css modificado por Prototipo; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1069,6 +1049,72 @@
           "evidence": {
             "path": ".cardenal/revision-0019.md",
             "sha256": "27c1a17488ea11caddad459fc665e228065faffe91f669eb0a66ae7f87afdf93"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T20",
+      "title": "Superficie, parte 11: Prototipo",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0020) y specs/0020-superficie-prototipo/spec.md.",
+      "dependsOn": [
+        "T19"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "specs/0020-superficie-prototipo/referencia-figma.webp"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "2116095a5e1c42d30c7f8f73d2b0bb4d63111e3b5b06042c0258fb544dd3f2e2"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "63b41c0e5794cdca259161d8d57711388d24e68aa54e6221d6bc227366105c90"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "076d92131229f246331c57f3e5fd35c0dc001ddabb899374b9ea1deacd102f81"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "2492f89e4c2b45f7b6bb6beb560e869b3845c8ce3fc4f6af8a052f17cdc6ea36"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "c31939613e71a729936e2aadd3749447d0e3bcfeb48dd9c51fff9801518c4f7a"
+        },
+        {
+          "path": "specs/0020-superficie-prototipo/spec.md",
+          "sha256": "445f8f309410d60d888f752680983823a34846e38c08c5f3b19310b003d45b03"
+        },
+        {
+          "path": "specs/0020-superficie-prototipo/tasks.md",
+          "sha256": "7d56e7dc68c715fef1be5aaea1a4792c29ef584b73bb143a752f843e373d0088"
+        },
+        {
+          "path": "specs/0020-superficie-prototipo/context.json",
+          "sha256": "b3e8add990a3d6bbb5cc40f883ed6392274bd3235d34568f937944c98035b1ad"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Corrección de QA del usuario (2026-11-22): subtítulo y botón centrados respecto de los bullets. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: subtítulo Exo 2 400 36 px y bullets Exo 2 400 24 px a 1920; centros de subtítulo, bullets y botón coinciden en los tres bloques; imagen de 1163 px, texto a 32 px y 72 px entre elementos; sin scroll horizontal; consola sin errores.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-22: Lo apruebo (tras corregir el centrado del subtítulo y el botón)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0020.md",
+            "sha256": "a64ae6281c4daf336124d29df6070095a9f8eb36dd063cb37dea2a1309692d9e"
           }
         }
       ]

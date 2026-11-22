@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "u-0020-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-21 (/feature): la última sección, 'Prototipo', tiene las mismas distancias que Iteraciones; imágenes como placeholders por ahora. El primer, segundo y tercer botón abren cada uno un prototipo de Figma en otra pestaña (enlaces dados en el pedido)."
+    },
+    {
+      "id": "s-referencia",
+      "kind": "file",
+      "reference": "specs/0020-superficie-prototipo/referencia-figma.webp",
+      "sha256": "3a63ce36573dfe2b3ff7d33b1e0282f3458731a9553df7995abeeb5697cd2b14"
+    },
+    {
+      "id": "s-superficie",
+      "kind": "file",
+      "reference": "specs/0019-superficie-iteraciones/spec.md",
+      "sha256": "aa7e2a051405b40afe1b0272e8ea307fe997f3757d52ba55a999d44d9affe98c"
+    },
+    {
+      "id": "u-0020-qa",
+      "kind": "user",
+      "reference": "Corrección del usuario en chat 2026-11-22: texto de cada subsección en Exo 2 Regular 24; subtítulos en Exo 2 Regular 36; subtítulos y «Abrir prototipo» centrados respecto de los bullets."
+    }
+  ],
+  "facts": [
+    {
+      "id": "o-design",
+      "area": "product",
+      "statement": "La referencia (1160 × 2000 px, escala ~1:1,65) muestra 'Prototipo' / 'Un prototipo vale más que mil imágenes' con solo 'Ir a Iteraciones', y tres bloques imagen + texto con 'Abrir prototipo': 'License Progress' (Solución para nuevos usuarios, 4 puntos), 'Encontrar tu carrera' (Nueva tabla, nuevos detalles, 5 puntos) y 'Carrito de compras' (Compra en un solo lugar, 2 puntos).",
+      "status": "observed",
+      "source": "s-referencia"
+    },
+    {
+      "id": "o-pagina",
+      "area": "technical",
+      "statement": "Según la spec 0019, Iteraciones tiene 'Ir a Prototipo' sin destino y el bloque imagen + texto '.it-solucion' (1163 + 32 + 550, 72 px entre título, bullets y botón).",
+      "status": "observed",
+      "source": "s-superficie"
+    },
+    {
+      "id": "d-prototipo",
+      "area": "product",
+      "statement": "Prototipo usa las mismas distancias que Iteraciones, placeholders en las imágenes y tres botones que abren sus prototipos en otra pestaña.",
+      "status": "confirmed",
+      "source": "u-0020-request"
+    },
+    {
+      "id": "d-centrado",
+      "area": "product",
+      "statement": "En Prototipo, el subtítulo (Exo 2 Regular 36) y «Abrir prototipo» van centrados respecto de los bullets (Exo 2 Regular 24).",
+      "status": "confirmed",
+      "source": "u-0020-qa"
+    }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre la capa Superficie",
+    "problem": "Superficie no tiene la sección final para abrir los prototipos.",
+    "outcome": "superficie.html termina con 'Prototipo': tres bloques con imagen provisoria, texto y 'Abrir prototipo'; 'Ir a Prototipo' lleva a la sección.",
+    "scope": "Incluye: sección en superficie.html (reusa los estilos de Iteraciones), SEO, llms.txt y docs. Excluye: imágenes finales.",
+    "acceptance": "1) Se ve como la referencia a 1920 px, con placeholders. 2) Mismas distancias que Iteraciones. 3) Los tres 'Abrir prototipo' abren sus enlaces en otra pestaña; 'Ir a Prototipo' e 'Ir a Iteraciones' navegan entre las secciones. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector puede abrir cada prototipo desde el final del case study.",
+    "evidence": [
+      "o-design",
+      "o-pagina",
+      "d-prototipo",
+      "d-centrado"
+    ]
+  }
+}

@@ -112,7 +112,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - **Links activados:** la opción Esqueleto del menú de capas de todas las páginas, «Ver Esqueleto» (Estructura y detalles de tareas), las tarjetas Esqueleto de «Siguiente elemento UX» (Estrategia, Alcance y Estructura), la tarjeta del Home (`onclick`) y, en 5-elementos, «Ver Esqueleto» y su tarjeta.
 ### Página de Superficie (`superficie.html` + `superficie.css`, spec 0010, parte UX Writing)
 
-- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0019 cubre «Ir a Prototipo» en el encabezado de Iteraciones (`#prototipo`, sección futura), «Leer guión completo» (`#guion`, página futura) y los tres «Ver cuestionario» (`#cuestionario-1..3`); «Ir a Iteraciones» ya tiene destino. «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
+- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0020 cubre «Leer guión completo» (`#guion`, página futura) y los tres «Ver cuestionario» (`#cuestionario-1..3`); «Ir a Iteraciones» e «Ir a Prototipo» ya tienen destino. «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
 - **«Ver Prototipo»:** `a.topbar-action` con `target="_blank" rel="noopener"` hacia el prototipo de Figma, `assets/ico-play.svg` y texto `.sr-only` que avisa que se abre en una pestaña nueva.
 - **Círculo de Oro:** `.oro[data-activo]` con 3 `span.oro-ring` concéntricos de CSS (565, 420 y 249 px a 1920), apilados con ¿Por qué? arriba, ¿Cómo? en el medio y ¿Qué? abajo. Usan los colores de los PNG del usuario: activo `rgba(0, 87, 208, .15)` e inactivo `rgba(0, 0, 0, .6)`. Como son semitransparentes, el círculo de abajo se ve a través del de arriba. La etiqueta activa va en dorado. Los párrafos son Poppins 300 itálica de 24 px, y las frases doradas, Poppins 600 itálica (cargada en el link de fuentes). Es `aria-hidden`, porque el texto lo explica.
 - **Matriz de Voz y Guía de Estilo:** `table.mtx` semánticas (`th scope`) con encabezados de tarjeta (`.mtx-card`). En ≤ 900 px pasan a bloques y cada celda muestra `data-col` con `::before`.
@@ -154,6 +154,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
     - `img.it-anotada`: `assets/iteraciones/diferencias-all-series.svg` (1674 × 805, 624 KB) con `alt` que resume sus indicaciones, a 56 px de las imágenes de arriba. Los textos son trazos y la captura es un PNG embebido de 1440 × 992, así que no depende de fuentes.
     - Los «Probar…» van al final de la línea del encabezado con el patrón `.pu-head` / `.pu-head-link` de Pruebas de Usabilidad y abren en otra pestaña.
     - En ≤ 900 px, `.it-solucion` y `.it-comparar` pasan a una columna.
+  - Prototipo (spec 0020): `section#prototipo`, la última de la página, con solo «Ir a Iteraciones». Tres bloques (`#proto-license-progress`, `#proto-encontrar-carrera`, `#proto-carrito`) que reutilizan `.it-solucion` / `.it-texto` / `.it-bullets` de Iteraciones: imagen provisoria `.media-placeholder.it-gif`, texto a 32 px y 72 px entre título, bullets y «Abrir prototipo» (`target="_blank"`). Única diferencia: `#prototipo .it-texto` toma el ancho de su contenido (`fit-content`) y centra el subtítulo y el botón respecto de los bullets. Íconos: `ico-license-gold`, `ico-lupa` e `ico-cart`.
   - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.
 
 ## Integraciones externas (solo enlaces)
@@ -186,7 +187,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Superficie: imágenes y gif finales de Iteraciones, guión completo, páginas de cuestionarios y el resto de la página, incluido «Siguiente elemento UX».
+- Superficie: imágenes y gif finales de Iteraciones y Prototipo, páginas de guión completo y cuestionarios.
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
