@@ -22,5 +22,7 @@ Misma plantilla, medidas y CSS que `superficie-usuario-1.html` (spec 0022), con 
 ## Clarificaciones 2026-11-23
 - Usuario 2 (fix): las tres preguntas muestran `usuario-2-encontrar-serie.mp4`, `usuario-2-compra-visible.mp4` (recortado abajo al alto del recuadro, 642 px) y `usuario-2-logos.png` (`assets/usuarios/`, `.cu-media`) en lugar de los placeholders. El primero queda en su proporción (1162 × 538), 13 px más bajo que el recuadro original.
 
+- Usuario 3 (fix 2026-11-23): la pregunta muestra `assets/usuarios/usuario-3-favorito.mp4` (`.cu-media`) en lugar del placeholder.
+
 ## Fuera de alcance
 Imágenes finales.

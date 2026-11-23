@@ -32,5 +32,8 @@ Referencia: `referencia-figma.webp` (519 × 2000 px, escala ~1:3,7; texto blanco
 - Se corrigen erratas («Facilidad de las tareas», «Challenge», «carreras») y se usa la ortografía estándar donde la referencia no se lee con claridad.
 - Distancias tomadas de la referencia: 72 px del encabezado al contenido, 32 px entre párrafos, 96 px entre filas y bloques.
 
+## Clarificaciones 2026-11-23
+- El gráfico de puntuación de habilidad (Contexto) es el video `assets/guion/grafico-puntuacion.mp4` (autoplay, muted, loop, radio 8) en lugar del placeholder.
+
 ## Fuera de alcance
-La imagen del gráfico (placeholder).
+Nada pendiente.

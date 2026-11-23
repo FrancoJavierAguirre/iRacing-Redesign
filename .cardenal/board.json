@@ -1215,10 +1215,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie-usuario-3.html",
-          "sha256": "8f7c7ca79bdd132f466f680f55abacb1fd397bf7ea0af6e5144b79e242f1559c"
-        },
-        {
           "path": "assets/shrug.png",
           "sha256": "d5a15075268a368ebea238c3891a942f61bd73003a52d6c45339e87ff09e2880"
         },
@@ -1227,7 +1223,7 @@
           "sha256": "dc511968c4b21f48591a8757fbcd5f045e22b6340dc8aa8b000068573eb695ab"
         }
       ],
-      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal. Evidencia rotada en 0024: archivos modificados por el guión de las pruebas; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios del usuario 2); la versión aprobada está en su commit.",
+      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal. Evidencia rotada en 0024: archivos modificados por el guión de las pruebas; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios del usuario 2); la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (video del usuario 3); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1273,14 +1269,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie-guion.html",
-          "sha256": "349b7d2d3583548cd67aa6d7c92ea1a0b8ebc9e002c5d0e92c4a2eb2455f85cb"
-        },
-        {
-          "path": "superficie-guion.css",
-          "sha256": "0d3f876e5dc6bf27b838b906c316fccf7cd6018126fa7781b51b7ef91f977256"
-        },
-        {
           "path": "docs/tech/dependencies/README.md",
           "sha256": "bcf0c1d9e33cfd5092b096cc06082a727f6819c8ab40b4737573959caf8d3406"
         },
@@ -1317,14 +1305,6 @@
           "sha256": "fe47f70b872e97c5b0366b15a7a9e1a17634283fb9fb266651a138e385a26ecb"
         },
         {
-          "path": "specs/0024-superficie-guion/spec.md",
-          "sha256": "8325db158fe4f43844b8bf54900fa1211605af9005100c9ec7813f4b2be4558d"
-        },
-        {
-          "path": "specs/0024-superficie-guion/tasks.md",
-          "sha256": "d92dd986da12ce2c90f2e120d82000f4e68ca199996ed273c7f01f3147d61fbf"
-        },
-        {
           "path": "assets/ico-auto-d.svg",
           "sha256": "012440b4d805a416d6e44124179a35644b4c7181d730d22000a1e80ad3382b2c"
         },
@@ -1337,7 +1317,7 @@
           "sha256": "9dedf8478891c48a573788f60d19e5345b416faa59534deeb49e3e6f6da5f5eb"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto). Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto). Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (gráfico del guión); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1687,26 +1667,6 @@
           "sha256": "aa51dc801f79bea6e966c0b8951cd7524017f558c86f69c29a39e597cd9e202f"
         },
         {
-          "path": "llms.txt",
-          "sha256": "692f903abe3d1bfd0a289905548159f2c636d19903421440782888b54b8103d4"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "f0e9b81f37f43abb06457792fb51cde1361f998da90f3b8cf977004c98e524e0"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "4e3c90f236972fd30d1a1ea2d3a5b66b5cc89e4ba3c0e449ec57966209ba7d60"
-        },
-        {
-          "path": "specs/0023-superficie-usuarios-2-3/spec.md",
-          "sha256": "24415c6bf77ba454b64ee62e9ebf99d42f421228920b08f8e2b882b1d3eb24d8"
-        },
-        {
-          "path": "specs/0023-superficie-usuarios-2-3/tasks.md",
-          "sha256": "b49f0d92de961ce465578bf90d9e9dcef1d71ce53d98a8079f69cbd969ed3d68"
-        },
-        {
           "path": "assets/usuarios/usuario-2-encontrar-serie.mp4",
           "sha256": "5be6e63bf5489c09d2750f482b4822575c255b0d4764542f68650161e7f37b74"
         },
@@ -1719,7 +1679,7 @@
           "sha256": "fce70a7ac54a248cb9da09e983266cdd9a607acb372357de5abd5ce4277abc2e"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (3,1 y 8,8 s) y la imagen cargan; 1162 × 538, 642 (recortado abajo) y 601; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página.",
+      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (3,1 y 8,8 s) y la imagen cargan; 1162 × 538, 642 (recortado abajo) y 601; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada por el fix 2026-11-23 (video del usuario 3); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1729,6 +1689,127 @@
           "evidence": {
             "path": ".cardenal/revision-fix-2026-11-23-usuario-2.md",
             "sha256": "e20548cc0a2a353dd7fe80f469edb290bef086e567c41ea2720f0e043a858ec3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T29",
+      "title": "Fix: video de la pregunta del Usuario 3",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Addendum 2026-11-23 en specs/0023-superficie-usuarios-2-3/tasks.md (T007-T009); clarificación en specs/0023-superficie-usuarios-2-3/spec.md.",
+      "dependsOn": [
+        "T23"
+      ],
+      "files": [
+        "superficie-usuario-3.html",
+        "assets/usuarios/usuario-3-favorito.mp4"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie-usuario-3.html",
+          "sha256": "87f679907ab6ddfea7dec9d1c6cb7d8dd1c9a39a1a66050a135a48a566765b83"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "f64cce67eb59ee4f46477cc2f5c766df6425c7dc96456c64efb625fedac7777b"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "1d6d1b0f708669f6095e0184a36a3cd2634f6fe3c67445085005acb018d38640"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "95ce2f8a86e34a8c9d20142e68f77aed386c369722b626dd06f8639cfe6e0a78"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/spec.md",
+          "sha256": "4733c8681ba50b48b7381d222291f4f6c53ed945521be49715974a3d545f3f66"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/tasks.md",
+          "sha256": "eb9f28f1385d9004dd3fc2be67df572a9887af5820673e86d49ab5dbe6d6a40b"
+        },
+        {
+          "path": "assets/usuarios/usuario-3-favorito.mp4",
+          "sha256": "8bd19e60c1d7748e9c5a163d96f14a9e6e8725f633be404874be72626ddc5eee"
+        }
+      ],
+      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (3,1 s), 1162 × 686, radio 12; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Hashes de docs/llms.txt refrescados tras el fix del guión (mismo día), que también los editó.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Apruebo los dos",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-usuario-3-guion.md",
+            "sha256": "1696a09d5881fc5065171fd36727b7e5b61afd785c50a8952b9351bd41a2239d"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T30",
+      "title": "Fix: video del gráfico del guión",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Addendum 2026-11-23 en specs/0024-superficie-guion/tasks.md (T004-T006); clarificación en specs/0024-superficie-guion/spec.md.",
+      "dependsOn": [
+        "T24"
+      ],
+      "files": [
+        "superficie-guion.html",
+        "superficie-guion.css",
+        "assets/guion/grafico-puntuacion.mp4"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie-guion.html",
+          "sha256": "138e394fa177d3ece63069119d95f5d93732fbf8e196d475129fa80df4758722"
+        },
+        {
+          "path": "superficie-guion.css",
+          "sha256": "496e8effb4529bd1ade396cfea0e8d8567c78b5625a6089f628982a001dbb72f"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "f64cce67eb59ee4f46477cc2f5c766df6425c7dc96456c64efb625fedac7777b"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "1d6d1b0f708669f6095e0184a36a3cd2634f6fe3c67445085005acb018d38640"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "95ce2f8a86e34a8c9d20142e68f77aed386c369722b626dd06f8639cfe6e0a78"
+        },
+        {
+          "path": "specs/0024-superficie-guion/spec.md",
+          "sha256": "c197bddc873a243bf3694598cc4d5468d539ed0f583f36884a3b457c1fcfdd35"
+        },
+        {
+          "path": "specs/0024-superficie-guion/tasks.md",
+          "sha256": "c53404bc6290268ac2dd23fa4e53a9850032c20d39201f0dc6733d19b54c2c65"
+        },
+        {
+          "path": "assets/guion/grafico-puntuacion.mp4",
+          "sha256": "82be6bbb2a8ce430868dd73040a7c3295b2e2f47550a3170cd1cf865d7dee75c"
+        }
+      ],
+      "evidenceNote": "Fix sobre la feature dueña 0024 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (2,1 s), 857 × 214, radio 8; en 375 px debajo del texto; sin scroll horizontal; consola sin errores; 0 placeholders en la página.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Apruebo los dos",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-usuario-3-guion.md",
+            "sha256": "1696a09d5881fc5065171fd36727b7e5b61afd785c50a8952b9351bd41a2239d"
           }
         }
       ]

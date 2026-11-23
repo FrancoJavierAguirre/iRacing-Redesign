@@ -19,8 +19,8 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones, Prototipo y el cierre «Fin del proyecto» implementados, con todos sus videos e imágenes |
 | Cuestionario del Usuario 1 (Superficie) | `superficie-usuario-1.html` | Implementado |
 | Cuestionario del Usuario 2 (Superficie) | `superficie-usuario-2.html` | Implementado |
-| Cuestionario del Usuario 3 (Superficie) | `superficie-usuario-3.html` | Implementado (imágenes provisorias) |
-| Guión de las pruebas (Superficie) | `superficie-guion.html` | Implementado (1 imagen provisoria) |
+| Cuestionario del Usuario 3 (Superficie) | `superficie-usuario-3.html` | Implementado |
+| Guión de las pruebas (Superficie) | `superficie-guion.html` | Implementado |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -146,14 +146,14 @@ En celular las estrellas se achican y se acercan; las capturas ocupan el ancho.
 
 Tienen la misma estructura y navegación que la del usuario 1. «Ver Video» abre el video de cada usuario, y el breadcrumb termina en su nombre.
 - **Usuario 2 | Martín:** puntuó 0, 0, 4 y 5 estrellas; a la derecha de las dos primeras filas se lee «No terminó la tarea» con un emoji de shrug (en celular, debajo). Responde tres preguntas (le costó encontrar la serie; destaca lo visible y fácil de la compra; le faltaron los logos de autos y pistas), cada una con su video o captura de la prueba. Tiene 6 insights.
-- **Usuario 3 | Fede:** puntuó 2, 4, 5 y 3 estrellas. Responde una pregunta (le faltó una estrellita para marcar el auto como favorito) con su captura provisoria. Tiene 6 insights.
+- **Usuario 3 | Fede:** puntuó 2, 4, 5 y 3 estrellas. Responde una pregunta (le faltó una estrellita para marcar el auto como favorito) con un video de la prueba. Tiene 6 insights.
 
 Los insights de estas páginas siguen sus referencias y no coinciden exactamente con las cards de Superficie.
 ## Guión de las pruebas (`superficie-guion.html`)
 
 Se llega desde «Leer guión completo» (Pruebas de Usabilidad). Arriba: breadcrumb «Rediseño UX/UI › Superficie › Guión», el título «Guión de las pruebas» y «Ver Video», que abre una de las pruebas en otra pestaña. Es el guion que se leyó a cada usuario, en siete secciones con sus botones «Ir a…»:
 1. **Introducción** («Agradecimientos y saludos»): presentación, permiso para grabar, «no hay respuestas correctas o incorrectas» y pedido de pensar en voz alta.
-2. **Contexto** («Sobre iRacing»): qué es el juego, su objetivo y la puntuación de habilidad, las licencias y el horario fijo de las carreras. Cada bloque se acompaña de una imagen; la del gráfico es provisoria.
+2. **Contexto** («Sobre iRacing»): qué es el juego, su objetivo y la puntuación de habilidad, las licencias y el horario fijo de las carreras. Cada bloque se acompaña de una imagen; la del gráfico de puntuación es un video en bucle.
 3. **Ambientación** («En la piel del piloto»): el escenario del usuario nuevo que llegó a la licencia D de sport cars.
 4. **Instrucciones** («Probando el prototipo»): cómo hacer la prueba y las dos tareas, cada una con «Intentar en prototipo» (abre el prototipo de Figma en otra pestaña), el enunciado, el logo de la serie con su licencia Clase D y el auto.
 5. **Cuestionario** («Facilidad de las tareas»): las cuatro preguntas «¿Qué tan fácil fue…?», cada una con su imagen.

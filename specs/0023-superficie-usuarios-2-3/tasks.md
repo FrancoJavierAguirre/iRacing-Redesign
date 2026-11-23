@@ -12,3 +12,9 @@
 - [x] T005 [front] `superficie-usuario-2.html`: las tres preguntas muestran su medio (`.cu-media`) en lugar del placeholder.
   - **Revisión del asistente** (servidor local, medición): 2 videos readyState 4 (3,1 y 8,8 s) e imagen cargan, 1162 × 538/642/601 a 1920 px; 56 px entre pregunta, respuesta y medio; 375 px sin scroll horizontal; consola sin errores.
 - [x] T006 [HUMANO] (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-fix-2026-11-23-usuario-2.md`) Revisar los tres medios en la página y aprobar.
+
+## Addendum 2026-11-23 — fix: video de la pregunta del Usuario 3
+- [x] T007 Convertir el GIF del usuario («Una estrellita para agregar el auto como favorito», 1,7 MB) a `assets/usuarios/usuario-3-favorito.mp4` (ffmpeg, 1162 px, sin audio, sin acelerar; 72 KB, 1162 × 686, 3,1 s).
+- [x] T008 [front] `superficie-usuario-3.html`: la pregunta muestra el video en bucle (`.cu-media`) en lugar del placeholder.
+  - **Revisión del asistente** (servidor local, medición): video readyState 4, 1162 × 686 a 1920 px, radio 12; 56 px entre pregunta, respuesta y video; 375 px sin scroll horizontal; consola sin errores.
+- [x] T009 [HUMANO] (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-fix-2026-11-23-usuario-3-guion.md`) Revisar el video en la página y aprobar.

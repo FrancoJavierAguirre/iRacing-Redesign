@@ -15,6 +15,8 @@
 .page-guion .gu-fila .gu-texto { margin-top: 0; }
 .page-guion .gu-img { display: block; width: 100%; height: auto; }
 .page-guion .gu-img--contexto { border-radius: 8px; }
+/* video del gráfico (fix 2026-11-23): mismo radio que la imagen de contexto de la misma sección */
+.page-guion .gu-video { border-radius: 8px; }
 .page-guion .gu-ph { width: 100%; min-height: 0; }
 .page-guion .gu-ph--grafico { aspect-ratio: 864 / 213; }
 
