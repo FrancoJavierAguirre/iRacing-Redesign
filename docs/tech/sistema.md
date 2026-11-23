@@ -227,7 +227,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 ## Pendientes técnicos observados
 
 - Imágenes: el sitio ya no tiene placeholders (`.media-placeholder` sin uso desde los fixes del 2026-11-23).
-- Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
+- Typos: el 2026-11-23 se corrigieron, a pedido del usuario, «Evaluaciones» (`5-elementos.html`), «para el usuario» (`index.html` y `estrategia.html`) y «James Garrett» (`index.html`). No quedan typos conocidos.
 
 ## SEO y descubrimiento (spec 0001)
 

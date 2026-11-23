@@ -457,14 +457,6 @@
           "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386"
         },
         {
-          "path": "5-elementos.html",
-          "sha256": "03a666fcd607f6e4ee2e2e1059b0443624f2ff6cbd812c60d03a8d3b781bc08e"
-        },
-        {
-          "path": "index.html",
-          "sha256": "87b111edbaee330c87648bfa87606ed6bc13087738c5fef0aa73b5a0792d5792"
-        },
-        {
           "path": "specs/0010-superficie-ux-writing/spec.md",
           "sha256": "fcade7600f8a2cb38e89ea020ebcc45d81f7727079e8afd185e2ec3e9a4d818d"
         },
@@ -477,7 +469,7 @@
           "sha256": "31fd8cc862dbf9214f8718348926c6dcc636aca5d6e7465e6fa651fa325070f8"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23.",
       "reviews": [
         {
           "kind": "human",
@@ -1372,10 +1364,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "estrategia.html",
-          "sha256": "55ea268d1241e977680475d2fce0d088a3d0deb9a61ca731e97af6bbb779c7b3"
-        },
-        {
           "path": "estrategia.css",
           "sha256": "c7c5115a455f00db99ee9f3bceb52c75de67e925daaa6918710b7404bc35b1da"
         },
@@ -1480,7 +1468,7 @@
           "sha256": "3c0888b41dc382b255849dc5f9e9f4b004e4c905c60c57ea32da4987dc568dea"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (conversión con ffmpeg y reemplazo por script); no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 0 placeholders; 11 videos cargan (readyState 4) con autoplay, muted y loop y duraciones esperadas (1,5× salvo «no acelerar»); 11 imágenes cargan; Estética: gap 0, radio 8, overflow hidden; alternancias con animación em-alterna 4 s steps(1) y ambas imágenes en la misma posición. 1920, 900 y 375 px sin scroll horizontal; consola sin errores. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (conversión con ffmpeg y reemplazo por script); no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 0 placeholders; 11 videos cargan (readyState 4) con autoplay, muted y loop y duraciones esperadas (1,5× salvo «no acelerar»); 11 imágenes cargan; Estética: gap 0, radio 8, overflow hidden; alternancias con animación em-alterna 4 s steps(1) y ambas imágenes en la misma posición. 1920, 900 y 375 px sin scroll horizontal; consola sin errores. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23.",
       "reviews": [
         {
           "kind": "human",
@@ -1874,10 +1862,6 @@
           "sha256": "b8f4299b183e07e077ca0e5252fe89a53262fbc494d60cb8387483e3071cc527"
         },
         {
-          "path": "docs/tech/sistema.md",
-          "sha256": "d5dd862f7ee7fd3e01833155ff17594e7ec3cda309e07e0c22c831ba8c510d05"
-        },
-        {
           "path": "specs/0007-detalle-tarea-1/spec.md",
           "sha256": "7e58bb8959b3980765160dc1abfb54736b9f38ed9d2ab3160f48281fab69a766"
         },
@@ -1890,7 +1874,7 @@
           "sha256": "102a3192afd4e32560fc69d8043bbea26d69af193a45e23debdd8063c5d77471"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0007 (y relacionada 0023); no es la ficha activa: .cardenal/context.json no se tocó. Implementado por el coordinador; sin subagente. Revisión del asistente en servidor local con iframes de 19 anchos (320-1920) en las 6 páginas page-tarea: el breadcrumb y el título no se cruzan (mínimo 20 px en la misma línea), el botón de la derecha no los pisa, sin scroll horizontal (incluida la nota de Martín entre 641 y 900), los dos menús abren dentro de la pantalla; consola sin errores. Sin captura (panel oculto).",
+      "evidenceNote": "Fix sobre la feature dueña 0007 (y relacionada 0023); no es la ficha activa: .cardenal/context.json no se tocó. Implementado por el coordinador; sin subagente. Revisión del asistente en servidor local con iframes de 19 anchos (320-1920) en las 6 páginas page-tarea: el breadcrumb y el título no se cruzan (mínimo 20 px en la misma línea), el botón de la derecha no los pisa, sin scroll horizontal (incluida la nota de Martín entre 641 y 900), los dos menús abren dentro de la pantalla; consola sin errores. Sin captura (panel oculto). Evidencia rotada por la corrección de typos del 2026-11-23.",
       "reviews": [
         {
           "kind": "human",
@@ -1900,6 +1884,51 @@
           "evidence": {
             "path": ".cardenal/revision-fix-2026-11-23-topbar.md",
             "sha256": "572e428e65a202d90bfdea2fa370fa9de99a240e6704d7f4b88ab54589dcae2a"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T33",
+      "title": "Fix: typos de 5-elementos, el Home y Estrategia",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Pedido del usuario 2026-11-23: «Evaluaciones» en 5-elementos.html; «para el usuario» en index.html y estrategia.html; «James Garrett» en index.html.",
+      "dependsOn": [],
+      "files": [
+        "5-elementos.html",
+        "index.html",
+        "estrategia.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "5-elementos.html",
+          "sha256": "2c5d2a32bc06e054e568a676c86624bc0da5951500a86d01e42f97dbf050101c"
+        },
+        {
+          "path": "index.html",
+          "sha256": "a9d86f921be4e53de4b431a1b31245569365633595bc01dbb08caa72238a1799"
+        },
+        {
+          "path": "estrategia.html",
+          "sha256": "f4c3c42f0e969bea633a112777689968bf010ffb40947733ac1654906a6c5d58"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "d0abea61f5dc7de62ce09a4041d271b88db2dce79a46b295316884cd1e19a784"
+        }
+      ],
+      "evidenceNote": "Correcciones de copy pedidas por el usuario (estaban fuera de alcance en la spec 0001 y listadas como pendientes en docs/tech/sistema.md). Sin cambios de estructura ni estilos. Búsqueda en los .html: no quedan «Evauaciones», «par el usuario» ni «Garret».",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Pedido del usuario en chat 2026-11-23: corregir los tres typos y luego la cita de estrategia.html",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-typos.md",
+            "sha256": "c5abba579c679d761b6f94ba9b7d75f1bfd7d51019dbe1e115e12d924254d7be"
           }
         }
       ]
