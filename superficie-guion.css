@@ -1,0 +1,53 @@
+/* Guión de las pruebas de usabilidad (body.page-guion) — spec 0024.
+   Usa además estructura-tarea.css para el breadcrumb de 3 niveles. Medidas para 1920 px tomadas de la referencia. */
+
+/* Texto solo para lectores de pantalla (no es global en el sitio) */
+.page-guion .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Texto: Poppins Light Italic 24; lo dorado, italic Regular */
+.page-guion .gu-texto { display: flex; flex-direction: column; gap: clamp(20px, 1.6667vw, 32px); margin-top: clamp(40px, 3.75vw, 72px); }
+.page-guion .gu-texto p { margin: 0; font: italic 300 clamp(16px, 1.25vw, 24px)/1.45 "Poppins", sans-serif; color: #fff; }
+.page-guion .hl { font-weight: 400; color: #bca447; }
+
+/* Contexto: filas de texto + imagen alternadas */
+.page-guion .gu-filas { display: flex; flex-direction: column; gap: clamp(48px, 5vw, 96px); margin-top: clamp(40px, 3.75vw, 72px); }
+.page-guion .gu-fila { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: center; }
+.page-guion .gu-fila .gu-texto { margin-top: 0; }
+.page-guion .gu-img { display: block; width: 100%; height: auto; }
+.page-guion .gu-img--contexto { border-radius: 8px; }
+.page-guion .gu-ph { width: 100%; min-height: 0; }
+.page-guion .gu-ph--grafico { aspect-ratio: 864 / 213; }
+
+/* Instrucciones: encabezado de tarea con línea y botón al final */
+.page-guion .gu-head { flex-wrap: wrap; gap: 16px; margin-top: clamp(56px, 5vw, 96px); }
+.page-guion .gu-head::after { order: 1; }
+.page-guion .gu-head .btn { order: 2; }
+.page-guion .gu-head + .gu-texto { margin-top: 0; }
+.page-guion .gu-tarea-figs { display: flex; justify-content: center; align-items: flex-end; gap: clamp(48px, 16vw, 308px); flex-wrap: wrap; margin-top: clamp(32px, 2.9167vw, 56px); }
+.page-guion .gu-fig { display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 0; }
+.page-guion .gu-fig img { display: block; max-width: 100%; height: auto; }
+.page-guion .gu-fig figcaption { font: 300 16px/1.2 "Poppins", sans-serif; color: #fff; }
+/* chip de licencia «Clase D» (colores de la licencia D del sistema de diseño) */
+.page-guion .gu-lic { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 4px; box-shadow: 0 0 0 1px #ff6600; background: #ffe0cc; color: #9b3f06; font: 600 12px/1 "Inter", sans-serif; }
+/* el ícono va como <img> (ico-auto-d.svg, #9B3F06): una máscara CSS con url() no carga al abrir la página como archivo local */
+.page-guion .gu-lic img { display: block; width: 16px; height: 16px; flex: none; }
+
+/* Cuestionario: 2 × 2, Exo 2 Light 32 con lo dorado en Regular */
+.page-guion .gu-cuestionario { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(48px, 5vw, 96px) 32px; max-width: 1460px; margin: clamp(40px, 3.75vw, 72px) auto 0; }
+.page-guion .gu-preg { display: flex; flex-direction: column; gap: clamp(32px, 3.75vw, 72px); margin: 0; }
+.page-guion .gu-preg figcaption { font: 300 clamp(20px, 1.6667vw, 32px)/1.3 var(--font-display); color: #fff; }
+.page-guion .gu-preg img { display: block; max-width: 100%; height: auto; margin: auto; }
+
+/* Preguntas cualitativas: número en recuadro dorado, Exo 2 Light 32 */
+.page-guion .gu-preguntas { counter-reset: gu; display: flex; flex-direction: column; gap: clamp(48px, 5vw, 96px); margin: clamp(40px, 3.75vw, 72px) 0 0; padding: 0; list-style: none; }
+.page-guion .gu-preguntas li { counter-increment: gu; display: flex; align-items: center; gap: 32px; font: 300 clamp(20px, 1.6667vw, 32px)/1.3 var(--font-display); color: #fff; }
+.page-guion .gu-preguntas li::before { content: counter(gu); flex: none; display: grid; place-items: center; box-sizing: border-box; width: clamp(36px, 2.5vw, 48px); height: clamp(36px, 2.5vw, 48px); border: 2px solid #bca447; border-radius: 8px; color: #bca447; font: 500 clamp(20px, 1.4583vw, 28px)/1 var(--font-display); }
+
+@media (max-width: 900px) {
+  .page-guion .gu-fila, .page-guion .gu-cuestionario { grid-template-columns: minmax(0, 1fr); }
+  /* en una columna, la imagen va siempre debajo del texto */
+  .page-guion .gu-fila > .gu-img:first-child, .page-guion .gu-fila > .gu-ph:first-child { order: 2; }
+}
+@media (max-width: 640px) {
+  .page-guion .gu-preguntas li { gap: 16px; align-items: flex-start; }
+}

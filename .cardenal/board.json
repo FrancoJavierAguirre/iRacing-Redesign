@@ -1263,26 +1263,6 @@
           "sha256": "4abfd27e7b64785cfa48677b2e7de231472c428ab2118344f2f7ddcd795bdf3d"
         },
         {
-          "path": "superficie.html",
-          "sha256": "9032fd31e2e57a1f6c9e13c021afc31436123b268dc6adb47b5542bb8a529054"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "80aad2e2d509486c590006904a4b561ebab7689e0432a23dd88f92d8ec2198fe"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "de4c8b464512f973ed54982cab1d2483504980845c58129bb44994c011a1c5e2"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "1359d69b0bda5629e96d527a6acc15085143155530d068d72e2bfba8e5447438"
-        },
-        {
-          "path": "docs/tech/dependencies/README.md",
-          "sha256": "99a5160fbf6d6cdf19f19bb692d09fcce23e87a3da317dff74a1d04e84266657"
-        },
-        {
           "path": "specs/0023-superficie-usuarios-2-3/spec.md",
           "sha256": "11fd0cb9d77fee1e979246d4b0d09b4781cfb1d0db28cc8590b91996bb20c068"
         },
@@ -1299,7 +1279,7 @@
           "sha256": "dc511968c4b21f48591a8757fbcd5f045e22b6340dc8aa8b000068573eb695ab"
         }
       ],
-      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal.",
+      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal. Evidencia rotada en 0024: archivos modificados por el guión de las pruebas; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1309,6 +1289,132 @@
           "evidence": {
             "path": ".cardenal/revision-0023.md",
             "sha256": "d3ce611a4d55c91511ac6fc7b2623df4001751d97d2dc726e5b6e78404b76693"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T24",
+      "title": "Superficie: guión de las pruebas",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0024) y specs/0024-superficie-guion/spec.md.",
+      "dependsOn": [
+        "T23"
+      ],
+      "files": [
+        "superficie-guion.html",
+        "superficie-guion.css",
+        "superficie.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "docs/tech/dependencies/README.md",
+        "assets/guion/auto-ferrari.png",
+        "assets/guion/auto-mazda.png",
+        "assets/guion/card-mazda.png",
+        "assets/guion/carrera-horario.png",
+        "assets/guion/carrito-ferrari.png",
+        "assets/guion/licencias.png",
+        "assets/guion/logo-ferrari-challenge.png",
+        "assets/guion/logo-production-car-challenge.png",
+        "specs/0024-superficie-guion/referencia-figma.webp",
+        "assets/ico-auto-d.svg",
+        "assets/contexto.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie-guion.html",
+          "sha256": "349b7d2d3583548cd67aa6d7c92ea1a0b8ebc9e002c5d0e92c4a2eb2455f85cb"
+        },
+        {
+          "path": "superficie-guion.css",
+          "sha256": "0d3f876e5dc6bf27b838b906c316fccf7cd6018126fa7781b51b7ef91f977256"
+        },
+        {
+          "path": "superficie.html",
+          "sha256": "5f5f51b98fd0b80f9c385b84aff4712bfa7fb08b0591bf1eb9a2e07eee7bf13d"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "f68f6c4ab7e2e6777d65e1b530756d7020879b1268cac82830441559a09f8a33"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "90bf832a865541fcc326cc913ead22418df9b91ebe4eb6bdc1aaa3384dcece0b"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "f671fab07491c0d6dfa05cbc26df4c2750c53d5e89b3384ac727ef16739518f2"
+        },
+        {
+          "path": "docs/tech/dependencies/README.md",
+          "sha256": "bcf0c1d9e33cfd5092b096cc06082a727f6819c8ab40b4737573959caf8d3406"
+        },
+        {
+          "path": "assets/guion/auto-ferrari.png",
+          "sha256": "74f5727f780715f54d075f0c7712cba394da8bd80a4015bcd19542cb2c3c9fc3"
+        },
+        {
+          "path": "assets/guion/auto-mazda.png",
+          "sha256": "42adcb6f1a6fe0f11cd9d6bf8fcf72c0aeecfdd7d3b234910d76e78c831eb532"
+        },
+        {
+          "path": "assets/guion/card-mazda.png",
+          "sha256": "67ed876fab33b0594e4eb647edf327c166f9517976f1ec58468a1c1e58358c17"
+        },
+        {
+          "path": "assets/guion/carrera-horario.png",
+          "sha256": "2776a6a94dd945b461ee9c13d8a3e4906b0c62cc409dd50317b38cec2ece521c"
+        },
+        {
+          "path": "assets/guion/carrito-ferrari.png",
+          "sha256": "26fc9c89255a16c240506a57ff0666ed4dc0d5126dbf38b7f3a3eeb76dbf7260"
+        },
+        {
+          "path": "assets/guion/licencias.png",
+          "sha256": "9e8740aef99ea2e90184965e5492862a05ee810326f27564e1ed3c220fda5525"
+        },
+        {
+          "path": "assets/guion/logo-ferrari-challenge.png",
+          "sha256": "b94e57b65437657c410de30e81609e712b028b6639310fe7e42bc5d09fdd1450"
+        },
+        {
+          "path": "assets/guion/logo-production-car-challenge.png",
+          "sha256": "fe47f70b872e97c5b0366b15a7a9e1a17634283fb9fb266651a138e385a26ecb"
+        },
+        {
+          "path": "specs/0024-superficie-guion/spec.md",
+          "sha256": "8325db158fe4f43844b8bf54900fa1211605af9005100c9ec7813f4b2be4558d"
+        },
+        {
+          "path": "specs/0024-superficie-guion/tasks.md",
+          "sha256": "d92dd986da12ce2c90f2e120d82000f4e68ca199996ed273c7f01f3147d61fbf"
+        },
+        {
+          "path": "assets/ico-auto-d.svg",
+          "sha256": "012440b4d805a416d6e44124179a35644b4c7181d730d22000a1e80ad3382b2c"
+        },
+        {
+          "path": "assets/contexto.png",
+          "sha256": "d91664f6167be60178c7c3391d9408abc1ae98b93aa889a371fee1a2d468d9d8"
+        },
+        {
+          "path": "specs/0024-superficie-guion/context.json",
+          "sha256": "9dedf8478891c48a573788f60d19e5345b416faa59534deeb49e3e6f6da5f5eb"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto).",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-22: Lo apruebo (tras corregir el ícono del chip Clase D, la separación de las tareas y la imagen de contexto)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0024.md",
+            "sha256": "2a0a1c9303eb272560b9157d50dcc9da4dddc8cc4d9ddffa469ece57bfd9eba9"
           }
         }
       ]

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guión de las pruebas de usabilidad — Rediseño iRacing</title>
+<meta name="description" content="Guión de las pruebas de usabilidad del rediseño de iRacing: introducción, contexto del juego, ambientación, las dos tareas en el prototipo, el cuestionario, las preguntas cualitativas y el cierre. Case study de Franco Aguirre.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guión de las pruebas de usabilidad — Rediseño iRacing">
+<meta property="og:description" content="Guión de las pruebas de usabilidad del rediseño de iRacing: introducción, contexto del juego, ambientación, las dos tareas en el prototipo, el cuestionario, las preguntas cualitativas y el cierre. Case study de Franco Aguirre.">
+<meta property="og:site_name" content="iRacing — Rediseño UX/UI · Franco Aguirre">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Guión de las pruebas de usabilidad — Rediseño iRacing">
+<meta name="twitter:description" content="Guión de las pruebas de usabilidad del rediseño de iRacing: introducción, contexto del juego, ambientación, las dos tareas en el prototipo, el cuestionario, las preguntas cualitativas y el cierre. Case study de Franco Aguirre.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Guión de las pruebas de usabilidad — Rediseño iRacing",
+  "description": "Guión de las pruebas de usabilidad del rediseño de iRacing: introducción, contexto del juego, ambientación, las dos tareas en el prototipo, el cuestionario, las preguntas cualitativas y el cierre. Case study de Franco Aguirre.",
+  "inLanguage": "es",
+  "dateCreated": "2025",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "Pruebas de usabilidad" } ],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "iRacing — Rediseño UX/UI",
+    "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "Diseñador UX/UI" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Rediseño UX/UI", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Superficie", "item": "superficie.html" },
+      { "@type": "ListItem", "position": 3, "name": "Guión" }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="elementos.css">
+<link rel="stylesheet" href="estructura-tarea.css">
+<link rel="stylesheet" href="superficie-guion.css">
+</head>
+<body class="page-elementos page-tarea page-guion">
+
+<header class="topbar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="superficie.html#pruebas-de-usabilidad" class="crumb-back" aria-label="Volver a Pruebas de Usabilidad"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="index.html" class="crumb-home"><span class="crumb-parent">Rediseño UX/UI</span></a>
+    <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="topbar-capas breadcrumb-capas" data-capas>
+      <button type="button" class="capas-trigger" aria-expanded="false" aria-controls="capas-menu" data-capas-trigger>
+        <span>Superficie</span>
+        <img class="capas-chevron capas-chevron--down" src="assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="capas-menu" role="group" aria-label="Capas del proceso UX" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" href="estrategia.html"><img src="assets/icon-estrategia.svg" alt="" width="16" height="16"><span>Estrategia</span></a></li>
+          <li><a class="capas-item" href="alcance.html"><img src="assets/icon-alcance.svg" alt="" width="16" height="16"><span>Alcance</span></a></li>
+          <li><a class="capas-item" href="estructura.html"><img src="assets/icon-estructura.svg" alt="" width="16" height="16"><span>Estructura</span></a></li>
+          <li><a class="capas-item" href="esqueleto.html"><img src="assets/icon-esqueleto.svg" alt="" width="16" height="16"><span>Esqueleto</span></a></li>
+          <li><a class="capas-item" href="superficie.html"><img src="assets/icon-superficie.svg" alt="" width="16" height="16"><span>Superficie</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <svg class="sep sep--tarea" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="current" aria-current="page">Guión</span>
+  </nav>
+  <h1 class="topbar-title">Guión de las pruebas</h1>
+  <a href="https://drive.google.com/file/d/1KFT49ICbG0dN2nT1mXpFtUk80ko7imNG/view" target="_blank" rel="noopener" class="btn btn--sm btn-blue topbar-action"><img class="btn-icon" src="assets/ico-play.svg" alt="">Ver Video<span class="sr-only"> de la prueba (se abre en una pestaña nueva)</span></a>
+</header>
+
+<main>
+  <section class="layer-sec" id="introduccion" aria-labelledby="introduccion-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="introduccion-titulo">Introducción</h2><p class="sec-sub">Agradecimientos y saludos</p></div>
+        <div class="sec-nav"><a href="#contexto" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Contexto</a></div>
+      </div>
+      <div class="gu-texto">
+        <p>Antes que nada, quiero agradecerte tu participación. Me llamo Franco Aguirre y me encargo de <span class="hl">analizar y mejorar la experiencia de usuario</span> de este producto, por el cual te invité hoy.</p>
+        <p>Si estás de acuerdo, me gustaría grabar la conversación. Todo lo que digas se usará para tener un registro y poder realizar un mejor análisis. ¿Te parece bien?</p>
+        <p><span class="hl">No hay respuestas correctas o incorrectas</span>; solo me interesa tu experiencia con la app para mejorarla. Es importante que sepas que <span class="hl">no te estoy probando a ti, sino al programa</span>. Estaré atento a cualquier problema que tengas al usarla. De esta manera, podré realizar los ajustes necesarios para mejorar tu experiencia como usuario.</p>
+        <p>Recuerda <span class="hl">decir en voz alta</span> todo lo que pienses e interacciones en las pantallas durante el proceso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="contexto" aria-labelledby="contexto-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="contexto-titulo">Contexto</h2><p class="sec-sub">Sobre iRacing</p></div>
+        <div class="sec-nav"><a href="#introduccion" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Introducción</a><a href="#ambientacion" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Ambientación</a></div>
+      </div>
+      <div class="gu-filas">
+        <div class="gu-fila">
+          <div class="gu-texto">
+            <p>Es esencialmente un <span class="hl">videojuego de autos</span>. Particularmente este tiene mucha fama de ser muy competitivo y realista, a tal punto que para disfrutarlo es altamente recomendado <span class="hl">tener un volante y pedales</span> conectados a la PC.</p>
+            <p>Requiere <span class="hl">suscripción mensual</span> y se corre con marcas de autos y circuitos reales. <span class="hl">Simula eventos reales</span> tanto en formato, duración y reglas.</p>
+            <p>El juego ofrece carreras competitivas con otros jugadores.</p>
+          </div>
+          <img class="gu-img gu-img--contexto" src="assets/contexto.png" alt="Escritorio a oscuras con el logo de iRacing en el monitor, un volante y pedales." width="1205" height="720" loading="lazy">
+        </div>
+        <div class="gu-fila">
+          <div class="media-placeholder gu-ph gu-ph--grafico" data-label="Imagen — Gráfico de la puntuación de habilidad"></div>
+          <div class="gu-texto">
+            <p><span class="hl">El objetivo</span> del juego depende de cada uno, pero la esencia de un juego de autos de carreras es <span class="hl">ganar carreras</span>.</p>
+            <p>El resultado de las carreras aumentará o disminuirá tu <span class="hl">puntuación de habilidad</span>. Esta puntuación se utiliza para emparejarte con jugadores similares.</p>
+          </div>
+        </div>
+        <div class="gu-fila">
+          <div class="gu-texto">
+            <p>Otra forma de progresar es mediante las <span class="hl">licencias</span>.</p>
+            <p>Cada licencia habilita nuevas y más variadas carreras con diferentes formatos, autos y pistas.</p>
+            <p>Para aumentar la licencia es necesario terminar las carreras con <span class="hl">pocos accidentes</span>, ya sea con otros jugadores o solo.</p>
+          </div>
+          <img class="gu-img" src="assets/guion/licencias.png" alt="Las cinco licencias de Franco Aguirre en iRacing: Oval Racing clase B, Sports Car Racing clase A, Formula Racing clase B, Dirt Oval Racing clase D y Dirt Road Racing clase B." width="864" height="268" loading="lazy">
+        </div>
+        <div class="gu-fila">
+          <img class="gu-img" src="assets/guion/carrera-horario.png" alt="Card de una carrera a las 7:45 PM, abierta, de 15 minutos con 8 pilotos y las próximas a las 8:15, 8:45 y 9:15 PM, con el auto seleccionado." width="864" height="253" loading="lazy">
+          <div class="gu-texto">
+            <p>Estas carreras son siempre en un <span class="hl">horario fijo</span> y se repiten constantemente, dependiendo del evento, cada 1 o 2 horas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="ambientacion" aria-labelledby="ambientacion-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="ambientacion-titulo">Ambientación</h2><p class="sec-sub">En la piel del piloto</p></div>
+        <div class="sec-nav"><a href="#contexto" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Contexto</a><a href="#instrucciones" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Instrucciones</a></div>
+      </div>
+      <div class="gu-texto">
+        <p>Sos un <span class="hl">usuario nuevo</span> de iRacing.</p>
+        <p>Quisiste entrar al mundo del simracing y para eso <span class="hl">te suscribiste a iRacing</span>.</p>
+        <p>Descargás y entrás a la UI de iRacing para <span class="hl">buscar una carrera</span>.</p>
+        <p><span class="hl">Pasaste el onboarding</span>, en donde te preguntaron qué disciplina te gusta correr (sport car, formula, oval, dirt oval, dirt road).</p>
+        <p>Elegiste <span class="hl">sport car</span> y luego de hacer algunas carreras online de licencia Rookie, <span class="hl">lograste subir a la licencia D de sport cars</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="instrucciones" aria-labelledby="instrucciones-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="instrucciones-titulo">Instrucciones</h2><p class="sec-sub">Probando el prototipo</p></div>
+        <div class="sec-nav"><a href="#ambientacion" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Ambientación</a><a href="#cuestionario" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Cuestionario</a></div>
+      </div>
+      <div class="gu-texto">
+        <p>Para esta prueba, te pido que <span class="hl">realices una serie de tareas</span> en el prototipo. No te olvides de <span class="hl">decir en voz alta</span> lo que ves y lo que estás haciendo.</p>
+        <p>Es posible que encuentres callejones sin salida y botones que no funcionan o que no cumplen su función, ya que esto es un prototipo, no la aplicación real. Recuerda también decirme cuando creas que hayas terminado la tarea.</p>
+      </div>
+
+      <h3 class="rule-head gu-head" id="tarea-1"><span class="rh"><img class="rh-ico" src="assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Tarea 1</span></span><a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=3423%3A94&amp;node-id=4021-24434&amp;viewport=-4446%2C-2288%2C0.69&amp;t=v6bHZlgfxv1jo2fq-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=4021%3A24434" target="_blank" rel="noopener" class="btn btn--md btn-primary">Intentar en prototipo<span class="sr-only"> la Tarea 1 (se abre en una pestaña nueva)</span></a></h3>
+      <div class="gu-texto">
+        <p>Querés <span class="hl">correr una carrera</span> de la serie <span class="hl">“Production Car Challenge by Sim-Lab”</span> de <span class="hl">Clase D</span>. Primero, debés seleccionar como favorito el auto <span class="hl">“Global Mazda MX-5 Cup”</span> de los 4 disponibles para correr siempre con ese.</p>
+      </div>
+      <div class="gu-tarea-figs">
+        <figure class="gu-fig"><img src="assets/guion/logo-production-car-challenge.png" alt="Logo de la Production Car Challenge by Sim-Lab" width="264" height="150" loading="lazy"><figcaption><span class="gu-lic"><img src="assets/ico-auto-d.svg" alt="" width="16" height="16">Clase D</span></figcaption></figure>
+        <figure class="gu-fig"><img src="assets/guion/auto-mazda.png" alt="" width="313" height="198" loading="lazy"><figcaption>Global Mazda MX-5 Cup</figcaption></figure>
+      </div>
+
+      <h3 class="rule-head gu-head" id="tarea-2"><span class="rh"><img class="rh-ico" src="assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Tarea 2</span></span><a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?node-id=4052-40351&amp;viewport=-4446%2C-2288%2C0.69&amp;t=mr1e7dTRbAVoJIuy-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=4052%3A40351&amp;page-id=3423%3A94&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn--md btn-primary">Intentar en prototipo<span class="sr-only"> la Tarea 2 (se abre en una pestaña nueva)</span></a></h3>
+      <div class="gu-texto">
+        <p>Ahora querés correr la <span class="hl">“Ferrari Challenge”</span> de <span class="hl">Clase D</span>. Como todavía no es el horario para la carrera, querés entrar a una <span class="hl">práctica</span> de esta serie con <span class="hl">el “Ferrari Challenge”</span>.</p>
+      </div>
+      <div class="gu-tarea-figs">
+        <figure class="gu-fig"><img src="assets/guion/logo-ferrari-challenge.png" alt="Logo de la Ferrari 296 Challenge" width="267" height="112" loading="lazy"><figcaption><span class="gu-lic"><img src="assets/ico-auto-d.svg" alt="" width="16" height="16">Clase D</span></figcaption></figure>
+        <figure class="gu-fig"><img src="assets/guion/auto-ferrari.png" alt="" width="313" height="198" loading="lazy"><figcaption>Ferrari Challenge</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="cuestionario" aria-labelledby="cuestionario-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="cuestionario-titulo">Cuestionario</h2><p class="sec-sub">Facilidad de las tareas</p></div>
+        <div class="sec-nav"><a href="#instrucciones" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Instrucciones</a><a href="#preguntas-cualitativas" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Preguntas Cualitativas</a></div>
+      </div>
+      <div class="gu-cuestionario">
+        <figure class="gu-preg">
+          <figcaption>¿Qué tan fácil fue <span class="hl">elegir el Mazda</span> como auto favorito para la carrera de la Production Car Challenge?</figcaption>
+          <img src="assets/guion/card-mazda.png" alt="Card del Global Mazda MX-5 Cup marcado como favorito, con «Change Car»." width="437" height="325" loading="lazy">
+        </figure>
+        <figure class="gu-preg">
+          <figcaption>¿Qué tan fácil fue <span class="hl">registrarse a la carrera</span> de la Production Car Challenge?</figcaption>
+          <img src="assets/guion/logo-production-car-challenge.png" alt="Logo de la Production Car Challenge by Sim-Lab" width="420" height="238" loading="lazy">
+        </figure>
+        <figure class="gu-preg">
+          <figcaption>¿Qué tan fácil fue <span class="hl">comprar el Ferrari Challenge</span>?</figcaption>
+          <img src="assets/guion/carrito-ferrari.png" alt="Ferrari 296 Challenge en el carrito, a $12.95, con «Remove»." width="643" height="184" loading="lazy">
+        </figure>
+        <figure class="gu-preg">
+          <figcaption>¿Qué tan fácil fue <span class="hl">encontrar la serie</span> de la Ferrari Challenge?</figcaption>
+          <img src="assets/guion/logo-ferrari-challenge.png" alt="Logo de la Ferrari 296 Challenge" width="267" height="112" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="preguntas-cualitativas" aria-labelledby="preguntas-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="preguntas-titulo">Preguntas Cualitativas</h2><p class="sec-sub">Entendiendo los detalles</p></div>
+        <div class="sec-nav"><a href="#cuestionario" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Cuestionario</a><a href="#cierre" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-abajo.svg" alt="">Ir a Cierre</a></div>
+      </div>
+      <ol class="gu-preguntas">
+        <li>¿Tuviste alguna complicación con algo en particular? ¿Algo que haya sido incómodo o difícil de entender?</li>
+        <li>¿Cambiarías algo? ¿Podrías remarcar cosas positivas y negativas de este prototipo?</li>
+        <li>¿Buscabas o necesitabas alguna información específica que no estaba ahí?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="cierre" aria-labelledby="cierre-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="cierre-titulo">Cierre</h2><p class="sec-sub">Agradecimientos</p></div>
+        <div class="sec-nav"><a href="#preguntas-cualitativas" class="btn btn--md btn-info"><img class="btn-icon" src="assets/ico-flecha-arriba.svg" alt="">Ir a Preguntas Cualitativas</a></div>
+      </div>
+      <div class="gu-texto">
+        <p>Muchas gracias por tu participación hoy. Llegamos al final.</p>
+        <p>¿Hay alguna pregunta o comentario extra que quieras compartir conmigo?</p>
+        <p>Perfecto. Gracias de nuevo y que tengas buen día.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="menu-capas.js" defer></script>
+<script src="estructura.js" defer></script>
+</body>
+</html>

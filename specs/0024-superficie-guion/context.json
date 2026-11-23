@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "u-0024-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): última página del proyecto, a la que lleva «Leer guión completo», según la referencia 'guion' y 8 imágenes provistas; las imágenes que no estén, como placeholders. «Intentar en prototipo» de las tareas 1 y 2 abre en otra pestaña los enlaces de Figma dados. Textos en Poppins Light Italic 24 con las palabras en #BCA447 en italic, salvo Cuestionario (como antes: Light, con lo dorado en Regular) y Preguntas Cualitativas (Exo 2 Light 32). «Ver video» abre en otra pestaña el video de Drive dado."
+    },
+    {
+      "id": "s-referencia",
+      "kind": "file",
+      "reference": "specs/0024-superficie-guion/referencia-figma.webp",
+      "sha256": "4a81d1768ee4d7ea95410430e9d87743873d6b0379b19c83e3c76b7fb6949e53"
+    },
+    {
+      "id": "s-plantilla",
+      "kind": "file",
+      "reference": "superficie-usuario-1.html",
+      "sha256": "d3309f4a888e011273831243a1cccbc14707e2763c25ce99fde233cc74c01f34"
+    },
+    {
+      "id": "u-0024-qa",
+      "kind": "user",
+      "reference": "Correcciones del usuario en chat 2026-11-22: al chip «Clase D» le falta el ícono ico-auto en #9B3F06; 16 px entre el título Tarea 1/Tarea 2 y el botón; la imagen del primer placeholder está en assets con el nombre «contexto»."
+    },
+    {
+      "id": "u-0024-qa2",
+      "kind": "user",
+      "reference": "Corrección del usuario en chat 2026-11-22: la imagen contexto lleva corner radius de 8 px."
+    }
+  ],
+  "facts": [
+    {
+      "id": "o-design",
+      "area": "product",
+      "statement": "La referencia (519 × 2000, escala ~1:3,7) muestra 'Guión de las pruebas' con breadcrumb '… › Superficie › Guión' y 7 secciones con botones 'Ir a…': Introducción (4 párrafos), Contexto (4 filas texto + imagen alternadas: video de iRacing, gráfico, licencias, carrera con horario), Ambientación (5 párrafos), Instrucciones (2 párrafos y Tarea 1 y 2 con 'Intentar en prototipo', enunciado, logo de la serie con chip Clase D y auto), Cuestionario (4 preguntas '¿Qué tan fácil fue…?' en 2 × 2 con imagen), Preguntas Cualitativas (3 preguntas numeradas) y Cierre (3 párrafos).",
+      "status": "observed",
+      "source": "s-referencia"
+    },
+    {
+      "id": "o-plantilla",
+      "area": "technical",
+      "statement": "Las páginas de usuario (specs 0022-0023) usan topbar con breadcrumb de 3 niveles, .layer-sec con .sec-header y definen .sr-only en su CSS.",
+      "status": "observed",
+      "source": "s-plantilla"
+    },
+    {
+      "id": "d-guion",
+      "area": "product",
+      "statement": "Página del guión con las tipografías indicadas por el usuario, 8 imágenes provistas, placeholders para el resto, 'Intentar en prototipo' y 'Ver video' con los enlaces dados.",
+      "status": "confirmed",
+      "source": "u-0024-request"
+    },
+    {
+      "id": "d-qa",
+      "area": "product",
+      "statement": "Chip «Clase D» con ícono del auto en #9B3F06; 16 px entre título y botón de cada tarea; primera imagen de Contexto: assets/contexto.png.",
+      "status": "confirmed",
+      "source": "u-0024-qa"
+    },
+    {
+      "id": "d-radio",
+      "area": "product",
+      "statement": "La imagen de contexto del guión tiene radio de 8 px.",
+      "status": "confirmed",
+      "source": "u-0024-qa2"
+    }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que revisa las pruebas de usabilidad",
+    "problem": "«Leer guión completo» no tiene destino.",
+    "outcome": "superficie-guion.html muestra el guión de las pruebas; «Leer guión completo» lleva a ella.",
+    "scope": "Incluye: página y CSS nuevos, imágenes en assets/guion, enlace desde superficie.html, SEO, llms.txt y docs. Excluye: imágenes que faltan (placeholders).",
+    "acceptance": "1) Se ve como la referencia a 1920 px. 2) Tipografías indicadas (Poppins 300 italic 24 con dorado italic 400; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32). 3) «Leer guión completo» lleva a la página; «Ver Video» e «Intentar en prototipo» abren sus enlaces en otra pestaña; los «Ir a…» y el breadcrumb funcionan. 4) Responsive sin scroll horizontal; .sr-only ocultos; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector entiende cómo se condujeron las pruebas.",
+    "evidence": [
+      "o-design",
+      "o-plantilla",
+      "d-guion",
+      "d-qa",
+      "d-radio"
+    ]
+  }
+}

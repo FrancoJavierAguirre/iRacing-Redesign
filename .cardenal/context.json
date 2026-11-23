@@ -2,85 +2,84 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0023-request",
+      "id": "u-0024-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): hacer exactamente lo mismo que la página del usuario 1 (Franco) para el usuario 2 (Martín) y el usuario 3 (Fede), según sus referencias. Solo cambian las palabras, la cantidad de placeholders y las estrellas; «Ver video» lleva al video de cada usuario."
+      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): última página del proyecto, a la que lleva «Leer guión completo», según la referencia 'guion' y 8 imágenes provistas; las imágenes que no estén, como placeholders. «Intentar en prototipo» de las tareas 1 y 2 abre en otra pestaña los enlaces de Figma dados. Textos en Poppins Light Italic 24 con las palabras en #BCA447 en italic, salvo Cuestionario (como antes: Light, con lo dorado en Regular) y Preguntas Cualitativas (Exo 2 Light 32). «Ver video» abre en otra pestaña el video de Drive dado."
     },
     {
-      "id": "s-ref-2",
+      "id": "s-referencia",
       "kind": "file",
-      "reference": "specs/0023-superficie-usuarios-2-3/referencia-usuario-2.webp",
-      "sha256": "9298378bae93bccfaf6910c06e6689734257e5cf3c0e051e66d078c203379bf7"
+      "reference": "specs/0024-superficie-guion/referencia-figma.webp",
+      "sha256": "4a81d1768ee4d7ea95410430e9d87743873d6b0379b19c83e3c76b7fb6949e53"
     },
     {
-      "id": "s-ref-3",
-      "kind": "file",
-      "reference": "specs/0023-superficie-usuarios-2-3/referencia-usuario-3.webp",
-      "sha256": "c4ba1024434b6328950ec479d15df53cf19c0b0c6278b2454b1dfaa6c06a784d"
-    },
-    {
-      "id": "s-usuario-1",
+      "id": "s-plantilla",
       "kind": "file",
       "reference": "superficie-usuario-1.html",
       "sha256": "d3309f4a888e011273831243a1cccbc14707e2763c25ce99fde233cc74c01f34"
     },
     {
-      "id": "u-0023-qa",
+      "id": "u-0024-qa",
       "kind": "user",
-      "reference": "Corrección del usuario en chat 2026-11-22: en la página del usuario 2, a la derecha de la última estrella de la primera y segunda fila (a 40 px), el texto «No terminó la tarea» en Exo 2 Light 16 y la imagen «shrug» provista."
+      "reference": "Correcciones del usuario en chat 2026-11-22: al chip «Clase D» le falta el ícono ico-auto en #9B3F06; 16 px entre el título Tarea 1/Tarea 2 y el botón; la imagen del primer placeholder está en assets con el nombre «contexto»."
+    },
+    {
+      "id": "u-0024-qa2",
+      "kind": "user",
+      "reference": "Corrección del usuario en chat 2026-11-22: la imagen contexto lleva corner radius de 8 px."
     }
   ],
   "facts": [
     {
-      "id": "o-martin",
+      "id": "o-design",
       "area": "product",
-      "statement": "Referencia del usuario 2 (742 × 2000): 'Usuario 2 | Martín'; estrellas 0, 0, 4 y 5; tres preguntas cualitativas con su captura (complicación: 'Encontrar la serie'; cambios: 'Positivo: la facilidad de la compra, muy visible'; información faltante: 'Los logos de los autos y pistas'); 6 insights (1 problema, 1 positivo, 4 sugerencias).",
+      "statement": "La referencia (519 × 2000, escala ~1:3,7) muestra 'Guión de las pruebas' con breadcrumb '… › Superficie › Guión' y 7 secciones con botones 'Ir a…': Introducción (4 párrafos), Contexto (4 filas texto + imagen alternadas: video de iRacing, gráfico, licencias, carrera con horario), Ambientación (5 párrafos), Instrucciones (2 párrafos y Tarea 1 y 2 con 'Intentar en prototipo', enunciado, logo de la serie con chip Clase D y auto), Cuestionario (4 preguntas '¿Qué tan fácil fue…?' en 2 × 2 con imagen), Preguntas Cualitativas (3 preguntas numeradas) y Cierre (3 párrafos).",
       "status": "observed",
-      "source": "s-ref-2"
-    },
-    {
-      "id": "o-fede",
-      "area": "product",
-      "statement": "Referencia del usuario 3 (1098 × 2000): 'Usuario 3 | Fede'; estrellas 2, 4, 5 y 3; una pregunta cualitativa (información faltante: 'Una estrellita para agregar el auto como favorito') con su captura; 6 insights (2 problemas, 1 positivo, 3 sugerencias).",
-      "status": "observed",
-      "source": "s-ref-3"
+      "source": "s-referencia"
     },
     {
       "id": "o-plantilla",
       "area": "technical",
-      "statement": "superficie-usuario-1.html y superficie-usuario.css forman la plantilla aprobada en la spec 0022 (incluye .sr-only para la página).",
+      "statement": "Las páginas de usuario (specs 0022-0023) usan topbar con breadcrumb de 3 niveles, .layer-sec con .sec-header y definen .sr-only en su CSS.",
       "status": "observed",
-      "source": "s-usuario-1"
+      "source": "s-plantilla"
     },
     {
-      "id": "d-paginas",
+      "id": "d-guion",
       "area": "product",
-      "statement": "Las páginas de los usuarios 2 y 3 repiten la del usuario 1; cambian textos, cantidad de imágenes provisorias, estrellas y el video.",
+      "statement": "Página del guión con las tipografías indicadas por el usuario, 8 imágenes provistas, placeholders para el resto, 'Intentar en prototipo' y 'Ver video' con los enlaces dados.",
       "status": "confirmed",
-      "source": "u-0023-request"
+      "source": "u-0024-request"
     },
     {
-      "id": "d-nota",
+      "id": "d-qa",
       "area": "product",
-      "statement": "Usuario 2: las filas 1 y 2 de estrellas llevan «No terminó la tarea» y la imagen shrug a 40 px de la última estrella.",
+      "statement": "Chip «Clase D» con ícono del auto en #9B3F06; 16 px entre título y botón de cada tarea; primera imagen de Contexto: assets/contexto.png.",
       "status": "confirmed",
-      "source": "u-0023-qa"
+      "source": "u-0024-qa"
+    },
+    {
+      "id": "d-radio",
+      "area": "product",
+      "statement": "La imagen de contexto del guión tiene radio de 8 px.",
+      "status": "confirmed",
+      "source": "u-0024-qa2"
     }
   ],
   "questions": [],
   "change": {
     "actor": "Lector del portfolio que revisa las pruebas de usabilidad",
-    "problem": "«Ver cuestionario» de los usuarios 2 y 3 no tiene destino.",
-    "outcome": "superficie-usuario-2.html y superficie-usuario-3.html con su cuestionario, preguntas e insights; «Ver cuestionario» de cada card lleva a su página.",
-    "scope": "Incluye: dos páginas nuevas con la plantilla del usuario 1, proporciones de las capturas, enlaces en superficie.html, SEO, llms.txt y docs. Excluye: imágenes finales.",
-    "acceptance": "1) Cada página se ve como su referencia a 1920 px, con placeholders. 2) Mismas medidas que la página del usuario 1. 3) «Ver cuestionario» lleva a cada página; «Ver Video» abre el video de cada usuario; los «Ir a…» y el breadcrumb funcionan. 4) Responsive sin scroll horizontal; textos .sr-only ocultos; SEO, llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector puede comparar cómo calificaron y qué opinaron los tres usuarios.",
+    "problem": "«Leer guión completo» no tiene destino.",
+    "outcome": "superficie-guion.html muestra el guión de las pruebas; «Leer guión completo» lleva a ella.",
+    "scope": "Incluye: página y CSS nuevos, imágenes en assets/guion, enlace desde superficie.html, SEO, llms.txt y docs. Excluye: imágenes que faltan (placeholders).",
+    "acceptance": "1) Se ve como la referencia a 1920 px. 2) Tipografías indicadas (Poppins 300 italic 24 con dorado italic 400; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32). 3) «Leer guión completo» lleva a la página; «Ver Video» e «Intentar en prototipo» abren sus enlaces en otra pestaña; los «Ir a…» y el breadcrumb funcionan. 4) Responsive sin scroll horizontal; .sr-only ocultos; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector entiende cómo se condujeron las pruebas.",
     "evidence": [
-      "o-martin",
-      "o-fede",
+      "o-design",
       "o-plantilla",
-      "d-paginas",
-      "d-nota"
+      "d-guion",
+      "d-qa",
+      "d-radio"
     ]
   }
 }

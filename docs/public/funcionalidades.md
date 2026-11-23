@@ -20,6 +20,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Cuestionario del Usuario 1 (Superficie) | `superficie-usuario-1.html` | Implementado (imágenes provisorias) |
 | Cuestionario del Usuario 2 (Superficie) | `superficie-usuario-2.html` | Implementado (imágenes provisorias) |
 | Cuestionario del Usuario 3 (Superficie) | `superficie-usuario-3.html` | Implementado (imágenes provisorias) |
+| Guión de las pruebas (Superficie) | `superficie-guion.html` | Implementado (1 imagen provisoria) |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -146,6 +147,18 @@ Tienen la misma estructura y navegación que la del usuario 1. «Ver Video» abr
 - **Usuario 3 | Fede:** puntuó 2, 4, 5 y 3 estrellas. Responde una pregunta (le faltó una estrellita para marcar el auto como favorito) con su captura provisoria. Tiene 6 insights.
 
 Los insights de estas páginas siguen sus referencias y no coinciden exactamente con las cards de Superficie.
+## Guión de las pruebas (`superficie-guion.html`)
+
+Se llega desde «Leer guión completo» (Pruebas de Usabilidad). Arriba: breadcrumb «Rediseño UX/UI › Superficie › Guión», el título «Guión de las pruebas» y «Ver Video», que abre una de las pruebas en otra pestaña. Es el guion que se leyó a cada usuario, en siete secciones con sus botones «Ir a…»:
+1. **Introducción** («Agradecimientos y saludos»): presentación, permiso para grabar, «no hay respuestas correctas o incorrectas» y pedido de pensar en voz alta.
+2. **Contexto** («Sobre iRacing»): qué es el juego, su objetivo y la puntuación de habilidad, las licencias y el horario fijo de las carreras. Cada bloque se acompaña de una imagen; la del gráfico es provisoria.
+3. **Ambientación** («En la piel del piloto»): el escenario del usuario nuevo que llegó a la licencia D de sport cars.
+4. **Instrucciones** («Probando el prototipo»): cómo hacer la prueba y las dos tareas, cada una con «Intentar en prototipo» (abre el prototipo de Figma en otra pestaña), el enunciado, el logo de la serie con su licencia Clase D y el auto.
+5. **Cuestionario** («Facilidad de las tareas»): las cuatro preguntas «¿Qué tan fácil fue…?», cada una con su imagen.
+6. **Preguntas Cualitativas** («Entendiendo los detalles»): las tres preguntas abiertas, numeradas.
+7. **Cierre** («Agradecimientos»).
+
+En tablet y celular, las filas de Contexto y el cuestionario pasan a una columna, con la imagen debajo del texto.
 ## Superficie (`superficie.html`) — UX Writing y Sistema de Diseño
 
 Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja a esa sección. Arriba a la derecha, «Ver Prototipo» abre el prototipo de Figma en una pestaña nueva.
@@ -182,7 +195,7 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - **Insights:** lo que sí funcionó (ejecución de la tarea 2, feedbacks, CTA y tablas) y lo que no (filtros, elección del auto favorito y el problema del usuario nuevo).
     - **Usuarios:** una card por usuario (Franco, Martín y Fede) con lo que le costó, lo que le resultó fácil y sus sugerencias. «Ver video» abre la grabación de la prueba en Google Drive, en otra pestaña.
     - **Conclusiones:** «Fue muy mala idea dejar filtros previamente activados y muy mal diseñados» y una card «Filtros» con el problema y sus causas.
-    - «Ver cuestionario» de cada usuario lleva a su página (`superficie-usuario-1.html`, `-2` y `-3`). Todavía no tiene destino «Leer guión completo» (página que se hará después). «Ir a Iteraciones» lleva a la sección siguiente.
+    - «Ver cuestionario» de cada usuario lleva a su página (`superficie-usuario-1.html`, `-2` y `-3`). «Leer guión completo» lleva al guión (`superficie-guion.html`). Ya no quedan botones sin destino en Superficie. «Ir a Iteraciones» lleva a la sección siguiente.
 17. **Iteraciones** («Puliendo el producto»): qué cambió después de las pruebas.
     - **License Progress:** «Solución para nuevos usuarios» con cuatro puntos (separado por disciplinas, barra de progresión de licencia, primero solo lo que puede correr y luego lo que puede comprar) y «Probar funcionalidad», que abre el prototipo de Figma en otra pestaña.
     - **All Series**, **Filtros y búsqueda** y **Registro a la carrera:** cada una compara «Antes» y «Después» y tiene un botón «Probar…» que abre su prototipo en otra pestaña. All Series suma una imagen de la pantalla nueva con flechas que señalan cada cambio.
