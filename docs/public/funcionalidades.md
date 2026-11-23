@@ -18,6 +18,8 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
 | Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones, Prototipo y el cierre «Fin del proyecto» implementados (Iteraciones y Prototipo con imágenes provisorias) |
 | Cuestionario del Usuario 1 (Superficie) | `superficie-usuario-1.html` | Implementado (imágenes provisorias) |
+| Cuestionario del Usuario 2 (Superficie) | `superficie-usuario-2.html` | Implementado (imágenes provisorias) |
+| Cuestionario del Usuario 3 (Superficie) | `superficie-usuario-3.html` | Implementado (imágenes provisorias) |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -137,6 +139,13 @@ Se llega desde «Ver cuestionario» de la card «Usuario 1 | Franco» (Pruebas d
 3. **Insights** («Descubrimientos para mejorar»): los 4 hallazgos de la card del usuario 1, con su ícono.
 
 En celular las estrellas se achican y se acercan; las capturas ocupan el ancho.
+## Cuestionarios de los usuarios 2 y 3 (`superficie-usuario-2.html` y `superficie-usuario-3.html`)
+
+Tienen la misma estructura y navegación que la del usuario 1. «Ver Video» abre el video de cada usuario, y el breadcrumb termina en su nombre.
+- **Usuario 2 | Martín:** puntuó 0, 0, 4 y 5 estrellas; a la derecha de las dos primeras filas se lee «No terminó la tarea» con un emoji de shrug (en celular, debajo). Responde tres preguntas (le costó encontrar la serie; destaca lo visible y fácil de la compra; le faltaron los logos de autos y pistas), cada una con su captura provisoria. Tiene 6 insights.
+- **Usuario 3 | Fede:** puntuó 2, 4, 5 y 3 estrellas. Responde una pregunta (le faltó una estrellita para marcar el auto como favorito) con su captura provisoria. Tiene 6 insights.
+
+Los insights de estas páginas siguen sus referencias y no coinciden exactamente con las cards de Superficie.
 ## Superficie (`superficie.html`) — UX Writing y Sistema de Diseño
 
 Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja a esa sección. Arriba a la derecha, «Ver Prototipo» abre el prototipo de Figma en una pestaña nueva.
@@ -173,7 +182,7 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - **Insights:** lo que sí funcionó (ejecución de la tarea 2, feedbacks, CTA y tablas) y lo que no (filtros, elección del auto favorito y el problema del usuario nuevo).
     - **Usuarios:** una card por usuario (Franco, Martín y Fede) con lo que le costó, lo que le resultó fácil y sus sugerencias. «Ver video» abre la grabación de la prueba en Google Drive, en otra pestaña.
     - **Conclusiones:** «Fue muy mala idea dejar filtros previamente activados y muy mal diseñados» y una card «Filtros» con el problema y sus causas.
-    - «Ver cuestionario» del usuario 1 lleva a su página (`superficie-usuario-1.html`). Todavía no tienen destino: «Leer guión completo» y «Ver cuestionario» de los usuarios 2 y 3 (páginas que se harán después). «Ir a Iteraciones» lleva a la sección siguiente.
+    - «Ver cuestionario» de cada usuario lleva a su página (`superficie-usuario-1.html`, `-2` y `-3`). Todavía no tiene destino «Leer guión completo» (página que se hará después). «Ir a Iteraciones» lleva a la sección siguiente.
 17. **Iteraciones** («Puliendo el producto»): qué cambió después de las pruebas.
     - **License Progress:** «Solución para nuevos usuarios» con cuatro puntos (separado por disciplinas, barra de progresión de licencia, primero solo lo que puede correr y luego lo que puede comprar) y «Probar funcionalidad», que abre el prototipo de Figma en otra pestaña.
     - **All Series**, **Filtros y búsqueda** y **Registro a la carrera:** cada una compara «Antes» y «Después» y tiene un botón «Probar…» que abre su prototipo en otra pestaña. All Series suma una imagen de la pantalla nueva con flechas que señalan cada cambio.

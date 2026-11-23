@@ -1196,32 +1196,8 @@
           "sha256": "d3309f4a888e011273831243a1cccbc14707e2763c25ce99fde233cc74c01f34"
         },
         {
-          "path": "superficie-usuario.css",
-          "sha256": "de4ca879fa78c7049d0f1676d3bb21294dd758445c96de3442791fe781c06a96"
-        },
-        {
-          "path": "superficie.html",
-          "sha256": "e86ebb1cb86018346a93c3973a9e3925afeeb200520465c17a40ed56ac38975e"
-        },
-        {
           "path": "assets/ico-star-vacia.svg",
           "sha256": "d702dbf6c8709492006150fd5f5fe7ca16ed83e65d5f9e4bcab56da98041895d"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "ec7f5e677d1d77d9cfa589313a899c974270b547102708dd5fb7aabc4f8fc592"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "fcaa8a6f4eed054660f2cda149a750884b8789ed7f7fcae8a29b199526031023"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "bfa98343c6eb47e62af15f0e3e61e44fb39844d5878799de6acc33736f850e51"
-        },
-        {
-          "path": "docs/tech/dependencies/README.md",
-          "sha256": "b1cba18f754f862a3039b9806bc4a62bdfe8fa0750acf50e9dfcae547ac265d3"
         },
         {
           "path": "specs/0022-superficie-usuario-1/spec.md",
@@ -1236,7 +1212,7 @@
           "sha256": "4c719f9598ef6c90a0206519f77b88e4e8d51b25cc50fd8eb9e051f073629d18"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel del navegador oculto, sin captura): a 1920 px, «Qué tan fácil fue…» Exo 2 300 24 a 48 px; tareas Exo 2 300 32; estrellas 48 × 48 con 80 px entre sí y a 48 px del texto; 96 px entre grupos; pregunta Exo 2 300 24, respuesta Exo 2 300 italic 40, 56 px entre texto, texto e imagen (1162 × 684), 96 px entre preguntas; insights Poppins 300 24, ícono 32 px a 17 px, 56 px entre ítems. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas; «Ver cuestionario» del usuario 1 enlaza la página. Corrección de QA del usuario: el botón de la barra superior dice «Ver Video». Bug encontrado por el usuario en QA: los textos .sr-only se veían porque la clase no estaba definida para esta página; se agregó en superficie-usuario.css y se comprobó que los 5 quedan ocultos (position absolute, 1 px, clip).",
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel del navegador oculto, sin captura): a 1920 px, «Qué tan fácil fue…» Exo 2 300 24 a 48 px; tareas Exo 2 300 32; estrellas 48 × 48 con 80 px entre sí y a 48 px del texto; 96 px entre grupos; pregunta Exo 2 300 24, respuesta Exo 2 300 italic 40, 56 px entre texto, texto e imagen (1162 × 684), 96 px entre preguntas; insights Poppins 300 24, ícono 32 px a 17 px, 56 px entre ítems. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas; «Ver cuestionario» del usuario 1 enlaza la página. Corrección de QA del usuario: el botón de la barra superior dice «Ver Video». Bug encontrado por el usuario en QA: los textos .sr-only se veían porque la clase no estaba definida para esta página; se agregó en superficie-usuario.css y se comprobó que los 5 quedan ocultos (position absolute, 1 px, clip). Evidencia rotada en 0023: archivos modificados por los cuestionarios de los usuarios 2 y 3; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1246,6 +1222,93 @@
           "evidence": {
             "path": ".cardenal/revision-0022.md",
             "sha256": "7c936548878e851f8db7741c8e0929dffb54c7d90ad39e2b592cb71ad50939f6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T23",
+      "title": "Superficie: cuestionarios de los usuarios 2 y 3",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0023) y specs/0023-superficie-usuarios-2-3/spec.md.",
+      "dependsOn": [
+        "T22"
+      ],
+      "files": [
+        "superficie-usuario-2.html",
+        "superficie-usuario-3.html",
+        "superficie-usuario.css",
+        "superficie.html",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "docs/tech/dependencies/README.md",
+        "specs/0023-superficie-usuarios-2-3/referencia-usuario-2.webp",
+        "specs/0023-superficie-usuarios-2-3/referencia-usuario-3.webp",
+        "assets/shrug.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie-usuario-2.html",
+          "sha256": "e81bc34fe11635dbf9c1c575a4aaa8b6ade5abe5f4080b3b18a6849d6ccf2159"
+        },
+        {
+          "path": "superficie-usuario-3.html",
+          "sha256": "8f7c7ca79bdd132f466f680f55abacb1fd397bf7ea0af6e5144b79e242f1559c"
+        },
+        {
+          "path": "superficie-usuario.css",
+          "sha256": "4abfd27e7b64785cfa48677b2e7de231472c428ab2118344f2f7ddcd795bdf3d"
+        },
+        {
+          "path": "superficie.html",
+          "sha256": "9032fd31e2e57a1f6c9e13c021afc31436123b268dc6adb47b5542bb8a529054"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "80aad2e2d509486c590006904a4b561ebab7689e0432a23dd88f92d8ec2198fe"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "de4c8b464512f973ed54982cab1d2483504980845c58129bb44994c011a1c5e2"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "1359d69b0bda5629e96d527a6acc15085143155530d068d72e2bfba8e5447438"
+        },
+        {
+          "path": "docs/tech/dependencies/README.md",
+          "sha256": "99a5160fbf6d6cdf19f19bb692d09fcce23e87a3da317dff74a1d04e84266657"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/spec.md",
+          "sha256": "11fd0cb9d77fee1e979246d4b0d09b4781cfb1d0db28cc8590b91996bb20c068"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/tasks.md",
+          "sha256": "b657adb55534bbdf7e07f8ee26e734226b0239f45653f14b2a7f5b94fae15e28"
+        },
+        {
+          "path": "assets/shrug.png",
+          "sha256": "d5a15075268a368ebea238c3891a942f61bd73003a52d6c45339e87ff09e2880"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/context.json",
+          "sha256": "dc511968c4b21f48591a8757fbcd5f045e22b6340dc8aa8b000068573eb695ab"
+        }
+      ],
+      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-22: Lo apruebo (tras agregar la nota No terminó la tarea en Martín)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0023.md",
+            "sha256": "d3ce611a4d55c91511ac6fc7b2623df4001751d97d2dc726e5b6e78404b76693"
           }
         }
       ]

@@ -13,6 +13,10 @@
 .page-usuario .cu-tarea .hl { font-weight: inherit; color: #bca447; }
 .page-usuario .cu-estrellas { display: flex; gap: clamp(20px, 4.1667vw, 80px); }
 .page-usuario .cu-estrellas img { width: clamp(32px, 2.5vw, 48px); height: clamp(32px, 2.5vw, 48px); object-fit: contain; display: block; }
+/* Nota a la derecha de la última estrella (usuario 2): fuera del flujo para que las estrellas sigan centradas */
+.page-usuario .cu-fila { position: relative; }
+.page-usuario .cu-nota { position: absolute; top: 50%; left: calc(100% + 40px); transform: translateY(-50%); display: flex; align-items: center; gap: 8px; margin: 0; white-space: nowrap; font: 300 16px/1.2 var(--font-display); color: #fff; }
+.page-usuario .cu-nota img { display: block; flex: none; }
 
 /* Preguntas cualitativas */
 .page-usuario .cu-preguntas { display: flex; flex-direction: column; gap: clamp(56px, 5vw, 96px); margin-top: clamp(40px, 3.75vw, 72px); }
@@ -21,6 +25,10 @@
 .page-usuario .cu-r { margin: 0; }
 .page-usuario .cu-r p { margin: 0; font: italic 300 clamp(24px, 2.0833vw, 40px)/1.2 var(--font-display); color: #fff; }
 .page-usuario .cu-img { width: 100%; max-width: 1162px; aspect-ratio: 1162 / 684; min-height: 0; }
+/* proporciones de las capturas del usuario 2 (referencia de la spec 0023) */
+.page-usuario .cu-img--lista { aspect-ratio: 1162 / 551; }
+.page-usuario .cu-img--racing { aspect-ratio: 1162 / 642; }
+.page-usuario .cu-img--tabla { aspect-ratio: 1162 / 600; }
 
 /* Insights: ícono de 32 px a 17 px del texto, 56 px entre ítems */
 .page-usuario .cu-insights { display: flex; flex-direction: column; gap: clamp(32px, 2.9167vw, 56px); margin: clamp(40px, 3.75vw, 72px) 0 0; padding: 0; list-style: none; }
@@ -32,5 +40,7 @@
 
 @media (max-width: 640px) {
   .page-usuario .cu-estrellas { gap: 16px; }
+  .page-usuario .cu-fila { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .page-usuario .cu-nota { position: static; transform: none; }
   .page-usuario .cu-insights li { align-items: flex-start; }
 }

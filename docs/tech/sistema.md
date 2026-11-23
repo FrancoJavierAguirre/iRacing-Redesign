@@ -29,6 +29,8 @@ superficie.html     Capa 5: Superficie (UX Writing y Sistema de Diseño)
 superficie.css      Específico de body.page-superficie
 superficie.js       Ciclo de estilos de «Cambiar estilo» (Botones)
 superficie-usuario-1.html  Cuestionario del Usuario 1 (pruebas de usabilidad)
+superficie-usuario-2.html  Cuestionario del Usuario 2 (misma plantilla)
+superficie-usuario-3.html  Cuestionario del Usuario 3 (misma plantilla)
 superficie-usuario.css     Específico de body.page-usuario (cuestionarios de usuarios)
 script.js           Comportamiento del Home
 menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
@@ -120,10 +122,11 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - Preguntas: `figure.cu-pregunta` con `.cu-p` (Exo 2 300 24), `blockquote.cu-r` (Exo 2 300 italic 40) y `.media-placeholder.cu-img` (1162 × 684 máx.), a 56 px entre sí; 96 px entre preguntas.
 - Insights: `ul.cu-insights` con `li.cu-bad|cu-ok|cu-idea` (texto en `span`, Poppins 300 24), ícono `::before` de 32 px (los mismos SVG que `.pu-items`) a 17 px; 56 px entre ítems.
 - Las medidas escalan con `clamp()`; en ≤ 640 px las estrellas van a 32 px con gap 16 y los íconos de insights se alinean arriba.
+- Usuarios 2 y 3 (spec 0023): `superficie-usuario-2.html` y `-3.html` son copias de la plantilla con otros textos, estrellas, video y cantidad de preguntas (3 y 1). Las capturas del usuario 2 usan `.cu-img--lista`, `--racing` y `--tabla` (1162 × 551, 642 y 600); el resto, la proporción por defecto 1162 × 684. Un cambio de estructura en la plantilla debe replicarse en las tres páginas. En el usuario 2, las dos filas de 0 estrellas van dentro de `.cu-fila` con `p.cu-nota` («No terminó la tarea», Exo 2 300 16, y `assets/shrug.png` de 44 × 34 a 8 px): posición absoluta a 40 px de la última estrella para no descentrar las estrellas; en ≤ 640 px pasa debajo.
 
 ### Página de Superficie (`superficie.html` + `superficie.css`, spec 0010, parte UX Writing)
 
-- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0020 cubre «Leer guión completo» (`#guion`, página futura) y «Ver cuestionario» de los usuarios 2 y 3 (`#cuestionario-2..3`; el del usuario 1 enlaza `superficie-usuario-1.html` desde la spec 0022); «Ir a Iteraciones» e «Ir a Prototipo» ya tienen destino. «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
+- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0020 cubre «Leer guión completo» (`#guion`, página futura) ; los tres «Ver cuestionario» enlazan `superficie-usuario-1.html`, `-2` y `-3` (specs 0022 y 0023); «Ir a Iteraciones» e «Ir a Prototipo» ya tienen destino. «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
 - **«Ver Prototipo»:** `a.topbar-action` con `target="_blank" rel="noopener"` hacia el prototipo de Figma, `assets/ico-play.svg` y texto `.sr-only` que avisa que se abre en una pestaña nueva.
 - **Círculo de Oro:** `.oro[data-activo]` con 3 `span.oro-ring` concéntricos de CSS (565, 420 y 249 px a 1920), apilados con ¿Por qué? arriba, ¿Cómo? en el medio y ¿Qué? abajo. Usan los colores de los PNG del usuario: activo `rgba(0, 87, 208, .15)` e inactivo `rgba(0, 0, 0, .6)`. Como son semitransparentes, el círculo de abajo se ve a través del de arriba. La etiqueta activa va en dorado. Los párrafos son Poppins 300 itálica de 24 px, y las frases doradas, Poppins 600 itálica (cargada en el link de fuentes). Es `aria-hidden`, porque el texto lo explica.
 - **Matriz de Voz y Guía de Estilo:** `table.mtx` semánticas (`th scope`) con encabezados de tarjeta (`.mtx-card`). En ≤ 900 px pasan a bloques y cada celda muestra `data-col` con `::before`.
@@ -200,7 +203,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Superficie: imágenes y gif finales de Iteraciones y Prototipo, capturas del cuestionario del usuario 1, página de guión completo y cuestionarios de los usuarios 2 y 3.
+- Superficie: imágenes y gif finales de Iteraciones y Prototipo, capturas de los cuestionarios de los 3 usuarios y página de guión completo.
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
@@ -222,6 +225,8 @@ Metadatos no visibles en el `<head>` de las 3 páginas y un `llms.txt` en la ra�
 | `esqueleto.html` | `Esqueleto — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `superficie.html` | `Superficie — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `superficie-usuario-1.html` | `Usuario 1: cuestionario de la prueba de usabilidad — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
+| `superficie-usuario-2.html` | `Usuario 2: cuestionario de la prueba de usabilidad — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
+| `superficie-usuario-3.html` | `Usuario 3: cuestionario de la prueba de usabilidad — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 
 Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCreated: "2025"`, `author` (Person Franco Aguirre, Diseñador UX/UI) y `about` (iRacing, Diseño UX/UI). Sin `url`, `image` ni `sameAs`.
 

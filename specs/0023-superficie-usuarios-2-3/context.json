@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "u-0023-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): hacer exactamente lo mismo que la página del usuario 1 (Franco) para el usuario 2 (Martín) y el usuario 3 (Fede), según sus referencias. Solo cambian las palabras, la cantidad de placeholders y las estrellas; «Ver video» lleva al video de cada usuario."
+    },
+    {
+      "id": "s-ref-2",
+      "kind": "file",
+      "reference": "specs/0023-superficie-usuarios-2-3/referencia-usuario-2.webp",
+      "sha256": "9298378bae93bccfaf6910c06e6689734257e5cf3c0e051e66d078c203379bf7"
+    },
+    {
+      "id": "s-ref-3",
+      "kind": "file",
+      "reference": "specs/0023-superficie-usuarios-2-3/referencia-usuario-3.webp",
+      "sha256": "c4ba1024434b6328950ec479d15df53cf19c0b0c6278b2454b1dfaa6c06a784d"
+    },
+    {
+      "id": "s-usuario-1",
+      "kind": "file",
+      "reference": "superficie-usuario-1.html",
+      "sha256": "d3309f4a888e011273831243a1cccbc14707e2763c25ce99fde233cc74c01f34"
+    },
+    {
+      "id": "u-0023-qa",
+      "kind": "user",
+      "reference": "Corrección del usuario en chat 2026-11-22: en la página del usuario 2, a la derecha de la última estrella de la primera y segunda fila (a 40 px), el texto «No terminó la tarea» en Exo 2 Light 16 y la imagen «shrug» provista."
+    }
+  ],
+  "facts": [
+    {
+      "id": "o-martin",
+      "area": "product",
+      "statement": "Referencia del usuario 2 (742 × 2000): 'Usuario 2 | Martín'; estrellas 0, 0, 4 y 5; tres preguntas cualitativas con su captura (complicación: 'Encontrar la serie'; cambios: 'Positivo: la facilidad de la compra, muy visible'; información faltante: 'Los logos de los autos y pistas'); 6 insights (1 problema, 1 positivo, 4 sugerencias).",
+      "status": "observed",
+      "source": "s-ref-2"
+    },
+    {
+      "id": "o-fede",
+      "area": "product",
+      "statement": "Referencia del usuario 3 (1098 × 2000): 'Usuario 3 | Fede'; estrellas 2, 4, 5 y 3; una pregunta cualitativa (información faltante: 'Una estrellita para agregar el auto como favorito') con su captura; 6 insights (2 problemas, 1 positivo, 3 sugerencias).",
+      "status": "observed",
+      "source": "s-ref-3"
+    },
+    {
+      "id": "o-plantilla",
+      "area": "technical",
+      "statement": "superficie-usuario-1.html y superficie-usuario.css forman la plantilla aprobada en la spec 0022 (incluye .sr-only para la página).",
+      "status": "observed",
+      "source": "s-usuario-1"
+    },
+    {
+      "id": "d-paginas",
+      "area": "product",
+      "statement": "Las páginas de los usuarios 2 y 3 repiten la del usuario 1; cambian textos, cantidad de imágenes provisorias, estrellas y el video.",
+      "status": "confirmed",
+      "source": "u-0023-request"
+    },
+    {
+      "id": "d-nota",
+      "area": "product",
+      "statement": "Usuario 2: las filas 1 y 2 de estrellas llevan «No terminó la tarea» y la imagen shrug a 40 px de la última estrella.",
+      "status": "confirmed",
+      "source": "u-0023-qa"
+    }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que revisa las pruebas de usabilidad",
+    "problem": "«Ver cuestionario» de los usuarios 2 y 3 no tiene destino.",
+    "outcome": "superficie-usuario-2.html y superficie-usuario-3.html con su cuestionario, preguntas e insights; «Ver cuestionario» de cada card lleva a su página.",
+    "scope": "Incluye: dos páginas nuevas con la plantilla del usuario 1, proporciones de las capturas, enlaces en superficie.html, SEO, llms.txt y docs. Excluye: imágenes finales.",
+    "acceptance": "1) Cada página se ve como su referencia a 1920 px, con placeholders. 2) Mismas medidas que la página del usuario 1. 3) «Ver cuestionario» lleva a cada página; «Ver Video» abre el video de cada usuario; los «Ir a…» y el breadcrumb funcionan. 4) Responsive sin scroll horizontal; textos .sr-only ocultos; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector puede comparar cómo calificaron y qué opinaron los tres usuarios.",
+    "evidence": [
+      "o-martin",
+      "o-fede",
+      "o-plantilla",
+      "d-paginas",
+      "d-nota"
+    ]
+  }
+}
