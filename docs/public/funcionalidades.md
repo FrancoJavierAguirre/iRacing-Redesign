@@ -144,7 +144,7 @@ Se llega desde «Ver cuestionario» de la card «Usuario 1 | Franco» (Pruebas d
 En celular las estrellas se achican y se acercan; las capturas ocupan el ancho.
 ## Cuestionarios de los usuarios 2 y 3 (`superficie-usuario-2.html` y `superficie-usuario-3.html`)
 
-Tienen la misma estructura y navegación que la del usuario 1. «Ver Video» abre el video de cada usuario, y el breadcrumb termina en su nombre.
+Tienen la misma estructura y navegación que la del usuario 1. En las tres páginas, el nombre del usuario en el breadcrumb («Franco», «Martín», «Fede») abre un menú, igual al de capas, para ir a los otros dos usuarios. «Ver Video» abre el video de cada usuario, y el breadcrumb termina en su nombre.
 - **Usuario 2 | Martín:** puntuó 0, 0, 4 y 5 estrellas; a la derecha de las dos primeras filas se lee «No terminó la tarea» con un emoji de shrug (en celular, debajo). Responde tres preguntas (le costó encontrar la serie; destaca lo visible y fácil de la compra; le faltaron los logos de autos y pistas), cada una con su video o captura de la prueba. Tiene 6 insights.
 - **Usuario 3 | Fede:** puntuó 2, 4, 5 y 3 estrellas. Responde una pregunta (le faltó una estrellita para marcar el auto como favorito) con un video de la prueba. Tiene 6 insights.
 

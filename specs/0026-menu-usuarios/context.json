@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "u-0026-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-23: agregar un menú igual al del breadcrumb (el que navega entre Estrategia, Superficie, Esqueleto, etc.) para navegar entre Fede, Franco y Martín, con el ícono ico-user en color #B7B7BA."
+    },
+    {
+      "id": "s-menu",
+      "kind": "file",
+      "reference": "menu-capas.js",
+      "sha256": "2ef262221a2781be25b63ae897a64b1cbe8f3c15c3874bd9eeb1dd3e6cd8b892"
+    },
+    {
+      "id": "s-spec-0003",
+      "kind": "file",
+      "reference": "specs/0003-menu-capas-topbar/spec.md",
+      "sha256": "76e5b17792ec6fe5fb57d12dc0d0d5a6ae96d05508c9809ade9917a6d8ffae5a"
+    },
+    {
+      "id": "s-usuario-1",
+      "kind": "file",
+      "reference": "superficie-usuario-1.html",
+      "sha256": "308620f7306d024ce645717e5b90380f156d0e855474bf9cbe329e4dd4647976"
+    }
+  ],
+  "facts": [
+    {
+      "id": "o-menu",
+      "area": "technical",
+      "statement": "Antes de este cambio, menu-capas.js manejaba un solo [data-capas] por página (querySelector); hoy recorre todos (abre/cierra con click en el disparador, click afuera y Escape, que devuelve el foco).",
+      "status": "observed",
+      "source": "s-menu"
+    },
+    {
+      "id": "o-patron",
+      "area": "product",
+      "statement": "En el menú de capas no aparece la capa actual (HU2 de la spec 0003): se listan las demás, cada una con ícono de 16 px.",
+      "status": "observed",
+      "source": "s-spec-0003"
+    },
+    {
+      "id": "o-breadcrumb",
+      "area": "technical",
+      "statement": "Las páginas de usuario tienen breadcrumb 'Rediseño UX/UI › Superficie (menú de capas) › <nombre>'; antes de este cambio el nombre era un span.current, hoy es el disparador del menú de usuarios.",
+      "status": "observed",
+      "source": "s-usuario-1"
+    },
+    {
+      "id": "d-menu-usuarios",
+      "area": "product",
+      "statement": "Menú de usuarios igual al de capas para navegar entre Franco, Martín y Fede, con ico-user en #B7B7BA.",
+      "status": "confirmed",
+      "source": "u-0026-request"
+    }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que revisa los cuestionarios de las pruebas",
+    "problem": "Para pasar de un usuario a otro hay que volver a Superficie.",
+    "outcome": "En cada página de usuario, el nombre del breadcrumb abre un menú con los otros dos usuarios.",
+    "scope": "Incluye: menu-capas.js para varias instancias, el menú en las 3 páginas de usuario, ícono gris, CSS, docs. Excluye: la página del guión y otras páginas.",
+    "acceptance": "1) El nombre del usuario en el breadcrumb tiene chevron y abre un menú con el mismo aspecto que el de capas. 2) El menú lista a los otros dos usuarios con ico-user #B7B7BA y lleva a su página. 3) Se cierra con click en el nombre, click afuera o Escape; abrir un menú cierra el otro; el menú de capas sigue funcionando. 4) Teclado; sin scroll horizontal; consola limpia; docs.",
+    "valueSignal": "El lector compara usuarios sin volver a Superficie.",
+    "evidence": [
+      "o-menu",
+      "o-patron",
+      "o-breadcrumb",
+      "d-menu-usuarios"
+    ]
+  }
+}

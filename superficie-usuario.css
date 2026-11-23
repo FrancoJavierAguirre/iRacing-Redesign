@@ -4,6 +4,10 @@
 /* Texto solo para lectores de pantalla (aviso de pestaña nueva, tipo de insight) */
 .page-usuario .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
+/* Menú de usuarios (spec 0026): el nombre es la página actual, así que mantiene blanco y 600
+   (estructura-tarea.css pone los disparadores del breadcrumb en el color atenuado y peso 400). */
+.page-usuario .breadcrumb .breadcrumb-usuarios .capas-trigger { color: #fff; font-weight: 600; }
+
 /* Cuestionario */
 .page-usuario .cu-cuestionario { display: flex; flex-direction: column; align-items: center; margin-top: clamp(40px, 3.75vw, 72px); text-align: center; }
 .page-usuario .cu-intro { margin: 0 0 clamp(32px, 2.5vw, 48px); font: 300 clamp(16px, 1.25vw, 24px)/1.2 var(--font-display); color: #fff; }

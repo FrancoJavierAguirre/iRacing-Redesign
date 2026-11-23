@@ -71,7 +71,19 @@
       </div>
     </div>
     <svg class="sep sep--tarea" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <span class="current" aria-current="page">Fede</span>
+    <div class="topbar-capas breadcrumb-capas breadcrumb-usuarios" data-capas>
+      <button type="button" class="capas-trigger" aria-current="page" aria-expanded="false" aria-controls="usuarios-menu" data-capas-trigger>
+        <span>Fede</span>
+        <img class="capas-chevron capas-chevron--down" src="assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="usuarios-menu" role="group" aria-label="Usuarios de las pruebas" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" href="superficie-usuario-1.html"><img src="assets/ico-user-gray.svg" alt="" width="16" height="16"><span>Franco</span></a></li>
+          <li><a class="capas-item" href="superficie-usuario-2.html"><img src="assets/ico-user-gray.svg" alt="" width="16" height="16"><span>Martín</span></a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
   <h1 class="topbar-title">Usuario 3 | Fede</h1>
   <a href="https://drive.google.com/file/d/1KFT49ICbG0dN2nT1mXpFtUk80ko7imNG/view" target="_blank" rel="noopener" class="btn btn--sm btn-blue topbar-action"><img class="btn-icon" src="assets/ico-play.svg" alt="">Ver Video<span class="sr-only"> del usuario 3 (se abre en una pestaña nueva)</span></a>

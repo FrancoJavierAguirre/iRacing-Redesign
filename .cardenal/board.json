@@ -116,13 +116,9 @@
         {
           "path": "specs/0003-menu-capas-topbar/tasks.md",
           "sha256": "ba5562899386e6272fae1b4a1d1c561a036d6fe67d7255d68c90514c28ab62fb"
-        },
-        {
-          "path": "menu-capas.js",
-          "sha256": "77e6c14b5ac12f9210164c9afce6a83fedc4cb878715dabe206f07f9de1a4f9f"
         }
       ],
-      "evidenceNote": "El código aprobado está en el commit 6e8e8fa; estrategia.html, elementos.css y docs cambiaron después por T4 (0004).",
+      "evidenceNote": "El código aprobado está en el commit 6e8e8fa; estrategia.html, elementos.css y docs cambiaron después por T4 (0004). Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1611,14 +1607,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie-usuario-1.html",
-          "sha256": "956cb76aa32802ddbdd39b6dd9ed1a2764b52d09472945928545a54a1bfd32d8"
-        },
-        {
-          "path": "superficie-usuario.css",
-          "sha256": "a4a8094a566a948da5b68f3bf33ffae4fbf1355234338c6cf6ad44a9f0c93b13"
-        },
-        {
           "path": "specs/0022-superficie-usuario-1/spec.md",
           "sha256": "cc7f27843396ce99318f6d21fbfb97d02dfabb5d547e9a258c9e6539574cdda1"
         },
@@ -1631,7 +1619,7 @@
           "sha256": "483cf66360c1626abfa4847bb0299fb2efcf82fbcce811adc6cde31885f39149"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0022 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (4,7 s), 1162 × 622, radio 12; distancias 56/96 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada por el fix 2026-11-23 (medios del usuario 2); la versión aprobada está en su commit.",
+      "evidenceNote": "Fix sobre la feature dueña 0022 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (4,7 s), 1162 × 622, radio 12; distancias 56/96 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada por el fix 2026-11-23 (medios del usuario 2); la versión aprobada está en su commit. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1663,10 +1651,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie-usuario-2.html",
-          "sha256": "aa51dc801f79bea6e966c0b8951cd7524017f558c86f69c29a39e597cd9e202f"
-        },
-        {
           "path": "assets/usuarios/usuario-2-encontrar-serie.mp4",
           "sha256": "5be6e63bf5489c09d2750f482b4822575c255b0d4764542f68650161e7f37b74"
         },
@@ -1679,7 +1663,7 @@
           "sha256": "fce70a7ac54a248cb9da09e983266cdd9a607acb372357de5abd5ce4277abc2e"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (3,1 y 8,8 s) y la imagen cargan; 1162 × 538, 642 (recortado abajo) y 601; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada por el fix 2026-11-23 (video del usuario 3); la versión aprobada está en su commit.",
+      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (3,1 y 8,8 s) y la imagen cargan; 1162 × 538, 642 (recortado abajo) y 601; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada por el fix 2026-11-23 (video del usuario 3); la versión aprobada está en su commit. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1709,20 +1693,8 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie-usuario-3.html",
-          "sha256": "87f679907ab6ddfea7dec9d1c6cb7d8dd1c9a39a1a66050a135a48a566765b83"
-        },
-        {
           "path": "llms.txt",
           "sha256": "f64cce67eb59ee4f46477cc2f5c766df6425c7dc96456c64efb625fedac7777b"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "1d6d1b0f708669f6095e0184a36a3cd2634f6fe3c67445085005acb018d38640"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "95ce2f8a86e34a8c9d20142e68f77aed386c369722b626dd06f8639cfe6e0a78"
         },
         {
           "path": "specs/0023-superficie-usuarios-2-3/spec.md",
@@ -1737,7 +1709,7 @@
           "sha256": "8bd19e60c1d7748e9c5a163d96f14a9e6e8725f633be404874be72626ddc5eee"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (3,1 s), 1162 × 686, radio 12; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Hashes de docs/llms.txt refrescados tras el fix del guión (mismo día), que también los editó.",
+      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (3,1 s), 1162 × 686, radio 12; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Hashes de docs/llms.txt refrescados tras el fix del guión (mismo día), que también los editó. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1780,14 +1752,6 @@
           "sha256": "f64cce67eb59ee4f46477cc2f5c766df6425c7dc96456c64efb625fedac7777b"
         },
         {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "1d6d1b0f708669f6095e0184a36a3cd2634f6fe3c67445085005acb018d38640"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "95ce2f8a86e34a8c9d20142e68f77aed386c369722b626dd06f8639cfe6e0a78"
-        },
-        {
           "path": "specs/0024-superficie-guion/spec.md",
           "sha256": "c197bddc873a243bf3694598cc4d5468d539ed0f583f36884a3b457c1fcfdd35"
         },
@@ -1800,7 +1764,7 @@
           "sha256": "82be6bbb2a8ce430868dd73040a7c3295b2e2f47550a3170cd1cf865d7dee75c"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0024 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (2,1 s), 857 × 214, radio 8; en 375 px debajo del texto; sin scroll horizontal; consola sin errores; 0 placeholders en la página.",
+      "evidenceNote": "Fix sobre la feature dueña 0024 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (2,1 s), 857 × 214, radio 8; en 375 px debajo del texto; sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1810,6 +1774,86 @@
           "evidence": {
             "path": ".cardenal/revision-fix-2026-11-23-usuario-3-guion.md",
             "sha256": "1696a09d5881fc5065171fd36727b7e5b61afd785c50a8952b9351bd41a2239d"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T31",
+      "title": "Menú de usuarios en el breadcrumb",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0026) y specs/0026-menu-usuarios/spec.md.",
+      "dependsOn": [
+        "T23"
+      ],
+      "files": [
+        "menu-capas.js",
+        "superficie-usuario-1.html",
+        "superficie-usuario-2.html",
+        "superficie-usuario-3.html",
+        "superficie-usuario.css",
+        "assets/ico-user-gray.svg",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "menu-capas.js",
+          "sha256": "2ef262221a2781be25b63ae897a64b1cbe8f3c15c3874bd9eeb1dd3e6cd8b892"
+        },
+        {
+          "path": "superficie-usuario-1.html",
+          "sha256": "308620f7306d024ce645717e5b90380f156d0e855474bf9cbe329e4dd4647976"
+        },
+        {
+          "path": "superficie-usuario-2.html",
+          "sha256": "8b2787edcbea5673f4ca1b71899234975f0846b02287eb55382c5de104f4fc5d"
+        },
+        {
+          "path": "superficie-usuario-3.html",
+          "sha256": "bc74bd085060ba77d15632946b2eede283eb5dcdbc3c9d30bb63a69e047cb5ac"
+        },
+        {
+          "path": "superficie-usuario.css",
+          "sha256": "ee5fb085906449923b8873a5aaa651da4d5f97726e70d49ed14de700c8a6205a"
+        },
+        {
+          "path": "assets/ico-user-gray.svg",
+          "sha256": "d1cbc465f26a10f7802e8095006d0eec2e5fa350f15265ce9393253cb9756c01"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "b5d882216570a38e596f14a15f151f6cce7fc39350acc9df46e798e814f9fd6f"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "19eb0f1e6d1632fe56b32dd6631018bc3d7681e8768693dc557761accf47100d"
+        },
+        {
+          "path": "specs/0026-menu-usuarios/spec.md",
+          "sha256": "73ed14d3298328cf8c623859d7c93c44a5e737821b29066af54f10da51ed7af4"
+        },
+        {
+          "path": "specs/0026-menu-usuarios/tasks.md",
+          "sha256": "84ba09474f3ff15b549a32673999d9be61d504647a5110333ad51bfb6cc9560a"
+        },
+        {
+          "path": "specs/0026-menu-usuarios/context.json",
+          "sha256": "b23bcbf91d1463c90f369f8faa0b2196bc2b61bf81d302fc7f5818cee6380f02"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local (panel oculto, sin captura), simulando clicks y teclas: en las 3 páginas el menú lista a los otros dos usuarios con ico-user-gray (carga) y enlaces correctos; abre/cierra con click, click afuera, doble click y Escape (devuelve el foco); abrir el menú de capas cierra el de usuarios; mismo aspecto (#212121, radio 8, Inter 12, ícono 16, 12 px bajo el disparador); disparador blanco 600 con aria-current; menú de capas de estrategia.html sigue funcionando; 1920 y 375 px sin scroll horizontal; consola sin errores. Hallazgo previo, no causado por el cambio: a 375 px el breadcrumb de 3 niveles se superpone al título (también en el guión).",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0026.md",
+            "sha256": "7533055a7e93d4555270ee85f1a2743f07d34b5ee359e620e673f0300c1aa785"
           }
         }
       ]

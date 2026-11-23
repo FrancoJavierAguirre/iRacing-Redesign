@@ -35,7 +35,7 @@ superficie-guion.html      Guión de las pruebas de usabilidad
 superficie-guion.css       Específico de body.page-guion
 superficie-usuario.css     Específico de body.page-usuario (cuestionarios de usuarios)
 script.js           Comportamiento del Home
-menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
+menu-capas.js       Menús desplegables del breadcrumb: capas UX y, en las páginas de usuario, usuarios (spec 0026)
 estructura.js       Tooltips de ayuda, switch Antes/Después y botones sin destino de estructura.html
 assets/             Imágenes, íconos SVG, videos MP4 (≈85 archivos)
 ```
@@ -62,11 +62,11 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 
 ### Menú de capas (`menu-capas.js`, specs 0003 y 0004)
 
-Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `alcance.html` (Estrategia habilitada; el disparador dice «Alcance» y esa capa no figura en el menú). Una instancia por página.
+Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `alcance.html` (Estrategia habilitada; el disparador dice «Alcance» y esa capa no figura en el menú). Desde la spec 0026 admite varias instancias por página: las páginas de usuario tienen además el menú de usuarios.
 
 - **Marcado reutilizable**: `div.topbar-capas.breadcrumb-capas[data-capas]`, dentro de `nav.breadcrumb` (reemplaza al `span.current`), agrupa `button.capas-trigger.current[data-capas-trigger]` (`aria-current="page"`, `aria-expanded`, `aria-controls="capas-menu"`) y `div.capas-menu[role=group][data-capas-menu][hidden]` con una lista de `a.capas-item`. El menú se ancla con `left: 0` bajo la palabra; `.breadcrumb .capas-item` neutraliza el gap y el hover de `.breadcrumb a`. Patrón disclosure, no `role="menu"`. El título central sigue siendo `<h1 class="topbar-title">Estrategia</h1>`, sin cambios.
 - **Ítems deshabilitados**: `<a role="link" aria-disabled="true">` sin `href` (no reciben foco ni navegan, opacidad .4). Para habilitar uno: agregar `href` y quitar `role` y `aria-disabled`. La capa actual no figura en su propio menú.
-- **JS**: IIFE sin dependencias; click en el botón alterna `aria-expanded` y `hidden`; click en `document` fuera de `[data-capas]` y Escape cierran (Escape devuelve el foco al botón). Inerte si faltan los nodos. Una instancia por página.
+- **JS**: IIFE sin dependencias; click en el botón alterna `aria-expanded` y `hidden`; click en `document` fuera de `[data-capas]` y Escape cierran (Escape devuelve el foco al botón). Inerte si faltan los nodos. Recorre todos los `[data-capas]` (spec 0026): cada uno con su disparador y su menú (ids únicos: `capas-menu`, `usuarios-menu`); un click fuera de un menú abierto lo cierra (abrir uno cierra el otro) y Escape cierra el que esté abierto.
 - **Estilos** `.capas-*` en `elementos.css` (antes de «Intro»). Los chevrons (`assets/ico-chevron-down.svg` / `-up.svg`, 12x12) se alternan por CSS según `aria-expanded`. Colores literales del diseño de referencia (`#212121`, `#B7B7BA`, `#FFFFFF`). Requiere Inter 400 en el link de Google Fonts.
 
 ### Videos e imágenes de Estrategia (`estrategia.html` + `estrategia.css`, spec 0025)
@@ -132,6 +132,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - Preguntas: `figure.cu-pregunta` con `.cu-p` (Exo 2 300 24), `blockquote.cu-r` (Exo 2 300 italic 40) y la imagen (`.media-placeholder.cu-img`, 1162 × 684 máx.; o `.cu-media`, video o imagen real en su proporción, radio 12), a 56 px entre sí; 96 px entre preguntas. Usuario 1 (fix 2026-11-23): las dos preguntas muestran el mismo `assets/usuarios/usuario-1-preguntas.mp4` (133 KB). Usuario 2 (fix 2026-11-23): `usuario-2-encontrar-serie.mp4`, `usuario-2-compra-visible.mp4` (recortado abajo a 642 px con `crop`) y `usuario-2-logos.png`; las clases `.cu-img--lista/--racing/--tabla` quedan sin uso. Usuario 3 (fix 2026-11-23): `usuario-3-favorito.mp4` (72 KB). Las tres páginas de usuario ya no tienen placeholders.
 - Insights: `ul.cu-insights` con `li.cu-bad|cu-ok|cu-idea` (texto en `span`, Poppins 300 24), ícono `::before` de 32 px (los mismos SVG que `.pu-items`) a 17 px; 56 px entre ítems.
 - Las medidas escalan con `clamp()`; en ≤ 640 px las estrellas van a 32 px con gap 16 y los íconos de insights se alinean arriba.
+- Menú de usuarios (spec 0026): el último nivel del breadcrumb es `div.topbar-capas.breadcrumb-capas.breadcrumb-usuarios[data-capas]` con el botón del nombre (`aria-current="page"`, blanco 600 vía `.page-usuario .breadcrumb .breadcrumb-usuarios .capas-trigger`) y `#usuarios-menu` (`aria-label="Usuarios de las pruebas"`) con los otros dos usuarios; ícono `assets/ico-user-gray.svg` (#B7B7BA).
 - Usuarios 2 y 3 (spec 0023): `superficie-usuario-2.html` y `-3.html` son copias de la plantilla con otros textos, estrellas, video y cantidad de preguntas (3 y 1). Las capturas del usuario 2 usan `.cu-img--lista`, `--racing` y `--tabla` (1162 × 551, 642 y 600); el resto, la proporción por defecto 1162 × 684. Un cambio de estructura en la plantilla debe replicarse en las tres páginas. En el usuario 2, las dos filas de 0 estrellas van dentro de `.cu-fila` con `p.cu-nota` («No terminó la tarea», Exo 2 300 16, y `assets/shrug.png` de 44 × 34 a 8 px): posición absoluta a 40 px de la última estrella para no descentrar las estrellas; en ≤ 640 px pasa debajo.
 
 ### Guión de las pruebas (`superficie-guion.html` + `superficie-guion.css`, spec 0024)
@@ -225,6 +226,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 ## Pendientes técnicos observados
 
 - Imágenes: el sitio ya no tiene placeholders (`.media-placeholder` sin uso desde los fixes del 2026-11-23).
+- Topbar en celular: en las páginas con breadcrumb de 3 niveles (detalles de tareas, usuarios y guión), el breadcrumb se superpone al título centrado a 375 px (anterior a la spec 0026).
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
 ## SEO y descubrimiento (spec 0001)
