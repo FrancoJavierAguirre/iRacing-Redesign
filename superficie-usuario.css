@@ -29,6 +29,8 @@
 .page-usuario .cu-img--lista { aspect-ratio: 1162 / 551; }
 .page-usuario .cu-img--racing { aspect-ratio: 1162 / 642; }
 .page-usuario .cu-img--tabla { aspect-ratio: 1162 / 600; }
+/* video o imagen real en lugar del placeholder (fix 2026-11-23): proporción real, radio como el recuadro */
+.page-usuario .cu-media { display: block; width: 100%; max-width: 1162px; height: auto; border-radius: 12px; }
 
 /* Insights: ícono de 32 px a 17 px del texto, 56 px entre ítems */
 .page-usuario .cu-insights { display: flex; flex-direction: column; gap: clamp(32px, 2.9167vw, 56px); margin: clamp(40px, 3.75vw, 72px) 0 0; padding: 0; list-style: none; }

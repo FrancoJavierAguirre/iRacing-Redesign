@@ -22,5 +22,8 @@ Referencia: `referencia-figma.webp` (888 × 2000 px, escala ~1:2,16; texto blanc
 - Se corrigen erratas de la referencia: «Facilidad de las tareas» y «Challenge».
 - Distancia entre el encabezado de sección y su contenido: la de las páginas de Superficie.
 
+## Clarificaciones 2026-11-23
+- FR-002 (ajustado por fix): las dos preguntas cualitativas muestran el mismo video `assets/usuarios/usuario-1-preguntas.mp4` (autoplay, muted, loop) en lugar del placeholder, en su proporción real (`.cu-media`, radio 12).
+
 ## Fuera de alcance
 Usuarios 2 y 3; imágenes finales.

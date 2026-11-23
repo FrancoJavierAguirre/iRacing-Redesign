@@ -1168,27 +1168,15 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie-usuario-1.html",
-          "sha256": "d3309f4a888e011273831243a1cccbc14707e2763c25ce99fde233cc74c01f34"
-        },
-        {
           "path": "assets/ico-star-vacia.svg",
           "sha256": "d702dbf6c8709492006150fd5f5fe7ca16ed83e65d5f9e4bcab56da98041895d"
-        },
-        {
-          "path": "specs/0022-superficie-usuario-1/spec.md",
-          "sha256": "7251e14342c773f80a35fe7790565c59b24d8d505db1bf99db7c102d3ed4c67f"
-        },
-        {
-          "path": "specs/0022-superficie-usuario-1/tasks.md",
-          "sha256": "2cc43b3dbc94ab6e50b31312908c292af0f8172600a94258799dc6fda83b7809"
         },
         {
           "path": "specs/0022-superficie-usuario-1/context.json",
           "sha256": "4c719f9598ef6c90a0206519f77b88e4e8d51b25cc50fd8eb9e051f073629d18"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel del navegador oculto, sin captura): a 1920 px, «Qué tan fácil fue…» Exo 2 300 24 a 48 px; tareas Exo 2 300 32; estrellas 48 × 48 con 80 px entre sí y a 48 px del texto; 96 px entre grupos; pregunta Exo 2 300 24, respuesta Exo 2 300 italic 40, 56 px entre texto, texto e imagen (1162 × 684), 96 px entre preguntas; insights Poppins 300 24, ícono 32 px a 17 px, 56 px entre ítems. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas; «Ver cuestionario» del usuario 1 enlaza la página. Corrección de QA del usuario: el botón de la barra superior dice «Ver Video». Bug encontrado por el usuario en QA: los textos .sr-only se veían porque la clase no estaba definida para esta página; se agregó en superficie-usuario.css y se comprobó que los 5 quedan ocultos (position absolute, 1 px, clip). Evidencia rotada en 0023: archivos modificados por los cuestionarios de los usuarios 2 y 3; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel del navegador oculto, sin captura): a 1920 px, «Qué tan fácil fue…» Exo 2 300 24 a 48 px; tareas Exo 2 300 32; estrellas 48 × 48 con 80 px entre sí y a 48 px del texto; 96 px entre grupos; pregunta Exo 2 300 24, respuesta Exo 2 300 italic 40, 56 px entre texto, texto e imagen (1162 × 684), 96 px entre preguntas; insights Poppins 300 24, ícono 32 px a 17 px, 56 px entre ítems. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas; «Ver cuestionario» del usuario 1 enlaza la página. Corrección de QA del usuario: el botón de la barra superior dice «Ver Video». Bug encontrado por el usuario en QA: los textos .sr-only se veían porque la clase no estaba definida para esta página; se agregó en superficie-usuario.css y se comprobó que los 5 quedan ocultos (position absolute, 1 px, clip). Evidencia rotada en 0023: archivos modificados por los cuestionarios de los usuarios 2 y 3; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1235,10 +1223,6 @@
           "sha256": "8f7c7ca79bdd132f466f680f55abacb1fd397bf7ea0af6e5144b79e242f1559c"
         },
         {
-          "path": "superficie-usuario.css",
-          "sha256": "4abfd27e7b64785cfa48677b2e7de231472c428ab2118344f2f7ddcd795bdf3d"
-        },
-        {
           "path": "specs/0023-superficie-usuarios-2-3/spec.md",
           "sha256": "11fd0cb9d77fee1e979246d4b0d09b4781cfb1d0db28cc8590b91996bb20c068"
         },
@@ -1255,7 +1239,7 @@
           "sha256": "dc511968c4b21f48591a8757fbcd5f045e22b6340dc8aa8b000068573eb695ab"
         }
       ],
-      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal. Evidencia rotada en 0024: archivos modificados por el guión de las pruebas; la versión aprobada está en su commit.",
+      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal. Evidencia rotada en 0024: archivos modificados por el guión de las pruebas; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1576,18 +1560,6 @@
           "sha256": "c40c1cc15b3b4dafce4ed754899d48c4aca1820e3022b7adb0abc1ea398556bf"
         },
         {
-          "path": "llms.txt",
-          "sha256": "6aec77bdaff06eb87e92859d43dd764824feb5cea6d7a4c5c949407140c33a05"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "6b6b6afdbb9f039b40d130aa4b62fa57a67af049a631b00704efe93cb436f46a"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "82b92bafe404ee7525c6c94eb851def596e5b4d9638245f4ece29858283636ab"
-        },
-        {
           "path": "specs/0019-superficie-iteraciones/spec.md",
           "sha256": "89218c5c6bd731e25a7ff2844da541f6fac1e2dfb21b101a4ab1ed8000d49fb0"
         },
@@ -1640,7 +1612,7 @@
           "sha256": "ee03f3a5b5171c852d5fbe6c1e091a5aedb2752434d539bcacd4be058cd045fc"
         }
       ],
-      "evidenceNote": "Fix sobre las features dueñas 0019 y 0020 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 4 videos readyState 4 con duraciones 10,3/10,3/9,3/10,8 s; 2 PNG 864 × 604 cargan; distancias de Iteraciones y Prototipo sin cambios (32/56 px); 1920, 900 y 375 sin scroll horizontal; consola sin errores. Segunda tanda (el usuario agregó 4 PNG olvidados): Filtros y búsqueda y Registro a la carrera Antes/Después; las 6 imágenes cargan, pares con 32 px entre sí y 56 px a su título; 0 placeholders en Superficie; 375 px sin scroll horizontal; consola sin errores. Ajuste del usuario: título y «Probar funcionalidad» de License Progress centrados respecto de los bullets (misma regla que Prototipo, ahora en .it-solucion); centros coinciden en los 4 bloques a 1920 y 375 px.",
+      "evidenceNote": "Fix sobre las features dueñas 0019 y 0020 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 4 videos readyState 4 con duraciones 10,3/10,3/9,3/10,8 s; 2 PNG 864 × 604 cargan; distancias de Iteraciones y Prototipo sin cambios (32/56 px); 1920, 900 y 375 sin scroll horizontal; consola sin errores. Segunda tanda (el usuario agregó 4 PNG olvidados): Filtros y búsqueda y Registro a la carrera Antes/Después; las 6 imágenes cargan, pares con 32 px entre sí y 56 px a su título; 0 placeholders en Superficie; 375 px sin scroll horizontal; consola sin errores. Ajuste del usuario: título y «Probar funcionalidad» de License Progress centrados respecto de los bullets (misma regla que Prototipo, ahora en .it-solucion); centros coinciden en los 4 bloques a 1920 y 375 px. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1650,6 +1622,69 @@
           "evidence": {
             "path": ".cardenal/revision-fix-2026-11-23-iteraciones-prototipo.md",
             "sha256": "72bd7e91a5580d54520adb11ed2d2f982da8962bad9dfd967872c072f85ff12d"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T27",
+      "title": "Fix: video de las preguntas del Usuario 1",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Addendum 2026-11-23 en specs/0022-superficie-usuario-1/tasks.md (T004-T006); FR-002 aclarado en specs/0022-superficie-usuario-1/spec.md.",
+      "dependsOn": [
+        "T22"
+      ],
+      "files": [
+        "superficie-usuario-1.html",
+        "superficie-usuario.css",
+        "assets/usuarios/usuario-1-preguntas.mp4"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie-usuario-1.html",
+          "sha256": "956cb76aa32802ddbdd39b6dd9ed1a2764b52d09472945928545a54a1bfd32d8"
+        },
+        {
+          "path": "superficie-usuario.css",
+          "sha256": "a4a8094a566a948da5b68f3bf33ffae4fbf1355234338c6cf6ad44a9f0c93b13"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "b63e8df146ff286a70bc422316f64823b2e6adfc8301aab2c41bfc3c588447ae"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "3dd76390bbc92b35113074db8cab4e2122597d2b417e24dd9f35a4259a3577f6"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "ca2be3eaeac0c3fed2d89fc7c82ec59226a3e2a7bcbfe3b8c7eee1b640a8fa0e"
+        },
+        {
+          "path": "specs/0022-superficie-usuario-1/spec.md",
+          "sha256": "cc7f27843396ce99318f6d21fbfb97d02dfabb5d547e9a258c9e6539574cdda1"
+        },
+        {
+          "path": "specs/0022-superficie-usuario-1/tasks.md",
+          "sha256": "21c586877ffaeb8b8088c8099030ff1f61ee228a59815dcb0b61c63685fc2312"
+        },
+        {
+          "path": "assets/usuarios/usuario-1-preguntas.mp4",
+          "sha256": "483cf66360c1626abfa4847bb0299fb2efcf82fbcce811adc6cde31885f39149"
+        }
+      ],
+      "evidenceNote": "Fix sobre la feature dueña 0022 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (4,7 s), 1162 × 622, radio 12; distancias 56/96 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-usuario-1.md",
+            "sha256": "9ccf4624b5d3d34ac52eda2dfd858da34ea560d5aba27e42f2a5f289156878bd"
           }
         }
       ]
