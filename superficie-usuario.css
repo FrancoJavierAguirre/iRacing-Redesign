@@ -1,0 +1,36 @@
+/* Cuestionario de cada usuario de las pruebas de usabilidad (body.page-usuario) — spec 0022.
+   Medidas indicadas por el usuario para 1920 px; usa además estructura-tarea.css para el breadcrumb de 3 niveles. */
+
+/* Texto solo para lectores de pantalla (aviso de pestaña nueva, tipo de insight) */
+.page-usuario .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Cuestionario */
+.page-usuario .cu-cuestionario { display: flex; flex-direction: column; align-items: center; margin-top: clamp(40px, 3.75vw, 72px); text-align: center; }
+.page-usuario .cu-intro { margin: 0 0 clamp(32px, 2.5vw, 48px); font: 300 clamp(16px, 1.25vw, 24px)/1.2 var(--font-display); color: #fff; }
+.page-usuario .cu-grupo { display: flex; flex-direction: column; align-items: center; gap: clamp(32px, 2.5vw, 48px); }
+.page-usuario .cu-grupo + .cu-grupo { margin-top: clamp(56px, 5vw, 96px); }
+.page-usuario .cu-tarea { margin: 0; font: 300 clamp(20px, 1.6667vw, 32px)/1.2 var(--font-display); color: #fff; }
+.page-usuario .cu-tarea .hl { font-weight: inherit; color: #bca447; }
+.page-usuario .cu-estrellas { display: flex; gap: clamp(20px, 4.1667vw, 80px); }
+.page-usuario .cu-estrellas img { width: clamp(32px, 2.5vw, 48px); height: clamp(32px, 2.5vw, 48px); object-fit: contain; display: block; }
+
+/* Preguntas cualitativas */
+.page-usuario .cu-preguntas { display: flex; flex-direction: column; gap: clamp(56px, 5vw, 96px); margin-top: clamp(40px, 3.75vw, 72px); }
+.page-usuario .cu-pregunta { display: flex; flex-direction: column; align-items: center; gap: clamp(32px, 2.9167vw, 56px); margin: 0; text-align: center; }
+.page-usuario .cu-p { margin: 0; font: 300 clamp(16px, 1.25vw, 24px)/1.3 var(--font-display); color: #fff; }
+.page-usuario .cu-r { margin: 0; }
+.page-usuario .cu-r p { margin: 0; font: italic 300 clamp(24px, 2.0833vw, 40px)/1.2 var(--font-display); color: #fff; }
+.page-usuario .cu-img { width: 100%; max-width: 1162px; aspect-ratio: 1162 / 684; min-height: 0; }
+
+/* Insights: ícono de 32 px a 17 px del texto, 56 px entre ítems */
+.page-usuario .cu-insights { display: flex; flex-direction: column; gap: clamp(32px, 2.9167vw, 56px); margin: clamp(40px, 3.75vw, 72px) 0 0; padding: 0; list-style: none; }
+.page-usuario .cu-insights li { display: flex; align-items: center; gap: 17px; font: 300 clamp(16px, 1.25vw, 24px)/1.5 "Poppins", sans-serif; color: #fff; }
+.page-usuario .cu-insights li::before { content: ""; flex: none; width: clamp(24px, 1.6667vw, 32px); height: clamp(24px, 1.6667vw, 32px); background: center / contain no-repeat; }
+.page-usuario .cu-insights .cu-ok::before { background-image: url("assets/ico-check-green.svg"); }
+.page-usuario .cu-insights .cu-bad::before { background-image: url("assets/ico-cross-red.svg"); }
+.page-usuario .cu-insights .cu-idea::before { background-image: url("assets/ico-lupa-green.svg"); }
+
+@media (max-width: 640px) {
+  .page-usuario .cu-estrellas { gap: 16px; }
+  .page-usuario .cu-insights li { align-items: flex-start; }
+}

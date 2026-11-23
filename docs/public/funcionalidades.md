@@ -17,6 +17,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
 | Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones, Prototipo y el cierre «Fin del proyecto» implementados (Iteraciones y Prototipo con imágenes provisorias) |
+| Cuestionario del Usuario 1 (Superficie) | `superficie-usuario-1.html` | Implementado (imágenes provisorias) |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -128,6 +129,14 @@ Una sección, **Wireframes en Media** («Empezando el rediseño»), con 4 wirefr
 - Cierre «Siguiente elemento UX»: Estamos acá Esqueleto, Sigue acá Superficie (lleva a `superficie.html`), y también Estrategia, Alcance y Estructura.
 
 El menú de capas de las demás páginas, sus tarjetas, el Home y 5-elementos ya enlazan a Esqueleto.
+## Cuestionario del Usuario 1 (`superficie-usuario-1.html`)
+
+Se llega desde «Ver cuestionario» de la card «Usuario 1 | Franco» (Pruebas de Usabilidad). Arriba: breadcrumb «Rediseño UX/UI › Superficie › Franco» (la flecha vuelve a Pruebas de Usabilidad), el título «Usuario 1 | Franco» y «Ver Video», que abre en otra pestaña el mismo video que la card. Tres secciones, cada una con sus botones «Ir a…»:
+1. **Cuestionario** («Facilidad de las tareas»): «Qué tan fácil fue…» y las 4 tareas con su puntuación en estrellas: elegir el Mazda (4 de 5), registrarse a la carrera (4 de 5), encontrar la serie (5 de 5) y añadir al carrito y comprar (5 de 5).
+2. **Preguntas Cualitativas** («Entendiendo los detalles»): dos preguntas, cada una con la respuesta del usuario entre comillas y una captura (provisoria por ahora).
+3. **Insights** («Descubrimientos para mejorar»): los 4 hallazgos de la card del usuario 1, con su ícono.
+
+En celular las estrellas se achican y se acercan; las capturas ocupan el ancho.
 ## Superficie (`superficie.html`) — UX Writing y Sistema de Diseño
 
 Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja a esa sección. Arriba a la derecha, «Ver Prototipo» abre el prototipo de Figma en una pestaña nueva.
@@ -164,7 +173,7 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - **Insights:** lo que sí funcionó (ejecución de la tarea 2, feedbacks, CTA y tablas) y lo que no (filtros, elección del auto favorito y el problema del usuario nuevo).
     - **Usuarios:** una card por usuario (Franco, Martín y Fede) con lo que le costó, lo que le resultó fácil y sus sugerencias. «Ver video» abre la grabación de la prueba en Google Drive, en otra pestaña.
     - **Conclusiones:** «Fue muy mala idea dejar filtros previamente activados y muy mal diseñados» y una card «Filtros» con el problema y sus causas.
-    - Todavía no tienen destino: «Leer guión completo» y «Ver cuestionario» (páginas que se harán después). «Ir a Iteraciones» lleva a la sección siguiente.
+    - «Ver cuestionario» del usuario 1 lleva a su página (`superficie-usuario-1.html`). Todavía no tienen destino: «Leer guión completo» y «Ver cuestionario» de los usuarios 2 y 3 (páginas que se harán después). «Ir a Iteraciones» lleva a la sección siguiente.
 17. **Iteraciones** («Puliendo el producto»): qué cambió después de las pruebas.
     - **License Progress:** «Solución para nuevos usuarios» con cuatro puntos (separado por disciplinas, barra de progresión de licencia, primero solo lo que puede correr y luego lo que puede comprar) y «Probar funcionalidad», que abre el prototipo de Figma en otra pestaña.
     - **All Series**, **Filtros y búsqueda** y **Registro a la carrera:** cada una compara «Antes» y «Después» y tiene un botón «Probar…» que abre su prototipo en otra pestaña. All Series suma una imagen de la pantalla nueva con flechas que señalan cada cambio.

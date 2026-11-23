@@ -28,6 +28,8 @@ esqueleto.css       Específico de body.page-esqueleto
 superficie.html     Capa 5: Superficie (UX Writing y Sistema de Diseño)
 superficie.css      Específico de body.page-superficie
 superficie.js       Ciclo de estilos de «Cambiar estilo» (Botones)
+superficie-usuario-1.html  Cuestionario del Usuario 1 (pruebas de usabilidad)
+superficie-usuario.css     Específico de body.page-usuario (cuestionarios de usuarios)
 script.js           Comportamiento del Home
 menu-capas.js       Menú desplegable de capas de la topbar (estrategia, alcance y estructura)
 estructura.js       Tooltips de ayuda, switch Antes/Después y botones sin destino de estructura.html
@@ -110,9 +112,18 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
   - se reutilizan `ico-lista.svg` e `ico-detalles-serie.svg`;
   - `ico-superficie-white.svg` es `icon-superficie.svg` en blanco.
 - **Links activados:** la opción Esqueleto del menú de capas de todas las páginas, «Ver Esqueleto» (Estructura y detalles de tareas), las tarjetas Esqueleto de «Siguiente elemento UX» (Estrategia, Alcance y Estructura), la tarjeta del Home (`onclick`) y, en 5-elementos, «Ver Esqueleto» y su tarjeta.
+### Cuestionario del Usuario 1 (`superficie-usuario-1.html` + `superficie-usuario.css`, spec 0022)
+
+- `body.page-elementos.page-tarea.page-usuario`: reutiliza de `estructura-tarea.css` el breadcrumb de 3 niveles (menú de capas en «Superficie», `.sep--tarea`, actual «Franco»); `.crumb-back` vuelve a `superficie.html#pruebas-de-usabilidad`. «Ver Video» es `a.topbar-action` con `target="_blank" rel="noopener"` al mismo video de Drive que la card. Carga `menu-capas.js` y `estructura.js`. El botón dice «Ver Video» (corrección del usuario en QA). `.sr-only` se define en `superficie-usuario.css` (como en `superficie.css` y `estructura.css`, no es global): sin ella se veían el aviso de pestaña nueva y «Problema:», «Funcionó:» y «Sugerencia:».
+- Secciones `.layer-sec` `#cuestionario`, `#preguntas-cualitativas` e `#insights` con `.sec-header` y botones `btn-info` entre ellas.
+- Cuestionario: `.cu-intro` (Exo 2 300 24) a 48 px del primer `.cu-grupo`; cada grupo es `.cu-tarea` (Exo 2 300 32, `.hl` dorado #BCA447 sin cambiar el peso) y `.cu-estrellas` a 48 px (`role="img"` con `aria-label` «N de 5 estrellas»; `ico-star.svg` / `ico-star-vacia.svg` de 48 × 48 con `object-fit: contain`, gap 80); 96 px entre grupos.
+- Preguntas: `figure.cu-pregunta` con `.cu-p` (Exo 2 300 24), `blockquote.cu-r` (Exo 2 300 italic 40) y `.media-placeholder.cu-img` (1162 × 684 máx.), a 56 px entre sí; 96 px entre preguntas.
+- Insights: `ul.cu-insights` con `li.cu-bad|cu-ok|cu-idea` (texto en `span`, Poppins 300 24), ícono `::before` de 32 px (los mismos SVG que `.pu-items`) a 17 px; 56 px entre ítems.
+- Las medidas escalan con `clamp()`; en ≤ 640 px las estrellas van a 32 px con gap 16 y los íconos de insights se alinean arriba.
+
 ### Página de Superficie (`superficie.html` + `superficie.css`, spec 0010, parte UX Writing)
 
-- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0020 cubre «Leer guión completo» (`#guion`, página futura) y los tres «Ver cuestionario» (`#cuestionario-1..3`); «Ir a Iteraciones» e «Ir a Prototipo» ya tienen destino. «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
+- `body.page-elementos.page-superficie`. Usa las variables de página de `elementos.css`. Carga `menu-capas.js` y `estructura.js`; de este último usa el manejador `[data-sin-destino]`, que desde la spec 0020 cubre «Leer guión completo» (`#guion`, página futura) y «Ver cuestionario» de los usuarios 2 y 3 (`#cuestionario-2..3`; el del usuario 1 enlaza `superficie-usuario-1.html` desde la spec 0022); «Ir a Iteraciones» e «Ir a Prototipo» ya tienen destino. «Ir a Motion» se reemplazó por «Ir a Pruebas de Usabilidad» (la sección Motion se descartó). «Saltar a Sistema de Diseño» (`a.btn.btn--md.btn-ghost-info`: mismo hover que «Ver más detalles», sin borde) e «Ir a Valores» ya son anclas normales.
 - **«Ver Prototipo»:** `a.topbar-action` con `target="_blank" rel="noopener"` hacia el prototipo de Figma, `assets/ico-play.svg` y texto `.sr-only` que avisa que se abre en una pestaña nueva.
 - **Círculo de Oro:** `.oro[data-activo]` con 3 `span.oro-ring` concéntricos de CSS (565, 420 y 249 px a 1920), apilados con ¿Por qué? arriba, ¿Cómo? en el medio y ¿Qué? abajo. Usan los colores de los PNG del usuario: activo `rgba(0, 87, 208, .15)` e inactivo `rgba(0, 0, 0, .6)`. Como son semitransparentes, el círculo de abajo se ve a través del de arriba. La etiqueta activa va en dorado. Los párrafos son Poppins 300 itálica de 24 px, y las frases doradas, Poppins 600 itálica (cargada en el link de fuentes). Es `aria-hidden`, porque el texto lo explica.
 - **Matriz de Voz y Guía de Estilo:** `table.mtx` semánticas (`th scope`) con encabezados de tarjeta (`.mtx-card`). En ≤ 900 px pasan a bloques y cada celda muestra `data-col` con `::before`.
@@ -189,7 +200,7 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
-- Superficie: imágenes y gif finales de Iteraciones y Prototipo, páginas de guión completo y cuestionarios.
+- Superficie: imágenes y gif finales de Iteraciones y Prototipo, capturas del cuestionario del usuario 1, página de guión completo y cuestionarios de los usuarios 2 y 3.
 - 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
@@ -210,6 +221,7 @@ Metadatos no visibles en el `<head>` de las 3 páginas y un `llms.txt` en la ra�
 | `estructura-tarea-2.html` | `Tarea 2: resultados del tree testing — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 | `esqueleto.html` | `Esqueleto — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
 | `superficie.html` | `Superficie — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 2 niveles |
+| `superficie-usuario-1.html` | `Usuario 1: cuestionario de la prueba de usabilidad — Rediseño iRacing` | `WebPage` con `isPartOf` y breadcrumb de 3 niveles |
 
 Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCreated: "2025"`, `author` (Person Franco Aguirre, Diseñador UX/UI) y `about` (iRacing, Diseño UX/UI). Sin `url`, `image` ni `sameAs`.
 

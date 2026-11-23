@@ -2,58 +2,71 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0021-request",
+      "id": "u-0022-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): lo último de Superficie es el cierre de la referencia. Banderas a cuadros de los assets; íconos de LinkedIn, Behance, Gmail y teléfono provistos; LinkedIn y Behance enlazan a sus perfiles. Ícono-texto 16 px; íconos de 40 px de alto; texto Poppins Light 24; 'Fin del proyecto' Exo 2 Regular 64; 'Gracias por ver' Exo 2 Light 48; 96 px entre contacto y 'Gracias por ver'; 160 px entre 'Fin del proyecto' y 'Gracias por ver' y entre el contacto y las cards; 90 px entre banderas y texto."
+      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): «Ver cuestionario» de la card «Usuario 1 | Franco» (Pruebas de Usabilidad) lleva a una página nueva como la referencia. Estrellas de 48 × 48 (ico-star y la estrella vacía provista), 80 px entre estrellas, 48 px del texto superior, 96 px entre grupos. Cuestionario: textos Exo 2 Light 32, salvo «Qué tan fácil fue…» en Exo 2 Light 24. Preguntas cualitativas: pregunta Exo 2 Light 24, respuesta Exo 2 Light Italic 40, 56 px entre texto, texto e imagen, 96 px entre grupos; imágenes provisorias. «Ver video» arriba a la derecha lleva al video de la card. Insights: Poppins Light 24, 17 px al ícono de 32 × 32, 56 px entre grupos."
     },
     {
       "id": "s-referencia",
       "kind": "file",
-      "reference": "specs/0021-superficie-fin/referencia-figma.png",
-      "sha256": "7bede42bf69d4f742c5753233bfb21dcab077965c185e2aed973047ea61fc480"
+      "reference": "specs/0022-superficie-usuario-1/referencia-figma.webp",
+      "sha256": "1da77c62be703b6a5344df2a67d30f531874ab290f8167f6d4c0c50901d57e51"
     },
     {
-      "id": "s-esqueleto",
+      "id": "s-tarea",
       "kind": "file",
-      "reference": "esqueleto.html",
-      "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386"
+      "reference": "estructura-tarea-1.html",
+      "sha256": "6e7f2c9839267f9611d05f870aec87bf471bed3550b6f584381eb0c30854f48d"
+    },
+    {
+      "id": "u-0022-qa",
+      "kind": "user",
+      "reference": "Corrección del usuario en chat 2026-11-22: el botón de arriba a la derecha dice simplemente «Ver Video»."
     }
   ],
   "facts": [
     {
       "id": "o-design",
       "area": "product",
-      "statement": "La referencia (1920 × 1401, texto blanco sobre transparente) muestra 'Fin del proyecto' entre dos banderas a cuadros de ~48 px, 'Gracias por ver', una fila de 4 contactos repartidos a lo ancho (LinkedIn y Behance con el nombre, Gmail con el correo y teléfono con el número) y las 5 cards de capas en filas de 3 y 2 centradas.",
+      "statement": "La referencia (888 × 2000, escala ~1:2,16 de 1920) muestra la barra superior «Rediseño UX/UI › Superficie › Franco», título «Usuario 1 | Franco» y «Ver video»; secciones Cuestionario (4 tareas con su puntuación de 4, 4, 5 y 5 estrellas), Preguntas Cualitativas (2 preguntas, cada una con respuesta entre comillas y una captura) e Insights (los 4 ítems de la card del usuario 1), cada una con sus botones «Ir a…».",
       "status": "observed",
       "source": "s-referencia"
     },
     {
-      "id": "o-cards",
+      "id": "o-modelo",
       "area": "technical",
-      "statement": "Las páginas de capa cierran con 'Siguiente elemento UX', que usa a.proceso-card dentro de .proceso-grid (565 × 240 a 1920, imagen en hover).",
+      "statement": "estructura-tarea-1.html es una página de detalle con breadcrumb de 3 niveles (menú de capas en el nivel intermedio), topbar-action y secciones .layer-sec con .sec-header.",
       "status": "observed",
-      "source": "s-esqueleto"
+      "source": "s-tarea"
     },
     {
-      "id": "d-fin",
+      "id": "d-pagina",
       "area": "product",
-      "statement": "Superficie termina con 'Fin del proyecto', 'Gracias por ver', los datos de contacto (LinkedIn y Behance enlazados a sus perfiles en otra pestaña) y las cards de capas, con las medidas indicadas por el usuario.",
+      "statement": "Página nueva del cuestionario del usuario 1, enlazada desde «Ver cuestionario», con las medidas indicadas por el usuario, imágenes provisorias y «Ver video» hacia el video de la card.",
       "status": "confirmed",
-      "source": "u-0021-request"
+      "source": "u-0022-request"
+    },
+    {
+      "id": "d-boton",
+      "area": "product",
+      "statement": "El botón de la barra superior del cuestionario dice «Ver Video».",
+      "status": "confirmed",
+      "source": "u-0022-qa"
     }
   ],
   "questions": [],
   "change": {
-    "actor": "Lector del portfolio que termina la capa Superficie",
-    "problem": "El case study no tiene cierre ni datos de contacto.",
-    "outcome": "superficie.html termina con 'Fin del proyecto', 'Gracias por ver', contacto y las 5 cards de capas.",
-    "scope": "Incluye: sección de cierre en superficie.html y superficie.css, íconos de contacto, SEO, llms.txt y docs. Excluye: cambios en las demás páginas.",
-    "acceptance": "1) Se ve como la referencia a 1920 px. 2) Medidas: tipografías, íconos de 40 px, 16 px ícono-texto, 90/96/160 px. 3) LinkedIn y Behance abren sus perfiles en otra pestaña; las cards llevan a cada capa. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector puede contactar al autor o volver a cualquier capa al terminar.",
+    "actor": "Lector del portfolio que revisa las pruebas de usabilidad",
+    "problem": "«Ver cuestionario» del usuario 1 no tiene destino.",
+    "outcome": "superficie-usuario-1.html muestra el cuestionario, las preguntas cualitativas y los insights del usuario 1; «Ver cuestionario» lleva a ella.",
+    "scope": "Incluye: página nueva y su CSS, enlace desde superficie.html, estrella vacía, SEO, llms.txt y docs. Excluye: usuarios 2 y 3, imágenes finales.",
+    "acceptance": "1) Se ve como la referencia a 1920 px, con placeholders. 2) Medidas indicadas (tipografías, estrellas, 48/56/80/96 px, íconos de 32 a 17 px). 3) «Ver cuestionario» lleva a la página; «Ver video» abre el video en otra pestaña; los «Ir a…» navegan entre secciones; el breadcrumb vuelve a Superficie. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector ve cómo calificó y qué opinó el usuario 1.",
     "evidence": [
       "o-design",
-      "o-cards",
-      "d-fin"
+      "o-modelo",
+      "d-pagina",
+      "d-boton"
     ]
   }
 }
