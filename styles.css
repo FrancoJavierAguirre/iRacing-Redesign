@@ -143,7 +143,10 @@ a { color: inherit; text-decoration: none; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(4,2,13,0.15) 0%, rgba(4,2,13,0.55) 55%, var(--bg) 100%);
+  /* Encima del video y debajo del contenido (z-index 2): degradado horizontal de negro opaco (izquierda) a
+     transparente (derecha), pedido del usuario 2026-11-23. Se quitó el degradado vertical que oscurecía la parte
+     inferior: el video termina en un corte recto contra Contexto, como en la referencia del usuario. */
+  background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
 .hero-content {
   position: relative;
@@ -249,16 +252,15 @@ a { color: inherit; text-decoration: none; }
   font-weight: 400;
   color: var(--text-mid);
 }
+/* La imagen ocupa todo el alto de la sección (720 px @1920) y sobresale 75 px a la derecha (recortada por el
+   overflow de .contexto), para que su centro quede simétrico respecto del texto (pedido del usuario 2026-11-23). */
 .context-img {
   position: absolute;
   z-index: 1;
   top: 0;
-  right: 0;
+  right: calc(-1 * clamp(0px, 3.9063vw, 75px));  /* -75px @1920 */
   height: 100%;
   width: auto;
-  max-width: 55%;
-  object-fit: contain;
-  object-position: right center;
   display: block;
 }
 
@@ -649,6 +651,7 @@ a { color: inherit; text-decoration: none; }
     width: calc(100% - 48px);
     height: 320px;
     margin: 32px auto 0;
+    object-fit: cover;   /* llena el recuadro sin deformarse; recorta los bordes oscuros */
   }
   .cards.cols-2, .cards.cols-3 { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }

@@ -463,13 +463,9 @@
         {
           "path": "specs/0010-superficie-ux-writing/tasks.md",
           "sha256": "c151f140b46b4485cef01006223da455bba345225760959e87653f81661dc06e"
-        },
-        {
-          "path": "styles.css",
-          "sha256": "31fd8cc862dbf9214f8718348926c6dcc636aca5d6e7465e6fa651fa325070f8"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23.",
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23. Evidencia rotada por el degradado del hero (2026-11-23).",
       "reviews": [
         {
           "kind": "human",
@@ -1858,10 +1854,6 @@
           "sha256": "d9b8f65fe5744a6e25f5ed7645f117a7f6b1b0d471bf65269c32ccebe90cb3e7"
         },
         {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "b8f4299b183e07e077ca0e5252fe89a53262fbc494d60cb8387483e3071cc527"
-        },
-        {
           "path": "specs/0007-detalle-tarea-1/spec.md",
           "sha256": "7e58bb8959b3980765160dc1abfb54736b9f38ed9d2ab3160f48281fab69a766"
         },
@@ -1874,7 +1866,7 @@
           "sha256": "102a3192afd4e32560fc69d8043bbea26d69af193a45e23debdd8063c5d77471"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0007 (y relacionada 0023); no es la ficha activa: .cardenal/context.json no se tocó. Implementado por el coordinador; sin subagente. Revisión del asistente en servidor local con iframes de 19 anchos (320-1920) en las 6 páginas page-tarea: el breadcrumb y el título no se cruzan (mínimo 20 px en la misma línea), el botón de la derecha no los pisa, sin scroll horizontal (incluida la nota de Martín entre 641 y 900), los dos menús abren dentro de la pantalla; consola sin errores. Sin captura (panel oculto). Evidencia rotada por la corrección de typos del 2026-11-23.",
+      "evidenceNote": "Fix sobre la feature dueña 0007 (y relacionada 0023); no es la ficha activa: .cardenal/context.json no se tocó. Implementado por el coordinador; sin subagente. Revisión del asistente en servidor local con iframes de 19 anchos (320-1920) en las 6 páginas page-tarea: el breadcrumb y el título no se cruzan (mínimo 20 px en la misma línea), el botón de la derecha no los pisa, sin scroll horizontal (incluida la nota de Martín entre 641 y 900), los dos menús abren dentro de la pantalla; consola sin errores. Sin captura (panel oculto). Evidencia rotada por la corrección de typos del 2026-11-23. Evidencia rotada por el degradado del hero (2026-11-23).",
       "reviews": [
         {
           "kind": "human",
@@ -1913,13 +1905,9 @@
         {
           "path": "estrategia.html",
           "sha256": "f4c3c42f0e969bea633a112777689968bf010ffb40947733ac1654906a6c5d58"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "d0abea61f5dc7de62ce09a4041d271b88db2dce79a46b295316884cd1e19a784"
         }
       ],
-      "evidenceNote": "Correcciones de copy pedidas por el usuario (estaban fuera de alcance en la spec 0001 y listadas como pendientes en docs/tech/sistema.md). Sin cambios de estructura ni estilos. Búsqueda en los .html: no quedan «Evauaciones», «par el usuario» ni «Garret».",
+      "evidenceNote": "Correcciones de copy pedidas por el usuario (estaban fuera de alcance en la spec 0001 y listadas como pendientes en docs/tech/sistema.md). Sin cambios de estructura ni estilos. Búsqueda en los .html: no quedan «Evauaciones», «par el usuario» ni «Garret». Evidencia rotada por el degradado del hero (2026-11-23).",
       "reviews": [
         {
           "kind": "human",
@@ -1929,6 +1917,45 @@
           "evidence": {
             "path": ".cardenal/revision-fix-2026-11-23-typos.md",
             "sha256": "c5abba579c679d761b6f94ba9b7d75f1bfd7d51019dbe1e115e12d924254d7be"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T34",
+      "title": "Home: degradado del hero e imagen de Contexto",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Pedido del usuario 2026-11-23 con referencia (degradado negro opaco a la izquierda, transparente a la derecha): entre el video del hero y su contenido. Contexto (pedido del usuario): sección de 720 px de alto, la imagen contexto (720 px) ocupa todo el alto y sobresale 75 px a la derecha.",
+      "dependsOn": [],
+      "files": [
+        "styles.css"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "styles.css",
+          "sha256": "6642d5ff2135e06551ccf81944dac8c2a1529f403636da6f270bb7ce71166e36"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "671a84a4358e76e750a5986e3d48d51d7df31bf8738c7ec07aed0d0e6476246d"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "e483123d055c85bb961b900fb6952d229bbc06a8c950836d1e5c66605bcef9ac"
+        }
+      ],
+      "evidenceNote": "Sin spec dueña: el Home es anterior a Cardenal (ninguna spec define el hero); por ser un cambio de una regla CSS se registra como tarea del tablero, sin carpeta de spec. La referencia del usuario (1920 × 979) es negro con alfa 255 → 0 lineal de izquierda a derecha; se implementó como linear-gradient(90deg, #000, transparent) en .hero-overlay, sumado al degradado vertical existente. Revisión del asistente en servidor local: overlay cubre todo el hero (1920 y 375 px), queda después del video y debajo del contenido (z-index 2); elementFromPoint sobre el logo devuelve el logo; captura a 1920 y 375 px; sin scroll horizontal; consola sin errores. Corrección del usuario: se quitó el degradado vertical de la parte inferior para que quede como su segunda referencia (corte recto contra Contexto); captura a 1920 px coincide. Contexto: la imagen se veía de 1048 × 626 por max-width 55 % + object-fit contain; ahora 1205 × 720 a 1920 px, top 0, sobresale 75 px (escala con el ancho: 35-56 px entre 901 y 1440), proporción 1,674 sin deformar en todos los anchos; en ≤ 900 px object-fit cover (antes se deformaba al quitar contain); sin scroll horizontal en 9 anchos (375-2400); captura a 1920 px.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (degradado del hero sin el inferior e imagen de Contexto)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-home.md",
+            "sha256": "9d202ca7b535bc827a86d2f994e2d6e3665dec0cfbecbead3e2083d2f37fa839"
           }
         }
       ]

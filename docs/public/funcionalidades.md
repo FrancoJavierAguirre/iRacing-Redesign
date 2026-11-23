@@ -25,8 +25,8 @@ No hay cuentas, login, formularios ni datos de usuario.
 
 ## Home (`index.html`)
 
-1. **Hero**: video de fondo, logo de iRacing, título «¿Y si la UX fuera tan fluida como en la pista?» e íconos de las herramientas usadas (Figma, Make, Photoshop, UX Tweak).
-2. **Contexto**: relato en segunda persona de cómo un usuario nuevo llega a iRacing, con una imagen.
+1. **Hero**: video de fondo, oscurecido de izquierda a derecha por un degradado negro que deja el texto legible (abajo termina en un corte recto contra Contexto), logo de iRacing, título «¿Y si la UX fuera tan fluida como en la pista?» e íconos de las herramientas usadas (Figma, Make, Photoshop, UX Tweak).
+2. **Contexto**: relato en segunda persona de cómo un usuario nuevo llega a iRacing. A la derecha, la imagen del volante y los pedales ocupa todo el alto de la sección y sobresale un poco del borde, para que quede balanceada con el texto; en tablet y celular va debajo del texto.
 3. **¿Por qué el rediseño?**: 4 testimonios de usuarios reales y el botón «Ver fuente», que abre una planilla de Google Sheets con las fuentes.
 4. **Plataforma actual**: explica que iRacing tiene una *plataforma* (buscar carreras) y un *simulador* (correr), y que el rediseño apunta a la plataforma. Muestra 6 comparativas Antes/Después en video:
    - Lista de carreras · Registro a la carrera · Detalles de la carrera · Calendario · Detalles de autos y pistas · Carrito de compras.
