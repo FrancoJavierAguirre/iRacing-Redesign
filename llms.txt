@@ -51,7 +51,7 @@ Cada comparativa de `index.html` muestra en video la plataforma antes y después
 - `estructura-tarea-1.html` y `estructura-tarea-2.html`: completas; los gráficos son capturas de UXtweak.
 - `esqueleto.html`: completa.
 - `superficie.html`: parcial; tiene UX Writing y el Sistema de Diseño (valores, principios, colores, tipografía, imágenes y layout); tiene también Componentes (iconografía, botones, dropdowns y listas, cards, y logos y licencias) , Pruebas de Usabilidad, Iteraciones (con su video y las capturas de antes y después), Prototipo (con un video de cada prototipo) y el cierre con contacto.
-- `superficie-usuario-1.html`: completa. `superficie-usuario-2.html` y `superficie-usuario-3.html`: completas salvo las capturas de las preguntas cualitativas (provisorias).
+- `superficie-usuario-1.html` y `superficie-usuario-2.html`: completas. `superficie-usuario-3.html`: completa salvo la captura de la pregunta cualitativa (provisoria).
 - `superficie-guion.html`: completa salvo la imagen del gráfico en Contexto (provisoria).
 
 ## Enlaces

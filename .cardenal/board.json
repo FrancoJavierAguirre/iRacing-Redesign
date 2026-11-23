@@ -1215,20 +1215,8 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie-usuario-2.html",
-          "sha256": "e81bc34fe11635dbf9c1c575a4aaa8b6ade5abe5f4080b3b18a6849d6ccf2159"
-        },
-        {
           "path": "superficie-usuario-3.html",
           "sha256": "8f7c7ca79bdd132f466f680f55abacb1fd397bf7ea0af6e5144b79e242f1559c"
-        },
-        {
-          "path": "specs/0023-superficie-usuarios-2-3/spec.md",
-          "sha256": "11fd0cb9d77fee1e979246d4b0d09b4781cfb1d0db28cc8590b91996bb20c068"
-        },
-        {
-          "path": "specs/0023-superficie-usuarios-2-3/tasks.md",
-          "sha256": "b657adb55534bbdf7e07f8ee26e734226b0239f45653f14b2a7f5b94fae15e28"
         },
         {
           "path": "assets/shrug.png",
@@ -1239,7 +1227,7 @@
           "sha256": "dc511968c4b21f48591a8757fbcd5f045e22b6340dc8aa8b000068573eb695ab"
         }
       ],
-      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal. Evidencia rotada en 0024: archivos modificados por el guión de las pruebas; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit.",
+      "evidenceNote": "Generado por el coordinador desde la plantilla del usuario 1 con un script; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, en las dos páginas estrellas 48 × 48 con 80 px entre sí y 48 px del texto, 96 px entre grupos, 56 px entre pregunta, respuesta e imagen, 56 px entre insights; estrellas 0/0/4/5 (Martín) y 2/4/5/3 (Fede); imágenes 1162 × 551, 642 y 600 (Martín) y 1162 × 684 (Fede); 6 insights cada una; .sr-only ocultos; videos correctos. 900 y 375 px sin scroll horizontal; consola sin errores; sin imágenes rotas. Corrección de QA del usuario: nota «No terminó la tarea» con shrug en las filas 1 y 2 del usuario 2; medido a 1920 px: 40 px de la última estrella, Exo 2 300 16, imagen 44 × 34, centrada en vertical con las estrellas, estrellas centradas igual que las demás filas; 900 px sin desborde; 375 px debajo de las estrellas, sin scroll horizontal. Evidencia rotada en 0024: archivos modificados por el guión de las pruebas; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios del usuario 2); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1651,18 +1639,6 @@
           "sha256": "a4a8094a566a948da5b68f3bf33ffae4fbf1355234338c6cf6ad44a9f0c93b13"
         },
         {
-          "path": "llms.txt",
-          "sha256": "b63e8df146ff286a70bc422316f64823b2e6adfc8301aab2c41bfc3c588447ae"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "3dd76390bbc92b35113074db8cab4e2122597d2b417e24dd9f35a4259a3577f6"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "ca2be3eaeac0c3fed2d89fc7c82ec59226a3e2a7bcbfe3b8c7eee1b640a8fa0e"
-        },
-        {
           "path": "specs/0022-superficie-usuario-1/spec.md",
           "sha256": "cc7f27843396ce99318f6d21fbfb97d02dfabb5d547e9a258c9e6539574cdda1"
         },
@@ -1675,7 +1651,7 @@
           "sha256": "483cf66360c1626abfa4847bb0299fb2efcf82fbcce811adc6cde31885f39149"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0022 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (4,7 s), 1162 × 622, radio 12; distancias 56/96 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página.",
+      "evidenceNote": "Fix sobre la feature dueña 0022 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (4,7 s), 1162 × 622, radio 12; distancias 56/96 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada por el fix 2026-11-23 (medios del usuario 2); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1685,6 +1661,74 @@
           "evidence": {
             "path": ".cardenal/revision-fix-2026-11-23-usuario-1.md",
             "sha256": "9ccf4624b5d3d34ac52eda2dfd858da34ea560d5aba27e42f2a5f289156878bd"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T28",
+      "title": "Fix: medios de las preguntas del Usuario 2",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Addendum 2026-11-23 en specs/0023-superficie-usuarios-2-3/tasks.md (T004-T006); clarificación en specs/0023-superficie-usuarios-2-3/spec.md.",
+      "dependsOn": [
+        "T23"
+      ],
+      "files": [
+        "superficie-usuario-2.html",
+        "assets/usuarios/usuario-2-encontrar-serie.mp4",
+        "assets/usuarios/usuario-2-compra-visible.mp4",
+        "assets/usuarios/usuario-2-logos.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie-usuario-2.html",
+          "sha256": "aa51dc801f79bea6e966c0b8951cd7524017f558c86f69c29a39e597cd9e202f"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "692f903abe3d1bfd0a289905548159f2c636d19903421440782888b54b8103d4"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "f0e9b81f37f43abb06457792fb51cde1361f998da90f3b8cf977004c98e524e0"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "4e3c90f236972fd30d1a1ea2d3a5b66b5cc89e4ba3c0e449ec57966209ba7d60"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/spec.md",
+          "sha256": "24415c6bf77ba454b64ee62e9ebf99d42f421228920b08f8e2b882b1d3eb24d8"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/tasks.md",
+          "sha256": "b49f0d92de961ce465578bf90d9e9dcef1d71ce53d98a8079f69cbd969ed3d68"
+        },
+        {
+          "path": "assets/usuarios/usuario-2-encontrar-serie.mp4",
+          "sha256": "5be6e63bf5489c09d2750f482b4822575c255b0d4764542f68650161e7f37b74"
+        },
+        {
+          "path": "assets/usuarios/usuario-2-compra-visible.mp4",
+          "sha256": "539fa7bfc0adbf33a9486702ccbe4b03ca840bb33dcc8c2d0a0b31857db849c3"
+        },
+        {
+          "path": "assets/usuarios/usuario-2-logos.png",
+          "sha256": "fce70a7ac54a248cb9da09e983266cdd9a607acb372357de5abd5ce4277abc2e"
+        }
+      ],
+      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 2 videos readyState 4 (3,1 y 8,8 s) y la imagen cargan; 1162 × 538, 642 (recortado abajo) y 601; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-usuario-2.md",
+            "sha256": "e20548cc0a2a353dd7fe80f469edb290bef086e567c41ea2720f0e043a858ec3"
           }
         }
       ]
