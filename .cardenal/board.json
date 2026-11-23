@@ -1023,19 +1023,11 @@
       "questions": [],
       "evidence": [
         {
-          "path": "specs/0019-superficie-iteraciones/spec.md",
-          "sha256": "aa7e2a051405b40afe1b0272e8ea307fe997f3757d52ba55a999d44d9affe98c"
-        },
-        {
-          "path": "specs/0019-superficie-iteraciones/tasks.md",
-          "sha256": "c732d5292d2326bfcdb718c8d9cff91185cde3f385f1200589ffc4dba33c1faf"
-        },
-        {
           "path": "specs/0019-superficie-iteraciones/context.json",
           "sha256": "0d1a4f57301d04651c609addb3128087ca54f850d4a74f4df8b17d9a8a7ac85d"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: gif de 1163 px y texto a 32 px; 72 px entre título, bullets y botón; Antes/Después con 32 px; tipografías Exo 2 36/24 (estilos computados); 4 enlaces externos con target _blank. Tras la corrección del usuario: 56 px de «Antes/Después» a su imagen (segunda corrección) y 56 px de las imágenes al SVG (medidos), e «Ir a Prototipo» sin destino. Evidencia rotada en 0020: archivos modificados por Prototipo; la versión aprobada está en su commit. Evidencia rotada en 0020: superficie.css modificado por Prototipo; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: gif de 1163 px y texto a 32 px; 72 px entre título, bullets y botón; Antes/Después con 32 px; tipografías Exo 2 36/24 (estilos computados); 4 enlaces externos con target _blank. Tras la corrección del usuario: 56 px de «Antes/Después» a su imagen (segunda corrección) y 56 px de las imágenes al SVG (medidos), e «Ir a Prototipo» sin destino. Evidencia rotada en 0020: archivos modificados por Prototipo; la versión aprobada está en su commit. Evidencia rotada en 0020: superficie.css modificado por Prototipo; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1069,19 +1061,11 @@
       "questions": [],
       "evidence": [
         {
-          "path": "specs/0020-superficie-prototipo/spec.md",
-          "sha256": "445f8f309410d60d888f752680983823a34846e38c08c5f3b19310b003d45b03"
-        },
-        {
-          "path": "specs/0020-superficie-prototipo/tasks.md",
-          "sha256": "7d56e7dc68c715fef1be5aaea1a4792c29ef584b73bb143a752f843e373d0088"
-        },
-        {
           "path": "specs/0020-superficie-prototipo/context.json",
           "sha256": "b3e8add990a3d6bbb5cc40f883ed6392274bd3235d34568f937944c98035b1ad"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Corrección de QA del usuario (2026-11-22): subtítulo y botón centrados respecto de los bullets. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: subtítulo Exo 2 400 36 px y bullets Exo 2 400 24 px a 1920; centros de subtítulo, bullets y botón coinciden en los tres bloques; imagen de 1163 px, texto a 32 px y 72 px entre elementos; sin scroll horizontal; consola sin errores. Evidencia rotada en 0021: archivos modificados por Fin del proyecto; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Corrección de QA del usuario (2026-11-22): subtítulo y botón centrados respecto de los bullets. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: subtítulo Exo 2 400 36 px y bullets Exo 2 400 24 px a 1920; centros de subtítulo, bullets y botón coinciden en los tres bloques; imagen de 1163 px, texto a 32 px y 72 px entre elementos; sin scroll horizontal; consola sin errores. Evidencia rotada en 0021: archivos modificados por Fin del proyecto; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1119,10 +1103,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.css",
-          "sha256": "9634e4b199e5a559e60d35df7521ca750454e9315e61acbc3749c20034ec7a64"
-        },
-        {
           "path": "assets/ico-linkedin.png",
           "sha256": "c5004667629b94f402872f4f74a4822b61f206c9255a045f9e326301dbf2a866"
         },
@@ -1151,7 +1131,7 @@
           "sha256": "2809477679a103d68b009e47bddfaf99e0e785acc4b4219617340c2b07c0e929"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Revisión del asistente en servidor local por medición (el panel del navegador estaba oculto, sin captura): a 1920 px, título Exo 2 400 64, banderas de 48 px a 90 px, Gracias Exo 2 300 48 a 160 px, contacto a 96 px, cards a 160 px; íconos visibles de 40 px a 16 px del texto Poppins 300 24; cards 560 × 240. 900 y 375 px sin scroll horizontal; consola sin errores; LinkedIn y Behance con target _blank y rel noopener. Evidencia rotada en 0022: archivos modificados por el cuestionario del Usuario 1; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Revisión del asistente en servidor local por medición (el panel del navegador estaba oculto, sin captura): a 1920 px, título Exo 2 400 64, banderas de 48 px a 90 px, Gracias Exo 2 300 48 a 160 px, contacto a 96 px, cards a 160 px; íconos visibles de 40 px a 16 px del texto Poppins 300 24; cards 560 × 240. 900 y 375 px sin scroll horizontal; consola sin errores; LinkedIn y Behance con target _blank y rel noopener. Evidencia rotada en 0022: archivos modificados por el cuestionario del Usuario 1; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1329,10 +1309,6 @@
           "sha256": "0d3f876e5dc6bf27b838b906c316fccf7cd6018126fa7781b51b7ef91f977256"
         },
         {
-          "path": "superficie.html",
-          "sha256": "5f5f51b98fd0b80f9c385b84aff4712bfa7fb08b0591bf1eb9a2e07eee7bf13d"
-        },
-        {
           "path": "docs/tech/dependencies/README.md",
           "sha256": "bcf0c1d9e33cfd5092b096cc06082a727f6819c8ab40b4737573959caf8d3406"
         },
@@ -1389,7 +1365,7 @@
           "sha256": "9dedf8478891c48a573788f60d19e5345b416faa59534deeb49e3e6f6da5f5eb"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto). Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto). Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1450,18 +1426,6 @@
         {
           "path": "estrategia.css",
           "sha256": "c7c5115a455f00db99ee9f3bceb52c75de67e925daaa6918710b7404bc35b1da"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "6663553ab09b4a14ef6de18d999605665636f60166e1a398c0b3ee811fa6c9a6"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "11184c46c1414a12c39e22a8e6f4bc7a8d5c409f4d7041ac6be0397e5909c197"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "15db9f4e8d0714e79f187b256be0d0d91b2da8aaa4e1970c55649c8e7f7bf83d"
         },
         {
           "path": "assets/estrategia/dx-carrito-antes.png",
@@ -1564,7 +1528,7 @@
           "sha256": "3c0888b41dc382b255849dc5f9e9f4b004e4c905c60c57ea32da4987dc568dea"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (conversión con ffmpeg y reemplazo por script); no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 0 placeholders; 11 videos cargan (readyState 4) con autoplay, muted y loop y duraciones esperadas (1,5× salvo «no acelerar»); 11 imágenes cargan; Estética: gap 0, radio 8, overflow hidden; alternancias con animación em-alterna 4 s steps(1) y ambas imágenes en la misma posición. 1920, 900 y 375 px sin scroll horizontal; consola sin errores.",
+      "evidenceNote": "Implementado por el coordinador (conversión con ffmpeg y reemplazo por script); no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 0 placeholders; 11 videos cargan (readyState 4) con autoplay, muted y loop y duraciones esperadas (1,5× salvo «no acelerar»); 11 imágenes cargan; Estética: gap 0, radio 8, overflow hidden; alternancias con animación em-alterna 4 s steps(1) y ambas imágenes en la misma posición. 1920, 900 y 375 px sin scroll horizontal; consola sin errores. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1574,6 +1538,118 @@
           "evidence": {
             "path": ".cardenal/revision-0025.md",
             "sha256": "e643a77586c34740d33e196860fd49c1b10c2d783edbf23a752f13854546c2b1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T26",
+      "title": "Fix: medios de Iteraciones y Prototipo y centrado de License Progress",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Addendum 2026-11-23 en specs/0019-superficie-iteraciones/tasks.md (T005-T008) y specs/0020-superficie-prototipo/tasks.md (T004-T006); FR-002 aclarado en ambas specs y ajuste de centrado en 0019.",
+      "dependsOn": [
+        "T19",
+        "T20"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "assets/iteraciones/license-progress.mp4",
+        "assets/iteraciones/prototipo-encontrar-carrera.mp4",
+        "assets/iteraciones/prototipo-carrito.mp4",
+        "assets/iteraciones/all-series-antes.png",
+        "assets/iteraciones/all-series-despues.png",
+        "assets/iteraciones/filtros-antes.png",
+        "assets/iteraciones/filtros-despues.png",
+        "assets/iteraciones/registro-antes.png",
+        "assets/iteraciones/registro-despues.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "446b6faff5d70214948e1c93a33822f6f4e1441ab34036358ec2f7bcc1f03230"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "c40c1cc15b3b4dafce4ed754899d48c4aca1820e3022b7adb0abc1ea398556bf"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "6aec77bdaff06eb87e92859d43dd764824feb5cea6d7a4c5c949407140c33a05"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "6b6b6afdbb9f039b40d130aa4b62fa57a67af049a631b00704efe93cb436f46a"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "82b92bafe404ee7525c6c94eb851def596e5b4d9638245f4ece29858283636ab"
+        },
+        {
+          "path": "specs/0019-superficie-iteraciones/spec.md",
+          "sha256": "89218c5c6bd731e25a7ff2844da541f6fac1e2dfb21b101a4ab1ed8000d49fb0"
+        },
+        {
+          "path": "specs/0019-superficie-iteraciones/tasks.md",
+          "sha256": "3bcd0ac8c3336f2b89e2be81c2f10607bebdd57de597d4e8611c5fe63543d996"
+        },
+        {
+          "path": "specs/0020-superficie-prototipo/spec.md",
+          "sha256": "d745c355fbac23b44fedd26c9c2827d26913e0fbf7a2fdde58048dbd26b7619f"
+        },
+        {
+          "path": "specs/0020-superficie-prototipo/tasks.md",
+          "sha256": "264632516d224a68b94f289b24ecb8629bb404d272133cad43df4ccb66bc4d8d"
+        },
+        {
+          "path": "assets/iteraciones/license-progress.mp4",
+          "sha256": "245a4ce90f7a6ea73d41272026d1077ca1f0fb19abf0ac5b51805784cc7e3684"
+        },
+        {
+          "path": "assets/iteraciones/prototipo-encontrar-carrera.mp4",
+          "sha256": "1993845947538fdde939bde7d6a4a8f70f6d4264fe4d4f97df846943c68b0407"
+        },
+        {
+          "path": "assets/iteraciones/prototipo-carrito.mp4",
+          "sha256": "79071229d192de0e1bbc6fea5e9e353c70758ef4b0c8262238ef594ff669bf9c"
+        },
+        {
+          "path": "assets/iteraciones/all-series-antes.png",
+          "sha256": "4153524abd608083fb0b74dfabcb6af61ffcaffa1671a969bd1c1f22e4a7639e"
+        },
+        {
+          "path": "assets/iteraciones/all-series-despues.png",
+          "sha256": "5c9cc0969915e7e5da2bad92b7947a9f96cb58a4bf5bbd686e39d32e88fde40b"
+        },
+        {
+          "path": "assets/iteraciones/filtros-antes.png",
+          "sha256": "fa54f4dfa85cbcd414f23acd5e589f7f82742e813952097508c266c781de67c1"
+        },
+        {
+          "path": "assets/iteraciones/filtros-despues.png",
+          "sha256": "0c3428bd44c4948194d088ff1d9deb0a268ba1dea31bd9ac24564735febe6c1a"
+        },
+        {
+          "path": "assets/iteraciones/registro-antes.png",
+          "sha256": "07d089cc19f1e7a303ddbd1e59591db4c1591e4ef745c8fd2ca8128b33a1c0ff"
+        },
+        {
+          "path": "assets/iteraciones/registro-despues.png",
+          "sha256": "ee03f3a5b5171c852d5fbe6c1e091a5aedb2752434d539bcacd4be058cd045fc"
+        }
+      ],
+      "evidenceNote": "Fix sobre las features dueñas 0019 y 0020 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 4 videos readyState 4 con duraciones 10,3/10,3/9,3/10,8 s; 2 PNG 864 × 604 cargan; distancias de Iteraciones y Prototipo sin cambios (32/56 px); 1920, 900 y 375 sin scroll horizontal; consola sin errores. Segunda tanda (el usuario agregó 4 PNG olvidados): Filtros y búsqueda y Registro a la carrera Antes/Después; las 6 imágenes cargan, pares con 32 px entre sí y 56 px a su título; 0 placeholders en Superficie; 375 px sin scroll horizontal; consola sin errores. Ajuste del usuario: título y «Probar funcionalidad» de License Progress centrados respecto de los bullets (misma regla que Prototipo, ahora en .it-solucion); centros coinciden en los 4 bloques a 1920 y 375 px.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (tras agregar las capturas olvidadas y centrar License Progress)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-iteraciones-prototipo.md",
+            "sha256": "72bd7e91a5580d54520adb11ed2d2f982da8962bad9dfd967872c072f85ff12d"
           }
         }
       ]

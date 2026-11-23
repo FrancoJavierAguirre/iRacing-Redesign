@@ -24,5 +24,10 @@ Referencia: `referencia-figma.webp` (771 × 2000 px, texto blanco sobre transpar
 - En pantallas angostas, las distancias de 72 px y la letra de 36/24 px se achican en proporción.
 - Medidas no indicadas leídas de la referencia: separación entre bloques.
 
+## Clarificaciones 2026-11-23
+- FR-002 (ajustado por fix): License Progress muestra el video `assets/iteraciones/license-progress.mp4` (autoplay, muted, loop) y los tres Antes/Después sus imágenes (`all-series-*`, `filtros-*` y `registro-*` `-antes.png`/`-despues.png`), en su proporción real (`.it-media`, radio 12).
+
+- Ajuste del usuario (2026-11-23): en License Progress, el título y «Probar funcionalidad» se centran respecto de los bullets, como en Prototipo (se reemplaza la alineación a la izquierda aprobada originalmente).
+
 ## Fuera de alcance
 Imágenes y gifs finales.

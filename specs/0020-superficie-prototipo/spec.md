@@ -24,5 +24,8 @@ Referencia: `referencia-figma.webp` (1160 × 2000 px, texto blanco sobre transpa
 ## Supuestos
 - Separación entre bloques: la de los encabezados de sección (`.rule-head`).
 
+## Clarificaciones 2026-11-23
+- FR-002 (ajustado por fix): los tres bloques muestran video en bucle en lugar de placeholder: `license-progress.mp4` (el mismo de Iteraciones), `prototipo-encontrar-carrera.mp4` y `prototipo-carrito.mp4`, en `assets/iteraciones/`.
+
 ## Fuera de alcance
 Imágenes finales.

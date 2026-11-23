@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Implementado (texto, videos e imágenes) |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones, Prototipo y el cierre «Fin del proyecto» implementados (Iteraciones y Prototipo con imágenes provisorias) |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones, Prototipo y el cierre «Fin del proyecto» implementados, con todos sus videos e imágenes |
 | Cuestionario del Usuario 1 (Superficie) | `superficie-usuario-1.html` | Implementado (imágenes provisorias) |
 | Cuestionario del Usuario 2 (Superficie) | `superficie-usuario-2.html` | Implementado (imágenes provisorias) |
 | Cuestionario del Usuario 3 (Superficie) | `superficie-usuario-3.html` | Implementado (imágenes provisorias) |
@@ -199,11 +199,11 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - **Conclusiones:** «Fue muy mala idea dejar filtros previamente activados y muy mal diseñados» y una card «Filtros» con el problema y sus causas.
     - «Ver cuestionario» de cada usuario lleva a su página (`superficie-usuario-1.html`, `-2` y `-3`). «Leer guión completo» lleva al guión (`superficie-guion.html`). Ya no quedan botones sin destino en Superficie. «Ir a Iteraciones» lleva a la sección siguiente.
 17. **Iteraciones** («Puliendo el producto»): qué cambió después de las pruebas.
-    - **License Progress:** «Solución para nuevos usuarios» con cuatro puntos (separado por disciplinas, barra de progresión de licencia, primero solo lo que puede correr y luego lo que puede comprar) y «Probar funcionalidad», que abre el prototipo de Figma en otra pestaña.
+    - **License Progress:** «Solución para nuevos usuarios» con cuatro puntos (separado por disciplinas, barra de progresión de licencia, primero solo lo que puede correr y luego lo que puede comprar) y «Probar funcionalidad», que abre el prototipo de Figma en otra pestaña. El título y el botón están centrados respecto de los puntos.
     - **All Series**, **Filtros y búsqueda** y **Registro a la carrera:** cada una compara «Antes» y «Después» y tiene un botón «Probar…» que abre su prototipo en otra pestaña. All Series suma una imagen de la pantalla nueva con flechas que señalan cada cambio.
-    - Las capturas y el gif todavía son recuadros provisorios con el nombre de la imagen que va.
+    - License Progress muestra un video en bucle; All Series, Filtros y búsqueda y Registro a la carrera, sus capturas de antes y después.
     - «Ir a Prototipo» lleva a la última sección.
-18. **Prototipo** («Un prototipo vale más que mil imágenes»): la última sección. Tres bloques con una imagen (provisoria por ahora), un resumen y «Abrir prototipo», que abre el prototipo de Figma en otra pestaña. El subtítulo y el botón están centrados respecto de los puntos:
+18. **Prototipo** («Un prototipo vale más que mil imágenes»): la última sección. Tres bloques con un video en bucle del prototipo, un resumen y «Abrir prototipo», que abre el prototipo de Figma en otra pestaña. El subtítulo y el botón están centrados respecto de los puntos:
     - **License Progress:** «Solución para nuevos usuarios».
     - **Encontrar tu carrera:** «Nueva tabla, nuevos detalles» (tab «Cars», calendario y detalles de autos/pistas, imágenes de autos y pistas, nuevo texto en los CTA y filtros rediseñados).
     - **Carrito de compras:** «Compra en un solo lugar» (carrito sin abandonar la plataforma e información sobre descuentos).
