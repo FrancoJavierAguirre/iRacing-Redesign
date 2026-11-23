@@ -69,6 +69,14 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 - **JS**: IIFE sin dependencias; click en el botón alterna `aria-expanded` y `hidden`; click en `document` fuera de `[data-capas]` y Escape cierran (Escape devuelve el foco al botón). Inerte si faltan los nodos. Una instancia por página.
 - **Estilos** `.capas-*` en `elementos.css` (antes de «Intro»). Los chevrons (`assets/ico-chevron-down.svg` / `-up.svg`, 12x12) se alternan por CSS según `aria-expanded`. Colores literales del diseño de referencia (`#212121`, `#B7B7BA`, `#FFFFFF`). Requiere Inter 400 en el link de Google Fonts.
 
+### Videos e imágenes de Estrategia (`estrategia.html` + `estrategia.css`, spec 0025)
+
+- Los 19 `.media-placeholder` se reemplazaron por medios en `assets/estrategia/`: 11 MP4 (convertidos desde GIF con ffmpeg: H.264, CRF 26, sin audio, `+faststart`, a lo sumo 1160/864/1340 px de ancho; acelerados 1,5× salvo los marcados «no acelerar»; 2,8 MB en total frente a ~70 MB de los GIF) y 11 PNG.
+- `.em-media`: `<video autoplay muted loop playsinline preload="metadata">` con `aria-label`, o `<img loading="lazy">` con `alt`; ancho 100 %, alto automático (proporción real), radio 12. En el paso 3 del escenario conserva el ancho del bloque ancho.
+- `.em-apiladas` (Estética): dos imágenes sin separación en un contenedor con `overflow: hidden` y radio 8.
+- `.em-alterna` (Lista de carreras, Carrito de compras): las dos imágenes en la misma celda de grid; la de después anima `em-alterna` 4 s `step-end` (2 s cada una, corte directo). Con `prefers-reduced-motion` queda fija la de después.
+- Los GIF originales no están en el repositorio.
+
 ### Página de Alcance (`alcance.html` + `alcance.css`, spec 0004)
 
 - `body.page-elementos.page-alcance`; una sección `.layer-sec.matriz` con `.matriz-grid`: grilla CSS 2×2 (`grid-template-areas: ". q3 q1" ". q4 q2"`, columnas `var(--gut) minmax(0,1fr) minmax(0,1.2fr)`) con 4 `.cuadrante` hermanos directos, en orden 1-2-3-4 en el DOM (la posición sale de `grid-area`, así el apilado mobile no reordena). Cada cuadrante es un `role="group"` con `aria-label`; los ejes y `.q-head` van `aria-hidden`.
@@ -216,7 +224,6 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 ## Pendientes técnicos observados
 
 - Superficie: imágenes y gif finales de Iteraciones y Prototipo, capturas de los cuestionarios de los 3 usuarios e imagen del gráfico en el guión.
-- 19 `media-placeholder` en `estrategia.html`.
 - Typos en el contenido: «Evauaciones» (`5-elementos.html`), «par el usuario» (`index.html`, `estrategia.html`), «James Garret» en lugar de «Garrett» en el subtítulo de «Proceso de Diseño» de `index.html` (el `title` y el `h1` de `5-elementos.html` ya se corrigieron).
 
 ## SEO y descubrimiento (spec 0001)

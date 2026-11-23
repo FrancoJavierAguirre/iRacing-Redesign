@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "u-0025-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-22 (/fix, registrado como feature por falta de feature dueña): reemplazar los placeholders de estrategia.html por los archivos de su carpeta local 'videos pagina estrategia' (22 archivos); cada nombre indica el título más cercano. Los GIF pasan a MP4 livianos; los GIF sin '(no acelerar)' se aceleran 1,5×. 'Lista de carreras antes/despues' y 'Carrito de compras antes/despues' alternan cada 2 segundos."
+    },
+    {
+      "id": "u-0025-decisiones",
+      "kind": "user",
+      "reference": "Respuestas del usuario en chat 2026-11-22: registrar como feature 0025; 'Estética y diseño minimalista 1' arriba y '2' abajo sin separación, en un contenedor con corner radius de 8 px."
+    },
+    {
+      "id": "s-estrategia",
+      "kind": "file",
+      "reference": "estrategia.html",
+      "sha256": "55ea268d1241e977680475d2fce0d088a3d0deb9a61ca731e97af6bbb779c7b3"
+    }
+  ],
+  "facts": [
+    {
+      "id": "o-placeholders",
+      "area": "technical",
+      "statement": "Antes de este cambio, estrategia.html tenía 19 .media-placeholder (3 heurísticas, 3 resultados de encuestas, 5 pasos del escenario, 4 de Experiencia y 4 de Descubrimientos); ninguna spec los definía (la página es anterior a Cardenal; 0002 solo cubre el Lean Canvas y Ver respuestas). Hoy esos lugares tienen los medios en assets/estrategia/.",
+      "status": "observed",
+      "source": "s-estrategia"
+    },
+    {
+      "id": "d-medios",
+      "area": "product",
+      "statement": "Los placeholders de Estrategia se reemplazan por los archivos del usuario: GIF convertidos a MP4 (1,5× salvo «no acelerar»), PNG tal cual; dos pares alternan cada 2 s.",
+      "status": "confirmed",
+      "source": "u-0025-request"
+    },
+    {
+      "id": "d-estetica",
+      "area": "product",
+      "statement": "Estética y diseño minimalista: imagen 1 arriba y 2 abajo, sin separación, en un contenedor con radio de 8 px.",
+      "status": "confirmed",
+      "source": "u-0025-decisiones"
+    }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que recorre la capa Estrategia",
+    "problem": "Estrategia muestra recuadros provisorios en lugar de sus imágenes y animaciones.",
+    "outcome": "estrategia.html muestra los videos e imágenes reales en los 19 lugares, livianos.",
+    "scope": "Incluye: conversión de GIF a MP4, imágenes en assets/estrategia, estrategia.html y estrategia.css, docs y llms.txt. Excluye: cambios de texto.",
+    "acceptance": "1) Cada archivo está en el lugar que indica su nombre. 2) GIF convertidos a MP4 (sin audio, bucle, sin controles), acelerados 1,5× salvo «no acelerar». 3) Lista de carreras y Carrito de compras alternan antes/después cada 2 s. 4) Estética: 1 arriba y 2 abajo sin separación, radio 8. 5) Sin scroll horizontal en 1920/900/375; consola limpia; docs y llms.txt.",
+    "valueSignal": "El lector ve la evidencia visual de cada hallazgo.",
+    "evidence": [
+      "o-placeholders",
+      "d-medios",
+      "d-estetica"
+    ]
+  }
+}

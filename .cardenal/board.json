@@ -437,10 +437,6 @@
           "sha256": "bf155c291f26564884fc9e38b93324742adbc29a645b65b2354d7ac0631427cd"
         },
         {
-          "path": "estrategia.html",
-          "sha256": "36432692e4a16b9138e4756ab6c8d5c9a12d1b7887da68b19f2e1258372857ec"
-        },
-        {
           "path": "alcance.html",
           "sha256": "05ac7d638252b4bea9cfddf4eae88f27e39ff6b7b27f4e34a650afac1e2c985b"
         },
@@ -481,7 +477,7 @@
           "sha256": "31fd8cc862dbf9214f8718348926c6dcc636aca5d6e7465e6fa651fa325070f8"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1337,18 +1333,6 @@
           "sha256": "5f5f51b98fd0b80f9c385b84aff4712bfa7fb08b0591bf1eb9a2e07eee7bf13d"
         },
         {
-          "path": "llms.txt",
-          "sha256": "f68f6c4ab7e2e6777d65e1b530756d7020879b1268cac82830441559a09f8a33"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "90bf832a865541fcc326cc913ead22418df9b91ebe4eb6bdc1aaa3384dcece0b"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "f671fab07491c0d6dfa05cbc26df4c2750c53d5e89b3384ac727ef16739518f2"
-        },
-        {
           "path": "docs/tech/dependencies/README.md",
           "sha256": "bcf0c1d9e33cfd5092b096cc06082a727f6819c8ab40b4737573959caf8d3406"
         },
@@ -1405,7 +1389,7 @@
           "sha256": "9dedf8478891c48a573788f60d19e5345b416faa59534deeb49e3e6f6da5f5eb"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto).",
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto). Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1415,6 +1399,181 @@
           "evidence": {
             "path": ".cardenal/revision-0024.md",
             "sha256": "2a0a1c9303eb272560b9157d50dcc9da4dddc8cc4d9ddffa469ece57bfd9eba9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T25",
+      "title": "Estrategia: videos e imágenes",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-5 de change.acceptance en .cardenal/context.json (0025) y specs/0025-estrategia-medios/spec.md.",
+      "dependsOn": [
+        "T24"
+      ],
+      "files": [
+        "estrategia.html",
+        "estrategia.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/estrategia/dx-carrito-antes.png",
+        "assets/estrategia/dx-carrito-despues.png",
+        "assets/estrategia/dx-detalles-carreras.png",
+        "assets/estrategia/dx-lista-carreras-antes.png",
+        "assets/estrategia/dx-lista-carreras-despues.png",
+        "assets/estrategia/dx-primera-vez.mp4",
+        "assets/estrategia/escenario-1.mp4",
+        "assets/estrategia/escenario-2.mp4",
+        "assets/estrategia/escenario-3.mp4",
+        "assets/estrategia/escenario-4.mp4",
+        "assets/estrategia/escenario-5.mp4",
+        "assets/estrategia/exp-1-login.png",
+        "assets/estrategia/exp-2-buscar.png",
+        "assets/estrategia/exp-3-comprar.png",
+        "assets/estrategia/exp-4-registrarse.png",
+        "assets/estrategia/heuristica-consistencia.mp4",
+        "assets/estrategia/heuristica-estetica-1.png",
+        "assets/estrategia/heuristica-estetica-2.png",
+        "assets/estrategia/heuristica-libertad.mp4",
+        "assets/estrategia/resultados-busqueda.mp4",
+        "assets/estrategia/resultados-carrito.mp4",
+        "assets/estrategia/resultados-detalles-serie.mp4"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "estrategia.html",
+          "sha256": "55ea268d1241e977680475d2fce0d088a3d0deb9a61ca731e97af6bbb779c7b3"
+        },
+        {
+          "path": "estrategia.css",
+          "sha256": "c7c5115a455f00db99ee9f3bceb52c75de67e925daaa6918710b7404bc35b1da"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "6663553ab09b4a14ef6de18d999605665636f60166e1a398c0b3ee811fa6c9a6"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "11184c46c1414a12c39e22a8e6f4bc7a8d5c409f4d7041ac6be0397e5909c197"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "15db9f4e8d0714e79f187b256be0d0d91b2da8aaa4e1970c55649c8e7f7bf83d"
+        },
+        {
+          "path": "assets/estrategia/dx-carrito-antes.png",
+          "sha256": "5d35a9b3cd68064a54e3c074f9b3064af64e838eddd4af266b9fdec3d7f1f731"
+        },
+        {
+          "path": "assets/estrategia/dx-carrito-despues.png",
+          "sha256": "543749a3661fbb75044b2511ee6d67eaa3c13916b7a9c30628bcf6dabd638521"
+        },
+        {
+          "path": "assets/estrategia/dx-detalles-carreras.png",
+          "sha256": "85ad1bd6189350775b141cf9d5ea5c84d5a94a5cd401eea4e66bed5a9046d581"
+        },
+        {
+          "path": "assets/estrategia/dx-lista-carreras-antes.png",
+          "sha256": "f9455318bc99fe4a715a4151ebad55bc702617b54ebb83d9510954cdc93257cb"
+        },
+        {
+          "path": "assets/estrategia/dx-lista-carreras-despues.png",
+          "sha256": "1f4ae6e69582d2663d3323e8a673e7418164adbfb6639ad34f6d156f795fa28e"
+        },
+        {
+          "path": "assets/estrategia/dx-primera-vez.mp4",
+          "sha256": "8554b63155ac68e163d71b5e4df4a4ebc8e694fabd2c84373a6171a52b76050d"
+        },
+        {
+          "path": "assets/estrategia/escenario-1.mp4",
+          "sha256": "a20235137021f7a2bb31bbf3334e41c2082c4686332867dc799a4c016bbfc899"
+        },
+        {
+          "path": "assets/estrategia/escenario-2.mp4",
+          "sha256": "cbda9ba9d89b254114d6a564816e4f676905dbfc939ada6f674544a8c51cb324"
+        },
+        {
+          "path": "assets/estrategia/escenario-3.mp4",
+          "sha256": "84f739ac5c4ece980b8f3fd780ef405bb26199cc60342f90910eaf5adfb46d08"
+        },
+        {
+          "path": "assets/estrategia/escenario-4.mp4",
+          "sha256": "2e685e1d6920cfbc504fc42128a6aaf4b1144036a781a03f89f9cb97cf657dbe"
+        },
+        {
+          "path": "assets/estrategia/escenario-5.mp4",
+          "sha256": "448d2ae0538d6b7eb2d494dc5da62707f09e17eea360aa094b5e25d51668e72e"
+        },
+        {
+          "path": "assets/estrategia/exp-1-login.png",
+          "sha256": "d346d01c12d1a4276135fd780c12946f6a205430952c2ecbeea351562327c1db"
+        },
+        {
+          "path": "assets/estrategia/exp-2-buscar.png",
+          "sha256": "475205435c3d2b29fad4ee6c66064b08ff4ec52f5e717716ed63ea4f2fcbbda8"
+        },
+        {
+          "path": "assets/estrategia/exp-3-comprar.png",
+          "sha256": "46236322e5157e378c6d5871e19e6c30bc09b9fe9bf1ae52ec8158040bd45d3e"
+        },
+        {
+          "path": "assets/estrategia/exp-4-registrarse.png",
+          "sha256": "6b0b3159982e9a9c49f6465be21f7d90dd0649beaf248588cca5d1a1d2af2879"
+        },
+        {
+          "path": "assets/estrategia/heuristica-consistencia.mp4",
+          "sha256": "868490ac3d919ee04932f022b594d969f89a1999a4255144e9f76e34061d71bf"
+        },
+        {
+          "path": "assets/estrategia/heuristica-estetica-1.png",
+          "sha256": "a4c7fb634ff24850a1049e64ddd2addb68eb16606d109397bdac061a379f2173"
+        },
+        {
+          "path": "assets/estrategia/heuristica-estetica-2.png",
+          "sha256": "82bd0aa19351ac585c248982e2ca4f55665fe36d673f61701531c0d3043e165b"
+        },
+        {
+          "path": "assets/estrategia/heuristica-libertad.mp4",
+          "sha256": "f791c2ea76dbc83be0cd93e224b6f5804916b1af718c962a8940edd91fc0dd84"
+        },
+        {
+          "path": "assets/estrategia/resultados-busqueda.mp4",
+          "sha256": "c18c950bf7c889ab156865b1292057bed8583078af5d1aad568edada136e2504"
+        },
+        {
+          "path": "assets/estrategia/resultados-carrito.mp4",
+          "sha256": "4a99364e0d96807464d9bac20b574cef9f6889e3d8d4927faebfaeca1f20d469"
+        },
+        {
+          "path": "assets/estrategia/resultados-detalles-serie.mp4",
+          "sha256": "6c2bcc7124e1c727436b149f040e3932ca1ae5d27948524b2222982c13dfbd8f"
+        },
+        {
+          "path": "specs/0025-estrategia-medios/spec.md",
+          "sha256": "e501d266b138a64727e28d4e583e9e3bfea1e3e75d3a4f2cf1b0489f46be44a4"
+        },
+        {
+          "path": "specs/0025-estrategia-medios/tasks.md",
+          "sha256": "d09a96be6ba907ef1009cd9a9b3a608fd4ee175ef72a3a42f83db463f823d9a4"
+        },
+        {
+          "path": "specs/0025-estrategia-medios/context.json",
+          "sha256": "3c0888b41dc382b255849dc5f9e9f4b004e4c905c60c57ea32da4987dc568dea"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador (conversión con ffmpeg y reemplazo por script); no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 0 placeholders; 11 videos cargan (readyState 4) con autoplay, muted y loop y duraciones esperadas (1,5× salvo «no acelerar»); 11 imágenes cargan; Estética: gap 0, radio 8, overflow hidden; alternancias con animación em-alterna 4 s steps(1) y ambas imágenes en la misma posición. 1920, 900 y 375 px sin scroll horizontal; consola sin errores.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0025.md",
+            "sha256": "e643a77586c34740d33e196860fd49c1b10c2d783edbf23a752f13854546c2b1"
           }
         }
       ]

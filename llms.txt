@@ -45,7 +45,7 @@ Cada comparativa de `index.html` muestra en video la plataforma antes y después
 
 - `index.html`: completa.
 - `5-elementos.html`: completa.
-- `estrategia.html`: el texto está completo; las imágenes de hallazgos y escenarios son todavía recuadros de reemplazo; «Ver respuestas» abre la planilla de respuestas de la encuesta.
+- `estrategia.html`: completa; cada hallazgo, resultado, escenario, experiencia y descubrimiento tiene su captura o video; «Ver respuestas» abre la planilla de respuestas de la encuesta.
 - `alcance.html`: completa.
 - `estructura.html`: completa; «Ver más detalles» lleva al detalle de cada tarea y «Ver Esqueleto» lleva a Esqueleto.
 - `estructura-tarea-1.html` y `estructura-tarea-2.html`: completas; los gráficos son capturas de UXtweak.

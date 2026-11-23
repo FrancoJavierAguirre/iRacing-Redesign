@@ -2,84 +2,57 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0024-request",
+      "id": "u-0025-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): última página del proyecto, a la que lleva «Leer guión completo», según la referencia 'guion' y 8 imágenes provistas; las imágenes que no estén, como placeholders. «Intentar en prototipo» de las tareas 1 y 2 abre en otra pestaña los enlaces de Figma dados. Textos en Poppins Light Italic 24 con las palabras en #BCA447 en italic, salvo Cuestionario (como antes: Light, con lo dorado en Regular) y Preguntas Cualitativas (Exo 2 Light 32). «Ver video» abre en otra pestaña el video de Drive dado."
+      "reference": "Pedido del usuario en chat 2026-11-22 (/fix, registrado como feature por falta de feature dueña): reemplazar los placeholders de estrategia.html por los archivos de su carpeta local 'videos pagina estrategia' (22 archivos); cada nombre indica el título más cercano. Los GIF pasan a MP4 livianos; los GIF sin '(no acelerar)' se aceleran 1,5×. 'Lista de carreras antes/despues' y 'Carrito de compras antes/despues' alternan cada 2 segundos."
     },
     {
-      "id": "s-referencia",
+      "id": "u-0025-decisiones",
+      "kind": "user",
+      "reference": "Respuestas del usuario en chat 2026-11-22: registrar como feature 0025; 'Estética y diseño minimalista 1' arriba y '2' abajo sin separación, en un contenedor con corner radius de 8 px."
+    },
+    {
+      "id": "s-estrategia",
       "kind": "file",
-      "reference": "specs/0024-superficie-guion/referencia-figma.webp",
-      "sha256": "4a81d1768ee4d7ea95410430e9d87743873d6b0379b19c83e3c76b7fb6949e53"
-    },
-    {
-      "id": "s-plantilla",
-      "kind": "file",
-      "reference": "superficie-usuario-1.html",
-      "sha256": "d3309f4a888e011273831243a1cccbc14707e2763c25ce99fde233cc74c01f34"
-    },
-    {
-      "id": "u-0024-qa",
-      "kind": "user",
-      "reference": "Correcciones del usuario en chat 2026-11-22: al chip «Clase D» le falta el ícono ico-auto en #9B3F06; 16 px entre el título Tarea 1/Tarea 2 y el botón; la imagen del primer placeholder está en assets con el nombre «contexto»."
-    },
-    {
-      "id": "u-0024-qa2",
-      "kind": "user",
-      "reference": "Corrección del usuario en chat 2026-11-22: la imagen contexto lleva corner radius de 8 px."
+      "reference": "estrategia.html",
+      "sha256": "55ea268d1241e977680475d2fce0d088a3d0deb9a61ca731e97af6bbb779c7b3"
     }
   ],
   "facts": [
     {
-      "id": "o-design",
-      "area": "product",
-      "statement": "La referencia (519 × 2000, escala ~1:3,7) muestra 'Guión de las pruebas' con breadcrumb '… › Superficie › Guión' y 7 secciones con botones 'Ir a…': Introducción (4 párrafos), Contexto (4 filas texto + imagen alternadas: video de iRacing, gráfico, licencias, carrera con horario), Ambientación (5 párrafos), Instrucciones (2 párrafos y Tarea 1 y 2 con 'Intentar en prototipo', enunciado, logo de la serie con chip Clase D y auto), Cuestionario (4 preguntas '¿Qué tan fácil fue…?' en 2 × 2 con imagen), Preguntas Cualitativas (3 preguntas numeradas) y Cierre (3 párrafos).",
-      "status": "observed",
-      "source": "s-referencia"
-    },
-    {
-      "id": "o-plantilla",
+      "id": "o-placeholders",
       "area": "technical",
-      "statement": "Las páginas de usuario (specs 0022-0023) usan topbar con breadcrumb de 3 niveles, .layer-sec con .sec-header y definen .sr-only en su CSS.",
+      "statement": "Antes de este cambio, estrategia.html tenía 19 .media-placeholder (3 heurísticas, 3 resultados de encuestas, 5 pasos del escenario, 4 de Experiencia y 4 de Descubrimientos); ninguna spec los definía (la página es anterior a Cardenal; 0002 solo cubre el Lean Canvas y Ver respuestas). Hoy esos lugares tienen los medios en assets/estrategia/.",
       "status": "observed",
-      "source": "s-plantilla"
+      "source": "s-estrategia"
     },
     {
-      "id": "d-guion",
+      "id": "d-medios",
       "area": "product",
-      "statement": "Página del guión con las tipografías indicadas por el usuario, 8 imágenes provistas, placeholders para el resto, 'Intentar en prototipo' y 'Ver video' con los enlaces dados.",
+      "statement": "Los placeholders de Estrategia se reemplazan por los archivos del usuario: GIF convertidos a MP4 (1,5× salvo «no acelerar»), PNG tal cual; dos pares alternan cada 2 s.",
       "status": "confirmed",
-      "source": "u-0024-request"
+      "source": "u-0025-request"
     },
     {
-      "id": "d-qa",
+      "id": "d-estetica",
       "area": "product",
-      "statement": "Chip «Clase D» con ícono del auto en #9B3F06; 16 px entre título y botón de cada tarea; primera imagen de Contexto: assets/contexto.png.",
+      "statement": "Estética y diseño minimalista: imagen 1 arriba y 2 abajo, sin separación, en un contenedor con radio de 8 px.",
       "status": "confirmed",
-      "source": "u-0024-qa"
-    },
-    {
-      "id": "d-radio",
-      "area": "product",
-      "statement": "La imagen de contexto del guión tiene radio de 8 px.",
-      "status": "confirmed",
-      "source": "u-0024-qa2"
+      "source": "u-0025-decisiones"
     }
   ],
   "questions": [],
   "change": {
-    "actor": "Lector del portfolio que revisa las pruebas de usabilidad",
-    "problem": "«Leer guión completo» no tiene destino.",
-    "outcome": "superficie-guion.html muestra el guión de las pruebas; «Leer guión completo» lleva a ella.",
-    "scope": "Incluye: página y CSS nuevos, imágenes en assets/guion, enlace desde superficie.html, SEO, llms.txt y docs. Excluye: imágenes que faltan (placeholders).",
-    "acceptance": "1) Se ve como la referencia a 1920 px. 2) Tipografías indicadas (Poppins 300 italic 24 con dorado italic 400; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32). 3) «Leer guión completo» lleva a la página; «Ver Video» e «Intentar en prototipo» abren sus enlaces en otra pestaña; los «Ir a…» y el breadcrumb funcionan. 4) Responsive sin scroll horizontal; .sr-only ocultos; SEO, llms.txt y docs; consola limpia.",
-    "valueSignal": "El lector entiende cómo se condujeron las pruebas.",
+    "actor": "Lector del portfolio que recorre la capa Estrategia",
+    "problem": "Estrategia muestra recuadros provisorios en lugar de sus imágenes y animaciones.",
+    "outcome": "estrategia.html muestra los videos e imágenes reales en los 19 lugares, livianos.",
+    "scope": "Incluye: conversión de GIF a MP4, imágenes en assets/estrategia, estrategia.html y estrategia.css, docs y llms.txt. Excluye: cambios de texto.",
+    "acceptance": "1) Cada archivo está en el lugar que indica su nombre. 2) GIF convertidos a MP4 (sin audio, bucle, sin controles), acelerados 1,5× salvo «no acelerar». 3) Lista de carreras y Carrito de compras alternan antes/después cada 2 s. 4) Estética: 1 arriba y 2 abajo sin separación, radio 8. 5) Sin scroll horizontal en 1920/900/375; consola limpia; docs y llms.txt.",
+    "valueSignal": "El lector ve la evidencia visual de cada hallazgo.",
     "evidence": [
-      "o-design",
-      "o-plantilla",
-      "d-guion",
-      "d-qa",
-      "d-radio"
+      "o-placeholders",
+      "d-medios",
+      "d-estetica"
     ]
   }
 }

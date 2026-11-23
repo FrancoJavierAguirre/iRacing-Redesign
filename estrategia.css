@@ -77,6 +77,19 @@
 .dx ul { margin: 0 0 clamp(20px, 2vw, 40px); padding-left: 24px; display: flex; flex-direction: column; gap: clamp(10px, 1.1vw, 21px); }
 .dx li, .dx p { font-family: "Poppins", sans-serif; font-weight: 300; font-size: var(--fs-body); line-height: 1.6; color: #fff; margin: 0; }
 
+/* Videos e imágenes reales (spec 0025): toman su proporción real en el lugar del placeholder */
+.page-estrategia .em-media { display: block; width: 100%; height: auto; border-radius: 12px; }
+.page-estrategia .steps .wide .em-media { width: clamp(300px, 70vw, 1340px); margin: 0 auto; }
+/* Estética: dos imágenes apiladas sin separación, contenedor con radio 8 */
+.page-estrategia .em-apiladas { overflow: hidden; border-radius: 8px; }
+.page-estrategia .em-apiladas .em-media { border-radius: 0; }
+/* Antes / después: cambian cada 2 s (ciclo de 4 s), corte directo */
+.page-estrategia .em-alterna { display: grid; }
+.page-estrategia .em-alterna > .em-media { grid-area: 1 / 1; }
+.page-estrategia .em-alterna > .em-despues { animation: em-alterna 4s step-end infinite; }
+@keyframes em-alterna { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .page-estrategia .em-alterna > .em-despues { animation: none; opacity: 1; } }
+
 /* Lean UX Canvas */
 .canvas-meta { display: flex; gap: var(--gap-s); justify-content: flex-end; flex-wrap: wrap; margin-top: clamp(24px, 2.5vw, 48px); }
 .canvas-meta span { background: var(--card); border-radius: 8px; padding: 10px 16px; font-family: var(--font-display); font-weight: 400; font-size: var(--fs-body); color: #fff; }

@@ -13,7 +13,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 |---|---|---|
 | Home del case study | `index.html` | Implementado |
 | 5 Elementos UX (Jesse James Garrett) | `5-elementos.html` | Implementado |
-| Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
+| Estrategia (capa 1) | `estrategia.html` | Implementado (texto, videos e imágenes) |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
 | Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones, Prototipo y el cierre «Fin del proyecto» implementados (Iteraciones y Prototipo con imágenes provisorias) |
@@ -56,7 +56,9 @@ Cuatro bloques con navegación interna:
 
 «Ver Alcance» (arriba a la derecha) lleva a Alcance. Cierre: «Siguiente elemento UX», cuya tarjeta «Sigue acá» lleva a Alcance.
 
-**Partes incompletas:** las imágenes de hallazgos y escenarios son recuadros punteados con el nombre del archivo esperado. «Ver respuestas» abre en una pestaña nueva la planilla de respuestas de la encuesta.
+**Videos e imágenes:** cada hallazgo, resultado de encuesta, paso del escenario hipotético, paso de la experiencia y descubrimiento tiene su captura o su video. Los videos se reproducen solos, en bucle y sin sonido. En «Estética y diseño minimalista» se ven dos capturas, una debajo de la otra. En «Lista de carreras» y «Carrito de compras» la imagen alterna entre antes y después cada 2 segundos (si el sistema pide reducir el movimiento, queda fija en el después).
+
+«Ver respuestas» abre en una pestaña nueva la planilla de respuestas de la encuesta.
 
 ## Alcance (`alcance.html`)
 
