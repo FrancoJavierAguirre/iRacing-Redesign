@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "u-0021-request",
+      "kind": "user",
+      "reference": "Pedido del usuario en chat 2026-11-22 (/feature): lo último de Superficie es el cierre de la referencia. Banderas a cuadros de los assets; íconos de LinkedIn, Behance, Gmail y teléfono provistos; LinkedIn y Behance enlazan a sus perfiles. Ícono-texto 16 px; íconos de 40 px de alto; texto Poppins Light 24; 'Fin del proyecto' Exo 2 Regular 64; 'Gracias por ver' Exo 2 Light 48; 96 px entre contacto y 'Gracias por ver'; 160 px entre 'Fin del proyecto' y 'Gracias por ver' y entre el contacto y las cards; 90 px entre banderas y texto."
+    },
+    {
+      "id": "s-referencia",
+      "kind": "file",
+      "reference": "specs/0021-superficie-fin/referencia-figma.png",
+      "sha256": "7bede42bf69d4f742c5753233bfb21dcab077965c185e2aed973047ea61fc480"
+    },
+    {
+      "id": "s-esqueleto",
+      "kind": "file",
+      "reference": "esqueleto.html",
+      "sha256": "3cf0f8698393b92bb92c7c57dcda1065361d9506276b3271b59156af2a2c5386"
+    }
+  ],
+  "facts": [
+    {
+      "id": "o-design",
+      "area": "product",
+      "statement": "La referencia (1920 × 1401, texto blanco sobre transparente) muestra 'Fin del proyecto' entre dos banderas a cuadros de ~48 px, 'Gracias por ver', una fila de 4 contactos repartidos a lo ancho (LinkedIn y Behance con el nombre, Gmail con el correo y teléfono con el número) y las 5 cards de capas en filas de 3 y 2 centradas.",
+      "status": "observed",
+      "source": "s-referencia"
+    },
+    {
+      "id": "o-cards",
+      "area": "technical",
+      "statement": "Las páginas de capa cierran con 'Siguiente elemento UX', que usa a.proceso-card dentro de .proceso-grid (565 × 240 a 1920, imagen en hover).",
+      "status": "observed",
+      "source": "s-esqueleto"
+    },
+    {
+      "id": "d-fin",
+      "area": "product",
+      "statement": "Superficie termina con 'Fin del proyecto', 'Gracias por ver', los datos de contacto (LinkedIn y Behance enlazados a sus perfiles en otra pestaña) y las cards de capas, con las medidas indicadas por el usuario.",
+      "status": "confirmed",
+      "source": "u-0021-request"
+    }
+  ],
+  "questions": [],
+  "change": {
+    "actor": "Lector del portfolio que termina la capa Superficie",
+    "problem": "El case study no tiene cierre ni datos de contacto.",
+    "outcome": "superficie.html termina con 'Fin del proyecto', 'Gracias por ver', contacto y las 5 cards de capas.",
+    "scope": "Incluye: sección de cierre en superficie.html y superficie.css, íconos de contacto, SEO, llms.txt y docs. Excluye: cambios en las demás páginas.",
+    "acceptance": "1) Se ve como la referencia a 1920 px. 2) Medidas: tipografías, íconos de 40 px, 16 px ícono-texto, 90/96/160 px. 3) LinkedIn y Behance abren sus perfiles en otra pestaña; las cards llevan a cada capa. 4) Responsive sin scroll horizontal; SEO, llms.txt y docs; consola limpia.",
+    "valueSignal": "El lector puede contactar al autor o volver a cualquier capa al terminar.",
+    "evidence": [
+      "o-design",
+      "o-cards",
+      "d-fin"
+    ]
+  }
+}

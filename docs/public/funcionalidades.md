@@ -16,7 +16,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 | Estrategia (capa 1) | `estrategia.html` | Parcial: el texto está completo, las imágenes son placeholders |
 | Alcance (capa 2) | `alcance.html` | Implementado (Matriz FVD) |
 | Esqueleto (capa 4) | `esqueleto.html` | Implementado (wireframes en media) |
-| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones y Prototipo implementados (Iteraciones y Prototipo con imágenes provisorias) |
+| Superficie (capa 5) | `superficie.html` | Parcial: UX Writing, Sistema de Diseño (Valores, Principios, Colores, Tipografía, Imágenes y Layout) , Componentes (Iconografía, Botones, Dropdowns y listas, Cards, y Logos y licencias) , Pruebas de Usabilidad, Iteraciones, Prototipo y el cierre «Fin del proyecto» implementados (Iteraciones y Prototipo con imágenes provisorias) |
 | Navegación general del portfolio (otros case studies) | — | Pendiente |
 
 ## Home (`index.html`)
@@ -174,10 +174,14 @@ Encabezado «UX Writing» con el link «Saltar a Sistema de Diseño», que baja 
     - **License Progress:** «Solución para nuevos usuarios».
     - **Encontrar tu carrera:** «Nueva tabla, nuevos detalles» (tab «Cars», calendario y detalles de autos/pistas, imágenes de autos y pistas, nuevo texto en los CTA y filtros rediseñados).
     - **Carrito de compras:** «Compra en un solo lugar» (carrito sin abandonar la plataforma e información sobre descuentos).
+19. **Fin del proyecto**: cierre de la página y del case study. «Fin del proyecto» entre dos banderas a cuadros, «Gracias por ver» y los datos de contacto:
+    - **LinkedIn** y **Behance** («Franco Javier Aguirre») abren el perfil en otra pestaña.
+    - El correo y el teléfono se muestran como texto.
+    - Debajo, las 5 cards de las capas (Estrategia, Alcance, Estructura, Esqueleto y Superficie) llevan a cada página, como en «Siguiente elemento UX».
 
 Cada subsección tiene botones para ir a la anterior y a la siguiente.
 
-**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular; las imágenes de Detalles de auto se apilan en celular. En Pruebas de Usabilidad, las cards de a dos pasan a una columna en tablet y los botones de cada card bajan debajo del título en celular. En Iteraciones, la imagen y el texto de License Progress se apilan y Antes/Después pasan a una columna en tablet y celular; las indicaciones de la imagen de All Series se ven muy chicas en celular. Los bloques de Prototipo se apilan igual que License Progress.
+**Celular:** las tablas pasan a bloques por fila, con el nombre de cada columna. La Matriz de Tono se muestra como lista de pasos con su tono. Valores se apila, Principios pone la tarjeta arriba de la descripción y las muestras de color van de a 2. Las cuatro imágenes pasan a dos columnas; el circuito y el layout ocupan el ancho. Los íconos se reacomodan en más filas y, en celular, «Estilo relleno» y «3 tamaños» se apilan, igual que las filas de botones; las cards pasan a dos columnas en tablet y a una en celular; las imágenes de Detalles de auto se apilan en celular. En Pruebas de Usabilidad, las cards de a dos pasan a una columna en tablet y los botones de cada card bajan debajo del título en celular. En Iteraciones, la imagen y el texto de License Progress se apilan y Antes/Después pasan a una columna en tablet y celular; las indicaciones de la imagen de All Series se ven muy chicas en celular. Los bloques de Prototipo se apilan igual que License Progress. En el cierre, los contactos pasan a dos columnas en tablet y a una en celular, y las cards de capas a dos y a una.
 ## Descubrimiento por buscadores y asistentes de IA
 
 - Cada página tiene un título y una descripción propios en español (que nombran el proyecto y a Franco Aguirre). Se usan en los resultados de búsqueda y en las vistas previas al compartir el enlace (Open Graph y Twitter Card). No cambia nada de lo que se ve en pantalla.

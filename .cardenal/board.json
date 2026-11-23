@@ -1073,26 +1073,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.html",
-          "sha256": "2116095a5e1c42d30c7f8f73d2b0bb4d63111e3b5b06042c0258fb544dd3f2e2"
-        },
-        {
-          "path": "superficie.css",
-          "sha256": "63b41c0e5794cdca259161d8d57711388d24e68aa54e6221d6bc227366105c90"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "076d92131229f246331c57f3e5fd35c0dc001ddabb899374b9ea1deacd102f81"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "2492f89e4c2b45f7b6bb6beb560e869b3845c8ce3fc4f6af8a052f17cdc6ea36"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "c31939613e71a729936e2aadd3749447d0e3bcfeb48dd9c51fff9801518c4f7a"
-        },
-        {
           "path": "specs/0020-superficie-prototipo/spec.md",
           "sha256": "445f8f309410d60d888f752680983823a34846e38c08c5f3b19310b003d45b03"
         },
@@ -1105,7 +1085,7 @@
           "sha256": "b3e8add990a3d6bbb5cc40f883ed6392274bd3235d34568f937944c98035b1ad"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Corrección de QA del usuario (2026-11-22): subtítulo y botón centrados respecto de los bullets. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: subtítulo Exo 2 400 36 px y bullets Exo 2 400 24 px a 1920; centros de subtítulo, bullets y botón coinciden en los tres bloques; imagen de 1163 px, texto a 32 px y 72 px entre elementos; sin scroll horizontal; consola sin errores.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Corrección de QA del usuario (2026-11-22): subtítulo y botón centrados respecto de los bullets. Revisión visual del asistente en servidor local a 1920, 900 y 375 px: subtítulo Exo 2 400 36 px y bullets Exo 2 400 24 px a 1920; centros de subtítulo, bullets y botón coinciden en los tres bloques; imagen de 1163 px, texto a 32 px y 72 px entre elementos; sin scroll horizontal; consola sin errores. Evidencia rotada en 0021: archivos modificados por Fin del proyecto; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1115,6 +1095,92 @@
           "evidence": {
             "path": ".cardenal/revision-0020.md",
             "sha256": "a64ae6281c4daf336124d29df6070095a9f8eb36dd063cb37dea2a1309692d9e"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T21",
+      "title": "Superficie, parte 12: Fin del proyecto",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Criterios 1-4 de change.acceptance en .cardenal/context.json (0021) y specs/0021-superficie-fin/spec.md.",
+      "dependsOn": [
+        "T20"
+      ],
+      "files": [
+        "superficie.html",
+        "superficie.css",
+        "llms.txt",
+        "docs/public/funcionalidades.md",
+        "docs/tech/sistema.md",
+        "assets/ico-linkedin.png",
+        "assets/ico-behance.png",
+        "assets/ico-gmail.svg",
+        "assets/ico-phone-gold.svg",
+        "specs/0021-superficie-fin/referencia-figma.png"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie.html",
+          "sha256": "7f25fd4abb3b0a414e40ad96d3d5a05c59f60c4736ca4cf837b80b548b806610"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "9634e4b199e5a559e60d35df7521ca750454e9315e61acbc3749c20034ec7a64"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "0ca67fa68782d922ccac252abcd83c737ea9b3db828396bbffac10293ae63573"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "b09a0b13f8654102aac70928cfa4d87801db94501a88d37e6578047102166367"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "2fab6e5218b14832a6232c0bc3b21e150cfb52ee9c48e3dd094ccba497865997"
+        },
+        {
+          "path": "assets/ico-linkedin.png",
+          "sha256": "c5004667629b94f402872f4f74a4822b61f206c9255a045f9e326301dbf2a866"
+        },
+        {
+          "path": "assets/ico-behance.png",
+          "sha256": "04d3d7278fe15670632607a947cc890107c81e3ece64d2e42da4b6ee61a5f54d"
+        },
+        {
+          "path": "assets/ico-gmail.svg",
+          "sha256": "8340775a9fa413a3c7871d4854ddc6e48e36c4ca051ac599f406bc44e952562e"
+        },
+        {
+          "path": "assets/ico-phone-gold.svg",
+          "sha256": "b39600959c76d4964f04c33344087e7f4a207510e95a8aa3ad70c5721074fb8d"
+        },
+        {
+          "path": "specs/0021-superficie-fin/spec.md",
+          "sha256": "bd9181bfcaa1f4f6ba0cf73ea4c3849d2edbe30479162e84c15fe990fd85418a"
+        },
+        {
+          "path": "specs/0021-superficie-fin/tasks.md",
+          "sha256": "d07aa4e003030865830b9d2831f04a1ab6a790c3a83dc88f8f9fcb2c5efa3081"
+        },
+        {
+          "path": "specs/0021-superficie-fin/context.json",
+          "sha256": "2809477679a103d68b009e47bddfaf99e0e785acc4b4219617340c2b07c0e929"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html y superficie.css; no se usó un subagente front. Revisión del asistente en servidor local por medición (el panel del navegador estaba oculto, sin captura): a 1920 px, título Exo 2 400 64, banderas de 48 px a 90 px, Gracias Exo 2 300 48 a 160 px, contacto a 96 px, cards a 160 px; íconos visibles de 40 px a 16 px del texto Poppins 300 24; cards 560 × 240. 900 y 375 px sin scroll horizontal; consola sin errores; LinkedIn y Behance con target _blank y rel noopener.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-22: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0021.md",
+            "sha256": "6410e2049f4a4f06af4b7ace98bc8c1bbd20d536a5ca714326fbdc3b2dfa7239"
           }
         }
       ]

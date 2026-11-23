@@ -155,6 +155,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
     - Los «Probar…» van al final de la línea del encabezado con el patrón `.pu-head` / `.pu-head-link` de Pruebas de Usabilidad y abren en otra pestaña.
     - En ≤ 900 px, `.it-solucion` y `.it-comparar` pasan a una columna.
   - Prototipo (spec 0020): `section#prototipo`, la última de la página, con solo «Ir a Iteraciones». Tres bloques (`#proto-license-progress`, `#proto-encontrar-carrera`, `#proto-carrito`) que reutilizan `.it-solucion` / `.it-texto` / `.it-bullets` de Iteraciones: imagen provisoria `.media-placeholder.it-gif`, texto a 32 px y 72 px entre título, bullets y «Abrir prototipo» (`target="_blank"`). Única diferencia: `#prototipo .it-texto` toma el ancho de su contenido (`fit-content`) y centra el subtítulo y el botón respecto de los bullets. Íconos: `ico-license-gold`, `ico-lupa` e `ico-cart`.
+  - Fin del proyecto (spec 0021): `section.fin#fin-del-proyecto`, después de Prototipo. `h2.fin-titulo` (Exo 2 400 64) con dos `ico-flag-checkered.svg` de 48 px a 90 px; `p.fin-gracias` (Exo 2 300 48) a 160 px; `ul.fin-contacto` a 96 px (flex space-between; ícono de 40 px a 16 px de texto Poppins 300 24): LinkedIn y Behance como enlaces `target="_blank" rel="noopener"`, correo y teléfono como texto, con la red en `.sr-only`. `ico-linkedin.png` e `ico-behance.png` traen 5 px de sombra: `.fin-ico--sombra` los muestra a 50 px con `margin: -5px`. A 160 px, `nav.proceso-grid.fin-capas` con las 5 `a.proceso-card` (la de Superficie con `aria-current="page"`). En ≤ 900 px los contactos van en 2 columnas y en ≤ 640 px en 1.
   - Responsive: en ≤ 900 px, Valores en una columna y muestras de a 3; en ≤ 640 px, Principios apilado y muestras de a 2.
 
 ## Integraciones externas (solo enlaces)
@@ -164,6 +165,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 | Google Fonts | Exo 2, Poppins, Inter | `<head>` de cada HTML |
 | Google Sheets | Fuente de los testimonios («Ver fuente») | `index.html` |
 | Figma | Prototipo («Probar prototipo», «Ver Prototipo») | `index.html`, `superficie.html` |
+| LinkedIn y Behance | Perfiles del autor (cierre «Fin del proyecto») | `superficie.html` |
 | Twitch / globalracingleague.com | Canales de contacto de las encuestas | `estrategia.html` |
 
 No hay llamadas a APIs, autenticación, almacenamiento ni analítica.
