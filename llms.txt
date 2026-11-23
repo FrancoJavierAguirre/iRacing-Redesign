@@ -56,7 +56,7 @@ Cada comparativa de `index.html` muestra en video la plataforma antes y después
 
 ## Enlaces
 
-- [Home del case study](index.html)
+- [Home del case study](index.html) · [English version](en/index.html)
 - [5 Elementos UX de James Garrett](5-elementos.html)
 - [Estrategia](estrategia.html)
 - [Alcance](alcance.html)

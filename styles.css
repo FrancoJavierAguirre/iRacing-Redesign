@@ -110,6 +110,24 @@ a { color: inherit; text-decoration: none; }
 }
 .ph-tag { font-size: 0.85rem; letter-spacing: 0.02em; }
 
+/* ---------- Switch de idioma ES/EN (spec 0027) ---------- */
+.lang-switch { display: inline-flex; align-items: center; height: 48px; flex-shrink: 0; }
+/* Cada opción: 56 × 48 con el texto centrado; radio 8 solo hacia afuera (izquierda en ES, derecha en EN) */
+.lang-switch a {
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 48px; padding: 0; box-sizing: border-box;
+  font: 600 16px/1 "Inter", sans-serif; color: #0159cf; text-decoration: none;
+}
+.lang-switch a:first-child { border-radius: 8px 0 0 8px; }
+.lang-switch a:last-child { border-radius: 0 8px 8px 0; }
+/* Seleccionada: fondo #0159CF al 15 % y sombra hacia el lado de la otra opción */
+.lang-switch a[aria-current="true"] { z-index: 1; background: rgba(1, 89, 207, 0.15); }
+.lang-switch a:first-child[aria-current="true"] { box-shadow: 4px 0 8px rgba(0, 0, 0, 0.35); }
+.lang-switch a:last-child[aria-current="true"] { box-shadow: -4px 0 8px rgba(0, 0, 0, 0.35); }
+.lang-switch a:not([aria-current="true"]):hover { background: rgba(1, 89, 207, 0.08); }
+.lang-switch a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
 /* ---------- Top label ---------- */
 /* Valores fluidos: px de Figma / 1920 * 100vw, con mínimo para pantallas chicas */
 .top-label {
@@ -123,6 +141,11 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem;
   color: #ffffff;
   letter-spacing: 0.02em;
+  /* el switch de idioma va debajo de «Franco Aguirre - 2025», a 24 px (spec 0027) */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 /* ---------- Hero ---------- */

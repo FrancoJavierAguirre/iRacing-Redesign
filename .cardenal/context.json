@@ -2,72 +2,71 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "u-0026-request",
+      "id": "u-0027-request",
       "kind": "user",
-      "reference": "Pedido del usuario en chat 2026-11-23: agregar un menú igual al del breadcrumb (el que navega entre Estrategia, Superficie, Esqueleto, etc.) para navegar entre Fede, Franco y Martín, con el ícono ico-user en color #B7B7BA."
+      "reference": "Pedido del usuario en chat 2026-11-23 (/feature): sitio en español por defecto con un switch ES/EN; versión en inglés como páginas separadas en /en/; el switch va arriba a la derecha en todas las barras superiores, a ~32 px a la izquierda de los botones de la derecha, y recuerda la elección. 48 px de alto, radio 8, texto Inter Semibold 16 #0159CF, opción seleccionada con fondo #0159CF al 15 %. El asistente traduce y el usuario revisa; las imágenes con texto quedan en español. En el Home, el asistente elige la ubicación."
     },
     {
-      "id": "s-menu",
+      "id": "s-referencia",
       "kind": "file",
-      "reference": "menu-capas.js",
-      "sha256": "2ef262221a2781be25b63ae897a64b1cbe8f3c15c3874bd9eeb1dd3e6cd8b892"
+      "reference": "specs/0027-idioma-en/referencia-switch.png",
+      "sha256": "e93d1eb79af7cb8cd8eb5eead94eab671b5f4ad78dffe744976b2700e4402378"
     },
     {
-      "id": "s-spec-0003",
+      "id": "s-elementos-css",
       "kind": "file",
-      "reference": "specs/0003-menu-capas-topbar/spec.md",
-      "sha256": "76e5b17792ec6fe5fb57d12dc0d0d5a6ae96d05508c9809ade9917a6d8ffae5a"
+      "reference": "elementos.css",
+      "sha256": "cfd50fb250177091dff5b22c712ca335a67599c9b4c33dbef71a4a5d389998a2"
     },
     {
-      "id": "s-usuario-1",
-      "kind": "file",
-      "reference": "superficie-usuario-1.html",
-      "sha256": "308620f7306d024ce645717e5b90380f156d0e855474bf9cbe329e4dd4647976"
+      "id": "u-0027-qa",
+      "kind": "user",
+      "reference": "Corrección del usuario en chat 2026-11-23: cada opción del switch mide 56 × 48 con el texto centrado; radio solo en las esquinas exteriores de cada opción; la seleccionada con sombra hacia el lado de la otra; en el Home el switch va debajo de «Franco Aguirre - 2025» a 24 px."
     }
   ],
   "facts": [
     {
-      "id": "o-menu",
-      "area": "technical",
-      "statement": "Antes de este cambio, menu-capas.js manejaba un solo [data-capas] por página (querySelector); hoy recorre todos (abre/cierra con click en el disparador, click afuera y Escape, que devuelve el foco).",
-      "status": "observed",
-      "source": "s-menu"
-    },
-    {
-      "id": "o-patron",
+      "id": "o-switch",
       "area": "product",
-      "statement": "En el menú de capas no aparece la capa actual (HU2 de la spec 0003): se listan las demás, cada una con ícono de 16 px.",
+      "statement": "La referencia muestra dos opciones, ES (seleccionada, con fondo azul claro y radio) y EN, en azul, sin borde exterior visible.",
       "status": "observed",
-      "source": "s-spec-0003"
+      "source": "s-referencia"
     },
     {
-      "id": "o-breadcrumb",
+      "id": "o-topbar",
       "area": "technical",
-      "statement": "Las páginas de usuario tienen breadcrumb 'Rediseño UX/UI › Superficie (menú de capas) › <nombre>'; antes de este cambio el nombre era un span.current, hoy es el disparador del menú de usuarios.",
+      "statement": "Antes de este cambio, en las páginas interiores la barra superior tenía el breadcrumb a la izquierda (absoluto), el título centrado y, salvo en 5-elementos, un botón .topbar-action absoluto a la derecha; el Home no tiene barra superior.",
       "status": "observed",
-      "source": "s-usuario-1"
+      "source": "s-elementos-css"
     },
     {
-      "id": "d-menu-usuarios",
+      "id": "d-idioma",
       "area": "product",
-      "statement": "Menú de usuarios igual al de capas para navegar entre Franco, Martín y Fede, con ico-user en #B7B7BA.",
+      "statement": "Switch ES/EN con las medidas indicadas, páginas en inglés separadas en /en/, recordando la elección; traducción del asistente con revisión del usuario; imágenes con texto en español.",
       "status": "confirmed",
-      "source": "u-0026-request"
+      "source": "u-0027-request"
+    },
+    {
+      "id": "d-switch-qa",
+      "area": "product",
+      "statement": "Opciones de 56 × 48, radio 8 solo hacia afuera, sombra de la seleccionada hacia la otra opción; en el Home, debajo de la etiqueta a 24 px.",
+      "status": "confirmed",
+      "source": "u-0027-qa"
     }
   ],
   "questions": [],
   "change": {
-    "actor": "Lector del portfolio que revisa los cuestionarios de las pruebas",
-    "problem": "Para pasar de un usuario a otro hay que volver a Superficie.",
-    "outcome": "En cada página de usuario, el nombre del breadcrumb abre un menú con los otros dos usuarios.",
-    "scope": "Incluye: menu-capas.js para varias instancias, el menú en las 3 páginas de usuario, ícono gris, CSS, docs. Excluye: la página del guión y otras páginas.",
-    "acceptance": "1) El nombre del usuario en el breadcrumb tiene chevron y abre un menú con el mismo aspecto que el de capas. 2) El menú lista a los otros dos usuarios con ico-user #B7B7BA y lleva a su página. 3) Se cierra con click en el nombre, click afuera o Escape; abrir un menú cierra el otro; el menú de capas sigue funcionando. 4) Teclado; sin scroll horizontal; consola limpia; docs.",
-    "valueSignal": "El lector compara usuarios sin volver a Superficie.",
+    "actor": "Lector del portfolio que no habla español",
+    "problem": "El case study solo está en español.",
+    "outcome": "Cada página tiene su versión en inglés en /en/ y un switch ES/EN que lleva a la equivalente y recuerda la elección.",
+    "scope": "Incluye: lang.js, estilos del switch, switch en todas las barras superiores y en el Home, las 13 páginas traducidas en /en/ (por partes), hreflang, SEO en inglés, docs. Excluye: imágenes con texto (quedan en español).",
+    "acceptance": "1) Switch de 48 px, radio 8, Inter 600 16 #0159CF, seleccionado con fondo #0159CF 15 %, a 32 px a la izquierda del botón de la derecha. 2) Lleva a la página equivalente y recuerda la elección. 3) Páginas en /en/ con texto, alt y SEO traducidos, rutas correctas y hreflang. 4) Sin scroll horizontal; consola limpia; docs.",
+    "valueSignal": "Un reclutador que no habla español puede recorrer el case study.",
     "evidence": [
-      "o-menu",
-      "o-patron",
-      "o-breadcrumb",
-      "d-menu-usuarios"
+      "o-switch",
+      "o-topbar",
+      "d-idioma",
+      "d-switch-qa"
     ]
   }
 }

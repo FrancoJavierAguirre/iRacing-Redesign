@@ -146,6 +146,10 @@ a.proceso-card { text-decoration: none; }
 .page-elementos .hl { color: #bca447; font-weight: 600; }
 .page-elementos .topbar-action { position: absolute; right: var(--side-pad); top: 50%; transform: translateY(-50%); }
 .page-elementos .topbar-action.btn:hover { transform: translateY(-50%); }
+/* Grupo de la derecha de la barra superior (spec 0027): switch de idioma y, si existe, el botón azul a 32 px */
+.page-elementos .topbar-tools { position: absolute; right: var(--side-pad); top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 32px; z-index: 1; }
+.page-elementos .topbar-tools .topbar-action { position: static; transform: none; }
+.page-elementos .topbar-tools .topbar-action.btn:hover { transform: none; }
 .page-elementos .btn-blue { background: #0a5bd6; color: #fff; }
 .page-elementos .btn-blue:hover { background: #0b4fb8; }
 .center-title { text-align: center; font-family: var(--font-display); font-weight: 300; font-size: clamp(24px, 2.0833vw, 40px); color: #fff; margin: clamp(40px, 5vw, 96px) 0 clamp(24px, 2.5vw, 48px); }
@@ -220,6 +224,14 @@ a.proceso-card { text-decoration: none; }
   .sec-header { flex-direction: column; }
   .sec-nav { margin-top: 0; flex-wrap: wrap; }
   .page-elementos .topbar-action { display: none; }
+}
+/* En ≤ 760 px la barra superior pasa a dos renglones para que el switch de idioma no pise el título (spec 0027):
+   breadcrumb y switch arriba, título centrado debajo. */
+@media (max-width: 760px) {
+  .page-elementos .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "crumb tools" "title title"; align-items: center; row-gap: 6px; height: auto; min-height: 56px; padding-top: 10px; padding-bottom: 10px; }
+  .page-elementos .breadcrumb { position: static; transform: none; grid-area: crumb; }
+  .page-elementos .topbar-tools { position: static; transform: none; grid-area: tools; }
+  .page-elementos .topbar-title { grid-area: title; text-align: center; }
   .next-row { flex-direction: column; align-items: center; }
   .next .proceso-card { width: 100%; }
 }

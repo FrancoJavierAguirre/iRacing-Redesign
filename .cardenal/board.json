@@ -433,10 +433,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "elementos.css",
-          "sha256": "bf155c291f26564884fc9e38b93324742adbc29a645b65b2354d7ac0631427cd"
-        },
-        {
           "path": "alcance.html",
           "sha256": "05ac7d638252b4bea9cfddf4eae88f27e39ff6b7b27f4e34a650afac1e2c985b"
         },
@@ -465,7 +461,7 @@
           "sha256": "c151f140b46b4485cef01006223da455bba345225760959e87653f81661dc06e"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23. Evidencia rotada por el degradado del hero (2026-11-23).",
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23. Evidencia rotada por el degradado del hero (2026-11-23). Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1257,10 +1253,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "docs/tech/dependencies/README.md",
-          "sha256": "bcf0c1d9e33cfd5092b096cc06082a727f6819c8ab40b4737573959caf8d3406"
-        },
-        {
           "path": "assets/guion/auto-ferrari.png",
           "sha256": "74f5727f780715f54d075f0c7712cba394da8bd80a4015bcd19542cb2c3c9fc3"
         },
@@ -1305,7 +1297,7 @@
           "sha256": "9dedf8478891c48a573788f60d19e5345b416faa59534deeb49e3e6f6da5f5eb"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto). Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (gráfico del guión); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local por medición (panel oculto, sin captura): a 1920 px, párrafos Poppins 300 italic 24 con 32 px entre sí y dorado 400 italic #BCA447; Cuestionario Exo 2 300 32 con dorado 400; Preguntas Exo 2 300 32 con recuadro de 48 px; filas de Contexto de 857 px con gap 96; 7 secciones con sus Ir a; 2 «Intentar en prototipo» con target _blank; las 10 imágenes cargan; .sr-only ocultos. 900 y 375 px sin scroll horizontal (imagen debajo del texto en 1 columna); consola sin errores. «Leer guión completo» enlaza la página. Correcciones de QA del usuario: el ícono del chip «Clase D» no se veía (mask: url() no carga desde file://); ahora es <img> ico-auto-d.svg #9B3F06, 16 × 16, carga. Gap de 16 px en los encabezados de tarea (medido: título-línea-botón). Primera imagen de Contexto: assets/contexto.png (857 × 512 a 1920). 375 px sin scroll horizontal; consola sin errores. Corrección de QA: radio de 8 px en la imagen de contexto (.gu-img--contexto). Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (medios de Iteraciones y Prototipo); la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (gráfico del guión); la versión aprobada está en su commit. Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1681,10 +1673,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "llms.txt",
-          "sha256": "f64cce67eb59ee4f46477cc2f5c766df6425c7dc96456c64efb625fedac7777b"
-        },
-        {
           "path": "specs/0023-superficie-usuarios-2-3/spec.md",
           "sha256": "4733c8681ba50b48b7381d222291f4f6c53ed945521be49715974a3d545f3f66"
         },
@@ -1693,7 +1681,7 @@
           "sha256": "8bd19e60c1d7748e9c5a163d96f14a9e6e8725f633be404874be72626ddc5eee"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (3,1 s), 1162 × 686, radio 12; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Hashes de docs/llms.txt refrescados tras el fix del guión (mismo día), que también los editó. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (topbar de 3 niveles); la versión aprobada está en su commit.",
+      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (3,1 s), 1162 × 686, radio 12; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Hashes de docs/llms.txt refrescados tras el fix del guión (mismo día), que también los editó. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (topbar de 3 niveles); la versión aprobada está en su commit. Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1732,10 +1720,6 @@
           "sha256": "496e8effb4529bd1ade396cfea0e8d8567c78b5625a6089f628982a001dbb72f"
         },
         {
-          "path": "llms.txt",
-          "sha256": "f64cce67eb59ee4f46477cc2f5c766df6425c7dc96456c64efb625fedac7777b"
-        },
-        {
           "path": "specs/0024-superficie-guion/spec.md",
           "sha256": "c197bddc873a243bf3694598cc4d5468d539ed0f583f36884a3b457c1fcfdd35"
         },
@@ -1748,7 +1732,7 @@
           "sha256": "82be6bbb2a8ce430868dd73040a7c3295b2e2f47550a3170cd1cf865d7dee75c"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0024 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (2,1 s), 857 × 214, radio 8; en 375 px debajo del texto; sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit.",
+      "evidenceNote": "Fix sobre la feature dueña 0024 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (2,1 s), 857 × 214, radio 8; en 375 px debajo del texto; sin scroll horizontal; consola sin errores; 0 placeholders en la página. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit. Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1895,19 +1879,11 @@
       "questions": [],
       "evidence": [
         {
-          "path": "5-elementos.html",
-          "sha256": "2c5d2a32bc06e054e568a676c86624bc0da5951500a86d01e42f97dbf050101c"
-        },
-        {
-          "path": "index.html",
-          "sha256": "a9d86f921be4e53de4b431a1b31245569365633595bc01dbb08caa72238a1799"
-        },
-        {
           "path": "estrategia.html",
           "sha256": "f4c3c42f0e969bea633a112777689968bf010ffb40947733ac1654906a6c5d58"
         }
       ],
-      "evidenceNote": "Correcciones de copy pedidas por el usuario (estaban fuera de alcance en la spec 0001 y listadas como pendientes en docs/tech/sistema.md). Sin cambios de estructura ni estilos. Búsqueda en los .html: no quedan «Evauaciones», «par el usuario» ni «Garret». Evidencia rotada por el degradado del hero (2026-11-23).",
+      "evidenceNote": "Correcciones de copy pedidas por el usuario (estaban fuera de alcance en la spec 0001 y listadas como pendientes en docs/tech/sistema.md). Sin cambios de estructura ni estilos. Búsqueda en los .html: no quedan «Evauaciones», «par el usuario» ni «Garret». Evidencia rotada por el degradado del hero (2026-11-23). Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1934,19 +1910,11 @@
       "questions": [],
       "evidence": [
         {
-          "path": "styles.css",
-          "sha256": "6642d5ff2135e06551ccf81944dac8c2a1529f403636da6f270bb7ce71166e36"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "671a84a4358e76e750a5986e3d48d51d7df31bf8738c7ec07aed0d0e6476246d"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "e483123d055c85bb961b900fb6952d229bbc06a8c950836d1e5c66605bcef9ac"
+          "path": ".cardenal/revision-fix-2026-11-23-home.md",
+          "sha256": "9d202ca7b535bc827a86d2f994e2d6e3665dec0cfbecbead3e2083d2f37fa839"
         }
       ],
-      "evidenceNote": "Sin spec dueña: el Home es anterior a Cardenal (ninguna spec define el hero); por ser un cambio de una regla CSS se registra como tarea del tablero, sin carpeta de spec. La referencia del usuario (1920 × 979) es negro con alfa 255 → 0 lineal de izquierda a derecha; se implementó como linear-gradient(90deg, #000, transparent) en .hero-overlay, sumado al degradado vertical existente. Revisión del asistente en servidor local: overlay cubre todo el hero (1920 y 375 px), queda después del video y debajo del contenido (z-index 2); elementFromPoint sobre el logo devuelve el logo; captura a 1920 y 375 px; sin scroll horizontal; consola sin errores. Corrección del usuario: se quitó el degradado vertical de la parte inferior para que quede como su segunda referencia (corte recto contra Contexto); captura a 1920 px coincide. Contexto: la imagen se veía de 1048 × 626 por max-width 55 % + object-fit contain; ahora 1205 × 720 a 1920 px, top 0, sobresale 75 px (escala con el ancho: 35-56 px entre 901 y 1440), proporción 1,674 sin deformar en todos los anchos; en ≤ 900 px object-fit cover (antes se deformaba al quitar contain); sin scroll horizontal en 9 anchos (375-2400); captura a 1920 px.",
+      "evidenceNote": "Sin spec dueña: el Home es anterior a Cardenal (ninguna spec define el hero); por ser un cambio de una regla CSS se registra como tarea del tablero, sin carpeta de spec. La referencia del usuario (1920 × 979) es negro con alfa 255 → 0 lineal de izquierda a derecha; se implementó como linear-gradient(90deg, #000, transparent) en .hero-overlay, sumado al degradado vertical existente. Revisión del asistente en servidor local: overlay cubre todo el hero (1920 y 375 px), queda después del video y debajo del contenido (z-index 2); elementFromPoint sobre el logo devuelve el logo; captura a 1920 y 375 px; sin scroll horizontal; consola sin errores. Corrección del usuario: se quitó el degradado vertical de la parte inferior para que quede como su segunda referencia (corte recto contra Contexto); captura a 1920 px coincide. Contexto: la imagen se veía de 1048 × 626 por max-width 55 % + object-fit contain; ahora 1205 × 720 a 1920 px, top 0, sobresale 75 px (escala con el ancho: 35-56 px entre 901 y 1440), proporción 1,674 sin deformar en todos los anchos; en ≤ 900 px object-fit cover (antes se deformaba al quitar contain); sin scroll horizontal en 9 anchos (375-2400); captura a 1920 px. Todos sus archivos cambiaron después (0027): queda como evidencia vigente su revisión. Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1956,6 +1924,95 @@
           "evidence": {
             "path": ".cardenal/revision-fix-2026-11-23-home.md",
             "sha256": "9d202ca7b535bc827a86d2f994e2d6e3665dec0cfbecbead3e2083d2f37fa839"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T35",
+      "title": "Inglés, parte 1: base, Home y 5 Elementos",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Parte 1 de specs/0027-idioma-en/spec.md y criterios de change.acceptance (0027) aplicados a index.html y 5-elementos.html.",
+      "dependsOn": [],
+      "files": [
+        "lang.js",
+        "styles.css",
+        "elementos.css",
+        "index.html",
+        "5-elementos.html",
+        "en/index.html",
+        "en/5-elementos.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "lang.js",
+          "sha256": "345943d130a19921a644959b57137d5d42a816fc2b7e1b55e3e8b1b02c658185"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "cab078ce787df52706b100ec5c4bc695bb42026b7a922ef894170b8fa858a6b9"
+        },
+        {
+          "path": "elementos.css",
+          "sha256": "cfd50fb250177091dff5b22c712ca335a67599c9b4c33dbef71a4a5d389998a2"
+        },
+        {
+          "path": "index.html",
+          "sha256": "6e1c5655e79bc0337f7ea0590c0d33d636cc8ada910ab3bb45c5ee47825dc111"
+        },
+        {
+          "path": "5-elementos.html",
+          "sha256": "cb2ede8f8197f5156d90428afb4a1c821da5fe23139590944df8e05164ab8c6f"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "5e0606ce3417b3815cf044517ce7ac7b922661928797db6d5bab9b1d7ca822d1"
+        },
+        {
+          "path": "en/5-elementos.html",
+          "sha256": "1ec4c518a2dace1ac2ff32fcb19331c75f8fe096a9af1dca83cb7c62bd298c5d"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "ae2bf88f3ceaa32d412e7fa322f9082603c240078e4992d3eebac9be6aa73565"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "46bdf0913ddf4cbd26c33adcfb85ed690617dd82a6ad4e6aac39de11f2328add"
+        },
+        {
+          "path": "docs/tech/dependencies/README.md",
+          "sha256": "588fd079a6db411bc6f49d353373c556ab9454931753550a40094c2ad2b1972b"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "13c14177adae80462bf25610f25be9a80f9af23da7358dc0d93f683aded4ef93"
+        },
+        {
+          "path": "specs/0027-idioma-en/spec.md",
+          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "68670da16b3a9a0e69593743621ca89328d7c44678c0d8073d73e6161c017f7e"
+        },
+        {
+          "path": "specs/0027-idioma-en/referencia-switch.png",
+          "sha256": "e93d1eb79af7cb8cd8eb5eead94eab671b5f4ad78dffe744976b2700e4402378"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN; no versionado); sin subagente. Revisión del asistente en servidor local: switch 96 × 48 (opciones 48 × 48), radio 8, Inter 600 16 #0159CF, seleccionado rgba(1,89,207,.15) con aria-current; en el Home alineado con «Franco Aguirre - 2025» a 80 px del borde; en 5 Elementos a 80 px del borde y centrado en la barra. Click en EN lleva a en/index.html y guarda «en»; abrir 5-elementos.html#alcance redirige a en/5-elementos.html#alcance; ES vuelve y guarda «es»; con «es» guardado en/index.html redirige a index.html. Sin imágenes rotas ni restos en español; rutas ../ correctas. Sin cruces ni scroll en 9 anchos (320-1920) para Home, 5 Elementos (ES y EN) y 4 páginas que comparten la topbar; a 320 px «Try the prototype» desbordaba y pasó a «Try prototype». Estrategia a 320 px desborda por contenido previo (anotado). Consola sin errores. Captura del Home EN. Corrección de QA del usuario: opciones 56 × 48 con el texto centrado (desvío 0 px), radios 8 0 0 8 / 0 8 8 0, sombra de la seleccionada 4px 0 8px (ES) / -4px 0 8px (EN); medido en index, en/index, 5-elementos y en/5-elementos. Home: switch 24 px debajo de «Franco Aguirre - 2025», alineado a la izquierda con la etiqueta (80 px); no pisa el logo del hero en 8 tamaños de pantalla (mínimo 22 px a 320 × 568); sin scroll horizontal.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 1 del inglés, tras corregir el switch)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0027-parte-1.md",
+            "sha256": "8075a12d86f04e8e6db55e1026fe17f25d2b667bda669d7d7449f8b247ce4aca"
           }
         }
       ]

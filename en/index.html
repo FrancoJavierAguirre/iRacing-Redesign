@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iRacing — UX/UI Redesign · Franco Aguirre</title>
+<meta name="description" content="UX/UI case study by Franco Aguirre: an unofficial redesign of the iRacing platform focused on the race list, race registration and the shopping cart.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="iRacing — UX/UI Redesign · Franco Aguirre">
+<meta property="og:description" content="UX/UI case study by Franco Aguirre: an unofficial redesign of the iRacing platform focused on the race list, race registration and the shopping cart.">
+<meta property="og:site_name" content="iRacing — UX/UI Redesign · Franco Aguirre">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iRacing — UX/UI Redesign · Franco Aguirre">
+<meta name="twitter:description" content="UX/UI case study by Franco Aguirre: an unofficial redesign of the iRacing platform focused on the race list, race registration and the shopping cart.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "CreativeWork"],
+  "name": "iRacing — UX/UI Redesign · Franco Aguirre",
+  "description": "UX/UI case study by Franco Aguirre: an unofficial redesign of the iRacing platform focused on the race list, race registration and the shopping cart.",
+  "inLanguage": "en",
+  "dateCreated": "2025",
+  "genre": "UX/UI design case study",
+  "keywords": "UX, UI, redesign, iRacing, sim racing, case study",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "UX/UI Designer" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "UX/UI Design" } ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "UX/UI Redesign" } ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:wght@200;300;400;500;600&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="alternate" hreflang="es" href="../index.html">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="x-default" href="../index.html">
+<script src="../lang.js"></script>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <video class="hero-media" autoplay muted loop playsinline>
+    <source src="../assets/hero-background.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="top-label">
+    <span>Franco Aguirre - 2025</span>
+    <nav class="lang-switch" aria-label="Language"><a href="../index.html" lang="es" hreflang="es" data-lang="es" aria-label="Español (ES)">ES</a><a href="index.html" lang="en" hreflang="en" data-lang="en" aria-label="English (EN)" aria-current="true">EN</a></nav>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-inner">
+      <div class="hero-logo">
+        <img src="../assets/iracing-logo.png" alt="iRacing" class="hero-logo-img">
+      </div>
+
+      <p class="hero-sub">The most authentic motorsport simulator on your PC</p>
+
+      <h1 class="hero-title">What if the UX were as smooth as<br>on the track?</h1>
+
+      <div class="tool-icons">
+        <div class="tool-icon" title="Figma">
+          <svg viewBox="0 0 24 24"><path fill="#F24E1E" d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4z"/><path fill="#A259FF" d="M4 12c0-2.2 1.8-4 4-4h4v8H8c-2.2 0-4-1.8-4-4z"/><path fill="#F24E1E" d="M4 4c0-2.2 1.8-4 4-4h4v8H8C5.8 8 4 6.2 4 4z"/><path fill="#0ACF83" d="M12 0h4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4V0z"/><path fill="#1ABCFE" d="M20 12c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4z"/></svg>
+        </div>
+        <div class="tool-icon" title="Make">
+          <img src="../assets/icon-make.png" alt="Make">
+        </div>
+        <div class="tool-icon" title="Photoshop">
+          <img src="../assets/icon-photoshop.png" alt="Photoshop">
+        </div>
+        <div class="tool-icon" title="UX Tweak">
+          <img src="../assets/icon-uxtweak.png" alt="UX Tweak">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ CONTEXTO ============ -->
+  <section class="section contexto">
+    <div class="container col-text">
+      <h2 class="section-title">Context</h2>
+      <p>It's December 2021. You're stuck in your room during the pandemic when you read on your phone that some guy named Verstappen has dethroned the 7-time world champion. They say it was an incredibly close race.</p>
+      <p>You get curious. You binge Drive to Survive and finish it in a week. "There has to be a game that simulates serious racing," you think.</p>
+      <p>You turn on your PC and start digging. You dust off that old wheel you used to play Need for Speed. Nostalgia hits... and you subscribe to iRacing.</p>
+    </div>
+    <img class="context-img" src="../assets/contexto.png" alt="Sim racing setup with a wheel, pedals and the iRacing logo on the monitor">
+  </section>
+
+  <!-- ============ POR QUÉ EL REDISEÑO ============ -->
+  <section class="section porque">
+    <div class="container">
+      <div class="porque-header">
+        <div class="sec-titles">
+          <h2 class="sec-title">Why the redesign?</h2>
+          <p class="sec-sub">Don't take my word for it. Take the users'.</p>
+        </div>
+        <div class="porque-source">
+          <span class="porque-source-text">I have proof <img class="hand-icon" src="../assets/icon-hand.svg" alt=""></span>
+          <a href="https://docs.google.com/spreadsheets/d/1PSs_GEPbFZEOwT5oAiEQkvclF1DfmOjBHSV1Y4nSWa4/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn--sm btn-source">See source</a>
+        </div>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="avatar-wrap">
+            <img class="avatar" src="../assets/avatar-zack.png" alt="Zack Ruddle">
+            <span class="status "></span>
+          </div>
+          <div class="testimonial-body">
+            <p class="testimonial-name">Zack Ruddle</p>
+            <p class="testimonial-quote">“I remember being so confused when first playing…”</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="avatar-wrap">
+            <img class="avatar" src="../assets/avatar-val.png" alt="Val DiPietro">
+            <span class="status status--away"></span>
+          </div>
+          <div class="testimonial-body">
+            <p class="testimonial-name">Val DiPietro</p>
+            <p class="testimonial-quote">“Too much unnecessary data for the average user.”</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="avatar-wrap">
+            <img class="avatar" src="../assets/avatar-andres.png" alt="Andres Navarro">
+            <span class="status "></span>
+          </div>
+          <div class="testimonial-body">
+            <p class="testimonial-name">Andres Navarro</p>
+            <p class="testimonial-quote">“For a new user, being shown the entire race list can be really overwhelming…”</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="avatar-wrap">
+            <img class="avatar" src="../assets/avatar-carlos.png" alt="Carlos Tovar">
+            <span class="status status--busy"></span>
+          </div>
+          <div class="testimonial-body">
+            <p class="testimonial-name">Carlos Tovar</p>
+            <p class="testimonial-quote">“It isn’t intuitive and it’s very slow.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLATAFORMA ACTUAL ============ -->
+  <section class="section plataforma">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">Current platform</h2>
+        <p class="sec-sub">iRacing is made up of the <strong class="accent">platform</strong>, where you find races, and the <strong class="accent">simulator</strong>, where you race.</p>
+      </div>
+      <h3 class="section-subtitle">I redesigned the <span class="accent">platform</span></h3>
+    </div>
+
+    <!-- Comparison blocks -->
+    <div class="container comparisons">
+
+      <div class="comparison-block">
+        <h4 class="comparison-title">Race list</h4>
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <span class="comparison-label">Before</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race list — before the redesign"><source src="../assets/lista-carreras-antes.mp4" type="video/mp4"></video>
+          </div>
+          <div class="comparison-col">
+            <span class="comparison-label">After</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race list — after the redesign"><source src="../assets/lista-carreras-despues.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-block">
+        <h4 class="comparison-title">Race registration</h4>
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <span class="comparison-label">Before</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race registration — before the redesign"><source src="../assets/registro-antes.mp4" type="video/mp4"></video>
+          </div>
+          <div class="comparison-col">
+            <span class="comparison-label">After</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race registration — after the redesign"><source src="../assets/registro-despues.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-block">
+        <h4 class="comparison-title">Race details</h4>
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <span class="comparison-label">Before</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race details — before the redesign"><source src="../assets/detalles-carrera-antes.mp4" type="video/mp4"></video>
+          </div>
+          <div class="comparison-col">
+            <span class="comparison-label">After</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race details — after the redesign"><source src="../assets/detalles-carrera-despues.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-block">
+        <h4 class="comparison-title">Calendar</h4>
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <span class="comparison-label">Before</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Calendar — before the redesign"><source src="../assets/calendario-antes.mp4" type="video/mp4"></video>
+          </div>
+          <div class="comparison-col">
+            <span class="comparison-label">After</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Calendar — after the redesign"><source src="../assets/calendario-despues.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-block">
+        <h4 class="comparison-title">Car and track details</h4>
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <span class="comparison-label">Before</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Car and track details — before the redesign"><source src="../assets/autos-pistas-antes.mp4" type="video/mp4"></video>
+          </div>
+          <div class="comparison-col">
+            <span class="comparison-label">After</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Car and track details — after the redesign"><source src="../assets/autos-pistas-despues.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-block">
+        <h4 class="comparison-title">Shopping cart</h4>
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <span class="comparison-label">Before</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Shopping cart — before the redesign"><source src="../assets/carrito-antes.mp4" type="video/mp4"></video>
+          </div>
+          <div class="comparison-col">
+            <span class="comparison-label">After</span>
+            <video class="screenshot" muted loop playsinline preload="none" aria-label="Shopping cart — after the redesign"><source src="../assets/carrito-despues.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container cta-wrap">
+      <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn-primary"><svg class="btn-icon" viewBox="0 0 30 30" aria-hidden="true"><path fill="currentColor" d="M9 5.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 9 5.5z"/></svg>Try prototype</a>
+    </div>
+
+    <div class="scroll-hint">
+      <span>All the details below</span>
+      <img class="hint-hand" src="../assets/icon-hand.svg" alt="">
+    </div>
+  </section>
+
+  <!-- ============ OBJETIVOS ============ -->
+  <section class="section objetivos">
+    <div class="container">
+      <h2 class="section-title centered">Goals</h2>
+
+      <div class="cards cols-2 objetivos-cards">
+        <div class="goal-card">
+          <img class="goal-bg" src="../assets/negocio.png" alt="">
+          <div class="goal-body"><h3>Business</h3><ul><li>Retain and grow the number of users in the community.</li><li>Increase the number of purchases on the platform</li></ul></div>
+        </div>
+        <div class="goal-card">
+          <img class="goal-bg" src="../assets/usuario.png" alt="">
+          <div class="goal-body"><h3>User</h3><ul><li>Easily find and join an online race they can take part in, based on their level, license and content.</li><li>Make purchases on the platform easily and intuitively.</li></ul></div>
+        </div>
+      </div>
+
+      <p class="objetivos-frase">
+        The lack of a <span class="accent">steady flow</span> of users reduces the availability of competitive races and raises the risk of <span class="accent">frustration</span> and <span class="accent">churn rate</span>.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <video class="stat-video" muted loop playsinline preload="none" aria-label="Few users in this race"><source src="../assets/pocos-usuarios.mp4" type="video/mp4"></video>
+          <p>Few users in this race</p>
+        </div>
+        <div class="stat-card">
+          <video class="stat-video" muted loop playsinline preload="none" aria-label="They leave and close the game"><source src="../assets/se-van.mp4" type="video/mp4"></video>
+          <p>They leave and close the game</p>
+        </div>
+        <div class="stat-card">
+          <video class="stat-video" muted loop playsinline preload="none" aria-label="Fewer and fewer users competing against each other"><source src="../assets/menos-usuarios.mp4" type="video/mp4"></video>
+          <p>Fewer and fewer users competing against each other</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO DE DISEÑO ============ -->
+  <section class="section proceso">
+    <div class="container">
+      <div class="porque-header">
+        <div class="sec-titles">
+          <h2 class="sec-title">Design Process</h2>
+          <p class="sec-sub">James Garrett's 5 UX elements</p>
+        </div>
+        <a href="5-elementos.html" class="btn btn--md btn-info">What are the 5 elements?</a>
+      </div>
+
+      <p class="click-hint"><img src="../assets/icon-hand.svg" alt=""><span>Click to see more</span><img src="../assets/icon-hand.svg" alt=""></p>
+
+      <div class="proceso-grid">
+        <button class="proceso-card" data-step="estrategia" onclick="location.href='../estrategia.html'" style="--img:url(../assets/card-estrategia.png)">
+          <span class="pc-title"><img src="../assets/icon-estrategia.svg" alt=""><span>Strategy</span></span>
+          <p class="pc-desc">Understanding user needs and business goals.</p>
+        </button>
+        <button class="proceso-card" data-step="alcance" onclick="location.href='../alcance.html'" style="--img:url(../assets/card-alcance.png)">
+          <span class="pc-title"><img src="../assets/icon-alcance.svg" alt=""><span>Scope</span></span>
+          <p class="pc-desc">Defining the requirements for the specific features and content of the digital product.</p>
+        </button>
+        <button class="proceso-card" data-step="estructura" onclick="location.href='../estructura.html'" style="--img:url(../assets/card-estructura.png)">
+          <span class="pc-title"><img src="../assets/icon-estructura.svg" alt=""><span>Structure</span></span>
+          <p class="pc-desc">Defining the information architecture and the interface interaction.</p>
+        </button>
+        <button class="proceso-card" data-step="esqueleto" onclick="location.href='../esqueleto.html'" style="--img:url(../assets/card-esqueleto.png)">
+          <span class="pc-title"><img src="../assets/icon-esqueleto.svg" alt=""><span>Skeleton</span></span>
+          <p class="pc-desc">Organizing the information elements of the interface and creating mid-fidelity wireframes.</p>
+        </button>
+        <button class="proceso-card" data-step="superficie" onclick="location.href='../superficie.html'" style="--img:url(../assets/card-superficie.png)">
+          <span class="pc-title"><img src="../assets/icon-superficie.svg" alt=""><span>Surface</span></span>
+          <p class="pc-desc">Defining the design system and high-fidelity wireframes. Animated prototype and usability testing.</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

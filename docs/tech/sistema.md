@@ -11,6 +11,8 @@
 
 ```
 index.html          Home del case study (único que carga script.js)
+en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy en/index.html y en/5-elementos.html
+lang.js             Recuerda el idioma elegido y redirige a la página equivalente (spec 0027)
 5-elementos.html    Explicación del modelo de 5 capas
 estrategia.html     Capa 1: Estrategia
 alcance.html        Capa 2: Alcance (Matriz FVD)
@@ -52,6 +54,14 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 - **Breakpoints**: `max-width: 1300px` (estrategia), `900px` (styles, elementos y estrategia), `640px` (styles, alcance: apila la matriz; estructura: árboles en lista indentada, que pasan a SVG con `@media (min-width: 641px)`) y `hover: none` (tarjetas en táctil).
 - **Botones**: clases `btn`, `btn--sm`, `btn--md`, `btn-primary` (naranja), `btn-info`, `btn-outline-info` (sin fondo, borde 2 px `#679be2`; «Ver más detalles»), `btn-ghost-info` (igual, sin borde; «Saltar a Sistema de Diseño»), `btn-blue`, `btn-source`; las medidas están en el README.
 - **Placeholders**: `.media-placeholder[data-label]` dibuja un recuadro punteado con el nombre del asset esperado. Variantes de proporción: `ar-tall`, `ar-short`, `ar-cart`.
+
+## Idioma (spec 0027)
+
+- **Páginas:** cada página ES tiene (o tendrá) su copia en `en/<misma-página>.html`. En las copias las rutas suben un nivel (`../assets/`, `../styles.css`, `../lang.js`, `url(../assets/…)`) y los enlaces a páginas aún no traducidas apuntan a `../<página>.html`. Se generan desde la página ES con pares de texto (script local, no versionado); un cambio en la página ES debe repetirse en la EN.
+- **`<head>`:** `<link rel="alternate" hreflang="es|en|x-default">` (rutas relativas hasta definir el dominio) y `<script src="lang.js">` sin `defer`. EN: `lang="en"`, `og:locale en_US`, `inLanguage: "en"`, metadatos y JSON-LD traducidos.
+- **`lang.js`:** clave `iracing-lang` en `localStorage` (con try/catch). Al tocar una opción del switch guarda el idioma (y pasa el `#hash` actual). Al cargar, si hay un idioma guardado distinto al de `<html lang>`, hace `location.replace` al `link[rel=alternate][hreflang]` de ese idioma conservando el hash. Sin elección guardada no redirige.
+- **Switch:** `nav.lang-switch` con dos `a[data-lang]` (`lang`, `hreflang`, `aria-label` «Español (ES)» / «English (EN)», el actual con `aria-current="true"`). Estilos en `styles.css`: cada opción 56 × 48 con el texto centrado, Inter 600 16 #0159CF; radio 8 solo hacia afuera (`:first-child` 8 0 0 8, `:last-child` 0 8 8 0); la seleccionada con `rgba(1,89,207,.15)`, `z-index: 1` y sombra hacia la otra opción (`4px 0 8px` / `-4px 0 8px`, `rgba(0,0,0,.35)`). En las páginas interiores va en `.topbar-tools` (`elementos.css`: absoluto a la derecha, gap 32 con el `.topbar-action`, que pasa a `position: static`). En el Home va dentro de `.top-label` (flex en columna, gap 24): debajo de «Franco Aguirre - 2025».
+- **Topbar en ≤ 760 px** (`elementos.css`, todas las páginas `page-elementos`): grid de dos renglones `"crumb tools" / "title title"`.
 
 ## Comportamiento (`script.js`)
 
@@ -226,6 +236,8 @@ Ningún HTML, CSS o JS los usa: `iRacing logo.png`, `Make.png`, `Photoshop.png`,
 
 ## Pendientes técnicos observados
 
+- Estrategia a 320 px: el botón «Ir a Evaluaciones Heurísticas» y el paso 1 del escenario desbordan unos 20 px (anterior a la spec 0027).
+
 - Imágenes: el sitio ya no tiene placeholders (`.media-placeholder` sin uso desde los fixes del 2026-11-23).
 - Typos: el 2026-11-23 se corrigieron, a pedido del usuario, «Evaluaciones» (`5-elementos.html`), «para el usuario» (`index.html` y `estrategia.html`) y «James Garrett» (`index.html`). No quedan typos conocidos.
 
@@ -257,4 +269,4 @@ Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCrea
 
 **`llms.txt`** (raíz, UTF-8 sin BOM, formato llmstxt.org, enlaces relativos salvo el prototipo de Figma): resumen, problema, objetivos, proceso, las 6 comparativas, estado de las páginas y enlaces. Solo incluye lo que dice el sitio; «Calendario» y «Detalles de autos y pistas» no tienen texto propio en el sitio y se describen como tales. Si cambia el contenido de las páginas, hay que actualizarlo a mano. Escribirlo con una herramienta que no agregue BOM (en PowerShell 5.1, `Set-Content -Encoding utf8` lo agrega).
 
-**Pendientes (no implementados, requieren dominio o decisiones):** dominio de publicación, `canonical` y `og:url`, `og:image` / `twitter:image` (y pasar `twitter:card` a `summary_large_image`), `sitemap.xml`, `robots.txt` y política para crawlers de IA, favicon, `hreflang` / versión en inglés (bastaría sumar `og:locale:alternate` y `<link rel="alternate" hreflang>` al mismo bloque), `sameAs` (perfiles del autor) y validar el JSON-LD con herramientas externas.
+**Pendientes (no implementados, requieren dominio o decisiones):** dominio de publicación, `canonical` y `og:url`, `og:image` / `twitter:image` (y pasar `twitter:card` a `summary_large_image`), `sitemap.xml`, `robots.txt` y política para crawlers de IA, favicon, `hreflang` absolutos (hoy relativos, spec 0027), `sameAs` (perfiles del autor) y validar el JSON-LD con herramientas externas.
