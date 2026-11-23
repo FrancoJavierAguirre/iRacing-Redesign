@@ -44,9 +44,13 @@
 .page-usuario .cu-insights .cu-bad::before { background-image: url("assets/ico-cross-red.svg"); }
 .page-usuario .cu-insights .cu-idea::before { background-image: url("assets/ico-lupa-green.svg"); }
 
-@media (max-width: 640px) {
-  .page-usuario .cu-estrellas { gap: 16px; }
+/* La nota «No terminó la tarea» (usuario 2) pasa debajo de las estrellas desde 900 px: entre 641 y ~860 px, a la
+   derecha, desbordaba la página (fix 2026-11-23). */
+@media (max-width: 900px) {
   .page-usuario .cu-fila { display: flex; flex-direction: column; align-items: center; gap: 16px; }
   .page-usuario .cu-nota { position: static; transform: none; }
+}
+@media (max-width: 640px) {
+  .page-usuario .cu-estrellas { gap: 16px; }
   .page-usuario .cu-insights li { align-items: flex-start; }
 }

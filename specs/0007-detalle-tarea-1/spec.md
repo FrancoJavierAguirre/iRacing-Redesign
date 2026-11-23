@@ -45,5 +45,8 @@
 - Detalle de la Tarea 2.
 - Gráficos interactivos: los gráficos son las imágenes del usuario.
 
+## Clarificaciones 2026-11-23
+- Topbar responsive (fix): en ≤ 760 px la topbar de las páginas `page-tarea` va en dos renglones (breadcrumb arriba a la izquierda, título centrado debajo); en ≤ 1024 px se ocultan «Rediseño UX/UI» y su separador. Así el breadcrumb nunca pisa el título.
+
 ## Aclaraciones
 - **Corrección del usuario en el QA (2026-11-18):** en el breadcrumb, la flecha vuelve a la página anterior en la jerarquía (Estructura, sección Tree Testing). «Rediseño UX/UI» sigue llevando al Home.

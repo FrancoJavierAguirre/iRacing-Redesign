@@ -288,15 +288,19 @@
       "questions": [],
       "evidence": [
         {
-          "path": "specs/0007-detalle-tarea-1/spec.md",
-          "sha256": "8cca2ea4e01c5077db2f490f8497a19622f8a55c57d95d149d837e84eb585c2c"
+          "path": "estructura-tarea-1.html",
+          "sha256": "6e7f2c9839267f9611d05f870aec87bf471bed3550b6f584381eb0c30854f48d"
         },
         {
-          "path": "specs/0007-detalle-tarea-1/tasks.md",
-          "sha256": "af9d80f42820a841bcffc7a713d5a3a4a30b9b30e8ac9a2639e6664965f9660c"
+          "path": "specs/0007-detalle-tarea-1/context.json",
+          "sha256": "e53a114ffbcca63b47085525d29f05df1bca68b792690089f9619e877fa93b35"
+        },
+        {
+          "path": ".cardenal/revision-0007.md",
+          "sha256": "0e9638de0ac50e17779d489242ff4bcb9122238115eac587c7af7947ac19f025"
         }
       ],
-      "evidenceNote": "El código aprobado está en el commit d235d4f; estructura.html, llms.txt y docs cambiaron después por T8 (0008).",
+      "evidenceNote": "El código aprobado está en el commit d235d4f; estructura.html, llms.txt y docs cambiaron después por T8 (0008). Evidencia rotada por el fix 2026-11-23 (topbar de 3 niveles); la versión aprobada está en su commit. Tras la rotación del fix 2026-11-23 se dejó como evidencia vigente lo que no cambió: estructura-tarea-1.html, specs/0007-detalle-tarea-1/context.json, .cardenal/revision-0007.md.",
       "reviews": [
         {
           "kind": "human",
@@ -1701,15 +1705,11 @@
           "sha256": "4733c8681ba50b48b7381d222291f4f6c53ed945521be49715974a3d545f3f66"
         },
         {
-          "path": "specs/0023-superficie-usuarios-2-3/tasks.md",
-          "sha256": "eb9f28f1385d9004dd3fc2be67df572a9887af5820673e86d49ab5dbe6d6a40b"
-        },
-        {
           "path": "assets/usuarios/usuario-3-favorito.mp4",
           "sha256": "8bd19e60c1d7748e9c5a163d96f14a9e6e8725f633be404874be72626ddc5eee"
         }
       ],
-      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (3,1 s), 1162 × 686, radio 12; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Hashes de docs/llms.txt refrescados tras el fix del guión (mismo día), que también los editó. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit.",
+      "evidenceNote": "Fix sobre la feature dueña 0023 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): video readyState 4 (3,1 s), 1162 × 686, radio 12; distancias 56 sin cambios; 375 px sin scroll horizontal; consola sin errores; 0 placeholders en la página. Hashes de docs/llms.txt refrescados tras el fix del guión (mismo día), que también los editó. Evidencia rotada en 0026: archivos modificados por el menú de usuarios; la versión aprobada está en su commit. Evidencia rotada por el fix 2026-11-23 (topbar de 3 niveles); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1816,20 +1816,8 @@
           "sha256": "bc74bd085060ba77d15632946b2eede283eb5dcdbc3c9d30bb63a69e047cb5ac"
         },
         {
-          "path": "superficie-usuario.css",
-          "sha256": "ee5fb085906449923b8873a5aaa651da4d5f97726e70d49ed14de700c8a6205a"
-        },
-        {
           "path": "assets/ico-user-gray.svg",
           "sha256": "d1cbc465f26a10f7802e8095006d0eec2e5fa350f15265ce9393253cb9756c01"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "b5d882216570a38e596f14a15f151f6cce7fc39350acc9df46e798e814f9fd6f"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "19eb0f1e6d1632fe56b32dd6631018bc3d7681e8768693dc557761accf47100d"
         },
         {
           "path": "specs/0026-menu-usuarios/spec.md",
@@ -1844,7 +1832,7 @@
           "sha256": "b23bcbf91d1463c90f369f8faa0b2196bc2b61bf81d302fc7f5818cee6380f02"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local (panel oculto, sin captura), simulando clicks y teclas: en las 3 páginas el menú lista a los otros dos usuarios con ico-user-gray (carga) y enlaces correctos; abre/cierra con click, click afuera, doble click y Escape (devuelve el foco); abrir el menú de capas cierra el de usuarios; mismo aspecto (#212121, radio 8, Inter 12, ícono 16, 12 px bajo el disparador); disparador blanco 600 con aria-current; menú de capas de estrategia.html sigue funcionando; 1920 y 375 px sin scroll horizontal; consola sin errores. Hallazgo previo, no causado por el cambio: a 375 px el breadcrumb de 3 niveles se superpone al título (también en el guión).",
+      "evidenceNote": "Implementado por el coordinador; no se usó un subagente front. Revisión del asistente en servidor local (panel oculto, sin captura), simulando clicks y teclas: en las 3 páginas el menú lista a los otros dos usuarios con ico-user-gray (carga) y enlaces correctos; abre/cierra con click, click afuera, doble click y Escape (devuelve el foco); abrir el menú de capas cierra el de usuarios; mismo aspecto (#212121, radio 8, Inter 12, ícono 16, 12 px bajo el disparador); disparador blanco 600 con aria-current; menú de capas de estrategia.html sigue funcionando; 1920 y 375 px sin scroll horizontal; consola sin errores. Hallazgo previo, no causado por el cambio: a 375 px el breadcrumb de 3 niveles se superpone al título (también en el guión). Evidencia rotada por el fix 2026-11-23 (topbar de 3 niveles); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1854,6 +1842,64 @@
           "evidence": {
             "path": ".cardenal/revision-0026.md",
             "sha256": "7533055a7e93d4555270ee85f1a2743f07d34b5ee359e620e673f0300c1aa785"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T32",
+      "title": "Fix: topbar de 3 niveles en anchos chicos y nota de Martín",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Addendum 2026-11-23 en specs/0007-detalle-tarea-1/tasks.md (T006-T007) y specs/0023-superficie-usuarios-2-3/tasks.md (T010-T011); clarificación en specs/0007-detalle-tarea-1/spec.md.",
+      "dependsOn": [
+        "T31"
+      ],
+      "files": [
+        "estructura-tarea.css",
+        "superficie-usuario.css"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "estructura-tarea.css",
+          "sha256": "298db30a212c72cbd282ad8c15a06f1a16004916ad149be3a15afb5b676bfafe"
+        },
+        {
+          "path": "superficie-usuario.css",
+          "sha256": "d9b8f65fe5744a6e25f5ed7645f117a7f6b1b0d471bf65269c32ccebe90cb3e7"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "b8f4299b183e07e077ca0e5252fe89a53262fbc494d60cb8387483e3071cc527"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "d5dd862f7ee7fd3e01833155ff17594e7ec3cda309e07e0c22c831ba8c510d05"
+        },
+        {
+          "path": "specs/0007-detalle-tarea-1/spec.md",
+          "sha256": "7e58bb8959b3980765160dc1abfb54736b9f38ed9d2ab3160f48281fab69a766"
+        },
+        {
+          "path": "specs/0007-detalle-tarea-1/tasks.md",
+          "sha256": "6f4afe1dec74635d3a63066abe40939a53e60f04e9db8089ee76f4f0e9c9e534"
+        },
+        {
+          "path": "specs/0023-superficie-usuarios-2-3/tasks.md",
+          "sha256": "102a3192afd4e32560fc69d8043bbea26d69af193a45e23debdd8063c5d77471"
+        }
+      ],
+      "evidenceNote": "Fix sobre la feature dueña 0007 (y relacionada 0023); no es la ficha activa: .cardenal/context.json no se tocó. Implementado por el coordinador; sin subagente. Revisión del asistente en servidor local con iframes de 19 anchos (320-1920) en las 6 páginas page-tarea: el breadcrumb y el título no se cruzan (mínimo 20 px en la misma línea), el botón de la derecha no los pisa, sin scroll horizontal (incluida la nota de Martín entre 641 y 900), los dos menús abren dentro de la pantalla; consola sin errores. Sin captura (panel oculto).",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-2026-11-23-topbar.md",
+            "sha256": "572e428e65a202d90bfdea2fa370fa9de99a240e6704d7f4b88ab54589dcae2a"
           }
         }
       ]

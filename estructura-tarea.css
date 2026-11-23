@@ -41,10 +41,21 @@
 .page-tarea .pietree-img { display: block; width: 100%; height: auto; }
 
 /* Responsive */
+/* Hasta 1024 px se oculta «Rediseño UX/UI» y su separador (fix 2026-11-23): entre 901 y ~1000 px el breadcrumb
+   de 3 niveles pisaba el título centrado. La flecha de volver sigue visible. */
+@media (max-width: 1024px) {
+  .page-tarea .breadcrumb .crumb-home, .page-tarea .breadcrumb .sep:not(.sep--tarea) { display: none; }
+}
 @media (max-width: 900px) {
-  .page-tarea .breadcrumb .crumb-home { display: none; }
   .page-tarea .tarea-grid--stats, .page-tarea .tarea-grid--pietree { grid-template-columns: minmax(0, 1fr); }
   .page-tarea .pietree-img { max-width: 565px; margin: 0 auto; }
+}
+@media (max-width: 760px) {
+  /* Topbar en dos renglones (fix 2026-11-23): el breadcrumb de 3 niveles deja de estar en absoluto sobre el título
+     centrado, que lo pisaba por debajo de ~700 px; va arriba a la izquierda y el título centrado debajo. */
+  .page-tarea .topbar { height: auto; min-height: 56px; flex-direction: column; align-items: stretch; gap: 6px; padding-top: 10px; padding-bottom: 10px; }
+  .page-tarea .breadcrumb { position: static; transform: none; }
+  .page-tarea .topbar-title { text-align: center; }
 }
 @media (max-width: 640px) {
   .page-tarea .stats { grid-template-columns: minmax(0, 1fr); justify-items: center; }

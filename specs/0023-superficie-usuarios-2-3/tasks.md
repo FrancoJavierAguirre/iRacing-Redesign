@@ -18,3 +18,8 @@
 - [x] T008 [front] `superficie-usuario-3.html`: la pregunta muestra el video en bucle (`.cu-media`) en lugar del placeholder.
   - **Revisión del asistente** (servidor local, medición): video readyState 4, 1162 × 686 a 1920 px, radio 12; 56 px entre pregunta, respuesta y video; 375 px sin scroll horizontal; consola sin errores.
 - [x] T009 [HUMANO] (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-fix-2026-11-23-usuario-3-guion.md`) Revisar el video en la página y aprobar.
+
+## Addendum 2026-11-23 — fix: nota «No terminó la tarea» en tablet
+- [x] T010 [front] `superficie-usuario.css`: la nota del usuario 2 pasa debajo de las estrellas en ≤ 900 px (antes ≤ 640). Causa: entre 641 y ~860 px, a la derecha de las estrellas, desbordaba y generaba scroll horizontal (hallado al revisar la topbar).
+  - **Revisión del asistente:** sin scroll horizontal en 19 anchos entre 320 y 1920 px.
+- [x] T011 [HUMANO] (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-fix-2026-11-23-topbar.md`) Revisar la página de Martín en tablet y aprobar.
