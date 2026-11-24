@@ -76,6 +76,11 @@
 .page-alcance .eje-label--fin { left: 100%; top: 50%; transform: translateY(-50%); margin-left: clamp(12px, 1.4vw, 27px); }
 .page-alcance .eje-label--origen { left: calc(-1 * (var(--gut) - var(--cgap))); top: 100%; margin-top: clamp(8px, .625vw, 12px); }
 
+/* Hasta 900 px la etiqueta del eje X puede ir en dos renglones: en inglés («Very feasible») desbordaba entre 700 y 760 px (spec 0027) */
+@media (max-width: 900px) {
+  .page-alcance .eje-label--fin { white-space: normal; width: min-content; }
+}
+
 /* mobile: cuadrantes apilados 1-2-3-4 */
 @media (max-width: 640px) {
   .page-alcance .matriz-grid { display: block; padding-bottom: 0; margin-top: 40px; }

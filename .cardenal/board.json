@@ -433,10 +433,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "alcance.html",
-          "sha256": "05ac7d638252b4bea9cfddf4eae88f27e39ff6b7b27f4e34a650afac1e2c985b"
-        },
-        {
           "path": "estructura.html",
           "sha256": "aadc4f7589cfa913c7a2466c6b1c6f3bd12f02026cabd458013df9799b208d1c"
         },
@@ -461,7 +457,7 @@
           "sha256": "c151f140b46b4485cef01006223da455bba345225760959e87653f81661dc06e"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23. Evidencia rotada por el degradado del hero (2026-11-23). Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador a partir de la plantilla de capa; no se usó un subagente front. Evidencia rotada en 0011: archivos modificados por Sistema de Diseño; la versión aprobada está en su commit. Evidencia rotada en 0025: archivos modificados por los medios de Estrategia; la versión aprobada está en su commit. Evidencia rotada por la corrección de typos del 2026-11-23. Evidencia rotada por el degradado del hero (2026-11-23). Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit. Evidencia rotada en 0027 parte 2; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1879,11 +1875,11 @@
       "questions": [],
       "evidence": [
         {
-          "path": "estrategia.html",
-          "sha256": "f4c3c42f0e969bea633a112777689968bf010ffb40947733ac1654906a6c5d58"
+          "path": ".cardenal/revision-fix-2026-11-23-typos.md",
+          "sha256": "c5abba579c679d761b6f94ba9b7d75f1bfd7d51019dbe1e115e12d924254d7be"
         }
       ],
-      "evidenceNote": "Correcciones de copy pedidas por el usuario (estaban fuera de alcance en la spec 0001 y listadas como pendientes en docs/tech/sistema.md). Sin cambios de estructura ni estilos. Búsqueda en los .html: no quedan «Evauaciones», «par el usuario» ni «Garret». Evidencia rotada por el degradado del hero (2026-11-23). Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit.",
+      "evidenceNote": "Correcciones de copy pedidas por el usuario (estaban fuera de alcance en la spec 0001 y listadas como pendientes en docs/tech/sistema.md). Sin cambios de estructura ni estilos. Búsqueda en los .html: no quedan «Evauaciones», «par el usuario» ni «Garret». Evidencia rotada por el degradado del hero (2026-11-23). Evidencia rotada en 0027 (versión en inglés); la versión aprobada está en su commit. Todos sus archivos cambiaron después (0027): queda como evidencia vigente su revisión. Evidencia rotada en 0027 parte 2; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1967,43 +1963,19 @@
           "sha256": "cb2ede8f8197f5156d90428afb4a1c821da5fe23139590944df8e05164ab8c6f"
         },
         {
-          "path": "en/index.html",
-          "sha256": "5e0606ce3417b3815cf044517ce7ac7b922661928797db6d5bab9b1d7ca822d1"
-        },
-        {
-          "path": "en/5-elementos.html",
-          "sha256": "1ec4c518a2dace1ac2ff32fcb19331c75f8fe096a9af1dca83cb7c62bd298c5d"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "ae2bf88f3ceaa32d412e7fa322f9082603c240078e4992d3eebac9be6aa73565"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "46bdf0913ddf4cbd26c33adcfb85ed690617dd82a6ad4e6aac39de11f2328add"
-        },
-        {
           "path": "docs/tech/dependencies/README.md",
           "sha256": "588fd079a6db411bc6f49d353373c556ab9454931753550a40094c2ad2b1972b"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "13c14177adae80462bf25610f25be9a80f9af23da7358dc0d93f683aded4ef93"
         },
         {
           "path": "specs/0027-idioma-en/spec.md",
           "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         },
         {
-          "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "68670da16b3a9a0e69593743621ca89328d7c44678c0d8073d73e6161c017f7e"
-        },
-        {
           "path": "specs/0027-idioma-en/referencia-switch.png",
           "sha256": "e93d1eb79af7cb8cd8eb5eead94eab671b5f4ad78dffe744976b2700e4402378"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN; no versionado); sin subagente. Revisión del asistente en servidor local: switch 96 × 48 (opciones 48 × 48), radio 8, Inter 600 16 #0159CF, seleccionado rgba(1,89,207,.15) con aria-current; en el Home alineado con «Franco Aguirre - 2025» a 80 px del borde; en 5 Elementos a 80 px del borde y centrado en la barra. Click en EN lleva a en/index.html y guarda «en»; abrir 5-elementos.html#alcance redirige a en/5-elementos.html#alcance; ES vuelve y guarda «es»; con «es» guardado en/index.html redirige a index.html. Sin imágenes rotas ni restos en español; rutas ../ correctas. Sin cruces ni scroll en 9 anchos (320-1920) para Home, 5 Elementos (ES y EN) y 4 páginas que comparten la topbar; a 320 px «Try the prototype» desbordaba y pasó a «Try prototype». Estrategia a 320 px desborda por contenido previo (anotado). Consola sin errores. Captura del Home EN. Corrección de QA del usuario: opciones 56 × 48 con el texto centrado (desvío 0 px), radios 8 0 0 8 / 0 8 8 0, sombra de la seleccionada 4px 0 8px (ES) / -4px 0 8px (EN); medido en index, en/index, 5-elementos y en/5-elementos. Home: switch 24 px debajo de «Franco Aguirre - 2025», alineado a la izquierda con la etiqueta (80 px); no pisa el logo del hero en 8 tamaños de pantalla (mínimo 22 px a 320 × 568); sin scroll horizontal.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN; no versionado); sin subagente. Revisión del asistente en servidor local: switch 96 × 48 (opciones 48 × 48), radio 8, Inter 600 16 #0159CF, seleccionado rgba(1,89,207,.15) con aria-current; en el Home alineado con «Franco Aguirre - 2025» a 80 px del borde; en 5 Elementos a 80 px del borde y centrado en la barra. Click en EN lleva a en/index.html y guarda «en»; abrir 5-elementos.html#alcance redirige a en/5-elementos.html#alcance; ES vuelve y guarda «es»; con «es» guardado en/index.html redirige a index.html. Sin imágenes rotas ni restos en español; rutas ../ correctas. Sin cruces ni scroll en 9 anchos (320-1920) para Home, 5 Elementos (ES y EN) y 4 páginas que comparten la topbar; a 320 px «Try the prototype» desbordaba y pasó a «Try prototype». Estrategia a 320 px desborda por contenido previo (anotado). Consola sin errores. Captura del Home EN. Corrección de QA del usuario: opciones 56 × 48 con el texto centrado (desvío 0 px), radios 8 0 0 8 / 0 8 8 0, sombra de la seleccionada 4px 0 8px (ES) / -4px 0 8px (EN); medido en index, en/index, 5-elementos y en/5-elementos. Home: switch 24 px debajo de «Franco Aguirre - 2025», alineado a la izquierda con la etiqueta (80 px); no pisa el logo del hero en 8 tamaños de pantalla (mínimo 22 px a 320 × 568); sin scroll horizontal. Evidencia rotada en 0027 parte 2; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2013,6 +1985,89 @@
           "evidence": {
             "path": ".cardenal/revision-0027-parte-1.md",
             "sha256": "8075a12d86f04e8e6db55e1026fe17f25d2b667bda669d7d7449f8b247ce4aca"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T36",
+      "title": "Inglés, parte 2: Estrategia y Alcance",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Parte 2 de specs/0027-idioma-en/spec.md (T005-T007 de tasks.md) y criterios de change.acceptance (0027).",
+      "dependsOn": [
+        "T35"
+      ],
+      "files": [
+        "estrategia.html",
+        "alcance.html",
+        "alcance.css",
+        "en/estrategia.html",
+        "en/alcance.html",
+        "en/index.html",
+        "en/5-elementos.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "estrategia.html",
+          "sha256": "333a319d55fd749e62d444cf7e6486a438b758c79475820d2bb610d8e6a1bd41"
+        },
+        {
+          "path": "alcance.html",
+          "sha256": "3346e0d739419854f72926fd948b72767d42196529bb194db34f5730b9cc616a"
+        },
+        {
+          "path": "alcance.css",
+          "sha256": "761b7e80dc69dff984074ea9c72e68a4427e62a23a9e82b4ef83ed9369936f0e"
+        },
+        {
+          "path": "en/estrategia.html",
+          "sha256": "37d899b0d44b62d788e92663cb37ab92b0e11599b8ea234b18d4f95b6d1b8bdb"
+        },
+        {
+          "path": "en/alcance.html",
+          "sha256": "12b83e7ba1b3b13ca783880ef715e421f3e3328c901e839266e5ea2b71db6ad3"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "8006d63e2f3715e614c3e0e01ced438a71a01dfffbd839bb0304eb874f730a23"
+        },
+        {
+          "path": "en/5-elementos.html",
+          "sha256": "190c44809ac8085da14a270516d2b8d1425061a14a6eed4253ee107f11315c43"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "cb9bc02d80b635b23c6c285228c0d50eeb66b5cae198d9cb5ec2fd6e1004146c"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "d007f028bdbbfcd1ca341c23df5866e735c36d7d2227c2ae79d3ebe810b4ec31"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "7678978956dcf8ace031b26b3a1a0320651892fc0c5ae82893365d5908a729c6"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "26c1f20fab558f22adbefd6f47f197e2e793f415c2327716cd8e116f385357c7"
+        },
+        {
+          "path": "specs/0027-idioma-en/spec.md",
+          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN y pares compartidos opcionales); sin subagente. Revisión del asistente en servidor local: switch a 32 px del botón azul y ambos centrados en la barra (ES y EN); menú de capas, título y botón traducidos con enlaces correctos (EN entre páginas traducidas, ../ a las demás); videos e imágenes con rutas ../ sin roturas; control automático sin restos en español; 12 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón; Alcance EN desbordaba 4 px entre 700 y 761 px («Very feasible») y se corrigió con la etiqueta en dos renglones ≤ 900 px; Estrategia a 320 px desborda por contenido previo (también en ES). Captura de la barra de en/estrategia.html.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Esta todo bien (parte 2 del inglés)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0027-parte-2.md",
+            "sha256": "0133202d0939cff135072ed72716ea3d68ce8be5e9b4bf5843d7154f9c80fc32"
           }
         }
       ]

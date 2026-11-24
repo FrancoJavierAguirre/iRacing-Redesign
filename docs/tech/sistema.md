@@ -11,7 +11,7 @@
 
 ```
 index.html          Home del case study (único que carga script.js)
-en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy en/index.html y en/5-elementos.html
+en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy index, 5-elementos, estrategia y alcance
 lang.js             Recuerda el idioma elegido y redirige a la página equivalente (spec 0027)
 5-elementos.html    Explicación del modelo de 5 capas
 estrategia.html     Capa 1: Estrategia
@@ -62,6 +62,7 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 - **`lang.js`:** clave `iracing-lang` en `localStorage` (con try/catch). Al tocar una opción del switch guarda el idioma (y pasa el `#hash` actual). Al cargar, si hay un idioma guardado distinto al de `<html lang>`, hace `location.replace` al `link[rel=alternate][hreflang]` de ese idioma conservando el hash. Sin elección guardada no redirige.
 - **Switch:** `nav.lang-switch` con dos `a[data-lang]` (`lang`, `hreflang`, `aria-label` «Español (ES)» / «English (EN)», el actual con `aria-current="true"`). Estilos en `styles.css`: cada opción 56 × 48 con el texto centrado, Inter 600 16 #0159CF; radio 8 solo hacia afuera (`:first-child` 8 0 0 8, `:last-child` 0 8 8 0); la seleccionada con `rgba(1,89,207,.15)`, `z-index: 1` y sombra hacia la otra opción (`4px 0 8px` / `-4px 0 8px`, `rgba(0,0,0,.35)`). En las páginas interiores va en `.topbar-tools` (`elementos.css`: absoluto a la derecha, gap 32 con el `.topbar-action`, que pasa a `position: static`). En el Home va dentro de `.top-label` (flex en columna, gap 24): debajo de «Franco Aguirre - 2025».
 - **Topbar en ≤ 760 px** (`elementos.css`, todas las páginas `page-elementos`): grid de dos renglones `"crumb tools" / "title title"`.
+- **Alcance:** en ≤ 900 px `.eje-label--fin` puede partirse en dos renglones (`width: min-content`): «Very feasible» desbordaba entre 700 y 760 px.
 
 ## Comportamiento (`script.js`)
 
