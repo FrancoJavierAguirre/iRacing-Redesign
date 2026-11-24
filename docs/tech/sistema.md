@@ -11,7 +11,7 @@
 
 ```
 index.html          Home del case study (único que carga script.js)
-en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy index, 5-elementos, estrategia, alcance, estructura, estructura-tarea-1/2, esqueleto y superficie
+en/                 Versión en inglés (spec 0027): misma estructura de archivos; todas las páginas del sitio
 lang.js             Recuerda el idioma elegido y redirige a la página equivalente (spec 0027)
 5-elementos.html    Explicación del modelo de 5 capas
 estrategia.html     Capa 1: Estrategia

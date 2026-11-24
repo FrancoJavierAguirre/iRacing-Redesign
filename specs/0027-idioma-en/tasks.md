@@ -34,5 +34,12 @@
 - [x] Commit tras la aprobación del usuario.
 - [x] **Check final humano (Parte 4)** (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-0027-parte-4.md`): revisar las traducciones de Esqueleto y Superficie.
 
-## Parte 5
-Pendiente: cuestionarios de los usuarios 1-3 y guion de las pruebas.
+## Parte 5 — Cuestionarios de los usuarios y guion
+- [x] T015 [front] Switch y hreflang en `superficie-usuario-1/2/3.html` y `superficie-guion.html`.
+- [x] T016 [front] `en/superficie-usuario-1/2/3.html` y `en/superficie-guion.html` traducidas; los insights usan las mismas frases que Superficie EN. Con esto todas las páginas EN enlazan solo a páginas EN (salvo el switch).
+  - **Revisión del asistente** (servidor local): 8 páginas × 10 anchos (320-1920) sin cruces del breadcrumb de 3 niveles con título, switch y botón, sin scroll ni textos desbordados; switch a 32 px del botón, topbar 112 px; rutas locales de las páginas EN OK; menú de usuarios y botón de volver llevan a las páginas EN; sin restos en español (solo nombres propios).
+- [x] Commit tras la aprobación del usuario.
+- [x] **Check final humano (Parte 5)** (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-0027-parte-5.md`): revisar las traducciones de los cuestionarios y del guion.
+
+## Cierre
+- [x] Feature cerrada el 2026-11-23: partes 1-5 aprobadas; ficha archivada en `specs/0027-idioma-en/context.json`.

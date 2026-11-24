@@ -2031,25 +2031,9 @@
         {
           "path": "estrategia.html",
           "sha256": "dbef262331ebbde60f4dda1670c43d3ce3819fd14bd3089ef3e3fb9305ef49b8"
-        },
-        {
-          "path": "superficie-guion.html",
-          "sha256": "56ac738048710f69a0ca21d25e841050795d81a4f2004cab14ba9825c4756823"
-        },
-        {
-          "path": "superficie-usuario-1.html",
-          "sha256": "a90ea78db0cb4c77f2f50b17907fd411ea77e622f2ca38b7576b5a1564c334a8"
-        },
-        {
-          "path": "superficie-usuario-2.html",
-          "sha256": "21f856540f6d63aab7eb4ea109cc92066a045245e37a7a530edd15aa4b270918"
-        },
-        {
-          "path": "superficie-usuario-3.html",
-          "sha256": "3943531dba5b6269948d7be30b13f5818967b8eea0faa60af07a90035d970788"
         }
       ],
-      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html. Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit.",
+      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html. Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2203,8 +2187,113 @@
           "sha256": "e31375c22deda9048ff16f74ddb523861c05d0dae60053b1d88481562c22df32"
         },
         {
-          "path": "en/superficie.html",
-          "sha256": "f4d53a48e537523b756d89b1ba6ade2750a8d9f97170e54a9e23cfd0b527d5de"
+          "path": "en/index.html",
+          "sha256": "fbfd2abfb44c026e80d5c83f58c48da13bc22f8d61d037b1b231683b1f726218"
+        },
+        {
+          "path": "en/5-elementos.html",
+          "sha256": "cb233c40d0e69b79f69be98a999b7b1d502d0dbb91d12c020ced7b191e57a9bc"
+        },
+        {
+          "path": "en/estrategia.html",
+          "sha256": "0a9b8268118b4a49638d45bfe9e0bf8a1dabc38e2b636095d062c0a2cb6fc293"
+        },
+        {
+          "path": "en/alcance.html",
+          "sha256": "abe3666c6196f64be736b8faddba2b34041923e79873b3b982edbf17b9ab77f7"
+        },
+        {
+          "path": "en/estructura.html",
+          "sha256": "16c3d5f8a7da3bbdb66a68aad7c5e5578947b9e8183a2c34c205759d62038893"
+        },
+        {
+          "path": "en/estructura-tarea-1.html",
+          "sha256": "c4917aacbc31b473f7fa6305405cef29fae0a75df3e6c8d7cb9ffedd65eb691b"
+        },
+        {
+          "path": "en/estructura-tarea-2.html",
+          "sha256": "e71be519689603bfdc03b6fb9fd1b2c3760dcf851cbe735c1148111628d7c9f0"
+        },
+        {
+          "path": "specs/0027-idioma-en/spec.md",
+          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: esqueleto/superficie ES y EN × 10 anchos (320-1920) sin cruces ni scroll ni textos desbordados; gap switch-botón 32 px, topbar 112 px; 253 rutas locales OK; superficie.js anuncia el estilo en el idioma de la página; el switch recuerda la elección; control automático sin restos en español en las 9 páginas EN. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 4 del inglés)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0027-parte-4.md",
+            "sha256": "688ee37083adfd9e0629a0fd8db59dcf3c5a8cd2e3f1efec74cbb799a8fd00da"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T41",
+      "title": "Inglés, parte 5: cuestionarios de los usuarios y guion",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Parte 5 de specs/0027-idioma-en/spec.md (T015-T016 de tasks.md) y criterios de change.acceptance (0027).",
+      "dependsOn": [
+        "T40"
+      ],
+      "files": [
+        "superficie-usuario-1.html",
+        "superficie-usuario-2.html",
+        "superficie-usuario-3.html",
+        "superficie-guion.html",
+        "en/superficie-usuario-1.html",
+        "en/superficie-usuario-2.html",
+        "en/superficie-usuario-3.html",
+        "en/superficie-guion.html",
+        "en/index.html",
+        "en/5-elementos.html",
+        "en/estrategia.html",
+        "en/alcance.html",
+        "en/estructura.html",
+        "en/estructura-tarea-1.html",
+        "en/estructura-tarea-2.html",
+        "en/esqueleto.html",
+        "en/superficie.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "superficie-usuario-1.html",
+          "sha256": "bd0086a949e0311aaa358a613c1b4d7023a7b056dc17db7525f9dbbd53ecfe41"
+        },
+        {
+          "path": "superficie-usuario-2.html",
+          "sha256": "96d087ee865075f5367771299b0d42cb1dd5eef3eb0276cb0cdc5dc092e2fb30"
+        },
+        {
+          "path": "superficie-usuario-3.html",
+          "sha256": "0a88748f88845af76a4b430b84372fa5426a4fbb3e27f92eaa748da85b1b5664"
+        },
+        {
+          "path": "superficie-guion.html",
+          "sha256": "0ee57a7be37427ec02bae0d94f0855fce320c3b77c7f30fc09a092882bac4e03"
+        },
+        {
+          "path": "en/superficie-usuario-1.html",
+          "sha256": "afe69156896de4a8ccc9a34fcf2cdd2f03f2fed5953611b97fd76ca546bddc74"
+        },
+        {
+          "path": "en/superficie-usuario-2.html",
+          "sha256": "8a6ad1b940bf53424eb5a4d0d3b783aca0ac66752431b13813b119a341201abf"
+        },
+        {
+          "path": "en/superficie-usuario-3.html",
+          "sha256": "ff1c302a52e2095ada887ec056dc0cd9be55853b88744b4e0cf2a322e137b1c8"
+        },
+        {
+          "path": "en/superficie-guion.html",
+          "sha256": "0abbba3ee78645b48c1b0f3112bb68d0430e09c5c61df5a2161de1e799dc3440"
         },
         {
           "path": "en/index.html",
@@ -2235,36 +2324,44 @@
           "sha256": "e71be519689603bfdc03b6fb9fd1b2c3760dcf851cbe735c1148111628d7c9f0"
         },
         {
+          "path": "en/esqueleto.html",
+          "sha256": "e31375c22deda9048ff16f74ddb523861c05d0dae60053b1d88481562c22df32"
+        },
+        {
+          "path": "en/superficie.html",
+          "sha256": "4aa073f255759f9a0cad3529d7c343fb0b9fd64cc7ab11b5e27b7da75adccae5"
+        },
+        {
           "path": "docs/public/funcionalidades.md",
-          "sha256": "6fcedaaee44eae271c0516ef875c9c602c48a911a408841e50aef01127de5be9"
+          "sha256": "0bdc3cecd3b71999dc7c4a3c12e7b43b29ca3648fa5ed0b4aa2c1bec01c0c636"
         },
         {
           "path": "docs/tech/sistema.md",
-          "sha256": "2f42f4d6eeb9fe6a55b15c6ce60dc3dfbb211885d50edc40a0e341bf4eb1850c"
+          "sha256": "f349b2a47751e7257dca13865b8321051a13b3b53ceaa128017133f495379260"
         },
         {
           "path": "llms.txt",
-          "sha256": "dc374ce1679f937bba8e8c771c6d5c2860083f6f02e8b46975c91125bccfb5fe"
+          "sha256": "895a04e99e500e0354f9358069caa580d029a1f8920f48312b180e72e3500653"
         },
         {
           "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "a4c5a53db3abd103e40a0e807a9fee66f11d9e986a357ff9e81b84dacb642e52"
+          "sha256": "bbcb8b36e14e2a2e7cfb4e09e234ed013080685b3016d01b792fff6dbf58a23c"
         },
         {
           "path": "specs/0027-idioma-en/spec.md",
           "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: esqueleto/superficie ES y EN × 10 anchos (320-1920) sin cruces ni scroll ni textos desbordados; gap switch-botón 32 px, topbar 112 px; 253 rutas locales OK; superficie.js anuncia el estilo en el idioma de la página; el switch recuerda la elección; control automático sin restos en español en las 9 páginas EN.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: 8 páginas × 10 anchos (320-1920) sin cruces ni scroll ni desbordes; gap switch-botón 32 px, topbar 112 px; rutas locales OK; menú de usuarios y volver llevan a EN; control automático sin restos en español en las 13 páginas EN.",
       "reviews": [
         {
           "kind": "human",
           "reviewer": "usuario (team lead)",
-          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 4 del inglés)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 5 del inglés y cierre)",
           "verdict": "approved",
           "evidence": {
-            "path": ".cardenal/revision-0027-parte-4.md",
-            "sha256": "688ee37083adfd9e0629a0fd8db59dcf3c5a8cd2e3f1efec74cbb799a8fd00da"
+            "path": ".cardenal/revision-0027-parte-5.md",
+            "sha256": "4883a15691e5e3de2738ec6d8d0773571a2bfcacbb139e3cca097a1e00ea59f7"
           }
         }
       ]

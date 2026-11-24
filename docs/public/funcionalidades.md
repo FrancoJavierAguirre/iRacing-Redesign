@@ -25,7 +25,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 
 ## Idioma: español e inglés (spec 0027, en curso)
 
-El sitio está en español. Algunas páginas ya tienen su versión en inglés en `en/` (por ahora: Home, 5 Elementos, Estrategia, Alcance, Estructura, los detalles de las tareas 1 y 2, Esqueleto y Superficie; faltan los cuestionarios de los usuarios y el guion de las pruebas).
+El sitio está en español. Todas las páginas tienen su versión en inglés en `en/`.
 - **Switch ES/EN:** arriba a la derecha de la barra superior (a la izquierda del botón azul, si hay). En el Home, arriba a la izquierda del hero, debajo de «Franco Aguirre - 2025». La opción del idioma actual se ve resaltada, con una sombra hacia la otra opción.
 - Al elegir un idioma, el sitio lo recuerda: si después se abre una página en el otro idioma, lleva a la versión elegida (si existe) y conserva la sección.
 - Las imágenes con texto quedan en español. Desde las páginas en inglés, los enlaces a páginas todavía no traducidas llevan a la versión en español.
