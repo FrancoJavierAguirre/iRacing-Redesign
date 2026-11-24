@@ -414,22 +414,9 @@
 .page-superficie .fin-titulo { display: flex; align-items: center; justify-content: center; gap: clamp(24px, 4.6875vw, 90px); margin: 0; font: 400 clamp(36px, 3.3333vw, 64px)/1.2 var(--font-display); color: #fff; }
 .page-superficie .fin-titulo img { width: clamp(28px, 2.5vw, 48px); height: auto; flex-shrink: 0; display: block; }
 .page-superficie .fin-gracias { margin: clamp(64px, 8.3333vw, 160px) 0 0; font: 300 clamp(28px, 2.5vw, 48px)/1.2 var(--font-display); color: #fff; }
-.page-superficie .fin-contacto { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: clamp(48px, 5vw, 96px) 0 clamp(64px, 8.3333vw, 160px); padding: 0; list-style: none; }
-.page-superficie .fin-contacto li, .page-superficie .fin-contacto a { display: flex; align-items: center; gap: 16px; min-width: 0; }
-.page-superficie .fin-contacto li { font: 300 clamp(16px, 1.25vw, 24px)/1.5 "Poppins", sans-serif; color: #fff; }
-.page-superficie .fin-contacto a { color: inherit; text-decoration: none; }
-.page-superficie .fin-contacto a:hover span, .page-superficie .fin-contacto a:focus-visible span { text-decoration: underline; text-underline-offset: 4px; }
-.page-superficie .fin-contacto li > span, .page-superficie .fin-contacto a > span { overflow-wrap: anywhere; text-align: left; }
-.page-superficie .fin-ico { height: 40px; width: auto; flex-shrink: 0; display: block; }
-/* los PNG de LinkedIn y Behance traen 5 px de sombra: se muestran a 50 px y el ícono visible mide 40 */
-.page-superficie .fin-ico--sombra { height: 50px; margin: -5px; }
+/* El estilo de .fin-contacto está en styles.css (compartido con el Home); acá solo sus márgenes */
+.page-superficie .fin-contacto { margin: clamp(48px, 5vw, 96px) 0 clamp(64px, 8.3333vw, 160px); }
 .page-superficie .fin-capas a.proceso-card { text-decoration: none; }
-@media (max-width: 900px) {
-  .page-superficie .fin-contacto { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
-}
-@media (max-width: 640px) {
-  .page-superficie .fin-contacto { grid-template-columns: minmax(0, 1fr); justify-items: start; }
-}
 
 @media (max-width: 900px) {
   .page-superficie .sd-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }

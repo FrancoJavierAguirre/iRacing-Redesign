@@ -37,14 +37,14 @@ La barra superior de las páginas interiores mide 112 px de alto en escritorio, 
 
 1. **Hero**: video de fondo, oscurecido de izquierda a derecha por un degradado negro que deja el texto legible (abajo termina en un corte recto contra Contexto), logo de iRacing, título «¿Y si la UX fuera tan fluida como en la pista?» e íconos de las herramientas usadas (Figma, Make, Photoshop, UX Tweak).
 2. **Contexto**: relato en segunda persona de cómo un usuario nuevo llega a iRacing. A la derecha, la imagen del volante y los pedales ocupa todo el alto de la sección y sobresale un poco del borde, para que quede balanceada con el texto; en tablet y celular va debajo del texto.
-3. **¿Por qué el rediseño?**: 4 testimonios de usuarios reales y el botón «Ver fuente», que abre una planilla de Google Sheets con las fuentes.
-4. **Plataforma actual**: explica que iRacing tiene una *plataforma* (buscar carreras) y un *simulador* (correr), y que el rediseño apunta a la plataforma. Muestra 6 comparativas Antes/Después en video:
+3. **¿Por qué el rediseño?**: subtítulo «No lo digo yo, lo dicen los usuarios.» («usuarios» en dorado), 4 testimonios de usuarios reales y el botón «Ver fuente», que abre una planilla de Google Sheets con las fuentes.
+4. **Diseño final** (antes «Plataforma actual»): explica que iRacing tiene una *plataforma* (buscar carreras) y un *simulador* (correr), y que el rediseño apunta a la plataforma. Muestra 6 comparativas Antes/Después en video:
    - Lista de carreras · Registro a la carrera · Detalles de la carrera · Calendario · Detalles de autos y pistas · Carrito de compras.
 
    Los videos se reproducen solos, sin sonido y en bucle, solo mientras se ven en pantalla.
-   CTA **«Probar prototipo»** → prototipo de Figma (pestaña nueva).
+   CTA **«Probar prototipo»** → prototipo de Figma (pestaña nueva), 160 px debajo de la última comparativa; 160 px más abajo, el texto «¿Te interesa ver el proceso?» (#FAFAFA) invita a seguir bajando.
 5. **Objetivos**: objetivos de negocio (retener usuarios, aumentar compras) y de usuario (encontrar una carrera adecuada a su nivel, comprar fácil), la frase del problema (flujo de usuarios → frustración → churn) y 3 videos que lo ilustran.
-6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas. **las 5 tarjetas navegan**; antes todavía no hacen nada visible.
+6. **Proceso de Diseño**: botón «¿Qué son los 5 elementos?» (→ `5-elementos.html`) y 5 tarjetas que llevan a cada capa. 160 px debajo, los datos de contacto (LinkedIn, Behance, correo y teléfono), iguales a los del final de Superficie. El mismo bloque de contacto aparece, 160 px debajo de sus cards finales, en 5 Elementos, Estrategia, Alcance, Estructura y Esqueleto (no en las páginas de detalle de tareas, usuarios ni guion).
 
 ## 5 Elementos UX (`5-elementos.html`)
 

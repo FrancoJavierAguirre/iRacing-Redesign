@@ -53,3 +53,17 @@
 - [x] T018 [front] En el Home el switch reemplaza a «Franco Aguirre - 2025» y usa la variante `.lang-switch--hero` (borde y opción elegida #0159CF, texto blanco en ambas, la otra opción sin fondo; corregido por el usuario), según la referencia del usuario. EN regenerado (el generador conserva la clase del `nav`).
   - **Revisión del asistente:** en local, ES y EN: 114 × 48, opción elegida con fondo rgb(1,89,207), la otra sin fondo, texto blanco en ambas; a 375 px sin scroll horizontal.
 - [ ] [HUMANO] QA: revisar el switch del Home en ES y EN (aspecto, hover y cambio de idioma).
+
+## Addendum 2026-11-24 — ajuste: textos, espaciado y contacto en el Home
+- [x] T019 [front] Home ES/EN:
+  - subtítulo «No lo digo yo, lo dicen los usuarios.» en Poppins 400 32, con «usuarios» en #BCA447;
+  - «Plataforma actual» pasa a «Diseño final»;
+  - «Más abajo todos los detalles» pasa a «¿Te interesa ver el proceso?», sin la mano;
+  - 160 px entre la última comparativa, «Probar prototipo» y ese texto;
+  - contacto de Superficie (sin «Gracias por ver») 160 px debajo de las cards de Proceso.
+  - «¿Te interesa ver el proceso?» en #FAFAFA.
+  - Frase del problema de Objetivos («La falta de un flujo constante…»): 26/32 px, Poppins 200, blanca, centrada y con 300 px de margen a cada lado, sin margen en ≤ 900 px (correcciones del usuario sobre los 32 px iniciales).
+  - El mismo contacto, 160 px debajo de las cards finales, en 5 Elementos, Estrategia, Alcance, Estructura y Esqueleto (no en tareas, usuarios ni guion).
+  - Estilos de contacto movidos a `styles.css`. EN traducido en el generador.
+  - **Revisión del asistente:** en local a 1920 px, en ES y EN, las tres distancias miden 160 px (159,7 por la barra de scroll). Frase de 32 px y 400; «usuarios» en rgb(188,164,71); sin mano; íconos de contacto cargados. A 375 px, distancias de 64 px y sin scroll horizontal. Superficie mantiene márgenes, tipografía y flex del contacto. Frase de Objetivos: 26/32 px, peso 200 y blanco a 1920; padding de 300/300 (2 líneas en ES y EN); 199 px a 1280 px de ancho; 0 a 375; 18 px a 375; sin scroll horizontal. Contacto en las 12 páginas ES/EN: 160 px a 1920 (64 a 375), íconos cargados y sin scroll horizontal.
+- [ ] [HUMANO] QA: revisar los cambios del Home en ES y EN.

@@ -1464,10 +1464,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.css",
-          "sha256": "c40c1cc15b3b4dafce4ed754899d48c4aca1820e3022b7adb0abc1ea398556bf"
-        },
-        {
           "path": "specs/0019-superficie-iteraciones/spec.md",
           "sha256": "89218c5c6bd731e25a7ff2844da541f6fac1e2dfb21b101a4ab1ed8000d49fb0"
         },
@@ -1520,7 +1516,7 @@
           "sha256": "ee03f3a5b5171c852d5fbe6c1e091a5aedb2752434d539bcacd4be058cd045fc"
         }
       ],
-      "evidenceNote": "Fix sobre las features dueñas 0019 y 0020 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 4 videos readyState 4 con duraciones 10,3/10,3/9,3/10,8 s; 2 PNG 864 × 604 cargan; distancias de Iteraciones y Prototipo sin cambios (32/56 px); 1920, 900 y 375 sin scroll horizontal; consola sin errores. Segunda tanda (el usuario agregó 4 PNG olvidados): Filtros y búsqueda y Registro a la carrera Antes/Después; las 6 imágenes cargan, pares con 32 px entre sí y 56 px a su título; 0 placeholders en Superficie; 375 px sin scroll horizontal; consola sin errores. Ajuste del usuario: título y «Probar funcionalidad» de License Progress centrados respecto de los bullets (misma regla que Prototipo, ahora en .it-solucion); centros coinciden en los 4 bloques a 1920 y 375 px. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit. Evidencia rotada por la barra superior de 112 px (2026-11-23).",
+      "evidenceNote": "Fix sobre las features dueñas 0019 y 0020 (no es la ficha activa: .cardenal/context.json no se tocó). Implementado por el coordinador (ffmpeg + script); sin subagente. Revisión del asistente en servidor local por medición (panel oculto, sin captura): 4 videos readyState 4 con duraciones 10,3/10,3/9,3/10,8 s; 2 PNG 864 × 604 cargan; distancias de Iteraciones y Prototipo sin cambios (32/56 px); 1920, 900 y 375 sin scroll horizontal; consola sin errores. Segunda tanda (el usuario agregó 4 PNG olvidados): Filtros y búsqueda y Registro a la carrera Antes/Después; las 6 imágenes cargan, pares con 32 px entre sí y 56 px a su título; 0 placeholders en Superficie; 375 px sin scroll horizontal; consola sin errores. Ajuste del usuario: título y «Probar funcionalidad» de License Progress centrados respecto de los bullets (misma regla que Prototipo, ahora en .it-solucion); centros coinciden en los 4 bloques a 1920 y 375 px. Evidencia rotada por el fix 2026-11-23 (video del usuario 1); la versión aprobada está en su commit. Evidencia rotada por la barra superior de 112 px (2026-11-23). Evidencia rotada por el ajuste del Home (T44); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2285,48 +2281,8 @@
       "questions": [],
       "evidence": [
         {
-          "path": "5-elementos.html",
-          "sha256": "361a7487d3b2c0fb58cb06a9062a7a48bee104d02a7e140e59ae38a4d368ccd4"
-        },
-        {
-          "path": "estrategia.html",
-          "sha256": "68274397781158f30f1025ba1cefce5307a1451a556f675835b562e317e31658"
-        },
-        {
-          "path": "alcance.html",
-          "sha256": "aadd8e2731ec5a8cc8f9d97f38bb1915356d2d1c120074524eb3a19d94457f6b"
-        },
-        {
-          "path": "estructura.html",
-          "sha256": "2d86bfdc8f57cd4cd3307ee958ac2560be958e93e85329c336c1ee333e093682"
-        },
-        {
-          "path": "esqueleto.html",
-          "sha256": "8bb731517860814877ed5e8432d5297e5e2b4dd4737b9c3e956488cbe3d7c2f2"
-        },
-        {
           "path": "superficie.html",
           "sha256": "912d9ba17bb190130e8d3495ec2025d11f6ae998fa5ecd3148ea2f79ded88053"
-        },
-        {
-          "path": "en/5-elementos.html",
-          "sha256": "4b33fe72cbec3f03ea1c78c9788c9951d334fa326ed2d55504c651ef491d50e6"
-        },
-        {
-          "path": "en/estrategia.html",
-          "sha256": "aa174dcb58f31182e465e9a51611e919ff8f2d256a757764dc9db8ed4da49f95"
-        },
-        {
-          "path": "en/alcance.html",
-          "sha256": "bd25a6fb8a616a4f27ea9d0689007b1773e8f0aa8ef9267366e05d3aa602178e"
-        },
-        {
-          "path": "en/estructura.html",
-          "sha256": "06cba8805646dfc03192d590a4161d45359723767f613833eb4c3fd2c74e1219"
-        },
-        {
-          "path": "en/esqueleto.html",
-          "sha256": "5946c699a2c8629fb28f828387a357e4f66668b3a4c0fc052eec5bfdce7b1b97"
         },
         {
           "path": "en/superficie.html",
@@ -2357,7 +2313,7 @@
           "sha256": "0abbba3ee78645b48c1b0f3112bb68d0430e09c5c61df5a2161de1e799dc3440"
         }
       ],
-      "evidenceNote": "Detectado al verificar el sitio publicado (404 de card-*.png en /assets/ desde páginas EN). Implementado por el coordinador. Verificado con servidor local bajo subcarpeta: 70 cards OK en 14 páginas ES/EN; sin recursos fuera de la subcarpeta salvo favicon.ico (inexistente, pendiente conocido). Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit.",
+      "evidenceNote": "Detectado al verificar el sitio publicado (404 de card-*.png en /assets/ desde páginas EN). Implementado por el coordinador. Verificado con servidor local bajo subcarpeta: 70 cards OK en 14 páginas ES/EN; sin recursos fuera de la subcarpeta salvo favicon.ico (inexistente, pendiente conocido). Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit. Evidencia rotada por el ajuste del Home (T44); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2389,39 +2345,11 @@
       "questions": [],
       "evidence": [
         {
-          "path": "index.html",
-          "sha256": "e210cd8f0b49e50c8a36ce38ef05e9e90a73fff44c17ef23bc245c2c16218df2"
-        },
-        {
-          "path": "en/index.html",
-          "sha256": "8467fdf3cb9ff1215b40fccd6dae066997ec5d265460411171b6661eddc1d002"
-        },
-        {
-          "path": "en/5-elementos.html",
-          "sha256": "4b33fe72cbec3f03ea1c78c9788c9951d334fa326ed2d55504c651ef491d50e6"
-        },
-        {
-          "path": "styles.css",
-          "sha256": "fc5692b759995a2eb718748c34db6f51995438b32ecc0ebdae871fe66c723df8"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "151f4a86de35ff3653d58d5786cf54b2b654f96af5845ac981bca51b9dc75fc3"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "565f45aae61f1487d42507ed5fd871214e3bf5d15158c46af7b7fbbb6c2ca12e"
-        },
-        {
-          "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "57abaf013ba7197592f702dd82ec460c3b975475f511991ee8713d25cd8c7915"
-        },
-        {
           "path": "specs/0027-idioma-en/spec.md",
           "sha256": "5da24b86d2f06506d99360a7b1d892935152fc6a8006bb7243fc1df63c27d66d"
         }
       ],
-      "evidenceNote": "Pedido del usuario en chat 2026-11-24 con imagen de referencia. Implementado por el coordinador. Verificado en local: 114 × 48 en ES y EN, colores correctos, sin scroll horizontal a 375 px. en/5-elementos.html se regeneró sin cambios de contenido.",
+      "evidenceNote": "Pedido del usuario en chat 2026-11-24 con imagen de referencia. Implementado por el coordinador. Verificado en local: 114 × 48 en ES y EN, colores correctos, sin scroll horizontal a 375 px. en/5-elementos.html se regeneró sin cambios de contenido. Evidencia rotada por el ajuste del Home (T44); la versión aprobada está en su commit. Evidencia rotada por el ajuste del Home (T44); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2431,6 +2359,116 @@
           "evidence": {
             "path": ".cardenal/revision-ajuste-switch-home.md",
             "sha256": "937c36c89a971a3b1d4e0c50eddae4667a428c1e0b14bbf809ecae7fe7882cc9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T44",
+      "title": "Ajuste: textos, espaciado y contacto en el Home",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Frase en Poppins 400 32 con «usuarios» en #BCA447; «Diseño final»; «¿Te interesa ver el proceso?» sin mano; 160 px entre la comparativa, el botón y el texto; contacto de Superficie 160 px debajo de las cards. Texto del proceso en #FAFAFA. Frase de Objetivos a 26/32, Poppins 200, blanca, centrada y con 300 px de margen a cada lado. Mismo contacto 160 px debajo de las cards finales de 5 Elementos y las capas Estrategia a Esqueleto. Todo traducido en EN.",
+      "dependsOn": [
+        "T43"
+      ],
+      "files": [
+        "index.html",
+        "5-elementos.html",
+        "estrategia.html",
+        "alcance.html",
+        "estructura.html",
+        "esqueleto.html",
+        "en/index.html",
+        "en/5-elementos.html",
+        "en/estrategia.html",
+        "en/alcance.html",
+        "en/estructura.html",
+        "en/esqueleto.html",
+        "styles.css",
+        "superficie.css"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "index.html",
+          "sha256": "0c5cee4ea34ba15ac01aa85773a6879dfe112d7bb51eda37384ec4bf23dbbff3"
+        },
+        {
+          "path": "5-elementos.html",
+          "sha256": "28d14f0ba61b07c2e3dcadce82b35e3b3030b74ac3d4ef5024d9ec465829d0e7"
+        },
+        {
+          "path": "estrategia.html",
+          "sha256": "542ee1debe07e0541279505732a9ca6989021ec833b2b14c695f45163d3de3fa"
+        },
+        {
+          "path": "alcance.html",
+          "sha256": "de20b063679f15c03bbef823ce9e4e85e858cbf44c1b7f81fa14a699d6f7d72c"
+        },
+        {
+          "path": "estructura.html",
+          "sha256": "be7c4ac1c8edd801667342514caaf07b6a684c1ed8ee36702ae983fcb6dc39f1"
+        },
+        {
+          "path": "esqueleto.html",
+          "sha256": "c4f73f901fc898d849a3c13d300d4b4fcee426654e15fbfeb2347a606b3078d8"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "a8c2046ec08b945085f2574c0c0e4c2bd6d21a74e798ed478342a4121d69b955"
+        },
+        {
+          "path": "en/5-elementos.html",
+          "sha256": "9ad15d970ea2abf0b468c5923cef417ec299654fa56c89669ce20ac0a9d858e7"
+        },
+        {
+          "path": "en/estrategia.html",
+          "sha256": "8afe7860bee10ad0c5f59f09a87d2531e2d11ce43cc87a6a1e282a9a7abfd5da"
+        },
+        {
+          "path": "en/alcance.html",
+          "sha256": "68a2e0bc8a770676a2460d22931738b47a7483f031e662cb8d77ce4073c5e83e"
+        },
+        {
+          "path": "en/estructura.html",
+          "sha256": "9f489b0d1aa43daeea4be7d1e9e76d1714ff7a51618d7e41c9b522aca2017794"
+        },
+        {
+          "path": "en/esqueleto.html",
+          "sha256": "56074de9290a70781199858438a5d0d2883e5a49208030398c7bac3b50091893"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "46bdbcaccb0ed2080415ef1be69a2b3c90e81abc7f9f10f69ce0598fde4e27e4"
+        },
+        {
+          "path": "superficie.css",
+          "sha256": "927676155dc4e3221d17273db283d4b1af899662250a7deec28296f670c591a3"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "cab521c171ab5ce0b8b374234a8ed99767126afde0f0b9daf60b8053524561af"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "cd8e9abc108f7d6daa1a6e6bd6d5cdf457f94524ae414a72b432156088939d8a"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "812925a6c0516f9e33c2ba7487dcb257a7ec0fdca58ca1335f114338ff76b520"
+        }
+      ],
+      "evidenceNote": "Pedido del usuario en chat 2026-11-24. Implementado por el coordinador. Verificado en local a 1920 y 375 px en ES/EN; Superficie sin cambios visuales.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-24: Lo apruebo (textos, espaciado y contacto en el Home y las capas)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-ajuste-home-contacto.md",
+            "sha256": "09f992c950c2d751290cda7c7e4d02f4a52ece8b048c644380d8d07f112d4e62"
           }
         }
       ]
