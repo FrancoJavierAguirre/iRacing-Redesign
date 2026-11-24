@@ -1899,14 +1899,6 @@
           "sha256": "345943d130a19921a644959b57137d5d42a816fc2b7e1b55e3e8b1b02c658185"
         },
         {
-          "path": "styles.css",
-          "sha256": "cab078ce787df52706b100ec5c4bc695bb42026b7a922ef894170b8fa858a6b9"
-        },
-        {
-          "path": "index.html",
-          "sha256": "6e1c5655e79bc0337f7ea0590c0d33d636cc8ada910ab3bb45c5ee47825dc111"
-        },
-        {
           "path": "docs/tech/dependencies/README.md",
           "sha256": "588fd079a6db411bc6f49d353373c556ab9454931753550a40094c2ad2b1972b"
         },
@@ -1919,7 +1911,7 @@
           "sha256": "e93d1eb79af7cb8cd8eb5eead94eab671b5f4ad78dffe744976b2700e4402378"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN; no versionado); sin subagente. Revisión del asistente en servidor local: switch 96 × 48 (opciones 48 × 48), radio 8, Inter 600 16 #0159CF, seleccionado rgba(1,89,207,.15) con aria-current; en el Home alineado con «Franco Aguirre - 2025» a 80 px del borde; en 5 Elementos a 80 px del borde y centrado en la barra. Click en EN lleva a en/index.html y guarda «en»; abrir 5-elementos.html#alcance redirige a en/5-elementos.html#alcance; ES vuelve y guarda «es»; con «es» guardado en/index.html redirige a index.html. Sin imágenes rotas ni restos en español; rutas ../ correctas. Sin cruces ni scroll en 9 anchos (320-1920) para Home, 5 Elementos (ES y EN) y 4 páginas que comparten la topbar; a 320 px «Try the prototype» desbordaba y pasó a «Try prototype». Estrategia a 320 px desborda por contenido previo (anotado). Consola sin errores. Captura del Home EN. Corrección de QA del usuario: opciones 56 × 48 con el texto centrado (desvío 0 px), radios 8 0 0 8 / 0 8 8 0, sombra de la seleccionada 4px 0 8px (ES) / -4px 0 8px (EN); medido en index, en/index, 5-elementos y en/5-elementos. Home: switch 24 px debajo de «Franco Aguirre - 2025», alineado a la izquierda con la etiqueta (80 px); no pisa el logo del hero en 8 tamaños de pantalla (mínimo 22 px a 320 × 568); sin scroll horizontal. Evidencia rotada en 0027 parte 2; la versión aprobada está en su commit. Evidencia rotada por la barra superior de 112 px (2026-11-23).",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN; no versionado); sin subagente. Revisión del asistente en servidor local: switch 96 × 48 (opciones 48 × 48), radio 8, Inter 600 16 #0159CF, seleccionado rgba(1,89,207,.15) con aria-current; en el Home alineado con «Franco Aguirre - 2025» a 80 px del borde; en 5 Elementos a 80 px del borde y centrado en la barra. Click en EN lleva a en/index.html y guarda «en»; abrir 5-elementos.html#alcance redirige a en/5-elementos.html#alcance; ES vuelve y guarda «es»; con «es» guardado en/index.html redirige a index.html. Sin imágenes rotas ni restos en español; rutas ../ correctas. Sin cruces ni scroll en 9 anchos (320-1920) para Home, 5 Elementos (ES y EN) y 4 páginas que comparten la topbar; a 320 px «Try the prototype» desbordaba y pasó a «Try prototype». Estrategia a 320 px desborda por contenido previo (anotado). Consola sin errores. Captura del Home EN. Corrección de QA del usuario: opciones 56 × 48 con el texto centrado (desvío 0 px), radios 8 0 0 8 / 0 8 8 0, sombra de la seleccionada 4px 0 8px (ES) / -4px 0 8px (EN); medido en index, en/index, 5-elementos y en/5-elementos. Home: switch 24 px debajo de «Franco Aguirre - 2025», alineado a la izquierda con la etiqueta (80 px); no pisa el logo del hero en 8 tamaños de pantalla (mínimo 22 px a 320 × 568); sin scroll horizontal. Evidencia rotada en 0027 parte 2; la versión aprobada está en su commit. Evidencia rotada por la barra superior de 112 px (2026-11-23). Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2019,21 +2011,9 @@
         {
           "path": "estructura.css",
           "sha256": "6e51fa8fd3543192f0cc550a69e167c05c56154089c8599b02ffe30dce4c6c63"
-        },
-        {
-          "path": "5-elementos.html",
-          "sha256": "81eff75af84bb740ac46faf3f5dca589b376029f2fea472efbf74bb75404fbf9"
-        },
-        {
-          "path": "alcance.html",
-          "sha256": "dfeab4dd2510bcd6f65c9fff2f949ce8e2df7161502dcf1b51c9e74d26dd8fc8"
-        },
-        {
-          "path": "estrategia.html",
-          "sha256": "dbef262331ebbde60f4dda1670c43d3ce3819fd14bd3089ef3e3fb9305ef49b8"
         }
       ],
-      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html. Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit.",
+      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html. Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2114,10 +2094,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "estructura.html",
-          "sha256": "a37e93dbc9cf13a47ad1bf65a8267b24a997af8e970afdde06a961d0b74be104"
-        },
-        {
           "path": "estructura-tarea-1.html",
           "sha256": "9e187b16f7e5ceffe36de2c8eb0996b6f983b582a1acbdfd6571674353aa68bb"
         },
@@ -2130,7 +2106,7 @@
           "sha256": "f7f499bcd5a554a759ce4315bf835e6ac5aff32a8d019f3ac9d41f76642e2c28"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador. Medido en servidor local: 6 páginas + Alcance × 9 anchos (320-1920) sin superposición ni scroll; gap 32 px. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador. Medido en servidor local: 6 páginas + Alcance × 9 anchos (320-1920) sin superposición ni scroll; gap 32 px. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2171,40 +2147,8 @@
       "questions": [],
       "evidence": [
         {
-          "path": "esqueleto.html",
-          "sha256": "98dc2f128d36462a7c1012341fac53ca95919fb556c34ace2ceae7ba2d6a0904"
-        },
-        {
-          "path": "superficie.html",
-          "sha256": "c9fb5c92e561c75fc16796ff01a887baabe691ef1da81097f5ec97fbb8f6f7ef"
-        },
-        {
           "path": "superficie.js",
           "sha256": "5b2db46037212c9de2a52158a267627666e2e69851a498fb5f85d2a5e989f0de"
-        },
-        {
-          "path": "en/esqueleto.html",
-          "sha256": "e31375c22deda9048ff16f74ddb523861c05d0dae60053b1d88481562c22df32"
-        },
-        {
-          "path": "en/index.html",
-          "sha256": "fbfd2abfb44c026e80d5c83f58c48da13bc22f8d61d037b1b231683b1f726218"
-        },
-        {
-          "path": "en/5-elementos.html",
-          "sha256": "cb233c40d0e69b79f69be98a999b7b1d502d0dbb91d12c020ced7b191e57a9bc"
-        },
-        {
-          "path": "en/estrategia.html",
-          "sha256": "0a9b8268118b4a49638d45bfe9e0bf8a1dabc38e2b636095d062c0a2cb6fc293"
-        },
-        {
-          "path": "en/alcance.html",
-          "sha256": "abe3666c6196f64be736b8faddba2b34041923e79873b3b982edbf17b9ab77f7"
-        },
-        {
-          "path": "en/estructura.html",
-          "sha256": "16c3d5f8a7da3bbdb66a68aad7c5e5578947b9e8183a2c34c205759d62038893"
         },
         {
           "path": "en/estructura-tarea-1.html",
@@ -2219,7 +2163,7 @@
           "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: esqueleto/superficie ES y EN × 10 anchos (320-1920) sin cruces ni scroll ni textos desbordados; gap switch-botón 32 px, topbar 112 px; 253 rutas locales OK; superficie.js anuncia el estilo en el idioma de la página; el switch recuerda la elección; control automático sin restos en español en las 9 páginas EN. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: esqueleto/superficie ES y EN × 10 anchos (320-1920) sin cruces ni scroll ni textos desbordados; gap switch-botón 32 px, topbar 112 px; 253 rutas locales OK; superficie.js anuncia el estilo en el idioma de la página; el switch recuerda la elección; control automático sin restos en español en las 9 páginas EN. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2296,24 +2240,133 @@
           "sha256": "0abbba3ee78645b48c1b0f3112bb68d0430e09c5c61df5a2161de1e799dc3440"
         },
         {
+          "path": "en/estructura-tarea-1.html",
+          "sha256": "c4917aacbc31b473f7fa6305405cef29fae0a75df3e6c8d7cb9ffedd65eb691b"
+        },
+        {
+          "path": "en/estructura-tarea-2.html",
+          "sha256": "e71be519689603bfdc03b6fb9fd1b2c3760dcf851cbe735c1148111628d7c9f0"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "0bdc3cecd3b71999dc7c4a3c12e7b43b29ca3648fa5ed0b4aa2c1bec01c0c636"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "895a04e99e500e0354f9358069caa580d029a1f8920f48312b180e72e3500653"
+        },
+        {
+          "path": "specs/0027-idioma-en/spec.md",
+          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: 8 páginas × 10 anchos (320-1920) sin cruces ni scroll ni desbordes; gap switch-botón 32 px, topbar 112 px; rutas locales OK; menú de usuarios y volver llevan a EN; control automático sin restos en español en las 13 páginas EN. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 5 del inglés y cierre)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0027-parte-5.md",
+            "sha256": "4883a15691e5e3de2738ec6d8d0773571a2bfcacbb139e3cca097a1e00ea59f7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T42",
+      "title": "Fix: imágenes de las cards en /en/ con el sitio publicado",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Las cards de capas muestran su imagen en ES y EN también bajo /iRacing-Redesign/ (GitHub Pages).",
+      "dependsOn": [
+        "T41"
+      ],
+      "files": [
+        "styles.css",
+        "index.html",
+        "5-elementos.html",
+        "estrategia.html",
+        "alcance.html",
+        "estructura.html",
+        "esqueleto.html",
+        "superficie.html",
+        "en/index.html",
+        "en/5-elementos.html",
+        "en/estrategia.html",
+        "en/alcance.html",
+        "en/estructura.html",
+        "en/esqueleto.html",
+        "en/superficie.html",
+        "en/estructura-tarea-1.html",
+        "en/estructura-tarea-2.html",
+        "en/superficie-usuario-1.html",
+        "en/superficie-usuario-2.html",
+        "en/superficie-usuario-3.html",
+        "en/superficie-guion.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "styles.css",
+          "sha256": "08d7bec17e65163859603e41b3bb4b6fbcfabeeda4e376036f666912ff9575f2"
+        },
+        {
+          "path": "index.html",
+          "sha256": "231ba80b6e5c8603a46b38ee3120383cc70624acc6081b14332a62f174c33a01"
+        },
+        {
+          "path": "5-elementos.html",
+          "sha256": "361a7487d3b2c0fb58cb06a9062a7a48bee104d02a7e140e59ae38a4d368ccd4"
+        },
+        {
+          "path": "estrategia.html",
+          "sha256": "68274397781158f30f1025ba1cefce5307a1451a556f675835b562e317e31658"
+        },
+        {
+          "path": "alcance.html",
+          "sha256": "aadd8e2731ec5a8cc8f9d97f38bb1915356d2d1c120074524eb3a19d94457f6b"
+        },
+        {
+          "path": "estructura.html",
+          "sha256": "2d86bfdc8f57cd4cd3307ee958ac2560be958e93e85329c336c1ee333e093682"
+        },
+        {
+          "path": "esqueleto.html",
+          "sha256": "8bb731517860814877ed5e8432d5297e5e2b4dd4737b9c3e956488cbe3d7c2f2"
+        },
+        {
+          "path": "superficie.html",
+          "sha256": "912d9ba17bb190130e8d3495ec2025d11f6ae998fa5ecd3148ea2f79ded88053"
+        },
+        {
           "path": "en/index.html",
-          "sha256": "fbfd2abfb44c026e80d5c83f58c48da13bc22f8d61d037b1b231683b1f726218"
+          "sha256": "7c3f61600b4140ba1f53173331a430fa4c98d91784829ce47115abf6af770d8a"
         },
         {
           "path": "en/5-elementos.html",
-          "sha256": "cb233c40d0e69b79f69be98a999b7b1d502d0dbb91d12c020ced7b191e57a9bc"
+          "sha256": "4b33fe72cbec3f03ea1c78c9788c9951d334fa326ed2d55504c651ef491d50e6"
         },
         {
           "path": "en/estrategia.html",
-          "sha256": "0a9b8268118b4a49638d45bfe9e0bf8a1dabc38e2b636095d062c0a2cb6fc293"
+          "sha256": "aa174dcb58f31182e465e9a51611e919ff8f2d256a757764dc9db8ed4da49f95"
         },
         {
           "path": "en/alcance.html",
-          "sha256": "abe3666c6196f64be736b8faddba2b34041923e79873b3b982edbf17b9ab77f7"
+          "sha256": "bd25a6fb8a616a4f27ea9d0689007b1773e8f0aa8ef9267366e05d3aa602178e"
         },
         {
           "path": "en/estructura.html",
-          "sha256": "16c3d5f8a7da3bbdb66a68aad7c5e5578947b9e8183a2c34c205759d62038893"
+          "sha256": "06cba8805646dfc03192d590a4161d45359723767f613833eb4c3fd2c74e1219"
+        },
+        {
+          "path": "en/esqueleto.html",
+          "sha256": "5946c699a2c8629fb28f828387a357e4f66668b3a4c0fc052eec5bfdce7b1b97"
+        },
+        {
+          "path": "en/superficie.html",
+          "sha256": "c9e958941e69ed1396c608317ad7f4652b98c82e31647d1f0015c99b85988f38"
         },
         {
           "path": "en/estructura-tarea-1.html",
@@ -2324,44 +2377,40 @@
           "sha256": "e71be519689603bfdc03b6fb9fd1b2c3760dcf851cbe735c1148111628d7c9f0"
         },
         {
-          "path": "en/esqueleto.html",
-          "sha256": "e31375c22deda9048ff16f74ddb523861c05d0dae60053b1d88481562c22df32"
+          "path": "en/superficie-usuario-1.html",
+          "sha256": "afe69156896de4a8ccc9a34fcf2cdd2f03f2fed5953611b97fd76ca546bddc74"
         },
         {
-          "path": "en/superficie.html",
-          "sha256": "4aa073f255759f9a0cad3529d7c343fb0b9fd64cc7ab11b5e27b7da75adccae5"
+          "path": "en/superficie-usuario-2.html",
+          "sha256": "8a6ad1b940bf53424eb5a4d0d3b783aca0ac66752431b13813b119a341201abf"
         },
         {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "0bdc3cecd3b71999dc7c4a3c12e7b43b29ca3648fa5ed0b4aa2c1bec01c0c636"
+          "path": "en/superficie-usuario-3.html",
+          "sha256": "ff1c302a52e2095ada887ec056dc0cd9be55853b88744b4e0cf2a322e137b1c8"
+        },
+        {
+          "path": "en/superficie-guion.html",
+          "sha256": "0abbba3ee78645b48c1b0f3112bb68d0430e09c5c61df5a2161de1e799dc3440"
         },
         {
           "path": "docs/tech/sistema.md",
-          "sha256": "f349b2a47751e7257dca13865b8321051a13b3b53ceaa128017133f495379260"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "895a04e99e500e0354f9358069caa580d029a1f8920f48312b180e72e3500653"
+          "sha256": "3b589270b0a537dac9ab37a23d9d70cf163d191db530c5b93d2af3ca3ebcd9a0"
         },
         {
           "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "bbcb8b36e14e2a2e7cfb4e09e234ed013080685b3016d01b792fff6dbf58a23c"
-        },
-        {
-          "path": "specs/0027-idioma-en/spec.md",
-          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
+          "sha256": "25bdb3d8f0aadb5cc75bfcafa3d891bdd7a0467d7c282af3e7e26e2dcea1c478"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: 8 páginas × 10 anchos (320-1920) sin cruces ni scroll ni desbordes; gap switch-botón 32 px, topbar 112 px; rutas locales OK; menú de usuarios y volver llevan a EN; control automático sin restos en español en las 13 páginas EN.",
+      "evidenceNote": "Detectado al verificar el sitio publicado (404 de card-*.png en /assets/ desde páginas EN). Implementado por el coordinador. Verificado con servidor local bajo subcarpeta: 70 cards OK en 14 páginas ES/EN; sin recursos fuera de la subcarpeta salvo favicon.ico (inexistente, pendiente conocido).",
       "reviews": [
         {
           "kind": "human",
           "reviewer": "usuario (team lead)",
-          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 5 del inglés y cierre)",
+          "reference": "Respuesta del usuario en chat 2026-11-24: Lo apruebo (fix imágenes de cards en Pages)",
           "verdict": "approved",
           "evidence": {
-            "path": ".cardenal/revision-0027-parte-5.md",
-            "sha256": "4883a15691e5e3de2738ec6d8d0773571a2bfcacbb139e3cca097a1e00ea59f7"
+            "path": ".cardenal/revision-fix-cards-pages.md",
+            "sha256": "a14732ace092e65a93c703d3e517e95b79de7e325b6fc2c272e17e5d4499921d"
           }
         }
       ]

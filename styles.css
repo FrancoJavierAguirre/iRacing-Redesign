@@ -610,6 +610,13 @@ a { color: inherit; text-decoration: none; }
   opacity: 0;
   transition: opacity 0.25s ease;
 }
+/* imágenes de cada capa: declaradas aquí (y no en style="") para que la ruta se resuelva
+   desde styles.css en todas las páginas, también en /en/ y bajo una subcarpeta (GitHub Pages) */
+.proceso-card[data-card="estrategia"] { --img: url(assets/card-estrategia.png); }
+.proceso-card[data-card="alcance"]    { --img: url(assets/card-alcance.png); }
+.proceso-card[data-card="estructura"] { --img: url(assets/card-estructura.png); }
+.proceso-card[data-card="esqueleto"]  { --img: url(assets/card-esqueleto.png); }
+.proceso-card[data-card="superficie"] { --img: url(assets/card-superficie.png); }
 /* color de la card: 000000 al 60% */
 .proceso-card::after {
   content: "";

@@ -43,3 +43,8 @@
 
 ## Cierre
 - [x] Feature cerrada el 2026-11-23: partes 1-5 aprobadas; ficha archivada en `specs/0027-idioma-en/context.json`.
+
+## Addendum 2026-11-24 — fix: imágenes de las cards en /en/ con el sitio publicado
+- [x] T017 [front] Las cards de capas usan `data-card` y `styles.css` declara sus imágenes (antes `style="--img:url(…)"`, que en `/en/` resolvía a `/assets/…` fuera de `/iRacing-Redesign/` en GitHub Pages). Páginas EN regeneradas.
+  - **Revisión del asistente:** en el sitio publicado, 26 páginas y 382 recursos OK salvo las imágenes de las cards en EN (404 en `francojavieraguirre.github.io/assets/…`). Tras el fix, con un servidor local bajo `/iRacing-Redesign/`: las 70 cards de las 14 páginas ES/EN cargan su imagen desde `/iRacing-Redesign/assets/`; ningún recurso se pide fuera de la subcarpeta (solo `favicon.ico`, que el sitio no tiene).
+- [ ] [HUMANO] QA en el sitio publicado tras subir el commit: pasar el mouse por las cards de capas en una página EN.
