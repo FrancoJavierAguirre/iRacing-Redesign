@@ -26,7 +26,7 @@ No hay cuentas, login, formularios ni datos de usuario.
 ## Idioma: español e inglés (spec 0027, en curso)
 
 El sitio está en español. Todas las páginas tienen su versión en inglés en `en/`.
-- **Switch ES/EN:** arriba a la derecha de la barra superior (a la izquierda del botón azul, si hay). En el Home, arriba a la izquierda del hero, debajo de «Franco Aguirre - 2025». La opción del idioma actual se ve resaltada, con una sombra hacia la otra opción.
+- **Switch ES/EN:** arriba a la derecha de la barra superior (a la izquierda del botón azul, si hay). La opción del idioma actual se ve resaltada, con una sombra hacia la otra opción. En el Home va arriba a la izquierda del hero, en lugar de «Franco Aguirre - 2025», con otro diseño: borde azul y texto blanco; el idioma actual en un bloque azul y la otra opción sin fondo.
 - Al elegir un idioma, el sitio lo recuerda: si después se abre una página en el otro idioma, lleva a la versión elegida (si existe) y conserva la sección.
 - Las imágenes con texto quedan en español. Desde las páginas en inglés, los enlaces a páginas todavía no traducidas llevan a la versión en español.
 - En celular, la barra superior de las páginas interiores va en dos renglones: breadcrumb y switch arriba, título debajo.

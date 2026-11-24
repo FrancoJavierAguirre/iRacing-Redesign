@@ -48,3 +48,8 @@
 - [x] T017 [front] Las cards de capas usan `data-card` y `styles.css` declara sus imágenes (antes `style="--img:url(…)"`, que en `/en/` resolvía a `/assets/…` fuera de `/iRacing-Redesign/` en GitHub Pages). Páginas EN regeneradas.
   - **Revisión del asistente:** en el sitio publicado, 26 páginas y 382 recursos OK salvo las imágenes de las cards en EN (404 en `francojavieraguirre.github.io/assets/…`). Tras el fix, con un servidor local bajo `/iRacing-Redesign/`: las 70 cards de las 14 páginas ES/EN cargan su imagen desde `/iRacing-Redesign/assets/`; ningún recurso se pide fuera de la subcarpeta (solo `favicon.ico`, que el sitio no tiene).
 - [ ] [HUMANO] QA en el sitio publicado tras subir el commit: pasar el mouse por las cards de capas en una página EN.
+
+## Addendum 2026-11-24 — ajuste: switch del Home con diseño propio
+- [x] T018 [front] En el Home el switch reemplaza a «Franco Aguirre - 2025» y usa la variante `.lang-switch--hero` (borde y opción elegida #0159CF, texto blanco en ambas, la otra opción sin fondo; corregido por el usuario), según la referencia del usuario. EN regenerado (el generador conserva la clase del `nav`).
+  - **Revisión del asistente:** en local, ES y EN: 114 × 48, opción elegida con fondo rgb(1,89,207), la otra sin fondo, texto blanco en ambas; a 375 px sin scroll horizontal.
+- [ ] [HUMANO] QA: revisar el switch del Home en ES y EN (aspecto, hover y cambio de idioma).

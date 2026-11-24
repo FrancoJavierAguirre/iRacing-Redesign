@@ -1903,15 +1903,11 @@
           "sha256": "588fd079a6db411bc6f49d353373c556ab9454931753550a40094c2ad2b1972b"
         },
         {
-          "path": "specs/0027-idioma-en/spec.md",
-          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
-        },
-        {
           "path": "specs/0027-idioma-en/referencia-switch.png",
           "sha256": "e93d1eb79af7cb8cd8eb5eead94eab671b5f4ad78dffe744976b2700e4402378"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN; no versionado); sin subagente. Revisión del asistente en servidor local: switch 96 × 48 (opciones 48 × 48), radio 8, Inter 600 16 #0159CF, seleccionado rgba(1,89,207,.15) con aria-current; en el Home alineado con «Franco Aguirre - 2025» a 80 px del borde; en 5 Elementos a 80 px del borde y centrado en la barra. Click en EN lleva a en/index.html y guarda «en»; abrir 5-elementos.html#alcance redirige a en/5-elementos.html#alcance; ES vuelve y guarda «es»; con «es» guardado en/index.html redirige a index.html. Sin imágenes rotas ni restos en español; rutas ../ correctas. Sin cruces ni scroll en 9 anchos (320-1920) para Home, 5 Elementos (ES y EN) y 4 páginas que comparten la topbar; a 320 px «Try the prototype» desbordaba y pasó a «Try prototype». Estrategia a 320 px desborda por contenido previo (anotado). Consola sin errores. Captura del Home EN. Corrección de QA del usuario: opciones 56 × 48 con el texto centrado (desvío 0 px), radios 8 0 0 8 / 0 8 8 0, sombra de la seleccionada 4px 0 8px (ES) / -4px 0 8px (EN); medido en index, en/index, 5-elementos y en/5-elementos. Home: switch 24 px debajo de «Franco Aguirre - 2025», alineado a la izquierda con la etiqueta (80 px); no pisa el logo del hero en 8 tamaños de pantalla (mínimo 22 px a 320 × 568); sin scroll horizontal. Evidencia rotada en 0027 parte 2; la versión aprobada está en su commit. Evidencia rotada por la barra superior de 112 px (2026-11-23). Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN; no versionado); sin subagente. Revisión del asistente en servidor local: switch 96 × 48 (opciones 48 × 48), radio 8, Inter 600 16 #0159CF, seleccionado rgba(1,89,207,.15) con aria-current; en el Home alineado con «Franco Aguirre - 2025» a 80 px del borde; en 5 Elementos a 80 px del borde y centrado en la barra. Click en EN lleva a en/index.html y guarda «en»; abrir 5-elementos.html#alcance redirige a en/5-elementos.html#alcance; ES vuelve y guarda «es»; con «es» guardado en/index.html redirige a index.html. Sin imágenes rotas ni restos en español; rutas ../ correctas. Sin cruces ni scroll en 9 anchos (320-1920) para Home, 5 Elementos (ES y EN) y 4 páginas que comparten la topbar; a 320 px «Try the prototype» desbordaba y pasó a «Try prototype». Estrategia a 320 px desborda por contenido previo (anotado). Consola sin errores. Captura del Home EN. Corrección de QA del usuario: opciones 56 × 48 con el texto centrado (desvío 0 px), radios 8 0 0 8 / 0 8 8 0, sombra de la seleccionada 4px 0 8px (ES) / -4px 0 8px (EN); medido en index, en/index, 5-elementos y en/5-elementos. Home: switch 24 px debajo de «Franco Aguirre - 2025», alineado a la izquierda con la etiqueta (80 px); no pisa el logo del hero en 8 tamaños de pantalla (mínimo 22 px a 320 × 568); sin scroll horizontal. Evidencia rotada en 0027 parte 2; la versión aprobada está en su commit. Evidencia rotada por la barra superior de 112 px (2026-11-23). Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit. Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -1948,13 +1944,9 @@
         {
           "path": "alcance.css",
           "sha256": "761b7e80dc69dff984074ea9c72e68a4427e62a23a9e82b4ef83ed9369936f0e"
-        },
-        {
-          "path": "specs/0027-idioma-en/spec.md",
-          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN y pares compartidos opcionales); sin subagente. Revisión del asistente en servidor local: switch a 32 px del botón azul y ambos centrados en la barra (ES y EN); menú de capas, título y botón traducidos con enlaces correctos (EN entre páginas traducidas, ../ a las demás); videos e imágenes con rutas ../ sin roturas; control automático sin restos en español; 12 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón; Alcance EN desbordaba 4 px entre 700 y 761 px («Very feasible») y se corrigió con la etiqueta en dos renglones ≤ 900 px; Estrategia a 320 px desborda por contenido previo (también en ES). Captura de la barra de en/estrategia.html. Evidencia rotada por la barra superior de 112 px (2026-11-23). Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN y pares compartidos opcionales); sin subagente. Revisión del asistente en servidor local: switch a 32 px del botón azul y ambos centrados en la barra (ES y EN); menú de capas, título y botón traducidos con enlaces correctos (EN entre páginas traducidas, ../ a las demás); videos e imágenes con rutas ../ sin roturas; control automático sin restos en español; 12 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón; Alcance EN desbordaba 4 px entre 700 y 761 px («Very feasible») y se corrigió con la etiqueta en dos renglones ≤ 900 px; Estrategia a 320 px desborda por contenido previo (también en ES). Captura de la barra de en/estrategia.html. Evidencia rotada por la barra superior de 112 px (2026-11-23). Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit. Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2054,13 +2046,9 @@
         {
           "path": "estructura.js",
           "sha256": "c194e3e7cab2bb79c5bd1398ef86bf272553e0f88dc04811c3dccc56dc01f60c"
-        },
-        {
-          "path": "specs/0027-idioma-en/spec.md",
-          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: en/estructura.html con la arquitectura navegable funcionando (capturas desde ../assets/arquitectura-actual/, alt «Screenshot of the original iRacing UI: Leagues section», menú «iRacing store menu»), ayudas (tooltip en inglés), switch Before/After y enlaces «View more details» a las tareas EN; la versión ES sigue cargando assets/… con alt en español; 6 páginas × 11 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón y sin scroll; control automático sin restos en español en las 7 páginas EN. Evidencia rotada por el fix del switch en Estructura (T39); la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: en/estructura.html con la arquitectura navegable funcionando (capturas desde ../assets/arquitectura-actual/, alt «Screenshot of the original iRacing UI: Leagues section», menú «iRacing store menu»), ayudas (tooltip en inglés), switch Before/After y enlaces «View more details» a las tareas EN; la versión ES sigue cargando assets/… con alt en español; 6 páginas × 11 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón y sin scroll; control automático sin restos en español en las 7 páginas EN. Evidencia rotada por el fix del switch en Estructura (T39); la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit. Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2157,13 +2145,9 @@
         {
           "path": "en/estructura-tarea-2.html",
           "sha256": "e71be519689603bfdc03b6fb9fd1b2c3760dcf851cbe735c1148111628d7c9f0"
-        },
-        {
-          "path": "specs/0027-idioma-en/spec.md",
-          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: esqueleto/superficie ES y EN × 10 anchos (320-1920) sin cruces ni scroll ni textos desbordados; gap switch-botón 32 px, topbar 112 px; 253 rutas locales OK; superficie.js anuncia el estilo en el idioma de la página; el switch recuerda la elección; control automático sin restos en español en las 9 páginas EN. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: esqueleto/superficie ES y EN × 10 anchos (320-1920) sin cruces ni scroll ni textos desbordados; gap switch-botón 32 px, topbar 112 px; 253 rutas locales OK; superficie.js anuncia el estilo en el idioma de la página; el switch recuerda la elección; control automático sin restos en español en las 9 páginas EN. Evidencia rotada en 0027 parte 5; la versión aprobada está en su commit. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit. Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2248,19 +2232,11 @@
           "sha256": "e71be519689603bfdc03b6fb9fd1b2c3760dcf851cbe735c1148111628d7c9f0"
         },
         {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "0bdc3cecd3b71999dc7c4a3c12e7b43b29ca3648fa5ed0b4aa2c1bec01c0c636"
-        },
-        {
           "path": "llms.txt",
           "sha256": "895a04e99e500e0354f9358069caa580d029a1f8920f48312b180e72e3500653"
-        },
-        {
-          "path": "specs/0027-idioma-en/spec.md",
-          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: 8 páginas × 10 anchos (320-1920) sin cruces ni scroll ni desbordes; gap switch-botón 32 px, topbar 112 px; rutas locales OK; menú de usuarios y volver llevan a EN; control automático sin restos en español en las 13 páginas EN. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: 8 páginas × 10 anchos (320-1920) sin cruces ni scroll ni desbordes; gap switch-botón 32 px, topbar 112 px; rutas locales OK; menú de usuarios y volver llevan a EN; control automático sin restos en español en las 13 páginas EN. Evidencia rotada por el fix de imágenes de cards (T42); la versión aprobada está en su commit. Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2309,14 +2285,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "styles.css",
-          "sha256": "08d7bec17e65163859603e41b3bb4b6fbcfabeeda4e376036f666912ff9575f2"
-        },
-        {
-          "path": "index.html",
-          "sha256": "231ba80b6e5c8603a46b38ee3120383cc70624acc6081b14332a62f174c33a01"
-        },
-        {
           "path": "5-elementos.html",
           "sha256": "361a7487d3b2c0fb58cb06a9062a7a48bee104d02a7e140e59ae38a4d368ccd4"
         },
@@ -2339,10 +2307,6 @@
         {
           "path": "superficie.html",
           "sha256": "912d9ba17bb190130e8d3495ec2025d11f6ae998fa5ecd3148ea2f79ded88053"
-        },
-        {
-          "path": "en/index.html",
-          "sha256": "7c3f61600b4140ba1f53173331a430fa4c98d91784829ce47115abf6af770d8a"
         },
         {
           "path": "en/5-elementos.html",
@@ -2391,17 +2355,9 @@
         {
           "path": "en/superficie-guion.html",
           "sha256": "0abbba3ee78645b48c1b0f3112bb68d0430e09c5c61df5a2161de1e799dc3440"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "3b589270b0a537dac9ab37a23d9d70cf163d191db530c5b93d2af3ca3ebcd9a0"
-        },
-        {
-          "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "25bdb3d8f0aadb5cc75bfcafa3d891bdd7a0467d7c282af3e7e26e2dcea1c478"
         }
       ],
-      "evidenceNote": "Detectado al verificar el sitio publicado (404 de card-*.png en /assets/ desde páginas EN). Implementado por el coordinador. Verificado con servidor local bajo subcarpeta: 70 cards OK en 14 páginas ES/EN; sin recursos fuera de la subcarpeta salvo favicon.ico (inexistente, pendiente conocido).",
+      "evidenceNote": "Detectado al verificar el sitio publicado (404 de card-*.png en /assets/ desde páginas EN). Implementado por el coordinador. Verificado con servidor local bajo subcarpeta: 70 cards OK en 14 páginas ES/EN; sin recursos fuera de la subcarpeta salvo favicon.ico (inexistente, pendiente conocido). Evidencia rotada por el switch del Home (T43); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2411,6 +2367,70 @@
           "evidence": {
             "path": ".cardenal/revision-fix-cards-pages.md",
             "sha256": "a14732ace092e65a93c703d3e517e95b79de7e325b6fc2c272e17e5d4499921d"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T43",
+      "title": "Ajuste: switch del Home con diseño propio en lugar de «Franco Aguirre - 2025»",
+      "role": "front",
+      "state": "done",
+      "acceptance": "En el Home (ES y EN) el switch reemplaza a «Franco Aguirre - 2025»; borde y opción elegida #0159CF con texto blanco, la otra mitad blanca, según la referencia del usuario.",
+      "dependsOn": [
+        "T42"
+      ],
+      "files": [
+        "index.html",
+        "en/index.html",
+        "en/5-elementos.html",
+        "styles.css"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "index.html",
+          "sha256": "e210cd8f0b49e50c8a36ce38ef05e9e90a73fff44c17ef23bc245c2c16218df2"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "8467fdf3cb9ff1215b40fccd6dae066997ec5d265460411171b6661eddc1d002"
+        },
+        {
+          "path": "en/5-elementos.html",
+          "sha256": "4b33fe72cbec3f03ea1c78c9788c9951d334fa326ed2d55504c651ef491d50e6"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "fc5692b759995a2eb718748c34db6f51995438b32ecc0ebdae871fe66c723df8"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "151f4a86de35ff3653d58d5786cf54b2b654f96af5845ac981bca51b9dc75fc3"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "565f45aae61f1487d42507ed5fd871214e3bf5d15158c46af7b7fbbb6c2ca12e"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "57abaf013ba7197592f702dd82ec460c3b975475f511991ee8713d25cd8c7915"
+        },
+        {
+          "path": "specs/0027-idioma-en/spec.md",
+          "sha256": "5da24b86d2f06506d99360a7b1d892935152fc6a8006bb7243fc1df63c27d66d"
+        }
+      ],
+      "evidenceNote": "Pedido del usuario en chat 2026-11-24 con imagen de referencia. Implementado por el coordinador. Verificado en local: 114 × 48 en ES y EN, colores correctos, sin scroll horizontal a 375 px. en/5-elementos.html se regeneró sin cambios de contenido.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-24: Lo apruebo (switch del Home)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-ajuste-switch-home.md",
+            "sha256": "937c36c89a971a3b1d4e0c50eddae4667a428c1e0b14bbf809ecae7fe7882cc9"
           }
         }
       ]

@@ -127,6 +127,11 @@ a { color: inherit; text-decoration: none; }
 .lang-switch a:last-child[aria-current="true"] { box-shadow: -4px 0 8px rgba(0, 0, 0, 0.35); }
 .lang-switch a:not([aria-current="true"]):hover { background: rgba(1, 89, 207, 0.08); }
 .lang-switch a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+/* Variante del Home: borde #0159CF, texto blanco; la opción elegida rellena #0159CF y la otra sin fondo */
+.lang-switch--hero { border: 1.5px solid #0159cf; border-radius: 8px; overflow: hidden; background: transparent; box-sizing: border-box; }
+.lang-switch--hero a { height: 100%; border-radius: 0 !important; box-shadow: none !important; color: #fff; }
+.lang-switch--hero a[aria-current="true"] { background: #0159cf; }
+.lang-switch--hero a:not([aria-current="true"]):hover { background: rgba(1, 89, 207, 0.25); }
 
 /* ---------- Top label ---------- */
 /* Valores fluidos: px de Figma / 1920 * 100vw, con mínimo para pantallas chicas */
@@ -141,7 +146,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem;
   color: #ffffff;
   letter-spacing: 0.02em;
-  /* el switch de idioma va debajo de «Franco Aguirre - 2025», a 24 px (spec 0027) */
+  /* contiene solo el switch de idioma del Home (reemplazó a «Franco Aguirre - 2025») */
   display: flex;
   flex-direction: column;
   align-items: flex-start;

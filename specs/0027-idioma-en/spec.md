@@ -31,3 +31,6 @@ Entrada: ficha 0027 en `.cardenal/context.json` (archivada en esta carpeta al ce
 - Nombres de las capas en inglés según Garrett: Strategy, Scope, Structure, Skeleton, Surface.
 - En celular (≤ 760 px) la barra superior de las páginas interiores pasa a dos renglones (breadcrumb y switch arriba, título debajo) para que el switch no pise el título.
 - El contraste de #0159CF sobre las barras y el hero oscuros es bajo; se respeta el color pedido.
+
+## Clarificaciones 2026-11-24
+- Home: el switch reemplaza a «Franco Aguirre - 2025» y tiene un diseño propio: borde #0159CF y texto blanco en ambas opciones; la elegida con fondo #0159CF y la otra sin fondo (referencia y corrección del usuario). Las barras superiores conservan el diseño original.
