@@ -693,10 +693,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "superficie.js",
-          "sha256": "2cd590202cbac142445691294eed5fb81140ab2c3810f8596be0eadf3eecce13"
-        },
-        {
           "path": "specs/0014-superficie-botones/spec.md",
           "sha256": "639c1dfeb50d84e00d072d996c5549b36ecc04539720945482e5037fee939482"
         },
@@ -709,7 +705,7 @@
           "sha256": "71d00ee63cf099a5c5634ca002fc9358228844067eaf062f254eba7a3b5d1ecf"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. También se corrigieron en docs/tech/sistema.md las líneas de Imágenes, Layout e Iconografía, que habían quedado con caracteres perdidos por el escape de PowerShell al escribirlas en 0012 y 0013. Evidencia rotada en 0015: archivos modificados por Dropdowns y Cards; la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador sobre superficie.html; no se usó un subagente front. Revisión visual del asistente en servidor local a 1920, 900 y 375 px. También se corrigieron en docs/tech/sistema.md las líneas de Imágenes, Layout e Iconografía, que habían quedado con caracteres perdidos por el escape de PowerShell al escribirlas en 0012 y 0013. Evidencia rotada en 0015: archivos modificados por Dropdowns y Cards; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2033,10 +2029,6 @@
           "sha256": "dfeab4dd2510bcd6f65c9fff2f949ce8e2df7161502dcf1b51c9e74d26dd8fc8"
         },
         {
-          "path": "esqueleto.html",
-          "sha256": "a41c847a833a867773a856b3cc840b11d8468919c4ad4494ac3048acd2a33b8b"
-        },
-        {
           "path": "estrategia.html",
           "sha256": "dbef262331ebbde60f4dda1670c43d3ce3819fd14bd3089ef3e3fb9305ef49b8"
         },
@@ -2055,13 +2047,9 @@
         {
           "path": "superficie-usuario-3.html",
           "sha256": "3943531dba5b6269948d7be30b13f5818967b8eea0faa60af07a90035d970788"
-        },
-        {
-          "path": "superficie.html",
-          "sha256": "a7a164cdf43c0d99e2d4bcbd62b64769ae9eeaaa005a8f59880783b804a6e716"
         }
       ],
-      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html. Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit.",
+      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html. Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2104,43 +2092,11 @@
           "sha256": "c194e3e7cab2bb79c5bd1398ef86bf272553e0f88dc04811c3dccc56dc01f60c"
         },
         {
-          "path": "en/index.html",
-          "sha256": "9bf4a1b99ec5ce2599ee790a9180a6d0f190067dd53e8ed15c659901a6b32349"
-        },
-        {
-          "path": "en/5-elementos.html",
-          "sha256": "7cc2473d15864cb5c2544923dc4dc518915afee2e8930ffc4b53b46d52de592f"
-        },
-        {
-          "path": "en/estrategia.html",
-          "sha256": "4e5a7ed16adfab613442200765efc9aacc06d9bf1efd7b77af02ef7cc15e578d"
-        },
-        {
-          "path": "en/alcance.html",
-          "sha256": "f89eab8ce27611f639f2e72b080e44dbffa5617d31f053c36eeb06ac2c8b011a"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "99b2f1fbc0118ededaa03035792cefd2724e324b5f2d93d06140e7d7e31061f7"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "2aa6650d4d8b72cf5d4a6cb256532d32b2b520c88c763b4c7d88ef5a0ff949cf"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "40a88c20d5fd4dcd04166532a759c518ca806aa0c25d0d40a98f5068de7aacc6"
-        },
-        {
-          "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "f690a8a1cc0261c6f01c8bd8033436e9571d2c009642d6defacb0903fb10fd57"
-        },
-        {
           "path": "specs/0027-idioma-en/spec.md",
           "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: en/estructura.html con la arquitectura navegable funcionando (capturas desde ../assets/arquitectura-actual/, alt «Screenshot of the original iRacing UI: Leagues section», menú «iRacing store menu»), ayudas (tooltip en inglés), switch Before/After y enlaces «View more details» a las tareas EN; la versión ES sigue cargando assets/… con alt en español; 6 páginas × 11 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón y sin scroll; control automático sin restos en español en las 7 páginas EN. Evidencia rotada por el fix del switch en Estructura (T39); la versión aprobada está en su commit.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: en/estructura.html con la arquitectura navegable funcionando (capturas desde ../assets/arquitectura-actual/, alt «Screenshot of the original iRacing UI: Leagues section», menú «iRacing store menu»), ayudas (tooltip en inglés), switch Before/After y enlaces «View more details» a las tareas EN; la versión ES sigue cargando assets/… con alt en español; 6 páginas × 11 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón y sin scroll; control automático sin restos en español en las 7 páginas EN. Evidencia rotada por el fix del switch en Estructura (T39); la versión aprobada está en su commit. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2178,31 +2134,19 @@
           "sha256": "a37e93dbc9cf13a47ad1bf65a8267b24a997af8e970afdde06a961d0b74be104"
         },
         {
-          "path": "en/estructura.html",
-          "sha256": "66d1260df4d381a902aef8f954dcf47aa499e957ba5e08222e78ebeb25c59fb4"
-        },
-        {
           "path": "estructura-tarea-1.html",
           "sha256": "9e187b16f7e5ceffe36de2c8eb0996b6f983b582a1acbdfd6571674353aa68bb"
-        },
-        {
-          "path": "en/estructura-tarea-1.html",
-          "sha256": "46d69208067339ebf8d34cf52d6756ad6bc93df97615ad9f139fed359875510e"
         },
         {
           "path": "estructura-tarea-2.html",
           "sha256": "2fdb7f53eede8b2ccba5541d057873e8576c6f14fc79b7fec3294700ddeb4b9c"
         },
         {
-          "path": "en/estructura-tarea-2.html",
-          "sha256": "2f7c2f100855977aaaab31ee973fd1c19227f184b113e78b0e243e050b5e6b15"
-        },
-        {
           "path": ".cardenal/revision-fix-switch-estructura.md",
           "sha256": "f7f499bcd5a554a759ce4315bf835e6ac5aff32a8d019f3ac9d41f76642e2c28"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador. Medido en servidor local: 6 páginas + Alcance × 9 anchos (320-1920) sin superposición ni scroll; gap 32 px.",
+      "evidenceNote": "Implementado por el coordinador. Medido en servidor local: 6 páginas + Alcance × 9 anchos (320-1920) sin superposición ni scroll; gap 32 px. Evidencia rotada en 0027 parte 4; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2212,6 +2156,115 @@
           "evidence": {
             "path": ".cardenal/revision-fix-switch-estructura.md",
             "sha256": "f7f499bcd5a554a759ce4315bf835e6ac5aff32a8d019f3ac9d41f76642e2c28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T40",
+      "title": "Inglés, parte 4: Esqueleto y Superficie",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Parte 4 de specs/0027-idioma-en/spec.md (T011-T014 de tasks.md) y criterios de change.acceptance (0027).",
+      "dependsOn": [
+        "T38",
+        "T39"
+      ],
+      "files": [
+        "esqueleto.html",
+        "superficie.html",
+        "superficie.js",
+        "en/esqueleto.html",
+        "en/superficie.html",
+        "en/index.html",
+        "en/5-elementos.html",
+        "en/estrategia.html",
+        "en/alcance.html",
+        "en/estructura.html",
+        "en/estructura-tarea-1.html",
+        "en/estructura-tarea-2.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "esqueleto.html",
+          "sha256": "98dc2f128d36462a7c1012341fac53ca95919fb556c34ace2ceae7ba2d6a0904"
+        },
+        {
+          "path": "superficie.html",
+          "sha256": "c9fb5c92e561c75fc16796ff01a887baabe691ef1da81097f5ec97fbb8f6f7ef"
+        },
+        {
+          "path": "superficie.js",
+          "sha256": "5b2db46037212c9de2a52158a267627666e2e69851a498fb5f85d2a5e989f0de"
+        },
+        {
+          "path": "en/esqueleto.html",
+          "sha256": "e31375c22deda9048ff16f74ddb523861c05d0dae60053b1d88481562c22df32"
+        },
+        {
+          "path": "en/superficie.html",
+          "sha256": "f4d53a48e537523b756d89b1ba6ade2750a8d9f97170e54a9e23cfd0b527d5de"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "fbfd2abfb44c026e80d5c83f58c48da13bc22f8d61d037b1b231683b1f726218"
+        },
+        {
+          "path": "en/5-elementos.html",
+          "sha256": "cb233c40d0e69b79f69be98a999b7b1d502d0dbb91d12c020ced7b191e57a9bc"
+        },
+        {
+          "path": "en/estrategia.html",
+          "sha256": "0a9b8268118b4a49638d45bfe9e0bf8a1dabc38e2b636095d062c0a2cb6fc293"
+        },
+        {
+          "path": "en/alcance.html",
+          "sha256": "abe3666c6196f64be736b8faddba2b34041923e79873b3b982edbf17b9ab77f7"
+        },
+        {
+          "path": "en/estructura.html",
+          "sha256": "16c3d5f8a7da3bbdb66a68aad7c5e5578947b9e8183a2c34c205759d62038893"
+        },
+        {
+          "path": "en/estructura-tarea-1.html",
+          "sha256": "c4917aacbc31b473f7fa6305405cef29fae0a75df3e6c8d7cb9ffedd65eb691b"
+        },
+        {
+          "path": "en/estructura-tarea-2.html",
+          "sha256": "e71be519689603bfdc03b6fb9fd1b2c3760dcf851cbe735c1148111628d7c9f0"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "6fcedaaee44eae271c0516ef875c9c602c48a911a408841e50aef01127de5be9"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "2f42f4d6eeb9fe6a55b15c6ce60dc3dfbb211885d50edc40a0e341bf4eb1850c"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "dc374ce1679f937bba8e8c771c6d5c2860083f6f02e8b46975c91125bccfb5fe"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "a4c5a53db3abd103e40a0e807a9fee66f11d9e986a357ff9e81b84dacb642e52"
+        },
+        {
+          "path": "specs/0027-idioma-en/spec.md",
+          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: esqueleto/superficie ES y EN × 10 anchos (320-1920) sin cruces ni scroll ni textos desbordados; gap switch-botón 32 px, topbar 112 px; 253 rutas locales OK; superficie.js anuncia el estilo en el idioma de la página; el switch recuerda la elección; control automático sin restos en español en las 9 páginas EN.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 4 del inglés)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0027-parte-4.md",
+            "sha256": "688ee37083adfd9e0629a0fd8db59dcf3c5a8cd2e3f1efec74cbb799a8fd00da"
           }
         }
       ]

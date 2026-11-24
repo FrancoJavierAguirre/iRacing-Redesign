@@ -11,7 +11,7 @@
 
 ```
 index.html          Home del case study (único que carga script.js)
-en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy index, 5-elementos, estrategia, alcance, estructura y estructura-tarea-1/2
+en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy index, 5-elementos, estrategia, alcance, estructura, estructura-tarea-1/2, esqueleto y superficie
 lang.js             Recuerda el idioma elegido y redirige a la página equivalente (spec 0027)
 5-elementos.html    Explicación del modelo de 5 capas
 estrategia.html     Capa 1: Estrategia
@@ -64,6 +64,7 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 - **Altura de la topbar** (2026-11-23): 112 px @1920 (`clamp(56px, 5.8333vw, 112px)`); los `scroll-margin-top` de las secciones (Estrategia, Estructura, 5 Elementos) usan el mismo valor. El botón azul `.topbar-action` es `btn--md` (48 px, padding 14/16, radio 8, Inter 600 16, ícono 20, gap 8), igual que los «Ir a».
 - **Topbar en ≤ 760 px** (`elementos.css`, todas las páginas `page-elementos`): grid de dos renglones `"crumb tools" / "title title"`.
 - **`estructura.js`:** la carpeta de las capturas de la arquitectura navegable se toma de la imagen inicial (`../assets/…` en EN) y el texto alternativo se arma según `<html lang>` («Screenshot of the original iRacing UI: X section»).
+- **`superficie.js`:** el mensaje para lectores de pantalla del botón «Cambiar estilo» sale en el idioma de `<html lang>` («Style: secondary» en EN, «Estilo secundario» en ES).
 - **Alcance:** en ≤ 900 px `.eje-label--fin` puede partirse en dos renglones (`width: min-content`): «Very feasible» desbordaba entre 700 y 760 px.
 
 ## Comportamiento (`script.js`)

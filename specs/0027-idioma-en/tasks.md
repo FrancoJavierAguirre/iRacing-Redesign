@@ -25,5 +25,14 @@
 - [x] Commit tras la aprobación del usuario.
 - [x] **Check final humano (Parte 3)** (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-0027-parte-3.md`): revisar las traducciones de Estructura y de las tareas.
 
-## Partes 4 y 5
-Pendientes; se agregan al empezar cada una.
+## Parte 4 — Esqueleto y Superficie
+- [x] T011 [front] Switch y hreflang en `esqueleto.html` y `superficie.html`.
+- [x] T012 [front] `en/esqueleto.html` y `en/superficie.html` traducidas (incluye `data-col` de las tablas, alt, aria-label y textos para lectores de pantalla); enlaces de las páginas EN anteriores a estas pasan a la versión EN. Las páginas de usuarios y el guion siguen enlazando a la versión ES hasta la Parte 5.
+- [x] T013 [front] `superficie.js`: el anuncio del estilo del botón sale en el idioma de la página.
+- [x] T014 [front] Generador: reconoce el botón de la topbar en `btn--md` (antes solo `btn--sm`; ver fix T39).
+  - **Revisión del asistente** (servidor local): 4 páginas × 10 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón, sin scroll y sin textos desbordados; switch a 32 px del botón y topbar de 112 px; 253 rutas locales de las dos páginas EN responden; «Change style» anuncia «Style: secondary» en EN y «Estilo secundario» en ES; el switch recuerda la elección y redirige; sin restos en español (solo nombres propios).
+- [x] Commit tras la aprobación del usuario.
+- [x] **Check final humano (Parte 4)** (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-0027-parte-4.md`): revisar las traducciones de Esqueleto y Superficie.
+
+## Parte 5
+Pendiente: cuestionarios de los usuarios 1-3 y guion de las pruebas.

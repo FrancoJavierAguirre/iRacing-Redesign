@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surface — iRacing Redesign</title>
+<meta name="description" content="Surface of the iRacing redesign: UX writing, design system, components, usability testing, iterations and the interactive prototypes.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Surface — iRacing Redesign">
+<meta property="og:description" content="Surface of the iRacing redesign: UX writing, design system, components, usability testing, iterations and the interactive prototypes.">
+<meta property="og:site_name" content="iRacing — UX/UI Redesign · Franco Aguirre">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Surface — iRacing Redesign">
+<meta name="twitter:description" content="Surface of the iRacing redesign: UX writing, design system, components, usability testing, iterations and the interactive prototypes.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Surface — iRacing Redesign",
+  "description": "Surface of the iRacing redesign: UX writing, design system, components, usability testing, iterations and the interactive prototypes.",
+  "inLanguage": "en",
+  "dateCreated": "2025",
+  "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "UX/UI Designer" },
+  "about": [ { "@type": "Thing", "name": "iRacing" }, { "@type": "Thing", "name": "UX/UI Design" } ],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "iRacing — UX/UI Redesign",
+    "author": { "@type": "Person", "name": "Franco Aguirre", "jobTitle": "UX/UI Designer" }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "UX/UI Redesign", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Surface" }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../elementos.css">
+<link rel="stylesheet" href="../superficie.css">
+<link rel="alternate" hreflang="es" href="../superficie.html">
+<link rel="alternate" hreflang="en" href="superficie.html">
+<link rel="alternate" hreflang="x-default" href="../superficie.html">
+<script src="../lang.js"></script>
+</head>
+<body class="page-elementos page-superficie">
+
+<header class="topbar">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3m0 0 4-4M3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="crumb-parent">UX/UI Redesign</span></a>
+    <svg class="sep" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="topbar-capas breadcrumb-capas" data-capas>
+      <button type="button" class="capas-trigger current" aria-current="page" aria-expanded="false" aria-controls="capas-menu" data-capas-trigger>
+        <span>Surface</span>
+        <img class="capas-chevron capas-chevron--down" src="../assets/ico-chevron-down.svg" alt="" width="12" height="12">
+        <img class="capas-chevron capas-chevron--up" src="../assets/ico-chevron-up.svg" alt="" width="12" height="12">
+      </button>
+      <div class="capas-menu" id="capas-menu" role="group" aria-label="UX process layers" data-capas-menu hidden>
+        <ul>
+          <li><a class="capas-item" href="estrategia.html"><img src="../assets/icon-estrategia.svg" alt="" width="16" height="16"><span>Strategy</span></a></li>
+          <li><a class="capas-item" href="alcance.html"><img src="../assets/icon-alcance.svg" alt="" width="16" height="16"><span>Scope</span></a></li>
+          <li><a class="capas-item" href="estructura.html"><img src="../assets/icon-estructura.svg" alt="" width="16" height="16"><span>Structure</span></a></li>
+          <li><a class="capas-item" href="esqueleto.html"><img src="../assets/icon-esqueleto.svg" alt="" width="16" height="16"><span>Skeleton</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1 class="topbar-title">Surface</h1>
+  <div class="topbar-tools">
+    <nav class="lang-switch" aria-label="Language"><a href="../superficie.html" lang="es" hreflang="es" data-lang="es" aria-label="Español (ES)">ES</a><a href="superficie.html" lang="en" hreflang="en" data-lang="en" aria-label="English (EN)" aria-current="true">EN</a></nav>
+    <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&amp;viewport=-144%2C-445%2C0.3&amp;t=RPpY4J93c7m8Cpl7-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=8618%3A232773&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn--md btn-blue topbar-action"><img class="btn-icon" src="../assets/ico-play.svg" alt="">View Prototype<span class="sr-only"> (opens in a new tab)</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="ux-hero" id="ux-writing" aria-labelledby="ux-writing-titulo">
+    <div class="container">
+      <h2 class="ux-hero-title" id="ux-writing-titulo">UX Writing</h2>
+      <a href="#sistema-de-diseno" class="btn btn--md btn-ghost-info ux-hero-skip">Skip to Design System</a>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="circulo-de-oro" aria-labelledby="circulo-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="circulo-titulo">Golden Circle</h2><p class="sec-sub">Brand identity</p></div>
+        <div class="sec-nav"><a href="#matriz-de-voz" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Voice Matrix</a></div>
+      </div>
+
+      <div class="oro-row">
+        <div class="oro" data-activo="porque" aria-hidden="true">
+          <span class="oro-ring oro-ring--que"><span class="oro-lbl">What?</span></span>
+          <span class="oro-ring oro-ring--como"><span class="oro-lbl">How?</span></span>
+          <span class="oro-ring oro-ring--porque"><span class="oro-lbl">Why?</span></span>
+        </div>
+        <div class="oro-text">
+          <h3>Why?</h3>
+          <p>We inspire people to experience the thrill and the demands of competitive motorsport, whatever their level or location, because we believe the passion for racing should be accessible to everyone.</p>
+          <p>iRacing exists to democratize access to real racing through the power of simulation. Its purpose is to <span class="hl">recreate the motorsport experience</span> with such fidelity and professionalism that amateurs and professionals alike can compete, grow and connect in a fair, challenging and global environment.</p>
+        </div>
+      </div>
+
+      <div class="oro-row oro-row--rev">
+        <div class="oro" data-activo="como" aria-hidden="true">
+          <span class="oro-ring oro-ring--que"><span class="oro-lbl">What?</span></span>
+          <span class="oro-ring oro-ring--como"><span class="oro-lbl">How?</span></span>
+          <span class="oro-ring oro-ring--porque"><span class="oro-lbl">Why?</span></span>
+        </div>
+        <div class="oro-text">
+          <h3>How?</h3>
+          <p>We recreate motorsport with extreme precision through advanced simulation technology, real sporting rules, an organized global community and a team with experience in professional motorsport.</p>
+          <p>We organize and run official series in real time using a <span class="hl">license system</span> and <span class="hl">matchmaking</span> based on skill and safety. We also use real track and telemetry data to replicate how the cars behave.</p>
+        </div>
+      </div>
+
+      <div class="oro-row">
+        <div class="oro" data-activo="que" aria-hidden="true">
+          <span class="oro-ring oro-ring--que"><span class="oro-lbl">What?</span></span>
+          <span class="oro-ring oro-ring--como"><span class="oro-lbl">How?</span></span>
+          <span class="oro-ring oro-ring--porque"><span class="oro-lbl">Why?</span></span>
+        </div>
+        <div class="oro-text">
+          <h3>What?</h3>
+          <p>We offer an online <span class="hl">racing simulation</span> platform where you can compete in more than 80 official series and thousands of private leagues, with cars, circuits and physics that replicate real motorsport.</p>
+          <p>We provide a complete platform of official series, private leagues and custom events, accessible with a PC, an internet connection and a compatible controller.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="matriz-de-voz" aria-labelledby="voz-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="voz-titulo">Voice Matrix</h2><p class="sec-sub">Defining the personality</p></div>
+        <div class="sec-nav"><a href="#circulo-de-oro" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Golden Circle</a><a href="#matriz-de-tono" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Tone Matrix</a></div>
+      </div>
+      <table class="mtx mtx--voz">
+        <thead>
+          <tr><td></td><th scope="col"><span class="mtx-card">Authenticity</span></th><th scope="col"><span class="mtx-card">Clarity</span></th><th scope="col"><span class="mtx-card">Concise</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><span class="mtx-card">Concept</span></th><td data-col="Authenticity">Service and products true to reality.</td><td data-col="Clarity">The user understands every detail of the service and product.</td><td data-col="Concise">The message must be short, given the large amount of information available.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Verbosity</span></th><td data-col="Authenticity">The more the better when it comes to circuits and cars.</td><td data-col="Clarity">The right sentences.</td><td data-col="Concise">Just the right words.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Vocabulary</span></th><td data-col="Authenticity">Casual and eloquent.</td><td data-col="Clarity">Simple and empathetic.</td><td data-col="Concise">Informative and serious.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Grammar</span></th><td data-col="Authenticity">Technical, with motorsport jargon.</td><td data-col="Clarity">Simple words.</td><td data-col="Concise">Short words.</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Punctuation</span></th><td data-col="Authenticity">All punctuation marks are used.</td><td data-col="Clarity">All except “?”</td><td data-col="Concise">All except “?”</td></tr>
+          <tr><th scope="row"><span class="mtx-card">Capitalization</span></th><td data-col="Authenticity">Used at the start of sentences and for proper names.</td><td colspan="2" data-col="Clarity and Concise">Used at the start of sentences, for proper names and for important terms.<br>Used to highlight times and the AM/PM format</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="matriz-de-tono" aria-labelledby="tono-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="tono-titulo">Tone Matrix</h2><p class="sec-sub">How we talk to the driver</p></div>
+        <div class="sec-nav"><a href="#matriz-de-voz" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Voice Matrix</a><a href="#guia-de-estilo" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Style Guide</a></div>
+      </div>
+      <div class="tono">
+        <p class="tono-eje tono-eje--arriba">Casual / Direct</p>
+        <div class="tono-stage">
+          <img class="tono-vectores" src="../assets/matriz-tono.svg" alt="" width="1666" height="640">
+          <p class="tono-eje tono-eje--x">User journey</p>
+          <ol class="tono-pasos" aria-label="Tone at each step of the user journey">
+            <li class="tono-paso" style="--x:11.82%;--y:66.41%"><img src="../assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Log in</span><span class="tono-nivel">Informative / Serious</span></li>
+            <li class="tono-paso" style="--x:17.59%;--y:21.09%"><img src="../assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Race list</span><span class="tono-nivel">Casual / Direct</span></li>
+            <li class="tono-paso" style="--x:47.24%;--y:21.09%"><img src="../assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Race details</span><span class="tono-nivel">Casual / Direct</span></li>
+            <li class="tono-paso" style="--x:58.88%;--y:66.41%"><img src="../assets/ico-circulo-check.svg" alt="" width="40" height="40"><span>Shopping cart</span><span class="tono-nivel">Informative / Serious</span></li>
+          </ol>
+        </div>
+        <p class="tono-eje tono-eje--abajo">Informative / Serious</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="guia-de-estilo" aria-labelledby="guia-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="guia-titulo">Style Guide</h2><p class="sec-sub">How we talk to the driver</p></div>
+        <div class="sec-nav"><a href="#matriz-de-tono" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Tone Matrix</a><a href="#valores" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Values</a></div>
+      </div>
+      <table class="mtx mtx--guia">
+        <thead>
+          <tr><th scope="col"><span class="mtx-card">Context</span></th><th scope="col"><span class="mtx-card">Rules</span></th><th scope="col"><span class="mtx-card mtx-card--ok"><img src="../assets/ico-check-green.svg" alt="" width="32" height="32">Good practices</span></th><th scope="col"><span class="mtx-card mtx-card--bad"><img src="../assets/ico-cross-red.svg" alt="" width="32" height="32">Bad practices</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Column titles</th><td data-col="Rules">1 word or the initials of terms.</td><td data-col="Good practices"><ul><li>Cars</li><li>Track</li><li>MPR</li></ul></td><td data-col="Bad practices"><ul><li>“Minimum Race Participation”</li><li>“Logo and Serie”</li><li>“Event Start”</li></ul></td></tr>
+          <tr><th scope="row">Filters and tags</th><td data-col="Rules">2 words max. Abbreviations and icons can be used.</td><td data-col="Good practices"><ul><li>“Class A”</li><li>“Sport Cars”</li><li>“Ranked”</li></ul></td><td data-col="Bad practices"><ul><li>“Race open soon”</li><li>“Fixed setup race”</li><li>“Open wheel car”</li></ul></td></tr>
+          <tr><th scope="row">Numbers</th><td data-col="Rules">No numbers written as words</td><td data-col="Good practices"><ul><li>10:45 PM</li><li>4 Cars</li><li>25 Drivers</li></ul></td><td data-col="Bad practices"><ul><li>“Four Cars”</li><li>“Ten percent of rain”</li><li>“Eleven drivers”</li></ul></td></tr>
+          <tr><th scope="row">Titles and subtitles</th><td data-col="Rules">Short, clear titles about the section.</td><td data-col="Good practices"><ul><li>“Available Sessions”</li><li>“Schedule”</li></ul></td><td data-col="Bad practices"><p>“You are eligible to compete, but you need to license Shell V-Power Motorsport Park at The Bend”</p></td></tr>
+          <tr><th scope="row">Buttons</th><td data-col="Rules">3 words max. Must include a verb.</td><td data-col="Good practices"><ul><li>“Add to Cart”</li><li>“Register”</li><li>“Select Car”</li></ul></td><td data-col="Bad practices"><ul><li>“Register for the next race”</li><li>“More ways to race”</li><li>“Create a hosted session”</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="ux-hero sd-hero" id="sistema-de-diseno" aria-labelledby="sd-titulo">
+    <div class="container">
+      <h2 class="ux-hero-title" id="sd-titulo">Design System</h2>
+      <a href="#ux-writing" class="btn btn--md btn-ghost-info ux-hero-skip">Back to UX Writing</a>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="valores" aria-labelledby="valores-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="valores-titulo">Values</h2><p class="sec-sub">The brand’s fuel</p></div>
+        <div class="sec-nav"><a href="#guia-de-estilo" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Style Guide</a><a href="#principios" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Principles</a></div>
+      </div>
+      <ul class="sd-valores">
+        <li><h3>Authenticity</h3><p>Service and products true to reality.</p></li>
+        <li><h3>Clarity</h3><p>The user understands every detail of the service and product.</p></li>
+        <li><h3>Concise</h3><p>Short messages, given the large amount of information available.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="principios" aria-labelledby="principios-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="principios-titulo">Principles</h2><p class="sec-sub">The communication rules</p></div>
+        <div class="sec-nav"><a href="#valores" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Values</a><a href="#colores" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Colors</a></div>
+      </div>
+      <ul class="sd-principios">
+        <li><h3 class="mtx-card"><img src="../assets/ico-check-gold.svg" alt="" width="32" height="32">Simple</h3><p>There must be no information overload, so the user isn’t confused.</p></li>
+        <li><h3 class="mtx-card"><img src="../assets/ico-lampara.svg" alt="" width="32" height="32">Understandable</h3><p>Information must be clear and understandable for every kind of user. Adults, young people, casual or professional.</p></li>
+        <li><h3 class="mtx-card"><img src="../assets/ico-escalera.svg" alt="" width="32" height="32">Layered</h3><p>Information must be shown gradually, layer by layer, as the user looks for more specific details on a particular topic.</p></li>
+        <li><h3 class="mtx-card"><img src="../assets/ico-chart-up.svg" alt="" width="32" height="32">Efficient</h3><p>Key tasks (such as registering for a race, looking up results or making a purchase) must be completed in as few steps as possible.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="colores" aria-labelledby="colores-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="colores-titulo">Colors</h2><p class="sec-sub">Accessibility and harmony</p></div>
+        <div class="sec-nav"><a href="#principios" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Principles</a><a href="#tipografia" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Typography</a></div>
+      </div>
+      <div class="sd-colores">
+        <div class="sd-color sd-color--neutrales">
+          <h3>Neutrals</h3>
+          <p>These colors are used as secondary support colors for backgrounds, text, dividers, dialog boxes, etc.</p>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#FFFFFF"></span><span class="sw-tono">0</span><span class="sw-hex">#FFFFFF</span></li>
+            <li><span class="sw" style="--c:#000000"></span><span class="sw-tono">100</span><span class="sw-hex">#000000</span></li>
+          </ul>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#F2F2F3"></span><span class="sw-tono">10</span><span class="sw-hex">#F2F2F3</span></li>
+            <li><span class="sw" style="--c:#EAEAEB"></span><span class="sw-tono">15</span><span class="sw-hex">#EAEAEB</span></li>
+            <li><span class="sw" style="--c:#CDCDCF"></span><span class="sw-tono">20</span><span class="sw-hex">#CDCDCF</span></li>
+            <li><span class="sw" style="--c:#D0D0D3"></span><span class="sw-tono">25</span><span class="sw-hex">#D0D0D3</span></li>
+            <li><span class="sw" style="--c:#C9C9CC"></span><span class="sw-tono">50</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw" style="--c:#C4C4C7"></span><span class="sw-tono">60</span><span class="sw-hex">#C4C4C7</span></li>
+          </ul>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#B7B7BA"></span><span class="sw-tono">75</span><span class="sw-hex">#B7B7BA</span></li>
+            <li><span class="sw" style="--c:#0D6F71"></span><span class="sw-tono">90</span><span class="sw-hex">#0D6F71</span></li>
+            <li><span class="sw" style="--c:#5D5D63"></span><span class="sw-tono">95</span><span class="sw-hex">#5D5D63</span></li>
+            <li><span class="sw" style="--c:#505057"></span><span class="sw-tono">100</span><span class="sw-hex">#505057</span></li>
+            <li><span class="sw" style="--c:#292929"></span><span class="sw-tono">125</span><span class="sw-hex">#292929</span></li>
+            <li><span class="sw" style="--c:#1E1E27"></span><span class="sw-tono">150</span><span class="sw-hex">#1E1E27</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--primario">
+          <h3>Primary | Blue</h3>
+          <p>There was no clearly defined primary color, so this color, originally used by iRacing, is given the primary role</p>
+          <ul class="sw-grid sw-grid--6">
+            <li><span class="sw" style="--c:#679BE2"></span><span class="sw-tono">10</span><span class="sw-hex">#679BE2</span></li>
+            <li><span class="sw" style="--c:#4D8BDD"></span><span class="sw-tono">25</span><span class="sw-hex">#4D8BDD</span></li>
+            <li><span class="sw" style="--c:#347AD9"></span><span class="sw-tono">50</span><span class="sw-hex">#347AD9</span></li>
+            <li><span class="sw" style="--c:#1A6AD4"></span><span class="sw-tono">75</span><span class="sw-hex">#1A6AD4</span></li>
+            <li><span class="sw" style="--c:#0159CF"></span><span class="sw-tono">100</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw" style="--c:#02449F"></span><span class="sw-tono">150</span><span class="sw-hex">#02449F</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--secundario">
+          <h3>Secondary | Orange</h3>
+          <p>This color is used specifically for any element that starts the process of buying a product.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#FFB685"></span><span class="sw-tono">25</span><span class="sw-hex">#FFB685</span></li>
+            <li><span class="sw" style="--c:#FFA366"></span><span class="sw-tono">50</span><span class="sw-hex">#FFA366</span></li>
+            <li><span class="sw" style="--c:#FF8533"></span><span class="sw-tono">75</span><span class="sw-hex">#FF8533</span></li>
+            <li><span class="sw" style="--c:#FF6600"></span><span class="sw-tono">100</span><span class="sw-hex">#FF6600</span></li>
+            <li><span class="sw" style="--c:#CD5303"></span><span class="sw-tono">150</span><span class="sw-hex">#CD5303</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--exito">
+          <h3>Success</h3>
+          <p>Used for success and completed states. Mainly used for actions that launch the simulator, making the user leave the website.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#8DE270"></span><span class="sw-tono">25</span><span class="sw-hex">#8DE270</span></li>
+            <li><span class="sw" style="--c:#7DDE5C"></span><span class="sw-tono">50</span><span class="sw-hex">#7DDE5C</span></li>
+            <li><span class="sw" style="--c:#6CDA47"></span><span class="sw-tono">75</span><span class="sw-hex">#6CDA47</span></li>
+            <li><span class="sw" style="--c:#5CD633"></span><span class="sw-tono">100</span><span class="sw-hex">#5CD633</span></li>
+            <li><span class="sw" style="--c:#217C06"></span><span class="sw-tono">150</span><span class="sw-hex">#217C06</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--advertencia">
+          <h3>Warning</h3>
+          <p>These colors convey a feeling of waiting. They’re generally used for warning or waiting states.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#F7F99E"></span><span class="sw-tono">25</span><span class="sw-hex">#F7F99E</span></li>
+            <li><span class="sw" style="--c:#F2F556"></span><span class="sw-tono">50</span><span class="sw-hex">#F2F556</span></li>
+            <li><span class="sw" style="--c:#ECF000"></span><span class="sw-tono">75</span><span class="sw-hex">#ECF000</span></li>
+            <li><span class="sw" style="--c:#EA8C00"></span><span class="sw-tono">100</span><span class="sw-hex">#EA8C00</span></li>
+            <li><span class="sw" style="--c:#B45309"></span><span class="sw-tono">150</span><span class="sw-hex">#B45309</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--error">
+          <h3>Error</h3>
+          <p>These colors convey a negative feeling. They’re generally used for error states.</p>
+          <ul class="sw-grid sw-grid--5">
+            <li><span class="sw" style="--c:#E75149"></span><span class="sw-tono">25</span><span class="sw-hex">#E75149</span></li>
+            <li><span class="sw" style="--c:#E43B32"></span><span class="sw-tono">50</span><span class="sw-hex">#E43B32</span></li>
+            <li><span class="sw" style="--c:#E1251B"></span><span class="sw-tono">75</span><span class="sw-hex">#E1251B</span></li>
+            <li><span class="sw" style="--c:#CB2118"></span><span class="sw-tono">100</span><span class="sw-hex">#CB2118</span></li>
+            <li><span class="sw" style="--c:#B41E16"></span><span class="sw-tono">150</span><span class="sw-hex">#B41E16</span></li>
+          </ul>
+        </div>
+        <div class="sd-color sd-color--estados">
+          <h3>States</h3>
+          <p>They are overlays that cover an element and show its state. They provide a systematic way to show states through opacity.</p>
+          <ul class="sw-grid sw-grid--5" aria-label="States over #C9C9CC">
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:4"><span class="sw-est-lbl">Opacity: 4%</span></span><span class="sw-tono">Hover</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Selected</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Activated</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris sw-est--pressed" style="--c:#C9C9CC;--op:12"><span class="sw-est-lbl">Opacity: 12%</span></span><span class="sw-tono">Pressed</span><span class="sw-hex">#C9C9CC</span></li>
+            <li><span class="sw sw-est sw-est--gris" style="--c:#C9C9CC;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Dragged</span><span class="sw-hex">#C9C9CC</span></li>
+          </ul>
+          <ul class="sw-grid sw-grid--5" aria-label="States over #0159CF">
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:8"><span class="sw-est-lbl">Opacity: 8%</span></span><span class="sw-tono">Hover</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:10"><span class="sw-est-lbl">Opacity: 10%</span></span><span class="sw-tono">Selected</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:10"><span class="sw-est-lbl">Opacity: 10%</span></span><span class="sw-tono">Activated</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul sw-est--pressed" style="--c:#0159CF;--op:12"><span class="sw-est-lbl">Opacity: 12%</span></span><span class="sw-tono">Pressed</span><span class="sw-hex">#0159CF</span></li>
+            <li><span class="sw sw-est sw-est--azul" style="--c:#0159CF;--op:16"><span class="sw-est-lbl">Opacity: 16%</span></span><span class="sw-tono">Dragged</span><span class="sw-hex">#0159CF</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="tipografia" aria-labelledby="tipografia-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="tipografia-titulo">Typography</h2><p class="sec-sub">Conveying the values and principles</p></div>
+        <div class="sec-nav"><a href="#colores" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Colors</a><a href="#imagenes" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Images</a></div>
+      </div>
+      <table class="sd-tipo">
+        <thead>
+          <tr><th scope="col">Name</th><th scope="col">Use</th><th scope="col">Example</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" class="tp tp--10m">10 Inter - label 3 - medium</th><td data-col="Use">Labels</td><td data-col="Example"><span class="tp-ej"><img src="../assets/sistema-diseno/label-duracion.png" alt="Label “25 min”" width="57" height="24"><img src="../assets/sistema-diseno/label-fixed.png" alt="Label “Fixed”" width="50" height="24"><img src="../assets/sistema-diseno/label-pilotos.png" alt="Label “103 Drivers”" width="79" height="24"></span></td></tr>
+          <tr><th scope="row" class="tp tp--12r">12 Inter - label 1 - regular</th><td data-col="Use">Licenses</td><td data-col="Example"><span class="tp-ej"><img src="../assets/sistema-diseno/licencia-d.png" alt="License D" width="49" height="24"><img src="../assets/sistema-diseno/licencia-c.png" alt="License C" width="49" height="24"><img src="../assets/sistema-diseno/licencia-b.png" alt="License B" width="48" height="24"><img src="../assets/sistema-diseno/licencia-a.png" alt="License A" width="49" height="24"></span></td></tr>
+          <tr><th scope="row" class="tp tp--12l">12 Inter - label 1 - light</th><td data-col="Use">Column titles</td><td data-col="Example"><span class="tp-ej"><img src="../assets/sistema-diseno/columna-start.png" alt="Column “Start”" width="61" height="40"><img src="../assets/sistema-diseno/columna-drivers.png" alt="Column “Drivers”" width="57" height="40"><img src="../assets/sistema-diseno/columna-licenses.png" alt="Column “Licenses”" width="66" height="40"></span></td></tr>
+          <tr><th scope="row" class="tp tp--12s">12 Inter - label 1 - semibold</th><td data-col="Use">Safety Rating</td><td data-col="Example"><span class="tp-ej"><img src="../assets/sistema-diseno/safety-rating-r-250.png" alt="License R, SR 2.50, iR 1315" width="60" height="87"><img src="../assets/sistema-diseno/safety-rating-d.png" alt="License D, SR 3.10, iR 1292" width="60" height="87"><img src="../assets/sistema-diseno/safety-rating-r-117.png" alt="License R, SR 1.17, iR 927" width="60" height="87"></span></td></tr>
+          <tr><th scope="row" class="tp tp--14r">14 Inter - body 2 - regular</th><td data-col="Use">Subtitles</td><td data-col="Example"><span class="tp-ej"><img src="../assets/sistema-diseno/subtitulo-serie.png" alt="Global Mazda MX-5 Cup, 4 cars competing, with the “Change Car” button" width="361" height="56"></span></td></tr>
+          <tr><th scope="row" class="tp tp--14m">14 Inter - body 2 - medium</th><td data-col="Use">Segmented buttons, filters</td><td data-col="Example"><span class="tp-ej"><img src="../assets/sistema-diseno/filtro-seleccionados.png" alt="Filter “4 filters selected”" width="361" height="32"></span></td></tr>
+          <tr><th scope="row" class="tp tp--16r">16 Inter - body 1 - regular</th><td data-col="Use">Text</td><td data-col="Example"><p class="tp-ej tp-ej--texto" lang="en">“Circuit de Spa-Francorchamps is one of the motorsport world's most storied venues.”</p></td></tr>
+          <tr><th scope="row" class="tp tp--16s">16 Inter - body 1 - semibold</th><td data-col="Use">Buttons and tabs</td><td data-col="Example"><span class="tp-ej"><img src="../assets/sistema-diseno/boton-race.png" alt="Button “Race”" width="99" height="48"><img src="../assets/sistema-diseno/boton-add-to-cart.png" alt="Button “Add to Cart”" width="150" height="48"></span></td></tr>
+          <tr><th scope="row" class="tp tp--24">24 Exo 2 - Title 3 - bold</th><td data-col="Use">Section title</td><td data-col="Example"><p class="tp-ej tp-ej--t3" lang="en">Available Sessions</p></td></tr>
+          <tr><th scope="row" class="tp tp--36">36 Exo 2 - Title 1 - bold</th><td data-col="Use">Screen title</td><td data-col="Example"><p class="tp-ej tp-ej--t1" lang="en">Results &amp; Stats</p></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="imagenes" aria-labelledby="imagenes-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="imagenes-titulo">Images</h2><p class="sec-sub">Authenticity... oh, did I already say that?</p></div>
+        <div class="sec-nav"><a href="#tipografia" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Typography</a><a href="#layout" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Layout</a></div>
+      </div>
+      <p class="sd-img-intro">Virtual renditions of real cars, circuit maps and official logos (some of them).</p>
+      <ul class="sd-imgs">
+        <li style="--w:110.78%;--l:-5.39%;--t:-7.83%"><img src="../assets/sistema-diseno/imagen-corvette.png" alt="Yellow Chevrolet Corvette race car in the virtual showroom" width="452" height="273" loading="lazy"></li>
+        <li style="--w:111.03%;--l:-5.39%;--t:-8.7%"><img src="../assets/sistema-diseno/logo-imsa.png" alt="IMSA iRacing Online Sportscar Championship logo" width="453" height="273" loading="lazy"></li>
+        <li style="--w:111.03%;--l:-5.51%;--t:-7.83%"><img src="../assets/sistema-diseno/logo-formula-a.png" alt="iRacing Formula A Grand Prix Sprint - Fixed logo" width="453" height="273" loading="lazy"></li>
+        <li style="--w:117.37%;--l:-8.68%;--t:-13.65%"><img src="../assets/sistema-diseno/imagen-bmw.png" alt="White BMW M2 race car with BMW Motorsport stripes in the virtual showroom" width="473" height="300" loading="lazy"></li>
+      </ul>
+      <img class="sd-track" src="../assets/sistema-diseno/track.svg" alt="Circuit map: the track layout in white over the venue plan in gray" width="1162" height="443" loading="lazy">
+    </div>
+  </section>
+
+  <section class="layer-sec" id="layout" aria-labelledby="layout-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="layout-titulo">Layout</h2><p class="sec-sub">Space and organization</p></div>
+        <div class="sec-nav"><a href="#imagenes" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Images</a><a href="#componentes" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Components</a></div>
+      </div>
+      <figure class="sd-layout" tabindex="0">
+        <img class="sd-layout-def" src="../assets/sistema-diseno/layout-default.png" alt="Layout diagram: Season title and labels, Icon buttons, Page nav, Page title, Navigation tabs, Page content and Licenses over a column grid" width="1162" height="801" loading="lazy">
+        <img class="sd-layout-hov" src="../assets/sistema-diseno/layout-hover.png" alt="Redesigned Racing screen with the column grid overlaid" width="1162" height="801" loading="lazy">
+      </figure>
+    </div>
+  </section>
+  <section class="layer-sec" id="componentes" aria-labelledby="componentes-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="componentes-titulo">Components</h2><p class="sec-sub">Reusable visual elements</p></div>
+        <div class="sec-nav"><a href="#layout" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Layout</a><a href="#pruebas-de-usabilidad" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Usability Testing</a></div>
+      </div>
+      <h3 class="rule-head" id="iconografia"><span class="rh"><img class="rh-ico" src="../assets/ico-flags-gold.svg" alt="" width="40" height="40"><span>Iconography</span></span></h3>
+      <div class="sd-iconos" role="img" aria-label="Set of 68 filled-style icons at 20 px: navigation, races, cars, weather, arrows, states and actions">
+          <img src="../assets/iconografia/iconografia01.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia02.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia03.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia04.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia05.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia06.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia07.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia08.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia09.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia10.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia11.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia12.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia13.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia14.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia15.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia16.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia17.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia18.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia19.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia20.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia21.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia22.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia23.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia24.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia25.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia26.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia27.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia28.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia29.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia30.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia31.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia32.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia33.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia34.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia35.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia36.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia37.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia38.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia39.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia40.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia41.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia42.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia43.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia44.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia45.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia46.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia47.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia48.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia49.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia50.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia51.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia52.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia53.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia54.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia55.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia56.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia57.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia58.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia59.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia60.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia61.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia62.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia63.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia64.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia65.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia66.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia67.svg" alt="" width="20" height="20" loading="lazy">
+          <img src="../assets/iconografia/iconografia68.svg" alt="" width="20" height="20" loading="lazy">
+      </div>
+      <div class="sd-ico-demo">
+        <div class="sd-ico-bloque">
+          <h4 class="sd-ico-tit">Filled style</h4>
+          <img src="../assets/ico-trofeo-gold.svg" alt="Gold trophy in filled style" width="48" height="48" loading="lazy">
+        </div>
+        <div class="sd-ico-bloque">
+          <h4 class="sd-ico-tit">3 sizes</h4>
+          <ul class="sd-ico-tam">
+            <li><img src="../assets/ico-trofeo-gold.svg" alt="" width="16" height="16" loading="lazy"><span>16 px</span></li>
+            <li><img src="../assets/ico-trofeo-gold.svg" alt="" width="20" height="20" loading="lazy"><span>20 px</span></li>
+            <li><img src="../assets/ico-trofeo-gold.svg" alt="" width="24" height="24" loading="lazy"><span>24 px</span></li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="rule-head" id="botones"><span class="rh"><img class="rh-ico" src="../assets/ico-botones-gold.svg" alt="" width="40" height="40"><span>Buttons</span></span></h3>
+      <h4 class="sd-bt-tit">Originally</h4>
+      <ul class="sd-bt-fila sd-bt-fila--viejos">
+        <li><img src="../assets/sistema-diseno/boton-viejo-register.png" alt="Original “Register” button, green" width="188" height="23" loading="lazy"><span class="sd-bt-lbl">Primary</span></li>
+        <li><img src="../assets/sistema-diseno/boton-viejo-view-series.png" alt="Original “View Series” button, blue" width="188" height="23" loading="lazy"><span class="sd-bt-lbl">Secondary</span></li>
+        <li><img src="../assets/sistema-diseno/boton-viejo-add-to-cart.png" alt="Original “Add to Cart” button, orange" width="188" height="25" loading="lazy"><span class="sd-bt-lbl">Shopping</span></li>
+      </ul>
+      <h4 class="sd-bt-tit sd-bt-tit--lineas">Now</h4>
+      <ul class="sd-bt-fila">
+        <li><button type="button" class="bt bt--48 bt--primario"><svg class="bt-ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7.5 16.875C7.125 16.875 6.87499 16.75 6.62499 16.5L1.75 11.625C1.25 11.125 1.25 10.375 1.75 9.87501C2.25 9.37501 2.99999 9.37501 3.49999 9.87501L7.5 13.875L16.625 4.75C17.125 4.25 17.875 4.25 18.375 4.75C18.875 5.25 18.875 6.00002 18.375 6.50002L8.37502 16.5C8.12502 16.75 7.75 16.875 7.5 16.875Z"/></svg><span>Race</span></button><span class="sd-bt-lbl">Primary</span></li>
+        <li><button type="button" class="bt bt--48 bt--secundario"><svg class="bt-ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M10 20C15.5231 20 20 15.5231 20 10C20 4.47692 15.5231 0 10 0C4.47692 0 0 4.47692 0 10C0 15.5231 4.47692 20 10 20ZM11.25 16.5714C11.25 17.3377 11.9391 17.9294 12.6631 17.6782C15.008 16.865 16.865 15.008 17.6782 12.6631C17.9294 11.9391 17.3377 11.25 16.5714 11.25H13.274C13.0255 11.25 12.8055 11.4003 12.6771 11.613C12.4849 11.9312 12.2376 12.2125 11.9483 12.4435C11.56 12.7535 11.25 13.1861 11.25 13.683V16.5714ZM8.75 16.5714C8.75 17.3377 8.0609 17.9294 7.33681 17.6782C4.99194 16.865 3.13496 15.008 2.32179 12.6631C2.07069 11.9391 2.66226 11.25 3.42865 11.25H6.72604C6.97445 11.25 7.19448 11.4003 7.32289 11.613C7.51508 11.9312 7.76245 12.2125 8.05173 12.4435C8.43999 12.7535 8.75 13.1861 8.75 13.683V16.5714ZM12.6771 8.38702C12.8055 8.59969 13.0255 8.75 13.274 8.75H16.5714C17.3377 8.75 17.9294 8.06105 17.6784 7.33696C16.576 4.15749 13.5549 1.875 10 1.875C6.44516 1.875 3.42404 4.15749 2.32168 7.33696C2.07063 8.06105 2.66225 8.75 3.42862 8.75H6.72604C6.97446 8.75 7.19449 8.59969 7.32289 8.38702C7.86998 7.48099 8.86404 6.875 10 6.875C11.136 6.875 12.13 7.48099 12.6771 8.38702Z"/></svg><span>Test Drive</span></button><span class="sd-bt-lbl">Secondary</span></li>
+        <li><button type="button" class="bt bt--48 bt--compras"><svg class="bt-ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1.25 1.5625C0.732233 1.5625 0.3125 1.98224 0.3125 2.5C0.3125 3.01776 0.732233 3.4375 1.25 3.4375C1.60623 3.4375 1.92439 3.66035 2.04612 3.99513L6.02052 14.9248C6.22604 15.4899 6.56951 15.9765 7.00466 16.352C6.5607 16.5437 6.25 16.9856 6.25 17.5C6.25 18.1904 6.80965 18.75 7.5 18.75C8.19035 18.75 8.75 18.1904 8.75 17.5C8.75 17.3759 8.73193 17.256 8.69825 17.1429C8.879 17.1722 9.06374 17.1875 9.25106 17.1875H15.0394C15.0136 17.2874 15 17.3921 15 17.5C15 18.1904 15.5596 18.75 16.25 18.75C16.9404 18.75 17.5 18.1904 17.5 17.5C17.5 17.1475 17.354 16.829 17.1193 16.6017C17.1632 16.4931 17.1875 16.3744 17.1875 16.25C17.1875 15.7323 16.7677 15.3125 16.25 15.3125H9.25106C8.59402 15.3125 8.00717 14.9015 7.78264 14.284L7.13392 12.5H15.6143C16.7305 12.5 17.7114 11.7601 18.018 10.6868L19.5448 5.3434C19.7729 4.54488 19.1733 3.75 18.3429 3.75H3.9521L3.80824 3.35436C3.41705 2.2786 2.39468 1.5625 1.25 1.5625Z"/></svg><span>Add to Cart</span></button><span class="sd-bt-lbl">Shopping</span></li>
+      </ul>
+      <div class="sd-bt-exito">
+        <img src="../assets/sistema-diseno/boton-viejo-register-tachado.png" alt="Original green “Register” button, crossed out" width="230" height="23" loading="lazy">
+        <s class="sd-bt-lbl">Primary</s>
+        <p>Green reserved for “success” states</p>
+      </div>
+      <ul class="sd-bt-fila sd-bt-fila--tam">
+        <li><span class="sd-bt-alto">48 px</span><button type="button" class="bt bt--48 bt--primario" data-cambiar-estilo><svg class="bt-ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1 1.25V5.25001C1 6.00001 1.5 6.50001 2.25 6.50001H6.25001C7.00001 6.50001 7.50001 6.00001 7.50001 5.25001C7.50001 4.50001 7.00001 4.00001 6.25001 4.00001H5.62501C8.37501 2.37501 12 2.75001 14.3751 5.12501C17.2501 8.00001 17.2501 12.5 14.3751 15.375C11.5 18.25 7 18.25 4.125 15.375C3.625 14.875 2.87505 14.875 2.37505 15.375C1.87505 15.875 1.87505 16.625 2.37505 17.125C4.25005 19 6.75005 20 9.25005 20C11.7501 20 14.2501 19 16.1251 17.125C19.8751 13.375 19.8751 7.12501 16.1251 3.37501C12.7501 -0.124985 7.25 -0.375008 3.5 2.37499V1.25C3.5 0.5 3 0 2.25 0C1.5 0 1 0.5 1 1.25Z"/></svg><span>Change style</span></button><span class="sd-bt-ley"><img src="../assets/ico-pincel.svg" alt="" width="24" height="24">5 styles</span></li>
+        <li><span class="sd-bt-alto">40 px</span><button type="button" class="bt bt--40 bt--primario" data-cambiar-estilo><svg class="bt-ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1 1.25V5.25001C1 6.00001 1.5 6.50001 2.25 6.50001H6.25001C7.00001 6.50001 7.50001 6.00001 7.50001 5.25001C7.50001 4.50001 7.00001 4.00001 6.25001 4.00001H5.62501C8.37501 2.37501 12 2.75001 14.3751 5.12501C17.2501 8.00001 17.2501 12.5 14.3751 15.375C11.5 18.25 7 18.25 4.125 15.375C3.625 14.875 2.87505 14.875 2.37505 15.375C1.87505 15.875 1.87505 16.625 2.37505 17.125C4.25005 19 6.75005 20 9.25005 20C11.7501 20 14.2501 19 16.1251 17.125C19.8751 13.375 19.8751 7.12501 16.1251 3.37501C12.7501 -0.124985 7.25 -0.375008 3.5 2.37499V1.25C3.5 0.5 3 0 2.25 0C1.5 0 1 0.5 1 1.25Z"/></svg><span>Change style</span></button><span class="sd-bt-ley"><img src="../assets/ico-click-gold.svg" alt="" width="24" height="24">4 states</span></li>
+        <li><span class="sd-bt-alto">32 px</span><button type="button" class="bt bt--32 bt--primario" data-cambiar-estilo><svg class="bt-ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1 1.25V5.25001C1 6.00001 1.5 6.50001 2.25 6.50001H6.25001C7.00001 6.50001 7.50001 6.00001 7.50001 5.25001C7.50001 4.50001 7.00001 4.00001 6.25001 4.00001H5.62501C8.37501 2.37501 12 2.75001 14.3751 5.12501C17.2501 8.00001 17.2501 12.5 14.3751 15.375C11.5 18.25 7 18.25 4.125 15.375C3.625 14.875 2.87505 14.875 2.37505 15.375C1.87505 15.875 1.87505 16.625 2.37505 17.125C4.25005 19 6.75005 20 9.25005 20C11.7501 20 14.2501 19 16.1251 17.125C19.8751 13.375 19.8751 7.12501 16.1251 3.37501C12.7501 -0.124985 7.25 -0.375008 3.5 2.37499V1.25C3.5 0.5 3 0 2.25 0C1.5 0 1 0.5 1 1.25Z"/></svg><span>Change style</span></button><span class="sd-bt-ley"><img src="../assets/ico-escalar-gold.svg" alt="" width="24" height="24">3 sizes</span></li>
+      </ul>
+      <p class="sr-only" id="bt-estado" aria-live="polite"></p>
+      <h3 class="rule-head" id="dropdowns"><span class="rh"><img class="rh-ico" src="../assets/ico-lista.svg" alt="" width="40" height="40"><span>Dropdowns and lists</span></span></h3>
+      <div class="sd-dd">
+        <ul class="sd-dd-set">
+          <li><img src="../assets/sistema-diseno/dropdown-default.png" alt="“Filters” dropdown in its default state" width="278" height="32" loading="lazy"></li>
+          <li><img src="../assets/sistema-diseno/dropdown-hover.png" alt="“Filters” dropdown on hover, with a teal border" width="278" height="32" loading="lazy"></li>
+          <li><img src="../assets/sistema-diseno/dropdown-presionado.png" alt="“Filters” dropdown pressed, with a gray background" width="278" height="32" loading="lazy"></li>
+          <li><img src="../assets/sistema-diseno/dropdown-seleccionado.png" alt="Dropdown with “3 filters selected”" width="278" height="32" loading="lazy"></li>
+        </ul>
+        <img class="sd-dd-lista" src="../assets/sistema-diseno/lista-opciones.png" alt="Option list with checkboxes in four states: default, hover, pressed and selected" width="303" height="296" loading="lazy">
+      </div>
+
+      <h3 class="rule-head" id="cards"><span class="rh"><img class="rh-ico" src="../assets/ico-card-gold.svg" alt="" width="40" height="40"><span>Cards</span></span></h3>
+      <ul class="sd-cards">
+        <li>
+          <h4 class="sd-card-tit">Choose car | After delay and hover</h4>
+          <div class="sd-card sd-card--carrusel" tabindex="0" role="img" aria-label="Car selection card: rotates between the Mazda MX-5, Toyota GR86, BMW M2 and Renault Clio every 3 seconds">
+            <img src="../assets/sistema-diseno/card-mazda.png" alt="" width="444" height="281" loading="lazy">
+            <img src="../assets/sistema-diseno/card-toyota.png" alt="" width="444" height="281" loading="lazy">
+            <img src="../assets/sistema-diseno/card-bmw.png" alt="" width="444" height="281" loading="lazy">
+            <img src="../assets/sistema-diseno/card-clio.png" alt="" width="444" height="281" loading="lazy">
+          </div>
+        </li>
+        <li>
+          <h4 class="sd-card-tit">Buy car | Hover</h4>
+          <div class="sd-card sd-card--compra" tabindex="0">
+            <img src="../assets/sistema-diseno/card-clio.png" alt="Purchase card for the Renault Clio, on sale for $12.95" width="444" height="281" loading="lazy">
+            <span class="sd-card-esquina" aria-hidden="true"><svg viewBox="0 0 20 20" focusable="false"><path fill="#1E1E27" d="M1.25 1.5625C0.732233 1.5625 0.3125 1.98224 0.3125 2.5C0.3125 3.01776 0.732233 3.4375 1.25 3.4375C1.60623 3.4375 1.92439 3.66035 2.04612 3.99513L6.02052 14.9248C6.22604 15.4899 6.56951 15.9765 7.00466 16.352C6.5607 16.5437 6.25 16.9856 6.25 17.5C6.25 18.1904 6.80965 18.75 7.5 18.75C8.19035 18.75 8.75 18.1904 8.75 17.5C8.75 17.3759 8.73193 17.256 8.69825 17.1429C8.879 17.1722 9.06374 17.1875 9.25106 17.1875H15.0394C15.0136 17.2874 15 17.3921 15 17.5C15 18.1904 15.5596 18.75 16.25 18.75C16.9404 18.75 17.5 18.1904 17.5 17.5C17.5 17.1475 17.354 16.829 17.1193 16.6017C17.1632 16.4931 17.1875 16.3744 17.1875 16.25C17.1875 15.7323 16.7677 15.3125 16.25 15.3125H9.25106C8.59402 15.3125 8.00717 14.9015 7.78264 14.284L7.13392 12.5H15.6143C16.7305 12.5 17.7114 11.7601 18.018 10.6868L19.5448 5.3434C19.7729 4.54488 19.1733 3.75 18.3429 3.75H3.9521L3.80824 3.35436C3.41705 2.2786 2.39468 1.5625 1.25 1.5625Z"/></svg></span>
+            <span class="sd-card-tag" aria-hidden="true"><img src="../assets/ico-tag-dark.svg" alt="" width="12" height="12">$12.95</span>
+          </div>
+        </li>
+        <li>
+          <h4 class="sd-card-tit">Track | Hover</h4>
+          <div class="sd-card sd-card--serie" tabindex="0"><img src="../assets/sistema-diseno/card-pista.png" alt="Track card: map of Circuit de Spa-Francorchamps" width="487" height="307" loading="lazy"></div>
+        </li>
+        <li>
+          <h4 class="sd-card-tit">Weather | Hover</h4>
+          <div class="sd-card sd-card--serie" tabindex="0"><img src="../assets/sistema-diseno/card-clima.png" alt="Weather card: cloudy, 0 to 60% cloud cover, wind 8 to 9 kph, 30.1° air and 29.9° track" width="487" height="307" loading="lazy"></div>
+        </li>
+      </ul>
+      <div class="sd-detalles">
+        <h4 class="sd-card-tit">Car details | After delay</h4>
+        <ul class="sd-detalles-fila">
+          <li class="sd-detalle sd-detalle--5" role="img" aria-label="BMW M2 CS Racing details: rotates between five on-track views of the car every 3 seconds">
+            <img src="../assets/sistema-diseno/detalle-bmw-1.png" alt="" width="580" height="326" loading="lazy">
+            <img src="../assets/sistema-diseno/detalle-bmw-2.png" alt="" width="580" height="326" loading="lazy">
+            <img src="../assets/sistema-diseno/detalle-bmw-3.png" alt="" width="580" height="326" loading="lazy">
+            <img src="../assets/sistema-diseno/detalle-bmw-4.png" alt="" width="580" height="326" loading="lazy">
+            <img src="../assets/sistema-diseno/detalle-bmw-5.png" alt="" width="580" height="326" loading="lazy">
+          </li>
+          <li class="sd-detalle sd-detalle--4" role="img" aria-label="Ferrari 296 Challenge details: rotates between four on-track views of the car every 3 seconds">
+            <img src="../assets/sistema-diseno/detalle-ferrari-1.png" alt="" width="580" height="326" loading="lazy">
+            <img src="../assets/sistema-diseno/detalle-ferrari-2.png" alt="" width="580" height="326" loading="lazy">
+            <img src="../assets/sistema-diseno/detalle-ferrari-3.png" alt="" width="580" height="326" loading="lazy">
+            <img src="../assets/sistema-diseno/detalle-ferrari-4.png" alt="" width="580" height="326" loading="lazy">
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="rule-head" id="logos"><span class="rh"><img class="rh-ico" src="../assets/ico-license-gold.svg" alt="" width="40" height="40"><span>Logos and licenses</span></span></h3>
+      <ul class="sd-logos">
+        <li><img src="../assets/logos/serie-legends.png" alt="Legends Road Cup" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-gt4.png" alt="Falken GT4 Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-gr-cup.png" alt="Simagic GR Cup" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-ferrari.png" alt="Ferrari 296 Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-mustang.png" alt="Mustang Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-rain-master.png" alt="Rain Master" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-tcr-fixed.png" alt="TCR Virtual Challenge Fixed" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-clio-cup.png" alt="Clio Cup" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-mission-r.png" alt="Mission R Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-tcr-open.png" alt="TCR Virtual Challenge Open" width="84" height="84" loading="lazy"></li>
+      </ul>
+      <ul class="sd-logos">
+        <li><img src="../assets/logos/serie-nurburgring.png" alt="Nürburgring Endurance Championship" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-global-challenge.png" alt="Fanatec Global Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-power-challenge.png" alt="BMW M Power Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-scca.png" alt="SCCA Spec Racer Ford Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-m2-cup.png" alt="BMW M2 Cup" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-production-car.png" alt="Production Car Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-production-endurance.png" alt="Production Endurance Challenge" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-mx5-cup.png" alt="Fanatec Global MX-5 Cup" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-formula-vee.png" alt="Formula Vee" width="84" height="84" loading="lazy"></li>
+        <li><img src="../assets/logos/serie-formula-1600.png" alt="Formula 1600" width="84" height="84" loading="lazy"></li>
+      </ul>
+      <ul class="sd-marcas">
+        <li><img src="../assets/logos/marca-mazda.png" alt="Mazda" width="60" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-toyota.png" alt="Toyota" width="48" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-bmw.png" alt="BMW" width="48" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-ferrari.png" alt="Ferrari" width="36" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-ford.png" alt="Ford" width="124" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-porsche.png" alt="Porsche" width="34" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-renault.png" alt="Renault" width="34" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-ray.png" alt="Ray" width="98" height="48" loading="lazy"></li>
+        <li><img src="../assets/logos/marca-formula-vee.png" alt="Formula Vee" width="130" height="48" loading="lazy"></li>
+      </ul>
+      <svg class="sr-only" aria-hidden="true" focusable="false"><symbol id="ico-auto" viewBox="0 0 40 40"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M37.5 17.5H36.0358L33.5358 15H35C36.3807 15 37.5 13.8807 37.5 12.5H31.0358L30.0003 11.4645C29.0627 10.5268 27.791 10 26.4648 10H13.5359C12.2098 10 10.9381 10.5268 10.0004 11.4645L8.96485 12.5H2.5C2.5 13.8807 3.61928 15 5 15H6.46485L3.96485 17.5H2.5C1.11929 17.5 0 18.6193 0 20V27.5C0 28.8807 1.11929 30 2.5 30H5C6.38072 30 7.5 28.8807 7.5 27.5H32.5C32.5 28.8807 33.6193 30 35 30H37.5C38.8807 30 40 28.8807 40 27.5V20C40 18.6193 38.8807 17.5 37.5 17.5ZM32.5003 17.5H7.50038L11.7678 13.2322C12.2366 12.7634 12.8725 12.5 13.5355 12.5H26.4645C27.1275 12.5 27.7633 12.7634 28.2322 13.2322L32.5003 17.5ZM14.2678 20.7322L13.0178 21.9822C12.6862 22.3138 12.5 22.7633 12.5 23.2322C12.5 24.2085 13.2915 25 14.2678 25H25.7322C26.7085 25 27.5 24.2085 27.5 23.2322C27.5 22.7633 27.3138 22.3138 26.9822 21.9822L25.7322 20.7322C25.2633 20.2633 24.6275 20 23.9645 20H16.0355C15.3725 20 14.7366 20.2633 14.2678 20.7322ZM7.98815 22.0118C7.6756 22.3243 7.25167 22.5 6.80965 22.5H5V20H10L7.98815 22.0118ZM35 22.5H33.1903C32.7483 22.5 32.3243 22.3243 32.0118 22.0118L30 20H35V22.5Z"/></symbol></svg>
+      <ul class="sd-licencias">
+        <li class="sd-lic sd-lic--r"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#ico-auto"/></svg><span><span class="sr-only">License </span>R</span></li>
+        <li class="sd-lic sd-lic--d"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#ico-auto"/></svg><span><span class="sr-only">License </span>D</span></li>
+        <li class="sd-lic sd-lic--c"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#ico-auto"/></svg><span><span class="sr-only">License </span>C</span></li>
+        <li class="sd-lic sd-lic--b"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#ico-auto"/></svg><span><span class="sr-only">License </span>B</span></li>
+        <li class="sd-lic sd-lic--a"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><use href="#ico-auto"/></svg><span><span class="sr-only">License </span>A</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="pruebas-de-usabilidad" aria-labelledby="pruebas-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="pruebas-titulo">Usability Testing</h2><p class="sec-sub">Validating design decisions</p></div>
+        <div class="sec-nav"><a href="#componentes" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Components</a><a href="#iteraciones" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Iterations</a></div>
+      </div>
+
+      <h3 class="rule-head pu-head" id="contexto-tareas"><span class="rh"><img class="rh-ico" src="../assets/ico-check-gold.svg" alt="" width="40" height="40"><span>Context and tasks for the user</span></span><a href="../superficie-guion.html" class="btn btn--md btn-ghost-info pu-head-link">Read full script</a></h3>
+      <p class="pu-contexto">“You’re a <span class="hl">new iRacing user</span>. You wanted to get into the world of sim racing, so you subscribed to this simulator. You download it and open the iRacing UI to <span class="hl">look for a race</span>. You went through the onboarding, where you were asked which discipline you like to race (Sport Car, Formula Car, Oval, Dirt Oval, Dirt Road). You chose Sport Car and, after a few online Rookie license races, <span class="hl">you moved up to the Sport Cars D License</span>.”</p>
+      <div class="pu-par">
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="../assets/ico-circulo-check.svg" alt="" width="40" height="40">Task 1</h4>
+            <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=3423%3A94&amp;node-id=4021-24434&amp;viewport=-4446%2C-2288%2C0.69&amp;t=v6bHZlgfxv1jo2fq-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=4021%3A24434" target="_blank" rel="noopener" class="btn btn--md btn-primary">Try in prototype<span class="sr-only"> Task 1 (opens in a new tab)</span></a>
+          </div>
+          <p>Register for the D License series “Production Car Challenge by Sim-Lab”, choosing the “Global Mazda MX-5 Cup” as your favorite.</p>
+          <h5 class="pu-tit pu-tit--sub"><img src="../assets/ico-objetivos-gold.svg" alt="" width="40" height="40">Goals</h5>
+          <ul class="pu-vinetas">
+            <li>Choose the Mazda car as your favorite.</li>
+            <li>Register for the “Production Car Challenge by Sim-Lab”</li>
+            <li>The task ends when the green banner appears at the top.</li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="../assets/ico-circulo-check.svg" alt="" width="40" height="40">Task 2</h4>
+            <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?node-id=4052-40351&amp;viewport=-4446%2C-2288%2C0.69&amp;t=mr1e7dTRbAVoJIuy-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=4052%3A40351&amp;page-id=3423%3A94&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn--md btn-primary">Try in prototype<span class="sr-only"> Task 2 (opens in a new tab)</span></a>
+          </div>
+          <p>Register for a race in the D License series “Ferrari Challenge”</p>
+          <h5 class="pu-tit pu-tit--sub"><img src="../assets/ico-objetivos-gold.svg" alt="" width="40" height="40">Goals</h5>
+          <ul class="pu-vinetas">
+            <li>Buy the Ferrari Challenge car.</li>
+            <li>The task ends when the snackbar confirming the purchase appears at the top.</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="rule-head" id="insights"><span class="rh"><img class="rh-ico" src="../assets/ico-lupa.svg" alt="" width="40" height="40"><span>Insights</span></span></h3>
+      <div class="pu-par">
+        <article class="pu-card">
+          <h4 class="pu-balance pu-balance--ok">What worked<img src="../assets/ico-thumb-up.svg" alt="" width="40" height="40"></h4>
+          <ul class="pu-items">
+            <li class="pu-ok"><span><span class="sr-only">Worked: </span>The <span class="hl">execution</span> of task 2 was highly successful, in both speed and understanding.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Worked: </span>The confirmation <span class="hl">feedback</span> made it very clear when a task was over.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Worked: </span>The <span class="hl">CTAs</span> were very clear and also helped explain the context of their container.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Worked: </span>Despite the space, the complexity and the users’ lack of experience, the <span class="hl">tables</span> gave the information needed to understand the context and make decisions.</span></li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <h4 class="pu-balance pu-balance--bad">What didn’t work<img src="../assets/ico-thumb-down-red.svg" alt="" width="40" height="40"></h4>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">Didn’t work: </span>Above all, the <span class="hl">filters</span> confused users instead of helping them. Either because of their design or because they gave no feedback on what was being filtered.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Didn’t work: </span>Choosing a <span class="hl">car as a favorite</span> worked, but it was also a bit confusing, since such an important action didn’t have stronger visual hierarchy on screen.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Didn’t work: </span>Pre-activating the necessary filters wasn’t the right way to solve the <span class="hl">new user</span> problem.</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="pu-usuarios">
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="../assets/ico-usuario-gold.svg" alt="" width="32" height="32">User 1 | Franco</h4>
+            <div class="pu-acciones"><a href="../superficie-usuario-1.html" class="btn btn--md btn-outline-info">View questionnaire<span class="sr-only"> for user 1</span></a><a href="https://drive.google.com/file/d/1IfW4dSXThfGZ5-ewPDVN2OCvDNC6A_Pr/view" target="_blank" rel="noopener" class="btn btn--md btn-primary">Watch video<span class="sr-only"> of user 1 (opens in a new tab)</span></a></div>
+          </div>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">Problem: </span>He had a hard time finally finding the right series with the filters. He used the search bar, and the preset filters showed him no results.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Problem: </span>He didn’t feel he had really chosen the car as a favorite. It should have more visual hierarchy on screen to stand out. Like the cart banner, but for favorites.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Worked: </span>He found buying very quick and simple.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Suggestion: </span>He’d like to click the licenses to go straight to the races for that discipline and license.</span></li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="../assets/ico-usuario-gold.svg" alt="" width="32" height="32">User 2 | Martín</h4>
+            <div class="pu-acciones"><a href="../superficie-usuario-2.html" class="btn btn--md btn-outline-info">View questionnaire<span class="sr-only"> for user 2</span></a><a href="https://drive.google.com/file/d/1myx2RlyUfdb3_4uXCnj1bZbYc-FYeoX7/view" target="_blank" rel="noopener" class="btn btn--md btn-primary">Watch video<span class="sr-only"> of user 2 (opens in a new tab)</span></a></div>
+          </div>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">Problem: </span>He simply couldn’t complete the task of registering for a race. Let alone choosing a car.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Problem: </span>The filters weren’t intuitive, either because of their visual design and hierarchy or because he didn’t know filters were being applied to the race list.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Worked: </span>He found buying very quick and simple.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Suggestion: </span>He’d like the CTAs to say “Race” instead of “Register”</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Suggestion: </span>He’d identify cars/tracks more easily if they had an image or logo.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Suggestion: </span>He’d like the countdown to the race start to be green, to highlight races starting soon</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Suggestion: </span>Putting SERIES as the page title and in the TABS would help him understand where he is.</span></li>
+          </ul>
+        </article>
+        <article class="pu-card">
+          <div class="pu-card-head">
+            <h4 class="pu-tit"><img src="../assets/ico-usuario-gold.svg" alt="" width="32" height="32">User 3 | Fede</h4>
+            <div class="pu-acciones"><a href="../superficie-usuario-3.html" class="btn btn--md btn-outline-info">View questionnaire<span class="sr-only"> for user 3</span></a><a href="https://drive.google.com/file/d/1KFT49ICbG0dN2nT1mXpFtUk80ko7imNG/view" target="_blank" rel="noopener" class="btn btn--md btn-primary">Watch video<span class="sr-only"> of user 3 (opens in a new tab)</span></a></div>
+          </div>
+          <ul class="pu-items">
+            <li class="pu-bad"><span><span class="sr-only">Problem: </span>The dropdown for choosing the car in the cars section wasn’t very intuitive. He mostly ignored it.</span></li>
+            <li class="pu-bad"><span><span class="sr-only">Problem: </span>Having preselected filters when looking for the race confused him.</span></li>
+            <li class="pu-ok"><span><span class="sr-only">Worked: </span>He found buying very quick and simple.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Suggestion: </span>The menu buttons should include the option to choose the car as a favorite.</span></li>
+            <li class="pu-idea"><span><span class="sr-only">Suggestion: </span>It should have a more eye-catching icon for adding it as a favorite.</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="rule-head" id="conclusiones"><span class="rh"><img class="rh-ico" src="../assets/ico-lampara.svg" alt="" width="40" height="40"><span>Conclusions</span></span></h3>
+      <p class="pu-conclusion"><img src="../assets/ico-mano-gold.svg" alt="" width="40" height="40"><span>Leaving filters pre-activated, and so poorly designed, was a very bad idea</span><img class="pu-mano-izq" src="../assets/ico-mano-gold.svg" alt="" width="40" height="40"></p>
+      <article class="pu-card pu-card--texto">
+        <h4 class="pu-tit"><img src="../assets/ico-filtro-gold.svg" alt="" width="40" height="40">Filters</h4>
+        <p>The problem that a new user would rather see the few things they can race, instead of everything, is a tricky one.</p>
+        <p>The solution of <span class="hl">leaving the filters activated</span> to allow this view leads to <span class="hl">another problem</span>: users struggle to <span class="hl">find new races</span> because of the filters.</p>
+        <h5 class="pu-causas">Causes</h5>
+        <ul class="pu-vinetas">
+          <li>it’s confusing not to see <span class="hl">which filters are being applied</span>.</li>
+          <li>it’s confusing to see the race list for the first time with <span class="hl">filters already applied</span>.</li>
+          <li>the filters’ <span class="hl">design</span> doesn’t help the user.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="iteraciones" aria-labelledby="iteraciones-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="iteraciones-titulo">Iterations</h2><p class="sec-sub">Polishing the product</p></div>
+        <div class="sec-nav"><a href="#pruebas-de-usabilidad" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Usability Testing</a><a href="#prototipo" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-abajo.svg" alt="">Go to Prototype</a></div>
+      </div>
+
+      <h3 class="rule-head" id="license-progress"><span class="rh"><img class="rh-ico" src="../assets/ico-license-gold.svg" alt="" width="40" height="40"><span>License Progress</span></span></h3>
+      <div class="it-solucion">
+        <video class="it-media" autoplay muted loop playsinline preload="metadata" width="1164" height="802" aria-label="Video: the License Progress view, split by discipline, with the license progress bar, what the user can race and what they can buy."><source src="../assets/iteraciones/license-progress.mp4" type="video/mp4"></video>
+        <div class="it-texto">
+          <h4 class="it-tit">Solution for new users</h4>
+          <ul class="it-bullets">
+            <li>Split by discipline</li>
+            <li>License progress bar</li>
+            <li>First, only what the user can race is shown</li>
+            <li>Then, what they can buy is shown</li>
+          </ul>
+          <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=6908%3A109933&amp;node-id=7160-3011&amp;p=f&amp;viewport=675%2C217%2C0.12&amp;t=Boj6io1NcNxc14CW-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=7160%3A3011&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn--md btn-primary">Try the feature<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+
+      <h3 class="rule-head pu-head" id="all-series"><span class="rh"><img class="rh-ico" src="../assets/ico-lista.svg" alt="" width="40" height="40"><span>All Series</span></span><a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=8579%3A116895&amp;node-id=8618-232773&amp;viewport=-574%2C-443%2C0.33&amp;t=0Mh9yfiUj0tQzjfP-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=8579%3A117732" target="_blank" rel="noopener" class="btn btn--md btn-ghost-info pu-head-link">Try flow<span class="sr-only"> for All Series (opens in a new tab)</span></a></h3>
+      <div class="it-comparar">
+        <figure><figcaption>Before</figcaption><img class="it-media" src="../assets/iteraciones/all-series-antes.png" alt="All Series before the redesign." width="864" height="604" loading="lazy"></figure>
+        <figure><figcaption>After</figcaption><img class="it-media" src="../assets/iteraciones/all-series-despues.png" alt="All Series after the redesign." width="864" height="604" loading="lazy"></figure>
+      </div>
+      <img class="it-anotada" src="../assets/iteraciones/diferencias-all-series.svg" alt="Redesigned All Series screen with callouts: a color change, less gray and more white; filters are no longer pre-activated; a new feature for new users; clearer licenses; countdown in green; the primary color for the primary action (Register becomes Race and Add to Cart becomes Buy to Race); cars and tracks with images; orange when something has to be bought." width="1674" height="805" loading="lazy">
+
+      <h3 class="rule-head pu-head" id="filtros-busqueda"><span class="rh"><img class="rh-ico" src="../assets/ico-filtro-gold.svg" alt="" width="40" height="40"><span>Filters and search</span></span><a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=8579%3A116895&amp;node-id=8579-117234&amp;viewport=-574%2C-443%2C0.33&amp;t=7bB15B3PeKerOpCq-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=8579%3A117732" target="_blank" rel="noopener" class="btn btn--md btn-ghost-info pu-head-link">Try filters<span class="sr-only"> (opens in a new tab)</span></a></h3>
+      <div class="it-comparar">
+        <figure><figcaption>Before</figcaption><img class="it-media" src="../assets/iteraciones/filtros-antes.png" alt="Filters and search before the redesign." width="864" height="596" loading="lazy"></figure>
+        <figure><figcaption>After</figcaption><img class="it-media" src="../assets/iteraciones/filtros-despues.png" alt="Filters and search after: redesigned filters and results." width="864" height="595" loading="lazy"></figure>
+      </div>
+
+      <h3 class="rule-head pu-head" id="registro-carrera"><span class="rh"><img class="rh-ico" src="../assets/ico-check-gold.svg" alt="" width="40" height="40"><span>Race registration</span></span><a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=8579%3A116895&amp;node-id=8579-118112&amp;viewport=-574%2C-443%2C0.33&amp;t=7bB15B3PeKerOpCq-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=8579%3A117732" target="_blank" rel="noopener" class="btn btn--md btn-ghost-info pu-head-link">Try registering<span class="sr-only"> (opens in a new tab)</span></a></h3>
+      <div class="it-comparar">
+        <figure><figcaption>Before</figcaption><img class="it-media" src="../assets/iteraciones/registro-antes.png" alt="Race registration before the redesign." width="864" height="596" loading="lazy"></figure>
+        <figure><figcaption>After</figcaption><img class="it-media" src="../assets/iteraciones/registro-despues.png" alt="Race registration after the redesign." width="864" height="596" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer-sec" id="prototipo" aria-labelledby="prototipo-titulo">
+    <div class="container">
+      <div class="sec-header">
+        <div><h2 class="sec-title" id="prototipo-titulo">Prototype</h2><p class="sec-sub">A prototype is worth a thousand pictures</p></div>
+        <div class="sec-nav"><a href="#iteraciones" class="btn btn--md btn-info"><img class="btn-icon" src="../assets/ico-flecha-arriba.svg" alt="">Go to Iterations</a></div>
+      </div>
+
+      <h3 class="rule-head" id="proto-license-progress"><span class="rh"><img class="rh-ico" src="../assets/ico-license-gold.svg" alt="" width="40" height="40"><span>License Progress</span></span></h3>
+      <div class="it-solucion">
+        <video class="it-media" autoplay muted loop playsinline preload="metadata" width="1164" height="802" aria-label="Video: License Progress prototype."><source src="../assets/iteraciones/license-progress.mp4" type="video/mp4"></video>
+        <div class="it-texto">
+          <h4 class="it-tit">Solution for new users</h4>
+          <ul class="it-bullets">
+            <li>Split by discipline</li>
+            <li>License progress bar</li>
+            <li>First, only what the user can race is shown</li>
+            <li>Then, what they can buy is shown</li>
+          </ul>
+          <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=6908%3A109933&amp;node-id=7160-3011&amp;viewport=1176%2C409%2C0.35&amp;t=V2ceFUv0JYIl88QN-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=7160%3A3011" target="_blank" rel="noopener" class="btn btn--md btn-primary">Open prototype<span class="sr-only"> for License Progress (opens in a new tab)</span></a>
+        </div>
+      </div>
+
+      <h3 class="rule-head" id="proto-encontrar-carrera"><span class="rh"><img class="rh-ico" src="../assets/ico-lupa.svg" alt="" width="40" height="40"><span>Find your race</span></span></h3>
+      <div class="it-solucion">
+        <video class="it-media" autoplay muted loop playsinline preload="metadata" width="1164" height="802" aria-label="Video: Find your race prototype, with the new series table and its details."><source src="../assets/iteraciones/prototipo-encontrar-carrera.mp4" type="video/mp4"></video>
+        <div class="it-texto">
+          <h4 class="it-tit">New table, new details</h4>
+          <ul class="it-bullets">
+            <li>New tab for the “Cars” section</li>
+            <li>Redesigned calendar and car/track details.</li>
+            <li>Car and track images for easier identification</li>
+            <li>New CTA copy</li>
+            <li>Redesigned filters</li>
+          </ul>
+          <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&amp;viewport=-144%2C-445%2C0.3&amp;t=RPpY4J93c7m8Cpl7-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=8618%3A232773&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn--md btn-primary">Open prototype<span class="sr-only"> for Find your race (opens in a new tab)</span></a>
+        </div>
+      </div>
+
+      <h3 class="rule-head" id="proto-carrito"><span class="rh"><img class="rh-ico" src="../assets/ico-cart.svg" alt="" width="40" height="40"><span>Shopping cart</span></span></h3>
+      <div class="it-solucion">
+        <video class="it-media" autoplay muted loop playsinline preload="metadata" width="1164" height="802" aria-label="Video: prototype of the in-platform shopping cart."><source src="../assets/iteraciones/prototipo-carrito.mp4" type="video/mp4"></video>
+        <div class="it-texto">
+          <h4 class="it-tit">Buy in one place</h4>
+          <ul class="it-bullets">
+            <li>Shopping cart without leaving the platform</li>
+            <li>Discount information</li>
+          </ul>
+          <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing---Franco-Aguirre?page-id=4198%3A1260&amp;node-id=4514-49275&amp;viewport=596%2C102%2C0.05&amp;t=I0Ki8vFlu0TAolCi-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=4514%3A49908" target="_blank" rel="noopener" class="btn btn--md btn-primary">Open prototype<span class="sr-only"> for the Shopping cart (opens in a new tab)</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fin" id="fin-del-proyecto" aria-labelledby="fin-titulo">
+    <div class="container">
+      <h2 class="fin-titulo" id="fin-titulo"><img src="../assets/ico-flag-checkered.svg" alt="" width="48" height="48"><span>End of project</span><img src="../assets/ico-flag-checkered.svg" alt="" width="48" height="48"></h2>
+      <p class="fin-gracias">Thanks for watching</p>
+      <ul class="fin-contacto" aria-label="Contact">
+        <li><a href="https://www.linkedin.com/in/francojavieraguirre/" target="_blank" rel="noopener"><img class="fin-ico fin-ico--sombra" src="../assets/ico-linkedin.png" alt="" width="50" height="50"><span><span class="sr-only">LinkedIn: </span>Franco Javier Aguirre<span class="sr-only"> (opens in a new tab)</span></span></a></li>
+        <li><a href="https://www.behance.net/francojavieraguirre" target="_blank" rel="noopener"><img class="fin-ico fin-ico--sombra" src="../assets/ico-behance.png" alt="" width="50" height="50"><span><span class="sr-only">Behance: </span>Franco Javier Aguirre<span class="sr-only"> (opens in a new tab)</span></span></a></li>
+        <li><img class="fin-ico" src="../assets/ico-gmail.svg" alt="" width="51" height="40"><span><span class="sr-only">Email: </span>francojavieraguirre@gmail.com</span></li>
+        <li><img class="fin-ico" src="../assets/ico-phone-gold.svg" alt="" width="40" height="40"><span><span class="sr-only">Phone: </span>+5493516701677</span></li>
+      </ul>
+      <nav class="proceso-grid fin-capas" aria-label="UX process layers"><a href="estrategia.html" class="proceso-card" style="--img:url(../assets/card-estrategia.png)"><span class="pc-title"><img src="../assets/icon-estrategia.svg" alt=""><span>Strategy</span></span><p class="pc-desc">Understanding user needs and business goals.</p></a><a href="alcance.html" class="proceso-card" style="--img:url(../assets/card-alcance.png)"><span class="pc-title"><img src="../assets/icon-alcance.svg" alt=""><span>Scope</span></span><p class="pc-desc">Defining the requirements for the specific features and content of the digital product.</p></a><a href="estructura.html" class="proceso-card" style="--img:url(../assets/card-estructura.png)"><span class="pc-title"><img src="../assets/icon-estructura.svg" alt=""><span>Structure</span></span><p class="pc-desc">Defining the information architecture and the interface interaction.</p></a><a href="esqueleto.html" class="proceso-card" style="--img:url(../assets/card-esqueleto.png)"><span class="pc-title"><img src="../assets/icon-esqueleto.svg" alt=""><span>Skeleton</span></span><p class="pc-desc">Organizing the information elements of the interface and creating mid-fidelity wireframes.</p></a><a href="superficie.html" class="proceso-card" aria-current="page" style="--img:url(../assets/card-superficie.png)"><span class="pc-title"><img src="../assets/icon-superficie.svg" alt=""><span>Surface</span></span><p class="pc-desc">Defining the design system and high-fidelity wireframes. Animated prototype and usability testing.</p></a></nav>
+    </div>
+  </section>
+</main>
+
+<script src="../menu-capas.js" defer></script>
+<script src="../estructura.js" defer></script>
+<script src="../superficie.js" defer></script>
+</body>
+</html>
