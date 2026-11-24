@@ -2100,32 +2100,8 @@
       "questions": [],
       "evidence": [
         {
-          "path": "estructura.html",
-          "sha256": "2b602290f33e23d91250c131c495c3d84f1b9a37fc417aa42b7993d00eb9d3ee"
-        },
-        {
-          "path": "estructura-tarea-1.html",
-          "sha256": "3275eca8afc9bd2d5e25938ef7cd347ea7cb4387c3f17ff65f82a6499ce61269"
-        },
-        {
-          "path": "estructura-tarea-2.html",
-          "sha256": "84ffe7c1d2aa75572aac16e0d5041e52d1d1ad30aca7b3e99fad50a522c00df8"
-        },
-        {
           "path": "estructura.js",
           "sha256": "c194e3e7cab2bb79c5bd1398ef86bf272553e0f88dc04811c3dccc56dc01f60c"
-        },
-        {
-          "path": "en/estructura.html",
-          "sha256": "d16ea9a6cc823250b788382585dd4f0c2893f6d51717b6dd22127e7fa6934066"
-        },
-        {
-          "path": "en/estructura-tarea-1.html",
-          "sha256": "783b378e46341e21531894bef0c3d948b72a8a06b61b5bb854c21ade8666db8d"
-        },
-        {
-          "path": "en/estructura-tarea-2.html",
-          "sha256": "51b14abfbb76efc73fa7f8cd9db6e33ce53f4512ee627432f1fe1267a9b3e131"
         },
         {
           "path": "en/index.html",
@@ -2164,7 +2140,7 @@
           "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: en/estructura.html con la arquitectura navegable funcionando (capturas desde ../assets/arquitectura-actual/, alt «Screenshot of the original iRacing UI: Leagues section», menú «iRacing store menu»), ayudas (tooltip en inglés), switch Before/After y enlaces «View more details» a las tareas EN; la versión ES sigue cargando assets/… con alt en español; 6 páginas × 11 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón y sin scroll; control automático sin restos en español en las 7 páginas EN.",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: en/estructura.html con la arquitectura navegable funcionando (capturas desde ../assets/arquitectura-actual/, alt «Screenshot of the original iRacing UI: Leagues section», menú «iRacing store menu»), ayudas (tooltip en inglés), switch Before/After y enlaces «View more details» a las tareas EN; la versión ES sigue cargando assets/… con alt en español; 6 páginas × 11 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón y sin scroll; control automático sin restos en español en las 7 páginas EN. Evidencia rotada por el fix del switch en Estructura (T39); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2174,6 +2150,68 @@
           "evidence": {
             "path": ".cardenal/revision-0027-parte-3.md",
             "sha256": "ea7642e93354b84e8282cee72cdc9fc1f8c7570b2ef310f3b20768ba028ff445"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T39",
+      "title": "Fix: switch encima del botón en Estructura y tareas",
+      "role": "front",
+      "state": "done",
+      "acceptance": "El switch queda a la izquierda del botón de la topbar a 32 px, sin superposición, en Estructura y tareas 1-2 (ES y EN).",
+      "dependsOn": [
+        "T38"
+      ],
+      "files": [
+        "estructura.html",
+        "en/estructura.html",
+        "estructura-tarea-1.html",
+        "en/estructura-tarea-1.html",
+        "estructura-tarea-2.html",
+        "en/estructura-tarea-2.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "estructura.html",
+          "sha256": "a37e93dbc9cf13a47ad1bf65a8267b24a997af8e970afdde06a961d0b74be104"
+        },
+        {
+          "path": "en/estructura.html",
+          "sha256": "66d1260df4d381a902aef8f954dcf47aa499e957ba5e08222e78ebeb25c59fb4"
+        },
+        {
+          "path": "estructura-tarea-1.html",
+          "sha256": "9e187b16f7e5ceffe36de2c8eb0996b6f983b582a1acbdfd6571674353aa68bb"
+        },
+        {
+          "path": "en/estructura-tarea-1.html",
+          "sha256": "46d69208067339ebf8d34cf52d6756ad6bc93df97615ad9f139fed359875510e"
+        },
+        {
+          "path": "estructura-tarea-2.html",
+          "sha256": "2fdb7f53eede8b2ccba5541d057873e8576c6f14fc79b7fec3294700ddeb4b9c"
+        },
+        {
+          "path": "en/estructura-tarea-2.html",
+          "sha256": "2f7c2f100855977aaaab31ee973fd1c19227f184b113e78b0e243e050b5e6b15"
+        },
+        {
+          "path": ".cardenal/revision-fix-switch-estructura.md",
+          "sha256": "f7f499bcd5a554a759ce4315bf835e6ac5aff32a8d019f3ac9d41f76642e2c28"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador. Medido en servidor local: 6 páginas + Alcance × 9 anchos (320-1920) sin superposición ni scroll; gap 32 px.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (fix switch Estructura)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-fix-switch-estructura.md",
+            "sha256": "f7f499bcd5a554a759ce4315bf835e6ac5aff32a8d019f3ac9d41f76642e2c28"
           }
         }
       ]
