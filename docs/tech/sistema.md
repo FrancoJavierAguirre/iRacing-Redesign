@@ -18,7 +18,7 @@ estrategia.html     Capa 1: Estrategia
 alcance.html        Capa 2: Alcance (Matriz FVD)
 estructura.html     Capa 3: Estructura (tree testing, arquitectura nueva, taskflow)
 styles.css          Base común: tokens, layout, componentes, responsive
-elementos.css       Páginas internas (body.page-elementos): topbar, breadcrumb, capas, cards y estilos compartidos de Estrategia/Alcance
+elementos.css       Páginas internas (body.page-elementos): topbar (112 px @1920, `clamp(56px, 5.8333vw, 112px)`; botón azul `btn--md` de 48 px como los «Ir a»), breadcrumb, capas, cards y estilos compartidos de Estrategia/Alcance
 estrategia.css      Específico de body.page-estrategia
 alcance.css         Específico de body.page-alcance (matriz, ejes, cuadrantes)
 estructura.css      Específico de body.page-estructura (árboles, tooltips, switch, taskflow)
@@ -61,6 +61,7 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 - **`<head>`:** `<link rel="alternate" hreflang="es|en|x-default">` (rutas relativas hasta definir el dominio) y `<script src="lang.js">` sin `defer`. EN: `lang="en"`, `og:locale en_US`, `inLanguage: "en"`, metadatos y JSON-LD traducidos.
 - **`lang.js`:** clave `iracing-lang` en `localStorage` (con try/catch). Al tocar una opción del switch guarda el idioma (y pasa el `#hash` actual). Al cargar, si hay un idioma guardado distinto al de `<html lang>`, hace `location.replace` al `link[rel=alternate][hreflang]` de ese idioma conservando el hash. Sin elección guardada no redirige.
 - **Switch:** `nav.lang-switch` con dos `a[data-lang]` (`lang`, `hreflang`, `aria-label` «Español (ES)» / «English (EN)», el actual con `aria-current="true"`). Estilos en `styles.css`: cada opción 56 × 48 con el texto centrado, Inter 600 16 #0159CF; radio 8 solo hacia afuera (`:first-child` 8 0 0 8, `:last-child` 0 8 8 0); la seleccionada con `rgba(1,89,207,.15)`, `z-index: 1` y sombra hacia la otra opción (`4px 0 8px` / `-4px 0 8px`, `rgba(0,0,0,.35)`). En las páginas interiores va en `.topbar-tools` (`elementos.css`: absoluto a la derecha, gap 32 con el `.topbar-action`, que pasa a `position: static`). En el Home va dentro de `.top-label` (flex en columna, gap 24): debajo de «Franco Aguirre - 2025».
+- **Altura de la topbar** (2026-11-23): 112 px @1920 (`clamp(56px, 5.8333vw, 112px)`); los `scroll-margin-top` de las secciones (Estrategia, Estructura, 5 Elementos) usan el mismo valor. El botón azul `.topbar-action` es `btn--md` (48 px, padding 14/16, radio 8, Inter 600 16, ícono 20, gap 8), igual que los «Ir a».
 - **Topbar en ≤ 760 px** (`elementos.css`, todas las páginas `page-elementos`): grid de dos renglones `"crumb tools" / "title title"`.
 - **Alcance:** en ≤ 900 px `.eje-label--fin` puede partirse en dos renglones (`width: min-content`): «Very feasible» desbordaba entre 700 y 760 px.
 

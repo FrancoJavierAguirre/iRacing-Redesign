@@ -31,6 +31,8 @@ El sitio está en español. Algunas páginas ya tienen su versión en inglés en
 - Las imágenes con texto quedan en español. Desde las páginas en inglés, los enlaces a páginas todavía no traducidas llevan a la versión en español.
 - En celular, la barra superior de las páginas interiores va en dos renglones: breadcrumb y switch arriba, título debajo.
 
+La barra superior de las páginas interiores mide 112 px de alto en escritorio, con sus elementos centrados; el botón azul de la derecha tiene el mismo tamaño que los botones «Ir a…».
+
 ## Home (`index.html`)
 
 1. **Hero**: video de fondo, oscurecido de izquierda a derecha por un degradado negro que deja el texto legible (abajo termina en un corte recto contra Contexto), logo de iRacing, título «¿Y si la UX fuera tan fluida como en la pista?» e íconos de las herramientas usadas (Figma, Make, Photoshop, UX Tweak).

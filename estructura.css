@@ -11,7 +11,7 @@
   --tree-line: #9aa0ad; --tip-bg: #212121; --txt: #fff;
   --task-pad: clamp(16px, 1.25vw, 24px);
 }
-.page-estructura main > section { scroll-margin-top: 90px; }
+.page-estructura main > section { scroll-margin-top: clamp(56px, 5.8333vw, 112px); }  /* alto de la barra superior */
 .page-estructura .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* ----- Estadio (Arquitectura Actual / Nueva) ----- */

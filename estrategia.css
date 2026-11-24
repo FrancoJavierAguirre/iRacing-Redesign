@@ -2,7 +2,7 @@
    Pantalla "Estrategia" — valores Figma @1920 -> clamp()
    (reutiliza topbar / sec-header / sec-nav de elementos.css)
    ========================================================== */
-.page-estrategia main > section { scroll-margin-top: 90px; }
+.page-estrategia main > section { scroll-margin-top: clamp(56px, 5.8333vw, 112px); }  /* alto de la barra superior */
 
 .center-title.md { font-weight: 500; font-size: clamp(20px, 1.6667vw, 32px); }
 
