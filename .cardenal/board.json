@@ -1962,23 +1962,11 @@
           "sha256": "761b7e80dc69dff984074ea9c72e68a4427e62a23a9e82b4ef83ed9369936f0e"
         },
         {
-          "path": "en/index.html",
-          "sha256": "8006d63e2f3715e614c3e0e01ced438a71a01dfffbd839bb0304eb874f730a23"
-        },
-        {
-          "path": "llms.txt",
-          "sha256": "7678978956dcf8ace031b26b3a1a0320651892fc0c5ae82893365d5908a729c6"
-        },
-        {
-          "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "26c1f20fab558f22adbefd6f47f197e2e793f415c2327716cd8e116f385357c7"
-        },
-        {
           "path": "specs/0027-idioma-en/spec.md",
           "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
         }
       ],
-      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN y pares compartidos opcionales); sin subagente. Revisión del asistente en servidor local: switch a 32 px del botón azul y ambos centrados en la barra (ES y EN); menú de capas, título y botón traducidos con enlaces correctos (EN entre páginas traducidas, ../ a las demás); videos e imágenes con rutas ../ sin roturas; control automático sin restos en español; 12 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón; Alcance EN desbordaba 4 px entre 700 y 761 px («Very feasible») y se corrigió con la etiqueta en dos renglones ≤ 900 px; Estrategia a 320 px desborda por contenido previo (también en ES). Captura de la barra de en/estrategia.html. Evidencia rotada por la barra superior de 112 px (2026-11-23).",
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN y pares compartidos opcionales); sin subagente. Revisión del asistente en servidor local: switch a 32 px del botón azul y ambos centrados en la barra (ES y EN); menú de capas, título y botón traducidos con enlaces correctos (EN entre páginas traducidas, ../ a las demás); videos e imágenes con rutas ../ sin roturas; control automático sin restos en español; 12 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón; Alcance EN desbordaba 4 px entre 700 y 761 px («Very feasible») y se corrigió con la etiqueta en dos renglones ≤ 900 px; Estrategia a 320 px desborda por contenido previo (también en ES). Captura de la barra de en/estrategia.html. Evidencia rotada por la barra superior de 112 px (2026-11-23). Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2053,18 +2041,6 @@
           "sha256": "dbef262331ebbde60f4dda1670c43d3ce3819fd14bd3089ef3e3fb9305ef49b8"
         },
         {
-          "path": "estructura-tarea-1.html",
-          "sha256": "35f75a1a6aaeed591fd03ea892c398d06743cd4e8875507e7d1af6c4c47fbf45"
-        },
-        {
-          "path": "estructura-tarea-2.html",
-          "sha256": "c2223b449ec2ca17b2314cc17d5950134c9a2587d0279e01281f544a4d51eb7e"
-        },
-        {
-          "path": "estructura.html",
-          "sha256": "e5259452d733bd58236e4dbf41be02018192d4a276821c0b660cf52ef8d16b8b"
-        },
-        {
           "path": "superficie-guion.html",
           "sha256": "56ac738048710f69a0ca21d25e841050795d81a4f2004cab14ba9825c4756823"
         },
@@ -2083,33 +2059,9 @@
         {
           "path": "superficie.html",
           "sha256": "a7a164cdf43c0d99e2d4bcbd62b64769ae9eeaaa005a8f59880783b804a6e716"
-        },
-        {
-          "path": "en/index.html",
-          "sha256": "8006d63e2f3715e614c3e0e01ced438a71a01dfffbd839bb0304eb874f730a23"
-        },
-        {
-          "path": "en/5-elementos.html",
-          "sha256": "f45c67696a1e12300dea58a40dd49bbf1ba94923657c22b2bde0be8b85ebe6f8"
-        },
-        {
-          "path": "en/estrategia.html",
-          "sha256": "a53096c5c5d34b6555528b96cadd0d89bf4831a29c1cfeb6b8d174dcec62e119"
-        },
-        {
-          "path": "en/alcance.html",
-          "sha256": "83d2d785258f355cbab3b8060f4c28ddc24b904e38196311cf119ed7b92261b9"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "2d2dfb5db71244a35049afc45c253e54d30c6cd4ad27841fcda7524cd06bb7f0"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "44fa166d81cb51481ffd78c5a34e167fa9e5117441e1c224306d837e76c372f1"
         }
       ],
-      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html.",
+      "evidenceNote": "Sin spec dueña específica (la topbar es anterior a Cardenal; la tocan las specs 0003, 0007, 0026 y 0027); se registra como tarea del tablero. Revisión del asistente en servidor local: a 1920 px la barra mide 112 en 11 páginas (ES y EN) con breadcrumb, título, switch y botón centrados (desvío 0); el botón azul mide 48 de alto con padding 14/16, radio 8, Inter 600 16, gap 8 e ícono 20, igual que los «Ir a» medidos en la misma página; 15 páginas × 10 anchos (375-1920) sin cruces ni scroll; los anclajes a secciones (#encuestas, #alcance, #tree-testing) dejan el título debajo de la barra. Captura de la barra de estrategia.html. Evidencia rotada en 0027 parte 3; la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2119,6 +2071,109 @@
           "evidence": {
             "path": ".cardenal/revision-2026-11-23-topbar-112.md",
             "sha256": "73bcd8f395875a3a5636142c9c789ab35e6f2244f67576976ef3ae7d3c932b38"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T38",
+      "title": "Inglés, parte 3: Estructura y detalles de las tareas",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Parte 3 de specs/0027-idioma-en/spec.md (T008-T010 de tasks.md) y criterios de change.acceptance (0027).",
+      "dependsOn": [
+        "T36"
+      ],
+      "files": [
+        "estructura.html",
+        "estructura-tarea-1.html",
+        "estructura-tarea-2.html",
+        "estructura.js",
+        "en/estructura.html",
+        "en/estructura-tarea-1.html",
+        "en/estructura-tarea-2.html",
+        "en/index.html",
+        "en/5-elementos.html",
+        "en/estrategia.html",
+        "en/alcance.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "estructura.html",
+          "sha256": "2b602290f33e23d91250c131c495c3d84f1b9a37fc417aa42b7993d00eb9d3ee"
+        },
+        {
+          "path": "estructura-tarea-1.html",
+          "sha256": "3275eca8afc9bd2d5e25938ef7cd347ea7cb4387c3f17ff65f82a6499ce61269"
+        },
+        {
+          "path": "estructura-tarea-2.html",
+          "sha256": "84ffe7c1d2aa75572aac16e0d5041e52d1d1ad30aca7b3e99fad50a522c00df8"
+        },
+        {
+          "path": "estructura.js",
+          "sha256": "c194e3e7cab2bb79c5bd1398ef86bf272553e0f88dc04811c3dccc56dc01f60c"
+        },
+        {
+          "path": "en/estructura.html",
+          "sha256": "d16ea9a6cc823250b788382585dd4f0c2893f6d51717b6dd22127e7fa6934066"
+        },
+        {
+          "path": "en/estructura-tarea-1.html",
+          "sha256": "783b378e46341e21531894bef0c3d948b72a8a06b61b5bb854c21ade8666db8d"
+        },
+        {
+          "path": "en/estructura-tarea-2.html",
+          "sha256": "51b14abfbb76efc73fa7f8cd9db6e33ce53f4512ee627432f1fe1267a9b3e131"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "9bf4a1b99ec5ce2599ee790a9180a6d0f190067dd53e8ed15c659901a6b32349"
+        },
+        {
+          "path": "en/5-elementos.html",
+          "sha256": "7cc2473d15864cb5c2544923dc4dc518915afee2e8930ffc4b53b46d52de592f"
+        },
+        {
+          "path": "en/estrategia.html",
+          "sha256": "4e5a7ed16adfab613442200765efc9aacc06d9bf1efd7b77af02ef7cc15e578d"
+        },
+        {
+          "path": "en/alcance.html",
+          "sha256": "f89eab8ce27611f639f2e72b080e44dbffa5617d31f053c36eeb06ac2c8b011a"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "99b2f1fbc0118ededaa03035792cefd2724e324b5f2d93d06140e7d7e31061f7"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "2aa6650d4d8b72cf5d4a6cb256532d32b2b520c88c763b4c7d88ef5a0ff949cf"
+        },
+        {
+          "path": "llms.txt",
+          "sha256": "40a88c20d5fd4dcd04166532a759c518ca806aa0c25d0d40a98f5068de7aacc6"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "f690a8a1cc0261c6f01c8bd8033436e9571d2c009642d6defacb0903fb10fd57"
+        },
+        {
+          "path": "specs/0027-idioma-en/spec.md",
+          "sha256": "e7a1150bad42c31e96f9d22371ef73b30a44b6d2b504551ad0abc78b8bd0c0e9"
+        }
+      ],
+      "evidenceNote": "Implementado por el coordinador (generador local con pares ES→EN); sin subagente. Revisión del asistente en servidor local: en/estructura.html con la arquitectura navegable funcionando (capturas desde ../assets/arquitectura-actual/, alt «Screenshot of the original iRacing UI: Leagues section», menú «iRacing store menu»), ayudas (tooltip en inglés), switch Before/After y enlaces «View more details» a las tareas EN; la versión ES sigue cargando assets/… con alt en español; 6 páginas × 11 anchos (320-1920) sin cruces de breadcrumb, título, switch ni botón y sin scroll; control automático sin restos en español en las 7 páginas EN.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-23: Lo apruebo (parte 3 del inglés)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-0027-parte-3.md",
+            "sha256": "ea7642e93354b84e8282cee72cdc9fc1f8c7570b2ef310f3b20768ba028ff445"
           }
         }
       ]

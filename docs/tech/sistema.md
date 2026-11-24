@@ -11,7 +11,7 @@
 
 ```
 index.html          Home del case study (único que carga script.js)
-en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy index, 5-elementos, estrategia y alcance
+en/                 Versión en inglés (spec 0027): misma estructura de archivos; hoy index, 5-elementos, estrategia, alcance, estructura y estructura-tarea-1/2
 lang.js             Recuerda el idioma elegido y redirige a la página equivalente (spec 0027)
 5-elementos.html    Explicación del modelo de 5 capas
 estrategia.html     Capa 1: Estrategia
@@ -63,6 +63,7 @@ Orden de carga de CSS en las páginas internas: `styles.css` → `elementos.css`
 - **Switch:** `nav.lang-switch` con dos `a[data-lang]` (`lang`, `hreflang`, `aria-label` «Español (ES)» / «English (EN)», el actual con `aria-current="true"`). Estilos en `styles.css`: cada opción 56 × 48 con el texto centrado, Inter 600 16 #0159CF; radio 8 solo hacia afuera (`:first-child` 8 0 0 8, `:last-child` 0 8 8 0); la seleccionada con `rgba(1,89,207,.15)`, `z-index: 1` y sombra hacia la otra opción (`4px 0 8px` / `-4px 0 8px`, `rgba(0,0,0,.35)`). En las páginas interiores va en `.topbar-tools` (`elementos.css`: absoluto a la derecha, gap 32 con el `.topbar-action`, que pasa a `position: static`). En el Home va dentro de `.top-label` (flex en columna, gap 24): debajo de «Franco Aguirre - 2025».
 - **Altura de la topbar** (2026-11-23): 112 px @1920 (`clamp(56px, 5.8333vw, 112px)`); los `scroll-margin-top` de las secciones (Estrategia, Estructura, 5 Elementos) usan el mismo valor. El botón azul `.topbar-action` es `btn--md` (48 px, padding 14/16, radio 8, Inter 600 16, ícono 20, gap 8), igual que los «Ir a».
 - **Topbar en ≤ 760 px** (`elementos.css`, todas las páginas `page-elementos`): grid de dos renglones `"crumb tools" / "title title"`.
+- **`estructura.js`:** la carpeta de las capturas de la arquitectura navegable se toma de la imagen inicial (`../assets/…` en EN) y el texto alternativo se arma según `<html lang>` («Screenshot of the original iRacing UI: X section»).
 - **Alcance:** en ≤ 900 px `.eje-label--fin` puede partirse en dos renglones (`width: min-content`): «Very feasible» desbordaba entre 700 y 760 px.
 
 ## Comportamiento (`script.js`)

@@ -82,11 +82,15 @@
       'shop-tracks': ['Shop › Tracks', 'shop']
     };
 
+    /* carpeta de las capturas relativa a la página (también desde en/) e idioma del texto alternativo (spec 0027) */
+    var shotBase = shotImg ? shotImg.getAttribute('src').replace(/[^\/]+$/, '') : 'assets/arquitectura-actual/';
+    var isEn = (document.documentElement.getAttribute('lang') || '').slice(0, 2) === 'en';
+
     function showShot(id) {
       var data = shots[id];
       if (!data || !shotImg) return;
-      shotImg.src = 'assets/arquitectura-actual/' + id + '.jpg';
-      shotImg.alt = 'Captura de la UI original de iRacing: sección ' + data[0];
+      shotImg.src = shotBase + id + '.jpg';
+      shotImg.alt = isEn ? 'Screenshot of the original iRacing UI: ' + data[0] + ' section' : 'Captura de la UI original de iRacing: sección ' + data[0];
       layouts.forEach(function (layout) {
         layout.hidden = layout.getAttribute('data-layout') !== data[1];
       });

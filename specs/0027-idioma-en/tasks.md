@@ -17,5 +17,13 @@
 - [x] Commit tras la aprobación del usuario.
 - [x] **Check final humano (Parte 2)** (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-0027-parte-2.md`): revisar las traducciones de Estrategia y Alcance.
 
-## Partes 3 a 5
+## Parte 3 — Estructura y detalles de las tareas
+- [x] T008 [front] Switch y hreflang en `estructura.html`, `estructura-tarea-1.html` y `estructura-tarea-2.html`.
+- [x] T009 [front] `en/estructura.html`, `en/estructura-tarea-1.html` y `en/estructura-tarea-2.html` traducidas; enlaces de las páginas EN anteriores a estas pasan a la versión EN.
+- [x] T010 [front] `estructura.js`: ruta de las capturas relativa a la página y texto alternativo según el idioma.
+  - **Revisión del asistente** (servidor local): arquitectura navegable en EN (capturas desde ../assets/, alt en inglés, menú de la tienda), ayudas, switch Antes/After y «View more details»; la versión ES sigue igual; 6 páginas × 11 anchos (320-1920) sin cruces ni scroll; sin restos en español.
+- [x] Commit tras la aprobación del usuario.
+- [x] **Check final humano (Parte 3)** (aprobado por el usuario el 2026-11-23; ver `.cardenal/revision-0027-parte-3.md`): revisar las traducciones de Estructura y de las tareas.
+
+## Partes 4 y 5
 Pendientes; se agregan al empezar cada una.
