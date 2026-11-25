@@ -2467,35 +2467,15 @@
       "questions": [],
       "evidence": [
         {
-          "path": "index.html",
-          "sha256": "f059c1ab3c72aa2e26a6ad52db9bdf629be4937889c4fd8d515fbcf08a78eaf6"
-        },
-        {
-          "path": "en/index.html",
-          "sha256": "1123c3598b4af43347d6ae43bd089f0d6eb1079837aad9692674a99e85eb6406"
-        },
-        {
           "path": "styles.css",
           "sha256": "829572bfacfbd51c8ea9dfca9edec768f3b08e0a76dcd3a9bda248424cc35bb5"
         },
         {
           "path": "script.js",
           "sha256": "d77a93e3d09ef162827a0d15be0bbbd735436e1bdc2e8664a3b8fbc315151c42"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "19f1e8bac696b3d205d41a7c9577e7991ee324f44855921574a4ffa43602b972"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "71e14579e90551c93d23a35b9191b6df7e69426ce3075959c38f04cfca0208f7"
-        },
-        {
-          "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "01ce4989501f87913e98a2c05fcc4589fff6a5ab4a6147fd28fc0b1341dd510a"
         }
       ],
-      "evidenceNote": "Pedido del usuario en chat 2026-11-24 con referencia (nicoaguirre.vercel.app, «El producto final»); color y botón de ampliar elegidos por el usuario. Implementado por el coordinador. Verificado en local (interacción, teclado, avance automático, ES/EN, 1920 y 375).",
+      "evidenceNote": "Pedido del usuario en chat 2026-11-24 con referencia (nicoaguirre.vercel.app, «El producto final»); color y botón de ampliar elegidos por el usuario. Implementado por el coordinador. Verificado en local (interacción, teclado, avance automático, ES/EN, 1920 y 375). Evidencia rotada por el texto del botón (T46); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2505,6 +2485,60 @@
           "evidence": {
             "path": ".cardenal/revision-ajuste-vitrina-home.md",
             "sha256": "ec6114682f94fdcf50092ca2319a20a43d44765b84cc51e6821a5c5c5dc7f249"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T46",
+      "title": "Ajuste: «Probar prototipo» pasa a «Abrir prototipo»",
+      "role": "front",
+      "state": "done",
+      "acceptance": "El botón del prototipo del Home dice «Abrir prototipo» (EN: «Open prototype»).",
+      "dependsOn": [
+        "T45"
+      ],
+      "files": [
+        "index.html",
+        "en/index.html"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "index.html",
+          "sha256": "5839afed51e751cf17f2c25ca9a15b3dd9d8a19f87323fd5490f63463d51728d"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "7ef78119c7e56b555512bc7fdb0377ce25ce1cc0ee3ac8ecc5980e8379a8050e"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "015d3fa7500358e1ee243f4ff4dca37e7a3811595aa9cf6b96475a88fa55d874"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "2b1c314528dc0f5b2bb4810c2f89e59c08cdaefe07d55c2f5ece3d5e97477e87"
+        },
+        {
+          "path": "README.md",
+          "sha256": "09ada055b27e39a0fb381b571eb20dba7da034a48ab17371bd6069655c883e65"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "df7fb5866378900a310d9f57eaf508901c3942e58e25ac49eb0154958563012b"
+        }
+      ],
+      "evidenceNote": "Pedido del usuario en chat 2026-11-24, tras pedir alternativas de texto. Implementado por el coordinador.",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-24: Lo apruebo (texto Abrir prototipo)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-ajuste-boton-prototipo.md",
+            "sha256": "5efdb561ca16810067a0f0ab2c662c66a7fbe7f88419111518ef32c3eb5c8841"
           }
         }
       ]

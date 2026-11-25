@@ -87,3 +87,8 @@
     - Subtítulo nuevo en ES/EN con el acento dorado; sin h3; 96 px hasta la vitrina (40 a 375).
     - Con el botón en la columna, a 1920: botón y lista centrados en x = 320; con 72 px entre ambos quedan 142 px arriba de la lista y 142 debajo del botón. Título y subtítulo centrados (951 = mitad del viewport). 160 px hasta «¿Te interesa ver el proceso?». A 375: lista, video y botón. Sin scroll horizontal.
 - [ ] [HUMANO] QA: probar la vitrina en ES y EN (click, avance automático, ampliar) en el sitio publicado.
+
+## Addendum 2026-11-24 — ajuste: texto del botón del prototipo
+- [x] T021 [front] «Probar prototipo» pasa a «Abrir prototipo» (EN: «Open prototype»), a pedido del usuario. Docs y README actualizados.
+  - **Revisión del asistente:** el texto cambió en `index.html` y en `en/index.html`; no quedan menciones de «Probar prototipo» en la documentación vigente.
+- [ ] [HUMANO] QA: ver el botón en ES y EN.

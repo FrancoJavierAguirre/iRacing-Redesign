@@ -217,7 +217,7 @@ Se usa en `estrategia.html` (Alcance habilitado, `href="alcance.html"`) y en `al
 |---|---|---|
 | Google Fonts | Exo 2, Poppins, Inter | `<head>` de cada HTML |
 | Google Sheets | Fuente de los testimonios («Ver fuente») | `index.html` |
-| Figma | Prototipo («Probar prototipo», «Ver Prototipo») | `index.html`, `superficie.html` |
+| Figma | Prototipo («Abrir prototipo», «Ver Prototipo») | `index.html`, `superficie.html` |
 | LinkedIn y Behance | Perfiles del autor (cierre «Fin del proyecto») | `superficie.html` |
 | Twitch / globalracingleague.com | Canales de contacto de las encuestas | `estrategia.html` |
 
@@ -287,7 +287,7 @@ Campos comunes del JSON-LD: `name`, `description`, `inLanguage: "es"`, `dateCrea
 - **Vitrina de «Diseño final»** (reemplaza las 6 comparativas `.comparison-*`, cuyos estilos quedan sin uso, igual que `video.screenshot` y los `*-antes.mp4`):
   - **HTML:** `.vitrina` con `.vitrina-lista[role=tablist]` y 6 `button.vitrina-tab[role=tab]` (`data-src` con el `*-despues.mp4` y `data-label` con el `aria-label`). Cada uno tiene `.vt-num`, `.vt-nombre`, `.vt-eq` (ecualizador animado, solo en la activa) y `.vt-progreso`. El panel `.vitrina-video[role=tabpanel]` lleva `video.vitrina-v` (sin `loop`) y `button.vitrina-ampliar`.
   - **CSS (`styles.css`):** flex con `align-items: center`, con dos partes:
-    - columna `.vitrina-col` (`1 1 260px`) con la lista y `a.vitrina-cta` («Probar prototipo», centrado, a 72 px @1920);
+    - columna `.vitrina-col` (`1 1 260px`) con la lista y `a.vitrina-cta` («Abrir prototipo», centrado, a 72 px @1920);
     - video (`3 1 560px`, relación 1564/1078).
 
     La columna queda centrada en vertical respecto del video. En ≤ 900 px, `.vitrina-col` pasa a `display: contents` y el orden es lista, video y botón. `.plataforma .sec-head` va centrado. Acento #BCA447: la opción activa con fondo `rgba(188,164,71,.1)`, borde `.55` y número relleno; las inactivas con texto dorado. `prefers-reduced-motion` frena el ecualizador.

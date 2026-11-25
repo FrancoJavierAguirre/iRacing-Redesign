@@ -36,7 +36,7 @@ Están definidos como variables en la parte superior de `styles.css`, así que s
 
 - `--bg: #04020d` — fondo general (el que me pasaste)
 - `--panel: #0a1428` — fondo de tarjetas/testimonios
-- `--orange: #fc8738` — botón principal "Probar prototipo"
+- `--orange: #fc8738` — botón principal "Abrir prototipo"
 - `--gold: #e2b04a` — nombres/palabras destacadas (Val DiPietro, "flujo constante", etc.)
 - `--blue: #3b82f6` — acentos de íconos y hover
 
@@ -56,7 +56,7 @@ Ambas cargadas desde Google Fonts en el `<head>` del HTML, no requieren instalac
 - Imagen de "Contexto" ✅
 - Las 4 fotos de testimonios ✅
 - Botón "Ver fuentes" (antes "Ver tuits") → enlaza a la planilla de Google Sheets ✅
-- Botón "Probar prototipo" → enlaza al prototipo de Figma ✅
+- Botón "Abrir prototipo" → enlaza al prototipo de Figma ✅
 
 
 ## Reglas de diseño del proyecto (para próximas adiciones)
