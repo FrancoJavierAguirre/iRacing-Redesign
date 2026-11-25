@@ -159,102 +159,27 @@
     <div class="container">
       <div class="sec-head">
         <h2 class="sec-title">Final design</h2>
-        <p class="sec-sub">iRacing is made up of the <strong class="accent">platform</strong>, where you find races, and the <strong class="accent">simulator</strong>, where you race.</p>
+        <p class="sec-sub">I redesigned the <strong class="accent">platform</strong> where you find races</p>
       </div>
-      <h3 class="section-subtitle">I redesigned the <span class="accent">platform</span></h3>
     </div>
 
-    <!-- Comparison blocks -->
-    <div class="container comparisons">
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Race list</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Before</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race list — before the redesign"><source src="../assets/lista-carreras-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">After</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race list — after the redesign"><source src="../assets/lista-carreras-despues.mp4" type="video/mp4"></video>
-          </div>
+    <!-- Showcase: one "after" video per screen; pick it from the list, it advances on its own -->
+    <div class="container vitrina">
+      <div class="vitrina-col">
+        <div class="vitrina-lista" role="tablist" aria-label="Redesign screens" aria-orientation="vertical">
+        <button class="vitrina-tab" type="button" role="tab" id="vt-1" aria-controls="vitrina-panel" aria-selected="true" tabindex="0" data-src="../assets/lista-carreras-despues.mp4" data-label="Race list — after the redesign"><span class="vt-num">01</span><span class="vt-nombre">Race list</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-2" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="../assets/registro-despues.mp4" data-label="Race registration — after the redesign"><span class="vt-num">02</span><span class="vt-nombre">Race registration</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-3" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="../assets/detalles-carrera-despues.mp4" data-label="Race details — after the redesign"><span class="vt-num">03</span><span class="vt-nombre">Race details</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-4" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="../assets/calendario-despues.mp4" data-label="Calendar — after the redesign"><span class="vt-num">04</span><span class="vt-nombre">Calendar</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-5" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="../assets/autos-pistas-despues.mp4" data-label="Car and track details — after the redesign"><span class="vt-num">05</span><span class="vt-nombre">Car and track details</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-6" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="../assets/carrito-despues.mp4" data-label="Shopping cart — after the redesign"><span class="vt-num">06</span><span class="vt-nombre">Shopping cart</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
         </div>
+        <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn-primary vitrina-cta"><svg class="btn-icon" viewBox="0 0 30 30" aria-hidden="true"><path fill="currentColor" d="M9 5.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 9 5.5z"/></svg>Try prototype</a>
       </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Race registration</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Before</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race registration — before the redesign"><source src="../assets/registro-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">After</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race registration — after the redesign"><source src="../assets/registro-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
+      <div class="vitrina-video" id="vitrina-panel" role="tabpanel" aria-labelledby="vt-1">
+        <video class="vitrina-v" muted playsinline preload="none" aria-label="Race list — after the redesign"><source src="../assets/lista-carreras-despues.mp4" type="video/mp4"></video>
+        <button class="vitrina-ampliar" type="button" aria-label="Enlarge video"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
       </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Race details</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Before</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race details — before the redesign"><source src="../assets/detalles-carrera-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">After</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Race details — after the redesign"><source src="../assets/detalles-carrera-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Calendar</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Before</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Calendar — before the redesign"><source src="../assets/calendario-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">After</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Calendar — after the redesign"><source src="../assets/calendario-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Car and track details</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Before</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Car and track details — before the redesign"><source src="../assets/autos-pistas-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">After</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Car and track details — after the redesign"><source src="../assets/autos-pistas-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Shopping cart</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Before</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Shopping cart — before the redesign"><source src="../assets/carrito-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">After</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Shopping cart — after the redesign"><source src="../assets/carrito-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="container cta-wrap">
-      <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn-primary"><svg class="btn-icon" viewBox="0 0 30 30" aria-hidden="true"><path fill="currentColor" d="M9 5.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 9 5.5z"/></svg>Try prototype</a>
     </div>
 
     <div class="scroll-hint">

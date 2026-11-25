@@ -67,3 +67,23 @@
   - Estilos de contacto movidos a `styles.css`. EN traducido en el generador.
   - **Revisión del asistente:** en local a 1920 px, en ES y EN, las tres distancias miden 160 px (159,7 por la barra de scroll). Frase de 32 px y 400; «usuarios» en rgb(188,164,71); sin mano; íconos de contacto cargados. A 375 px, distancias de 64 px y sin scroll horizontal. Superficie mantiene márgenes, tipografía y flex del contacto. Frase de Objetivos: 26/32 px, peso 200 y blanco a 1920; padding de 300/300 (2 líneas en ES y EN); 199 px a 1280 px de ancho; 0 a 375; 18 px a 375; sin scroll horizontal. Contacto en las 12 páginas ES/EN: 160 px a 1920 (64 a 375), íconos cargados y sin scroll horizontal.
 - [ ] [HUMANO] QA: revisar los cambios del Home en ES y EN.
+
+## Addendum 2026-11-24 — ajuste: vitrina de videos «después» en «Diseño final»
+- [x] T020 [front] Las 6 comparativas Antes/Después del Home pasan a ser una vitrina:
+  - lista de pantallas con la activa en #BCA447, ecualizador y barra de avance;
+  - un video «después» por vez que avanza solo al terminar, con botón «Ampliar video» (pantalla completa).
+  - Referencia del usuario: sección «El producto final» de nicoaguirre.vercel.app. Color y botón de ampliar elegidos por el usuario.
+  - ES/EN; `script.js` y `styles.css`.
+  - «Probar prototipo» va centrado, 72 px debajo de la lista; la columna (lista + botón) queda centrada en vertical respecto del video. «Diseño final» y su subtítulo, centrados. En celular: lista, video y botón.
+  - Se quitó «Rediseñé la plataforma» (h3) y el subtítulo pasó a «Rediseñé la plataforma donde se buscan carreras», con «plataforma» en dorado (EN: «I redesigned the platform where you find races»).
+  - **Revisión del asistente:** en local:
+    - se reproduce al verse y se pausa al salir de pantalla;
+    - el click cambia el video, su `aria-label` y el `aria-labelledby` del panel;
+    - las flechas mueven la selección y el foco;
+    - al terminar pasa a la siguiente (de la sexta vuelve a la primera) y la barra se reinicia;
+    - EN traducido con rutas `../assets`;
+    - 1920: lista 80–560 y video 600–1821; 375: lista arriba del video; sin scroll horizontal; 160 px hasta «Probar prototipo».
+    - El salto con `currentTime` no se pudo probar en el servidor local (no sirve rangos).
+    - Subtítulo nuevo en ES/EN con el acento dorado; sin h3; 96 px hasta la vitrina (40 a 375).
+    - Con el botón en la columna, a 1920: botón y lista centrados en x = 320; con 72 px entre ambos quedan 142 px arriba de la lista y 142 debajo del botón. Título y subtítulo centrados (951 = mitad del viewport). 160 px hasta «¿Te interesa ver el proceso?». A 375: lista, video y botón. Sin scroll horizontal.
+- [ ] [HUMANO] QA: probar la vitrina en ES y EN (click, avance automático, ampliar) en el sitio publicado.

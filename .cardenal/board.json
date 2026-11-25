@@ -2391,10 +2391,6 @@
       "questions": [],
       "evidence": [
         {
-          "path": "index.html",
-          "sha256": "0c5cee4ea34ba15ac01aa85773a6879dfe112d7bb51eda37384ec4bf23dbbff3"
-        },
-        {
           "path": "5-elementos.html",
           "sha256": "28d14f0ba61b07c2e3dcadce82b35e3b3030b74ac3d4ef5024d9ec465829d0e7"
         },
@@ -2413,10 +2409,6 @@
         {
           "path": "esqueleto.html",
           "sha256": "c4f73f901fc898d849a3c13d300d4b4fcee426654e15fbfeb2347a606b3078d8"
-        },
-        {
-          "path": "en/index.html",
-          "sha256": "a8c2046ec08b945085f2574c0c0e4c2bd6d21a74e798ed478342a4121d69b955"
         },
         {
           "path": "en/5-elementos.html",
@@ -2439,27 +2431,11 @@
           "sha256": "56074de9290a70781199858438a5d0d2883e5a49208030398c7bac3b50091893"
         },
         {
-          "path": "styles.css",
-          "sha256": "46bdbcaccb0ed2080415ef1be69a2b3c90e81abc7f9f10f69ce0598fde4e27e4"
-        },
-        {
           "path": "superficie.css",
           "sha256": "927676155dc4e3221d17273db283d4b1af899662250a7deec28296f670c591a3"
-        },
-        {
-          "path": "docs/public/funcionalidades.md",
-          "sha256": "cab521c171ab5ce0b8b374234a8ed99767126afde0f0b9daf60b8053524561af"
-        },
-        {
-          "path": "docs/tech/sistema.md",
-          "sha256": "cd8e9abc108f7d6daa1a6e6bd6d5cdf457f94524ae414a72b432156088939d8a"
-        },
-        {
-          "path": "specs/0027-idioma-en/tasks.md",
-          "sha256": "812925a6c0516f9e33c2ba7487dcb257a7ec0fdca58ca1335f114338ff76b520"
         }
       ],
-      "evidenceNote": "Pedido del usuario en chat 2026-11-24. Implementado por el coordinador. Verificado en local a 1920 y 375 px en ES/EN; Superficie sin cambios visuales.",
+      "evidenceNote": "Pedido del usuario en chat 2026-11-24. Implementado por el coordinador. Verificado en local a 1920 y 375 px en ES/EN; Superficie sin cambios visuales. Evidencia rotada por el vitrina del Home (T45); la versión aprobada está en su commit.",
       "reviews": [
         {
           "kind": "human",
@@ -2469,6 +2445,66 @@
           "evidence": {
             "path": ".cardenal/revision-ajuste-home-contacto.md",
             "sha256": "09f992c950c2d751290cda7c7e4d02f4a52ece8b048c644380d8d07f112d4e62"
+          }
+        }
+      ]
+    },
+    {
+      "id": "T45",
+      "title": "Ajuste: vitrina de videos «después» en «Diseño final» del Home",
+      "role": "front",
+      "state": "done",
+      "acceptance": "Las comparativas se reemplazan por una lista de 6 pantallas (activa en #BCA447 con barra de avance) y un video «después» que avanza solo, con botón para pantalla completa. Subtítulo «Rediseñé la plataforma donde se buscan carreras» y sin el h3. «Probar prototipo» centrado debajo de la lista, columna centrada en vertical respecto del video; título y subtítulo centrados. ES y EN.",
+      "dependsOn": [
+        "T44"
+      ],
+      "files": [
+        "index.html",
+        "en/index.html",
+        "styles.css",
+        "script.js"
+      ],
+      "questions": [],
+      "evidence": [
+        {
+          "path": "index.html",
+          "sha256": "f059c1ab3c72aa2e26a6ad52db9bdf629be4937889c4fd8d515fbcf08a78eaf6"
+        },
+        {
+          "path": "en/index.html",
+          "sha256": "1123c3598b4af43347d6ae43bd089f0d6eb1079837aad9692674a99e85eb6406"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "829572bfacfbd51c8ea9dfca9edec768f3b08e0a76dcd3a9bda248424cc35bb5"
+        },
+        {
+          "path": "script.js",
+          "sha256": "d77a93e3d09ef162827a0d15be0bbbd735436e1bdc2e8664a3b8fbc315151c42"
+        },
+        {
+          "path": "docs/public/funcionalidades.md",
+          "sha256": "19f1e8bac696b3d205d41a7c9577e7991ee324f44855921574a4ffa43602b972"
+        },
+        {
+          "path": "docs/tech/sistema.md",
+          "sha256": "71e14579e90551c93d23a35b9191b6df7e69426ce3075959c38f04cfca0208f7"
+        },
+        {
+          "path": "specs/0027-idioma-en/tasks.md",
+          "sha256": "01ce4989501f87913e98a2c05fcc4589fff6a5ab4a6147fd28fc0b1341dd510a"
+        }
+      ],
+      "evidenceNote": "Pedido del usuario en chat 2026-11-24 con referencia (nicoaguirre.vercel.app, «El producto final»); color y botón de ampliar elegidos por el usuario. Implementado por el coordinador. Verificado en local (interacción, teclado, avance automático, ES/EN, 1920 y 375).",
+      "reviews": [
+        {
+          "kind": "human",
+          "reviewer": "usuario (team lead)",
+          "reference": "Respuesta del usuario en chat 2026-11-24: Lo apruebo (vitrina de videos en Diseño final)",
+          "verdict": "approved",
+          "evidence": {
+            "path": ".cardenal/revision-ajuste-vitrina-home.md",
+            "sha256": "ec6114682f94fdcf50092ca2319a20a43d44765b84cc51e6821a5c5c5dc7f249"
           }
         }
       ]

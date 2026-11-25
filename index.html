@@ -159,102 +159,27 @@
     <div class="container">
       <div class="sec-head">
         <h2 class="sec-title">Diseño final</h2>
-        <p class="sec-sub">iRacing comprende la <strong class="accent">plataforma</strong> donde se buscan carreras y el <strong class="accent">simulador</strong> donde se corre.</p>
+        <p class="sec-sub">Rediseñé la <strong class="accent">plataforma</strong> donde se buscan carreras</p>
       </div>
-      <h3 class="section-subtitle">Rediseñé la <span class="accent">plataforma</span></h3>
     </div>
 
-    <!-- Comparison blocks -->
-    <div class="container comparisons">
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Lista de carreras</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Antes</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Lista de carreras — antes del rediseño"><source src="assets/lista-carreras-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">Después</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Lista de carreras — después del rediseño"><source src="assets/lista-carreras-despues.mp4" type="video/mp4"></video>
-          </div>
+    <!-- Vitrina: un video «después» por pantalla; se elige en la lista y avanza solo -->
+    <div class="container vitrina">
+      <div class="vitrina-col">
+        <div class="vitrina-lista" role="tablist" aria-label="Pantallas del rediseño" aria-orientation="vertical">
+        <button class="vitrina-tab" type="button" role="tab" id="vt-1" aria-controls="vitrina-panel" aria-selected="true" tabindex="0" data-src="assets/lista-carreras-despues.mp4" data-label="Lista de carreras — después del rediseño"><span class="vt-num">01</span><span class="vt-nombre">Lista de carreras</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-2" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="assets/registro-despues.mp4" data-label="Registro a la carrera — después del rediseño"><span class="vt-num">02</span><span class="vt-nombre">Registro a la carrera</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-3" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="assets/detalles-carrera-despues.mp4" data-label="Detalles de la carrera — después del rediseño"><span class="vt-num">03</span><span class="vt-nombre">Detalles de la carrera</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-4" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="assets/calendario-despues.mp4" data-label="Calendario — después del rediseño"><span class="vt-num">04</span><span class="vt-nombre">Calendario</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-5" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="assets/autos-pistas-despues.mp4" data-label="Detalles de autos y pistas — después del rediseño"><span class="vt-num">05</span><span class="vt-nombre">Detalles de autos y pistas</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
+        <button class="vitrina-tab" type="button" role="tab" id="vt-6" aria-controls="vitrina-panel" aria-selected="false" tabindex="-1" data-src="assets/carrito-despues.mp4" data-label="Carrito de compras — después del rediseño"><span class="vt-num">06</span><span class="vt-nombre">Carrito de compras</span><span class="vt-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vt-progreso" aria-hidden="true"><span></span></span></button>
         </div>
+        <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn-primary vitrina-cta"><svg class="btn-icon" viewBox="0 0 30 30" aria-hidden="true"><path fill="currentColor" d="M9 5.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 9 5.5z"/></svg>Probar prototipo</a>
       </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Registro a la carrera</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Antes</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Registro a la carrera — antes del rediseño"><source src="assets/registro-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">Después</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Registro a la carrera — después del rediseño"><source src="assets/registro-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
+      <div class="vitrina-video" id="vitrina-panel" role="tabpanel" aria-labelledby="vt-1">
+        <video class="vitrina-v" muted playsinline preload="none" aria-label="Lista de carreras — después del rediseño"><source src="assets/lista-carreras-despues.mp4" type="video/mp4"></video>
+        <button class="vitrina-ampliar" type="button" aria-label="Ampliar video"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
       </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Detalles de la carrera</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Antes</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Detalles de la carrera — antes del rediseño"><source src="assets/detalles-carrera-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">Después</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Detalles de la carrera — después del rediseño"><source src="assets/detalles-carrera-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Calendario</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Antes</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Calendario — antes del rediseño"><source src="assets/calendario-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">Después</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Calendario — después del rediseño"><source src="assets/calendario-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Detalles de autos y pistas</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Antes</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Detalles de autos y pistas — antes del rediseño"><source src="assets/autos-pistas-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">Después</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Detalles de autos y pistas — después del rediseño"><source src="assets/autos-pistas-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-      <div class="comparison-block">
-        <h4 class="comparison-title">Carrito de compras</h4>
-        <div class="comparison-row">
-          <div class="comparison-col">
-            <span class="comparison-label">Antes</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Carrito de compras — antes del rediseño"><source src="assets/carrito-antes.mp4" type="video/mp4"></video>
-          </div>
-          <div class="comparison-col">
-            <span class="comparison-label">Después</span>
-            <video class="screenshot" muted loop playsinline preload="none" aria-label="Carrito de compras — después del rediseño"><source src="assets/carrito-despues.mp4" type="video/mp4"></video>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="container cta-wrap">
-      <a href="https://www.figma.com/proto/6db7iSn4vir4R6X68CaR63/Redise%C3%B1o-iRacing-Franco-Aguirre?node-id=8618-232773&viewport=-144%2C-445%2C0.3&t=RPpY4J93c7m8Cpl7-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8618%3A232773&show-proto-sidebar=1" target="_blank" rel="noopener" class="btn btn-primary"><svg class="btn-icon" viewBox="0 0 30 30" aria-hidden="true"><path fill="currentColor" d="M9 5.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 9 5.5z"/></svg>Probar prototipo</a>
     </div>
 
     <div class="scroll-hint">
